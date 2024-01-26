@@ -1,5 +1,6 @@
 {
   "newFileLocation": "folder",
   "newFileFolderPath": "Notes",
-  "attachmentFolderPath": "Assets"
+  "attachmentFolderPath": "Assets",
+  "spellcheck": false
 }
