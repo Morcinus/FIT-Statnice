@@ -12,7 +12,9 @@ START
 BI-SZZ
 
 Co je DB?
+
 Back:
+
 **Databáze**
 <!--ID: 1708784926114-->
 
@@ -24,7 +26,9 @@ START
 BI-SZZ
 
 Co je **SŘBD** (=DBMS)?
+
 Back:
+
 **Systém řízení báze dat** (database management system)
 <!--ID: 1708784926118-->
 
@@ -36,7 +40,9 @@ START
 BI-SZZ
 
 Co je **DBS**?
+
 Back:
+
 **Databázový systém** (database system)
 
 DBS = DBMS + DB
@@ -52,6 +58,7 @@ START
 BI-SZZ
 
 Co je **RDBMS**, **ODBMS** a **ORDBMS**?
+
 Back:
 
 - relační DBMS
@@ -66,7 +73,9 @@ START
 BI-SZZ
 
 **Jakými daty** se zabývá DBS? (4)
+
 Back:
+
 Zabývá se seřazením velkého množství, perzistentních, spolehlivých a sdílených dat:
 
 - **velké množstí** = pro data nestačí operační paměť
@@ -84,6 +93,7 @@ BI-SZZ
 **Jaký je přínos** databázových technologií? (8)
 
 Back:
+
 - Nezávislost dat na aplikaci
 - Efektivní přístup k datům
 - Urychlení vývoje aplikací
@@ -104,6 +114,7 @@ BI-SZZ
 Co je **SQL** a k čemu slouží?
 
 Back:
+
 Structured Query Language je **dotazovací jazyk** sloužící ke komunikaci s **databázovým strojem**.
 <!--ID: 1708784926132-->
 
