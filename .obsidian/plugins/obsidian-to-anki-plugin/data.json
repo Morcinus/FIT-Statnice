@@ -1,0 +1,127 @@
+{
+  "settings": {
+    "CUSTOM_REGEXPS": {
+      "Basic": "",
+      "BI-SZZ": ""
+    },
+    "FILE_LINK_FIELDS": {
+      "2 Phonogram-x1": "phonogram-letters",
+      "2 Phonogram-x1-trunc": "phonogram-letters",
+      "2 Phonogram-x2": "phonogram-letters",
+      "2 Phonogram-x2-trunc": "phonogram-letters",
+      "2 Phonogram-x3": "phonogram-letters",
+      "2 Phonogram-x3-trunc": "phonogram-letters",
+      "2 Phonogram-x4-trunc": "phonogram-letters",
+      "2 Reading-Practice": "phonogram-read",
+      "Basic": "Front",
+      "Basic (and reversed card)": "Front",
+      "Basic (optional reversed card)": "Front",
+      "Basic (type in the answer)": "Front",
+      "Basic + extra field": "Front",
+      "Basic LaTeX-0dc46": "Front",
+      "Basic Quizlet": "Front",
+      "Basic-0c00f": "Front",
+      "Basic-3d559": "Front",
+      "Basic-5f605": "Front",
+      "Basic-7a782": "Front",
+      "Basic-ab7b3": "Front",
+      "Basic-d4678": "Front",
+      "BI-AAG2": "Front",
+      "BI-AAG2-05ce1": "Front",
+      "BI-AAG2-1352e": "Front",
+      "BI-AAG2-1f0a0": "Front",
+      "BI-AAG2-27f34": "Front",
+      "BI-AAG2-3dd33": "Front",
+      "BI-AAG2-5fdf4": "Front",
+      "BI-AAG2-6c9e8": "Front",
+      "BI-AAG2-6cb52": "Front",
+      "BI-AAG2-7d919": "Front",
+      "BI-AAG2-862f3": "Front",
+      "BI-AAG2-8b06d": "Front",
+      "BI-AAG2-8b510": "Front",
+      "BI-AAG2-8ed80": "Front",
+      "BI-AAG2-90445": "Front",
+      "BI-AAG2-956b3": "Front",
+      "BI-AAG2-adc90": "Front",
+      "BI-AAG2-b1551": "Front",
+      "BI-AAG2-b5bca": "Front",
+      "BI-AAG2-b87dd": "Front",
+      "BI-AAG2-bebb7": "Front",
+      "BI-AAG2-c17ec": "Front",
+      "BI-AAG2-c8ccb": "Front",
+      "BI-AAG2-d3c10": "Front",
+      "BI-AAG2-d4b4b": "Front",
+      "BI-AAG2-d4c5f": "Front",
+      "BI-AAG2-e0eca": "Front",
+      "BI-AAG2-e9708": "Front",
+      "BI-AAG2-f3241": "Front",
+      "BI-AAG2-f610c": "Front",
+      "BI-AAG2-f78a7": "Front",
+      "BI-AAG2-fdcf3": "Front",
+      "Cloze": "Text",
+      "europe-capitals": "Front",
+      "mdanki": "Front",
+      "south-america-capitals": "Front",
+      "Základní": "Líc",
+      "Základní (plus obrácená karta)": "Líc",
+      "Základní-95718": "Líc",
+      "Základní-a2b49": "Líc",
+      "Základný": "Predná strana"
+    },
+    "CONTEXT_FIELDS": {},
+    "FOLDER_DECKS": {
+      "Assets": "",
+      "Notes": "",
+      "Templates": ""
+    },
+    "FOLDER_TAGS": {
+      "Assets": "",
+      "Notes": "",
+      "Templates": ""
+    },
+    "Syntax": {
+      "Begin Note": "START",
+      "End Note": "END",
+      "Begin Inline Note": "STARTI",
+      "End Inline Note": "ENDI",
+      "Target Deck Line": "TARGET DECK",
+      "File Tags Line": "FILE TAGS",
+      "Delete Note Line": "DELETE",
+      "Frozen Fields Line": "FROZEN"
+    },
+    "Defaults": {
+      "Scan Directory": "",
+      "Tag": "Obsidian_to_Anki",
+      "Deck": "Default",
+      "Scheduling Interval": 0,
+      "Add File Link": false,
+      "Add Context": false,
+      "CurlyCloze": false,
+      "CurlyCloze - Highlights to Clozes": false,
+      "ID Comments": true,
+      "Add Obsidian Tags": false
+    },
+    "IGNORED_FILE_GLOBS": [
+      "**/*.excalidraw.md"
+    ]
+  },
+  "Added Media": [
+    "Assets/Pasted image 20240224150347.png"
+  ],
+  "File Hashes": {
+    "Templates/📜 Note.md": "6474a472ede0bb4f09e443014e496f89",
+    "README.md": "4073392650dbe3a25a2638d66081a9b5",
+    "Notes/BI-SPOL-9 DBS.md": "e69c5397aa2b8a077df1f243d68de64e",
+    "CONTRIBUTING.md": "92f2028193eec1c0a52515a29cf3b60f"
+  },
+  "fields_dict": {
+    "Basic": [
+      "Front",
+      "Back"
+    ],
+    "BI-SZZ": [
+      "Front",
+      "Back"
+    ]
+  }
+}
