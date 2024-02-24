@@ -80,7 +80,7 @@
       "Templates": ""
     },
     "Syntax": {
-      "Begin Note": "##### ----- Card -----",
+      "Begin Note": "START",
       "End Note": "END",
       "Begin Inline Note": "STARTI",
       "End Inline Note": "ENDI",
@@ -112,7 +112,7 @@
   "File Hashes": {
     "Templates/📜 Note.md": "6474a472ede0bb4f09e443014e496f89",
     "README.md": "4073392650dbe3a25a2638d66081a9b5",
-    "Notes/BI-SPOL-9 DBS.md": "501d124f64efb5d16a5c1d904f849044",
+    "Notes/BI-SPOL-9 DBS.md": "447e80d0e7ac2c7d60def8d0d0a849c4",
     "CONTRIBUTING.md": "92f2028193eec1c0a52515a29cf3b60f"
   },
   "fields_dict": {
