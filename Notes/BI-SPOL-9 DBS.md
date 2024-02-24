@@ -7,10 +7,7 @@ TARGET DECK: BI-SZZ
 FILE TAGS: BI-SPOL-9 DBS
 
 ### Základy
-
-<!-- --------------------------------- -->
-
-START
+##### ----- Card -----
 BI-SZZ
 Co je DB?
 Back:
@@ -18,10 +15,7 @@ Back:
 <!--ID: 1708784926114-->
 
 END
-
-<!-- --------------------------------- -->
-
-START
+##### ----- Card -----
 BI-SZZ
 Co je **SŘBD** (=DBMS)?
 Back:
@@ -30,9 +24,7 @@ Back:
 
 END
 
-<!-- --------------------------------- -->
-
-START
+##### ----- Card -----
 BI-SZZ
 Co je **DBS**?
 Back:
@@ -44,10 +36,7 @@ DBS = DBMS + DB
 <!--ID: 1708784926120-->
 
 END
-
-<!-- --------------------------------- -->
-
-START
+##### ----- Card -----
 BI-SZZ
 Co je **RDBMS**, **ODBMS** a **ORDBMS**?
 Back:
@@ -57,8 +46,7 @@ Back:
 <!--ID: 1708784926123-->
 END
 
-<!-- --------------------------------- -->
-START
+##### ----- Card -----
 BI-SZZ
 **Jakými daty** se zabývá DBS? (4)
 Back:
@@ -70,9 +58,7 @@ Zabývá se seřazením velkého množství, perzistentních, spolehlivých a sd
 <!--ID: 1708784926126-->
 END
 
-<!-- --------------------------------- -->
-
-START
+##### ----- Card -----
 BI-SZZ
 **Jaký je přínos** databázových technologií? (8)
 Back:
@@ -88,9 +74,7 @@ Back:
 
 END
 
-<!-- --------------------------------- -->
-
-START
+##### ----- Card -----
 BI-SZZ
 Co je **SQL** a k čemu slouží?
 Back:
@@ -99,9 +83,7 @@ Structured Query Language je **dotazovací jazyk** sloužící ke komunikaci s *
 
 END
 
-<!-- --------------------------------- -->
-
-START
+##### ----- Card -----
 BI-SZZ
 Co je **DDL** a k čemu slouží?
 Back:
@@ -114,9 +96,7 @@ Např.
 
 END
 
-<!-- --------------------------------- -->
-
-START
+##### ----- Card -----
 BI-SZZ
 Co je **DML** a k čemu slouží?
 Back:
@@ -130,9 +110,7 @@ dotazování: `SELECT name FROM teachers WHERE id = 1;`
 
 END
 
-<!-- --------------------------------- -->
-
-START
+##### ----- Card -----
 BI-SZZ
 Co je **TCL** a k čemu slouží?
 Back:
@@ -145,9 +123,7 @@ Např.
 
 END
 
-<!-- --------------------------------- -->
-
-START
+##### ----- Card -----
 BI-SZZ
 Co je **DCL** a k čemu slouží?
 
@@ -161,9 +137,7 @@ Např. `GRANT INSERT,UPDATE ON teachers TO ’valenta’;`
 
 END
 
-<!-- --------------------------------- -->
-
-START
+##### ----- Card -----
 BI-SZZ
 Definice: schéma relační databáze
 Back:

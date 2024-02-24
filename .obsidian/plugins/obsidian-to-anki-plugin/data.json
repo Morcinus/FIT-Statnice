@@ -80,7 +80,7 @@
       "Templates": ""
     },
     "Syntax": {
-      "Begin Note": "START",
+      "Begin Note": "##### ----- Card -----",
       "End Note": "END",
       "Begin Inline Note": "STARTI",
       "End Inline Note": "ENDI",
@@ -106,12 +106,13 @@
     ]
   },
   "Added Media": [
-    "Assets/Pasted image 20240224150347.png"
+    "Assets/Pasted image 20240224150347.png",
+    "../Assets/Pasted image 20240224192553.png"
   ],
   "File Hashes": {
     "Templates/📜 Note.md": "6474a472ede0bb4f09e443014e496f89",
     "README.md": "4073392650dbe3a25a2638d66081a9b5",
-    "Notes/BI-SPOL-9 DBS.md": "e69c5397aa2b8a077df1f243d68de64e",
+    "Notes/BI-SPOL-9 DBS.md": "501d124f64efb5d16a5c1d904f849044",
     "CONTRIBUTING.md": "92f2028193eec1c0a52515a29cf3b60f"
   },
   "fields_dict": {
