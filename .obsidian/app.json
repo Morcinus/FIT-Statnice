@@ -3,6 +3,6 @@
   "newFileFolderPath": "Notes",
   "attachmentFolderPath": "Assets",
   "spellcheck": false,
-  "newLinkFormat": "absolute",
+  "newLinkFormat": "relative",
   "useMarkdownLinks": true
 }

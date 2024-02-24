@@ -40,7 +40,7 @@ Back:
 
 DBS = DBMS + DB
 
-![](Assets/Pasted%20image%2020240224192358.png)
+![](../Assets/Pasted%20image%2020240224192553.png)
 <!--ID: 1708784926120-->
 
 END
