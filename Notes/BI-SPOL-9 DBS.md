@@ -2,7 +2,6 @@
 created: 2024-02-24T14:38:39
 parent: "[[DBS]]"
 ---
-
 TARGET DECK: BI-SZZ
 FILE TAGS: BI-SPOL-9 DBS
 
