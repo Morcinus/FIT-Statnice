@@ -10,7 +10,6 @@ FILE TAGS: BI-SPOL-11 DBS
 
 ### 3 úrovně pohledu na data
 
-
 START
 BI-SZZ
 
