@@ -451,7 +451,6 @@ Pro platné kombinace je v buňce jednička, jinak nula.
 
 _Obrázek:_
 ![](../Assets/Pasted%20image%2020240303144741.png)
-
 <!--ID: 1709474689530-->
 END
 
