@@ -6,6 +6,9 @@ parent: "[[DBS]]"
 TARGET DECK: BI-SZZ
 FILE TAGS: BI-SPOL-9 DBS
 
+> BI-SPOL-9 (DBS)
+> Relační databáze, dotazování v relační algebře, základní koncepce jazyka SQL (SELECT, DDL, DML, DCL, TCL) , vyjádření integritních omezení v DDL.
+
 ### Základy
 
 START

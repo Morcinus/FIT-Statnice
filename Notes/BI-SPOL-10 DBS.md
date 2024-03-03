@@ -1,11 +1,13 @@
 ---
 created: 2024-03-03T10:22:28
-parent: "[[FIT]]"
+parent: "[[DBS]]"
 ---
 
 TARGET DECK: BI-SZZ
-FILE TAGS: BI-SPOL-9 DBS
+FILE TAGS: BI-SPOL-10 DBS
 
+> BI-SPOL-10 (DBS)
+> Transakce a jejich vlastnosti - ACID.
 ### Základy transakcí
 
 
