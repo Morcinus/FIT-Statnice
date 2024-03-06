@@ -22,7 +22,7 @@ Co je zkratka **UML**?
 Back:
 
 **Unified Modeling Language**
-
+<!--ID: 1709724064773-->
 END
 
 ---
@@ -36,7 +36,7 @@ Co je **UML**?
 Back:
 
 Je to _vizuální_ jazyk/notace pro specifikaci a dokumentaci systémů
-
+<!--ID: 1709724064775-->
 END
 
 ---
@@ -51,7 +51,7 @@ Back:
 
 - **strukturní diagramy** (Structure Diagrams)
 - **diagramy chování** (Behaviour Diagrams)
-
+<!--ID: 1709724064778-->
 END
 
 ---
@@ -68,7 +68,7 @@ Back:
 
 - Diagram tříd
 - Stavový diagram
-
+<!--ID: 1709724064780-->
 END
 
 ---
@@ -85,7 +85,7 @@ Back:
 Cílem je popsat data a používané pojmy, konkrétněji entity, jejich atributy, stavy a vazby mezi nimi
 
 Pozn. zatím neřeší implementaci (tj. nepopisuje třídy jako `BookRepository`, neobsahuje atributy jako `rowId` nebo cizí klíče, neobsahuje metody jako `toString`)
-
+<!--ID: 1709724064783-->
 END
 
 ---
@@ -102,7 +102,7 @@ Jedna z možných notací analytického doménového modelu tříd.
 
 _Příklad:_
 ![](../Assets/Pasted%20image%2020240305120511.png)
-
+<!--ID: 1709724064785-->
 END
 
 ---
@@ -118,7 +118,7 @@ Back:
 - Pro modelování **tříd**
 - Pro modelování **databázových modelů**
 
-
+<!--ID: 1709724064788-->
 END
 
 ---
@@ -127,12 +127,12 @@ END
 START
 BI-SZZ
 
-Je UML diagram tříd _strukturní diagram_ nebo _diagram chování_? 
+Je **UML diagram tříd** _strukturní diagram_ nebo _diagram chování_? 
 
 Back:
 
 **strukturní diagram**
-
+<!--ID: 1709724064791-->
 END
 
 ---
@@ -150,7 +150,7 @@ Back:
 
 _Příklad:_
 ![](../Assets/Pasted%20image%2020240305112851.png)
-
+<!--ID: 1709724064793-->
 END
 
 ---
@@ -164,7 +164,7 @@ Jak se v UML diagramu tříd značí **private atribut**?
 Back:
 
 Pomocí `-`
-
+<!--ID: 1709724064796-->
 END
 
 ---
@@ -178,7 +178,7 @@ Jak se v UML diagramu tříd značí **public atribut**?
 Back:
 
 Pomocí `+`
-
+<!--ID: 1709724064798-->
 END
 
 ---
@@ -195,7 +195,7 @@ Back:
 - **kompozice**
 - **agregace**
 - **generalizace** = **dědičnost**
-
+<!--ID: 1709724064801-->
 END
 
 ---
@@ -211,7 +211,7 @@ Back:
 Vztah tříd kde entity mohou existovat nezávisle.
 
 Pozn. asociace může mít směr
-
+<!--ID: 1709724064804-->
 END
 
 ---
@@ -226,7 +226,7 @@ Back:
 ![[Pasted image 20231015104637.png]]
 
 Ta šipka znázorňuje, jakým směrem se daný název asociace čte.
-
+<!--ID: 1709724064879-->
 END
 
 ---
@@ -240,7 +240,7 @@ Co je **kompozice** v UML diagramu tříd?
 Back:
 
 Vztah tříd, kde jedna třída ("část") **nemůže existovat** bez druhé (bez "celku").
-
+<!--ID: 1709724064883-->
 END
 
 ---
@@ -254,7 +254,7 @@ Jak se značí **kompozice** v UML diagramu tříd?
 Back:
 
 ![](../Assets/Pasted%20image%2020240305115026.png)
-
+<!--ID: 1709724064886-->
 END
 
 ---
@@ -270,7 +270,7 @@ Back:
 Vztah tříd - části a celku, kde část může existovat bez celku a může být ve více kolekcích
 
 Pozn. tohle prý nemáme raději používat.
-
+<!--ID: 1709724064889-->
 END
 
 ---
@@ -283,7 +283,7 @@ Jak se značí **agregace** v UML diagramu tříd?
 
 Back:
 ![](../Assets/Pasted%20image%2020240305115047.png)
-
+<!--ID: 1709724064892-->
 END
 
 ---
@@ -299,7 +299,7 @@ Back:
 Je to to samé jako **dědičnost**. 
 
 Pozn. Není vhodná, když může objekt měnit příslušnost k třídě nebo může příslušet více třídám.
-
+<!--ID: 1709724064895-->
 END
 
 ---
@@ -312,7 +312,7 @@ Jak se značí **dědičnost** v UML diagramu tříd?
 
 Back:
 ![](../Assets/Pasted%20image%2020240305115107.png)
-
+<!--ID: 1709724064897-->
 END
 
 ---
@@ -328,7 +328,7 @@ Back:
 Čísla a mezi nimi tečky.
 
 Např. `0..*`, `1..*`, `1`
-
+<!--ID: 1709724064900-->
 END
 
 ---
@@ -344,7 +344,7 @@ Back:
 Třída, která je připojena k nějaké asociaci.
 
 Dává nám informace o dané vazbě.
-
+<!--ID: 1709724064903-->
 END
 
 ---
@@ -358,7 +358,7 @@ Jak se značí **asociační třída** v UML diagramu tříd?
 Back:
 
 ![](../Assets/Pasted%20image%2020240305115204.png)
-
+<!--ID: 1709724064906-->
 END
 
 ---
@@ -374,7 +374,7 @@ Co je cílem při **modelování stavů entit**?
 Back:
 
 Cílem je popsat životní cyklus entit, tj. stavy, ve kterých se může entita nacházet, a události a podmínky, za kterých mezi stavy přechází
-
+<!--ID: 1709724064908-->
 END
 
 ---
@@ -389,7 +389,7 @@ Back:
 Jedna z možných notací stavového modelu.
 
 Pozor, neplést s diagramem aktivit!
-
+<!--ID: 1709724064911-->
 END
 
 ---
@@ -402,7 +402,7 @@ Je **UML stavový diagram** _strukturní diagram_ nebo _diagram chování_?
 Back:
 
 **diagram chování**
-
+<!--ID: 1709724064918-->
 END
 
 ---
@@ -421,7 +421,7 @@ Back:
 
 _Příklad:_
 ![](../Assets/Pasted%20image%2020240305120029.png)
-
+<!--ID: 1709724064920-->
 END
 
 ---
@@ -444,7 +444,7 @@ _Např._
 
 _Příklad:_
 ![](../Assets/Pasted%20image%2020240305120029.png)
-
+<!--ID: 1709724064923-->
 END
 
 ---
