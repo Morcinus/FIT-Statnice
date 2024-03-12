@@ -183,6 +183,86 @@ END
 
 ---
 
+START
+BI-SZZ
+
+Jak se v UML diagramu tříd značí **protected atribut**?
+
+Back:
+
+Pomocí `#`
+
+Tags: optional
+
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jak se v UML diagramu tříd značí **package visible atribut**?
+
+Back:
+
+Pomocí `~`
+
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jak se v UML diagramu tříd značí **defaultní hodnota atributu** (inicializace atributu)?
+
+Back:
+
+Pomocí rovná se a té hodnoty.
+
+_Např:_ `- counter: int = 0`
+
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jak se v UML diagramu tříd značí **kolekce**?
+
+Back:
+
+Buď vazbou mezi třídami nebo následovně
+
+`- collection: int [0..*] {bag}`
+
+Tags: optional
+
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jak se v UML diagramu tříd značí rozhraní a jejich implementace?
+
+Back:
+
+přerušovaná plná šipka od třídy `Test` k třídě `<<interface>> ITest`
+
+Např.
+![](../Assets/Pasted%20image%2020240312092804.png)
+
+END
+
+---
+
 
 START
 BI-SZZ
@@ -362,6 +442,52 @@ Back:
 END
 
 ---
+
+
+START
+BI-SZZ
+
+Jak se značí **statické atributy a metody** v UML diagramu tříd?
+
+Back:
+
+Podtržením daného řádku.
+
+Např.
+![](../Assets/Pasted%20image%2020240312092209.png)
+
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jak se značí **abstraktní metody** v UML diagramu tříd?
+
+Back:
+
+_Kurzívou_
+
+END
+
+---
+
+
+START
+BI-SZZ
+
+
+
+Back:
+
+
+
+END
+
+---
+
 
 ### Modelování stavů entit
 
