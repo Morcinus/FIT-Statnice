@@ -117,7 +117,6 @@ Back:
 
 - Pro modelování **tříd**
 - Pro modelování **databázových modelů**
-
 <!--ID: 1709724064788-->
 END
 
@@ -193,7 +192,7 @@ Back:
 Pomocí `#`
 
 Tags: optional
-
+<!--ID: 1710234028391-->
 END
 
 ---
@@ -207,7 +206,7 @@ Jak se v UML diagramu tříd značí **package visible atribut**?
 Back:
 
 Pomocí `~`
-
+<!--ID: 1710234028398-->
 END
 
 ---
@@ -223,7 +222,7 @@ Back:
 Pomocí rovná se a té hodnoty.
 
 _Např:_ `- counter: int = 0`
-
+<!--ID: 1710234028404-->
 END
 
 ---
@@ -241,7 +240,7 @@ Buď vazbou mezi třídami nebo následovně
 `- collection: int [0..*] {bag}`
 
 Tags: optional
-
+<!--ID: 1710234028411-->
 END
 
 ---
@@ -258,7 +257,7 @@ přerušovaná plná šipka od třídy `Test` k třídě `<<interface>> ITest`
 
 Např.
 ![](../Assets/Pasted%20image%2020240312092804.png)
-
+<!--ID: 1710234028417-->
 END
 
 ---
@@ -455,7 +454,7 @@ Podtržením daného řádku.
 
 Např.
 ![](../Assets/Pasted%20image%2020240312092209.png)
-
+<!--ID: 1710234028423-->
 END
 
 ---
@@ -469,7 +468,7 @@ Jak se značí **abstraktní metody** v UML diagramu tříd?
 Back:
 
 _Kurzívou_
-
+<!--ID: 1710234028430-->
 END
 
 ---

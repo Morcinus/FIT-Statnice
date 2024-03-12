@@ -21,7 +21,7 @@ Back:
 Základní principy pro přiřazení zodpovědností a úkolů třídám.
 
 Nedefinuje jedno správné řešení, cílem je spíš najít kompromis mezi jednou megatřídou (malá soudržnost) a milionem minitříd (vysoká provázanost) pro dlouhodobou udržitelnost, přehlednost, rozšiřitelnost atd.
-
+<!--ID: 1710234028235-->
 END
 
 ---
@@ -37,7 +37,7 @@ Back:
 - **Nízká provázanost**
 - **Vysoká soudružnost**
 - **Informační expert**
-
+<!--ID: 1710234028245-->
 END
 
 ---
@@ -51,7 +51,7 @@ Co je **nízká provázanost** (low coupling)?
 Back:
 
 Přiřazování zodpovědnosti tak, aby se minimalizovaly vazby mezi třídami.
-
+<!--ID: 1710234028253-->
 END
 
 ---
@@ -64,7 +64,7 @@ Co chceme? Low coupling nebo high coupling?
 Back:
 
 **Low coupling** (nízkou provázanost)
-
+<!--ID: 1710234028260-->
 END
 
 ---
@@ -78,7 +78,7 @@ Proč chceme **nízkou provázanost** (low coupling)?
 Back:
 
 Třídy jsou pak _lépe testovatelné_ a jednoduššeji se dělají _změny_ v kódu.
-
+<!--ID: 1710234028267-->
 END
 
 ---
@@ -97,7 +97,7 @@ Třída by měla fungovat jako samostatná jednotka a měla by komunikovat s ost
 
 _Příklad:_
 For example, a service that sends a letter is most reusable when just the customer identifier is passed and the customer address is obtained within the service. This decouples services because services do not need to be called in a specific order (e.g. GetCustomerAddress, SendLetter).
-
+<!--ID: 1710234028274-->
 END
 
 ---
@@ -114,7 +114,7 @@ Přiřazovat zodpovědnosti tak, aby každá třída byla zaměřená na jediný
 
 _Např._ 
 Třída pro odesílání emailů by měla jen odesílat emaily. Neměla by i přijímat emaily atd.
-
+<!--ID: 1710234028280-->
 END
 
 ---
@@ -128,7 +128,7 @@ Co chceme? Low cohesion coupling nebo high cohesion?
 Back:
 
 **High cohesion** (vysokou soudružnost)
-
+<!--ID: 1710234028288-->
 END
 
 ---
@@ -142,7 +142,7 @@ Proč chceme **vysokou soudružnost** (high cohesion)?
 Back:
 
 Lepší udržitelnost, testovatelnost, nižší provázanost, jednodušší na pochopení, znovupoužitelnost...
-
+<!--ID: 1710234028294-->
 END
 
 ---
@@ -156,7 +156,7 @@ Co je **informační expert** v GRASP?
 Back:
 
 Zodpovědnost se má přiřadit třídě, která má všechny informace, k tomu, aby splnila ty požadavky.
-
+<!--ID: 1710234028302-->
 END
 
 ---
@@ -171,7 +171,7 @@ K čemu je dobrý popis spolupráce objektů?
 Back:
 
 Zachycení architektonických (implementačních) rozhodnutí a zejména komunikace objektů při realizaci scénářů případů užití.
-
+<!--ID: 1710234028310-->
 END
 
 ---
@@ -189,7 +189,7 @@ UML diagram popisující **komunikaci mezi objekty**.
 
 _Příklad:_
 ![](../Assets/Pasted%20image%2020240312084844.png)
-
+<!--ID: 1710234028318-->
 END
 
 ---
@@ -203,7 +203,7 @@ Je **UML sekvenční diagram** _strukturní diagram_ nebo _diagram chování_?
 Back:
 
 **diagram chování**
-
+<!--ID: 1710234028325-->
 END
 
 ---
@@ -221,8 +221,7 @@ Buď `Objekt A:Třída A` nebo obecně jako instance třídy `:Třída B`
 _Např._
 ![](../Assets/Pasted%20image%2020240312085000.png)
 
-Tags: optional
-
+<!--ID: 1710234028332-->
 END
 
 ---
@@ -238,7 +237,7 @@ Jaké metody můžu volat, když je tam `: Třída` (a ne `Objekt A:Třída A`) 
 Back:
 
 Pouze _statické metody_.
-
+<!--ID: 1710234028339-->
 END
 
 ---
@@ -258,7 +257,7 @@ Synchronní - plná šipka
 
 
 ![](../Assets/Pasted%20image%2020240312090654.png)
-
+<!--ID: 1710234028345-->
 END
 
 ---
@@ -274,7 +273,7 @@ Back:
 Lze značit buď samostatnou přerušovanou šipkou nebo syntaxí `vysledek = zprava()` nad šipkou zprávy.
 
 ![](../Assets/Pasted%20image%2020240312091003.png)
-
+<!--ID: 1710234028352-->
 END
 
 ---
@@ -291,7 +290,7 @@ Vytovření - čárkovaná šipka s `«create»`
 Zničení - plná šipka s `«destroy»` + křížek
 
 ![](../Assets/Pasted%20image%2020240312091152.png)
-
+<!--ID: 1710234028358-->
 END
 
 ---
@@ -309,6 +308,8 @@ Found message = když mě nezajímá, kdo danou metodu volá.
 Značí se takto:
 ![](../Assets/Pasted%20image%2020240312091503.png)
 
+Tags: optional
+<!--ID: 1710234028365-->
 END
 
 ---
@@ -323,7 +324,7 @@ Back:
 
 ![](../Assets/Pasted%20image%2020220331113415.png)
 Tags: optional
-
+<!--ID: 1710234028371-->
 END
 
 ---
@@ -340,6 +341,8 @@ Větvení pomocí `alt`, loopy pomocí `loop`.
 
 ![](../Assets/Pasted%20image%2020220331113752.png)
 
+Tags: optional
+<!--ID: 1710234028377-->
 END
 
 ---

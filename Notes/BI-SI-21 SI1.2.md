@@ -234,7 +234,6 @@ _tým do 10 členů_
 - _**product owner**_ odpovídá za chod projektu a určuje priority požadavků v _product backlogu_
 - **vývojáři** odhadují pracnost požadavků v _product backlogu_ a realizují je
 
-
 <!--ID: 1710085529897-->
 END
 
