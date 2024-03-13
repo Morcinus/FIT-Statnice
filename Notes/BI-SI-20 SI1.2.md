@@ -220,7 +220,6 @@ Buď `Objekt A:Třída A` nebo obecně jako instance třídy `:Třída B`
 
 _Např._
 ![](../Assets/Pasted%20image%2020240312085000.png)
-
 <!--ID: 1710234028332-->
 END
 

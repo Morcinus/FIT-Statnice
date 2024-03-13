@@ -4,7 +4,7 @@ parent: "[[DBS]]"
 ---
 
 TARGET DECK: BI-SZZ
-FILE TAGS: BI-SI-4 DBS
+FILE TAGS: BI-SI-4 BI-WI-7 DBS
 
 > BI-WSI-SI-4 / BI-WSI-WI-7 (DBS)
 > Pokročilé principy dotazování v SQL: agregace, vnější spojení, vnořené dotazy, všeobecná kvantifikace.
