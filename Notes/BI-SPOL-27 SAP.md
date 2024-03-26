@@ -363,6 +363,9 @@ Back:
 - výstup záleží na vstupech a stavu _(input-based)_, takže je popsán na hranách grafu přechodů
 - $\lambda: X \times Q \to Y$
 
+_Doplňující obrázek:_
+![](../Assets/Pasted%20image%2020240326094017.png)
+
 END
 
 ---
@@ -377,6 +380,9 @@ Back:
 
 - výstup záleží jen na stavu (state-based), takže je popsán v uzlech grafu přechodů
 - $\lambda: Q \to Y​$
+
+_Doplňující obrázek:_
+![](../Assets/Pasted%20image%2020240326094008.png)
 
 END
 
