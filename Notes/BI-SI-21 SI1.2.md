@@ -90,7 +90,7 @@ END
 START
 BI-SZZ
 
-Co je **Unified Process** (UP)?
+Co je **Unified Process** (UP)? Na co klade důraz?
 
 Back:
 

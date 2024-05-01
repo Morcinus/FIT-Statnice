@@ -324,7 +324,7 @@ Back:
 
 Chování třídy, které je závislé na stavu objektu, je oddělené do samostatné třídy, takže se zbavíme spousty ifů a switchů
 
-např. objekt `Document` si drží v poli `state` instanci nějaké implementace rozhraní `State` (např. `Draft` nebo `Published`) a metoda `edit()` v `Document` volá `state.edit()`, takže se provede správná akce v závislosti na aktuálním stavu
+např. objekt `Document` si drží `state` instanci nějaké implementace rozhraní `State` (např. `Draft` nebo `Published`) a metoda `edit()` v `Document` volá `state.edit()`, takže se provede správná akce v závislosti na aktuálním stavu
 <!--ID: 1710081841068-->
 END
 

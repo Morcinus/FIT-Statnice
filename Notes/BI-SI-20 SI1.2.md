@@ -229,7 +229,8 @@ END
 START
 BI-SZZ
 
-Jaké metody můžu volat, když je tam `: Třída` (a ne `Objekt A:Třída A`) ?
+Jaké metody můžu volat, když je tam `: Třída` (a ne `Objekt A:Třída A`) ? 
+(v UML sekvenčním diagramu)
 
 ![](../Assets/Pasted%20image%2020240312090444.png)
 
@@ -246,6 +247,7 @@ START
 BI-SZZ
 
 Jak se značí **synchronní** a **asynchronní zprávy** předávané mezi objekty?
+(v UML sekvenčním diagramu)
 
 Back:
 
@@ -271,7 +273,7 @@ Back:
 
 Lze značit buď samostatnou přerušovanou šipkou nebo syntaxí `vysledek = zprava()` nad šipkou zprávy.
 
-![](../Assets/Pasted%20image%2020240312091003.png)
+![](../Assets/Pasted%20image%2020240501154632.png)
 <!--ID: 1710234028352-->
 END
 
