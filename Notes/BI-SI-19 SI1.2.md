@@ -44,7 +44,7 @@ END
 START
 BI-SZZ
 
-Jakým směrem jdou závislosti v rámci třívrsvé architektury?
+Jakým směrem jdou závislosti v rámci třívrstvé architektury?
 
 Back:
 

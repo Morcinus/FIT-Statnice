@@ -123,7 +123,7 @@ END
 START
 BI-SZZ
 
-Co chceme? Low cohesion coupling nebo high cohesion?
+Co chceme? Low cohesion nebo high cohesion?
 
 Back:
 
