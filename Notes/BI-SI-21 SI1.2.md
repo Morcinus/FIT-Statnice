@@ -355,7 +355,7 @@ Back:
 
 Agilní přístupy dovedené do extrému.
 
-Aůraz na komunikaci, průběžnou zpětnou vazbu, jednoduchost (programuje se jen to, co je opravdu potřeba teď) a odvahu (nebát se něco rozbít)
+Důraz na komunikaci, průběžnou zpětnou vazbu, jednoduchost (programuje se jen to, co je opravdu potřeba teď) a odvahu (nebát se něco rozbít)
 <!--ID: 1710085529921-->
 END
 

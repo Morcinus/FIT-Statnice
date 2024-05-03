@@ -60,7 +60,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou UML modely/diagramy, které jsme se učili? (2)
+Jaké jsou UML modely/diagramy, které jsme se učili? (4)
 
 _todo doplnit další_
 
@@ -68,6 +68,9 @@ Back:
 
 - Diagram tříd
 - Stavový diagram
+- Activity diagram
+- Use case diagram
+- ...
 <!--ID: 1709724064780-->
 END
 
