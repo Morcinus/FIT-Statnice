@@ -539,7 +539,7 @@ END
 START
 BI-SZZ
 
-Z čeho se skládá UML stavový diagram? (2)
+Z čeho se skládá UML stavový diagram? (3)
 
 Back:
 

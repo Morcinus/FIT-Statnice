@@ -47,7 +47,7 @@ END
 START
 BI-SZZ
 
-Jakými způsoby lze zachycovat požadavky zákazníka?
+Jakými způsoby lze zachycovat požadavky zákazníka? (2)
 
 Back:
 
@@ -306,7 +306,7 @@ END
 START
 BI-SZZ
 
-Co v UML diagramu případů užití znamená `«extends»`?
+Co v UML diagramu případů užití znamená `«extend»`?
 
 Např.
 $$A \xrightarrow{«extend»} B$$
@@ -466,7 +466,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou typicky části **UML diagramu aktivit**?
+Jaké jsou typicky části **UML diagramu aktivit**? (4)
 
 Back:
 
