@@ -52,7 +52,7 @@ Jaké jsou výhody **objektově relačního mapování**?
 
 Back:
 
-šetří čas a opakující se kód, přenositelnost, přesun práce s DB do OOP světa
+šetří čas a opakující se kód, přenositelnost, přesun práce z DB do OOP světa
 <!--ID: 1711288875403-->
 END
 

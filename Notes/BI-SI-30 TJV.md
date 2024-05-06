@@ -158,6 +158,8 @@ Co v kontextu HTTP znamená **URI**?
 Back:
 
 **URI** (Uniform Resource Identifier) = jednoznačný identifikátor zdroje
+
+Např. `urn:isbn:0451450523` je identifikátor pro knížku - neříká kde to je, ale jednoznačně ji identifikuje
 <!--ID: 1711294392806-->
 END
 
@@ -172,6 +174,8 @@ Co v kontextu HTTP znamená **URL**?
 Back:
 
 **URL** (Uniform Resource Locator) = podmnožina URI, která navíc specifikuje protokol, doménu (nebo IP adresu) a “cestu” ke zdroji (podobně jako cesty ve filesystémech)
+
+Např. https://www.example.com/page.html - říká kde lze danou věc najít
 <!--ID: 1711294392809-->
 END
 
@@ -187,11 +191,22 @@ Popiš, jak vypadá syntaxe **HTTP požadavku**.
 Back:
 
 ```
-{metoda} {URI zdroje} HTTP {verze} CRLF
+{metoda} {URI zdroje} HTTP/{verze} CRLF
 {hlavička} CRLF
 {hlavička} CRLF ... 
 CRLF
 {tělo}
+```
+
+Např.
+```
+GET /example HTTP/1.1
+Host: www.example.com
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Authorization: Bearer your_access_token_here
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+
 ```
 <!--ID: 1711294392811-->
 END
@@ -245,6 +260,8 @@ Co znamená `Host` v hlavičce HTTP?
 Back:
 
 `Host` (od HTTP/1.1 povinná!) - DNS doména zdroje vč. portu
+
+Např. `Host: www.example.com`
 <!--ID: 1711294392820-->
 END
 
@@ -259,6 +276,9 @@ Co znamená `Accept` v hlavičce HTTP?
 Back:
 
 `Accept` - MIME typy souborů, které klient přijme v odpovědi
+
+Např.
+`Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8`
 <!--ID: 1711294392823-->
 END
 
@@ -273,6 +293,8 @@ Co znamená `Content-Type` v hlavičce HTTP?
 Back:
 
 `Content-Type` - MIME typ dat v těle požadavku
+
+Např. `Content-Type: application/json`
 <!--ID: 1711294392829-->
 END
 
@@ -287,6 +309,8 @@ Co znamená `Accept-Encoding` v hlavičce HTTP?
 Back:
 
 `Accept-Encoding` - preferované kódování odpovědi
+
+Např. `Accept-Encoding: gzip, deflate, br`
 <!--ID: 1711294392833-->
 END
 
@@ -301,6 +325,8 @@ Co znamená `Authorization` v hlavičce HTTP?
 Back:
 
 `Authorization` - přihlašovací údaje
+
+Např. `Authorization: Bearer your_access_token_here`
 <!--ID: 1711294392836-->
 END
 
@@ -316,7 +342,7 @@ Popiš, jak vypadá syntaxe **HTTP odpovědi**.
 Back:
 
 ```
-HTTP {verze} {status kód} {status text} CRLF
+HTTP/{verze} {status kód} {status text} CRLF
 {hlavička} CRLF
 {hlavička} CRLF ... 
 CRLF 

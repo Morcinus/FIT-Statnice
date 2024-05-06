@@ -310,7 +310,6 @@ Back:
 výstupy závisí na posloupnosti vstupů (nestačí znát aktuální vstupy, musíme si pamatovat i ty předchozí a udržovat si stav)
 
 vlastně stačí vzít kombinační obvod (= logické funkce) a některé jeho výstupy připojit “zpátky” na jeho vstupy
-
 <!--ID: 1714747088001-->
 END
 

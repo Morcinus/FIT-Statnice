@@ -228,7 +228,7 @@ END
 START
 BI-SZZ
 
-Jmenuj nějaké **strukturální vzory** (1)
+Jmenuj nějaké návrhové **strukturální vzory** (1)
 
 Back:
 
@@ -246,7 +246,7 @@ END
 START
 BI-SZZ
 
-Jmenuj nějaké **vzory chování** (2)
+Jmenuj nějaké návrhové **vzory chování** (2)
 
 Back:
 
