@@ -11,6 +11,7 @@ FILE TAGS: BI-SPOL-9 DBS
 
 ### ToDo
 - Přidat otázky na jednotlivý příkazy např. jak se vytváří tabulka v DDL atd.
+- U jednotlivých operací (join, polospojení atd.) přidat otázky na to, čemu odpovídá výraz relační algebry v SQL
 
 ### Základy
 
