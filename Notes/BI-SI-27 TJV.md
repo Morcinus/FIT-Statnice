@@ -197,6 +197,29 @@ Co jsou servlety v JEE aplikaci?
 Back:
 
 **servlety** - Java třídy dědící od javax.servlet.http.HttpServlet, které zpracovávají HTTP požadavky (typicky jedna Java metoda pro jednu HTTP metodu) a generují např. HTML odpovědi
+
+_Příklad servletu pro představu:_
+```java
+public class HelloWorldServlet extends HttpServlet {
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        // Set content type and character encoding for the response
+        response.setContentType("text/html");
+        response.setCharacterEncoding("UTF-8");
+        
+        // Get a PrintWriter to send text data to the client
+        PrintWriter out = response.getWriter();
+        
+        // Write HTML content to the response
+        out.println("<html>");
+        out.println("<head><title>Hello World Servlet</title></head>");
+        out.println("<body>");
+        out.println("<h1>Hello, world!</h1>");
+        out.println("</body>");
+        out.println("</html>");
+    }
+}
+```
 <!--ID: 1711285821897-->
 END
 
@@ -321,7 +344,7 @@ END
 START
 BI-SZZ
 
-Cěho je zkratka EIS?
+Čeho je zkratka EIS?
 
 Back:
 

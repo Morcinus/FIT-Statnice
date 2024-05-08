@@ -151,7 +151,7 @@ END
 START
 BI-SZZ
 
-U jakých systému se využívá princip **zamknutí-úpravy-odemknutí**?
+U jakých systémů se využívá princip **zamknutí-úpravy-odemknutí**? (centralizovaný nebo distribuovaný)
 
 Back:
 
@@ -195,7 +195,7 @@ END
 START
 BI-SZZ
 
-U jakých systému se využívá princip **kopie-úpravy-sloučení**?
+U jakých systémů se využívá princip **kopie-úpravy-sloučení**? (centralizovaný nebo distribuovaný)
 
 
 Back:

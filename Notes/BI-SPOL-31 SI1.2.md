@@ -259,7 +259,7 @@ Back:
 přerušovaná plná šipka od třídy `Test` k třídě `<<interface>> ITest`
 
 Např.
-![](../Assets/Pasted%20image%2020240312092804.png)
+![](../Assets/Pasted%20image%2020240504155819.png)
 <!--ID: 1710234028417-->
 END
 

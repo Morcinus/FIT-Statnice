@@ -11,11 +11,11 @@ Easy as that. 🍻
 
 ## 📑Tagy
 Jednotlivé kartičky mohou mít následující tagy:
-- číslo otázky (např. `BI-SPOL-10`)
+- identifikátor otázky (např. `BI-SPOL-10`)
 - předmět (např. `DBS`)
 - `optional` - je u otázek, které jsou spíše "navíc" a je fajn je umět, kdyby člověk aspiroval na Ačko.
 
-Podle těchto tagů pak můžete kartičky jednoduše v Anki filtrovat a vytvářet si vlastní _filtered decks_ (to vysoce doporučuju, je to lepší, než se učit všechno najednou).
+Podle těchto tagů pak můžete v Anki kartičky jednoduše filtrovat a vytvářet si vlastní [filtered decks](https://docs.ankiweb.net/filtered-decks.html) (to vysoce doporučuju, je to lepší, než se učit všechno najednou).
 
 ## 🙋Jak reportnout chybu
 - Buď mi to prostě říct :D
