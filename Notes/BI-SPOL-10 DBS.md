@@ -556,7 +556,7 @@ Back:
 
 Rozvrh, jehož _precedenční graf_ **neobsahuje kružnici**.
 
-_Doplňující obrázek (`S4` obsahuje kružnici, `S4'` ne)_
+_Doplňující obrázek (oba grafy obsahují kružnici)_
 ![](../Assets/Pasted%20image%2020240303113520.png)
 <!--ID: 1709464438661-->
 END

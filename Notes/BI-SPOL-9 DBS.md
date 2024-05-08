@@ -9,6 +9,9 @@ FILE TAGS: BI-SPOL-9 DBS
 > BI-SPOL-9 (DBS)
 > Relační databáze, dotazování v relační algebře, základní koncepce jazyka SQL (SELECT, DDL, DML, DCL, TCL) , vyjádření integritních omezení v DDL.
 
+### ToDo
+- Přidat otázky na jednotlivý příkazy např. jak se vytváří tabulka v DDL atd.
+
 ### Základy
 
 START
@@ -28,11 +31,13 @@ END
 START
 BI-SZZ
 
-Co je **SŘBD** (=DBMS)?
+Čeho je zkratka **SŘBD** (=DBMS)?
 
 Back:
 
 **Systém řízení báze dat** (database management system)
+
+SŘBD lze také nazývat databázový stroj (databázový stroj je obecnější pojem co může zahrnovat i hardware)
 <!--ID: 1708784926118-->
 
 END
@@ -42,7 +47,7 @@ END
 START
 BI-SZZ
 
-Co je **DBS**?
+Čeho je zkratka **DBS**?
 
 Back:
 
@@ -277,7 +282,7 @@ Definice: **přirozené spojení**
 
 Back:
 
-přirozené spojení = relací $R(a)$ a $S(B)$ s výsledkem $T(C)$
+přirozené spojení = relací $R(A)$ a $S(B)$ s výsledkem $T(C)$
 - **Definice**: $R*S=def\{u | u[A] \in R \wedge u[B] \in S \}$, kde $C = A \cup B$
 	- výběr n-tic pro spojení je dán _rovností_ na _všech_ průnikových atributech $A$ a $B$
 
@@ -327,7 +332,7 @@ END
 START
 BI-SZZ
 
-Jak se značí **přejmenování atributu**?
+Jak se značí **přejmenování atributu** v relační algebře?
 
 Back:
 přejmenování atributu:
@@ -354,6 +359,8 @@ Back:
 - **Značení**: $R \div S$
 - **Definice**: $R \div S$ = množina všech $x$ z $R(x,y)$, které tvoří dvojici s každým $y$ z $S(y)​$
 	- (množinová definice $R \div S = ​R[x] \setminus \{ \{ R[x] \times S \} \setminus R \}[x]​)$)
+
+Tags: optional
 <!--ID: 1709137492352-->
 END
 
@@ -369,7 +376,7 @@ Back:
 
 - sjednocení $R \cup S$
 - průnik $R \cap S$
-- rozdíl $R \textbackslash S$
+- rozdíl $R \backslash S$
 - kartézský součin $R × S$
 
 Analogie v SQL:
@@ -387,7 +394,7 @@ Definice: **antijoin**
 
 Back:
 
-- **Definice**: $R \overline{<*} S = R \textbackslash \{R <*S\}$
+- **Definice**: $R \overline{<*} S = R \backslash \{R <*S\}$
 - **Značení**: $R \overline{<*} S$
 - Je to podmnožina n-tic z $R$, které **nejsou spojitelné** s žádnou n-ticí z $S$
 
@@ -508,7 +515,7 @@ Co je **minimální množina operací RA**?
 
 Back:
 Množina:
-$$\{\times,\text{selekce},\text{projekce},\rightarrow,\cup,\textbackslash\}$$
+$$\{\times,\text{selekce},\text{projekce},\rightarrow,\cup,\backslash\}$$
 
 Všechny operace se dají zapsat pomocí této množiny.
 <!--ID: 1709134686346-->
@@ -531,6 +538,24 @@ Structured Query Language je **dotazovací jazyk** sloužící ke komunikaci s *
 END
 
 ---
+
+
+START
+BI-SZZ
+
+Z jakých 4 jazyků se skládá **SQL**?
+
+Back:
+
+- **DDL** - definice dat
+- **DML** - dotazování a úprava dat
+- **DCL** - úprava přístupových práv
+- **TCL** - řízení transakcí
+<!--ID: 1715163629152-->
+END
+
+---
+
 
 START
 BI-SZZ
