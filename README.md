@@ -3,7 +3,7 @@
 Hromada zpracovaných SZZ otázek do [Anki](https://apps.ankiweb.net/) balíčků.
 ## 👉Jak si stáhnout / aktualizovat Anki deck
 1. Musíte mít stáhlou nějakou verzi [Anki](https://apps.ankiweb.net/) nebo [AnkiDroidu](https://play.google.com/store/apps/details?id=com.ichi2.anki&hl=cs&gl=US).
-2. Stáhněte si nejnovější `.apkg` soubor z [Releases](https://github.com/Morcinus/FIT-Statnice/releases).
+2. Stáhněte si nejnovější `BI-SZZ.apkg` soubor z [Releases](https://github.com/Morcinus/FIT-Statnice/releases).
 3. Naimportujte balíček do Anki (File > Import).
 	- Při importu se nic nemusí měnit, stačí zmáčknout `Import`
 
