@@ -166,7 +166,7 @@ END
 START
 BI-SZZ
 
-K čemu je dobrý popis spolupráce objektů?
+K čemu je dobrý popis spolupráce objektů (např. UML sekvenčním diagramem)?
 
 Back:
 

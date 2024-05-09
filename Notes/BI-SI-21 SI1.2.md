@@ -304,7 +304,7 @@ END
 START
 BI-SZZ
 
-Jak dlouho typicky trvá jeden sprint?
+Jak dlouho typicky trvá jeden sprint ve Scrumu?
 
 Back:
 

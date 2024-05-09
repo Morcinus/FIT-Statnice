@@ -60,17 +60,16 @@ END
 START
 BI-SZZ
 
-Jaké jsou UML modely/diagramy, které jsme se učili? (4)
-
-_todo doplnit další_
+Jaké jsou UML modely/diagramy, které jsme se učili? (5)
 
 Back:
 
-- Diagram tříd
+- Diagram tříd - doménový model
 - Stavový diagram
 - Activity diagram
 - Use case diagram
-- ...
+- Sekvenční diagram
+- a další
 <!--ID: 1709724064780-->
 END
 
@@ -302,7 +301,7 @@ END
 START
 BI-SZZ
 
-Jak se značí asociace?
+Jak se značí **asociace** v UML diagramu tříd?
 
 Back:
 ![[Pasted image 20231015104637.png]]
