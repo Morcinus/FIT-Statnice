@@ -157,7 +157,7 @@ END
 START
 BI-SZZ
 
-Z jakých vrstev se skládá třívrstvá architektura?
+Z jakých vrstev se skládá třívrstvá architektura v Java světě?
 
 Back:
 
