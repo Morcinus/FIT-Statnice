@@ -219,7 +219,7 @@ Co je **dekompozice vztahů**?
 
 Back:
 
-Binární notace (ER, UML) vyžadují dekompozici vzathů = **vložení vztahové entity** v do vztahů M:N.
+Binární notace (ER, UML) vyžadují dekompozici vzathů = **vložení vztahové entity** do vztahů M:N.
 
 Pozn.: Jsou 2 způsoby jak dekomponovat (viz níže)
 
@@ -449,8 +449,14 @@ bitmapa = binární matice všech záznamů a všech možných indexovaných hod
 
 Pro platné kombinace je v buňce jednička, jinak nula.
 
-_Obrázek:_
+_Obrázek s příkladem:_
 ![](../Assets/Pasted%20image%2020240303144741.png)
+
+Když pak například spustím `SELECT` dle roku výroby, stačí jen vybrat řádky, kde je hodnota nastavená na `1`:
+![](../Assets/Pasted%20image%2020240509111957.png)
+
+Složitější dotazy s `AND/OR/NOT` jsou taky easy, protože se jen provede logická operace nad danými sloupečky:
+![](../Assets/Pasted%20image%2020240509112045.png)
 <!--ID: 1709474689530-->
 END
 

@@ -82,7 +82,7 @@ END
 START
 BI-SZZ
 
-Co je **agregace**?
+Co je **agregace** v SQL dotazování?
 
 Back:
 
@@ -140,7 +140,7 @@ Co v SQL znamená `*`?
 
 Back:
 
-Výběr všech řádků.
+Výběr všech řádků (nebo sloupců).
 
 _Např._
 ```sql
@@ -178,7 +178,11 @@ Back:
 
 `COALESCE` je pro nahrazení `NULL` hodnot jinými hodnotami
 
-Např. `COALESCE(op, rodne_cislo, 0)`
+Např.
+```sql
+SELECT employee_id, name, COALESCE(department, 'Unassigned') AS department
+FROM employees;
+```
 <!--ID: 1709482501820-->
 END
 
@@ -195,8 +199,12 @@ Back:
 Seskupí řádky podle daného sloupečku
 
 ```sql
-SELECT film, COUNT(herec) AS pocet_hercu FROM tabulka GROUP BY film
+SELECT film, COUNT(herec) AS pocet_hercu
+FROM tabulka GROUP BY film
 ```
+
+_Příklad od pana ChatGPT:_
+![](../Assets/Pasted%20image%2020240509125824.png)
 <!--ID: 1709482501825-->
 END
 
@@ -210,7 +218,7 @@ K čemu slouží `HAVING` v SQL?
 
 Back:
 
-Je to filtrace nad agregacemi. 
+Je to filtrace nad agregacemi.
 
 (Je to jako `WHERE`, ale nad agregacemi)
 
