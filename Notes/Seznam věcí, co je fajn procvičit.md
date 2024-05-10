@@ -5,3 +5,4 @@ parent: "[[FIT]]"
 V této poznámce je seznam témat příkladů, které je fajn si procvičit kromě Anki kartiček:
 
 - BI-SI-04 DBS - sestavování SQL dotazů
+- BI-SAP-27 Karnaughova mapa, popisování a vytváření sekvenčních obvodů

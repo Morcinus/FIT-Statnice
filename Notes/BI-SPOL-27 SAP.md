@@ -93,7 +93,7 @@ END
 START
 BI-SZZ
 
-Jakým způsobem lze vyjádřit **logickou funkci**?
+Jakými způsoby lze vyjádřit **logickou funkci**? (4)
 
 Back:
 
@@ -143,6 +143,12 @@ Popiš jak vypadá vyjádření logické funkce pomocí **Karnaughovy mapy**.
 Back:
 
 ![](../Assets/Pasted%20image%2020240326083953.png)
+
+_Pro 4 vstupy_
+![](../Assets/Pasted%20image%2020240510085759.png)
+
+Pak vždy zakroužkuju největší skupinu sousedících jedniček, která je mocnina dvou.
+
 <!--ID: 1714747087972-->
 END
 
@@ -186,7 +192,7 @@ END
 START
 BI-SZZ
 
-Jaká jsou základní logická hradla?
+Jaká jsou základní logická hradla? (7)
 
 Back:
 
@@ -359,7 +365,7 @@ Jak je popsán automat typu **Mealy** a na čem závisí jeho výstup?
 
 Back:
 
-- výstup záleží na vstupech a stavu _(input-based)_, takže je popsán na hranách grafu přechodů
+- výstup záleží na vstupech a stavu _(input-based)_, takže je popsán na hranách grafu přechodů (číslo před lomítkem je vstup, číslo za lomítkem je výstup)
 - $\lambda: X \times Q \to Y$
 
 _Doplňující obrázek:_
