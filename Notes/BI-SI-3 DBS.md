@@ -12,6 +12,10 @@ FILE TAGS: BI-SI-3 BI-WI-6 DBS
 ### Příklady
 - Kromě teorie je asi fajn si procvičit odvozování funkční závislosti na nějakém příkladu
 
+### Tahák
+Tohle je podle Hunky to minimum, co člověk musí znát na to aby ho nevyhodili od státnic
+![](../Assets/Pasted%20image%2020240511111212.png)
+
 ### Funkční závislost
 
 START
@@ -22,14 +26,16 @@ Definice: **funkční závislost**
 Back:
 
 _Neformálně:_
-Vyjádření integritních omezení závislostmi mezi dvěma atributy. Značí se pomocí šipky
+Vyjádření integritních omezení závislostmi mezi dvěma atributy. Značí se pomocí šipky. 
+
+Říká nám to, že "když znám Bčko, tak automaticky znám Cčko"
 
 _Formálně:_
 ![](../Assets/Pasted%20image%2020240313160406.png)
 
 
-_Např.:_
-Ke každému kinu existuje nejvýše jedna **adresa**.
+_Např._ Když znám ID zaměstnance, tak mi to přesně definuje osobní číslo, jméno příjmení atd., tedy $id\_zamestnanec \rightarrow {osobni cislo, jmeno, prijmeni, \dots}$
+![](../Assets/Pasted%20image%2020240511112258.png)
 <!--ID: 1710344600836-->
 END
 
@@ -81,6 +87,11 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240313161317.png)
 
+Neformálně:
+Tranzitivní uzávěr znamená: "Když znám $B$, jaký všechny hodnoty na základě toho znám $B \rightarrow \ ?$
+
+Pozn. u tranzitivního uzávěru tam patří i ty samotný atributy nalevo.
+
 Tags: optional
 <!--ID: 1710344600850-->
 END
@@ -97,6 +108,11 @@ Definice: Klíč relace
 Back:
 
 ![](../Assets/Pasted%20image%2020240313161338.png)
+
+Pozor! Klíčů může být více.
+
+_Jinými slovy:_
+Z $K$ můžu odvodit všechny ostatní atributy a zároveň není nějaká část $K$ klíčem.
 
 Tags: optional
 <!--ID: 1710344600853-->
@@ -133,14 +149,14 @@ Back:
 **žádný neklíčový atribut není závislý na části klíče**
 
 (jinými slovy: neklíčové atributy závisí vždy na celém klíči)
+
+![](../Assets/Pasted%20image%2020240511115456.png)
 <!--ID: 1710344600859-->
 END
 
 ---
 
-
 START
-BI-SZZ
 
 Definice: **tranzitivní závislost**
 
@@ -165,6 +181,8 @@ Back:
 ![](../Assets/Pasted%20image%2020240313161954.png)
 
 _Neformálně:_ žádný neklíčový atribut není tranzitivně závislý na žádném klíči
+
+![](../Assets/Pasted%20image%2020240511115541.png)
 <!--ID: 1710344600866-->
 END
 
@@ -213,6 +231,8 @@ Back:
 _Neformálně:_ 
 každá netriviální FZ obsahuje na levé straně klíč
 jinými slovy: část jednoho klíče nesmí záviset na části druhého klíče
+
+![](../Assets/Pasted%20image%2020240511115553.png)
 <!--ID: 1710344600875-->
 END
 
@@ -276,8 +296,22 @@ Co znamená, že "relační schéma je v n-té normální formě"?
 
 Back:
 
-Pokud platí daná podmínka
+Pokud platí daná podmínka normální formy
 <!--ID: 1710344600887-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Co je kanonické pokrytí?
+
+Back:
+
+**Kanonické pokrytí** je pokrytí popsané elementárními funkčními závislostmi (tedy ne to co je v tranzitivním uzávěru, ale pouze ty základní závislosti)
+<!--ID: 1715435020528-->
 END
 
 ---

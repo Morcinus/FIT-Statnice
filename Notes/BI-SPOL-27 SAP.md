@@ -148,7 +148,6 @@ _Pro 4 vstupy_
 ![](../Assets/Pasted%20image%2020240510085759.png)
 
 Pak vždy zakroužkuju největší skupinu sousedících jedniček, která je mocnina dvou.
-
 <!--ID: 1714747087972-->
 END
 
