@@ -132,7 +132,7 @@ END
 START
 BI-SZZ
 
-Co je **povinnost** atributu a **jak se značí** v ER?
+Co je **povinnost** atributu a **jak se značí** povinný/nepovinný atribut v ER?
 
 Back:
 

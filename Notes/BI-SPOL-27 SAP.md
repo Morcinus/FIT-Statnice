@@ -9,6 +9,11 @@ FILE TAGS: BI-SPOL-27 SAP
 > BI-SPOL-27 (SAP)
 > Kombinační a sekvenční logické obvody (Mealy, Moore), popis a možnosti implementace na úrovni hradel. Minimalizace vyjádření logické funkce (s využitím map)
 
+### ToDo
+- Přidat otázky na to, jak vypadají logická hradla
+- Přidat otázky na to, jaký výstupy dávají jednotlivá logická hradla NOT, AND, OR, XOR, NAND, NOR, NXOR (hlavně XOR, NAND, NOR a NXOR)
+
+
 ### logické obvody
 
 START
