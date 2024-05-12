@@ -40,7 +40,7 @@ _Příklad konceptuálního modelu_
 Back:
 
 1. Přepsat entity, které u sebe nemají vidličky a nejsou slabé (např. `Druh`, `Lekar`, `prohlidkova_trasa` atd.) - např. přidám Druh(id_druh, popis)
-2.  Vyřeším entity, který u sebe mají vidličky - např. přidám $\text{Zvire}[\text{id\_druh}] \subseteq \text{Druh}[\text{id\_druh}]$ + do Zvířete přidám `id_druh` (povinný/nepovinný podle vazby)
+2.  Vyřeším entity, který u sebe mají vidličky - např. přidám `Zvire[id_druh] ⊆ Druh[id_druh]`+ do Zvířete přidám `id_druh` (povinný/nepovinný podle vazby)
 <!--ID: 1715435020537-->
 END
 
@@ -253,7 +253,7 @@ BI-SZZ
 
 Jak se převede při transformaci konceptuálního modelu na relační model:
 
-**vztah 1:N** s povinným nedeterminantem (=povinnost u 1)
+**vztah 1:N** s povinným determinantem (=povinnost u 1)
 
 Back:
 
@@ -272,7 +272,7 @@ BI-SZZ
 
 Jak se převede při transformaci konceptuálního modelu na relační model:
 
-**vztah 1:N** s nepovinným nedeterminantem (=povinnost u 1)
+**vztah 1:N** s nepovinným determinantem (=povinnost u 1)
 
 Back:
 
@@ -489,7 +489,7 @@ Jak se vytvoří ve zjednodušeném relačním schématu **vazba 1:N**?
 
 Back:
 
-Přidám do `Zvire` cizí klíč a napíšu $\text{Zvire}[\text{id\_druh}] \subseteq \text{Druh}[\text{id\_druh}]$
+Přidám do `Zvire` cizí klíč a napíšu `Zvire[id_druh] ⊆ Druh[id_druh]`
 <!--ID: 1715435020602-->
 END
 
