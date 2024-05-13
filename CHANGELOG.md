@@ -1,7 +1,9 @@
 ## [v0.3.0] - 2024-XX-XX
 
 ### Přidány otázky
-- BI-SPOL 14
+- BI-SI-9
+- BI-SPOL-14
+
 ## [v0.2.0] - 2024-05-12
 
 Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.

@@ -307,11 +307,13 @@ END
 START
 BI-SZZ
 
-Co je **substitution principle**?
+smazat tuto kartičku
 
 Back:
 
-Princip říká, že když funkce očekává nějaký typ, tak té funkci můžeme místo toho dodat podtyp toho typu.
+smazat tuto kartičku
+
+DELETE
 <!--ID: 1715601679141-->
 END
 
@@ -584,7 +586,7 @@ Co mi tohle v IDEčku ukáže že můžu zavolat?
 
 Back:
 
-Jenom `mb`, protože to vidí, že to je Bčko
+`mb` nebo `ma`
 
 Tags: optional exercise
 <!--ID: 1715601679192-->
@@ -616,7 +618,7 @@ BI-SZZ
 Co sem můžu dát za třídu? (`new A`, `new B`, `new C` nebo `new D`?)
 
 ![](../Assets/Pasted%20image%2020231103144549.png)
-
+![](../Assets/Pasted%20image%2020231103143830.png)
 Back:
 
 `new B` nebo `new C`, protože jsem vytvářel test s `Test[B]`
@@ -634,7 +636,7 @@ BI-SZZ
 Co sem můžu dát za třídu?
 
 ![](../Assets/Pasted%20image%2020231103144749.png)
-
+![](../Assets/Pasted%20image%2020231103143830.png)
 Back:
 
 `new B` nebo `new C`
@@ -670,7 +672,7 @@ BI-SZZ
 Co tady můžu zavolat u té (2)?
 
 ![](../Assets/Pasted%20image%2020231103145257.png)
-
+![](../Assets/Pasted%20image%2020231103143830.png)
 Back:
 
 `mb` nebo `ma`, protože jsem inicializoval Test s Bčkem, takže to bude vracet Bčko

@@ -47,6 +47,9 @@ Definice: **pravdivostní ohodnocení**
 Back:
 
 ![](../Assets/Pasted%20image%2020240513101610.png)
+
+Pozn. Jedno ohodnocení jakoby odpovídá jednomu řádku v pravdivostní tabulce.
+
 <!--ID: 1715601679221-->
 END
 
@@ -167,7 +170,7 @@ END
 START
 BI-SZZ
 
-Definice: **splnitelná**
+Definice: **splnitelná formule**
 
 Back:
 
