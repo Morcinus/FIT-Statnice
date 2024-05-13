@@ -313,8 +313,7 @@ Back:
 
 smazat tuto kartičku
 
-DELETE
-<!--ID: 1715601679141-->
+
 END
 
 ---

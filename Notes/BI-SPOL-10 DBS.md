@@ -554,9 +554,9 @@ Co je **uspořádatelný rozvrh**?
 
 Back:
 
-Rozvrh, jehož _precedenční graf_ **neobsahuje kružnici**.
+Rozvrh, jehož _precedenční graf_ **neobsahuje cyklus**.
 
-_Doplňující obrázek (oba grafy obsahují kružnici)_
+_Doplňující obrázek (oba grafy obsahují cyklus)_
 ![](../Assets/Pasted%20image%2020240303113520.png)
 <!--ID: 1709464438661-->
 END
