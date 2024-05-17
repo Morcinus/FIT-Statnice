@@ -147,8 +147,6 @@ Back:
 
 **žádný neklíčový atribut není závislý na části klíče**
 
-(jinými slovy: neklíčové atributy závisí vždy na celém klíči)
-
 ![](../Assets/Pasted%20image%2020240511115456.png)
 <!--ID: 1710344600859-->
 END
@@ -335,7 +333,7 @@ END
 START
 BI-SZZ
 
-K čemu je dobrá **normalizace**?
+K čemu je dobrá **normalizace** v databázích?
 
 Back:
 

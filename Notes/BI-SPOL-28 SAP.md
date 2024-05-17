@@ -634,7 +634,7 @@ END
 START
 BI-SZZ
 
-Co je **cache** v hardwaru
+Co je **cache** v hardwaru? Na jakých 2 principech je založena?
 
 Back:
 
