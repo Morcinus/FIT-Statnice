@@ -21,7 +21,7 @@ Back:
 1. Vytvoření **slovníku pojmů** dle konceptů v doméně.
 2. Vytváření ontologie na základě ontologických **vzorů**.
 3. Validace konceptuálního modelu se zadavatelem (doménový expert).
-
+<!--ID: 1716107684897-->
 END
 
 ---
@@ -38,7 +38,7 @@ Rozdělení dané ontologie do **modulů**, které jsou zaměřené na určitou 
 
 _Např._
 ![](../Assets/Pasted%20image%2020231004182403.png)
-
+<!--ID: 1716107684901-->
 END
 
 ---
@@ -52,7 +52,7 @@ Jak se v OntoUML zakreslí třída (název, atributy, typy atributů, multiplici
 Back:
 
 ![](../Assets/Pasted%20image%2020240517133328.png)
-
+<!--ID: 1716107684905-->
 END
 
 ---
@@ -73,7 +73,7 @@ _Např._
 ![](../Assets/Pasted%20image%2020240517133519.png)
 
 Tags: optional
-
+<!--ID: 1716107684908-->
 END
 
 ---
@@ -89,7 +89,7 @@ Back:
 **disjoint** = neexistuje instance, která by byla instancí více než jednoho podtypů
 
 Např. když mám `person`, tak může být buď `žena`, `muž` nebo `nic`.
-
+<!--ID: 1716107684912-->
 END
 
 ---
@@ -105,7 +105,7 @@ Back:
 **complete** = každá instance nadtypu je také alespoň jednoho z podtypů
 
 Např. když mám person, tak musí být buď `žena` nebo `muž` nebo `obojí`
-
+<!--ID: 1716107684915-->
 END
 
 ---
@@ -121,7 +121,7 @@ Back:
 čára, název a multiplicita (analogicky jako v UML)
 
 ![](../Assets/Pasted%20image%2020240517134024.png)
-
+<!--ID: 1716107684918-->
 END
 
 ---
@@ -139,7 +139,7 @@ Mohou značit vlastnosti množiny.
 _Např._ `unordered`, `ordered`, `unique`, `nonunique`
 
 ![](../Assets/Pasted%20image%2020240517134212.png)
-
+<!--ID: 1716107684921-->
 END
 
 ---
@@ -154,7 +154,7 @@ Co je **sortál** v OntoUML?
 Back:
 
 Typ, který **má nějaký princip identity** (a poskytuje ji ostatním).
-
+<!--ID: 1716107684924-->
 END
 
 ---
@@ -168,7 +168,7 @@ Co je **non-sortál** v OntoUML?
 Back:
 
 Typ, který **nemá nějaký princip identity**.
-
+<!--ID: 1716107684928-->
 END
 
 ---
@@ -182,7 +182,7 @@ Co je **modální logika**?
 Back:
 
 Je to rozšíření predikátové logiky.
-
+<!--ID: 1716107684932-->
 END
 
 ---
@@ -201,7 +201,7 @@ V některém světě (alespoň jednom) platí, že ...
 
 _Např:_
 ![](../Assets/Pasted%20image%2020240517134624.png)
-
+<!--ID: 1716107684936-->
 END
 
 ---
@@ -220,7 +220,7 @@ Ve všech světech platí, že ...
 
 _Např:_
 ![](../Assets/Pasted%20image%2020240517134624.png)
-
+<!--ID: 1716107684940-->
 END
 
 ---
@@ -236,7 +236,7 @@ Back:
 **Rigidita** = neměnnost, neschopnost přizpůsobit se změnám
 
 Typ $T$ je **rigidní** pro každou instanci $x$, právě tehdy, když je nutně ($□$) instancí $T$.
-
+<!--ID: 1716107684944-->
 END
 
 ---
@@ -250,7 +250,7 @@ Co je **anti-rigidní typ** v OntoUML?
 Back:
 
 Typ $T$ je **anti-rigidní** pro každou instanci $x$, právě tehdy, když je **možné** ($◊$), že $x$ nemusí být instancí $T$.
-
+<!--ID: 1716107684947-->
 END
 
 ---
@@ -271,7 +271,7 @@ Back:
 
 _Přehled:_
 ![](../Assets/Pasted%20image%2020240517140026.png)
-
+<!--ID: 1716107684951-->
 END
 
 ---
@@ -289,7 +289,7 @@ Back:
 
 _Přehled:_
 ![](../Assets/Pasted%20image%2020240517140026.png)
-
+<!--ID: 1716107684954-->
 END
 
 ---
@@ -306,7 +306,7 @@ Back:
 
 _Přehled:_
 ![](../Assets/Pasted%20image%2020240517140026.png)
-
+<!--ID: 1716107684957-->
 END
 
 ---
@@ -323,7 +323,7 @@ Back:
 
 _Přehled:_
 ![](../Assets/Pasted%20image%2020240517140026.png)
-
+<!--ID: 1716107684962-->
 END
 
 ---
@@ -341,7 +341,7 @@ Back:
 
 _Přehled:_
 ![](../Assets/Pasted%20image%2020240517140026.png)
-
+<!--ID: 1716107684965-->
 END
 
 ---
@@ -363,7 +363,7 @@ Povinná
 
 Volitelná
 ![](../Assets/Pasted%20image%2020240517140752.png)
-
+<!--ID: 1716107684969-->
 END
 
 ---
@@ -381,7 +381,7 @@ Celek **nemůže existovat** bez instance jeho části. Ta část je **neměnná
 Např. Osoba _John_ nemůže existovat bez instance _Johnův mozek_ jako jeho části.
 
 ![](../Assets/Pasted%20image%2020240517141158.png)
-
+<!--ID: 1716107684972-->
 END
 
 ---
@@ -398,7 +398,7 @@ Back:
 
 Např. _Johnův mozek_ nemůže existovat bez toho aniž by byl částí osoby _John_.
 ![](../Assets/Pasted%20image%2020240517141821.png)
-
+<!--ID: 1716107684976-->
 END
 
 ---
@@ -417,7 +417,7 @@ Celek navíc **není rigidní**.
 
 _Např._
 ![](../Assets/Pasted%20image%2020240517142359.png)
-
+<!--ID: 1716107684979-->
 END
 
 ---
@@ -436,7 +436,7 @@ Back:
 
 _Např._
 ![](../Assets/Pasted%20image%2020240517142417.png)
-
+<!--ID: 1716107684982-->
 END
 
 ---
@@ -457,7 +457,7 @@ Je to **sdílitelnost částí**. Tím se to liší od UML (kde to je agregace a
 _Např._
 ![](../Assets/Pasted%20image%2020240517142623.png)
 
-
+<!--ID: 1716107684986-->
 END
 
 ---
@@ -475,7 +475,7 @@ Základní typ v OntoUML
 
 _Např._
 ![](../Assets/Pasted%20image%2020240517144110.png)
-
+<!--ID: 1716107684989-->
 END
 
 ---
@@ -492,7 +492,7 @@ Značí nám nějaký podtyp ostatních typů.
 
 _Např._
 ![](../Assets/Pasted%20image%2020240517144343.png)
-
+<!--ID: 1716107684992-->
 END
 
 ---
@@ -511,7 +511,7 @@ Fáze je založena na něčem **intrinsickém**.
 
 _Např._
 ![](../Assets/Pasted%20image%2020240517144549.png)
-
+<!--ID: 1716107684996-->
 END
 
 ---
@@ -530,6 +530,7 @@ Role je založena na něčem **extrinsickém**.
 
 _Např._
 ![](../Assets/Pasted%20image%2020240517144622.png)
+<!--ID: 1716107684999-->
 END
 
 ---
@@ -553,7 +554,7 @@ Např.
 ![](../Assets/Pasted%20image%2020240517144700.png)
 
 ![](../Assets/Pasted%20image%2020240517145030.png)
-
+<!--ID: 1716107685002-->
 END
 
 ---
@@ -576,7 +577,7 @@ Vztahy:
 
 ![](../Assets/Pasted%20image%2020240517145410.png)
 ![](../Assets/Pasted%20image%2020240517145429.png)
-
+<!--ID: 1716107685006-->
 END
 
 ---
@@ -595,7 +596,7 @@ Používá se `mediation` a `material` vazba!
 
 _Příklad_
 ![](../Assets/Pasted%20image%2020231018183410.png)
-
+<!--ID: 1716107685010-->
 END
 
 ---
@@ -611,7 +612,7 @@ Back:
 Typ, co zastřešuje do kategorií např. Kindy atd.
 
 ![](../Assets/Pasted%20image%2020240517145645.png)
-
+<!--ID: 1716107685014-->
 END
 
 ---
@@ -628,7 +629,7 @@ Můžu tím zastřešit více fází.
 
 _Příklad (tohle je RoleMixin, ale u PhaseMixinu to funguje stejně)_
 ![](../Assets/Pasted%20image%2020231112140458.png)
-
+<!--ID: 1716107685018-->
 END
 
 ---
@@ -645,7 +646,7 @@ Můžu tím zastřešit více rolí.
 
 _Příklad_
 ![](../Assets/Pasted%20image%2020231112140458.png)
-
+<!--ID: 1716107685022-->
 END
 
 ---
@@ -662,7 +663,7 @@ Můžu tím zastřešit nějaký rigidní a antirigidní typ.
 
 _Např._
 ![](../Assets/Pasted%20image%2020240517150224.png)
-
+<!--ID: 1716107685026-->
 END
 
 ---
@@ -679,7 +680,7 @@ Back:
 
 _Např._
 ![](../Assets/Pasted%20image%2020240517150553.png)
-
+<!--ID: 1716107685030-->
 END
 
 ---
@@ -695,7 +696,7 @@ Back:
 
 _Např._
 ![](../Assets/Pasted%20image%2020240517150329.png)
-
+<!--ID: 1716107685033-->
 END
 
 ---
@@ -710,7 +711,7 @@ Jak se transformuje metaatribut **complete** z OntoUML do objektového modelu?
 Back:
 
 **Nadtřída** se bude implementovat jako **abstraktní**
-
+<!--ID: 1716107685036-->
 END
 
 ---
@@ -724,7 +725,7 @@ Jak se transformuje metaatribut **disjoint** z OntoUML do objektového modelu?
 Back:
 
 Normálně, je to standardní chování s jednoduchou dědičností
-
+<!--ID: 1716107685039-->
 END
 
 ---
@@ -748,7 +749,7 @@ _Příklad dědění:_
 
 _Příklad skládání:_
 ![](../Assets/Pasted%20image%2020240517143356.png)
-
+<!--ID: 1716107685043-->
 END
 
 ---
@@ -762,7 +763,7 @@ Jak se transformuje **sortál** z OntoUML do objektového modelu?
 Back:
 
 Jako třídu, co bude mít jednoznačný identifikátor
-
+<!--ID: 1716107685047-->
 END
 
 ---
@@ -776,7 +777,7 @@ Jak se transformuje **non-sortal** z OntoUML do objektového modelu?
 Back:
 
 Jelikož non-sortály slouží jako další _dimenze kategorizace_, typicky budou vytvářet situace s **vícenásobnou dědičností**.
-
+<!--ID: 1716107685051-->
 END
 
 ---
@@ -790,7 +791,7 @@ Jak se transformuje **Role** z OntoUML do objektového modelu?
 Back:
 
 Role je implementována jako **třída**, příslušnost role se řeší **skládáním**
-
+<!--ID: 1716107685056-->
 END
 
 ---
@@ -804,7 +805,7 @@ Jak se transformuje **Phase** z OntoUML do objektového modelu?
 Back:
 
 Implementováním návrhového vzoru **State**.
-
+<!--ID: 1716107685060-->
 END
 
 ---

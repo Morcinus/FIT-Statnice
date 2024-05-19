@@ -21,7 +21,7 @@ Konceptuální modelování slouží k popisu reality a pochopení domény, kter
 
 _Z přednášky:_
 ![](../Assets/Pasted%20image%2020230927181946.png)
-
+<!--ID: 1716107685064-->
 END
 
 ---
@@ -43,7 +43,7 @@ Symbolizuje vztah mezi symbolem, myšlenkou a realitou.
 _Ilustrační obrázek:_
 _(vlevo symbol, nahoře myšlenka, vpravo realita)_
 ![](../Assets/Pasted%20image%2020230927182053.png)
-
+<!--ID: 1716107685067-->
 END
 
 ---
@@ -59,7 +59,7 @@ Back:
 Filozofická disciplína, která se zabývá existencí, druhy a strukturou objektů, vlastností, událostí, procesů a vztahů ve všech oblastech reality.
 
 (V informatice hlavně definice kategorií, vlastností a vztahů mezi koncepty)
-
+<!--ID: 1716107685071-->
 END
 
 ---
@@ -73,7 +73,7 @@ Co je problém intersubjektivity?
 Back:
 
 Na realitu se dá dívat z mnoha různých pohledů.
-
+<!--ID: 1716107685074-->
 END
 
 ---
@@ -89,7 +89,7 @@ Back:
 - **Vyšší ontologie (upper ontology)** = Základní ontologie (founational ontology)
 - **Doménové ontologie (domain ontology)**
 - **Klíčové ontologie (core ontology)** = Referenční ontologie (reference ontology)
-
+<!--ID: 1716107685078-->
 END
 
 ---
@@ -107,7 +107,7 @@ univerzální, obecné abstraktní ontologie definující doménově a aplikačn
 _Např._ Unified Foundational Ontology (UFO)
 _Např._
 ![](../Assets/Pasted%20image%2020240517114205.png)
-
+<!--ID: 1716107685081-->
 END
 
 ---
@@ -124,7 +124,7 @@ Ontologie popisující určitou konkrétní doménu (např. těžbu ropy).
 
 _Např._
 ![](../Assets/Pasted%20image%2020240517114218.png)
-
+<!--ID: 1716107685085-->
 END
 
 ---
@@ -140,7 +140,7 @@ Back:
 Doménové ontologie, které mají klíčový (obecný) význam pro určité odvětví jsou obvykle nazývány **klíčové ontologie (core ontology)** nebo **referenční ontologie (reference ontology)**.
 
 Např. Legal Core Ontology
-
+<!--ID: 1716107685090-->
 END
 
 ---
@@ -158,7 +158,7 @@ Disciplína, která se zabývá **formální** ontologickou strukturou, která s
 Tzn. **není to jen filozofická část**, ale je to disciplína založená na matematice, filosofii, lingvistice a kongnitivních vědách.
 
 _Např. obsahuje:_ teorie částí, teorie celků, typy, instance, identita, závislost, jednota
-
+<!--ID: 1716107685094-->
 END
 
 ---
@@ -179,7 +179,7 @@ Nesmí tam:
 
 _Obrázek_
 ![](../Assets/Pasted%20image%2020240517114450.png)
-
+<!--ID: 1716107685098-->
 END
 
 ---
@@ -198,7 +198,7 @@ Back:
 - KL-ONE
 - UML
 - Semantic Web
-
+<!--ID: 1716107685102-->
 END
 
 ---
@@ -216,7 +216,7 @@ Jednoduchý modelovací jazyk, kde:
 
 _Příklad:_
 ![](../Assets/Pasted%20image%2020240517114737.png)
-
+<!--ID: 1716107685107-->
 END
 
 ---
@@ -236,7 +236,7 @@ Ve Fact Based Modellingu:
 
 _Příklad:_
 ![](../Assets/Pasted%20image%2020240517114921.png)
-
+<!--ID: 1716107685111-->
 END
 
 ---
@@ -254,7 +254,7 @@ Modelovací notace, je možné zde vyjadřovat constraints přímo v tom jazyce.
 _Příklad:_
 ![](../Assets/Pasted%20image%2020240517115553.png)
 
-
+<!--ID: 1716107685114-->
 END
 
 ---
@@ -275,7 +275,7 @@ _Např._ Wikipedie je celá reprezentovaná pomocí sémantického webu -> dá s
 
 _Příklad:_
 ![](../Assets/Pasted%20image%2020240517115715.png)
-
+<!--ID: 1716107685118-->
 END
 
 ---
@@ -291,7 +291,7 @@ Back:
 Technologie pro spravování velkého množství znalostí.
 
 Používá se např. v medicíně.
-
+<!--ID: 1716107685121-->
 END
 
 ---
@@ -305,7 +305,7 @@ Co je **UFO**?
 Back:
 
 Základní ontologie, která je používaná k analýze, re-designu a integraci ontologických konceptuálních modelů v různých doménách.
-
+<!--ID: 1716107685124-->
 END
 
 ---
@@ -321,7 +321,7 @@ Back:
 - **UFO-A** - Strukturální aspekty (entity, vlastnosti, vazby)
 - **UFO-B** - Behaviorální aspekty (chování, události, kauzalita)
 - **UFO-C** - Sociální aspekty (agenti, akce, organizace)
-
+<!--ID: 1716107685128-->
 END
 
 ---
@@ -335,7 +335,7 @@ Co je **ontology-driven** conceptual modelling?
 Back:
 
 Disciplína zaměřující se na vytváření metod, výpočetních nástrojů a modelovacích jazyků založených na ontologiích pro oblast konceptuálního modelování.
-
+<!--ID: 1716107685131-->
 END
 
 ---
@@ -354,7 +354,7 @@ Kvůli tomu pak máme na světě hromadu znalostí, které spolu "nedokážou do
 
 ![](../Assets/Pasted%20image%2020240517121109.png)
 ![](../Assets/Pasted%20image%2020240517121240.png)
-
+<!--ID: 1716107685134-->
 END
 
 ---
@@ -376,7 +376,7 @@ Data (informace, znalosti) by měla být:
 
 _Pozn. celkem je těch principů 15, které spadají pod ty 4 hlavní:_
 ![](../Assets/Pasted%20image%2020240517121815.png)
-
+<!--ID: 1716107685137-->
 END
 
 ---
