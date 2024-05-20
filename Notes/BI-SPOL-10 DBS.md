@@ -100,6 +100,7 @@ Back:
 
 - **Když skončí předchozí transakce**
 - **Když vznikne session**
+- **Když vytvoříme transakci příkazem** `BEGIN TRANSACTION`
 <!--ID: 1709464438558-->
 END
 
@@ -166,7 +167,8 @@ Co je **částečně potvrzený** (Partially Commited) stav transakce?
 
 Back:
 
-- Po provedení poslední operace transakce
+Po provedení poslední operace a logickém commitu do DB 
+
 
 ![](../Assets/Pasted%20image%2020240303104429.png)
 <!--ID: 1709464438572-->
@@ -181,7 +183,7 @@ Co je **potvrzený** (Commited) stav transakce?
 
 Back:
 
-- Po úspěšném zakončení transakce (tzn. po provedení `COMMIT`)
+Po úspěšném fyzickém zapsání všech změn na disk
 
 ![](../Assets/Pasted%20image%2020240303104429.png)
 <!--ID: 1709464438577-->
@@ -196,7 +198,7 @@ Co je **chybný** (Failed) stav transakce?
 
 Back:
 
-- Když v normálním průběhu transakce nelze pokračovat
+Když v normálním průběhu transakce nelze pokračovat
 
 ![](../Assets/Pasted%20image%2020240303104429.png)
 <!--ID: 1709464438583-->
@@ -219,7 +221,6 @@ END
 ---
 
 ### ACID
-
 
 START
 BI-SZZ

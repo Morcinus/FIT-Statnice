@@ -72,6 +72,8 @@ Značí se podtržením.
 _Např._
 ![](../Assets/Pasted%20image%2020240517133519.png)
 
+_Z přednášky:_ Třídním atributem vyjadřujeme vlastnosti, které jsou společné všem instancím, jsou tedy vlastností třídy a na úrovni jednotlivých instancí se nemění
+
 Tags: optional
 <!--ID: 1716107684908-->
 END
@@ -153,7 +155,9 @@ Co je **sortál** v OntoUML?
 
 Back:
 
-Typ, který **má nějaký princip identity** (a poskytuje ji ostatním).
+Typ, který **má nějaký princip identity**.
+
+(Tu identitu může (např. `Kind`), ale nemusí (např. `Role`) poskytovat ostatním)
 <!--ID: 1716107684924-->
 END
 
@@ -259,15 +263,17 @@ END
 START
 BI-SZZ
 
-Jaké jsou **rigidní sortály** v OntoUML?
+Jaké jsou **rigidní sortály** v OntoUML? (7)
 
 Back:
 
 - **Kind**
 - **Subkind**
-- **Relator**
-- **Mode**
-- **Quality**
+- **Collective**
+- **Quantity**
+- **Relator** (taky je to aspekt)
+- **Mode** (taky je to aspekt)
+- **Quality** (taky je to aspekt)
 
 _Přehled:_
 ![](../Assets/Pasted%20image%2020240517140026.png)
@@ -452,11 +458,10 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240517142613.png)
 
-Je to **sdílitelnost částí**. Tím se to liší od UML (kde to je agregace a kompozice).
+Je to **sdílitelnost částí**, která závisí na multiplicitě té vazby. Tím se to liší od UML (kde to je agregace a kompozice).
 
 _Např._
 ![](../Assets/Pasted%20image%2020240517142623.png)
-
 <!--ID: 1716107684986-->
 END
 
@@ -472,6 +477,8 @@ Co je **Kind** v OntoUML?
 Back:
 
 Základní typ v OntoUML
+
+(rigidní sortál)
 
 _Např._
 ![](../Assets/Pasted%20image%2020240517144110.png)
@@ -489,6 +496,8 @@ Co je **Subkind** v OntoUML?
 Back:
 
 Značí nám nějaký podtyp ostatních typů.
+
+(rigidní sortál)
 
 _Např._
 ![](../Assets/Pasted%20image%2020240517144343.png)
@@ -509,6 +518,8 @@ Definuje fázi nějakého typu.
 
 Fáze je založena na něčem **intrinsickém**.
 
+(anitrigidní sortál)
+
 _Např._
 ![](../Assets/Pasted%20image%2020240517144549.png)
 <!--ID: 1716107684996-->
@@ -527,6 +538,8 @@ Back:
 Definuje roli nějakého typu.
 
 Role je založena na něčem **extrinsickém**.
+
+(anitrigidní sortál)
 
 _Např._
 ![](../Assets/Pasted%20image%2020240517144622.png)
@@ -548,6 +561,8 @@ Označuje nějakou skupinu, kde **všechny prvky mají stejnou roli**.
 Používají se vztahy:
 - `memberOf` - vztah kolektivu a nějakého prvku
 - `subCollectionOf` - vztah dvou kolektivů
+
+(rigidní sortál)
 
 Např. 
 
@@ -573,6 +588,8 @@ Vztahy:
 - `containment` - něco je umístěno v něčem (např. víno-lahev)
 - `subQuantityOf` - něco je složka něčeho (např. protein-maso)
 
+(rigidní sortál)
+
 ![](../Assets/Pasted%20image%2020240517145255.png)
 
 ![](../Assets/Pasted%20image%2020240517145410.png)
@@ -594,6 +611,8 @@ Back:
 
 Používá se `mediation` a `material` vazba!
 
+(rigidní sortál)
+
 _Příklad_
 ![](../Assets/Pasted%20image%2020231018183410.png)
 <!--ID: 1716107685010-->
@@ -611,6 +630,8 @@ Back:
 
 Typ, co zastřešuje do kategorií např. Kindy atd.
 
+(rigidní nonsortál)
+
 ![](../Assets/Pasted%20image%2020240517145645.png)
 <!--ID: 1716107685014-->
 END
@@ -626,6 +647,8 @@ Co je **PhaseMixin** v OntoUML?
 Back:
 
 Můžu tím zastřešit více fází.
+
+(antirigidní nonsortál)
 
 _Příklad (tohle je RoleMixin, ale u PhaseMixinu to funguje stejně)_
 ![](../Assets/Pasted%20image%2020231112140458.png)
@@ -644,6 +667,8 @@ Back:
 
 Můžu tím zastřešit více rolí.
 
+(antirigidní nonsortál)
+
 _Příklad_
 ![](../Assets/Pasted%20image%2020231112140458.png)
 <!--ID: 1716107685022-->
@@ -661,6 +686,8 @@ Back:
 
 Můžu tím zastřešit nějaký rigidní a antirigidní typ.
 
+(semirigidní nonsortál)
+
 _Např._
 ![](../Assets/Pasted%20image%2020240517150224.png)
 <!--ID: 1716107685026-->
@@ -672,11 +699,13 @@ END
 START
 BI-SZZ
 
-Co je **Quality** v OntoUML?
+Co je **Quality** v OntoUML? Jaký typ **vazby** používá?
 
 Back:
 
 **Aspekt**, který definuje nějakou **měřitelnou veličinu** nějakého typu. Používá se s `characterization`.
+
+(rigidní sortál)
 
 _Např._
 ![](../Assets/Pasted%20image%2020240517150553.png)
@@ -688,7 +717,7 @@ END
 START
 BI-SZZ
 
-Co je **Mode** v OntoUML?
+Co je **Mode** v OntoUML? Jaký typ **vazby** používá?
 
 Back:
 

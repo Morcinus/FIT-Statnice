@@ -82,7 +82,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou 4 typy ontologií?
+Jaké jsou 3 typy ontologií?
 
 Back:
 
@@ -188,7 +188,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou historické konceptuální modelovací jazyky?
+Jaké jsou historické konceptuální modelovací jazyky? (6)
 
 Back:
 
@@ -253,7 +253,6 @@ Modelovací notace, je možné zde vyjadřovat constraints přímo v tom jazyce.
 
 _Příklad:_
 ![](../Assets/Pasted%20image%2020240517115553.png)
-
 <!--ID: 1716107685114-->
 END
 
@@ -335,6 +334,10 @@ Co je **ontology-driven** conceptual modelling?
 Back:
 
 Disciplína zaměřující se na vytváření metod, výpočetních nástrojů a modelovacích jazyků založených na ontologiích pro oblast konceptuálního modelování.
+
+_Neformálně:_ Prostě si vytvořím nějaký ontologický model například v OntoUML pro danou doménu a až na základě toho pak dělám konkrétní modely (např. UML) pro různý softwary.
+
+Např. nejdřív si zadefinuju pojmy Pacient, Doktor,... v OntoUML a jejich vztahy a pak až začnu dělat modely pro nějaký healthcare system. 
 <!--ID: 1716107685131-->
 END
 

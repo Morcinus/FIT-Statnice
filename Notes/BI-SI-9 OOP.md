@@ -307,21 +307,6 @@ END
 START
 BI-SZZ
 
-smazat tuto kartičku
-
-Back:
-
-smazat tuto kartičku
-
-
-END
-
----
-
-
-START
-BI-SZZ
-
 Co je **get and put princip**? 
 
 Back:
