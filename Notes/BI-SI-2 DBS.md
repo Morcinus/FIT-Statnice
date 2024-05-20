@@ -253,7 +253,9 @@ BI-SZZ
 
 Jak se převede při transformaci konceptuálního modelu na relační model:
 
-**vztah 1:N** s povinným determinantem (=povinnost u 1)
+**vztah 1:N** s povinným nedeterminantem (=povinnost u N)
+
+![](../Assets/Pasted%20image%2020240520185232.png)
 
 Back:
 
@@ -272,7 +274,7 @@ BI-SZZ
 
 Jak se převede při transformaci konceptuálního modelu na relační model:
 
-**vztah 1:N** s nepovinným determinantem (=povinnost u 1)
+**vztah 1:N** s nepovinným nedeterminantem (=povinnost u N)
 
 Back:
 

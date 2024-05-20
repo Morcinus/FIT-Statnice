@@ -634,7 +634,7 @@ END
 START
 BI-SZZ
 
-Co je **normalizovaný tvar** čísla?
+Co je **normalizovaný tvar** čísla s mantisou?
 
 Back:
 

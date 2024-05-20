@@ -723,7 +723,7 @@ END
 START
 BI-SZZ
 
-Co jsou komutativní zákony?
+Co jsou komutativní zákony v matematické logice?
 
 Back:
 

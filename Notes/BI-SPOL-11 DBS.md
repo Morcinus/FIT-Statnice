@@ -315,7 +315,7 @@ END
 START
 BI-SZZ
 
-Čím se zabývá **fyzická** úroveň?
+Čím se zabývá **fyzická** úroveň? (v rámci databází)
 
 Back:
 

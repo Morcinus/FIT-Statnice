@@ -1,4 +1,4 @@
-## [v0.3.0] - 2024-XX-XX
+## [v0.3.0] - 2024-05-20
 
 Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.
 ### Přidány otázky
