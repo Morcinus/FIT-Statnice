@@ -37,22 +37,6 @@ END
 
 ---
 
-
-START
-BI-SZZ
-
-smazat
-
-Back:
-
-smazat
-
-
-END
-
----
-
-
 START
 BI-SZZ
 

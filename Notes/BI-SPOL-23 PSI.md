@@ -167,24 +167,6 @@ END
 
 ---
 
-
-START
-BI-SZZ
-
-smazat
-
-Back:
-
-smazat
-
-_Obrázek pro referenci:_
-
-<!--ID: 1716232223865-->
-END
-
----
-
-
 START
 BI-SZZ
 
