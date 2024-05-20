@@ -41,12 +41,13 @@ END
 START
 BI-SZZ
 
-Co se posílá v rámci **síťové vrstvy**
+smazat
 
 Back:
 
-**pakety** aka **datagramy**
-<!--ID: 1716200128644-->
+smazat
+
+
 END
 
 ---
@@ -404,7 +405,7 @@ END
 START
 BI-SZZ
 
-Jaké klíčové vlastnosti má UDP protokol? (3)
+Jaké klíčové vlastnosti má UDP protokol? (2)
 
 Back:
 
@@ -453,7 +454,7 @@ END
 START
 BI-SZZ
 
-Jaký je protokoly aplikační vrstvy pro **přenos souborů**? (1)
+Jaký je protokol aplikační vrstvy pro **přenos souborů**? (1)
 
 Back:
 
@@ -543,7 +544,7 @@ END
 START
 BI-SZZ
 
-Jak jsou 3 způsoby řízení datového toku v sítích? (=metody pro doručování dat)
+Jaké jsou 3 způsoby řízení datového toku v sítích? (=metody pro doručování dat)
 
 Back:
 

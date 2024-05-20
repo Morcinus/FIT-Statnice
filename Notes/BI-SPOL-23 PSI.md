@@ -8,6 +8,9 @@ FILE TAGS: BI-SPOL-23 PSI
 > BI-SPOL-23 (PSI)
 > ISO/OSI a TCP/IP model. Protokoly linkové vrstvy. Přepínání a směrování. Principy fungování propojovacích síťových prvků.
 
+TODO:
+- Přidat otázku na to, co je to ARP tabulka a kde se nachází
+
 ### ISO/OSI model
 
 START
@@ -70,7 +73,7 @@ vrstvy hostitele:
 
 vrstvy média:
 1. **síťová** 
-2. **linková** aka **spojová 
+2. **linková** aka **spojová**
 3. **fyzická**
 
 _Obrázek:_
@@ -100,7 +103,7 @@ END
 START
 BI-SZZ
 
-Jako jsou protokoly v **aplikační vrstvě** OSI modelu? (5)
+Jaké jsou protokoly v **aplikační vrstvě** OSI modelu? (5)
 
 Back:
 
@@ -134,7 +137,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou protokoly v **prezentační vrstvě** OSI modelu? (2)
+Jaké jsou protokoly/technologie v **prezentační vrstvě** OSI modelu? (2)
 
 Back:
 
@@ -168,15 +171,15 @@ END
 START
 BI-SZZ
 
-Jaké jsou protokoly v **relační vrstvě** OSI modelu? (3)
+smazat
 
 Back:
 
-**RPC NFS, NETBIOS**
+smazat
 
 _Obrázek pro referenci:_
-![](../Assets/Pasted%20image%2020240520093445.png)
-<!--ID: 1716195283829-->
+
+
 END
 
 ---
@@ -202,7 +205,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou protokoly v **transportní vrstvě** OSI modelu? (3)
+Jaké jsou protokoly v **transportní vrstvě** OSI modelu? (2)
 
 Back:
 
@@ -236,7 +239,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou protokoly/technologie v **síťové** OSI modelu? (3)
+Jaké jsou protokoly/technologie v **síťové** vrstvě OSI modelu? (3)
 
 Back:
 
@@ -270,7 +273,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou protokoly/technologie v **linkové** (spojové) OSI modelu? (2)
+Jaké jsou protokoly/technologie v **linkové** (spojové) vrstvě OSI modelu? (2)
 
 Back:
 
@@ -304,7 +307,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou protokoly/technologie ve **fyzické** OSI modelu? (4)
+Jaké jsou protokoly/technologie ve **fyzické** vrstvě OSI modelu? (4)
 
 Back:
 
@@ -318,6 +321,63 @@ _Obrázek pro referenci:_
 END
 
 ---
+
+
+START
+BI-SZZ
+
+Jaká data se používají v **transportní vrstvě**?
+
+Back:
+
+Segmenty
+<!--ID: 1716215764548-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jaká data se používají v **síťové vrstvě**?
+
+Back:
+
+Pakety
+<!--ID: 1716215764552-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jaká data se používají v **linkové vrstvě**?
+
+Back:
+
+Rámce
+<!--ID: 1716215764555-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jaká data se používají ve **fyzické vrstvě**?
+
+Back:
+
+Bity
+<!--ID: 1716215764559-->
+END
+
+---
+
 
 ### TCP/IP model
 
@@ -534,7 +594,7 @@ END
 START
 BI-SZZ
 
-Jakým způsobem se Ethernetu řeší zahlcení sítě?
+Jakým způsobem se v Ethernetu řeší zahlcení sítě?
 
 Back:
 
@@ -557,7 +617,7 @@ Co je **autonegociace**?
 
 Back:
 
-vysílač a přijímač si dohodnou parametry přenostu
+vysílač a přijímač si dohodnou parametry přenosu
 
 (např. o maximálním průtoku, kódování, modularizaci)
 <!--ID: 1716195283896-->
@@ -569,7 +629,7 @@ END
 START
 BI-SZZ
 
-Pomocí čeho se detekují **chyby** v **rámci** v linkové vrstvě? Jak se tato kontrola **nazývá**?
+Pomocí čeho se detekují **chyby** v **rámcích** v linkové vrstvě? Jak se tato kontrola **nazývá**?
 
 Back:
 
@@ -599,7 +659,7 @@ END
 START
 BI-SZZ
 
-Jak se označují různé druhy Ethernetu? Co jednotlivé části znamenají
+Jak se označuje daný druh Ethernetu? Co jednotlivé části znamenají?
 
 Back:
 
@@ -788,7 +848,7 @@ END
 START
 BI-SZZ
 
-Co obsahuje **záznam ve směrovací tabulce**?
+Co obsahuje **záznam ve směrovací tabulce**? (4)
 
 Back:
 
@@ -843,7 +903,7 @@ Jaké jsou **typy směrování**? (5)
 Back:
 
 - **redundantní** směrování
-- **symetrické** směrování
+- **symetrické/asymetrické** směrování
 - **záplavové** směrování
 - **reaktivní** směrování
 - **proaktivní** směrování
@@ -966,7 +1026,7 @@ END
 START
 BI-SZZ
 
-Jako jsou **3 směrovací protokoly**?
+Jaké jsou **3 směrovací protokoly**?
 
 Back:
 
@@ -1063,7 +1123,7 @@ Co dělá **rozbočovač** (hub)?
 
 Back:
 
-kopíruje příchozí data na více kabelových výstupů (fyzická vrstva)
+kopíruje příchozí data na více kabelových výstupů
 <!--ID: 1716195283989-->
 END
 
