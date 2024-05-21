@@ -30,7 +30,7 @@ END
 START
 BI-SZZ
 
-Čím se zabývá **konceptuální** úroveň?
+Čím se zabývá **konceptuální** úroveň? (v databázích)
 
 Back:
 
@@ -298,7 +298,7 @@ END
 START
 BI-SZZ
 
-Čím se zabývá **logická** (implementační, databázová) úroveň?
+Čím se zabývá **logická** (implementační, databázová) úroveň? (v databázích)
 
 Back:
 
@@ -315,7 +315,7 @@ END
 START
 BI-SZZ
 
-Čím se zabývá **fyzická** úroveň? (v rámci databází)
+Čím se zabývá **fyzická** úroveň? (v databázích)
 
 Back:
 
@@ -472,6 +472,8 @@ Back:
 
 - **B-strom** - DML jsou relativně drahé
 - **bitmapa** - DML jsou velice drahé
+
+U B-stromu stačí strom trošku přeskládat. U bitmapy je např. při přidání nebo odebrání řádku editnout každý sloupec. 
 <!--ID: 1709474689533-->
 END
 
@@ -488,6 +490,42 @@ Back:
 - **B-strom** - OLTP - časté změny od mnoha uživatelů
 - **bitmapa** - OLAP - méně manipulace, více dotazů a agregací
 <!--ID: 1709474689536-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Co je **OLTP**?
+
+Back:
+
+Systémy optimalizované pro rychlé, krátké transakce, např. vkládání, aktualizace a mazání dat.
+
+Vhodné pro bankovnictví a e-commerce.
+
+Tags: optional
+<!--ID: 1716315530274-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Co je **OLAP**?
+
+Back:
+
+Systémy optimalizované pro analytické zpracovávání, zaměřené na efektivní **dotazování a analýzu** velkého množství dat.
+
+Vhodné např. pro business intelligence a reportování.
+
+Tags: optional
+<!--ID: 1716315530277-->
 END
 
 ---

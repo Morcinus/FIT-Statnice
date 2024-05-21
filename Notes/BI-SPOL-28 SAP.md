@@ -101,12 +101,13 @@ END
 START
 BI-SZZ
 
-Z jakých částí se skládájí všechny počítače? (5)
+Z jakých částí se skládájí všechny počítače? (6)
 
 Back:
 
 - **Datová část (ALU)** - v procesoru
 - **Řídící část (řadič)** - v procesoru
+- **Pracovní registry** - v procesoru
 - **Hlavní paměť** - často mimo procesor (např. RAMka)
 - **Vstupní zařízení**
 - **Výstupní zařízení**

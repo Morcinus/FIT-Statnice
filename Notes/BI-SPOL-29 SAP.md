@@ -263,6 +263,8 @@ Back:
 Znaménku:
 $0$ je $+$
 $1$ je $-$
+
+Znaménko je nedílnou součástí obrazu.
 <!--ID: 1715528121576-->
 END
 
@@ -347,11 +349,16 @@ END
 START
 BI-SZZ
 
-Nakresli **sčítačku-odčítačku** v **doplňkovém kódu**
+Nakresli a vysvětli **sčítačku-odčítačku** v **doplňkovém kódu**.
 
 Back:
 
+$\sum$ značí sčítačku (sčítá dve čísla)
+Pokud "odčítej" je `1`, tak se bude `b` odčítat od `a`
+
 ![](../Assets/Pasted%20image%2020240512162117.png)
+
+
 <!--ID: 1715528121594-->
 END
 

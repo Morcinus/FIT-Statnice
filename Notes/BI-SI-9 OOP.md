@@ -90,13 +90,11 @@ Jaký je rozdíl mezi **subtypingem** a **subclassingem**?
 
 Back:
 
-**Subtyping** 
-- mám typ(=třídu) a z ní udělám podtyp (=podtřídu)
-- používá se `extends`
+**Subtyping** = Typ je podtypem jiného
 
-**Subclassing** 
-- mám třídu, která implementuje určitý interface
-- používá se `implements`
+**Subclassing** = Třída rozšiřuje funkcionality jiné třídy
+
+Je to dost podobné, ale subtyping je spíš pohled z hlediska těch typů a jejich vztahů, subclassing je spíše z pohledu těch funkcionalit, co ty třídy poskytují.
 <!--ID: 1715601679103-->
 END
 

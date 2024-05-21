@@ -14,7 +14,7 @@ FILE TAGS: BI-SI-6 KOM
 START
 BI-SZZ
 
-Jaký je postup konceptuální analýzy? (3 kroky)
+Jaký je postup konceptuální analýzy v KOMech? (3 kroky)
 
 Back:
 

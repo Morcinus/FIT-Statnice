@@ -9,11 +9,6 @@ FILE TAGS: BI-SPOL-27 SAP
 > BI-SPOL-27 (SAP)
 > Kombinační a sekvenční logické obvody (Mealy, Moore), popis a možnosti implementace na úrovni hradel. Minimalizace vyjádření logické funkce (s využitím map)
 
-### ToDo
-- Přidat otázky na to, jak vypadají logická hradla
-- Přidat otázky na to, jaký výstupy dávají jednotlivá logická hradla NOT, AND, OR, XOR, NAND, NOR, NXOR (hlavně XOR, NAND, NOR a NXOR)
-
-
 ### logické obvody
 
 START
@@ -225,6 +220,182 @@ Back:
 
 pomocí nich jsem schopný vyjádřit úplně všechno
 <!--ID: 1714747087984-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jak se zakresluje v obvodech negace ($\neg A$)?
+
+Back:
+
+![](../Assets/Pasted%20image%2020240521195240.png)
+
+Tags: optional
+<!--ID: 1716315530237-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jak se zakresluje v obvodech AND ($A \land B$)?
+
+Back:
+
+![](../Assets/Pasted%20image%2020240521195317.png)
+
+Tags: optional
+<!--ID: 1716315530245-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jak se zakresluje v obvodech OR  ($A \lor B$)?
+
+Back:
+
+![](../Assets/Pasted%20image%2020240521195342.png)
+
+Tags: optional
+<!--ID: 1716315530248-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jak se zakresluje v obvodech XOR?
+
+Back:
+
+![](../Assets/Pasted%20image%2020240521201138.png)
+
+Tags: optional
+<!--ID: 1716315530251-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jak se zakresluje v obvodech NAND?
+
+Back:
+
+![](../Assets/Pasted%20image%2020240521195659.png)
+
+Tags: optional
+<!--ID: 1716315530254-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jak se zakresluje v obvodech NOR?
+
+Back:
+
+![](../Assets/Pasted%20image%2020240521195721.png)
+
+Tags: optional
+<!--ID: 1716315530257-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jak lze pomocí NANDu reprezentovat negaci ($\neg A$)?
+
+Back:
+
+![](../Assets/Pasted%20image%2020240521195102.png)
+
+Tags: optional
+<!--ID: 1716315530260-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jak lze pomocí NANDu reprezentovat AND ($A \land B$)?
+
+Back:
+
+![](../Assets/Pasted%20image%2020240521195149.png)
+
+Tags: optional
+<!--ID: 1716315530263-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jak lze pomocí NANDu reprezentovat OR ($A \lor B$)?
+
+Back:
+
+![](../Assets/Pasted%20image%2020240521195210.png)
+
+Tags: optional
+<!--ID: 1716315530265-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jak lze pomocí NORu reprezentovat AND ($A \land B$)?
+
+Back:
+
+![](../Assets/Pasted%20image%2020240521195537.png)
+
+Tags: optional
+<!--ID: 1716315530268-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jak lze pomocí NORu reprezentovat OR ($A \lor B$)?
+
+Back:
+
+![](../Assets/Pasted%20image%2020240521195502.png)
+
+Tags: optional
+<!--ID: 1716315530271-->
 END
 
 ---

@@ -1,3 +1,8 @@
+[v0.4.0] - 2024-xx-xx
+
+### Přidány otázky
+- BI-SI-8
+
 ## [v0.3.0] - 2024-05-20
 
 Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.
