@@ -10,7 +10,7 @@ FILE TAGS: BI-SI-18 BI-WI-13 SI1.2
 > Analýza a správa požadavků (cíle, kategorizace, UML diagram případů užití, scénáře případů užití, UML diagram aktivit).
 
 ### ToDo
-- [ ] Tady by se hodilo u UML diagramu aktivit ještě podrobněji rozepsat, co znamenají jednotlivý věci v diagramu
+- [ ] Tady by se hodilo u UML diagramu aktivit ještě podrobněji rozepsat, co znamenají jednotlivý věci v diagramu - u zkoušky chtějí kreslit diagram aktivit, tak aby člověk tušil jak to udělat
 
 ### Požadavky
 
@@ -157,7 +157,7 @@ Co je **Use case** model?
 
 Back:
 
-Detailnější specifikaci funkčních požadavků.
+Detailnější specifikace funkčních požadavků.
 
 (Jeden požadavek se typicky rozpadne na víc případů užití)
 <!--ID: 1709724064720-->
@@ -482,6 +482,6 @@ END
 
 ---
 
-#### UML diagramu aktivit podrobně (optional)
+#### UML diagramu aktivit podrobně
 _todo_
 

@@ -241,6 +241,9 @@ Buď vazbou mezi třídami nebo následovně
 
 `- collection: int [0..*] {bag}`
 
+`bag` je typ kolekce
+`int` je typ prvku kolekce
+
 Tags: optional
 <!--ID: 1710234028411-->
 END

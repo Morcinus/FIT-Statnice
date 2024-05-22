@@ -8,3 +8,4 @@ V této poznámce je seznam témat příkladů, které je fajn si procvičit kro
 - BI-SI-02 DBS - převod schématu z prosemináře
 - BI-SAP-27 Karnaughova mapa, popisování a vytváření sekvenčních obvodů
 - BI-SI-24 PSI nějaká cvičení na adresaci
+- BI-SPOL-6 BEZ procvičení si RSA

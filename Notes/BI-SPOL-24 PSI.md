@@ -9,6 +9,9 @@ FILE TAGS: BI-SPOL-24 PSI
 > BI-SPOL-24 (PSI)
 > Protokolová rodina TCP/IP (IPv4, IPv6, TCP, UDP, aplikační protokoly). Řízení datového toku. Princip a využití NAT. Systém DNS.
 
+TODO:
+- Přidat co je **maska** sítě
+- Přidat co je multicast (obecně) - jak se liší od broadcastu
 
 START
 BI-SZZ
