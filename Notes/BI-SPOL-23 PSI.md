@@ -230,7 +230,7 @@ IP, ARP, Internet
 _Obrázek pro referenci:_
 ![](../Assets/Pasted%20image%2020240520093445.png)
 
-**END
+END
 
 ---
 
@@ -460,7 +460,7 @@ END
 START
 BI-SZZ
 
-Co je MAC?
+Co je MAC vrstva?
 
 Back:
 

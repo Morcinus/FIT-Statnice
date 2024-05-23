@@ -759,7 +759,7 @@ END
 START
 BI-SZZ
 
-Co je **globální chyba**?
+Co je **globální chyba**? (v kontextu transakcí)
 
 Back:
 
@@ -778,7 +778,7 @@ END
 START
 BI-SZZ
 
-Co je **lokální chyba**?
+Co je **lokální chyba**? (v kontextu transakcí)
 
 Back:
 

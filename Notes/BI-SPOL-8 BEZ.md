@@ -118,10 +118,10 @@ Postup, pokud $A$ chce komunikovat s $B$:
 3. $A$ zašifruje zprávu a náhodné číslo $N_1$ veřejným klíčem $B$, odešle je $B$ $(A \to E_{VK_B}(\mathrm{ID}_A || N_1) \to B)$ a $B$ si je dešifruje svým soukromým klíčem
 4. $B$ si vyžádá od autority veřejný klíč $A$ $(B \to \mathrm{Req} || T_2 \to Aut)$
 5. autorita vrátí veřejný klíč $A$ zašifrovaný soukromým klíčem autority $(Aut \to E_{SK_{Aut}}(VK_A || \mathrm{Req} || T_2) \to A)$ a $B$ si zprávu dešifruje (a ověří původ) pomocí známého veřejného klíče autority
-6. $A$ zašifruje náhodné číslo $N_1$ od $A$ a navíc ještě vlastní náhodné číslo $N_2$ veřejným klíčem $A$, odešle je $A$ $(B \to E_{VK_A}(N_1 || N_2) \to A)$ a $A$ si je dešifruje svým soukromým klíčem
+6. $B$ zašifruje náhodné číslo $N_1$ od $A$ a navíc ještě vlastní náhodné číslo $N_2$ veřejným klíčem $A$, odešle je $A$ $(B \to E_{VK_A}(N_1 || N_2) \to A)$ a $A$ si je dešifruje svým soukromým klíčem
 7. $A$ zašifruje náhodné číslo $N_2$ od $B$ veřejným klíčem $B$, odešle jej $B$ $(A \to E_{VK_B}(N_2) \to B)$ a $B$ si jej dešifruje svým soukromým klíčem
 
-
+Posílání $N_1$ je tam kvůli tomu, aby např. $A$ mělo jistotu, že ta zpráva pochází od $B$. Analogicky to je s $N_2$.
 
 Tags: optional
 <!--ID: 1716450545731-->
@@ -274,7 +274,7 @@ END
 START
 BI-SZZ
 
-Jak to funguje, když chce $C$ komunikovat s $A$?
+Co musí $A$ udělat, aby mu mohlo $C$ poslat zprávu?
 
 ![](../Assets/Pasted%20image%2020240522210954.png)
 
@@ -331,7 +331,7 @@ END
 START
 BI-SZZ
 
-Na co se používají **generátory náhodných čísel**?
+Na co se používají výstupy z **generátorů náhodných čísel**?
 
 Back:
 
@@ -470,7 +470,7 @@ Co jsou **statické testy generátorů**?
 
 Back:
 
-Teasty, které ověří vlastnosti náhodných generátorů.
+Testy, které ověří vlastnosti náhodných generátorů.
 
 Ověřují, zda generovaná posloupnost splňuje některé vlastnosti náhodné posloupnosti.
 <!--ID: 1716450545794-->
@@ -606,7 +606,6 @@ Back:
 - **next-bit test**
 - **state compromise**
 
-
 <!--ID: 1716450545816-->
 END
 
@@ -720,7 +719,7 @@ $$X_{n+1} =|X_n^2|_m$$
 
 Kde:
 - $X_0 > 1$ je seed
-- $m = pq$
+- $m = pq$ ($p,q$ jsou prvočísla)
 - $p,q \equiv 3 \mod 4$
 <!--ID: 1716450545832-->
 END

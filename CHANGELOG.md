@@ -1,12 +1,14 @@
 
-## [v0.4.0] - 2024-xx-xx
+## [v0.4.0] - 2024-05-23
 
+Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.
 ### Přidány otázky
 - BI-SI-8 OOP
 - BI-SI-10 OOP
 - BI-SPOL-6 BEZ
 - BI-SPOL-7 BEZ
 - BI-SPOL-8 BEZ
+- BI-SI-22 SI2.3
 ## [v0.3.1] - 2024-05-21
 
 Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.
