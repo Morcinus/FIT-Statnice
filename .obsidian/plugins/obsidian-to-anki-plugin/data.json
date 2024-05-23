@@ -440,7 +440,20 @@
     "../Assets/Pasted image 20220315103021.png",
     "../Assets/Pasted image 20240522111654.png",
     "../Assets/Pasted image 20240522111706.png",
-    "../Assets/Pasted image 20220308102302.png"
+    "../Assets/Pasted image 20220308102302.png",
+    "../Assets/Pasted image 20240522203130.png",
+    "../Assets/Pasted image 20240522203817.png",
+    "../Assets/Pasted image 20240522210825.png",
+    "../Assets/Pasted image 20240522210954.png",
+    "../Assets/Pasted image 20240522211610.png",
+    "../Assets/Pasted image 20240523092240.png",
+    "../Assets/Pasted image 20240523092458.png",
+    "../Assets/Pasted image 20240523092452.png",
+    "../Assets/Pasted image 20240523092426.png",
+    "../Assets/Pasted image 20240523092419.png",
+    "../Assets/Pasted image 20240523101044.png",
+    "../Assets/Pasted image 20240523101748.png",
+    "../Assets/Pasted image 20240523102119.png"
   ],
   "File Hashes": {
     "Templates/📜 Note.md": "6474a472ede0bb4f09e443014e496f89",
@@ -463,11 +476,11 @@
     "Notes/BI-SI-30 TJV.md": "f5b4431a7490298eda98b35830113444",
     "Notes/BI-SPOL-27 SAP.md": "860e47ad4768f0d33651b6c7fff350ce",
     "Notes/BI-SI-2 DBS.md": "7a743a0570aaf4a2f0a65e707e1db90f",
-    "CHANGELOG.md": "ff78f91705edf20cd6f491531aec73f0",
+    "CHANGELOG.md": "f1d3f5633fbd609d7de68f835b35ac84",
     "Notes/Seznam věcí, co je fajn procvičit.md": "97bdcd6c4c05716247a3b98bb65962dc",
     "Notes/BI-SPOL-28 SAP.md": "aae7b90017a56fc750fc34d5fcf22c83",
     "Notes/BI-SPOL-29 SAP.md": "67ad490e027c2194d33362dd7f9070d5",
-    "Notes/BI-SI-8 OOP.md": "95267f2ee29c0e7037690bdf5b078913",
+    "Notes/BI-SI-8 OOP.md": "5fa5ba31df81fc5aadc392ab3144889b",
     "Notes/BI-SI-9 OOP.md": "ba233069750b22f9f9bf8d007b3c1fcf",
     "Notes/BI-SPOL-14 MLO.md": "b7506a36d0a386979728f99908ab391e",
     "Notes/BI-SI-6 KOM.md": "dd57d07bd3954af7f075dae724f04245",
@@ -477,7 +490,9 @@
     "Notes/BI-SPOL-21 PA2.md": "ded918709e3b8380a137ad05f0cb9df1",
     "Notes/BI-SI-10 OOP.md": "d0f3f7c54261d3fc717a78a1e601351c",
     "Notes/BI-SPOL-7 BEZ.md": "fa96ab5bc1452e788545d89d9cc284b1",
-    "Notes/BI-SPOL-6 BEZ.md": "b905ab8ff8e0c9d82571ab12d1956cd1"
+    "Notes/BI-SPOL-6 BEZ.md": "b905ab8ff8e0c9d82571ab12d1956cd1",
+    "Notes/BI-SPOL-8 BEZ.md": "b54878e7c69ee6b55ab75a3c783a1d4e",
+    "Notes/BI-SI-22 SI2.3.md": "a7ec04dd85cc3e8f45d1b815abd4df58"
   },
   "fields_dict": {
     "Basic": [

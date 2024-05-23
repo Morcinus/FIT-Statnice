@@ -6,6 +6,7 @@
 - BI-SI-10 OOP
 - BI-SPOL-6 BEZ
 - BI-SPOL-7 BEZ
+- BI-SPOL-8 BEZ
 ## [v0.3.1] - 2024-05-21
 
 Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.
