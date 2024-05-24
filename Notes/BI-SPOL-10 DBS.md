@@ -94,7 +94,7 @@ END
 START
 BI-SZZ
 
-Kdy **začíná transakce**? (2)
+Kdy **začíná transakce**? (3)
 
 Back:
 

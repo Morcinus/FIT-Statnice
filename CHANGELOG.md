@@ -1,3 +1,10 @@
+## [v0.5.0] - 2024-05-xx
+
+Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.
+### Přidány otázky
+- BI-SI-23 SI2.3
+- BI-SI-24 SI2.3
+- BI-SI-25 SI2.3
 
 ## [v0.4.0] - 2024-05-23
 

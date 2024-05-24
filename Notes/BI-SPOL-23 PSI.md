@@ -229,7 +229,7 @@ IP, ARP, Internet
 
 _Obrázek pro referenci:_
 ![](../Assets/Pasted%20image%2020240520093445.png)
-
+<!--ID: 1716552340312-->
 END
 
 ---
@@ -308,7 +308,7 @@ END
 START
 BI-SZZ
 
-Jaká data se používají v **transportní vrstvě**?
+Jaké **jednotky dat** (PDU - Protocol Data Unit) se používají v **transportní vrstvě**?
 
 Back:
 
@@ -322,7 +322,7 @@ END
 START
 BI-SZZ
 
-Jaká data se používají v **síťové vrstvě**?
+Jaké **jednotky dat** (PDU - Protocol Data Unit) se používají v **síťové vrstvě**?
 
 Back:
 
@@ -336,7 +336,7 @@ END
 START
 BI-SZZ
 
-Jaká data se používají v **linkové vrstvě**?
+Jaké **jednotky dat** (PDU - Protocol Data Unit) se používají v **linkové vrstvě**?
 
 Back:
 
@@ -350,7 +350,7 @@ END
 START
 BI-SZZ
 
-Jaká data se používají ve **fyzické vrstvě**?
+Jaké **jednotky dat** (PDU - Protocol Data Unit) se používají ve **fyzické vrstvě**?
 
 Back:
 
@@ -1008,7 +1008,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou **3 směrovací protokoly**?
+Jaké jsou **3 typy směrovacích protokolů**?
 
 Back:
 

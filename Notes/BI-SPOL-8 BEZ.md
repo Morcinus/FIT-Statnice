@@ -218,6 +218,8 @@ Back:
 
 stromová struktura certifikačních autorit, postupně si vydávají certifikáty (ta vyšší vydává těm nižším)
 
+Pozn. Ten strom se vytváří, aby nebyla přehlcena ta kořenová autorita. Tím se jakoby rozloží zátěž a různí uživatelé můžou využívat různé autority.
+
 ![](../Assets/Pasted%20image%2020240522210825.png)
 <!--ID: 1716450545748-->
 END
@@ -249,6 +251,8 @@ Back:
 To, že si certifikační autority **navzájem podepíšou certifikáty**. Pak spolu mohou komunikovat i účastníci z různých stromů.
 
 Dělají to typicky **kořenové autority**
+
+Křížovou certifikací deklaruje CA1, protože důvěřuje všem certifikátům vystaveným CA2.
 
 ![](../Assets/Pasted%20image%2020240522210954.png)
 <!--ID: 1716450545754-->

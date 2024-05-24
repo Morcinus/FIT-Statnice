@@ -282,7 +282,7 @@ Back:
 2. Bob odešle Alici veřejný klíč $y_B=|a^{k_B}|_m$
 3. Alice si dopočítá společný symetrický klíč $K=|y_B^{k_A}|_m$
 4. Bob si dopočítá společný symetrický klíč $K=|y_A^{k_B}|_m$
-5. oba mají stejný klíč, protože $K = |a^{k_A \cdot k_B}|_m$
+5. oba mají stejný klíč, protože $K = |a^{k_A^{k_B}}|=|a^{k_B^{k_A}}|_m$
 
 _To samé z přednášky:_
 ![](../Assets/Pasted%20image%2020240522101818.png)

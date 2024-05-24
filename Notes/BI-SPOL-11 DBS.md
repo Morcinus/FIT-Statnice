@@ -13,7 +13,7 @@ FILE TAGS: BI-SPOL-11 DBS
 START
 BI-SZZ
 
-Jaké jsou **3 úrovně pohledu na data**?
+Jaké jsou **3 úrovně pohledu na data**? (v DBS)
 
 Back:
 

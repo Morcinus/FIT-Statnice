@@ -10,7 +10,6 @@ FILE TAGS: BI-SPOL-24 PSI
 > Protokolová rodina TCP/IP (IPv4, IPv6, TCP, UDP, aplikační protokoly). Řízení datového toku. Princip a využití NAT. Systém DNS.
 
 TODO:
-- Přidat co je **maska** sítě
 - Přidat co je multicast (obecně) - jak se liší od broadcastu
 
 START
@@ -107,8 +106,40 @@ Vysvětli, co je část před lomítkem a část za lomítkem:
 Back:
 
 před lomítkem = konkrétní IP adresa nějakého zařízení
-za lomítkem = **rozsah adres** - všechny adresy v jedné síti mají tolik prvních společných bitů. Např. zde mají všechny adresy prvních 24 bitů stejných
+za lomítkem = **maska sítě**
 <!--ID: 1716200128658-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Co je **maska sítě**?
+
+Back:
+
+`147.32.232.212/24`
+
+Číslo za lomítkem, všechny adresy v dané síti mají tento počet prvních bitů stejný. **Maska sítě určuje rozsah sítě.**
+
+Např. zde mají všechny adresy prvních 24 bitů stejných.
+<!--ID: 1716552661758-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Co je **rozsah sítě**?
+
+Back:
+
+Rozsah adres, které jsou v dané síti.
+<!--ID: 1716552661762-->
 END
 
 ---
@@ -206,11 +237,11 @@ END
 START
 BI-SZZ
 
-Co v sobě obsahuje adresa IPv6? 
+Čím je zajištěna unikátnost **lokální linkové** IPv6 adresy? 
 
 Back:
 
-Identifikátor **EUI-64** odvozený z MAC adresy daného zařízení
+Standardem **EUI-64**, podle kterého se část IPV6 adresy odvozuje od MAC adresy daného zařízení.
 <!--ID: 1716200128678-->
 END
 
@@ -239,11 +270,14 @@ END
 START
 BI-SZZ
 
-Když připojím zařízení do lokální sítě, tak kdo nastaví IPv4 adresu tomuto zařízení?
+Když připojím zařízení do lokální sítě, tak kdo typicky nastaví IPv4 adresu tomuto zařízení?
 
 Back:
 
-Přiděluje to **DHCP server**, což je v lokálních sítích typicky **router** (směrovač).
+- **Nastavení staticky**: Adresu nastavím sám
+- **Nastavení dynamicky**
+	- Pokud je v síti **DHCP server**, tak adresu přidělí on (po nějakém handshake)
+	- Pokud v síti není DHCP server, tak bude přidělena jakási adresa `169.*`
 <!--ID: 1716200128684-->
 END
 
@@ -257,7 +291,8 @@ Když připojím zařízení do lokální sítě, tak kdo nastaví IPv6 adresu t
 
 Back:
 
-V IPv6 si **zařízení samo nastaví** svoji adresu podle MAC adresy (na rozdíl od IPv4)?
+- Buď si **zařízení samo nastaví** svoji IPv6 adresu podle EUI-64 
+- Nebo mu je přiřazena automaticky pomocí **DHCPv6**
 <!--ID: 1716200128687-->
 END
 
@@ -272,7 +307,7 @@ Co je ARP protokol?
 
 Back:
 
-protokol, pomocí kterého se mapují IP adresy na MAC adresy 
+Protokol, díky kterému může zařízení získat **MAC adresu**, pokud zná **IP adresu** daného zařízení.
 <!--ID: 1716200128690-->
 END
 
@@ -619,7 +654,7 @@ Co je NAT?
 
 Back:
 
-překlad různých **privátních IP adres** na jednu **veřejnou IP adresu** (adresu vnějšího rozhraní NATujícího směrovače)
+Překlad **privátních IP adres** na **veřejné IP adresy** (většinou na jednu veřejnou adresu vnějšího rozhraní NATujícího směrovače)
 
 přepisuje port, adresu nebo jinou hodnotu v paketu
 
