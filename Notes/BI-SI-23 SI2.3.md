@@ -96,7 +96,6 @@ Back:
 - **Kontejnerizovaná** - Docker, Kubernetes
 - **On-premise** a **cloud** (SaaS, PaaS,...) - AWS, Google Cloud Platform, MS Azure
 - **Jednotky prostředí** x **tisíce** - ansible, terraform
-
 <!--ID: 1716547569624-->
 END
 

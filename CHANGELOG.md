@@ -5,6 +5,7 @@ Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.
 - BI-SI-23 SI2.3
 - BI-SI-24 SI2.3
 - BI-SI-25 SI2.3
+- BI-SI-26 SI2.3
 
 ## [v0.4.0] - 2024-05-23
 

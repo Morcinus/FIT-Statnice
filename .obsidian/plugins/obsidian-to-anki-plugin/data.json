@@ -470,7 +470,8 @@
     "../Assets/Pasted image 20240524111029.png",
     "../Assets/Pasted image 20240524125618.png",
     "../Assets/Pasted image 20240524125822.png",
-    "../Assets/Pasted image 20240524134058.png"
+    "../Assets/Pasted image 20240524134058.png",
+    "../Assets/Pasted image 20231104151225.png"
   ],
   "File Hashes": {
     "Templates/📜 Note.md": "6474a472ede0bb4f09e443014e496f89",
@@ -478,7 +479,7 @@
     "Notes/BI-SPOL-9 DBS.md": "6e840d00e83e990bc9489e3d20057e17",
     "CONTRIBUTING.md": "92f2028193eec1c0a52515a29cf3b60f",
     "Notes/BI-SPOL-10 DBS.md": "aebbfb8cd503620a6194f1c0de48d111",
-    "Notes/BI-SPOL-11 DBS.md": "6f1df227c3a6c039dd855e1f0ea230f1",
+    "Notes/BI-SPOL-11 DBS.md": "2f0f2edcbe64c36775b6abd8beabae90",
     "Notes/BI-SI-4 DBS.md": "00273c9122ef8bcfeeadd85a14597aed",
     "Notes/BI-SI-18 SI1.2.md": "3bfff40fc248d175f6fb0664e626f5d7",
     "Notes/BI-SPOL-31 SI1.2.md": "ba1619e050a871603001aec16fbd000d",
@@ -507,12 +508,13 @@
     "Notes/BI-SPOL-21 PA2.md": "ded918709e3b8380a137ad05f0cb9df1",
     "Notes/BI-SI-10 OOP.md": "d0f3f7c54261d3fc717a78a1e601351c",
     "Notes/BI-SPOL-7 BEZ.md": "fa96ab5bc1452e788545d89d9cc284b1",
-    "Notes/BI-SPOL-6 BEZ.md": "b905ab8ff8e0c9d82571ab12d1956cd1",
-    "Notes/BI-SPOL-8 BEZ.md": "0ad2cdd2ab19f59399eb250c9a94d97c",
+    "Notes/BI-SPOL-6 BEZ.md": "7ea623ed6ec6d48c223ab1e49bc5b7af",
+    "Notes/BI-SPOL-8 BEZ.md": "81e6eb3dc4ea0e62efce07e63c239a0b",
     "Notes/BI-SI-22 SI2.3.md": "a7ec04dd85cc3e8f45d1b815abd4df58",
-    "Notes/BI-SI-24 SI2.3.md": "ae506d39656eb675ad7654653a87b62f",
-    "Notes/BI-SI-23 SI2.3.md": "5ce3d462fff15a5025f6cc30079922bd",
-    "Notes/BI-SI-25 SI2.3.md": "38d3f33306555ab2576f757ac40bda66"
+    "Notes/BI-SI-24 SI2.3.md": "257e51d53b4719b3a60cba0dccdfe12d",
+    "Notes/BI-SI-23 SI2.3.md": "4f1308e87434294aff405485ecc60b39",
+    "Notes/BI-SI-25 SI2.3.md": "38d3f33306555ab2576f757ac40bda66",
+    "Notes/BI-SI-26 SI2.3.md": "90b39c9b77f46099fe9700d256b660d2"
   },
   "fields_dict": {
     "Basic": [
