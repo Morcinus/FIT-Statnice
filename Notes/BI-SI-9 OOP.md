@@ -4,7 +4,7 @@ parent: "[[FIT]]"
 ---
 
 TARGET DECK: BI-SZZ
-FILE TAGS: BI-SI-9
+FILE TAGS: BI-SI-9 OOP
 
 > BI-WSI-SI-9 (OOP)
 > OOP polymorphismus - subtyping, generics, bounds a variance.

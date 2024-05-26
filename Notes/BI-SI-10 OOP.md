@@ -4,7 +4,7 @@ parent: "[[FIT]]"
 ---
 
 TARGET DECK: BI-SZZ
-FILE TAGS: BI-SI-10
+FILE TAGS: BI-SI-10 OOP
 
 > BI-WSI-SI-10 (OOP)
 > OOP chybový stav a reflexe - signalizování výjimečných stavů, výjimky, stack trace, total functions, design by contract, object model a dynamic code invocation.

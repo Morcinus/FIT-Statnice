@@ -94,7 +94,7 @@ END
 START
 BI-SZZ
 
-Jaké věci jsou klíčové pro údržbu softwaru?
+Jaké věci jsou klíčové pro údržbu softwaru? (5)
 
 Back:
 
@@ -216,7 +216,6 @@ Back:
 1) L1 - **First-line podpora** = radí uživatelům a přijímají hlášení o chybách
 2) L2 - **Administrátorská podpora** = aktivní monitoring systému a řešení chyb ještě než jsou nahlášeny, mohou třeba restartovat službu
 3) L3 - **Expertní podpora** = mají detailní porozumění systému (podíleli se na vývoji)
-
 <!--ID: 1716634000825-->
 END
 

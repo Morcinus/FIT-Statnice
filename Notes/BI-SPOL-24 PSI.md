@@ -122,10 +122,31 @@ Back:
 
 `147.32.232.212/24`
 
-Číslo za lomítkem, všechny adresy v dané síti mají tento počet prvních bitů stejný. **Maska sítě určuje rozsah sítě.**
+Číslo za lomítkem, všechny adresy v dané síti mají tento počet prvních bitů stejný (**samé jedničky**). **Maska sítě určuje rozsah sítě.**
 
 Např. zde mají všechny adresy prvních 24 bitů stejných.
 <!--ID: 1716552661758-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jak lze z **IP adresy** zařízení s **maskou** odvodit **adresu sítě**, **broadcastovou adresu** a **rozsah adres**?
+
+Např. pro adresu `147.32.232.212/24`
+
+Back:
+
+Maska je `/24`, což je `255.255.255.0`, tzn. první 3 bajty budou v síti pro každé zařízení stejný.
+
+Potom:
+- **adresa sítě** je nejnižší adresa, tedy `147.32.232.0`
+- **broadcastová adresa** je nejvyšší adresa, tedy `147.32.232.255`
+- **rozsah sítě** je od `147.32.232.1` do `147.32.232.254`
+<!--ID: 1716722665567-->
 END
 
 ---
@@ -747,14 +768,41 @@ Co je **Top Level Domain** (TLD)?
 
 Back:
 
-Nejvyšší doména
+Nejvyšší doména.
 
-_Např._
+Např. `.cz, .org`
+<!--ID: 1716200128770-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jaké jsou 4 typy top level domén + uveď příklady.
+
+Back:
+
 - _generic (gTLD)_ - např. `.gov`, `.org`
 - _country code (ccTLD)_ - např. `.cz`
 - _new generic (ngTLD)_ - např. `.vip`
 - _reverse_ `in-addr.arpa` - pro překlad z IP na doménové jméno
-<!--ID: 1716200128770-->
+<!--ID: 1716716200763-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+K čemu slouží `in-addr.arpa`?
+
+Back:
+
+Je to doména, která slouží pro překlad IP adresy na doménové jméno
+<!--ID: 1716716200765-->
 END
 
 ---

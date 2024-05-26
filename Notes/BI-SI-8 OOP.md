@@ -4,7 +4,7 @@ parent: "[[FIT]]"
 ---
 
 TARGET DECK: BI-SZZ
-FILE TAGS: BI-SI-8
+FILE TAGS: BI-SI-8 OOP
 
 > BI-WSI-SI-8 (OOP)
 > OOP abstrakce a hierarchie tříd - balíčky, třídy, atributy, metody, konstruktory, traity, ekvivalence a identita, nadtřídy, podtřídy, dědičnost, statický a dynamický dispatch.

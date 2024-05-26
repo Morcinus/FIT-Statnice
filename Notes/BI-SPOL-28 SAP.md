@@ -83,21 +83,6 @@ END
 
 ---
 
-
-START
-BI-SZZ
-
-Jak odkazují instrukce na data v počítači? 
-
-Back:
-
-Instrukce odkazují na data pomocí jejich **adres**.
-<!--ID: 1716215764565-->
-END
-
----
-
-
 START
 BI-SZZ
 

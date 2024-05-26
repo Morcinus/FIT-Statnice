@@ -2,6 +2,7 @@
 
 Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.
 ### Přidány otázky
+- BI-SI-1 BEZ
 - BI-SI-23 SI2.3
 - BI-SI-24 SI2.3
 - BI-SI-25 SI2.3

@@ -324,8 +324,8 @@ Jaké jsou **typy dokumentace**?
 
 Back:
 
-- **Metodická** - Popisuje metodiky, jak se bude vyvíjet SW.
-- **Procesní** - Jsou to různé plány, zprávy a odhady.
+- **Metodická**
+- **Procesní**
 - **Produktová**
 <!--ID: 1716547569587-->
 END
@@ -336,7 +336,7 @@ END
 START
 BI-SZZ
 
-Co všechno zahrnuje **Metodická dokumentace**? (2)
+Co zahrnuje **Metodická dokumentace**? (2)
 
 Back:
 
@@ -391,7 +391,7 @@ Jak často se aktualizuje **procesní dokumentace**?
 
 Back:
 
-**Velice rychle zastarává**
+V průběhu SDLC se aktualizuje **často** a **velice rychle zastarává**.
 <!--ID: 1716547569599-->
 END
 
@@ -430,7 +430,7 @@ END
 START
 BI-SZZ
 
-Podle čeho můžu dělit čtenáře dokumentací?
+Podle čeho můžu dělit **čtenáře dokumentací**? (2)
 
 Back:
 
