@@ -59,11 +59,13 @@ END
 START
 BI-SZZ
 
-Definice: **informační bezpečnost**?
+Definice: **informační bezpečnost**
 
 Back:
 
-Souhrn prostředků a postupu na zabezpečení důvěrnosti, integrity a dostupnosti informací, na zabezpečení autentizace uživatelů a zdrojů, účtovatelnosti operací, jakož i zabezpečení ochrany proti neautorizované manipulaci, modifikaci nebo zničení, resp. poškození informací v informačním systému
+Souhrn prostředků a postupů na zabezpečení důvěrnosti, integrity a dostupnosti informací, na zabezpečení autentizace uživatelů a zdrojů, účtovatelnosti operací, jakož i zabezpečení ochrany proti neautorizované manipulaci, modifikaci nebo zničení, resp. poškození informací v informačním systému.
+
+(Ano, je to hrozně retardovaná definice, ale bylo to v přednášce :))
 <!--ID: 1716716200624-->
 END
 
@@ -543,7 +545,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou součásti architektury bezpečnosti (dle ITU-T X.800)? (5)
+Jaké jsou součásti architektury bezpečnosti (dle ITU-T X.800)? (3)
 
 Back:
 
@@ -825,7 +827,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou dva hlavní typy útoků na bezpečnost?
+Jaké jsou 2 hlavní **typy útoků** na bezpečnost a **co znamenají**?
 
 Back:
 
@@ -855,7 +857,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou 4 kategorie **aktivních útoků**?
+Jaké jsou 4 kategorie **aktivních útoků** a **co znamenají**?
 
 Back:
 

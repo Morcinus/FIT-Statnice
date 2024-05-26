@@ -142,7 +142,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou typické parametry SLA? (3)
+Jaké jsou typické parametry SLA a co znamenají? (3)
 
 Back:
 

@@ -358,7 +358,6 @@ Pokud "odčítej" je `1`, tak se bude `b` odčítat od `a`
 
 ![](../Assets/Pasted%20image%2020240512162117.png)
 
-
 <!--ID: 1715528121594-->
 END
 
@@ -618,6 +617,23 @@ je složen z obvodů pro jednotlivé posuvy a multiplexorů pro výběr správn�
 END
 
 ---
+
+
+START
+BI-SZZ
+
+Co je **čítač**?
+
+Back:
+
+speciální registr, který umí inkrementaci a dekrementaci a obvykle počítá v binárním kódu do nějaké mocniny dvojky 
+
+(např. čítač M4 je obvod, který počítá modulo 4)
+<!--ID: 1716742589798-->
+END
+
+---
+
 
 ### reprezentace čísel s pohyblivou řádovou čárkou
 

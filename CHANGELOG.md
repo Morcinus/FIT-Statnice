@@ -1,8 +1,15 @@
-## [v0.5.0] - 2024-05-xx
+## [v0.6.0] - 2024-xx-xx
+
+Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.
+### Přidány otázky
+- 
+
+## [v0.5.0] - 2024-05-26
 
 Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.
 ### Přidány otázky
 - BI-SI-1 BEZ
+- BI-SI-17 PSI
 - BI-SI-23 SI2.3
 - BI-SI-24 SI2.3
 - BI-SI-25 SI2.3

@@ -559,7 +559,9 @@ Jak funguje operační mód blokových šifer **MAC**?
 
 Back:
 
-vlastně CBC s nulovým incializačním vektorem, přičemž jen poslední blok šifrového textu se použije jako autentizační kód MAC (Message Authentication Code)
+vlastně CBC s nulovým incializačním vektorem, přičemž jen poslední blok šifrového textu se použije jako **autentizační kód MAC** (Message Authentication Code)
+
+MAC se posílá se zprávou a autentizuje původ zprávy a zajišťuje, že zpráva nebyla změněna.
 
 ![](../Assets/Pasted%20image%2020240522125807.png)
 <!--ID: 1716376588155-->
