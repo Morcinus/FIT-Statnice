@@ -2,7 +2,8 @@
 
 Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.
 ### Přidány otázky
-- 
+- BI-SPOL-12 LIN
+- BI-SPOL-15 MLO
 
 ## [v0.5.0] - 2024-05-26
 
