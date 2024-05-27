@@ -116,7 +116,14 @@ Nechť $m, n ∈ \Bbb{N}, \Bbb{A} ∈\Bbb{R}^{m,n}$, $b ∈ \Bbb{R}^m$. Rovnici 
 
 Vektor $x = \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}$ nazýváme vektorem neznámých
 
-a vektor $b^T = (b_1~~b_2~~\dots~~b_m)$ vektorem pravých stran.
+a vektor $b = \begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_m \end{pmatrix}$ vektorem pravých stran.
+
+---
+
+_Celá definice z přednášky:_
+![](../Assets/Pasted%20image%2020240527110337.png)
+
+
 <!--ID: 1716747519713-->
 END
 
@@ -131,6 +138,13 @@ Definice: **rozšířená matice soustavy**
 Back:
 
 ![](../Assets/Pasted%20image%2020240526191331.png)
+
+---
+
+_Celá definice z přednášky:_
+![](../Assets/Pasted%20image%2020240527110337.png)
+
+
 <!--ID: 1716747519716-->
 END
 
@@ -146,8 +160,11 @@ Back:
 
 Je-li $b = θ ∈ \mathbb{R}^m$, mluvíme o homogenní soustavě.
 
-_Souvisí s definicí_:
-![](../Assets/Pasted%20image%2020240526191440.png)
+
+---
+
+_Celá definice z přednášky:_
+![](../Assets/Pasted%20image%2020240527110337.png)
 <!--ID: 1716747519719-->
 END
 
@@ -162,6 +179,12 @@ Definice: **přidružená homogenní soustava lineárních rovnic**
 Back:
 
 Soustava $\Bbb{A}x = θ$ je přidruženou homogenní soustavou lineárních rovnic k soustavě $\Bbb{A}x = b$.
+
+
+---
+
+_Celá definice z přednášky:_
+![](../Assets/Pasted%20image%2020240527110337.png)
 <!--ID: 1716747519721-->
 END
 
@@ -176,6 +199,12 @@ Jak značíme množinu všech řešení pro homogenní a nehomogenní SLR?
 Back:
 
 Množinu všech řešení soustavy $\Bbb{A}x = b$ značíme $S$ a množinu řešení přidružené homogenní soustavy $S_0$.
+
+
+---
+
+_Celá definice z přednášky:_
+![](../Assets/Pasted%20image%2020240527110337.png)
 <!--ID: 1716747519724-->
 END
 
@@ -204,7 +233,7 @@ END
 START
 BI-SZZ
 
-Vyjmenuj **axiomy vektorového prostoru**
+Vyjmenuj **axiomy vektorového prostoru** (doporučuju napsat na papír)
 
 Back:
 
@@ -268,7 +297,7 @@ END
 START
 BI-SZZ
 
-Definice: **lineární závislost**
+Definice: **lineární závislost** (**lineárně závislý** a **lineárně nezávislý** soubor vektorů)
 
 Back:
 
@@ -381,6 +410,13 @@ Definice: **hodnost matice**
 Back:
 
 ![](../Assets/Pasted%20image%2020240526193019.png)
+
+_Prakticky:_
+Když chci zjistit hodnost matice, převedu do horního stupňovitého tvaru a počet řádků je ta hodnost.
+
+_Např. tahle matice má hodnost 2:_
+![](../Assets/Pasted%20image%2020240527121441.png)
+
 <!--ID: 1716747519760-->
 END
 
@@ -470,6 +506,8 @@ Věta: **Frobeniova věta**
 Back:
 
 ![](../Assets/Pasted%20image%2020240526193557.png)
+
+
 <!--ID: 1716747519774-->
 END
 
@@ -529,6 +567,13 @@ Algoritmus: **řešení nehomogenní SLR**
 
 Back:
 
+**Rychlé shrnutí** (pokud už člověk jen opakuje):
+1. Dostanu $(\Bbb{A}~|~b)$ do horního stupňovitýho tvaru a podle 1. části Frobeniovy věty ověřím, jestli $\Bbb{A}x = b$ má vůbec řešení. Pokud nemá končím.
+2. Najdu partikulární řešení $\tilde{x}$ tak, že za volné proměnné dosadím $(0, \dots , 0)$ a dopočítám rovnice (neříkat "vypočítám matici" :D).
+3. Za $b$ dosadím nulový vektor a vypočítám přidruženou homogenní SLR
+4. Výsledek je $S = \tilde{x} + S_0$
+
+**Detailní vysvětlení**:
 Řešíme soustavu $\Bbb{A}x = b$ s rozšířenou maticí $(\Bbb{A}~|~b)$, kde $\Bbb{A} ∈ T^{m,n}$ je v horním stupňovitém tvaru:
 1. Pokud tím neporušíme horní stupňovitý tvar, můžeme prohodit pořadí sloupců v matici $\Bbb{A}$ (stejně prohodíme i příslušné proměnné).
 2. Pokud $h(\Bbb{A}) < h(\Bbb{A}~|~b)$, řešení neexistuje. V opačném případě postupujeme dále.
@@ -553,7 +598,7 @@ END
 START
 BI-SZZ
 
-Pozorování: **rovnost** $u +\langle y_1, \dots , yk\rangle = v + \langle z_1, \dots , z_k\rangle​$
+Pozorování: **rovnost** $u +\langle y_1, \dots , y_k\rangle = v + \langle z_1, \dots , z_k\rangle​$
 
 Back:
 

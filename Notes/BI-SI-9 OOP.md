@@ -671,6 +671,7 @@ BI-SZZ
 
 Co můžu zavolat na bčku a na cčku?
 ![](../Assets/Pasted%20image%2020231103145416.png)
+![](../Assets/Pasted%20image%2020231103143830.png)
 
 Back:
 
@@ -688,6 +689,7 @@ BI-SZZ
 
 Co můžu dát sem?
 ![](../Assets/Pasted%20image%2020231103150003.png)
+![](../Assets/Pasted%20image%2020231103143830.png)
 
 Back:
 

@@ -176,7 +176,7 @@ END
 START
 BI-SZZ
 
-Definice: **Tarského definice pravdy**
+Definice: **Tarského definice pravdy** (doporučuju napsat na papír)
 
 Back:
 
@@ -212,6 +212,10 @@ Co se může stát, pokud je formule $A$ otevřená? (vůči $\mathcal{M}$)
 Back:
 
 ![](../Assets/Pasted%20image%2020240526200225.png)
+
+![](../Assets/Pasted%20image%2020240527161041.png)
+![](../Assets/Pasted%20image%2020240527161048.png)
+
 <!--ID: 1716747519658-->
 END
 
@@ -285,7 +289,7 @@ END
 START
 BI-SZZ
 
-Tvrzení: jaký je vztah kontradikce a logicky pravdivé formule?
+Tvrzení: jaký je vztah kontradikce a formule $\neg A$? (v predikátové logice)
 
 Back:
 
@@ -417,19 +421,23 @@ END
 START
 BI-SZZ
 
-Jak lze ověřit, zda **teorie** platí?
+Jak lze ověřit, že z teorie vyplývá nějaký závěr?
+
+_Např._
+![](../Assets/Pasted%20image%2020240527164327.png)
 
 Back:
 
-Provedu **důkaz sporem**, tedy že neexistuje interpretace, kde by to neplatilo.
+Provedu důkaz sporem podle $\neg (A \Rightarrow B) = A \land \neg B$:
 
-Ověřím, jestli existuje model $\mathcal{M}$, ve kterém by neplatil závěr, tedy jestli by platilo $\neg (A \Rightarrow B) = A \land \neg B$
+1. Zapíšeme teorii a důsledek tak, že **formule v teorii platí** a **neplatí důsledek**
+2. Sestavíme sémantický strom. Pokud je uzavřený, tak to znamená, že není možné, aby platila teorie a neplatil logický důsledek -> v **každém modelu** ten logický důsledek **vyplývá z té teorie**.
 
 _Např._
 ![](../Assets/Pasted%20image%2020240526201519.png)
 ![](../Assets/Pasted%20image%2020240526201152.png)
 
-Všechny větve jsou uzavřené -> neexistuje model $\mathcal{M}$, ve kterém by neplatil závěr.
+Všechny větve jsou uzavřené -> neexistuje model $\mathcal{M}$, ve kterém by z dané teorie nevyplýval ten závěr.
 <!--ID: 1716747519693-->
 END
 
