@@ -15,8 +15,6 @@ FILE TAGS: BI-SI-8 OOP
 
 ### Hierarchie tříd a pojmy
 
-> Pozn. hodně kartiček z této kapitoly je sdílených s otázkou BI-SPOL-21
-
 #### Balíčky
 
 START
@@ -31,7 +29,6 @@ Back:
 - obsahují jednotlivé třídy a rozhraní
 - slouží k logické a hierarchické organizaci kódu
 
-Tags: BI-SPOL-21
 <!--ID: 1716283472444-->
 END
 
@@ -47,7 +44,6 @@ Back:
 
 namespaces
 
-Tags: BI-SPOL-21
 <!--ID: 1716283472449-->
 END
 
@@ -65,7 +61,6 @@ Back:
 - třída je abstrakce entity reálného světa
 - blueprint pro vytváření objektů
 
-Tags: BI-SPOL-21
 <!--ID: 1716283472452-->
 END
 
@@ -84,7 +79,6 @@ Třída, u které **nelze udělat instanci**.
 
 Tím slouží jako takový blueprint pro ostatní třídy (podobně jako interface).
 
-Tags: BI-SPOL-21
 <!--ID: 1716283472455-->
 END
 
@@ -100,7 +94,6 @@ Back:
 
 Metoda v abstraktní třídě, která je **deklarovaná, ale ne definovaná**!
 
-Tags: BI-SPOL-21
 <!--ID: 1716283472458-->
 END
 
@@ -116,7 +109,6 @@ Back:
 
 Může obsahovat **definované** i **abstraktní metody**.
 
-Tags: BI-SPOL-21
 <!--ID: 1716283472461-->
 END
 
@@ -177,7 +169,6 @@ Back:
 
 objekt je instance třídy
 
-Tags: BI-SPOL-21
 <!--ID: 1716283472470-->
 END
 
@@ -194,7 +185,6 @@ Back:
 - **členské proměnné** (=položky, atributy, member variables, items, fields, attributes)
 - **metody** - služby, které objekt poskytuje
 
-Tags: BI-SPOL-21
 <!--ID: 1716283472474-->
 END
 
@@ -271,7 +261,6 @@ metoda volaná automaticky při vytvoření objektu
 
 konstruktory mohou být přetíženy
 
-Tags: BI-SPOL-21
 <!--ID: 1716283472485-->
 END
 
@@ -287,7 +276,6 @@ Back:
 
 Ne!
 
-Tags: BI-SPOL-21
 <!--ID: 1716283472488-->
 END
 
@@ -472,7 +460,6 @@ Umožňuje novému objektu nebo třídě využít strukturu nebo chování jiné
 
 Je to obvyklá forma subtypingu (vytvoření podtypu).
 
-Tags: BI-SPOL-21
 <!--ID: 1716283472523-->
 END
 
@@ -488,7 +475,6 @@ Back:
 
 Dědí všechny `public` a `protected` atributy a metody.
 
-Tags: BI-SPOL-21
 <!--ID: 1716283472525-->
 END
 
@@ -504,7 +490,6 @@ Back:
 
 Musí v sobě zavolat **konstruktor nadtřídy**.
 
-Tags: BI-SPOL-21
 <!--ID: 1716283472528-->
 END
 
@@ -524,7 +509,6 @@ třída může mít jen jednoho rodiče
 
 Nevýhoda: nemusí být dostatečně expresivní - když sdílí více tříd podobné vlastnosti, je nutné opakovat kód
 
-Tags: BI-SPOL-21
 <!--ID: 1716283472531-->
 END
 
@@ -540,7 +524,6 @@ Back:
 
 Třída může mít více rodičů.
 
-Tags: BI-SPOL-21
 <!--ID: 1716283472533-->
 END
 
@@ -573,7 +556,6 @@ Problém, že když mám vícenásobnou dědičnost, tak se neví, zda má `D` p
 
 _Obrázek:_
 ![](../Assets/Pasted%20image%2020240521102659.png)
-Tags: BI-SPOL-21
 <!--ID: 1716283472539-->
 END
 
@@ -597,7 +579,6 @@ Back:
 _Obrázek:_
 ![](../Assets/Pasted%20image%2020240521102659.png)
 
-Tags: BI-SPOL-21
 <!--ID: 1716283472542-->
 END
 

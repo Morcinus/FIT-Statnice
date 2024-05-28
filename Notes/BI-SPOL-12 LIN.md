@@ -123,7 +123,6 @@ a vektor $b = \begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_m \end{pmatrix}$ vektore
 _Celá definice z přednášky:_
 ![](../Assets/Pasted%20image%2020240527110337.png)
 
-
 <!--ID: 1716747519713-->
 END
 
@@ -143,7 +142,6 @@ Back:
 
 _Celá definice z přednášky:_
 ![](../Assets/Pasted%20image%2020240527110337.png)
-
 
 <!--ID: 1716747519716-->
 END
@@ -416,7 +414,6 @@ Když chci zjistit hodnost matice, převedu do horního stupňovitého tvaru a p
 
 _Např. tahle matice má hodnost 2:_
 ![](../Assets/Pasted%20image%2020240527121441.png)
-
 <!--ID: 1716747519760-->
 END
 
@@ -506,7 +503,6 @@ Věta: **Frobeniova věta**
 Back:
 
 ![](../Assets/Pasted%20image%2020240526193557.png)
-
 
 <!--ID: 1716747519774-->
 END
