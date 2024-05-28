@@ -81,9 +81,9 @@ Co je **Feistelův kryptosystém**?
 Back:
 
 1. klíč je posloupnost funkcí $k=\{f_1, f_2, \dots, f_h\}$
-2. blok zprávy $m$ se rozpůlí na $(m_0 m_1)$
+2. blok zprávy $m$ se rozpůlí na $(m_0 \ m_1)$
 3. v rundách se opakuje výpočet $m_{i+1} = m_{i-1} \oplus f_i(m_i)$
-4. po $h$ rundách se obě poloviny spojí a výsledkem je $T_k(m) = (m_{h+1} m_h)$
+4. po $h$ rundách se obě poloviny spojí a výsledkem je $T_k(m) = (m_h \ m_{h+1})$
 
 _Pozn._ složitost algoritmu je daná několikanásobným použitím jednoduchých transformací
 <!--ID: 1716376588081-->
