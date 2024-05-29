@@ -93,6 +93,22 @@ Definice: **hromadný bod**
 
 ---
 
+
+START
+BI-SZZ
+
+Definice: **rostoucí, klesající, monotónní posloupnost**
+
+Back:
+
+Posloupnost $(a_n)^∞_{n=1}$ je **roustoucí** (resp. **klesající**), pokud $a_n \leq a_{n+1}$ (resp. $a_n \geq a_{n+1}$) pro každé $n \in \mathbb{N}$.
+
+Posloupnost nazveme **monotónní** jestliže je **roustoucí** nebo **klesající**.
+
+END
+
+---
+
 ### Definice
 
 
@@ -182,6 +198,24 @@ END
 START
 BI-SZZ
 
+Jaká máme v ZMA kritéria pro konvergenci řad? (5)
+
+Back:
+
+- Bolzano-Cauchyho
+- Leibnizovo
+- Sovnávací
+- d'Alembertovo
+- Integrální
+
+END
+
+---
+
+
+START
+BI-SZZ
+
 Věta: **Bolzano-Cauchyho kritérium**
 
 Back:
@@ -204,6 +238,22 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240528172956.png)
 <!--ID: 1716916322270-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Věta: co vyplývá z toho, že je řada absolutně konvergentní?
+
+Back:
+
+Pokud je **absolutně konvergentní**, je i **konvergentní**.
+
+![](../Assets/Pasted%20image%2020240529094106.png)
+
 END
 
 ---
