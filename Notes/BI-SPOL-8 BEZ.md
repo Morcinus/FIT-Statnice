@@ -180,9 +180,19 @@ Jaké jsou části **certifikátu**?
 
 Back:
 
+Základní věci z přednášek:
 - **veřejný klíč držitele** $VK_A$
 - **identifikátor držitele** $ID_A$
-- **dobu platnosti certifikátu** $T_1$
+- **dobu platnosti certifikátu** $T$
+    - Not Before – Začátek platnosti
+    - Not After – Konec platnosti
+
+Další věci, co jsme se neučili, ale budou to nejspíš chtít:
+- **Serial Number** – unikátní identifikace certifikátu v systému CA
+- **Subject** – Komu byl certifikát vystaven – stroj, člověk, organizace (např. `C=US, ST=Texas, L=Houston, O=SSL Corp, CN=SSL.com EV SSL Intermediate CA RSA R3`)
+- **Issuer** – Entita, která ověřila informace a podepsala certifikát
+- **Signature Algorithm** – algoritmus, kterým byl certifikát podepsán
+- **Signature** – podpis
 <!--ID: 1716450545742-->
 END
 
@@ -198,7 +208,7 @@ Jak funguje **distribuce veřejných klíčů pomocí certifikace**?
 Back:
 
 1. Certifikační autorita vydá a podepíše certifikát $C_A$ (pomocí $SK_{Aut}$) na základě $VK_A$
-2. $A$ pak zveřejní certifikovaný klíč $C_A$
+2. $A$ pak zveřejní certifikát $C_A$
 3. $B$ pak certifikát ověří pomocí $D_{VK_{Aut}}(C_A)$
 
 _Ilustrace vydání 2 ceritfikátů (pozn. 2. má nejspíš být $C_B$)_

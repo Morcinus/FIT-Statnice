@@ -401,7 +401,7 @@ Co se může nacházet na konci **spojového seznamu**?
 
 Back:
 
-- zarážka (pro zjednodušení operací)
+- zarážka (= prvek navíc, který neobsahuje data, pro zjednodušení operací)
 - `null` ukazatel
 <!--ID: 1716877593439-->
 END

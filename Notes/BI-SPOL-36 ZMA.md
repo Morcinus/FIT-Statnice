@@ -104,7 +104,7 @@ Back:
 Posloupnost $(a_n)^∞_{n=1}$ je **roustoucí** (resp. **klesající**), pokud $a_n \leq a_{n+1}$ (resp. $a_n \geq a_{n+1}$) pro každé $n \in \mathbb{N}$.
 
 Posloupnost nazveme **monotónní** jestliže je **roustoucí** nebo **klesající**.
-
+<!--ID: 1717097564428-->
 END
 
 ---
@@ -207,7 +207,7 @@ Back:
 - Sovnávací
 - d'Alembertovo
 - Integrální
-
+<!--ID: 1717097564431-->
 END
 
 ---
@@ -253,7 +253,7 @@ Back:
 Pokud je **absolutně konvergentní**, je i **konvergentní**.
 
 ![](../Assets/Pasted%20image%2020240529094106.png)
-
+<!--ID: 1717097564434-->
 END
 
 ---

@@ -122,7 +122,6 @@ a vektor $b = \begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_m \end{pmatrix}$ vektore
 
 _Celá definice z přednášky:_
 ![](../Assets/Pasted%20image%2020240527110337.png)
-
 <!--ID: 1716747519713-->
 END
 
@@ -142,7 +141,6 @@ Back:
 
 _Celá definice z přednášky:_
 ![](../Assets/Pasted%20image%2020240527110337.png)
-
 <!--ID: 1716747519716-->
 END
 
@@ -280,7 +278,7 @@ END
 START
 BI-SZZ
 
-Definice: **lineární kombinace**
+Definice: **lineární kombinace** (+ triviální lineární kombinace)
 
 Back:
 
@@ -503,7 +501,6 @@ Věta: **Frobeniova věta**
 Back:
 
 ![](../Assets/Pasted%20image%2020240526193557.png)
-
 <!--ID: 1716747519774-->
 END
 

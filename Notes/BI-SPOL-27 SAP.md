@@ -47,7 +47,7 @@ END
 START
 BI-SZZ
 
-Jak vypadá logická kombinační funkce?
+Jak je definovaná logická kombinační funkce?
 
 Back:
 

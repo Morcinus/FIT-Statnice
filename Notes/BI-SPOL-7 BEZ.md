@@ -304,7 +304,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou verze AES?
+Jaké jsou **verze AES**? Jak dlouhý mají **klíč** a kolik mají **rund**?
 
 Back:
 

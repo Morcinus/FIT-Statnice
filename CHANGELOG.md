@@ -1,3 +1,10 @@
+## [v0.7.0] - 2024-xx
+
+Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.
+### Přidány otázky
+- BI-SPOL-25 PST
+- BI-SPOL-26 PST
+
 ## [v0.6.0] - 2024-05-28
 
 Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.

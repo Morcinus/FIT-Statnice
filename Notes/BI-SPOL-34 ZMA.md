@@ -119,6 +119,8 @@ Back:
 
 Obecně nám Heine ukazuje souvislost mezi limitou funkce a posloupnosti.
 
+Díky této větě můžeme některé limity posloupností počítat pomocí znalosti limity funkcí. Výhoda je, že na limity funkcí můžeme použít silnější věty, které na limity posloupostí nejdou aplikovat.  
+
 _Příklad_
 ![](../Assets/Pasted%20image%2020240527180133.png)
 <!--ID: 1716877593243-->
@@ -152,6 +154,9 @@ Věta: **limita složené funkce**
 Back:
 
 ![](../Assets/Pasted%20image%2020240527180314.png)
+
+_Příklad_:
+![](../Assets/Pasted%20image%2020240530151059.png)
 <!--ID: 1716877593248-->
 END
 
@@ -413,6 +418,8 @@ Jaká je derivace $\arcsin(x)$?
 Back:
 
 ![](../Assets/Pasted%20image%2020240527182525.png)
+
+Tags: optional
 <!--ID: 1716877593296-->
 END
 
@@ -426,6 +433,8 @@ Jaká je derivace $\arccos(x)$?
 Back:
 
 ![](../Assets/Pasted%20image%2020240527182533.png)
+
+Tags: optional
 <!--ID: 1716877593299-->
 END
 
@@ -439,6 +448,8 @@ Jaká je derivace $\text{arctg}(x)$?
 Back:
 
 ![](../Assets/Pasted%20image%2020240527182541.png)
+
+Tags: optional
 <!--ID: 1716877593302-->
 END
 
@@ -452,6 +463,8 @@ Jaká je derivace $\text{arccotg}(x)$?
 Back:
 
 ![](../Assets/Pasted%20image%2020240527182547.png)
+
+Tags: optional
 <!--ID: 1716877593304-->
 END
 
@@ -578,7 +591,7 @@ END
 START
 BI-SZZ
 
-Definice: **nultá podmínka existence lokálního extrému**
+Definice: **nutná podmínka existence lokálního extrému**
 
 Back:
 
@@ -807,6 +820,8 @@ Jak se spočte $q$ u asymptoty?
 Back:
 
 $$q = \lim_{x \to \pm\infty} f (x) - kx$$
+
+(To $kx$ je mimo tu limitu)
 <!--ID: 1716877593364-->
 END
 
@@ -827,6 +842,42 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240527184609.png)
 <!--ID: 1716877593367-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jaké kroky přesně musím udělat, když dostanu zadání "vyšetři průběh funkce"?
+
+_Např._
+![](../Assets/Pasted%20image%2020240530170148.png)
+
+Back:
+
+![](../Assets/Pasted%20image%2020240530170258.png)
+
+1. Určím $D_f$, $H_f$, sudost/lichost (souměrné podle osy y nebo podle 0) a periodicitu, průsečíky s osami
+2. Spočtu **limity** v krajních bodech definičního oboru ($\pm \infty$) - abych věděl, kam ta funkce směřuje
+3. Spočtu **asymptoty** v krajních bodech $D_f$ (buď $x=a$ nebo $y = kx+q$)
+4. **Zjistím monotónnost**
+	1. Najdu **body podezřelé z extrémů** - tzn. body, kde 1. derivace **neexistuje** nebo je **nulová** (pomocí rovnice $f'(x)=0$).
+	2. Podle těchto bodů rozdělím $D_f$ na **intervaly**
+	3. v každém intervalu dosadím nějaké číslo z toho intervalu do $f'(x)$. Pokud je výsledek záporný, funkce je klesající na intervalu, pokud je kladný, funkce je rostoucí.
+5. **Zjistím konvexnost/konkávnost**
+	1. Najdu **inflexní body** - tzn. body, kde 2. derivace **neexistuje** nebo je **nulová** (pomocí rovnice $f''(x)=0$).
+	2. Podle těchto bodů rozdělím $D_f$ na **intervaly**
+	3. V každém intervalu dosadám nějaké číslo z toho intervalu do $f'(x)$. Pokud je výsledek kladný, je funkce konvexní, pokud záporný, je funkce konkávní.
+6. Načrtnu **graf funkce**
+
+Např.
+![](../Assets/Pasted%20image%2020240530165359.png)
+![](../Assets/Pasted%20image%2020240530163327.png)
+![](../Assets/Pasted%20image%2020240530165341.png)
+![](../Assets/Pasted%20image%2020240530165602.png)
+<!--ID: 1717097564425-->
 END
 
 ---

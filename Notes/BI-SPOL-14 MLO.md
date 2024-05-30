@@ -503,7 +503,6 @@ Back:
 
 - **Disjunktivní** tvar je **minimální**, právě když žádný jiný logicky ekvivalentní diskunktivní normální tvar nemá **méně implikantů** nebo **literálů**.
 - **Konjunktivní** tvar je **minimální**, právě když žádný jiný logicky ekvivalentní konjunktivní tvar nemá **méně klausulí** nebo **literálů**.
-
 <!--ID: 1715601679307-->
 END
 

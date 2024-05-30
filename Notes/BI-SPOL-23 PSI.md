@@ -413,10 +413,10 @@ Jaké jsou vrstvy v rámci TCP/IP modelu?
 
 Back:
 
-1. **aplikační vrstva** (TCP segmenty)
-2. **transportní vrstva** (IP pakety)
-3. **síťová vrstva** (Ethernet)
-4. **síťové rozhraní** (bity)
+1. **aplikační vrstva** (= relační + prezentační + aplikační vrstva z ISO/OSI)
+2. **transportní vrstva** (hlavně TCP)
+3. **síťová vrstva** (hlavně IP)
+4. **síťové rozhraní** (= fyzická + linková vrstva z ISO/OSI)
 
 _Obrázek:_
 ![](../Assets/Pasted%20image%2020240520095421.png)
