@@ -216,6 +216,37 @@ Co je `friend`?
 Back:
 
 třída může udělit přístup funkci nebo třídě klíčovým slovem `friend` (porušuje to zapouzdření, ale výjimečně to má smysl, např. u operátoru <<)
+
+_Např. zde friend funkce může přistupovat k private atributům třídy, i když není definovaná v té třídě_
+```cpp
+#include <iostream>
+
+class Box {
+private:
+    double length;
+    double breadth;
+    double height;
+
+public:
+    // Constructor
+    Box(double l, double b, double h) : length(l), breadth(b), height(h) {}
+
+    // Friend function declaration
+    friend double calculateVolume(Box box);
+};
+
+// Friend function definition
+double calculateVolume(Box box) {
+    return box.length * box.breadth * box.height;
+}
+
+int main() {
+    Box box(3.0, 4.0, 5.0);
+    std::cout << "Volume of the box: " << calculateVolume(box) << std::endl;
+    return 0;
+}
+```
+
 <!--ID: 1716916322327-->
 END
 
@@ -375,7 +406,7 @@ END
 START
 BI-SZZ
 
-Jak lze zavolat statickou proměnnou na třídě, u které nemám instanci?
+Jak lze zavolat statickou metodu na třídě, u které nemám instanci?
 
 Back:
 
