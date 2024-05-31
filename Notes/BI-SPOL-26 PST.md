@@ -148,7 +148,6 @@ Back:
 Jinými slovy odhad není zatížen systematickou chybou, tedy že odhadovanou hodnotu systematicky nepřestřeluje ani nepodhodnocuje
 
 **Jak ověřím, že je můj odhad nestranný?** Jednoduše spočtu střední hodnotu toho odhadu. Pokud se rovná odhadovanému parametru, je odhad nestranný.
-
 <!--ID: 1717097564235-->
 END
 
@@ -183,7 +182,6 @@ Back:
 **Střední hodnotu** rozdělení odhadneme pomocí výběrového průměru $\bar{X_n}$
 
 ![](../Assets/Pasted%20image%2020231124161646.png)
-
 <!--ID: 1717097564241-->
 END
 

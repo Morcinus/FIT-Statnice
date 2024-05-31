@@ -1,9 +1,11 @@
-## [v0.7.0] - 2024-xx
+## [v0.7.0] - 2024-xx-xx
 
 Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.
 ### Přidány otázky
 - BI-SPOL-25 PST
 - BI-SPOL-26 PST
+- BI-SI-13 PPA
+- BI-SI-14 PPA
 
 ## [v0.6.0] - 2024-05-28
 
