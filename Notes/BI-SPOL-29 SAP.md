@@ -357,7 +357,6 @@ $\sum$ značí sčítačku (sčítá dve čísla)
 Pokud "odčítej" je `1`, tak se bude `b` odčítat od `a`
 
 ![](../Assets/Pasted%20image%2020240512162117.png)
-
 <!--ID: 1715528121594-->
 END
 

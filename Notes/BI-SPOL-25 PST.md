@@ -9,6 +9,10 @@ FILE TAGS: BI-SPOL-25 PST
 > BI-SPOL-25 (PST)
 > Pravidla pro výpočty pravděpodobností, Bayesův vzorec. Náhodné veličiny, příklady rozdělení, distribuční funkce, hustota, momenty. Nezávislost náhodných jevů a veličin. Centrální limitní věta, zákony velkých čísel
 
+### TODO
+- Zde by možná stálo za to přidat ještě rozptyly a střední hodnoty jednotlivých rozdělení
+- Ještě možná přidat podmíněnou pravděpodobnost u spojitých veličin
+
 ### Základy
 
 
@@ -69,8 +73,6 @@ START
 BI-SZZ
 
 Co je $σ$-algebra $\mathcal{F}$?
-
-(tohle po nás nikdy nechtěli, tak nevím jestli se to učit)
 
 Back:
 
@@ -190,8 +192,6 @@ $$P(A) = \sum^n_{i=1}P(A|B_i)P(B_i)$$
 ![](../Assets/Pasted%20image%2020240530200337.png)
 _Příklad:_
 ![](../Assets/Pasted%20image%2020240530200346.png)
-
-
 <!--ID: 1717097564312-->
 END
 
@@ -262,7 +262,6 @@ Back:
 - je spojitá zprava
 - “začíná v 0 a končí v 1”:
 $$\lim_{x\to -\infty}{F(x)} = 0 ~\wedge \lim_{x\to \infty}{F(x)}= 1$$
-
 <!--ID: 1717097564323-->
 END
 
@@ -305,7 +304,7 @@ END
 START
 BI-SZZ
 
-Definice: **Normalizační podmínka**
+Definice: **Normalizační podmínka** (u diskrétní náhodné veličiny)
 
 Back:
 
@@ -355,7 +354,7 @@ Back:
 - $P(X=0) = 1-p$
 
 _Co mi například říká Bernoulliho rozdělení_
-Dělám několik pokusů (např. 20x hodím mincí), Bernoulliho rozdělení mi říká, jaká je pravděpodobnost, že pokus skončí "úspěchem" a "neúspěchem".
+Dělám několik pokusů (např. 20x hodím mincí), Bernoulliho rozdělení mi říká, jaká je pravděpodobnost, že **jeden pokus** skončí "úspěchem" a "neúspěchem".
 - Parametr $p$ mi typicky říká, jaká je šance úspěchu, 
 - $0$ je typicky neúspěch
 - $1$ úspěch
@@ -388,7 +387,6 @@ _Co mi prakticky říká_
 Dělám několik pokusů (např. 20x hodím mincí). Binomické rozdělení mi říká, jaké jsou pravděpodobnosti, že právě $k$ pokusů dopadlo úspěšně.
 
 ![](../Assets/Pasted%20image%2020231025115806.png)
-
 <!--ID: 1717097564339-->
 END
 
@@ -411,7 +409,27 @@ Back:
 - $\lambda$ - počet pokusů
 **Definice**:
 - $P(X=k) = \frac{\lambda^k}{k!}e^{-\lambda}$
+
+Říká nám **počet událostí** během určitého intervalu (určité doby).
+
+Např. když mi za jeden den přijde _průměrně_ $\lambda = 5$ zpráv, tak jaká je šance, že mi v jeden den přijde právě $k$ zpráv.
 <!--ID: 1717097564342-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jak můžu Poissonovým rozdělením odhadnout Binomické rozdělení?
+
+Back:
+
+Tím že za lambdu dosadím střední hodnotu toho binomického rozdělení:
+
+$$\lambda = EX = n\cdot p$$
+<!--ID: 1717155692621-->
 END
 
 ---
@@ -433,6 +451,9 @@ Back:
 - $p \in (0,1)$ - pravděpodobnost úspěchu pokusu
 **Definice**:
 - $P(X=k) = p(1-p)^{k-1}$
+
+Říká nám pravděpodobnost, že $k$ tý pokus byl **první úspěšný**.
+![](../Assets/Pasted%20image%2020231025115735.png)
 <!--ID: 1717097564345-->
 END
 
@@ -470,7 +491,6 @@ Back:
 - normalizační podmínka: $\int^{+\infty}_{-\infty}{f_X(x)\,dx} = 1$
 - $P(X = x) = 0$ pro všechna $x ∈ \mathbb{R}$
 - $P(a < X ≤ b) = \int^{b}_{a}{f_X(x)\,dx}$
-
 <!--ID: 1717097564350-->
 END
 
@@ -481,7 +501,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou 4 **spojité rozdělení**?
+Jaké jsou 3 **spojité rozdělení**?
 
 Back:
 
@@ -537,7 +557,6 @@ Back:
 
 Graf:
 ![](../Assets/Pasted%20image%2020231025121038.png)
-
 <!--ID: 1717097564358-->
 END
 
@@ -547,7 +566,7 @@ END
 START
 BI-SZZ
 
-Definice: **Normánlní (Gaussovo) rozdělení**
+Definice: **Normální (Gaussovo) rozdělení**
 
 předpis, parametry, jak je definováno
 
@@ -786,7 +805,7 @@ END
 START
 BI-SZZ
 
-Jak se střední hodnota součtu $S_n$?
+Jak se **spočte** a čemu se **rovná** střední hodnota součtu $S_n$?
 
 $$S_n = \sum_{i=1}^nX_i$$
 $$E \bar{X_n} = μ,\kern{6pt}var \bar{X_n} = \frac{σ^2}{n}$$
@@ -803,7 +822,7 @@ END
 START
 BI-SZZ
 
-Jak se spočte rozptyl součtu $S_n$?
+Jak se **spočte** a čemu se **rovná** rozptyl součtu $S_n$?
 
 $$S_n = \sum_{i=1}^nX_i$$
 $$E \bar{X_n} = μ,\kern{6pt}var \bar{X_n} = \frac{σ^2}{n}$$
@@ -817,6 +836,38 @@ END
 
 ---
 
+
+START
+BI-SZZ
+
+Jak se **spočte** a čemu se **rovná** střední hodnota průměru $\bar{X_n}$?
+
+![](../Assets/Pasted%20image%2020231117172538.png)
+
+Back:
+
+![](../Assets/Pasted%20image%2020231117172525.png)
+<!--ID: 1717155692628-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jak se **spočte** a čemu se **rovná** rozptyl průměru $\bar{X_n}$?
+
+![](../Assets/Pasted%20image%2020231117172538%201.png)
+
+Back:
+
+![](../Assets/Pasted%20image%2020231117172601.png)
+<!--ID: 1717155692632-->
+END
+
+---
+
 #### Slabý zákon velkých čísel
 
 START
@@ -826,8 +877,9 @@ Definice: **Slabý zákon velkých čísel**
 
 Back:
 
-Nechť $X_1, X_2, \dots$ jsou i.i.d. náhodné veličiny s konečnou střední hodnotou $E X_i = μ$ a konečným rozptylem $σ^2$. Potom $\bar{X_n}$(aritmetický průměr) konverguje k $μ$ v pravděpodobnosti:
-$$\bar{X_n} \xrightarrow{P} \mu\kern{6pt} pro\kern{3pt}n → ∞$$
+![](../Assets/Pasted%20image%2020231117172622.png)
+
+Pozn. i.i.d. znamená, že jsou veličiny **nezávislé** a **mají stejné rozdělení** 
 <!--ID: 1717097564406-->
 END
 
@@ -842,8 +894,9 @@ Definice: **Silný zákon velkých čísel**
 
 Back:
 
-Nechť $X_1, X_2, \dots$ jsou i.i.d. náhodné veličiny se střední hodnotou $E X_i = μ$ (ne nutně konečnou). Potom $\bar{X_n}$(aritmetický průměr) konverguje k $μ$ skoro jistě (s pravděpodobností 1, almost surely):
-$$\bar{X_n} \xrightarrow{a.s.} \mu\kern{6pt} pro\kern{3pt}n → ∞$$
+![](../Assets/Pasted%20image%2020231117173424.png)
+
+Pozn. i.i.d. znamená, že jsou veličiny **nezávislé** a **mají stejné rozdělení** 
 <!--ID: 1717097564409-->
 END
 
@@ -859,7 +912,6 @@ Definice: **konvergence v distribuci**
 Back:
 
 ![](../Assets/Pasted%20image%2020231117175038.png)
-
 <!--ID: 1717097564412-->
 END
 

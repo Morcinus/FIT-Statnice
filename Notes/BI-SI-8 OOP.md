@@ -28,7 +28,6 @@ Back:
 
 - obsahují jednotlivé třídy a rozhraní
 - slouží k logické a hierarchické organizaci kódu
-
 <!--ID: 1716283472444-->
 END
 
@@ -43,7 +42,6 @@ Co se používá v C++ místo balíčků?
 Back:
 
 namespaces
-
 <!--ID: 1716283472449-->
 END
 
@@ -60,7 +58,6 @@ Back:
 
 - třída je abstrakce entity reálného světa
 - blueprint pro vytváření objektů
-
 <!--ID: 1716283472452-->
 END
 
@@ -78,7 +75,6 @@ Back:
 Třída, u které **nelze udělat instanci**.
 
 Tím slouží jako takový blueprint pro ostatní třídy (podobně jako interface).
-
 <!--ID: 1716283472455-->
 END
 
@@ -93,7 +89,6 @@ Co je **abstraktní metoda**?
 Back:
 
 Metoda v abstraktní třídě, která je **deklarovaná, ale ne definovaná**!
-
 <!--ID: 1716283472458-->
 END
 
@@ -108,7 +103,6 @@ Může abstraktní třída obsahovat i **definované** metody, nebo jen **abstra
 Back:
 
 Může obsahovat **definované** i **abstraktní metody**.
-
 <!--ID: 1716283472461-->
 END
 
@@ -168,7 +162,6 @@ Co jsou **objekty**?
 Back:
 
 objekt je instance třídy
-
 <!--ID: 1716283472470-->
 END
 
@@ -184,7 +177,6 @@ Back:
 
 - **členské proměnné** (=položky, atributy, member variables, items, fields, attributes)
 - **metody** - služby, které objekt poskytuje
-
 <!--ID: 1716283472474-->
 END
 
@@ -260,7 +252,6 @@ Back:
 metoda volaná automaticky při vytvoření objektu
 
 konstruktory mohou být přetíženy
-
 <!--ID: 1716283472485-->
 END
 
@@ -275,7 +266,6 @@ Lze volat konstruktor explicitně na existujícím objektu?
 Back:
 
 Ne!
-
 <!--ID: 1716283472488-->
 END
 
@@ -459,7 +449,6 @@ Back:
 Umožňuje novému objektu nebo třídě využít strukturu nebo chování jiného objektu nebo třídy
 
 Je to obvyklá forma subtypingu (vytvoření podtypu).
-
 <!--ID: 1716283472523-->
 END
 
@@ -474,7 +463,6 @@ Jaké atributy a metody dědí podtřída? (`public`, `private`, `protected`)
 Back:
 
 Dědí všechny `public` a `protected` atributy a metody.
-
 <!--ID: 1716283472525-->
 END
 
@@ -489,7 +477,6 @@ Co musí volat **konstruktor podtřídy**?
 Back:
 
 Musí v sobě zavolat **konstruktor nadtřídy**.
-
 <!--ID: 1716283472528-->
 END
 
@@ -508,7 +495,6 @@ Back:
 třída může mít jen jednoho rodiče
 
 Nevýhoda: nemusí být dostatečně expresivní - když sdílí více tříd podobné vlastnosti, je nutné opakovat kód
-
 <!--ID: 1716283472531-->
 END
 
@@ -523,7 +509,6 @@ Co je **vícenásobná dědičnost**?
 Back:
 
 Třída může mít více rodičů.
-
 <!--ID: 1716283472533-->
 END
 
@@ -578,7 +563,6 @@ Back:
 
 _Obrázek:_
 ![](../Assets/Pasted%20image%2020240521102659.png)
-
 <!--ID: 1716283472542-->
 END
 

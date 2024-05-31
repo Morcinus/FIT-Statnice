@@ -9,6 +9,8 @@ FILE TAGS: BI-SPOL-26 PST
 > BI-SPOL-26 (PST)
 > Základy statistické indukce, náhodný výběr, bodové odhady pro střední hodnotu a rozptyl, intervalové odhady pro střední hodnotu, testování statistických hypotéz o střední hodnotě
 
+### TODO
+- Přidat flashcards na studentovo t rozdělení a kritickou hodnotu standardního normálního rozdělení - jen abych věděl, jak tyhle věci získat, když počítám intervaly spolehlivosti
 
 START
 BI-SZZ
@@ -144,6 +146,9 @@ Back:
 ![](../Assets/Pasted%20image%2020231124162254.png)
 
 Jinými slovy odhad není zatížen systematickou chybou, tedy že odhadovanou hodnotu systematicky nepřestřeluje ani nepodhodnocuje
+
+**Jak ověřím, že je můj odhad nestranný?** Jednoduše spočtu střední hodnotu toho odhadu. Pokud se rovná odhadovanému parametru, je odhad nestranný.
+
 <!--ID: 1717097564235-->
 END
 
@@ -159,6 +164,8 @@ Back:
 
 ![](../Assets/Pasted%20image%2020231124162306.png)
 
+**Jinými slovy** (aneb jak můžu ověřit konzistenci): Limita toho odhadu pro $n \longrightarrow \infty$ by se měla rovnat tomu odhadovanému parametru.
+
 Tzn. se zvyšujíácím se počtem pokusů by se měl odhad zpřesňovat.
 <!--ID: 1717097564238-->
 END
@@ -169,11 +176,14 @@ END
 START
 BI-SZZ
 
-Definice: **Výběrový průměr**
+Jak se spočte bodový odhad pro **střední hodnotu**?
 
 Back:
 
 **Střední hodnotu** rozdělení odhadneme pomocí výběrového průměru $\bar{X_n}$
+
+![](../Assets/Pasted%20image%2020231124161646.png)
+
 <!--ID: 1717097564241-->
 END
 
@@ -183,7 +193,7 @@ END
 START
 BI-SZZ
 
-Definice: **výběrový rozptyl**
+Jak se spočte bodový odhad pro **rozptyl**?
 
 Back:
 
@@ -194,6 +204,21 @@ $$s^2_n = \frac{1}{n-1}\sum^n_{i=1}({X_i} - \bar{X_n})^2$$
 END
 
 ---
+
+
+START
+BI-SZZ
+
+Jak se spočtě rozptyl náhodné veličiny $X$?
+
+Back:
+
+$$var(X) = E(X-EX)^2=EX^2-(EX)^2$$
+
+END
+
+---
+
 
 #### metoda momentů
 
@@ -298,6 +323,7 @@ Co použiju, když hledám **oboustranný** intervalový odhad pro **střední h
 
 Back:
 
+
 ![](../Assets/Pasted%20image%2020240101172136.png)
 
 ![](../Assets/Pasted%20image%2020240101172142.png)
@@ -314,7 +340,7 @@ END
 START
 BI-SZZ
 
-Co použiju, když hledám **jednostranný** intervalový odhad pro **střední hodnotu**?
+Co použiju, když hledám **levý (dolní)** intervalový odhad pro **střední hodnotu**?
 
 Back:
 
@@ -424,7 +450,6 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240530212951.png)
 ![](../Assets/Pasted%20image%2020240530213001.png)
-
 <!--ID: 1717097564281-->
 END
 
