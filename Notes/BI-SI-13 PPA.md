@@ -66,7 +66,7 @@ Back:
 
 **Statické objekty** = datový segment
 
-Jsou to např. globální konstanty, globální proměnné, data generovaná překladačem
+Jsou to např. globální konstanty, globální proměnné, data generovaná překladačem, statické proměnné (pole, proměnné)
 <!--ID: 1717181000870-->
 END
 
@@ -161,7 +161,7 @@ Co obsahuje **zásobník**?
 
 Back:
 
-Obsahuje **aktivační záznamy** (Activation record, stack frame), které obsahují **statické lokální proměnné** a jiné objekty bloků
+Obsahuje **aktivační záznamy** (Activation record, stack frame), které obsahují **lokální proměnné** a jiné objekty bloků
 <!--ID: 1717181000886-->
 END
 
@@ -185,11 +185,14 @@ END
 START
 BI-SZZ
 
-Co podporuje zásobník, co se týče funkcí?
+Co se uloží na zásobník, když se zavolá funkce?
 
 Back:
 
-Zásobník podporuje volání funkcí a návratu z funkcí
+Na zásobník (do aktivačního záznamu - Function Call **Stack Frame**) se při volání funkce uloží:
+- **funkční parametry**
+- **lokální proměnné**
+- **return address** = odkaz na to, odkud byla funkce volána
 <!--ID: 1717181000892-->
 END
 
@@ -217,7 +220,9 @@ Co se stane, když přeteče zásobník?
 
 Back:
 
-Nastane **stack overflow error**
+Nastane **stack overflow error**.
+
+Např. když udělám rekurzivní funkci, tak se pro každé volání vytvoří nový aktivační záznam -> může dojít paměť, když je moc volání (např. když blbě napíšu podmínku kdy se to má zastavit)
 <!--ID: 1717181000897-->
 END
 
@@ -309,6 +314,7 @@ Back:
 **Počítání referencí**
 - strategie, kdy se automaticky udržuje počet referencí na objekt
 - pokud dosáhne 0, objekt je z paměti odstraněn
+
 **Mark-and-seep**
 - Označí všechny objekty přístupné ze zásobníku, ke kterým se lze dostat
 - Vymaže ostatní
@@ -327,7 +333,7 @@ Co je aktivační záznam?
 
 Back:
 
-Záznam v paměti, který se vytváří při volání funkce
+Záznam v paměti na zásobníku, který se vytváří při volání funkce.
 <!--ID: 1717181000917-->
 END
 
@@ -351,11 +357,11 @@ END
 START
 BI-SZZ
 
-Kdy se **vytváří aktivační záznam**?
+Kdy se **vytváří aktivační záznam** (function call stack frame)?
 
 Back:
 
-s každým **voláním funkce**
+s každým **voláním funkce** (když program dojde na místo, kdy se má zavolat funkce s danými parametry)
 <!--ID: 1717181000922-->
 END
 
@@ -365,7 +371,7 @@ END
 START
 BI-SZZ
 
-Kde mají jazyky bez vnořených procedur (např. C) uložené **statické proměnné**?
+Kde mají jazyky bez vnořených procedur (např. C) uložené **lokální statické proměnné**?
 
 Back:
 
@@ -398,6 +404,13 @@ Z jakých částí se skládá **aktivační záznam**? (7 - pořadí je důlež
 Back:
 
 ![](../Assets/Pasted%20image%2020240531195621.png)
+
+- **Skutečné parametry** - zkopírují se ty jednotlivé hodnoty
+- **Návratové hodnoty** - tam se ukládají data, na konci funkce se to předá volající funkci
+- **Řídící link** - adresa, kam se má program vrátit, až se dokončí ta funkce (tzn. typicky místo odkud se funkce volala)
+- **Přístupový link** - některé jazyky umožňují uvnitř funkce definovat **lokální funkci** (Lisp, JavaScript, Pascal,...). Tento link ukazuje na vyšší proceduru - abych přes to mohl přistupovat k proměnným v té vyšší proceduře.
+- **Uložené údaje počítače** - tam se ukládá kontext (např. proměnné), ve kterém jsem se nacházel před tím, než jsem volal danou funkci.
+- **Pomocné dočasné proměnné** - generovány překladačem
 <!--ID: 1717181000931-->
 END
 

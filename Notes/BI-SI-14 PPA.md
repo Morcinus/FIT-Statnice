@@ -63,7 +63,7 @@ Kdy ve funkcionálních jazycích probíhá dealokace?
 
 Back:
 
-Typicky kdyžt se daná část paměti stává nedostupnou
+Typicky když se daná část paměti stává nedostupnou
 <!--ID: 1717181000748-->
 END
 
@@ -153,7 +153,7 @@ Z čeho se skládá **jméno** v lambda kalkulu?
 
 Back:
 
-Z nějakého identifikátoru proměnné (např. `x`, `y`)
+Z nějakého identifikátoru proměnné (např. `x`)
 
 ![](../Assets/Pasted%20image%2020240531201220.png)
 <!--ID: 1717181000766-->
@@ -202,7 +202,7 @@ END
 START
 BI-SZZ
 
-Co je **beta redukce**?
+Co je **beta redukce**? (obecně)
 
 Back:
 
@@ -289,11 +289,13 @@ Co je **alfa konverze**?
 Back:
 
 Odstranění přetížení identifikátorů
-- Lze chápat jako přejmenování argumentů a jejich vázaných proměnných
+
+Lze chápat jako přejmenování argumentů a jejich vázaných proměnných
 
 _Příklad_:
 ```
-(λx . (λx . + (− x 1)) x 3)9 (λx . (λy . + (− y 1)) x 3) 9
+(λx . (λx . + (− x 1)) x 3)9
+(λx . (λy . + (− y 1)) x 3)9 // <-- alfa konverze
 → ((λy . + (− y 1)) 9 3)
 → (+ (− 9 1) 3)
 → (+ 8 3)
@@ -324,13 +326,13 @@ END
 START
 BI-SZZ
 
-Co je **eta konverze**?
+Co je **eta konverze**? Za jaké podmínky je možné ji provést
 
 Back:
 
 Nemění výsledek lambda výrazu
 - `(λx.fx) = f`
-- Lze použít jen pokud F je funkce, ve které se nenachází volné F
+- Lze použít jen pokud `f` je funkce, ve které se nenachází volné `x`
 
 _Např._
 ```
@@ -381,7 +383,29 @@ Jak funguje **normální** vyhodnocování v lambda kalkulu?
 
 Back:
 
-nalezení nejlevější λ a jejích argumentů a provedení substituce
+1. **Nalezení nejlevější λ**
+2. **provedení substituce** (i za cenu toho, že dosadím obří výraz)
+
+Tzn. najdu lambdu a dosadím za ty argumenty
+
+_Příklad normálního:_
+```
+(λx. + x x)((λp. + p 4) 3) ->
++ ((λp. + p 4) 3)((λp. + p 4) 3) ->
++ (+ 3 4)((λp. +  p 4) 3) ->
++ (+ 3 4)(+ 3 4) ->
++ 7 7
+14
+```
+
+_Příklad aplikativního:_
+```
+(λx. + x x)((λp. + p 4) 3) ->
+(λx. + x x)(+ 3 4) ->
+(λx. + x x) 7 ->
+(+ 7 7)
+-> 14
+```
 <!--ID: 1717181000800-->
 END
 
@@ -395,7 +419,30 @@ Jak funguje **aplikativní** vyhodnocování v lambda kalkulu?
 
 Back:
 
-nalezení nejlevější λ a jejích argumentů, vyhodnocení argumentů a provedení substituce
+1. **Nalezení nejlevější λ**
+2. **vyhodnocení argumentů** (tzn skočím na ten výraz co chci dosadit a ten aplikativně vyhodnotím) -> díky tomu budu dosazovat co nejmenší výraz
+3. **provedení substituce**
+
+Je to to samý jako normální, jen na to, abych dosadil argument musí být ten argument v **normálním tvaru** (tzn. musím ho vyhodnotit).
+
+_Příklad aplikativního:_
+```
+(λx. + x x)((λp. + p 4) 3) ->
+(λx. + x x)(+ 3 4) ->
+(λx. + x x) 7 ->
+(+ 7 7)
+-> 14
+```
+
+_Příklad normálního:_
+```
+(λx. + x x)((λp. + p 4) 3) ->
++ ((λp. + p 4) 3)((λp. + p 4) 3) ->
++ (+ 3 4)((λp. +  p 4) 3) ->
++ (+ 3 4)(+ 3 4) ->
++ 7 7
+14
+```
 <!--ID: 1717181000803-->
 END
 
@@ -414,6 +461,21 @@ Back:
 END
 
 ---
+
+
+START
+BI-SZZ
+
+Je výsledek stejný u **aplikativního** a **normálního** vyhodnocování?
+
+Back:
+
+Pokud vyhodnocování skončí, je **výsledek stejný**.
+<!--ID: 1717240441661-->
+END
+
+---
+
 
 #### Normální tvar
 
@@ -469,7 +531,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou časté kombinátory v lambda kalkulu?
+Jaké jsou časté kombinátory v lambda kalkulu? (4)
 
 Back:
 
@@ -709,7 +771,11 @@ Jak se zapisuje **násobení** v lambda kalkulu? (`mult`)
 
 Back:
 
-`∗ x y = mult = (λx.λy.λz.x(yz))nebo ∗ xy = (λx.λy.λs.λz.x(ys)z)`
+```
+∗ x y = mult = (λx.λy.λz.x(yz))
+nebo
+∗ x y = mult = (λx.λy.λs.λz.x(ys)z)
+```
 <!--ID: 1717181000858-->
 END
 
