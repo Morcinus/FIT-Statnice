@@ -2,10 +2,12 @@
 
 Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.
 ### Přidány otázky
-- BI-SPOL-25 PST
-- BI-SPOL-26 PST
+- BI-SI-7 KOM
 - BI-SI-13 PPA
 - BI-SI-14 PPA
+- BI-SPOL-13 LIN
+- BI-SPOL-25 PST
+- BI-SPOL-26 PST
 
 ## [v0.6.0] - 2024-05-28
 
