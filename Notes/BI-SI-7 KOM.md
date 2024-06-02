@@ -211,6 +211,9 @@ Back:
 
 - **Vznik: koordinační akt (C-act)** – _zadání objednávky kytice červených tulipánů_
 - **Výsledek: koordinační fakt (C-fact)** – zadání objednávky
+
+_Příklad_
+![](../Assets/Pasted%20image%2020240602161416.png)
 <!--ID: 1717269874241-->
 END
 
@@ -227,6 +230,9 @@ Back:
 Každý koordinační akt souvisí s produkčním faktem
 - **Vznik: produkční akt (P-act)** – převod vlastnictví kytice prodejcem na zákazníka
 - **Výsledek: produkční fakt (P-fact)** – převod vlastnictví
+
+_Příklad_
+![](../Assets/Pasted%20image%2020240602161413.png)
 <!--ID: 1717269874244-->
 END
 
@@ -302,6 +308,8 @@ Back:
 Spojení koordinace a produkce
 - Probíhá mezi iniciátorem a exekutorem a týká se nějakého produktu a s ním spojené koordinace
 - Každá transakce je instancí transakčního vzoru
+
+![](../Assets/Pasted%20image%2020240602162158.png)
 <!--ID: 1717269874258-->
 END
 
@@ -318,6 +326,9 @@ Back:
 - order
 - execution
 - result
+
+_Např._
+![](../Assets/Pasted%20image%2020240602162212.png)
 <!--ID: 1717269874260-->
 END
 
@@ -418,8 +429,12 @@ Jak vypadá úplný transakční vzor? **Popiš jak se liší od standardního**
 
 Back:
 
-- **Standardní + řeší situace, kdy si zákazník něco rozmyslí**
+- **Standardní + řeší situace, kdy si IN nebo EX něco rozmyslí**
+	- `rv-rq` , `rv-pm` , `rv-da` a `rv-ac`
+	- Mohou být inicializovány z jakéhokoliv kroku
 - Popisuje veškeré situace, které potřebujeme v podniku popsat
+
+![](../Assets/Pasted%20image%2020240602164558.png)
 <!--ID: 1717269874277-->
 END
 
