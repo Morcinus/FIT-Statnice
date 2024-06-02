@@ -463,6 +463,22 @@ END
 START
 BI-SZZ
 
+Co potřebuje aktor pro vykonávání své role? (3)
+
+Back:
+
+- Kompetence
+- Autorita
+- Zodpovědnost
+
+END
+
+---
+
+
+START
+BI-SZZ
+
 Co je **kompetence** v OMEGA? Uveď příklad.
 
 Back:
@@ -536,6 +552,8 @@ Události, které jsou jednou činností, jsou koordinační a produkční akty
 - Aktor se vypořádá se svojí agendou
 - Provádění činnosti dle priorit
 - V realitě proces není plně kontinuální – jsou zde prodlevy, kdy musí aktor na něco čekat
+
+![](../Assets/Pasted%20image%2020240602175740.png)
 <!--ID: 1717269874294-->
 END
 
@@ -577,7 +595,7 @@ END
 START
 BI-SZZ
 
-Co je **Koordinace (C-akty)**?
+Co je **Koordinace (C-akty)** v Teorii Alpha?
 
 Back:
 
@@ -593,7 +611,7 @@ END
 START
 BI-SZZ
 
-Co je **Produkce (P-akty)**? Na jaké dva typy se dělí?
+Co je **Produkce (P-akty)** v Teorii Alpha? Na jaké dva typy se dělí?
 
 Back:
 
@@ -611,7 +629,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou typy DEMO modelů?
+Jaké jsou typy DEMO modelů? (4)
 
 Back:
 
@@ -725,6 +743,9 @@ Back:
 - **Struktura interakce** – iniciační vazby mezi rolemi transaktorů a druhy transakcí
 - **Struktura interstrikce** – přístupové vazby mezi rolemi aktorů a druhy transakcí
 - **Struktura “vzájemného překážení”** – vazby čekání mezi rolemi aktorů a druhy transakcí
+
+_Z cvika:_
+![](../Assets/Pasted%20image%2020240602183124.png)
 <!--ID: 1717269874323-->
 END
 

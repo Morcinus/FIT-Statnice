@@ -9,3 +9,19 @@
 	- Připojit exportnutý anki deck
 
 Pozn. Ano, je to retardovaný, ale než bych to zautomatizoval, tak už by bylo po státnicích 🙃
+
+
+### Jak dělat kartičky
+
+START
+BI-SZZ
+
+OTÁZKA
+
+Back:
+
+ODPOVĚĎ
+
+END
+
+---
