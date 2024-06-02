@@ -73,7 +73,7 @@ Back:
 
 Buďte $m, n ∈ \Bbb{N}$ a $\Bbb{A} ∈ \Bbb{R}^{m,n}$ matice s prvky $a_{ij}$. **Transpozicí matice** $\Bbb{A}$ nazýváme matici z $\Bbb{R}^{n,m}$, jejíž prvek v $j$tém řádku a $i$tém sloupci je roven $a_{ij}$. Tuto matici značíme $\Bbb{A}^T$.
 
-**Jinými slovy**: vezmeme řádky matice \Bbb{A} a zapíšeme je do sloupců (při zachovaném pořadí).
+**Jinými slovy**: vezmeme řádky matice $\Bbb{A}$ a zapíšeme je do sloupců (při zachovaném pořadí).
 <!--ID: 1717269874336-->
 END
 
@@ -105,7 +105,7 @@ $$\Bbb{A}(\Bbb{B} + \Bbb{D}) = \ ???$$
 
 Back:
 
-$$\Bbb{A}(\Bbb{B} + \Bbb{D}) = \Bbb{AB} + \Bbb{BD}$$
+$$\Bbb{A}(\Bbb{B} + \Bbb{D}) = \Bbb{AB} + \Bbb{AD}$$
 <!--ID: 1717269874342-->
 END
 
@@ -212,7 +212,7 @@ Jaká matice je neutrální prvek vůči násobení?
 
 Back:
 
-**diagonální matice**
+**jednotková matice** $\Bbb{E}$
 <!--ID: 1717269874361-->
 END
 
@@ -254,11 +254,12 @@ END
 START
 BI-SZZ
 
-Co platí pro $(\Bbb{AB})^{-1}$, pokud jsou matice regulární?
+Co platí pro následující rovnici a **za jaké podmínky**?
+$$(\Bbb{AB})^{-1} = \ ?$$
 
 Back:
 
-Nechť $\Bbb{A, B} ∈ T^{n,n}$ jsou regulární, potom $\Bbb{AB}$ je také regulární a platí
+Nechť $\Bbb{A, B} ∈ T^{n,n}$ jsou **regulární**, potom $\Bbb{AB}$ je také **regulární** a platí
 $$(\Bbb{AB})^{-1} = \Bbb{B^{-1}A^{-1}}$$
 <!--ID: 1717269874369-->
 END
@@ -269,7 +270,8 @@ END
 START
 BI-SZZ
 
-Co platí pro $(\Bbb{A^T})^{-1}$, pokud je matice regulární?
+Co platí pro následující rovnici a **za jaké podmínky**?
+$$(\Bbb{A^T})^{-1}$$
 
 Back:
 
@@ -280,11 +282,10 @@ END
 
 ---
 
-
 START
 BI-SZZ
 
-Věta: **Vlastnosti ekvivalentní regularitě matice** 
+Věta: **Vlastnosti ekvivalentní regularitě matice** (1+5)
 
 (aneb co všechno platí, pokud je $\Bbb{A}$ regulární?)
 
@@ -292,9 +293,13 @@ Back:
 
 Buď $\Bbb{A} ∈ T^{n,n}$. Následující tvrzení jsou ekvivalentní:
 - $\Bbb{A}$ je regulární.
-- Soubor řádku matice $\Bbb{A}$ je LN.
+- Soubor řádků matice $\Bbb{A}$ je LN.
 - $h(\Bbb{A}) = n$
 - $\Bbb{A} \sim \Bbb{E}$
+- $\Bbb{A}$ má nenulový determinant
+- $0 \not\in σ(\Bbb{A})$ - tzn. 0 nenáleží vlastním číslům $\Bbb{A}$ (viz jiné kartičky)
+
+_Pozn_. $\Bbb{A} \sim \Bbb{E}$ znamená, že se dá $\Bbb{A}$ převést na $\Bbb{E}$ pomocí GEMu.
 <!--ID: 1717269874375-->
 END
 
@@ -322,15 +327,20 @@ BI-SZZ
 
 Algoritmus: **Jak najít inverzní matici?**
 
+(+ vysvětli, proč to tak funguje)
+
 Back:
 
+![](../Assets/Pasted%20image%2020240602110606.png)
+
+_Náš popis:_
 1. Hledáme matici $\Bbb{A^{−1}}$ s vlastností $\Bbb{A}^{−1}\Bbb{A} = \Bbb{AA^{−1}} = \Bbb{E}$.
 2. Doplněním zadané matice o jednotkovou matici stejného rozměru sestavme dvoublokovou rozšířenou matici $(\Bbb{A}~|~\Bbb{E}) ∈ T^{n,2n}$
 3. Na celou $(\Bbb{A}~|~\Bbb{E})$ používáme řádkové úpravy GEM, pro libovolnou posloupnost řádkových úprav realizovaných regulární maticí $\Bbb{P}$ pak platí
 
-$$ (\Bbb{A}~|~\Bbb{E}) \sim (\Bbb{PA}~|~\Bbb{PE}) = (\Bbb{PE}~|~\Bbb{P}) $$
+$$ (\Bbb{A}~|~\Bbb{E}) \sim (\Bbb{PA}~|~\Bbb{PE}) = (\Bbb{PA}~|~\Bbb{P}) $$
 
-Díky větě o ekvivalencích platí, že levý blok $\Bbb{A}$ je možné převést na jednotkovou matici právě tehdy, když je $\Bbb{A}$ regulární. Vznikne-li při úpravách $\Bbb{A}$ na horní stupňovitý tvar nulový řádek, pak $\Bbb{A}$ je singulární a inverze neexistuje.
+Díky větě o ekvivalencích platí, že levý blok $\Bbb{A}$ je možné převést na jednotkovou matici právě tehdy, když je $\Bbb{A}$ regulární. Vznikne-li při úpravách $\Bbb{A}$ na horní stupňovitý tvar nulový řádek, pak $\Bbb{A}$ je **singulární a inverze neexistuje**.
 
 4. Je-li $\Bbb{A}$ regulární, pak pro úpravy $\Bbb{P}$ vedoucí k převedení levého bloku matice $(\Bbb{A} | \Bbb{E})$ na jednotkovou matici platí $\Bbb{P} = \Bbb{A}^{−1}$, tedy
 
@@ -356,11 +366,12 @@ Back:
 ![](../Assets/Pasted%20image%2020240601201843.png)
 ![](../Assets/Pasted%20image%2020240601201903.png)
 
-
-
 V sumě sčítáme přes všechny permutace z $S_n$, jinak řečeno každé permutaci z množiny $S_n$ odpovídá jeden sčítanec této sumy.
 
 Počet sčítanců je proto roven $n!$. Sčítanci sumy jsou pak součiny znaménka dané permutace $π$ a všech prvků matice v $k$tém řádku a $π(k)$tém sloupci matice $\Bbb{A}$, kde $k$ probíhá $\tilde{n}$.
+
+Např.
+![](../Assets/Pasted%20image%2020240602115101.png)
 <!--ID: 1717269874382-->
 END
 
@@ -393,6 +404,8 @@ Jak se vypočítá determinant pro matici 3x3?
 Back:
 
 ![](../Assets/Pasted%20image%2020240601202038.png)
+
+![](../Assets/Pasted%20image%2020240602115053.png)
 <!--ID: 1717269874389-->
 END
 
@@ -406,10 +419,11 @@ Definice: **Algebraický doplněk**
 
 Back:
 
-Mějme matici $\Bbb{A} ∈ T^{n,n}$ s prvky $a_{ij}$, kde $n ≥ 2$, a $k, ∈ \tilde{n}$. Nechť $\Bbb{A}(k,l) ∈ T^{n−1,n−1}$ je matice, která vznikne z $\Bbb{A}$ vynecháním $k$tého řádku a $l$tého sloupce. Číslo
-$$ (-1)^{(k+l)}\det\Bbb{A}(k,l) $$
-nazýváme **algebraický doplněk** prvku $a_{kl}$.
+![](../Assets/Pasted%20image%2020240602115159.png)
 
+_Vlastními slovy_:
+- Vezmu matici $\Bbb{A}$ ze které vyříznu (odstraním) $k$tý řádek a $l$tý sloupec
+![](../Assets/Pasted%20image%2020240602115711.png)
 <!--ID: 1717269874391-->
 END
 
@@ -419,11 +433,22 @@ END
 START
 BI-SZZ
 
-Věta: O rozvoji determinantu podle ktého sloupce
+Věta: **O rozvoji determinantu podle ktého sloupce**
 
 Back:
 
 ![](../Assets/Pasted%20image%2020240601202214.png)
+
+
+Co to prakticky říká pro rozvoj **podle 2. sloupce**:
+- Pro každý prvek toho sloupce:
+- Vezmu $((-1)^{souřadnice \ prvku}) \cdot prvek \cdot \text{determinant matice bez toho řádku a sloupce}$
+
+![](../Assets/Pasted%20image%2020240602120348.png)
+
+K čemu to je vůbec dobrý:
+- Pokud **vhodně zvolím sloupec** (např. kde je hodně nulových prvků), pak se můžu hodně těch determinantů zbavit tím, že se mi prostě budou násobit nulou -> o dost si tím zjednoduším výpočet
+- Jakoby rekurzivně si jsem schopný rozkládat počítání těch determinantů
 <!--ID: 1717269874394-->
 END
 
@@ -461,11 +486,11 @@ END
 START
 BI-SZZ
 
-$$\det\Bbb{A}^T = \ ???$$
+$$\det(\Bbb{A}^T) = \ ???$$
 
 Back:
 
-$$\det\Bbb{A}^T = \det\Bbb{A}$$
+$$\det(\Bbb{A}^T) = \det\Bbb{A}$$
 <!--ID: 1717269874403-->
 END
 
@@ -475,13 +500,29 @@ END
 START
 BI-SZZ
 
-Co platí pro determinant matice v horním trojúhelníkovém tvaru?
+Co platí pro determinant matice $\Bbb{A} ∈ T^{n,n}$ v **horním stupňovitém** (trojúhelníkovém) tvaru?
 
 Back:
 
-Pro determinant matice $\Bbb{B}$ v **horním trojúhelníkovém tvaru** platí:
-$$ \det\Bbb{B} = \prod^n_{i=1}{\Bbb{B}_{ii}} $$
+Pro determinant matice $\Bbb{A} ∈ T^{n,n}$ v horním stupňovitém tvaru platí:
+$$ \det\Bbb{A} = \prod^n_{i=1}{\Bbb{A}_{ii}} $$
 <!--ID: 1717269874406-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Co platí pro determinant matice $\Bbb{A} ∈ T^{n,n}$, která má nulový řádek nebo sloupec?
+
+Back:
+
+Je-li některý ze sloupců nebo řádků matice $\Bbb{A}$ nulový, pak $\det\Bbb{A} = 0$.
+
+(Protože můžu udělat rovoj podle toho řádku nebo sloupce a dostanu samé nuly)
+<!--ID: 1717331676584-->
 END
 
 ---
@@ -509,6 +550,8 @@ Věta: kdy platí $\det\Bbb{B} = \alpha\det\Bbb{A}$?
 Back:
 
 Buď $\Bbb{B}$ matice, která vznikne z matice $\Bbb{A}$ vynásobením $i$tého řádku číslem $\alpha \in T$, potom $\det\Bbb{B} = \alpha\det\Bbb{A}$
+
+Tags: optional
 <!--ID: 1717269874411-->
 END
 
@@ -523,6 +566,8 @@ Věta: kdy platí $\det\Bbb{B} + \det\Bbb{D} = \det\Bbb{A}​$
 Back:
 
 Buďte $\Bbb{B}$ a $\Bbb{D}$ matice, které mají shodné prvky s maticí $\Bbb{A}$ až na $i$tý řádek, pro který platí $\Bbb{A}_{i:} = \Bbb{B}_{i:} + \Bbb{D}_{i:}$, potom $\det\Bbb{B} + \det\Bbb{D} = \det\Bbb{A}$
+
+Tags: optional
 <!--ID: 1717269874415-->
 END
 
@@ -571,6 +616,9 @@ Back:
 
 **Charakteristický polynom matice** $\Bbb{A}$ (ozn. $p_\Bbb{A}$) definujeme předpisem
 $$p_\Bbb{A}(\lambda) \coloneqq \det(\Bbb{A - \lambda\Bbb{E}})$$
+
+
+Vlastní čísla jsou **kořeny** tohoto polynomu.
 <!--ID: 1717269874429-->
 END
 
@@ -587,6 +635,13 @@ Back:
 Nechť $λ ∈ \Bbb{C}$ je vlastní číslo matice $\Bbb{A} ∈ \Bbb{C}^{n,n}$. 
 
 Potom **algebraickou násobností vlastního čísla** $λ$, ozn. $\nu_a(λ)$, nazýváme jeho **násobnost** jakožto **kořene** charakteristického polynomu $p_\Bbb{A}$.
+
+_Vysvětlení:_
+- Kořeny jsou to co mi vyjde když položím polynom rovný nule (aka to co se dělá na základce)
+- Násobnost kořenů je to, kolikrát se tam ten kořen nachází. Aka na kolikátou je třeba ta závorka.
+
+_Např._
+![](../Assets/Pasted%20image%2020240602125122.png)
 <!--ID: 1717269874431-->
 END
 
@@ -628,7 +683,7 @@ END
 START
 BI-SZZ
 
-Výpočet: Jak se vypočte algebraická násobnost vlastního čísla?
+Výpočet: Jak se vypočte **algebraická násobnost vlastního čísla**?
 
 Back:
 
@@ -639,7 +694,6 @@ Mějme matici $\Bbb{A} \in \Bbb{C}^{n,n}$:
 
 ![](../Assets/Pasted%20image%2020240601203154.png)
 ![](../Assets/Pasted%20image%2020240601203206.png)
-
 <!--ID: 1717269874439-->
 END
 
@@ -649,7 +703,7 @@ END
 START
 BI-SZZ
 
-Výpočet: Jak se vypočte geometrická násobnost vlastního čísla?
+Výpočet: Jak se vypočte **geometrická násobnost vlastního čísla**?
 
 Back:
 
@@ -788,6 +842,9 @@ Věta: **kdy je operátor diagonalizovatelný**
 Back:
 
 Operátor $A ∈ \mathcal{L}(V_n)$ je diagonalizovatelný, právě když každé z vlastních čísel $λ$ operátoru $A$ má stejnou algebraickou a geometrickou násobnost.
+
+_Formálně:_
+![](../Assets/Pasted%20image%2020240602141821.png)
 <!--ID: 1717269874463-->
 END
 
@@ -797,9 +854,11 @@ END
 START
 BI-SZZ
 
-Postup: **Jak provést diagonalizaci operátoru**
+Jak vyřeším příklad typu: "**ověřte, zda je operátor diagonalizovatelný, a nalezněte bázi, ve které je jeho matice diagonální**"
 
 Back:
+
+![](../Assets/Pasted%20image%2020240602143343.png)
 
 _Lidsky:_
 - Sestavíme-li bázi tvořenou vlastními vektory operátoru $A$, pak matice operátoru $A$ vzhledem k této bázi je diagonální a na diagonále má vlastní čísla operátoru $A$.
@@ -838,12 +897,43 @@ END
 START
 BI-SZZ
 
-Postup **diagonalizace matice**
+Co platí pro diagonalizovatelnost matice/operátoru, když má každé vlastní číslo algebraickou násobnost 1? 
 
 Back:
 
+Potom je matice diagonalizovatelná!
+
+Díky tomu si můžu ušetřit práci a nemusím nutně počítat $\nu_g(\lambda)$
+
+![](../Assets/Pasted%20image%2020240602151915.png)
+
+<!--ID: 1717334730161-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jak vyřeším příklad: **rozhodněte o diagonalizovatelnosti matice** $A$. Pokud je diagonalizovatelná, zkonstruujte matici P převádějící ji na diagonální tvar.
+
+(tohle je důležitý umět)
+
+Back:
+
+**Ověřím diagonalizovatelnost:**
+1. Spočteme charakteristický polynom
+2. Porovnám algebraické a geometrické operátory. Pokud se rovnají, tak je diagonalizovatelná.
+
+**Zkonstruuju matici P:**
+1. Pro každý $\lambda$ najdu vlastní vektory, tj. řešení $(\Bbb{A} - \lambda \Bbb{E}) \Bbb{x} = \theta$
+2. Sestavíme matici $\Bbb{P}$ tak, že dáme jednotlivá řešení do sloupců
+
+_Další informace_
+
 Mějme matici $\Bbb{A} \in \Bbb{C}^{n,n}$ s vlastními čísly $λ_1, .\dots , λ_k$ (kde $k ∈ \tilde{n}$) s násobnostmi $l_j = \nu_a(λ_j) = \nu_g(λ_j)$ pro každé $j ∈ \tilde{k}$. Ke každému vlastnímu číslu $λ_j (j ∈ \tilde{k})$ přísluší LN soubor vlastních vektorů, ten označme $(x_{j,1}, x_{j,2}, \dots , x_{j,l_j})$.
-    
+
 Můžeme zavést operátor $A$, který na prostoru $\Bbb{C}^n$ působí dle předpisu $Ax = \Bbb{A}x$
 - maticí $A$ vzhledem ke standardní bázi $\mathcal{E}$ prostoru $\Bbb{C}^n$ je právě matice $\Bbb{A}$, , tj. $^\mathcal{E}A = \Bbb{A}$
 
