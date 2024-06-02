@@ -111,7 +111,6 @@ Které části tohoto programu jsou staticé objekty?
 Back:
 
 - static proměnná
-- kód hello metody
 - string konstanta "Hello"
 - Informace o třídě Example
 <!--ID: 1717181000878-->
@@ -371,7 +370,7 @@ END
 START
 BI-SZZ
 
-Kde mají jazyky bez vnořených procedur (např. C) uložené **lokální statické proměnné**?
+Kde mají jazyky bez vnořených procedur (např. C) uložené **lokální staticky alokované proměnné**?
 
 Back:
 
