@@ -608,11 +608,14 @@ END
 START
 BI-SZZ
 
-Definice: **Rollerova věta**
+Definice: **Rolleova věta**
 
 Back:
 
 ![](../Assets/Pasted%20image%2020240527183540.png)
+
+![](../Assets/Pasted%20image%2020240603105619.png)
+
 <!--ID: 1716877593326-->
 END
 
@@ -655,7 +658,7 @@ END
 START
 BI-SZZ
 
-Definice: **rousoucí, klesající, ostře roustoucí, ostře klesající, konstantní funkce**
+Definice: **rostoucí, klesající, ostře rostoucí, ostře klesající, konstantní funkce**
 
 Back:
 
