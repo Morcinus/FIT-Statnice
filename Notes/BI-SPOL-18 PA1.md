@@ -45,7 +45,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou primitivní datové typy v Cčku?
+Jaké jsou primitivní datové typy?
 
 Back:
 
@@ -241,12 +241,11 @@ Co je **staticky alokovaná proměnná**? Kde a kdy se alokuje?
 
 Back:
 
-proměnná, co se alokuje na **zásobníku** (stack) **při kompilaci**
+alokuje se na **zásobníku** (stack) při spuštění programu (zavedení do paměti)
 <!--ID: 1716877593409-->
 END
 
 ---
-
 
 START
 BI-SZZ
@@ -318,6 +317,18 @@ END
 
 ---
 
+START
+BI-SZZ
+
+Kde v paměti se alokují **globální proměnné**? 
+
+Back:
+
+V **data segmentu**
+<!--ID: 1717418849071-->
+END
+
+---
 
 START
 BI-SZZ

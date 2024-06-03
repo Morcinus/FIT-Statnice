@@ -91,7 +91,7 @@ END
 START
 BI-SZZ
 
-Co je **velké-O notace**? (Big O notation) (+ optionally přesná definice)
+Co je **velké-O notace**? (Big O notation)
 
 Back:
 
@@ -261,7 +261,7 @@ Back:
 
 potřebuje víc než $n + \mathcal O (1)$ paměti
 
-(např. kromě pole, které řadí prostě potřebuje ještě další paměť)
+(tzn. kromě paměti na dané prvky potřebuje ještě další paměť, která je závislá na velikosti vstupu)
 <!--ID: 1717408188026-->
 END
 
@@ -422,6 +422,9 @@ Jak funguje **InsertSort** (řzení vkládáním)?
 Back:
 
 zařadí první prvek neseřazené (pravé) části pole na správné místo v seřazené (levé) části pole, toto opakuje, dokud nejsou všechny prvky v seřazené části
+
+_Ukázka_
+<iframe type="text/html" width="640" height="360"src="http://www.youtube.com/embed/zX-fbQ9a9Dg" frameborder="0" /> 
 <!--ID: 1717408188053-->
 END
 
