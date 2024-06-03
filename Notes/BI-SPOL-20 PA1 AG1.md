@@ -12,6 +12,7 @@ FILE TAGS: BI-SPOL-20 PA1 AG1
 ### Todo
 - možná přidat náznaky těch algoritmů v dynamickém programování?
 	- Na fitwiki někdo měl například: "ukažte na hledání nejdelší rostoucí posloupnosti"
+- Ještě zde lze přidat optionally 
 
 ### rekurze
 
@@ -64,7 +65,7 @@ Co musí rekurze splňovat, aby nevznikla nekonečná smyčka? (2)
 
 Back:
 
-1. takové volání musí řešit **menší** instanci problému
+1. hlubší volání musí řešit **menší** instanci problému
 2. musí existovat **triviální** (nejmenší) instance, která se řeší jinak než rekurzí
 <!--ID: 1717408187942-->
 END
@@ -136,7 +137,7 @@ END
 START
 BI-SZZ
 
-Na co se používá rekurze? 
+Na co se například používá rekurze? (6)
 
 Back:
 
@@ -316,11 +317,16 @@ BI-SZZ
 
 Popiš algoritmus pro **hledání nejdelší rostoucí podposloupnosti** pomocí **naivní rekurze**. 
 
-(Stačí cca tušit pseudokód)
-
 Back:
 
 ![](../Assets/Pasted%20image%2020240603143556.png)
+
+_Jak získám výsledek:_
+![](../Assets/Pasted%20image%2020240603173620.png)
+
+_Podrobné vysvětlení:_
+![](../Assets/Pasted%20image%2020240603171220.png)
+![](../Assets/Pasted%20image%2020240603171225.png)
 <!--ID: 1717418664484-->
 END
 
@@ -355,6 +361,8 @@ Popiš algoritmus pro **hledání nejdelší rostoucí podposloupnosti** pomocí
 Back:
 
 ![](../Assets/Pasted%20image%2020240603143804.png)
+
+Ta $-1$ na konci je kvůli tomu, že jsme si na začátku navíc přidali $x_0$ do pole
 <!--ID: 1717418664490-->
 END
 
@@ -389,13 +397,15 @@ BI-SZZ
 
 Popiš algoritmus pro **editační vzdálenost řetězců** pomocí **naivní rekurze**. 
 
-(Stačí cca tušit pseudokód)
+(Idk, tohle by teoreticky nemuseli chtít)
 
 Back:
 
 ![](../Assets/Pasted%20image%2020240603143912.png)
 
 nejmenší počet vložení, smazání nebo nahrazení znaku potřebný pro vytvoření jednoho řetězce délky $m$ z jiného délky $n​$
+
+Tags: optional
 <!--ID: 1717418664493-->
 END
 
@@ -407,13 +417,14 @@ BI-SZZ
 
 Popiš algoritmus pro **editační vzdálenost řetězců** pomocí **memoizace**. 
 
-(Stačí cca tušit pseudokód)
+(Idk, tohle by teoreticky nemuseli chtít)
 
 Back:
 
 ![](../Assets/Pasted%20image%2020240603144109.png)
 ![](../Assets/Pasted%20image%2020240603112824.png)
 
+Tags: optional
 <!--ID: 1717418664495-->
 END
 
@@ -444,7 +455,7 @@ BI-SZZ
 
 Popiš algoritmus pro **histogramové binární vyhledávací stromy** pomocí **naivní rekurze**. 
 
-(Stačí cca tušit pseudokód)
+(Idk, tohle by teoreticky nemuseli chtít)
 
 Back:
 
@@ -453,6 +464,8 @@ Back:
 _Pozn:_ histogramové binární vyhledávací stromy = optimalizují rychlost nalezení prvku podle frekvence jeho hledání, tzn. nejsou nutně vyvážené a málo hledané prvky jsou schválně hluboko
 
 ![](../Assets/Pasted%20image%2020240603112935.png)
+
+Tags: optional
 <!--ID: 1717418664498-->
 END
 
@@ -464,11 +477,13 @@ BI-SZZ
 
 Popiš algoritmus pro **histogramové binární vyhledávací stromy** pomocí **memoizace**. 
 
-(Stačí cca tušit pseudokód)
+(Idk, tohle by teoreticky nemuseli chtít)
 
 Back:
 
 ![](../Assets/Pasted%20image%2020240603144253.png)
+
+Tags: optional
 <!--ID: 1717418664501-->
 END
 
