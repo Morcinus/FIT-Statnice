@@ -9,6 +9,9 @@ FILE TAGS: BI-SPOL-14 MLO
 > BI-SPOL-14 (MLO)
 > Výroková logika: základní logické zákony, universální systém logických spojek, disjunktivní a konjunktivní normální tvary.
 
+### ToDo
+- Můžu sem přidat otázku "jak se UDNT a minDNT" váže na pravdivostní tabulku - to je otázka v podotázce z fitwiki, co někdo měl 
+
 ### základní pojmy
 
 START
@@ -960,6 +963,39 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240513122538.png)
 <!--ID: 1715601679395-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Co je **modus ponens**?
+
+Back:
+
+Pravidlo: jestliže platí $A$ a platí $A\implies B$, pak platí i $B$
+
+Neboli
+![](../Assets/Pasted%20image%2020240603115827.png)
+<!--ID: 1717409691277-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Co je **modus tollens**?
+
+Back:
+
+Pravidlo: jestliže platí $\neg B$ a paltí $A\implies B$, pak platí i $\neg A$
+
+![](../Assets/Pasted%20image%2020240603115919.png)
+<!--ID: 1717409691293-->
 END
 
 ---

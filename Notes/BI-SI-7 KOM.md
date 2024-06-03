@@ -470,7 +470,7 @@ Back:
 - Kompetence
 - Autorita
 - Zodpovědnost
-
+<!--ID: 1717408188104-->
 END
 
 ---
