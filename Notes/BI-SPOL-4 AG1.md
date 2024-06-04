@@ -39,11 +39,49 @@ Back:
 **orientovaný graf** $G = (V, E)$, kde:
 - $E$ = množina **orientovaných hran** (= uspořádaných dvojic vrcholů $e = (u, v)$)
 - orientované hrany zobrazujeme jako šipky z **předchůdce** $u$ do **následníka** $v$
-
-- **zdroj** = vrchol orientovaného grafu, do kterého nevede žádná hrana
-- **stok** = vrchol orientovaného grafu, ze kterého nevede žádná hrana
-- **smyčka** = orientovaná hrana $(u, u)$
 <!--ID: 1717437781632-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Co je v orientovaném grafu **zdroj**?
+
+Back:
+
+vrchol orientovaného grafu, do kterého nevede žádná hrana
+<!--ID: 1717506098653-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Co je v orientovaném grafu **stok**?
+
+Back:
+
+vrchol orientovaného grafu, ze kterého nevede žádná hrana
+<!--ID: 1717506098656-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Co je v orientovaném grafu **smyčka**?
+
+Back:
+
+orientovaná hrana $(u, u)$
+<!--ID: 1717506098659-->
 END
 
 ---
@@ -71,7 +109,7 @@ Definice: **cesta** v grafu
 
 Back:
 
-**cesta** v grafu ****= sled, ve kterém se neopakují vrcholy
+**cesta** v grafu = sled, ve kterém se neopakují vrcholy
 - délka cesty = počet hran v cestě
 <!--ID: 1717437781638-->
 END
@@ -172,7 +210,7 @@ END
 START
 BI-SZZ
 
-Definice: **doplněk**
+Definice: **doplněk grafu** 
 
 Back:
 
@@ -215,11 +253,14 @@ END
 START
 BI-SZZ
 
-Definice: **indukovaný graf**
+Definice: **indukovaný podgraf**
 
 Back:
 
 graf $H$ je **indukovaný podgraf $G$** (značí se $H \le G)$**$\iff V(H) \subseteq V(G) \land E(H) = E(G) \cap \binom{V(H)}{2}$**
+
+Tzn. podgraf, kde jsou všechny hrany původního grafu
+
 <!--ID: 1717437781666-->
 END
 
@@ -503,8 +544,12 @@ Popiš pseudokód **BFS**
 Back:
 
 ![](../Assets/Pasted%20image%2020240603193202.png)
+- výstupem je pole vzdáleností $D$ (= délek nejkratších cest od $s$ pro každý vrchol, příp. informace, že cesta neexistuje) a pole předchůdců $P$
+
 
 algoritmus se vždy zastaví, po skončení jsou uzavřené právě vrcholy, kam vede cesta z s (ostatní jsou nenalezené)
+
+Tags: algoritmus
 <!--ID: 1717437781717-->
 END
 
@@ -552,6 +597,10 @@ Popiš pseudokód **DFS**
 Back:
 
 ![](../Assets/Pasted%20image%2020240603193437.png)
+
+- výstupem je množina vrcholů dosažitelných z $v$ (`stav`)
+
+Tags: algoritmus
 <!--ID: 1717437781724-->
 END
 
@@ -627,8 +676,12 @@ Popiš pseudokódem **Jarníkův algoritmus**
 Back:
 
 ![](../Assets/Pasted%20image%2020240603193738.png)
+- vstupem je **souvislý hranově ohodnocený graf**
+- výstupem je jeho **minimální kostra**
 
 začne s jedním vrcholem, opakovaně přidává nejlehčí hrany, které strom rozšíří
+
+Tags: algoritmus
 <!--ID: 1717437781737-->
 END
 
@@ -689,6 +742,8 @@ Back:
 ![](../Assets/Pasted%20image%2020240603194111.png)
 
 začne se všemi vrcholy bez hran, přidává hrany od nejlehčích, pokud jsou potřeba
+
+Tags: algoritmus
 <!--ID: 1717437781748-->
 END
 
@@ -720,6 +775,8 @@ Popiš pseudokódem **Kruskalův algoritmus** s využitím **Union-Find**
 Back:
 
 ![](../Assets/Pasted%20image%2020240603194341.png)
+
+Tags: algoritmus
 <!--ID: 1717437781754-->
 END
 
@@ -739,7 +796,6 @@ protože časová složitost:
 - `Init` $\mathcal O (|V|)$ 
 - `Union`  je $\mathcal O (|V|)$
 - `Find` $\mathcal O (1)$
-
 <!--ID: 1717437781757-->
 END
 
@@ -791,6 +847,8 @@ Napiš pseudokód algoritmu **TopSort**
 Back:
 
 ![](../Assets/Pasted%20image%2020240603194801.png)
+
+Tags: algoritmus
 <!--ID: 1717437781765-->
 END
 
@@ -885,6 +943,16 @@ Napiš pseudokód **Dijkstrova algoritmu**
 Back:
 
 ![](../Assets/Pasted%20image%2020240603195440.png)
+- **vstupem** je orientovaný graf $G$ s kladnými délkami hran a počáteční vrchol $v_0$
+- **výstupem** jsou vzdálenosti z $v_0$ do všech vrcholů $G$
+
+Základní idea:
+- Je to jako BFSko, jediný co, že u vrcholů držím čísla
+- Nevybírám jen další vrchol, ale vrchol, co je nejblíž -> prioritní fronta
+
+![](../Assets/Pasted%20image%2020240604125018.png)
+
+Tags: algoritmus
 <!--ID: 1717437781782-->
 END
 
@@ -914,9 +982,7 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240603195630.png)
 
-je to víceméně BFS s prioritní frontou
-
-jde o **relaxační** **algoritmus** velmi podobný Jarníkovu algoritmu s haldou, liší se jen definicí klíčů a aritmetickým výrazem pro relaxaci
+Tags: algoritmus
 <!--ID: 1717437781788-->
 END
 
@@ -974,7 +1040,14 @@ Napiš pseudokód **Bellman-Fordova** algoritmu
 
 Back:
 
+Pozn. tím červeným se liší od Dijkstry
 ![](../Assets/Pasted%20image%2020240603200054.png)
+
+Bellman Ford je jakoby taková hloupější verze Dijsktrova algoritmu.
+- Nepoužíváme prioritní frontu, ale jen frontu
+- Je sice "hloupější", ale je lepší v tom, že zvládá i záporné hrany!
+
+Tags: algoritmus
 <!--ID: 1717437781799-->
 END
 
@@ -989,6 +1062,10 @@ Napiš pseudokód **Zjednodušeného Bellman-Fordova** algoritmu
 Back:
 
 ![](../Assets/Pasted%20image%2020240603200122.png)
+
+Rozdíl je v tom, že se prostě nepoužívá fronta, ale $n$-krát se udělá relaxace.
+
+Tags: algoritmus
 <!--ID: 1717437781802-->
 END
 
@@ -1004,6 +1081,21 @@ Back:
 
 $$\mathcal O (|V| \cdot |E|)$$
 <!--ID: 1717437781805-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jaká je výhoda **Bellman-Fordova algoritmu** oproti **Dijkstově algoritmu**?
+
+Back:
+
+Je sice "hloupější" v tom, že používá jednoduchou frontu, ale **umí pracovat i se zápornýma hranama**!
+ 
+<!--ID: 1717506098662-->
 END
 
 ---
