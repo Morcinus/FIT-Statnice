@@ -600,9 +600,9 @@ Lze v C a C++ využít parametry jako **výstupní**?
 
 Back:
 
-V C ne, tam jsou parametry pouze vstupní. Lze to ovšem simulovat pomocí **ukazatelů**!
+V C pomocí **ukazatelů**.
 
-V C++ ano, tam lze použít **reference** jako výstupní parametry.
+V C++ pomocí **referencí**.
 <!--ID: 1716877593477-->
 END
 

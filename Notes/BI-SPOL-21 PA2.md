@@ -82,7 +82,7 @@ Jak lze definovat třídu v C a C++?
 
 Back:
 
-pomocí `struct` (C) nebo `class` (C++)
+pomocí `struct` nebo `class` (C++)
 <!--ID: 1716916322301-->
 END
 
@@ -185,7 +185,7 @@ END
 START
 BI-SZZ
 
-Jsou ve `struct` atributy defaultně `public`, `private` nebo `protected`?
+Jsou ve `struct` atributy defaultně `public`, `private` nebo `protected` v C++?
 
 Back:
 
@@ -198,7 +198,7 @@ END
 START
 BI-SZZ
 
-Jsou ve `class` atributy defaultně `public`, `private` nebo `protected`?
+Jsou ve `class` atributy defaultně `public`, `private` nebo `protected` C++?
 
 Back:
 

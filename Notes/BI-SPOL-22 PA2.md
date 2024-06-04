@@ -28,6 +28,34 @@ END
 START
 BI-SZZ
 
+Co je **syntax**?
+
+Back:
+
+Pravidla daného jazyka
+<!--ID: 1717519718937-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Co je **sémantika**?
+
+Back:
+
+Význam nějakých symbolů.
+<!--ID: 1717519718941-->
+END
+
+---
+
+
+START
+BI-SZZ
+
 Co je **abstraktní datový typ**? Jak lze popsat **syntax** a **sémantiku**?
 
 Back:

@@ -260,7 +260,6 @@ Back:
 graf $H$ je **indukovaný podgraf $G$** (značí se $H \le G)$**$\iff V(H) \subseteq V(G) \land E(H) = E(G) \cap \binom{V(H)}{2}$**
 
 Tzn. podgraf, kde jsou všechny hrany původního grafu
-
 <!--ID: 1717437781666-->
 END
 

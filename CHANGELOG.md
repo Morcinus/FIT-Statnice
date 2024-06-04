@@ -1,4 +1,4 @@
-## [v0.7.0] - 2024-xx-xx
+## [v0.7.0] - 2024-06-04
 
 Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.
 ### Přidány otázky
@@ -8,6 +8,9 @@ Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.
 - BI-SPOL-13 LIN
 - BI-SPOL-25 PST
 - BI-SPOL-26 PST
+- BI-SPOL-19 PA1 AG1
+- BI-SPOL-20 PA1 AG1
+- BI-SPOL-22 PA2
 
 ## [v0.6.0] - 2024-05-28
 
