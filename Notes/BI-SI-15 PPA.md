@@ -50,3 +50,267 @@ Lambda kalkulus
 END
 
 ---
+
+START
+BI-SZZ
+
+Co jsou to a k čemu jsou funkce vyšších řádů?
+
+Back:
+
+- Funkce, které přijímají jiné funkce jako argumenty nebo vrací funkce jako jejich výsledek
+- Zlepšení čitelnosti kódu, abstrakce opakujících se vzorů
+
+Příklad: 
+```python
+def square(x):
+    return x * x
+
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = map(square, numbers)
+print(list(squared_numbers))
+```
+
+END
+
+---
+
+START
+BI-SZZ
+
+Na co se dělí **objekty** v **LISPu**? (2)
+
+Back:
+
+- atom (primitivní hodnoty)
+- list (strukturovaná data)
+
+END
+
+---
+
+START
+BI-SZZ
+
+Jaké datové typy lze uložit do **atomů**? (5)
+
+Back:
+
+- **Čísla** – 235.4, 2e10, 2/3
+- **Literály** – `t` (true), `nil`, `pi`, `f` (false)
+- **Řetězce –** `"hello"`
+- Znaky – `#\a`
+- Symboly (proměnné) – `foo`, `bar`…
+
+END
+
+---
+
+START
+BI-SZZ
+
+Co jsou to **seznamy**? (3)
+
+Back:
+
+- Prázdný seznam – `()` , stejné jako nil
+- Seznam se třemi prvky – `(a b c)`
+- Seznam se třemi prvky, poslední prvek je seznam – `(a b (c))`
+
+END
+
+---
+
+START
+BI-SZZ
+
+Co jsou to cons buňky?
+
+Back:
+
+- Slouží pro tvorbu komplexnějších datových struktur – páry
+- Pomocí nich lze tvořit spojové seznamy, binární stromy
+
+END
+
+---
+
+START
+BI-SZZ
+
+Z jakých **částí** se skládá **cons buňka**? (2)
+
+Back:
+
+- **car** – První prvek cons buňky
+- **cdr** – Druhý prvek cons buňky
+
+![](../Assets/Pasted%20image%2020240604161212.png)
+
+END
+
+---
+
+START
+BI-SZZ
+
+Co je to **quoting** a jak se používá?
+
+Back:
+
+- Lisp programy jsou listy
+- Všechny listy vždy defaultně vyhodnocují
+- Quoting slouží k zabránění evaluace
+- **Syntaxe**
+	- `(quote (a b c))`
+	- `‘(a b c)`
+
+END
+
+---
+
+START
+BI-SZZ
+
+Co je to Closure?
+
+Back:
+
+- Funkce, jejíž prostředí zahrnuje proměnné a jejich hodnoty ve scope, ve kterém byla funkce definována
+- Funkce jsou vždy vraceny i s hodnotami nějaké proměnné
+
+```csharp
+(define (make-counter)
+  (let ([count 0])
+    (lambda ()
+      (set! count (+ count 1))
+      count)))
+
+(define counter1 (make-counter))
+(counter1)  ;; => 1
+(counter1)  ;; => 2
+
+(define counter2 (make-counter))
+(counter2)  ;; => 1
+(counter2)  ;; => 2
+```
+
+END
+
+---
+
+START
+BI-SZZ
+
+Jakou část paměti využivá zejména rekurze?
+
+Back:
+
+Rekurze používá zásobník pro zachování stavu při vnoření do funkce (aktivační záznam).
+
+END
+
+---
+
+START
+BI-SZZ
+
+Jaký typ rekurze je doporučován?
+
+Back:
+
+Doporučuje se využívat koncovou rekurzi, která šetří místo na zásobníku.
+
+END
+
+---
+
+START
+BI-SZZ
+
+Jaké jsou typy rekurze a co umožňují?
+
+Back:
+
+- **Vnořená –** rekurze v rekurzi
+- **Stromová –** několik rekurzivních volaní
+    - Např.: výpočet fibonacciho čísla
+- **Lineární –** volání funkce vede maximálně k jednomu dalšímu rekurzivnímu volání
+    - Např.: výpočet faktoriálu
+- **Koncová –** rekurzivní volání je poslední, co funkce udělá – znovupoužití stejného stack framu
+
+END
+
+---
+
+START
+BI-SZZ
+
+Jaké jsou výhody při využívání rekurze?
+
+Back:
+
+- Kód se jednodušeji čte
+- Psaní kódu je více přirozené
+- Snazší analýza a optimalizace kódu
+
+END
+
+---
+
+START
+BI-SZZ
+
+Jak lze v LISPu zapsat funkci na faktoriál?
+
+Back:
+
+```lisp
+(defun factorial (N)
+	;;;"Compute the factorial of N."
+	(if (= N 0)
+		1
+		(* N (factorial (- N 1)))
+))
+
+(defun fast-factorial (N)
+	;;;"A tail-recursive version of factorial."
+	(fast-factorial-aux N 1)
+)
+
+(defun fast-factorial-aux (N ACC)
+	;;;"Multiply A by the factorial of N."
+	(if (= N 0)
+		ACC
+		(fast-factorial-aux (- N 1) (* N ACC))
+))
+```
+
+END
+
+---
+
+START
+BI-SZZ
+
+Co jsou to mapovací funkcionály?
+
+Back:
+
+- Funkce, které přijímají funkci jako argument a aplikují ji na své další argumenty
+- Specifický případ higher order functions
+- Příklad funkcí: map, filter, foldr, foldl, apply
+
+```lisp
+(map (lambda (x) (* x 2)) '(1 2 3 4 5))
+
+;; Příklad s vlastní funkcí
+(define (add-one x)
+  (+ x 1))
+
+(map add-one '(1 2 3 4 5))
+```
+
+END
+
+---
