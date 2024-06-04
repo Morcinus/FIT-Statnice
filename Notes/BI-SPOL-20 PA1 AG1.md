@@ -9,6 +9,11 @@ FILE TAGS: BI-SPOL-20 PA1 AG1
 > BI-SPOL-20 (PA1 + AG1)
 > Rekurzivní rozklad problému na podproblémy metodou Rozděl-a-panuj. Rekurze vs iterace. Dynamické programování.
 
+### Todo
+- možná přidat náznaky těch algoritmů v dynamickém programování?
+	- Na fitwiki někdo měl například: "ukažte na hledání nejdelší rostoucí posloupnosti"
+- Ještě zde lze přidat optionally 
+
 ### rekurze
 
 START
@@ -60,7 +65,7 @@ Co musí rekurze splňovat, aby nevznikla nekonečná smyčka? (2)
 
 Back:
 
-1. takové volání musí řešit **menší** instanci problému
+1. hlubší volání musí řešit **menší** instanci problému
 2. musí existovat **triviální** (nejmenší) instance, která se řeší jinak než rekurzí
 <!--ID: 1717408187942-->
 END
@@ -132,7 +137,7 @@ END
 START
 BI-SZZ
 
-Na co se používá rekurze? 
+Na co se například používá rekurze? (6)
 
 Back:
 
@@ -239,6 +244,58 @@ END
 START
 BI-SZZ
 
+Popiš algoritmus pro výpočet **Fibonacciho čísla** pomocí **naivní rekurze**. 
+
+(Stačí cca tušit pseudokód)
+
+Back:
+
+![](../Assets/Pasted%20image%2020240603143317.png)
+<!--ID: 1717418664465-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Popiš algoritmus pro výpočet **Fibonacciho čísla** pomocí **memoizace**. 
+
+(Stačí cca tušit pseudokód)
+
+Back:
+
+To samý jako normální rekurze, jen se na začátku podívám, jestli to není v tabulce + výsledek zapíšu do tabulky.
+
+![](../Assets/Pasted%20image%2020240603143358.png)
+
+_Tahkhle pro srovnání vypadá normální rekurze_
+![](../Assets/Pasted%20image%2020240603143317.png)
+<!--ID: 1717418664478-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Popiš algoritmus pro výpočet **Fibonacciho čísla** pomocí **iterace**. 
+
+(Stačí cca tušit pseudokód)
+
+Back:
+
+![](../Assets/Pasted%20image%2020240603143500.png)
+<!--ID: 1717418664481-->
+END
+
+---
+
+START
+BI-SZZ
+
 Jaká je **časová složitost** algoritmu pro výpočet **Fibonacciho čísla**?
 
 - naivní rekurzí
@@ -251,6 +308,62 @@ Back:
 - **s memoizací** $\mathcal O (n)$ ($n$ rekurzivních volání, v každém se stráví $\mathcal O (1)$ času)
 - **iterativně** $\mathcal O (n)$ (výpočet všech Fibonacciho čísel od prvního po $n$-té)
 <!--ID: 1717408187972-->
+END
+
+---
+
+START
+BI-SZZ
+
+Popiš algoritmus pro **hledání nejdelší rostoucí podposloupnosti** pomocí **naivní rekurze**. 
+
+Back:
+
+![](../Assets/Pasted%20image%2020240603143556.png)
+
+_Jak získám výsledek:_
+![](../Assets/Pasted%20image%2020240603173620.png)
+
+_Podrobné vysvětlení:_
+![](../Assets/Pasted%20image%2020240603171220.png)
+![](../Assets/Pasted%20image%2020240603171225.png)
+<!--ID: 1717418664484-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Popiš algoritmus pro **hledání nejdelší rostoucí podposloupnosti** pomocí **memoizace**. 
+
+(Stačí cca tušit pseudokód)
+
+Back:
+
+Prakticky to samý jako normální rekurze, jen se na začátku podívám do tabulky a při výpočtu tam zapisuju.
+
+![](../Assets/Pasted%20image%2020240603143630.png)
+<!--ID: 1717418664487-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Popiš algoritmus pro **hledání nejdelší rostoucí podposloupnosti** pomocí **iterace**. 
+
+(Stačí cca tušit pseudokód)
+
+Back:
+
+![](../Assets/Pasted%20image%2020240603143804.png)
+
+Ta $-1$ na konci je kvůli tomu, že jsme si na začátku navíc přidali $x_0$ do pole
+<!--ID: 1717418664490-->
 END
 
 ---
@@ -279,6 +392,43 @@ END
 
 ---
 
+START
+BI-SZZ
+
+Popiš algoritmus pro **editační vzdálenost řetězců** pomocí **naivní rekurze**. 
+
+(Idk, tohle by teoreticky nemuseli chtít)
+
+Back:
+
+![](../Assets/Pasted%20image%2020240603143912.png)
+
+nejmenší počet vložení, smazání nebo nahrazení znaku potřebný pro vytvoření jednoho řetězce délky $m$ z jiného délky $n​$
+
+Tags: optional
+<!--ID: 1717418664493-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Popiš algoritmus pro **editační vzdálenost řetězců** pomocí **memoizace**. 
+
+(Idk, tohle by teoreticky nemuseli chtít)
+
+Back:
+
+![](../Assets/Pasted%20image%2020240603144109.png)
+![](../Assets/Pasted%20image%2020240603112824.png)
+
+Tags: optional
+<!--ID: 1717418664495-->
+END
+
+---
 
 START
 BI-SZZ
@@ -294,14 +444,47 @@ Back:
 
 - naivní rekurzí $\mathcal O (3^{m+n-1})$
 - s memoizací $\mathcal O (m \cdot n)$
-
-(Podrobnější popis úlohy)
-![](../Assets/Pasted%20image%2020240603112717.png)
-![](../Assets/Pasted%20image%2020240603112812.png)
-![](../Assets/Pasted%20image%2020240603112824.png)
-![](../Assets/Pasted%20image%2020240603112837.png)
-
 <!--ID: 1717408187978-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Popiš algoritmus pro **histogramové binární vyhledávací stromy** pomocí **naivní rekurze**. 
+
+(Idk, tohle by teoreticky nemuseli chtít)
+
+Back:
+
+![](../Assets/Pasted%20image%2020240603144243.png)
+
+_Pozn:_ histogramové binární vyhledávací stromy = optimalizují rychlost nalezení prvku podle frekvence jeho hledání, tzn. nejsou nutně vyvážené a málo hledané prvky jsou schválně hluboko
+
+![](../Assets/Pasted%20image%2020240603112935.png)
+
+Tags: optional
+<!--ID: 1717418664498-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Popiš algoritmus pro **histogramové binární vyhledávací stromy** pomocí **memoizace**. 
+
+(Idk, tohle by teoreticky nemuseli chtít)
+
+Back:
+
+![](../Assets/Pasted%20image%2020240603144253.png)
+
+Tags: optional
+<!--ID: 1717418664501-->
 END
 
 ---
@@ -319,9 +502,6 @@ histogramové binární vyhledávací stromy = optimalizují rychlost nalezení 
 Back:
 
 - s memoizací $\mathcal O (n^3)$
-
-_Příkad jak to funguje_
-![](../Assets/Pasted%20image%2020240603112935.png)
 <!--ID: 1717408187981-->
 END
 

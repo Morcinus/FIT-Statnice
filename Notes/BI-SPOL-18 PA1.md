@@ -45,7 +45,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou primitivní datové typy v Cčku?
+Jaké jsou primitivní datové typy?
 
 Back:
 
@@ -241,12 +241,11 @@ Co je **staticky alokovaná proměnná**? Kde a kdy se alokuje?
 
 Back:
 
-proměnná, co se alokuje na **zásobníku** (stack) **při kompilaci**
+alokuje se na **zásobníku** (stack) při spuštění programu (zavedení do paměti)
 <!--ID: 1716877593409-->
 END
 
 ---
-
 
 START
 BI-SZZ
@@ -318,6 +317,18 @@ END
 
 ---
 
+START
+BI-SZZ
+
+Kde v paměti se alokují **globální proměnné**? 
+
+Back:
+
+V **data segmentu**
+<!--ID: 1717418849071-->
+END
+
+---
 
 START
 BI-SZZ
@@ -589,9 +600,9 @@ Lze v C a C++ využít parametry jako **výstupní**?
 
 Back:
 
-V C ne, tam jsou parametry pouze vstupní. Lze to ovšem simulovat pomocí **ukazatelů**!
+V C pomocí **ukazatelů**.
 
-V C++ ano, tam lze použít **reference** jako výstupní parametry.
+V C++ pomocí **referencí**.
 <!--ID: 1716877593477-->
 END
 

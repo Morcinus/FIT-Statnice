@@ -91,7 +91,7 @@ END
 START
 BI-SZZ
 
-Co je **velké-O notace**? (Big O notation) (+ optionally přesná definice)
+Co je **velké-O notace**? (Big O notation)
 
 Back:
 
@@ -261,7 +261,7 @@ Back:
 
 potřebuje víc než $n + \mathcal O (1)$ paměti
 
-(např. kromě pole, které řadí prostě potřebuje ještě další paměť)
+(tzn. kromě paměti na dané prvky potřebuje ještě další paměť, která je závislá na velikosti vstupu)
 <!--ID: 1717408188026-->
 END
 
@@ -422,6 +422,9 @@ Jak funguje **InsertSort** (řzení vkládáním)?
 Back:
 
 zařadí první prvek neseřazené (pravé) části pole na správné místo v seřazené (levé) části pole, toto opakuje, dokud nejsou všechny prvky v seřazené části
+
+_Ukázka_
+<iframe type="text/html" width="640" height="360"src="http://www.youtube.com/embed/zX-fbQ9a9Dg" frameborder="0" /> 
 <!--ID: 1717408188053-->
 END
 
@@ -543,6 +546,9 @@ Back:
 
 vybere z prvků **pivot**, prohazováním rozdělí pole na (levou) část prvků menších než pivot a (pravou) část prvků větších než pivot, obě části seřadí rekurzivně QuickSortem
 - **pivot** je ideálně mediánem z prvků pole (aby obě části byly stejně velké a velikost instancí problému klesala exponenciálně)
+
+_Vysvětlení_
+<iframe type="text/html" width="640" height="360"src="http://www.youtube.com/embed/Hoixgm4-P4M" frameborder="0" /> 
 <!--ID: 1717408188072-->
 END
 
@@ -622,6 +628,8 @@ při prvním průchodu vstupním polem uloží četnosti všech (= i nepřítomn
 
 - nepracuje v porovnávacím modelu
 - využívá toho, že se hodnoty v polích opakují a že je jich omezený počet $r$
+
+<iframe type="text/html" width="640" height="360"src="http://www.youtube.com/embed/7zuGmKfUt7s" frameborder="0" /> 
 <!--ID: 1717408188085-->
 END
 
@@ -635,7 +643,9 @@ Proč se v praxi CountingSort moc nepoužívá?
 
 Back:
 
-v praxi je rozsah $r$ většinou příliš velký, aby se to vyplatilo
+v praxi je rozsah čísel většinou příliš velký, aby se to vyplatilo
+
+(to pomocné pole by bylo moc velké)
 <!--ID: 1717408188087-->
 END
 
@@ -695,7 +705,7 @@ END
 START
 BI-SZZ
 
-Věta: **o složitosti řazení**
+Věta: **o složitosti řazení** (+ náznak důkazu)
 
 Back:
 
@@ -703,6 +713,11 @@ každý deterministický algoritmus v porovnávacím modelu, který seřadí $n$
 
 _Idea důkazu:_
 Pole o $n$ prvcích má $n!$ permutací, a tedy i $n!$ způsobů, jak jej seřadit. Pokud sestavíme rozhodovací strom, kde každý list je jedním z těchto seřazení a každý nelist je porovnáním dvou prvků, bude mít hloubku aspoň $\log(n!) \in \Omega (n \log n)$. Pro některé permutace tedy bude potřeba $\Omega (n \log n)$ porovnání. $\square$
+
+_Důkaz_
+![](../Assets/Pasted%20image%2020240603155414.png)
+![](../Assets/Pasted%20image%2020240603155419.png)
+![](../Assets/Pasted%20image%2020240603155426.png)
 <!--ID: 1717408188098-->
 END
 
