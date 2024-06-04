@@ -1,3 +1,11 @@
+## [v0.8.0] - 2024-xx-xx
+
+Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.
+### Přidány otázky
+- BI-SPOL-5 AG1
+- BI-SI-15 PPA
+- BI-SI-16 PPA
+
 ## [v0.7.0] - 2024-06-04
 
 Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.

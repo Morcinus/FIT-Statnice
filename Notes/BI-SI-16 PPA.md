@@ -21,7 +21,7 @@ Back:
 - Založeno na predikátové logice
 - Programy jsou vyjádřeny ve formě specifikace relací reprezentovaných jako fakty a pravidla
 - Využívá se: AI, databáze, expertní systémy…
-
+<!--ID: 1717529248308-->
 END
 
 ---
@@ -35,7 +35,7 @@ Back:
 
 - Skládá z Hornových klauzulí (axiomů)
 - *“Pokud B1 je pravdivé a B2 je pravdivé … a Bn je pravdivé potom H je pravdivé”*
-
+<!--ID: 1717529248316-->
 END
 
 ---
@@ -50,7 +50,7 @@ Back:
 - Fakta
 - Pravidla
 - Dotazy
-
+<!--ID: 1717529248319-->
 END
 
 ---
@@ -67,7 +67,7 @@ Back:
 - Systém se pokusí dokázat dotaz nalezením posloupnosti kroků
 
 ![](../Assets/Pasted%20image%2020240604164752.png)
-
+<!--ID: 1717529248322-->
 END
 
 ---
@@ -89,7 +89,7 @@ parent(jana, jan).
 male(jan).
 female(sarka).
 ```
-
+<!--ID: 1717529248325-->
 END
 
 ---
@@ -111,7 +111,7 @@ grandmother(X,Y) :- mother(X,Z), parent(Z,Y).
 grandfather(X,Y) :- father(X,Z), parent(Z,Y).
 brother(X,Y) :- parent(Z,X), parent(Z,Y), male(X).
 ```
-
+<!--ID: 1717529248328-->
 END
 
 ---
@@ -136,7 +136,7 @@ X=josef
 X=anna
 % no
 ```
-
+<!--ID: 1717529248331-->
 END
 
 ---
@@ -149,7 +149,7 @@ Co jsou to **termy**?
 Back:
 
 - Hlavičky a těla v axiomech jsou termy
-
+<!--ID: 1717529248334-->
 END
 
 ---
@@ -167,7 +167,7 @@ Back:
 - Struktury – obsahují atom, kterému se říká funktor, a seznam argumentů (`edge(a,b)`, `line(1,2,4)`)
 
 ![](../Assets/Pasted%20image%2020240604165311.png)
-
+<!--ID: 1717529248337-->
 END
 
 ---
@@ -184,7 +184,7 @@ Back:
 - `[1,2,3]`
 - `[[1,2], 3]` – seznam může být heterogenní
 - `[a | [b,c]]` – `|` odděluje hlavičku od těla
-
+<!--ID: 1717529248340-->
 END
 
 ---
@@ -203,7 +203,7 @@ Back:
 ```prolog
 p(X):- a(X,Y),b(Y);c(Y),d(X,Y). % is equivalent to p(X):- a(X,Y),b(Y). p(X):- c(Y),d(X,Y).
 ```
-
+<!--ID: 1717529248343-->
 END
 
 ---
@@ -221,7 +221,7 @@ Back:
 	1. Fakty
 	2. Pravidla bez rekurze
 	3. Rekurzivní pravidla (preferovaná koncová rekurze)
-
+<!--ID: 1717529248346-->
 END
 
 ---
@@ -236,7 +236,7 @@ Back:
 
 - Které pravidlo se má využít? – DFS algoritmus
 - Který subgoal má být použit? – Těla se prochází zleva doprava
-
+<!--ID: 1717529248349-->
 END
 
 ---
@@ -255,7 +255,7 @@ Proces, při kterém dochází ke snaze o dosazení termů za proměnné výrazu
 parent(X) = parent(petr) % unifikovatelné, unifikace X = petr parent(X,Y) = father(petr, Z) % neunifikovatelné, různá jména funktorů parent(X,X) = parent(petr, Z) % unifikovatelné, unifikace X = Z, Z = petr
 parent(X,eva) = parent(petr, X) % neunifikovatelné
 ```
-
+<!--ID: 1717529248352-->
 END
 
 ---
@@ -276,7 +276,7 @@ Back:
 ```prolog
 % přidání prvku X na jeho začátek ovšem jen v tom případě, že X v L již není % pridej(+X,+L,-NL) seznam NL vznikne ze seznamu L pridej(X,L,L) :- prvek(X,L), % je-li X již prvkem L, nepřidám ho ! . % a zakáži návrat pridej(X,L,[X|L]). % X není prvkem L (jinak bych se sem nedostal), mohu ho tedy přidat
 ```
-
+<!--ID: 1717529248355-->
 END
 
 ---
@@ -295,7 +295,7 @@ Back:
 %fact(+X, -N) fact(0,1) :- !.
 fact(X, N) :- X1 is X – 1, fact(X1, N1), N is N1 * X.
 ```
-
+<!--ID: 1717529248358-->
 END
 
 ---
@@ -316,7 +316,7 @@ Back:
 %fact(+X, -N) fact(0,1) :- !.
 fact(X, N) :- X > 0, X1 is X – 1, fact(X1, N1), N is N1 * X.
 ```
-
+<!--ID: 1717529248361-->
 END
 
 ---
@@ -337,7 +337,7 @@ marada(jana,X) :- plesaty(X), % je-li X plešaté uspěje, !, % zakáže návrat
 fail. % a selže.
 marada(jana,X) :- % k této klauzuli se výpočet dostane, pokud X není plešaté, muz(X). % je-li to muz, má ho Jana ráda
 ```
-
+<!--ID: 1717529248364-->
 END
 
 ---

@@ -751,7 +751,26 @@
     "../Assets/Pasted image 20240603195630.png",
     "../Assets/Pasted image 20240603200054.png",
     "../Assets/Pasted image 20240603200122.png",
-    "../Assets/Pasted image 20240604125018.png"
+    "../Assets/Pasted image 20240604125018.png",
+    "../Assets/Pasted image 20240604164752.png",
+    "../Assets/Pasted image 20240604165311.png",
+    "../Assets/Pasted image 20240604161212.png",
+    "../Assets/Pasted image 20240604203144.png",
+    "../Assets/Pasted image 20240604203635.png",
+    "../Assets/Pasted image 20240604203908.png",
+    "../Assets/Pasted image 20240604205641.png",
+    "../Assets/Pasted image 20240604205746.png",
+    "../Assets/Pasted image 20240604205955.png",
+    "../Assets/Pasted image 20240604210023.png",
+    "../Assets/Pasted image 20240604210130.png",
+    "../Assets/Pasted image 20240604210145.png",
+    "../Assets/Pasted image 20240604210651.png",
+    "../Assets/Pasted image 20240604210832.png",
+    "../Assets/Pasted image 20240604211009.png",
+    "../Assets/Pasted image 20240604211045.png",
+    "../Assets/Pasted image 20240604211104.png",
+    "../Assets/Pasted image 20240604211201.png",
+    "../Assets/Pasted image 20240604211709.png"
   ],
   "File Hashes": {
     "Templates/📜 Note.md": "6474a472ede0bb4f09e443014e496f89",
@@ -774,7 +793,7 @@
     "Notes/BI-SI-30 TJV.md": "f5b4431a7490298eda98b35830113444",
     "Notes/BI-SPOL-27 SAP.md": "5886cfedce7b43e2bbbb7d865ef4810e",
     "Notes/BI-SI-2 DBS.md": "783dfe63999d1478c6f571cc1d128cf2",
-    "CHANGELOG.md": "05bb07f584b47df1923a26e3a692090d",
+    "CHANGELOG.md": "e3d47bceb1ebd323ea6d514d55d447ef",
     "Notes/Seznam věcí, co je fajn procvičit.md": "4504bc4e8b601774db82b20f199d16a8",
     "Notes/BI-SPOL-28 SAP.md": "8e5fb4bfb68053b12135574cc2a96028",
     "Notes/BI-SPOL-29 SAP.md": "64de3749cf01d0ab55fdbcb25282a559",
@@ -811,7 +830,11 @@
     "Notes/BI-SPOL-20 PA1 AG1.md": "a52e217035d10c448502a7f0175a52b2",
     "Notes/BI-SPOL-19 PA1 AG1.md": "3074089ea62ce7b363cc570dc1872f1a",
     "Notes/BI-SPOL-4 AG1.md": "57212a629e7a20553324f1542187ba5b",
-    "Notes/BI-SPOL-22 PA2.md": "1918bf60684d9b045bf33b67243ac817"
+    "Notes/BI-SPOL-22 PA2.md": "1918bf60684d9b045bf33b67243ac817",
+    "Templates/🪛 NoteBoilerplate.md": "d449a5310dab0bdc82306f952b56f56d",
+    "Notes/BI-SI-16 PPA.md": "07cc2abe247eb6bdc9ccb59d2b435594",
+    "Notes/BI-SI-15 PPA.md": "d063d6cb8659a629ce62f5f5fe84d01b",
+    "Notes/BI-SPOL-5 AG1.md": "00dfed777e67ff7c2ac624d7ee677c28"
   },
   "fields_dict": {
     "Basic": [

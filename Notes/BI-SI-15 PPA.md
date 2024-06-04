@@ -20,7 +20,7 @@ Back:
 - Zaměřeno na funkce a jejich vyhodnocování.
 - Nemá přiřazovací příkaz, nemá vedlejší efekty, typické používání rekurze.
 - Má funkce vyšších řádů
-
+<!--ID: 1717529248367-->
 END
 
 ---
@@ -33,7 +33,7 @@ Jaké jsou příklady **funkcionálních programovacích** jazyků?
 Back:
 
 LISP, Haskell, R, Clojure
-
+<!--ID: 1717529248370-->
 END
 
 ---
@@ -46,7 +46,7 @@ Jak se jmenuje základní model výpočtu funkcionálního programování?
 Back:
 
 Lambda kalkulus
-
+<!--ID: 1717529248373-->
 END
 
 ---
@@ -70,7 +70,7 @@ numbers = [1, 2, 3, 4, 5]
 squared_numbers = map(square, numbers)
 print(list(squared_numbers))
 ```
-
+<!--ID: 1717529248376-->
 END
 
 ---
@@ -84,7 +84,7 @@ Back:
 
 - atom (primitivní hodnoty)
 - list (strukturovaná data)
-
+<!--ID: 1717529248379-->
 END
 
 ---
@@ -101,7 +101,7 @@ Back:
 - **Řetězce –** `"hello"`
 - Znaky – `#\a`
 - Symboly (proměnné) – `foo`, `bar`…
-
+<!--ID: 1717529248382-->
 END
 
 ---
@@ -116,7 +116,7 @@ Back:
 - Prázdný seznam – `()` , stejné jako nil
 - Seznam se třemi prvky – `(a b c)`
 - Seznam se třemi prvky, poslední prvek je seznam – `(a b (c))`
-
+<!--ID: 1717529248385-->
 END
 
 ---
@@ -130,7 +130,7 @@ Back:
 
 - Slouží pro tvorbu komplexnějších datových struktur – páry
 - Pomocí nich lze tvořit spojové seznamy, binární stromy
-
+<!--ID: 1717529248388-->
 END
 
 ---
@@ -146,7 +146,7 @@ Back:
 - **cdr** – Druhý prvek cons buňky
 
 ![](../Assets/Pasted%20image%2020240604161212.png)
-
+<!--ID: 1717529248391-->
 END
 
 ---
@@ -164,7 +164,7 @@ Back:
 - **Syntaxe**
 	- `(quote (a b c))`
 	- `‘(a b c)`
-
+<!--ID: 1717529248394-->
 END
 
 ---
@@ -194,7 +194,7 @@ Back:
 (counter2)  ;; => 1
 (counter2)  ;; => 2
 ```
-
+<!--ID: 1717529248397-->
 END
 
 ---
@@ -207,7 +207,7 @@ Jakou část paměti využivá zejména rekurze?
 Back:
 
 Rekurze používá zásobník pro zachování stavu při vnoření do funkce (aktivační záznam).
-
+<!--ID: 1717529248399-->
 END
 
 ---
@@ -220,7 +220,7 @@ Jaký typ rekurze je doporučován?
 Back:
 
 Doporučuje se využívat koncovou rekurzi, která šetří místo na zásobníku.
-
+<!--ID: 1717529248402-->
 END
 
 ---
@@ -238,7 +238,7 @@ Back:
 - **Lineární –** volání funkce vede maximálně k jednomu dalšímu rekurzivnímu volání
     - Např.: výpočet faktoriálu
 - **Koncová –** rekurzivní volání je poslední, co funkce udělá – znovupoužití stejného stack framu
-
+<!--ID: 1717529248405-->
 END
 
 ---
@@ -253,7 +253,7 @@ Back:
 - Kód se jednodušeji čte
 - Psaní kódu je více přirozené
 - Snazší analýza a optimalizace kódu
-
+<!--ID: 1717529248408-->
 END
 
 ---
@@ -285,7 +285,7 @@ Back:
 		(fast-factorial-aux (- N 1) (* N ACC))
 ))
 ```
-
+<!--ID: 1717529248411-->
 END
 
 ---
@@ -310,7 +310,7 @@ Back:
 
 (map add-one '(1 2 3 4 5))
 ```
-
+<!--ID: 1717529248414-->
 END
 
 ---
