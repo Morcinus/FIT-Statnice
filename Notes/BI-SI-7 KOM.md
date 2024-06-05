@@ -179,7 +179,7 @@ Co je **PSI** (Performing in Social Interaction)?
 
 Back:
 
-Teorie o fungování organizací
+Teorie o **fungování organizací**
 - Princip činnosti organizací spočívá v tom, že subjekty (lidé) vstupují do závazků a dodržují je.
 <!--ID: 1717269874235-->
 END
@@ -450,7 +450,7 @@ Co je OMEGA?
 
 Back:
 
-Teorie o konstrukci organizace
+Teorie o **konstrukci organizace**
 - Teorie omega představuje organizaci jako strom složený z rolí aktorů a transakcí – takto lze poskládat základní koordinační strukturu společnosti
 
 ![](../Assets/Pasted%20image%2020240601211206.png)
@@ -569,7 +569,7 @@ Co je **teorie alpha** v EE?
 
 Back:
 
-Teorie o podstatě podniku
+Teorie o **podstatě podniku**
 <!--ID: 1717269874296-->
 END
 
@@ -602,6 +602,8 @@ Back:
 přidělení vhodných prostředků k jejich provedení
 
 Např.: Posílání dopisů poštou, telefonicky…
+
+![](../Assets/Pasted%20image%2020240605204307.png)
 <!--ID: 1717269874301-->
 END
 

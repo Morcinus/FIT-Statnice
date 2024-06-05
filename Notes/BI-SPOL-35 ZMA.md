@@ -18,7 +18,7 @@ Definice: **primitivní funkce**
 Back:
 
 ![](../Assets/Pasted%20image%2020240605130915.png)
-
+<!--ID: 1717594648446-->
 END
 
 ---
@@ -31,7 +31,7 @@ Definice: **integrační konstanta**
 Back:
 
 ![](../Assets/Pasted%20image%2020240605131310.png)
-
+<!--ID: 1717594648450-->
 END
 
 ---
@@ -44,7 +44,7 @@ Definice: **neurčitý integrál**
 Back:
 
 ![](../Assets/Pasted%20image%2020240605131713.png)
-
+<!--ID: 1717594648453-->
 END
 
 ---
@@ -57,7 +57,7 @@ Definice: postačující podmínka pro **existenci primitivní funkce**
 Back:
 
 ![](../Assets/Pasted%20image%2020240605131825.png)
-
+<!--ID: 1717594648456-->
 END
 
 ---
@@ -70,7 +70,7 @@ Symbolické zapsání **linearity neurčitého integrálu**
 Back:
 
 ![](../Assets/Pasted%20image%2020240605132043.png)
-
+<!--ID: 1717594648459-->
 END
 
 ---
@@ -83,7 +83,7 @@ BI-SZZ
 Back:
 
 ![](../Assets/Pasted%20image%2020240605132433.png)
-
+<!--ID: 1717594648462-->
 END
 
 ---
@@ -96,7 +96,7 @@ BI-SZZ
 Back:
 
 ![](../Assets/Pasted%20image%2020240605132459.png)
-
+<!--ID: 1717594648465-->
 END
 
 ---
@@ -109,7 +109,7 @@ BI-SZZ
 Back:
 
 ![](../Assets/Pasted%20image%2020240605132528.png)
-
+<!--ID: 1717594648468-->
 END
 
 ---
@@ -122,7 +122,7 @@ BI-SZZ
 Back:
 
 ![](../Assets/Pasted%20image%2020240605132557.png)
-
+<!--ID: 1717594648470-->
 END
 
 ---
@@ -135,7 +135,7 @@ BI-SZZ
 Back:
 
 ![](../Assets/Pasted%20image%2020240605132617.png)
-
+<!--ID: 1717594648473-->
 END
 
 ---
@@ -148,7 +148,7 @@ BI-SZZ
 Back:
 
 ![](../Assets/Pasted%20image%2020240605132640.png)
-
+<!--ID: 1717594648476-->
 END
 
 ---
@@ -161,7 +161,7 @@ BI-SZZ
 Back:
 
 ![](../Assets/Pasted%20image%2020240605132659.png)
-
+<!--ID: 1717594648478-->
 END
 
 ---
@@ -174,7 +174,7 @@ BI-SZZ
 Back:
 
 ![](../Assets/Pasted%20image%2020240605132718.png)
-
+<!--ID: 1717594648481-->
 END
 
 ---
@@ -187,7 +187,7 @@ BI-SZZ
 Back:
 
 ![](../Assets/Pasted%20image%2020240605132734.png)
-
+<!--ID: 1717594648484-->
 END
 
 ---
@@ -200,7 +200,7 @@ BI-SZZ
 Back:
 
 ![](../Assets/Pasted%20image%2020240605132753.png)
-
+<!--ID: 1717594648486-->
 END
 
 ---
@@ -214,7 +214,7 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240605133146.png)
 ![](../Assets/Pasted%20image%2020240605133229.png)
-
+<!--ID: 1717594648489-->
 END
 
 ---
@@ -230,7 +230,7 @@ Back:
 
 
 ![](../Assets/Pasted%20image%2020240605133411.png)
-
+<!--ID: 1717594648492-->
 END
 
 ---
@@ -243,7 +243,7 @@ Jak interpretujeme určitý (Riemannův) integrál?
 Back:
 
 ![](../Assets/Pasted%20image%2020240605133748.png)
-
+<!--ID: 1717594648494-->
 END
 
 ---
@@ -256,7 +256,7 @@ Definice: **dělení intervalu**
 Back:
 
 ![](../Assets/Pasted%20image%2020240605133857.png)
-
+<!--ID: 1717594648497-->
 END
 
 ---
@@ -274,7 +274,7 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240605134412.png)
 ![](../Assets/Pasted%20image%2020240605134422.png)
-
+<!--ID: 1717594648500-->
 END
 
 ---
@@ -289,7 +289,7 @@ Back:
 ![](../Assets/Pasted%20image%2020240605134526.png)
 - poskytují horní (resp. dolní) odhad obsahu hledané plochy
 - vágně řečeno: horní integrál je v podstatě ten nejmenší horní součet ze všech možných dělení, analogicky pak i dolní
-
+<!--ID: 1717594648502-->
 END
 
 ---
@@ -302,7 +302,7 @@ Definice: **Riemannův integrál**
 Back:
 
 ![](../Assets/Pasted%20image%2020240605135239.png)
-
+<!--ID: 1717594648505-->
 END
 
 ---
@@ -315,7 +315,7 @@ Co je **normální posloupnost dělení**
 Back:
 
 ![](../Assets/Pasted%20image%2020240605135828.png)
-
+<!--ID: 1717594648508-->
 END
 
 ---
@@ -329,7 +329,7 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240605140000.png)
 - basically místo počítání infim a suprem ze všech možných dělení v definici horního a dolního integrálu vybereme takové dělení, které má normu limitně v 0
-
+<!--ID: 1717594648511-->
 END
 
 ---
@@ -345,7 +345,7 @@ Back:
 - oproti klasickému součtu funkce tady prostě bereme libovolné alfičky z částěčných intervalů dělení
   
 ![](../Assets/Pasted%20image%2020240605140623.png)
-
+<!--ID: 1717594648513-->
 END
 
 ---
@@ -359,7 +359,7 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240605140759.png)
 ![](../Assets/Pasted%20image%2020240605140948.png)
-
+<!--ID: 1717594648516-->
 END
 
 ---
@@ -372,7 +372,7 @@ Věta: **aditivita integrálu**
 Back:
 
 ![](../Assets/Pasted%20image%2020240605141152.png)
-
+<!--ID: 1717594648519-->
 END
 
 ---
@@ -385,7 +385,7 @@ Věta: **multiplikativita integrálu**
 Back:
 
 ![](../Assets/Pasted%20image%2020240605141233.png)
-
+<!--ID: 1717594648522-->
 END
 
 ---
@@ -398,7 +398,7 @@ Věta: **aditivita integrálu v mezích**
 Back:
 
 ![](../Assets/Pasted%20image%2020240605141407.png)
-
+<!--ID: 1717594648524-->
 END
 
 ---
@@ -411,7 +411,7 @@ Věta: **nerovnosti mezi integrály**
 Back:
 
 ![](../Assets/Pasted%20image%2020240605141444.png)
-
+<!--ID: 1717594648527-->
 END
 
 ---
@@ -426,7 +426,7 @@ Back:
 ![](../Assets/Pasted%20image%2020240605141631.png)
 - klasický Riemannův integrál je definovaný pro funkce omezené na uzavřených intervalech
 - zobecněný integrál umožňuje integrovat funkce na neomezených množinách
-
+<!--ID: 1717594648530-->
 END
 
 ---
@@ -439,7 +439,7 @@ Co je **absolutně konvergentní zobecněný Riemannův integrál**?
 Back:
 
 ![](../Assets/Pasted%20image%2020240605141836.png)
-
+<!--ID: 1717594648533-->
 END
 
 ---
@@ -455,7 +455,7 @@ Back:
 
 
 ![](../Assets/Pasted%20image%2020240605142138.png)
-
+<!--ID: 1717594648536-->
 END
 
 ---
@@ -468,7 +468,7 @@ Věta: o **výpočtu plošných útvarů**
 Back:
 
 ![](../Assets/Pasted%20image%2020240605142332.png)
-
+<!--ID: 1717594648538-->
 END
 
 ---

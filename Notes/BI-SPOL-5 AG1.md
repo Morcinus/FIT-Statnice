@@ -572,7 +572,6 @@ Hint: připomíná binární “školní” sčítání pod sebou
 ![](../Assets/Pasted%20image%2020240605110918.png)
 
 ![](../Assets/Pasted%20image%2020240605111026.png)
-
 <!--ID: 1717529248531-->
 END
 
@@ -757,7 +756,6 @@ Back:
 
 `BVSFind` mi najde daný vrchol, pokud existuje
 `BVSMax` mi najde maximum z daného stromu
-
 <!--ID: 1717529248564-->
 END
 
@@ -874,13 +872,16 @@ END
 START
 BI-SZZ
 
-Definice: **AVL-strom** + jak funguje
+Definice: **AVL-strom** + jak funguje (popiš jednoduchou a dvojitou rotaci)
 
 Back:
 
 jedna z možných implementací hloubkově vyváženého BVS
 
 `AVLInsert` a `AVLDelete` pracují v $\mathcal O (\log n)$ a kontrolují a opravují hloubkovou vyváženost: v každém vrcholu směrem ke kořeni spočtou **znaménko vrcholu** $\delta(v) = h(R(v)) - h(L(v))$, a pokud vyjde jiná hodnota než $\{-1, 0, +1\}$, opraví strom pomocí jednoduchých a dvojitých rotací
+
+Jednoduchá rotace doprava (do leva analogicky ale opačným smerem)
+![](../Assets/Pasted%20image%2020240605141717.png)
 
 ![](../Assets/Pasted%20image%2020240604211709.png)
 <!--ID: 1717529248591-->
@@ -985,7 +986,7 @@ END
 START
 BI-SZZ
 
-Jaký předpis má hashovací funkce **lineární kongruence** (u hashovacích tabulek)
+Jaký předpis má hashovací funkce **vyšší bity součinu** (u hashovacích tabulek)
 
 Back:
 
@@ -998,12 +999,12 @@ END
 START
 BI-SZZ
 
-Jaký předpis má hashovací funkce **lineární kongruence** (u hashovacích tabulek)
+Jaký předpis má hashovací funkce **skalární součin** (u hashovacích tabulek)
 
 Back:
 
 $k_0,\dots,k_{d-1} \mapsto \left( \sum_{i=0}^{d-1} a_i k_i \right) \mod m$
-
+<!--ID: 1717594648542-->
 END
 
 ---
@@ -1011,12 +1012,12 @@ END
 START
 BI-SZZ
 
-Jaký předpis má hashovací funkce **lineární kongruence** (u hashovacích tabulek)
+Jaký předpis má hashovací funkce **polynom** (u hashovacích tabulek)
 
 Back:
 
 $k_0,\dots,k_{d-1} \mapsto \left( \sum_{i=0}^{d-1} a^i k_i \right) \mod m$
-
+<!--ID: 1717594648544-->
 END
 
 ---

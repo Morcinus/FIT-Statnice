@@ -30,7 +30,7 @@ END
 START
 BI-SZZ
 
-Definice: **množina řešení soustavy**
+Definice: **množina řešení soustavy** lineárních rovnic
 
 Back:
 

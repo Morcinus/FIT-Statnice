@@ -79,7 +79,7 @@ END
 START
 BI-SZZ
 
-Pomocí jakých typů jsou reprezentována **desetiná čísla** v C? (2)
+Pomocí jakých typů jsou reprezentována **desetinná čísla** v C? (2)
 
 Back:
 

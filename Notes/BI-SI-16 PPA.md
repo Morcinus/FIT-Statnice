@@ -43,7 +43,7 @@ END
 START
 BI-SZZ
 
-Co mohou být **axiomy**?
+Co mohou být **axiomy** v Prologu?
 
 Back:
 
@@ -76,7 +76,7 @@ END
 START
 BI-SZZ
 
-Co jsou to **fakta**?
+Co jsou to **fakta** v Prologu?
 
 Back:
 
@@ -98,7 +98,7 @@ END
 START
 BI-SZZ
 
-Co jsou to **pravidla**?
+Co jsou to **pravidla** v Prologu?
 
 Back:
 
@@ -120,7 +120,7 @@ END
 START
 BI-SZZ
 
-Dotazy
+Co jsou to **dotazy** v Prologu?
 
 Back:
 
@@ -144,7 +144,7 @@ END
 START
 BI-SZZ
 
-Co jsou to **termy**?
+Co jsou to **termy** v Prologu?
 
 Back:
 
@@ -157,7 +157,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou typy **termů**?
+Jaké jsou typy **termů** v Prologu?
 
 Back:
 
@@ -175,7 +175,7 @@ END
 START
 BI-SZZ
 
-Co jsou to **seznamy**?
+Co jsou to **seznamy** v Prologu?
 
 Back:
 
@@ -230,7 +230,7 @@ END
 START
 BI-SZZ
 
-Jaké **zdroje nedeterminismu** jsou přítomny při vyhodnocování dotazů? Jak se řeší? (2)
+Jaké **zdroje nedeterminismu** jsou přítomny při vyhodnocování dotazů v Prologu? Jak se řeší? (2)
 
 Back:
 
@@ -245,7 +245,7 @@ END
 START
 BI-SZZ
 
-Co je to **unifikace**?
+Co je to **unifikace** v Prologu?
 
 Back:
 
@@ -264,7 +264,7 @@ END
 START
 BI-SZZ
 
-Co je to a k čemu slouží **operátor řezu**?
+Co je to a k čemu slouží **operátor řezu** v Prologu?
 
 Back:
 
@@ -284,7 +284,7 @@ END
 START
 BI-SZZ
 
-K čemu se používá **červený řez**?
+K čemu se používá **červený řez** v Prologu?
 
 Back:
 
@@ -304,7 +304,7 @@ END
 START
 BI-SZZ
 
-K čemu se používá **zelený řez**?
+K čemu se používá **zelený řez** v Prologu?
 
 Back:
 
@@ -325,7 +325,7 @@ END
 START
 BI-SZZ
 
-K čemu slouží **fail** operátor?
+K čemu slouží **fail** operátor v Prologu?
 
 Back:
 

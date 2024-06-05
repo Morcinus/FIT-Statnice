@@ -9,6 +9,9 @@ FILE TAGS: BI-SI-15 BI-WI-10 PPA
 > BI-WSI-SI-15 / BI-WSI-WI-10 (PPA)
 > Funkcionální programování, funkce vyšších řádů, Lisp: atomy, seznamy, funkce, cons buňky, rekurze, mapovací funkcionály.
 
+### TODO
+- tady by to chtělo víc kartiček na to, jak se definují jednotlivé funkce atd.
+
 
 START
 BI-SZZ
@@ -109,7 +112,7 @@ END
 START
 BI-SZZ
 
-Co jsou to **seznamy**? (3)
+Co jsou to **seznamy** ve funkcionálním programování? (3)
 
 Back:
 
@@ -128,8 +131,10 @@ Co jsou to cons buňky?
 
 Back:
 
-- Slouží pro tvorbu komplexnějších datových struktur – páry
+- Slouží pro tvorbu komplexnějších datových struktur – **páry**
 - Pomocí nich lze tvořit spojové seznamy, binární stromy
+
+![](../Assets/Pasted%20image%2020240605154938.png)
 <!--ID: 1717529248388-->
 END
 
@@ -194,6 +199,19 @@ Back:
 (counter2)  ;; => 1
 (counter2)  ;; => 2
 ```
+
+V tomto příkladě si `lambda` funkce pamatuje proměnné prostředí, ve kterém byla zadefinována (tzn když se vytvořil `counter1` nebo `counter2`), tzn. pamatuje si tu proměnnou `[count]`. 
+
+Další vysvětlivky:
+- `define` mi definuje nové proměnné nebo funkce
+	- např. `(define pi 3.14)`
+	- nebo `(define (square x) (* x x))`
+- `let` mi definuje lokální proměnnou
+	- např. `(let ([nazev hodnota]) body)`, kde body je kód, co tu proměnnou využívá
+- `(define counter1 (make-counter))` mi udělá instanci closure (tzn. jakoby té funkce s custom prostředím)
+- return hodnota funkce je její poslední prvek - tady v `lambda` funkci je to `count`
+- 
+
 <!--ID: 1717529248397-->
 END
 
@@ -215,11 +233,13 @@ END
 START
 BI-SZZ
 
-Jaký typ rekurze je doporučován?
+Jaký typ rekurze je obecně dobré v využívat a proč?
 
 Back:
 
-Doporučuje se využívat koncovou rekurzi, která šetří místo na zásobníku.
+Doporučuje se využívat **koncovou rekurzi**, která šetří místo na zásobníku.
+
+Protože tím, že to poslední, co funkce udělá je volání rekurze, tak to Lisp zoptimalizuje tak, aby se použil stejný stack frame (aktivační záznam).
 <!--ID: 1717529248402-->
 END
 
@@ -261,7 +281,7 @@ END
 START
 BI-SZZ
 
-Jak lze v LISPu zapsat funkci na faktoriál?
+Jak lze v LISPu zapsat funkci na faktoriál? (normálně + pomocí koncové rekurze)
 
 Back:
 
@@ -310,6 +330,16 @@ Back:
 
 (map add-one '(1 2 3 4 5))
 ```
+
+![](../Assets/Pasted%20image%2020240605164608.png)
+
+_Příklad foldr podle pana ChatGPT_:
+```lisp
+(define lst '(1 2 3 4 5))
+
+(define result (foldr (lambda (x acc) (+ x acc)) 0 lst))
+```
+
 <!--ID: 1717529248414-->
 END
 
