@@ -358,7 +358,7 @@ END
 START
 BI-SZZ
 
-Kolik **hladin** má **binomiální strom**?
+Kolik **hladin** má **binomiální strom** ve vztahu k $k$?
 
 Back:
 
@@ -386,7 +386,7 @@ END
 START
 BI-SZZ
 
-Kolik **vrcholů** má **binomiální strom** celkem?
+Kolik **vrcholů** má **binomiální strom** $B_k$ celkem ve vztahu k $k$?
 
 Back:
 
@@ -404,7 +404,7 @@ Kolik **hladin** má binomiální strom pokud má $n$ vrcholů?
 
 Back:
 
-$1+\log n$ hladin
+$1+\log n$
 <!--ID: 1717529248496-->
 END
 
@@ -569,6 +569,10 @@ Hint: připomíná binární “školní” sčítání pod sebou
 
 ![](../Assets/Pasted%20image%2020240604210130.png)
 ![](../Assets/Pasted%20image%2020240604210145.png)
+![](../Assets/Pasted%20image%2020240605110918.png)
+
+![](../Assets/Pasted%20image%2020240605111026.png)
+
 <!--ID: 1717529248531-->
 END
 
@@ -648,16 +652,32 @@ END
 START
 BI-SZZ
 
-Jak vypadá binomiální halda v paměti? Co obsahuje jeden prvek?
+Jak vypadá binomiální halda v paměti?
 
 Back:
 
-- v paměti lze množinu stromů i seznamy synů reprezentovat jako spojové seznamy
-- prvek lze reprezentovat jako strukturu obsahující hodnotu klíče a ukazatele na otce, levého sourozence a nejpravějšího syna
+v paměti lze množinu stromů i seznamy synů reprezentovat jako **spojové seznamy**
+
+![](../Assets/Pasted%20image%2020240605111207.png)
 <!--ID: 1717529248549-->
 END
 
 ---
+
+
+START
+BI-SZZ
+
+Co v paměti obsahuje jeden prvek binomiální haldy?
+
+Back:
+
+![](../Assets/Pasted%20image%2020240605111136.png)
+<!--ID: 1717578745569-->
+END
+
+---
+
 
 ### vyhledávací stromy
 
@@ -734,6 +754,10 @@ Back:
 `BVSPred(v,w)` = nalezení předchůdce $w$ (analogicky `BVSSucc(v,w)`)
 
 ![](../Assets/Pasted%20image%2020240604211009.png)
+
+`BVSFind` mi najde daný vrchol, pokud existuje
+`BVSMax` mi najde maximum z daného stromu
+
 <!--ID: 1717529248564-->
 END
 
@@ -966,7 +990,7 @@ Jaký předpis má hashovací funkce **lineární kongruence** (u hashovacích t
 Back:
 
 $k \mapsto \lfloor (ak \mod 2^w) / 2^{w-l} \rfloor$
-
+<!--ID: 1717578745573-->
 END
 
 ---
@@ -1049,7 +1073,7 @@ Jak funguje řešení kolize u hashovacích tabulek pomocí **otevřeného adres
 Back:
 
 **otevřené adresování** (aka **uzavřené hashování**, _open addressing_, _closed hashing_) = hashovací funkce vrací **vyhledávací posloupnost** přihrádek, prvek se uloží do první volné z nich, takže v každé přihrádce může být nejvýš jeden prvek
-- při mazání přihrádku nevyprazdňujeme, ale označíme ji náhrobkem $\dag$, aby hledání mohlo skončit, jakmile narazí na prázdnou přihrádku
+- při mazání přihrádku nevyprazdňujeme, ale označíme ji náhrobkem $\dagger$, aby hledání mohlo skončit, jakmile narazí na prázdnou přihrádku
 	- pokud je náhrobků moc (třeba $m/4$), tabulku přehešujeme
 - vyhledávací posloupnost lze vytvořit různě, např. lineárním přidáváním (do nejbližší volné přihrádky) nebo dvojitým hashováním ($h(k,i) = (f(k) + i \cdot g(k)) \mod m$, kde $i$ je počet neúspěšných pokusů a $f,g$ jsou různé hashovací funkce)
 - pokud jsou vyhledávací posloupnosti náhodné permutace, pak neúspěšné hledání kontroluje v průměru nejvýše $1/(1-\alpha)$ přihrádek
