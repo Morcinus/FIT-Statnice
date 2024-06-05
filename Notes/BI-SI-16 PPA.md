@@ -129,12 +129,13 @@ Back:
 
 ```prolog
 ?- parent(josef,sarka).
-% yes ?- predecessor(X,sarka).
+% true.
 
+?- predecessor(X,sarka).
 X=jana
 X=josef
 X=anna
-% no
+% false.
 ```
 <!--ID: 1717529248331-->
 END
@@ -216,16 +217,37 @@ Jak se **vyhodnocují dotazy** v Prologu?
 Back:
 
 - Vyhodnocuje se na principu procházení stavového prostoru
-- Řešení se hledá pomocí backtrackingu
+- Řešení se hledá pomocí backtrackingu a unifikace
 - Postupné vyhodnocování
 	1. Fakty
 	2. Pravidla bez rekurze
 	3. Rekurzivní pravidla (preferovaná koncová rekurze)
+
+**Splnění dotazů**
+- Při splňování cíle hledá prolog nejdříve první klauzuli, která odpovídá jménem a aritou cíli. Hledání této klauzule probíhá v pořadí specifikace klauzulí v programu (tedy od začátku směrem ke konci programu)
+- Najde-li odpovídající klauzuli, pak se provede unifikace mezi cílem a hlavou klauzule a začne se vykonávat tělo (s substitucemi, které vznikly unifikací).
+- Pokud je klauzule faktem, máme hotovo.
+- Pokud je klauzule pravidlem, pak se postupně pokoušíme splnit cíle v pořadí zleva doprava. Uspějí-li všechny, pak uspěl i původní cíl. Pokud nějaký neuspěl, pomocí backtrackingu se vrací k poslednímu bodu rozhodnutí a zkouší se rozhodnout jinak.
+- 
 <!--ID: 1717529248346-->
 END
 
 ---
 
+START
+BI-SZZ
+
+Jak se **hledá řešení** v Prologu?
+
+Back:
+
+Řešení se hledá pomocí backtrackingu a unifikace (tj prohledávání grafu do hloubky).
+
+*“Vyhodnocuj dokud můžeš a každý bod rozhodnutí si zapamatuj. V momentě kdy se něco nedá splnit (unifikovat), vrať se k nejbližšímu bodu a proveď jiné rozhodnutí.”*
+
+END
+
+---
 
 START
 BI-SZZ
@@ -252,8 +274,17 @@ Back:
 Proces, při kterém dochází ke snaze o dosazení termů za proměnné výrazu tak, že se původní termy stanou identickými
 
 ```prolog
-parent(X) = parent(petr) % unifikovatelné, unifikace X = petr parent(X,Y) = father(petr, Z) % neunifikovatelné, různá jména funktorů parent(X,X) = parent(petr, Z) % unifikovatelné, unifikace X = Z, Z = petr
-parent(X,eva) = parent(petr, X) % neunifikovatelné
+parent(X) = parent(petr)
+% unifikovatelné, unifikace X = petr
+
+parent(X,Y) = father(petr, Z)
+% neunifikovatelné, různá jména funktorů
+
+parent(X,X) = parent(petr, Z)
+% unifikovatelné, unifikace X = Z, Z = petr
+
+parent(X,eva) = parent(petr, X)
+% neunifikovatelné
 ```
 <!--ID: 1717529248352-->
 END
@@ -274,7 +305,14 @@ Back:
 - Řez neovlivňuje zpětný chod vpravo do svého výskytu
 
 ```prolog
-% přidání prvku X na jeho začátek ovšem jen v tom případě, že X v L již není % pridej(+X,+L,-NL) seznam NL vznikne ze seznamu L pridej(X,L,L) :- prvek(X,L), % je-li X již prvkem L, nepřidám ho ! . % a zakáži návrat pridej(X,L,[X|L]). % X není prvkem L (jinak bych se sem nedostal), mohu ho tedy přidat
+% přidání prvku X na jeho začátek ovšem jen v tom případě,
+% že X v L již není
+% pridej(+X,+L,-NL) seznam NL vznikne ze seznamu L
+pridej(X,L,L) :- prvek(X,L),
+% je-li X již prvkem L, nepřidám ho ! . % a zakáži návrat
+
+pridej(X,L,[X|L]).
+% X není prvkem L (jinak bych se sem nedostal), mohu ho tedy přidat
 ```
 <!--ID: 1717529248355-->
 END
@@ -292,7 +330,9 @@ Back:
 - Bez jeho použití program vracel jiné/nesprávné výsledky
 
 ```prolog
-%fact(+X, -N) fact(0,1) :- !.
+%fact(+X, -N)
+
+fact(0,1) :- !.
 fact(X, N) :- X1 is X – 1, fact(X1, N1), N is N1 * X.
 ```
 <!--ID: 1717529248358-->
@@ -313,7 +353,9 @@ Back:
 - Zlepšuje efektivitu výpočtu
 
 ```prolog
-%fact(+X, -N) fact(0,1) :- !.
+%fact(+X, -N)
+
+fact(0,1) :- !.
 fact(X, N) :- X > 0, X1 is X – 1, fact(X1, N1), N is N1 * X.
 ```
 <!--ID: 1717529248361-->
@@ -333,9 +375,13 @@ Back:
 - Bez operátoru řezu to nejde. S ním a se standardním predikátem fail, který, je-li volán, okamžitě selže
 
 ```prolog
-marada(jana,X) :- plesaty(X), % je-li X plešaté uspěje, !, % zakáže návrat
+marada(jana,X) :- plesaty(X), % je-li X plešaté uspěje,
+!, % zakáže návrat
 fail. % a selže.
-marada(jana,X) :- % k této klauzuli se výpočet dostane, pokud X není plešaté, muz(X). % je-li to muz, má ho Jana ráda
+
+marada(jana,X) :- % k této klauzuli se výpočet dostane, pokud X není plešaté,
+
+muz(X). % je-li to muz, má ho Jana ráda
 ```
 <!--ID: 1717529248364-->
 END
