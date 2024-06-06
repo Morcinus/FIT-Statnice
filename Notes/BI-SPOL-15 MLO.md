@@ -20,6 +20,9 @@ Definice: Jazyk predikátové logiky (co všechno obsahuje?)
 Back:
 
 ![](../Assets/Pasted%20image%2020240526195143.png)
+
+Pozn.
+- _predikáty_ (přesněji jejich interpretace) nám říkají různé vlastnosti nebo obecně tvrzení. Např. `muž(x)` - `x` je muž atd.
 <!--ID: 1716747519622-->
 END
 

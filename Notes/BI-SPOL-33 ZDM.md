@@ -18,7 +18,7 @@ Co je **teorie čísel**?
 Back:
 
 ![](../Assets/Pasted%20image%2020240606131739.png)
-
+<!--ID: 1717701419169-->
 END
 
 ---
@@ -31,7 +31,7 @@ Definice: **dělitelnost**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606131831.png)
-
+<!--ID: 1717701419176-->
 END
 
 ---
@@ -45,7 +45,7 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240606131937.png)
 ![](../Assets/Pasted%20image%2020240606131951.png)
-
+<!--ID: 1717701419179-->
 END
 
 ---
@@ -58,7 +58,7 @@ Věta: **o dělení se zbytkem**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606132038.png)
-
+<!--ID: 1717701419182-->
 END
 
 ---
@@ -71,7 +71,7 @@ Definice: **společný dělitel, společný násobek**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606132120.png)
-
+<!--ID: 1717701419185-->
 END
 
 ---
@@ -86,7 +86,7 @@ Back:
 ![](../Assets/Pasted%20image%2020240606132246.png)
 ![](../Assets/Pasted%20image%2020240606132441.png)
 ![](../Assets/Pasted%20image%2020240606132551.png)
-
+<!--ID: 1717701419188-->
 END
 
 ---
@@ -99,7 +99,7 @@ Vlastnosti gcd - **Bezoutova rovnost**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606132325.png)
-
+<!--ID: 1717701419191-->
 END
 
 ---
@@ -113,7 +113,7 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240606132634.png)
 ![](../Assets/Pasted%20image%2020240606132711.png)
-
+<!--ID: 1717701419194-->
 END
 
 ---
@@ -126,7 +126,7 @@ Věta: **Lamého věta**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606132739.png)
-
+<!--ID: 1717701419197-->
 END
 
 ---
@@ -139,7 +139,7 @@ Popiš **rozšířený Eukleidův algoritmus**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606132853.png)
-
+<!--ID: 1717701419199-->
 END
 
 ---
@@ -154,7 +154,7 @@ Back:
 ![](../Assets/Pasted%20image%2020240606133058.png)
 
 ![](../Assets/Pasted%20image%2020240606133155.png)
-
+<!--ID: 1717701419204-->
 END
 
 ---
@@ -167,7 +167,7 @@ Věta: **o dělitelnosti složených čísel**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606133237.png)
-
+<!--ID: 1717701419206-->
 END
 
 ---
@@ -180,7 +180,7 @@ Věta: **základní věta aritmetiky**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606133339.png)
-
+<!--ID: 1717701419209-->
 END
 
 ---
@@ -193,7 +193,7 @@ Definice: **kongruence**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606133416.png)
-
+<!--ID: 1717701419212-->
 END
 
 ---
@@ -206,7 +206,7 @@ Vlastnosti **kongruencí**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606133512.png)
-
+<!--ID: 1717701419215-->
 END
 
 ---
@@ -221,7 +221,7 @@ Back:
 ![](../Assets/Pasted%20image%2020240606133819.png)
 
 - Kongruence je relací ekvivalence na množině \Z.
-
+<!--ID: 1717701419218-->
 END
 
 ---
@@ -236,7 +236,7 @@ Back:
 - je v zásadě jedno, kdy provedeme modulení
 ![](../Assets/Pasted%20image%2020240606134036.png)
 ![](../Assets/Pasted%20image%2020240606134046.png)
-
+<!--ID: 1717701419221-->
 END
 
 ---
@@ -249,7 +249,7 @@ Věta: **o existenci inverze v neprvočíselném modulu**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606134401.png)
-
+<!--ID: 1717701419224-->
 END
 
 ---
@@ -264,7 +264,7 @@ Back:
 - multiplikativní inverze prvku tedy existuje tehdy a jen tehdy, když je nesoudělný s modulem
 
 ![](../Assets/Pasted%20image%2020240606134715.png)
-
+<!--ID: 1717701419227-->
 END
 
 ---
@@ -277,7 +277,7 @@ Co je **konečné těleso**?
 Back:
 
 ![](../Assets/Pasted%20image%2020240606134651.png)
-
+<!--ID: 1717701419229-->
 END
 
 ---
@@ -291,7 +291,7 @@ Věta: **o počtu prvočísel**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606135414.png)
-
+<!--ID: 1717701419232-->
 END
 
 ---
@@ -304,7 +304,7 @@ Definice: **funkce π(n)**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606135301.png)
-
+<!--ID: 1717701419235-->
 END
 
 ---
@@ -319,7 +319,7 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240606135232.png)
 
-
+<!--ID: 1717701419238-->
 END
 
 ---
@@ -334,7 +334,7 @@ Back:
 ![](../Assets/Pasted%20image%2020240606135745.png)
 ![](../Assets/Pasted%20image%2020240606135802.png)
 ![](../Assets/Pasted%20image%2020240606135856.png)
-
+<!--ID: 1717701419241-->
 END
 
 ---
@@ -348,7 +348,7 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240606135941.png)
 ![](../Assets/Pasted%20image%2020240606140047.png)
-
+<!--ID: 1717701419244-->
 END
 
 ---
@@ -362,7 +362,7 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240606140152.png)
 - Zobecnění MFV i pro některá složená čísla
-
+<!--ID: 1717701419247-->
 END
 
 ---
@@ -375,7 +375,7 @@ Definice: **Eulerova funkce**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606140347.png)
-
+<!--ID: 1717701419249-->
 END
 
 ---
@@ -389,7 +389,7 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240606140439.png)
 ![](../Assets/Pasted%20image%2020240606140455.png)
-
+<!--ID: 1717701419252-->
 END
 
 ---
@@ -402,7 +402,7 @@ Věta: **výpočet pomocí faktorizace**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606140550.png)
-
+<!--ID: 1717701419255-->
 END
 
 ---
@@ -415,7 +415,7 @@ Věta: **kdy je přirozené číslo prvočíslem**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606140636.png)
-
+<!--ID: 1717701419258-->
 END
 
 ---
@@ -429,7 +429,7 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240606140938.png)
 - Podobně jako s MFV
-
+<!--ID: 1717701419260-->
 END
 
 ---
@@ -445,7 +445,7 @@ Back:
 ![](../Assets/Pasted%20image%2020240606141456.png)
 ![](../Assets/Pasted%20image%2020240606141649.png)
 ![](../Assets/Pasted%20image%2020240606141658.png)
-
+<!--ID: 1717701419263-->
 END
 
 ---
@@ -458,7 +458,7 @@ Definice: **lineární diofantická rovnice**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606141753.png)
-
+<!--ID: 1717701419266-->
 END
 
 ---
@@ -471,7 +471,7 @@ Věta: **o existenci řešení diofantické rovnice**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606141959.png)
-
+<!--ID: 1717701419269-->
 END
 
 ---
@@ -485,7 +485,7 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240606142129.png)
 ![](../Assets/Pasted%20image%2020240606142157.png)
-
+<!--ID: 1717701419272-->
 END
 
 ---
@@ -500,7 +500,7 @@ Back:
 ![](../Assets/Pasted%20image%2020240606142248.png)
 ![](../Assets/Pasted%20image%2020240606142339.png)
 ![](../Assets/Pasted%20image%2020240606142420.png)
-
+<!--ID: 1717701419275-->
 END
 
 ---
@@ -513,7 +513,7 @@ Co je úlohou **lineární kongruence**?
 Back:
 
 ![](../Assets/Pasted%20image%2020240606143734.png)
-
+<!--ID: 1717701419278-->
 END
 
 ---
@@ -527,7 +527,7 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240606142752.png)
 ![](../Assets/Pasted%20image%2020240606142541.png)
-
+<!--ID: 1717701419281-->
 END
 
 ---
@@ -541,7 +541,7 @@ Jak vyřešíš
 Back:
 
 ![](../Assets/Pasted%20image%2020240606142915.png)
-
+<!--ID: 1717701419284-->
 END
 
 ---
@@ -554,7 +554,7 @@ Co budeme řešit **Čínkou větou o zbytcích**?
 Back:
 
 ![](../Assets/Pasted%20image%2020240606143135.png)
-
+<!--ID: 1717701419287-->
 END
 
 ---
@@ -567,7 +567,7 @@ Věta: **Čínská věta o zbytcích**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606143222.png)
-
+<!--ID: 1717701419289-->
 END
 
 ---
@@ -581,7 +581,7 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240606143312.png)
 ![](../Assets/Pasted%20image%2020240606143332.png)
-
+<!--ID: 1717701419292-->
 END
 
 ---
@@ -594,7 +594,7 @@ Věta: **zobecněná Čínská věta o zbytcích**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606143423.png)
-
+<!--ID: 1717701419295-->
 END
 
 ---
@@ -609,7 +609,7 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240606143548.png)
 ![](../Assets/Pasted%20image%2020240606143602.png)
-
+<!--ID: 1717701419298-->
 END
 
 ---

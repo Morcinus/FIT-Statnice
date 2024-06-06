@@ -215,7 +215,6 @@ Back:
 ![](../Assets/Pasted%20image%2020240605133146.png)
 ![](../Assets/Pasted%20image%2020240605133229.png)
 ![](../Assets/Pasted%20image%2020240606104816.png)
-
 <!--ID: 1717594648489-->
 END
 

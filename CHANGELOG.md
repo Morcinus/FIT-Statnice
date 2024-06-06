@@ -1,10 +1,12 @@
-## [v0.8.0] - 2024-xx-xx
+## [v0.8.0] - 2024-06-06
 
 Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.
 ### Přidány otázky
 - BI-SI-15 PPA
 - BI-SI-16 PPA
 - BI-SPOL-5 AG1
+- BI-SPOL-16 OSY
+- BI-SPOL-33 ZDM
 - BI-SPOL-35 ZMA
 
 ## [v0.7.0] - 2024-06-04
