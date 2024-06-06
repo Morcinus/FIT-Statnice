@@ -211,7 +211,6 @@ Další vysvětlivky:
 - `(define counter1 (make-counter))` mi udělá instanci closure (tzn. jakoby té funkce s custom prostředím)
 - return hodnota funkce je její poslední prvek - tady v `lambda` funkci je to `count`
 - 
-
 <!--ID: 1717529248397-->
 END
 
@@ -339,7 +338,6 @@ _Příklad foldr podle pana ChatGPT_:
 
 (define result (foldr (lambda (x acc) (+ x acc)) 0 lst))
 ```
-
 <!--ID: 1717529248414-->
 END
 

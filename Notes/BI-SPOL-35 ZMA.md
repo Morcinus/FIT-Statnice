@@ -214,10 +214,35 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240605133146.png)
 ![](../Assets/Pasted%20image%2020240605133229.png)
+![](../Assets/Pasted%20image%2020240606104816.png)
+
 <!--ID: 1717594648489-->
 END
 
 ---
+
+
+START
+BI-SZZ
+
+Jak bych řešil tohle pomocí per partes? (napiš to co by následovalo za $=$)
+
+![](../Assets/Pasted%20image%2020240606095049.png)
+
+Back:
+
+![](../Assets/Pasted%20image%2020240606095014.png)
+
+_Pozn. Souvislost s definicí:_
+- $f$ v tomto příkladě odpovídá $v$
+- $g$ v tomto příkladě odpovídá $u'$
+- $G$ v tomto příkladě odpovídá $u$
+![](../Assets/Pasted%20image%2020240605133146.png)
+<!--ID: 1717660269825-->
+END
+
+---
+
 
 START
 BI-SZZ
@@ -227,6 +252,8 @@ Věta: **o substituci**
 Back:
 
 ![](../Assets/Pasted%20image%2020240605133505.png)
+
+_Pozn._ ten 3. bod znamená, že když do $\varphi$ budu dosazovat hodnoty z intervalu $(\alpha, \beta)$, tak se mi to zobrazí do intervalu $(a,b)$.
 
 
 ![](../Assets/Pasted%20image%2020240605133411.png)
@@ -251,7 +278,7 @@ END
 START
 BI-SZZ
 
-Definice: **dělení intervalu**
+Definice: **dělení intervalu**, norma dělení
 
 Back:
 
@@ -264,7 +291,7 @@ END
 START
 BI-SZZ
 
-Definice: **součet funkce**
+Definice: **horní a dolní součet funkce**
 
 Back:
 
