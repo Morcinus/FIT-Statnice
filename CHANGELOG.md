@@ -2,7 +2,7 @@
 
 Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.
 ### Přidány otázky
-- 
+- BI-SPOL-16 OSY
 
 ## [v0.8.0] - 2024-06-06
 
@@ -11,7 +11,6 @@ Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.
 - BI-SI-15 PPA
 - BI-SI-16 PPA
 - BI-SPOL-5 AG1
-- BI-SPOL-16 OSY
 - BI-SPOL-33 ZDM
 - BI-SPOL-35 ZMA
 

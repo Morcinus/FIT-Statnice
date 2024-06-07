@@ -39,16 +39,34 @@ END
 START
 BI-SZZ
 
-Věta: **vlastnosti dělitelnosti**
+Věta: **vlastnosti dělitelnosti** (1)
+
+![](../Assets/Pasted%20image%2020220116080337.png)
 
 Back:
 
 ![](../Assets/Pasted%20image%2020240606131937.png)
-![](../Assets/Pasted%20image%2020240606131951.png)
 <!--ID: 1717701419179-->
 END
 
 ---
+
+
+START
+BI-SZZ
+
+Věta: **vlastnosti dělitelnosti** (2)
+
+![](../Assets/Pasted%20image%2020220116080258.png)
+
+Back:
+
+![](../Assets/Pasted%20image%2020240606131951.png)
+<!--ID: 1717746075444-->
+END
+
+---
+
 
 START
 BI-SZZ
@@ -76,20 +94,127 @@ END
 
 ---
 
+
+START
+BI-SZZ
+
+Definice: **společný dělitel**
+
+Back:
+
+Nechť $a,b \in \Bbb{Z}$
+![](../Assets/Pasted%20image%2020240607092212.png)
+<!--ID: 1717746075447-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Definice: **největší společný dělitel**
+
+Back:
+
+Nechť $a,b \in \Bbb{Z}$
+![](../Assets/Pasted%20image%2020240607092221.png)
+<!--ID: 1717746075450-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Definice: **nesoudělná čísla**
+
+Back:
+
+Nechť $a,b \in \Bbb{Z}$
+
+![](../Assets/Pasted%20image%2020240607092229.png)
+<!--ID: 1717746075453-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Definice: **společný násobek**
+
+Back:
+
+Nechť $a,b \in \Bbb{Z}$
+![](../Assets/Pasted%20image%2020240607092241.png)
+<!--ID: 1717746075456-->
+END
+
+---
+
+START
+BI-SZZ
+
+Definice: **nejmenší společný násobek**
+
+Back:
+
+Nechť $a,b \in \Bbb{Z}$
+![](../Assets/Pasted%20image%2020240607092253.png)
+<!--ID: 1717746075459-->
+END
+
+---
+
 START
 BI-SZZ
 
 Věta: **vlastnosti gcd a lcm**
 
+![](../Assets/Pasted%20image%2020220116075029.png)
+
 Back:
 
 ![](../Assets/Pasted%20image%2020240606132246.png)
-![](../Assets/Pasted%20image%2020240606132441.png)
-![](../Assets/Pasted%20image%2020240606132551.png)
 <!--ID: 1717701419188-->
 END
 
 ---
+
+
+START
+BI-SZZ
+
+Věta: **vlastnosti gcd**
+
+![](../Assets/Pasted%20image%2020220116074953.png)
+
+Back:
+
+![](../Assets/Pasted%20image%2020240606132441.png)
+<!--ID: 1717746075462-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+![](../Assets/Pasted%20image%2020240607094022.png)
+
+Back:
+
+![](../Assets/Pasted%20image%2020240606132551.png)
+<!--ID: 1717746075465-->
+END
+
+---
+
+
 
 START
 BI-SZZ
@@ -113,6 +238,8 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240606132634.png)
 ![](../Assets/Pasted%20image%2020240606132711.png)
+
+> "Eukleidés.. To byl nějakej pán, co žil strašně dávno." - Kleprlík
 <!--ID: 1717701419194-->
 END
 
@@ -134,11 +261,19 @@ END
 START
 BI-SZZ
 
-Popiš **rozšířený Eukleidův algoritmus**
+Popiš **rozšířený Eukleidův algoritmus** (REA)
 
 Back:
 
+![](../Assets/Pasted%20image%2020240607100115.png)
+
 ![](../Assets/Pasted%20image%2020240606132853.png)
+
+_Příklad od Spěváka:_
+![](../Assets/Pasted%20image%2020240607101646.png)
+
+Vysvětlení:
+<iframe type="text/html" width="640" height="360"src="http://www.youtube.com/embed/4ps0mt0fSPk?start=3445" frameborder="0"/> 
 <!--ID: 1717701419199-->
 END
 
@@ -285,6 +420,19 @@ END
 START
 BI-SZZ
 
+Definice: **funkce π(n)**
+
+Back:
+
+![](../Assets/Pasted%20image%2020240606135301.png)
+<!--ID: 1717701419235-->
+END
+
+---
+
+START
+BI-SZZ
+
 Věta: **o počtu prvočísel** 
 (věta 2)
 
@@ -299,26 +447,12 @@ END
 START
 BI-SZZ
 
-Definice: **funkce π(n)**
-
-Back:
-
-![](../Assets/Pasted%20image%2020240606135301.png)
-<!--ID: 1717701419235-->
-END
-
----
-
-START
-BI-SZZ
-
 Věta: kolik existuje **prvočísel**
 (věta 1)
 
 Back:
 
 ![](../Assets/Pasted%20image%2020240606135232.png)
-
 <!--ID: 1717701419238-->
 END
 
@@ -332,17 +466,33 @@ Věta a důsledek: **Malá Fermatova věta**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606135745.png)
-![](../Assets/Pasted%20image%2020240606135802.png)
+
 ![](../Assets/Pasted%20image%2020240606135856.png)
 <!--ID: 1717701419241-->
 END
 
 ---
 
+
 START
 BI-SZZ
 
-Věta: **o výpočtu inverzí**
+![](../Assets/Pasted%20image%2020240607114412.png)
+
+Back:
+
+![](../Assets/Pasted%20image%2020240606135802.png)
+<!--ID: 1717753463714-->
+END
+
+---
+
+
+
+START
+BI-SZZ
+
+Věta: **o výpočtu inverzí** (jak vypočítám inverzi $a \pmod p$)
 
 Back:
 
@@ -361,7 +511,8 @@ Věta: **Eulerova věta**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606140152.png)
-- Zobecnění MFV i pro některá složená čísla
+
+Pozn. Klíčové u Eulerovy věty je, že $m$ **nemusí být prvočíslo** (na rozdíl od MFV)!
 <!--ID: 1717701419247-->
 END
 
@@ -385,19 +536,36 @@ BI-SZZ
 
 Vlastnosti **Eulerovy funkce**
 
+![](../Assets/Pasted%20image%2020240607113616.png)
+
 Back:
 
 ![](../Assets/Pasted%20image%2020240606140439.png)
-![](../Assets/Pasted%20image%2020240606140455.png)
 <!--ID: 1717701419252-->
 END
 
 ---
 
+
 START
 BI-SZZ
 
-Věta: **výpočet pomocí faktorizace**
+![](../Assets/Pasted%20image%2020240607113650.png)
+
+Back:
+
+![](../Assets/Pasted%20image%2020240606140455.png)
+<!--ID: 1717753243394-->
+END
+
+---
+
+
+
+START
+BI-SZZ
+
+Věta: **výpočet Eulerovy funkce $\varphi(n)$ pomocí faktorizace**
 
 Back:
 
@@ -410,7 +578,7 @@ END
 START
 BI-SZZ
 
-Věta: **kdy je přirozené číslo prvočíslem**
+Věta: **kdy je přirozené číslo prvočíslem** (ve vztahu k Eulerově funkci)
 
 Back:
 
@@ -423,7 +591,7 @@ END
 START
 BI-SZZ
 
-Jak vypočítat **inverzi pomocí Eulerovy věty**
+Jak vypočítat **inverzi $a$ pomocí Eulerovy věty**
 
 Back:
 
@@ -437,14 +605,18 @@ END
 START
 BI-SZZ
 
-Vypočítej
-![](../Assets/Pasted%20image%2020240606141420.png)
-
+Popiš, jak bys postupoval při výpočtu
+$$7^{721} \pmod {23}$$
 Back:
 
-![](../Assets/Pasted%20image%2020240606141456.png)
-![](../Assets/Pasted%20image%2020240606141649.png)
-![](../Assets/Pasted%20image%2020240606141658.png)
+Podle MFV vím, že $7^{22} \equiv 1 \pmod {23}$, takže rozložím exponent tak že ho vydělím $22$ se zbytkem vydělím a dostanu:
+
+$$7^{721} \equiv 7^{22\cdot 32 + 17}  \pmod {23}$$
+
+To pak dál upravím:
+$$7^{721} \equiv 7^{22\cdot 32 + 17} \equiv 7^{22\cdot 32} \cdot 7^{17} \equiv (7^{22})^{32} \cdot 7^{17} \pmod {23}$$
+Podle MFV $7^{22} \equiv 1$, tedy výsledek je:
+$$7^{721} \equiv 7^{22\cdot 32 + 17} \equiv 7^{22\cdot 32} \cdot 7^{17} \equiv (7^{22})^{32} \cdot 7^{17} \equiv 7^{17} \pmod {23}$$
 <!--ID: 1717701419263-->
 END
 
@@ -549,7 +721,7 @@ END
 START
 BI-SZZ
 
-Co budeme řešit **Čínkou větou o zbytcích**?
+Co řeší **Čínká věta o zbytcích**?
 
 Back:
 

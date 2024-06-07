@@ -4,10 +4,11 @@ parent: "[[FIT]]"
 ---
 
 TARGET DECK: BI-SZZ
-FILE TAGS: SPOL-16 OSY
+FILE TAGS: BI-SPOL-16 OSY
 
 > BI-SPOL-16 (OSY)
 > Procesy a vlákna, jejich implementace. Synchronizační nástroje. Klasické synchronizační úlohy. Plánování vláken. Přidělování prostředků, Coffmanovy podmínky, způsoby řešení uváznutí.
+
 
 
 START
@@ -18,7 +19,7 @@ Co je to **program** (aplikace)?
 Back:
 
 Spustitelný binární kód v sekundární paměti.
-
+<!--ID: 1717743656795-->
 END
 
 ---
@@ -34,7 +35,7 @@ Back:
 
 - při vzniku procesu je část informací zděděna od rodičovského procesu
 - v rámci procesu jsou alokované prostředky (paměť, vlákna, soubory, zámky, …)
-
+<!--ID: 1717743656799-->
 END
 
 ---
@@ -50,7 +51,7 @@ Back:
     - `fork(2)` - kopie, rodič i potomek pokračují další instrukcí
     - `execve(2)` spuštění nového programu od začátku
 - vytvoření procesu na **Windows**: `CreateProcessA()`
-
+<!--ID: 1717743656802-->
 END
 
 ---
@@ -64,7 +65,7 @@ Back:
 
 - může se ukončit sám (`return`, `exit`, …) nebo je ukončen jádrem (chyba, signál)
 - pokusí se předat návratový kód rodiči, ukončí svá vlákna a uvolní svůj adresový prostor a datové struktury
-
+<!--ID: 1717743656805-->
 END
 
 ---
@@ -83,7 +84,7 @@ Pro vlákna platí:
 - vytvoření vlákna: `pthread_create()` (POSIX) nebo přímo v programovacím jazyce
 - vlákna vytvořená v rámci procesu sdílí většinu prostředků tohoto procesu
 - každé vlákno je v nějakém stavu
-
+<!--ID: 1717743656807-->
 END
 
 ---
@@ -103,7 +104,7 @@ Back:
 - **Free** – vlákno bylo kompletně zrušeno (teoretický stav)
 
 ![](../Assets/Pasted%20image%2020240605191519.png)
-
+<!--ID: 1717743656810-->
 END
 
 ---
@@ -117,7 +118,7 @@ Back:
 
 - **multitasking** = více procesů, v každém jedno vlákno
 - **multithreading** = více vláken v procesu
-
+<!--ID: 1717743656813-->
 END
 
 ---
@@ -141,7 +142,7 @@ Back:
 	- **TID** = číslo vlákna
 	- informace pro přepínání kontextu (hodnoty některých registrů CPU, ukazatel na zásobník, …)
 	- informace pro plánování vláken (typ plánovacího algoritmu, priorita, stav, události, na které se čeká, využitý čas, …)
-
+<!--ID: 1717743656816-->
 END
 
 ---
@@ -158,7 +159,7 @@ Back:
 -  **hybridně** - $m$ user-level vláken je namapováno na $n$ kernel-level vláken
 
 Poznámka: *počet procesů a vláken bývá omezen (pro celý systém i pro každého uživatele)*
-
+<!--ID: 1717743656818-->
 END
 
 ---
@@ -174,7 +175,7 @@ Back:
 - synchronizace = řešení problému časově závislých chyb
 
 Poznámka: *Správný paralelní program by neměl předpokládat nic o rychlosti vláken, měl by zajistit vzájemné vyloučení, ale přitom nebrzdit vlákna mimo kritické sekce*
-
+<!--ID: 1717743656821-->
 END
 
 ---
@@ -188,7 +189,7 @@ Back:
 
 **Kritická sekce** = část programu, kde vlákna používají sdílené prostředky
 - sdružené kritické sekce = týkají se stejného prostředku (tj. proměnné, souboru apod.)
-
+<!--ID: 1717743656824-->
 END
 
 ---
@@ -201,7 +202,7 @@ Co znamená princip **vzájemného vyloučení**?
 Back:
 
 Vláknům je zakázáno sdílet prostředek ve stejném čase.
-
+<!--ID: 1717743656827-->
 END
 
 ---
@@ -216,7 +217,7 @@ Back:
 - **uváznutí** _(deadlock)_ = více vláken čeká na jedno z čekajících vláken
 - _**livelock**_ = více vláken neužitečně běží a nemohou výpočet dokončit (např. zacyklení)
 - **hladovění** _(starvation)_ = ready vlákno je stále předbíháno jinými vlákny
-
+<!--ID: 1717743656829-->
 END
 
 ---
@@ -233,7 +234,7 @@ Back:
 - v jádru OS Windows: _executive dispatcher objects_, _slim reader-writer blocks_, …
 - v aplikaci: _mutexes_, _semaphores_, _condition variables_, _pipes_, _signals_, …
 - v programovacích jazycích: C++11, Java, …
-
+<!--ID: 1717743656832-->
 END
 
 ---
@@ -247,7 +248,7 @@ Back:
 
 - aktivní čekání
 - blokující volání
-
+<!--ID: 1717743656835-->
 END
 
 ---
@@ -263,7 +264,7 @@ Back:
     - minimální režie, ale zbytečné zatěžování jádra čekáním
     - kontrolu zámku + zamčení je potřeba udělat atomicky (= v jedné instrukci)
     - při plánování s fixní prioritou může vést k uváznutí (vlákno s nízkou prioritou je v kritické sekci a vlákno s vyšší prioritou před ní aktivně čeká)
-
+<!--ID: 1717743656838-->
 END
 
 ---
@@ -284,7 +285,7 @@ Back:
 - Korektní HW řešení ve více-jádrových systémech se sdílenou pamětí
 
 ![](../Assets/Pasted%20image%2020240605193947.png)
-
+<!--ID: 1717743656841-->
 END
 
 ---
@@ -298,7 +299,7 @@ Back:
 
 - **blokující volání** - vlákno se před zamčenou kritickou sekcí samo zablokuje a přestane mu být přidělován čas, systém si udržuje seznam čekajících vláken a po odemčení kritické sekce jedno odblokuje
     - čekání bez režie, ale začátek a ukončení jsou trochu náročnější
-
+<!--ID: 1717743656844-->
 END
 
 ---
@@ -314,7 +315,7 @@ Back:
 - **podmíněná proměnná** = informace, která vlákna jsou jí blokována (POSIXově typ `pthread_cond_t` s funkcemi `pthread_cond_wait()` a `pthread_cond_signal()`, v C++ třída `std::condition_variable`)
 - **semafor** = celočíselný čítač + informace, která vlákna jsou jím blokována (POSIXově typ `sem_t` s funkcemi `sem_init()`, `sem_wait()`, `sem_post()`, v C++ nejsou)
 - **bariéra** = čítač síly bariéry (kolik vláken je potřeba k prolomení bariéry) + fronta vláken, která jsou jí blokována (POSIXově typ `barrier_t` s funkcemi `pthread_barrier_init()`, `pthread_barrier_wait()` apod., v C++ třída `std::experimental::barrier`)
-
+<!--ID: 1717743656846-->
 END
 
 ---
@@ -331,7 +332,7 @@ Back:
 - večeřící filozofové
 - čtenáři-písaři
 - spící holiči
-
+<!--ID: 1717743656849-->
 END
 
 ---
@@ -351,7 +352,7 @@ Back:
 
 Jedna z možných implementací:
 ![](../Assets/Pasted%20image%2020240605194226.png)
-
+<!--ID: 1717743656852-->
 END
 
 ---
@@ -372,7 +373,7 @@ Back:
 ![](../Assets/Pasted%20image%2020240605194352.png)
 
 ![](../Assets/Pasted%20image%2020240605194115.png)
-
+<!--ID: 1717743656855-->
 END
 
 ---
@@ -394,7 +395,7 @@ Back:
 Pro představu:
 ![](../Assets/Pasted%20image%2020240605194603.png)
 ![](../Assets/Pasted%20image%2020240605194611.png)
-
+<!--ID: 1717743656858-->
 END
 
 ---
@@ -412,7 +413,7 @@ Back:
 ![](../Assets/Pasted%20image%2020240605194702.png)
 
 ![](../Assets/Pasted%20image%2020240605194722.png)
-
+<!--ID: 1717743656861-->
 END
 
 ---
@@ -425,7 +426,7 @@ Co je to **plánování vláken**?
 Back:
 
 vlákna žijí v iluzi, že běží bez přerušení, ale ve skutečnosti se musí střídat na omezeném počtu jader CPU
-
+<!--ID: 1717743656864-->
 END
 
 ---
@@ -440,7 +441,7 @@ Back:
 - **vlákna orientovaná na CPU** - potřebují CPU na dlouho, blokací je málo
 - **vlákna orientovaná na vstupy a výstupy** - CPU používají krátce, blokací je hodně
 - **vlákna reálného času** - prioritou je stihnout reakci na událost do deadlinu
-
+<!--ID: 1717743656867-->
 END
 
 ---
@@ -453,7 +454,7 @@ Co je to přepínání kontextu?
 Back:
 
 mechanismus střídání vláken na jádrech, aby se udržel kontext (= informace nezbytné pro znovuspuštění přerušeného vlákna)
-
+<!--ID: 1717743656870-->
 END
 
 ---
@@ -467,7 +468,7 @@ Back:
 
 - plánování s odnímáním (preemptive scheduling)
 - kooperativní plánování (cooperative scheduling)
-
+<!--ID: 1717743656872-->
 END
 
 ---
@@ -482,6 +483,7 @@ Back:
 - OS přiděluje vláknům jádra CPU jen na určitou omezenou dobu (tzv. časové kvantum)
 - rychlejší odezva (vhodné pro interaktivní systémy), ale častější přepínání kontextu
 - Využívá se **round-robin** přístup
+<!--ID: 1717743656875-->
 END
 
 ---
@@ -502,7 +504,7 @@ Back:
     - pokud vlákno využilo celé své kvantum, jeho priorita se sníží a kvantum prodlouží
     - pokud vlákno nevyužilo své kvantum, jeho priorita se zvýší a kvantum zkrátí
     - výchozí strategie v dnešních OS
-
+<!--ID: 1717743656878-->
 END
 
 ---
@@ -516,7 +518,7 @@ Back:
 - OS přiděluje vláknům jádra CPU na neomezenou dobu, vlákno jádro využívá, dokud nedokončí výpočet nebo samo neprovede blokující volání
 - lepší využití CPU, pomalejší odezva, vhodné jen pro “prověřená” kernel vlákna
 - **first-come-first-served** (FCFC) = ready vlákna čekají v jedné nebo více frontách
-
+<!--ID: 1717743656881-->
 END
 
 ---
@@ -535,8 +537,7 @@ Back:
 **Dělení dle odnímatelnosti:**
 - Odnímatelné – lze je vláknu odebrat bez dalších problémů, např. odložení z fyzické paměti na disk
 - Neodnímatelná – např. tiskárna
-
-
+<!--ID: 1717743656883-->
 END
 
 ---
@@ -552,7 +553,7 @@ Back:
 - hrany prostředek → vlákno, které jej alokuje
 - hrany vlákno → prostředek, na který vlákno čeká
 - smyčka znamená uváznutí
-
+<!--ID: 1717743656886-->
 END
 
 ---
@@ -572,7 +573,7 @@ Back:
 2. **neodnímatelnost** - přidělený prostředek nemůže být násilím odebrán
 3. **“drž a čekej”** - vlákno s prostředky může žádat o další prostředky
 4. **kruhové čekání** - musí existovat smyčka více vláken (každé vlákno čeká na prostředek přidělený dalšímu vláknu ve smyčce)
-
+<!--ID: 1717743656889-->
 END
 
 ---
@@ -588,7 +589,7 @@ Back:
 - prevence uváznutí
 - předcházení vzniku uváznutí
 - detekce uváznutí a zotavení 
-
+<!--ID: 1717743656891-->
 END
 
 ---
@@ -601,7 +602,7 @@ Co je to **pštrosí strategie**?
 Back:
 
 ignorování problému a čekání na zásah administrátora
-
+<!--ID: 1717743656894-->
 END
 
 ---
@@ -628,7 +629,7 @@ Back:
 	- Každý prostředek je unikátně očíslován
 	- Vlákno žádá o libovolné prostředky, ale pouze v rostoucím prostředí
 	- Nevznikne tak v alokačním grafu smyčka, ale toto pořadí nemusí vždy existovat
-
+<!--ID: 1717743656897-->
 END
 
 ---
@@ -643,7 +644,7 @@ Back:
 - pečlivá alokace, pokud předem známe požadavky vláken
 - lze popsat maticemi (vektor existujících prostředků E, vektor volných prostředků F, matice požadavků Q, matice přidělených prostředků A, matice chybějících prostředků M)
 - Lze využít bankéřův algoritmus
-
+<!--ID: 1717743656900-->
 END
 
 ---
@@ -659,6 +660,7 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240605201453.png)
 ![](../Assets/Pasted%20image%2020240605201501.png)
+<!--ID: 1717743656902-->
 END
 
 ---
@@ -672,7 +674,7 @@ Back:
 - využíváme pokud požadavky předem nenzáme
 - nástroje OS pro detekci uváznutí: `ps`, `gstack`, debuggery, Valgrind apod.
 - zotavení např. (postupným) ukončením uvázlých vláken nebo restartem uvázlých vláken (to vyžaduje nějaký mechanismus pravidelných “záloh” a rollbacků)
-
+<!--ID: 1717743656905-->
 END
 
 ---
