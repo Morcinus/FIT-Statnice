@@ -224,6 +224,8 @@ Vlastnosti gcd - **Bezoutova rovnost**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606132325.png)
+
+Tags: core
 <!--ID: 1717701419191-->
 END
 
@@ -240,6 +242,8 @@ Back:
 ![](../Assets/Pasted%20image%2020240606132711.png)
 
 > "Eukleidés.. To byl nějakej pán, co žil strašně dávno." - Kleprlík
+
+Tags: core
 <!--ID: 1717701419194-->
 END
 
@@ -253,6 +257,8 @@ Věta: **Lamého věta**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606132739.png)
+
+Tags: core
 <!--ID: 1717701419197-->
 END
 
@@ -274,6 +280,8 @@ _Příklad od Spěváka:_
 
 Vysvětlení:
 <iframe type="text/html" width="640" height="360"src="http://www.youtube.com/embed/4ps0mt0fSPk?start=3445" frameborder="0"/> 
+
+Tags: core
 <!--ID: 1717701419199-->
 END
 
@@ -328,6 +336,8 @@ Definice: **kongruence**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606133416.png)
+
+Tags: core
 <!--ID: 1717701419212-->
 END
 
@@ -356,6 +366,8 @@ Back:
 ![](../Assets/Pasted%20image%2020240606133819.png)
 
 - Kongruence je relací ekvivalence na množině \Z.
+
+Tags: core
 <!--ID: 1717701419218-->
 END
 
@@ -468,6 +480,8 @@ Back:
 ![](../Assets/Pasted%20image%2020240606135745.png)
 
 ![](../Assets/Pasted%20image%2020240606135856.png)
+
+Tags: core
 <!--ID: 1717701419241-->
 END
 
@@ -513,6 +527,8 @@ Back:
 ![](../Assets/Pasted%20image%2020240606140152.png)
 
 Pozn. Klíčové u Eulerovy věty je, že $m$ **nemusí být prvočíslo** (na rozdíl od MFV)!
+
+Tags: core
 <!--ID: 1717701419247-->
 END
 
@@ -526,6 +542,8 @@ Definice: **Eulerova funkce**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606140347.png)
+
+Tags: core
 <!--ID: 1717701419249-->
 END
 
@@ -541,6 +559,8 @@ Vlastnosti **Eulerovy funkce**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606140439.png)
+
+Tags: core
 <!--ID: 1717701419252-->
 END
 
@@ -570,6 +590,8 @@ Věta: **výpočet Eulerovy funkce $\varphi(n)$ pomocí faktorizace**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606140550.png)
+
+Tags: core
 <!--ID: 1717701419255-->
 END
 
@@ -630,6 +652,8 @@ Definice: **lineární diofantická rovnice**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606141753.png)
+
+Tags: core
 <!--ID: 1717701419266-->
 END
 
@@ -643,6 +667,8 @@ Věta: **o existenci řešení diofantické rovnice**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606141959.png)
+
+Tags: core
 <!--ID: 1717701419269-->
 END
 
@@ -657,6 +683,8 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240606142129.png)
 ![](../Assets/Pasted%20image%2020240606142157.png)
+
+Tags: core
 <!--ID: 1717701419272-->
 END
 
@@ -672,6 +700,8 @@ Back:
 ![](../Assets/Pasted%20image%2020240606142248.png)
 ![](../Assets/Pasted%20image%2020240606142339.png)
 ![](../Assets/Pasted%20image%2020240606142420.png)
+
+Tags: core
 <!--ID: 1717701419275-->
 END
 
@@ -699,6 +729,8 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240606142752.png)
 ![](../Assets/Pasted%20image%2020240606142541.png)
+
+Tags: core
 <!--ID: 1717701419281-->
 END
 
@@ -726,6 +758,8 @@ Co řeší **Čínká věta o zbytcích**?
 Back:
 
 ![](../Assets/Pasted%20image%2020240606143135.png)
+
+Tags: core
 <!--ID: 1717701419287-->
 END
 
@@ -739,6 +773,8 @@ Věta: **Čínská věta o zbytcích**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606143222.png)
+
+Tags: core
 <!--ID: 1717701419289-->
 END
 
@@ -766,6 +802,8 @@ Věta: **zobecněná Čínská věta o zbytcích**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606143423.png)
+
+Tags: core
 <!--ID: 1717701419295-->
 END
 

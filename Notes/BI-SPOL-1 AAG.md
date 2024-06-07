@@ -9,7 +9,6 @@ FILE TAGS: BI-SPOL-1 AAG
 > BI-SPOL-1 (AAG)
 > Přehled Chomského hierarchie formálních jazyků a gramatik. Turingovy stroje. Třídy problémů P, NP, NP-těžký, NP-úplný.
 
-
 START
 BI-SZZ
 
@@ -18,7 +17,7 @@ Co je to **abeceda** $\Sigma$ ?
 Back:
 
 konečná množina symbolů
-
+<!--ID: 1717778217031-->
 END
 
 ---
@@ -33,6 +32,7 @@ Back:
 konečná posloupnost symbolů z abecedy
 - **prázdný řetězec** $\varepsilon$ je také řetězec
   
+<!--ID: 1717778217035-->
 END
 
 ---
@@ -45,7 +45,7 @@ Co je to **(formální) jazyk** $L$?
 Back:
 
 libovolná množina (konečných!) řetězců nad abecedou
-
+<!--ID: 1717778217038-->
 END
 
 ---
@@ -58,7 +58,7 @@ Co je to **rekurzivně spočetný jazyk**?
 Back:
 
 generovaný neomezenou gramatikou = přijímaný nějakým Turingovým strojem
-
+<!--ID: 1717778217040-->
 END
 
 ---
@@ -71,7 +71,7 @@ Co je to **rekurzivní jazyk**?
 Back:
 
 rozhodnutelný nějakým Turingovým strojem
-
+<!--ID: 1717778217043-->
 END
 
 ---
@@ -85,7 +85,7 @@ Back:
 
 generovaný kontextovou gramatikou = generovaný nezkracující gramatikou = přijímaný nedeterministickým lineárně omezeným Turingovým strojem
 
-
+<!--ID: 1717778217046-->
 END
 
 ---
@@ -98,7 +98,7 @@ Co je to **bezkontextový jazyk**?
 Back:
 
 generovaný bezkontextovou gramatikou = přijímaný nedeterministickým zásobníkovým automatem
-
+<!--ID: 1717778217049-->
 END
 
 ---
@@ -111,7 +111,7 @@ Co je to **regulární jazyk**?
 Back:
 
 generovaný regulární gramatikou = přijímaný nějakým konečným automatem = popsatelný regulárním výrazem
-
+<!--ID: 1717778217052-->
 END
 
 ---
@@ -124,7 +124,7 @@ Co je to **konečný jazyk**?
 Back:
 
 obsahující konečný počet řetězců
-
+<!--ID: 1717778217054-->
 END
 
 ---
@@ -138,7 +138,7 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240607162918.png)
 konečné jazyky $\subseteq$ regulární jazyky $\subseteq$ bezkontextové jazyky $\subseteq$ kontextové jazyky $\subseteq$ rekurzivní jazyky $\subseteq$ rekurzivně spočetné jazyky $\subseteq$ všechny (formální) jazyky
-
+<!--ID: 1717778217057-->
 END
 
 ---
@@ -156,7 +156,7 @@ Back:
 - řecká písmena $(\alpha, \beta, \gamma \dots)$ jsou libovolné kombinace terminálů a neterminálů
 - $P$ = konečná množina **(přepisovacích) pravidel** ve tvaru $\gamma A \delta \to \alpha$
 - $S$ = **počáteční neterminál/symbol** $\in N$
-
+<!--ID: 1717778217060-->
 END
 
 ---
@@ -169,7 +169,7 @@ Co je to **kontextová gramatika**?
 Back:
 
 její pravidla jsou ve tvaru $\gamma A \delta \to \gamma \alpha \delta$ $(\alpha \neq \varepsilon)$, případně ještě $S \to \varepsilon$, pokud $S$ není na žádné pravé straně
-
+<!--ID: 1717778217063-->
 END
 
 ---
@@ -182,7 +182,7 @@ Co je to **bezkontextová gramatika**?
 Back:
 
 její pravidla jsou ve tvaru $A \to \alpha$
-
+<!--ID: 1717778217066-->
 END
 
 ---
@@ -198,7 +198,7 @@ její pravidla jsou ve tvaru $A \to a | aB$, případně ještě $S \to \varepsi
 - regulární gramatiky $\subseteq$ bezkontextové gramatiky $\subseteq$ všechny (neomezené) gramatiky
 - regulární gramatiky $\subseteq$ kontextové gramatiky $\subseteq$ všechny (neomezené) gramatiky
 - mezi kontextovými a bezkontextovými ale žádná podmnožinovost není!
-
+<!--ID: 1717778217069-->
 END
 
 ---
@@ -212,7 +212,7 @@ Back:
 
 = neobsahuje žádné pravidlo, které by zkrátilo větnou formu, tj. napravo mělo méně symbolů než nalevo (s výjimkou $S \to \varepsilon$, pokud $S$ není na žádné pravé straně)
 - regulární a kontextové gramatiky jsou nezkracující
-
+<!--ID: 1717778217072-->
 END
 
 ---
@@ -225,7 +225,7 @@ Co je to **věta**?
 Back:
 
 řetězec vygenerovaný gramatikou $\in \Sigma^*$
-
+<!--ID: 1717778217075-->
 END
 
 ---
@@ -238,7 +238,7 @@ Co je to **větná forma**?
 Back:
 
 “mezikrok” při generování věty $\in (N \cup \Sigma)^*$
-
+<!--ID: 1717778217078-->
 END
 
 ---
@@ -251,7 +251,7 @@ Co je to **derivace**?
 Back:
 
 úprava větné formy na jinou podle přepisovacích pravidel (resp. posloupnost takových úprav)
-
+<!--ID: 1717778217081-->
 END
 
 ---
@@ -264,7 +264,7 @@ Co je to **Turingův model**?
 Back:
 
 teoretický model počítače s řídící jednotkou (ta má konečný počet stavů a přechodových pravidel), nekonečnou páskou a čtecí hlavou
-
+<!--ID: 1717778217084-->
 END
 
 ---
@@ -277,7 +277,7 @@ Co je to **Turingův stroj**?
 Back:
 
 ![](../Assets/Pasted%20image%2020240607164436.png)
-
+<!--ID: 1717778217087-->
 END
 
 ---
@@ -290,7 +290,7 @@ Co je to **lineárně omezený** **Turingův stroj** (LOTS)?
 Back:
 
 délka pásky je omezena k-násobkem vstupu
-
+<!--ID: 1717778217090-->
 END
 
 ---
@@ -304,7 +304,7 @@ Back:
 
 přechodová funkce může pro jeden vstup vrátit různé výstupy $(\delta : (Q \setminus F) \times \Sigma \to \mathcal P ( Q \times G \times \{ -1, 0, 1 \} ) )$
 - je stejně silný jako DTS (oba přijímají stejnou množinu jazyků)
-
+<!--ID: 1717778217093-->
 END
 
 ---
@@ -317,7 +317,7 @@ Co je to **vícepáskový Turingův stroj**?
 Back:
 
 má více pásek a čtecích hlav, je ekvivalentní jednopáskovému
-
+<!--ID: 1717778217095-->
 END
 
 ---
@@ -330,7 +330,7 @@ Co je to **univerzální Turingův stroj** $R_U$?
 Back:
 
 dokáže simulovat libovolný TS (na vstupu dostane binárně zakódovaný popis jiného TS $R$ a vstupní řetězec $w$, výsledek $R_U$ bude stejný jako kdyby $R$ dostal an vstupu $w$)
-
+<!--ID: 1717778217098-->
 END
 
 ---
@@ -346,7 +346,7 @@ Back:
 - $q$ je aktuální stav
 - $s$ je zajímavá část pásky (nejmenší souvislá část obsahující všechny neprázdné symboly)
 - $n$ je pozice čtecí hlavy na pásce
-
+<!--ID: 1717778217101-->
 END
 
 ---
@@ -359,7 +359,7 @@ Co to znamená, když se **TS zastaví**?
 Back:
 
 TS se **zastaví**$\iff$přešel do koncového stavu
-
+<!--ID: 1717778217104-->
 END
 
 ---
@@ -373,7 +373,7 @@ Back:
 
 TS **přijme** vstupní řetězec$\iff$po přechodu do koncového stavu jsou na pásce jen prázdné symboly (v případě NTS přijme$\iff$existuje nějaká posloupnost přechodů, která takto skončí)
 - nepřijmutí může nastat třemi způsoby: nedefinovaný přechod, zacyklení, nebo neprázdná páska po skončení
-
+<!--ID: 1717778217107-->
 END
 
 ---
@@ -386,7 +386,7 @@ Jaké jazyky **TS přijímají** a které **rozhodují**?
 Back:
 
 TS **přijímají** rekurzivně spočetné jazyky a **rozhodují** rekurzivní jazyky (= přijímají je a nikdy se nezacyklí)
-
+<!--ID: 1717778217110-->
 END
 
 ---
@@ -403,7 +403,7 @@ Back:
 - problém je pak jazykem a všechny jeho instance s odpovědí _ano_ tvoří jazyk $L_{ano}$
 - TS řeší rozhodovací problém$\iff$rozhoduje jazyk $L_{ano}$
 - **optimalizační problémy** jsou stejně náročné jako rozhodovací
-
+<!--ID: 1717778217113-->
 END
 
 ---
@@ -418,7 +418,7 @@ Back:
 **rozhodnutelný problém** = rozhodovací problém, který umíme vyřešit algoritmem
 - odpovídají rekurzivním jazykům, např. hledání nejkratší cesty v grafu)
 - opakem je nerozhodnutelný problém (např. halting problem)
-
+<!--ID: 1717778217115-->
 END
 
 ---
@@ -432,7 +432,7 @@ Back:
 
 obsahuje rozhodovací problémy, které **lze** řešit v polynomiálním čase na **deterministickém** Turingově stroji
 - tj. patří sem “efektivně řešitelné” problémy, např. hledání největšího společného dělitele a rozhodnutí prvočíselnosti
-
+<!--ID: 1717778217119-->
 END
 
 ---
@@ -447,7 +447,7 @@ Back:
 - obsahuje rozhodovací problémy, které **lze** řešit v polynomiálním čase na **nedeterministickém** Turingově stroji
 - $P \subseteq NP$ (ale je možné, že $P = NP$, zatím to nikdo nedokázal ani nevyvrátil)
 - patří sem např. faktorizace přirozených čísel
-
+<!--ID: 1717778217123-->
 END
 
 ---
@@ -461,7 +461,7 @@ Back:
 
 = problém, na který lze převést všechny NP problémy polynomiální redukcí $\leq_p$ (=proces polynomiálně rychlého převodu instance jednoho problému na instanci jiného problému se stejnou pravdivostní hodnotou)
 - sám nemusí patřit do NP
-
+<!--ID: 1717778217126-->
 END
 
 ---
@@ -477,7 +477,7 @@ Back:
 - pokud by byl nalezen polynomiálně rychlý deterministický algoritmus pro řešení libovolného NP-úplného problému, všechny NP problémy by byly polynomiálně rychle deterministicky řešitelné, a tedy by platilo $P=NP$
 - např. problém obchodního cestujícího
 - využívají se v kryptografii
-
+<!--ID: 1717778217129-->
 END
 
 ---
@@ -495,7 +495,7 @@ Back:
 2. přechod do dalšího stavu podle $\delta$
 3. zápis výstupního symbolu na pásku
 4. posun čtecí hlavy
-
+<!--ID: 1717778217132-->
 END
 
 ---

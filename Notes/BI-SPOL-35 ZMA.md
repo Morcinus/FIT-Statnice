@@ -18,6 +18,8 @@ Definice: **primitivní funkce**
 Back:
 
 ![](../Assets/Pasted%20image%2020240605130915.png)
+
+Tags: core
 <!--ID: 1717594648446-->
 END
 
@@ -215,6 +217,8 @@ Back:
 ![](../Assets/Pasted%20image%2020240605133146.png)
 ![](../Assets/Pasted%20image%2020240605133229.png)
 ![](../Assets/Pasted%20image%2020240606104816.png)
+
+Tags: core
 <!--ID: 1717594648489-->
 END
 
@@ -256,6 +260,8 @@ _Pozn._ ten 3. bod znamená, že když do $\varphi$ budu dosazovat hodnoty z int
 
 
 ![](../Assets/Pasted%20image%2020240605133411.png)
+
+Tags: core
 <!--ID: 1717594648492-->
 END
 
@@ -282,6 +288,8 @@ Definice: **dělení intervalu**, norma dělení
 Back:
 
 ![](../Assets/Pasted%20image%2020240605133857.png)
+
+Tags: core
 <!--ID: 1717594648497-->
 END
 
@@ -300,6 +308,8 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240605134412.png)
 ![](../Assets/Pasted%20image%2020240605134422.png)
+
+Tags: core
 <!--ID: 1717594648500-->
 END
 
@@ -315,6 +325,8 @@ Back:
 ![](../Assets/Pasted%20image%2020240605134526.png)
 - poskytují horní (resp. dolní) odhad obsahu hledané plochy
 - vágně řečeno: horní integrál je v podstatě ten nejmenší horní součet ze všech možných dělení, analogicky pak i dolní
+
+Tags: core
 <!--ID: 1717594648502-->
 END
 
@@ -328,6 +340,8 @@ Definice: **Riemannův integrál**
 Back:
 
 ![](../Assets/Pasted%20image%2020240605135239.png)
+
+Tags: core
 <!--ID: 1717594648505-->
 END
 
@@ -494,6 +508,8 @@ Věta: o **výpočtu plošných útvarů**
 Back:
 
 ![](../Assets/Pasted%20image%2020240605142332.png)
+
+Tags: core
 <!--ID: 1717594648538-->
 END
 

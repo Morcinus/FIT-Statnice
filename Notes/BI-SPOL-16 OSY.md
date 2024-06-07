@@ -9,6 +9,8 @@ FILE TAGS: BI-SPOL-16 OSY
 > BI-SPOL-16 (OSY)
 > Procesy a vlákna, jejich implementace. Synchronizační nástroje. Klasické synchronizační úlohy. Plánování vláken. Přidělování prostředků, Coffmanovy podmínky, způsoby řešení uváznutí.
 
+### todo
+- přidat podrobnější karičky ohledně implementace mutexu, semaforů, podmínek atd. (konkrétní keywords)
 
 
 START
@@ -59,7 +61,7 @@ END
 START
 BI-SZZ
 
-Jak probíhá **ukončení procesu**?
+Jak probíhá **ukončení procesu**? (Kdo ho ukončuje + co se při ukončení udělá)
 
 Back:
 
@@ -126,26 +128,53 @@ END
 START
 BI-SZZ
 
-V jakých **strukturách** se udžují informace o procesech a vláknech? Co tyto struktury obsahují?
+V jakých **strukturách** se udžují informace o procesech a vláknech? (3)
 
 Back:
 
 - **Tabulka procesů**
 	- Pro každý proces přítomna struktura **process control block**
-- **Process control block (PCB)**
-	- **PID** = číslo procesu
-	- **PPID** = číslo rodičovského procesu
-	- **SID** = číslo session
-	- privilegia a vlastník procesu, jeho příslušnost ke skupinám, …
-	- informace o alokovaných prostředcích (přidělená fyzická paměť, překlad z logických adres na fyzické, deskriptory otevřených souborů, synchronizační nástroje, …)
+- **Process control block**
 - **Thread control block**
-	- **TID** = číslo vlákna
-	- informace pro přepínání kontextu (hodnoty některých registrů CPU, ukazatel na zásobník, …)
-	- informace pro plánování vláken (typ plánovacího algoritmu, priorita, stav, události, na které se čeká, využitý čas, …)
 <!--ID: 1717743656816-->
 END
 
 ---
+
+
+START
+BI-SZZ
+
+Z čeho se skládá **Process control block**? (5)
+
+Back:
+
+- **PID** = číslo procesu
+- **PPID** = číslo rodičovského procesu
+- **SID** = číslo session
+- privilegia a vlastník procesu, jeho příslušnost ke skupinám, …
+- informace o alokovaných prostředcích (přidělená fyzická paměť, překlad z logických adres na fyzické, deskriptory otevřených souborů, synchronizační nástroje, …)
+<!--ID: 1717767801252-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Co obsahuje **thread control block**?
+
+Back:
+
+- **TID** = číslo vlákna
+- informace pro přepínání kontextu (hodnoty některých registrů CPU, ukazatel na zásobník, …)
+- informace pro plánování vláken (typ plánovacího algoritmu, priorita, stav, události, na které se čeká, využitý čas, …)
+<!--ID: 1717767801255-->
+END
+
+---
+
 
 START
 BI-SZZ
@@ -260,10 +289,10 @@ Co je to **aktivní čekání**?
 
 Back:
 
-- **aktivní čekání** _(busy waiting)_ - čekání např. ve smyčce před zamčenou kritickou sekcí
-    - minimální režie, ale zbytečné zatěžování jádra čekáním
-    - kontrolu zámku + zamčení je potřeba udělat atomicky (= v jedné instrukci)
-    - při plánování s fixní prioritou může vést k uváznutí (vlákno s nízkou prioritou je v kritické sekci a vlákno s vyšší prioritou před ní aktivně čeká)
+**aktivní čekání** _(busy waiting)_ - čekání např. ve smyčce před zamčenou kritickou sekcí
+- minimální režie, ale zbytečné zatěžování jádra čekáním
+- kontrolu zámku + zamčení je potřeba udělat atomicky (= v jedné instrukci)
+- při plánování s fixní prioritou může vést k uváznutí (vlákno s nízkou prioritou je v kritické sekci a vlákno s vyšší prioritou před ní aktivně čeká)
 <!--ID: 1717743656838-->
 END
 
@@ -297,8 +326,8 @@ Co je to **blokující volán**í?
 
 Back:
 
-- **blokující volání** - vlákno se před zamčenou kritickou sekcí samo zablokuje a přestane mu být přidělován čas, systém si udržuje seznam čekajících vláken a po odemčení kritické sekce jedno odblokuje
-    - čekání bez režie, ale začátek a ukončení jsou trochu náročnější
+**blokující volání** - vlákno se před zamčenou kritickou sekcí samo zablokuje a přestane mu být přidělován čas, systém si udržuje seznam čekajících vláken a po odemčení kritické sekce jedno odblokuje
+- čekání bez režie, ale začátek a ukončení jsou trochu náročnější
 <!--ID: 1717743656844-->
 END
 
@@ -311,11 +340,69 @@ Jaké jsou **typy mechanismů** pro zajištění blokujícího volání? (4)
 
 Back:
 
-- **mutex** _(mutual exclusion lock)_ = zámek s informací, jestli je zamčený + která vlákna jsou jím blokovaná (POSIXově typ `pthread_mutex_t` s funkcemi `pthread_mutex_lock()` a `pthread_mutex_unlock()`, v C++ třída `std::mutex`)
-- **podmíněná proměnná** = informace, která vlákna jsou jí blokována (POSIXově typ `pthread_cond_t` s funkcemi `pthread_cond_wait()` a `pthread_cond_signal()`, v C++ třída `std::condition_variable`)
-- **semafor** = celočíselný čítač + informace, která vlákna jsou jím blokována (POSIXově typ `sem_t` s funkcemi `sem_init()`, `sem_wait()`, `sem_post()`, v C++ nejsou)
-- **bariéra** = čítač síly bariéry (kolik vláken je potřeba k prolomení bariéry) + fronta vláken, která jsou jí blokována (POSIXově typ `barrier_t` s funkcemi `pthread_barrier_init()`, `pthread_barrier_wait()` apod., v C++ třída `std::experimental::barrier`)
+- **mutex** _(mutual exclusion lock)_
+- **podmíněná proměnná**
+- **semafor**
+- **bariéra**
 <!--ID: 1717743656846-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jak funguje **mutex**?
+
+Back:
+
+zámek s informací, jestli je zamčený + která vlákna jsou jím blokovaná (POSIXově typ `pthread_mutex_t` s funkcemi `pthread_mutex_lock()` a `pthread_mutex_unlock()`, v C++ třída `std::mutex`)
+<!--ID: 1717767801258-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jak funguje **podmíněná proměnná**?
+
+Back:
+
+informace, která vlákna jsou jí blokována (POSIXově typ `pthread_cond_t` s funkcemi `pthread_cond_wait()` a `pthread_cond_signal()`, v C++ třída `std::condition_variable`)
+<!--ID: 1717767801261-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jak funguje **semafor**?
+
+Back:
+
+celočíselný čítač + informace, která vlákna jsou jím blokována (POSIXově typ `sem_t` s funkcemi `sem_init()`, `sem_wait()`, `sem_post()`, v C++ nejsou)
+
+![](../Assets/Pasted%20image%2020240607170318.png)
+<!--ID: 1717767801264-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Jak funguje **bariéra**?
+
+Back:
+
+čítač síly bariéry (kolik vláken je potřeba k prolomení bariéry) + fronta vláken, která jsou jí blokována (POSIXově typ `barrier_t` s funkcemi `pthread_barrier_init()`, `pthread_barrier_wait()` apod., v C++ třída `std::experimental::barrier`)
+<!--ID: 1717767801267-->
 END
 
 ---
@@ -352,6 +439,7 @@ Back:
 
 Jedna z možných implementací:
 ![](../Assets/Pasted%20image%2020240605194226.png)
+![](../Assets/Pasted%20image%2020240607165953.png)
 <!--ID: 1717743656852-->
 END
 
@@ -462,12 +550,12 @@ END
 START
 BI-SZZ
 
-Jaké jsou typy **plánování**?
+Jaké jsou typy **plánování** v CPU?
 
 Back:
 
-- plánování s odnímáním (preemptive scheduling)
-- kooperativní plánování (cooperative scheduling)
+- **plánování s odnímáním** (preemptive scheduling)
+- **kooperativní plánování** (cooperative scheduling)
 <!--ID: 1717743656872-->
 END
 
@@ -491,11 +579,24 @@ END
 START
 BI-SZZ
 
-Co je to **round robin** přístup a jak se dělí?
+Co je to **round robin** přístup?
 
 Back:
 
- - **round-robin (RR)** = ready vlákna čekají ve frontě, každé dostané stejné časové kvantum
+**round-robin (RR)** = ready vlákna čekají ve frontě, každé dostané stejné časové kvantum
+<!--ID: 1717743656878-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Na co se dělí **round-robin**? (2)
+
+Back:
+
 - **RR se statickou prioritou** = ready vlákna čekají v několika frontách
     - přednost má vždy vlákno z nejpriroitnější fronty
     - každá priorita může mít jinak dlouhé časové kvantum
@@ -504,10 +605,12 @@ Back:
     - pokud vlákno využilo celé své kvantum, jeho priorita se sníží a kvantum prodlouží
     - pokud vlákno nevyužilo své kvantum, jeho priorita se zvýší a kvantum zkrátí
     - výchozí strategie v dnešních OS
-<!--ID: 1717743656878-->
+<!--ID: 1717767801270-->
 END
 
 ---
+
+
 START
 BI-SZZ
 
@@ -526,7 +629,7 @@ END
 START
 BI-SZZ
 
-Jak se dělí prostředky?
+Jak se dělí prostředky? (BI-OSY)
 
 Back:
 
@@ -545,7 +648,7 @@ END
 START
 BI-SZZ
 
-Co je to alokační graf?
+Co je to **alokační graf**?
 
 Back:
 
@@ -553,6 +656,9 @@ Back:
 - hrany prostředek → vlákno, které jej alokuje
 - hrany vlákno → prostředek, na který vlákno čeká
 - smyčka znamená uváznutí
+
+_Např._
+![](../Assets/Pasted%20image%2020240607182344.png)
 <!--ID: 1717743656886-->
 END
 
@@ -561,7 +667,7 @@ END
 START
 BI-SZZ
 
-Co jsou to Coffmanovy podmínky?
+Co jsou to **Coffmanovy podmínky**? Vyjmenuj je (4)
 
 Back:
 
@@ -581,7 +687,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou způsoby řešení uváznutí
+Jaké jsou **způsoby řešení uváznutí**? (4)
 
 Back:
 
@@ -610,11 +716,11 @@ END
 START
 BI-SZZ
 
-Co je to **prevence uváznutí**?
+Co je to **prevence uváznutí**? Jaké obsahuje podmínky? (4)
 
 Back:
 
-- Založena na porušení nějaké Coffmanovy podmínky
+Založena na porušení nějaké Coffmanovy podmínky
 1. **Porušení podmínky "vzájemného vyloučení"**
 	-  Při používání prostředku více vlákny pro čtení a zápis tuto podmínku nelze bez rizika vzniku časově závislých chyb porušit.
 2. **Pořušení podmínky "neodnímatelnosti prostředků"**
@@ -652,11 +758,11 @@ END
 START
 BI-SZZ
 
-Co je to bankéřův algoritmus a k čemu slouží?
+Co je to **bankéřův algoritmus** a k čemu slouží?
 
 Back:
 
- - když vlákno požádá o prostředek, bude přidělen, jen když tím systém zůstane v bezpečném stavu (= existuje posloupnost alokací, která garantuje postupné uspokojení všech vláken), jinak bude vlákno zablokováno
+ když vlákno požádá o prostředek, bude přidělen, jen když tím systém zůstane v bezpečném stavu (= existuje posloupnost alokací, která garantuje postupné uspokojení všech vláken), jinak bude vlákno zablokováno
 
 ![](../Assets/Pasted%20image%2020240605201453.png)
 ![](../Assets/Pasted%20image%2020240605201501.png)

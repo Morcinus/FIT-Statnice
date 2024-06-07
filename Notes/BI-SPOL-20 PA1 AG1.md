@@ -4,7 +4,7 @@ parent: "[[FIT]]"
 ---
 
 TARGET DECK: BI-SZZ
-FILE TAGS: BI-SPOL-20 PA1 AG1
+FILE TAGS: BI-SPOL-20 PA1AG1
 
 > BI-SPOL-20 (PA1 + AG1)
 > Rekurzivní rozklad problému na podproblémy metodou Rozděl-a-panuj. Rekurze vs iterace. Dynamické programování.
