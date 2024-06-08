@@ -208,7 +208,7 @@ Jaké jsou různé typy/specializace DevOps?
 Back:
 
 - **DevSecOps** = DevOps + bezpečnost
-- **DebBizOps** = DevOps + business (např. sledování metrik atd.)
+- **DevBizOps** = DevOps + business (např. sledování metrik atd.)
 - **AiOps** = DevOps + využití AI (pro analýzu dat atd.)
 - **NoOps** = DevOps se zaměřením na naprosto plnou automatizaci.
 <!--ID: 1716547569641-->
