@@ -19,6 +19,9 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240607145254.png)
 ![](../Assets/Pasted%20image%2020240607145400.png)
+
+_Big picture přehled_:
+![](../Assets/Pasted%20image%2020240608111903.png)
 <!--ID: 1717778238252-->
 END
 
@@ -52,7 +55,7 @@ END
 START
 BI-SZZ
 
-Definice: **počáteční podmínky**
+Definice: **počáteční podmínky** (lineární rekurentní rovnice)
 
 Back:
 
@@ -79,7 +82,7 @@ END
 START
 BI-SZZ
 
-Věta: **co je to vektorový prostor dimenze *k***
+Věta: **množina řešení homogenní rekurentní rovnice**
 
 Back:
 
@@ -92,7 +95,7 @@ END
 START
 BI-SZZ
 
-Věta: **o existenci a jednoznačnosti**
+Věta: **o existenci a jednoznačnosti** (lineární rekurentní rovnice)
 
 Back:
 
@@ -110,6 +113,9 @@ Věta: **o struktuře řešení**
 Back:
 
 ![](../Assets/Pasted%20image%2020240607150458.png)
+
+_Big picture přehled_:
+![](../Assets/Pasted%20image%2020240608111903.png)
 <!--ID: 1717778238281-->
 END
 
@@ -131,11 +137,13 @@ END
 START
 BI-SZZ
 
-Definice: **charakteristický polynom**
+Definice: **charakteristický polynom** (LRRsKK)
 
 Back:
 
 ![](../Assets/Pasted%20image%2020240607150628.png)
+
+Pozn. je to u LRRsKK
 <!--ID: 1717778238287-->
 END
 
@@ -149,6 +157,9 @@ Věta: **konkrétní řešení homogenní lineární rekurentní rovnice řádu 
 Back:
 
 ![](../Assets/Pasted%20image%2020240607150658.png)
+
+_Big picture přehled_:
+![](../Assets/Pasted%20image%2020240608111903.png)
 <!--ID: 1717778238289-->
 END
 
@@ -157,11 +168,14 @@ END
 START
 BI-SZZ
 
-Věta: **báze prostoru všech řešení**
+Věta: **báze prostoru všech řešení** (HLRRsKK)
 
 Back:
 
 ![](../Assets/Pasted%20image%2020240607150912.png)
+
+_Big picture přehled_:
+![](../Assets/Pasted%20image%2020240608111903.png)
 <!--ID: 1717778238292-->
 END
 
@@ -175,6 +189,9 @@ Věta: **co je bází prostoru řešení HLRRsKK**
 Back:
 
 ![](../Assets/Pasted%20image%2020240607151015.png)
+
+_Big picture přehled_:
+![](../Assets/Pasted%20image%2020240608114145.png)
 <!--ID: 1717778238295-->
 END
 
@@ -183,13 +200,16 @@ END
 START
 BI-SZZ
 
-Kdy má charakteristická rovnice **komplexně sdružený kořen**?
+Jak se postupuje při řešení HLRRsKK pokud má charakteristická rovnice **komplexní kořen**? 
 
 Back:
 
 ![](../Assets/Pasted%20image%2020240607151415.png)
 
 ![](../Assets/Pasted%20image%2020240607151507.png)
+
+_Big picture přehled_:
+![](../Assets/Pasted%20image%2020240608114123.png)
 <!--ID: 1717778238298-->
 END
 
@@ -203,50 +223,10 @@ Popiš **postup řešení HLRRsKK**
 Back:
 
 ![](../Assets/Pasted%20image%2020240607151708.png)
+
+_Big picture přehled_:
+![](../Assets/Pasted%20image%2020240608111903.png)
 <!--ID: 1717778238301-->
-END
-
----
-
-START
-BI-SZZ
-
-Vyřeš:
-![](../Assets/Pasted%20image%2020240607151830.png)
-
-Back:
-
-![](../Assets/Pasted%20image%2020240607151838.png)
-<!--ID: 1717778238304-->
-END
-
----
-
-START
-BI-SZZ
-
-Najdi **obecné řešení** rovnice
-![](../Assets/Pasted%20image%2020240607152116.png)
-
-Back:
-
-![](../Assets/Pasted%20image%2020240607152129.png)
-<!--ID: 1717778238308-->
-END
-
----
-
-START
-BI-SZZ
-
-Vyřeš:
-![](../Assets/Pasted%20image%2020240607152250.png)
-
-Back:
-
-![](../Assets/Pasted%20image%2020240607152213.png)
-![](../Assets/Pasted%20image%2020240607152225.png)
-<!--ID: 1717778238310-->
 END
 
 ---
@@ -259,6 +239,9 @@ Definice: **kvazipolynom**
 Back:
 
 ![](../Assets/Pasted%20image%2020240607152333.png)
+
+_Big picture přehled_:
+![](../Assets/Pasted%20image%2020240608111903.png)
 <!--ID: 1717778238313-->
 END
 
@@ -273,22 +256,10 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240607152407.png)
 - pro získání celého prostoru řešení pak konkrétní řešení přičteme k prostoru řešení přidružené homogenní rovnice
+
+_Big picture přehled_:
+![](../Assets/Pasted%20image%2020240608111903.png)
 <!--ID: 1717778238316-->
-END
-
----
-
-START
-BI-SZZ
-
-Najdi **obecné řešení** rovnice
-![](../Assets/Pasted%20image%2020240607152532.png)
-
-Back:
-
-![](../Assets/Pasted%20image%2020240607152542.png)
-![](../Assets/Pasted%20image%2020240607152557.png)
-<!--ID: 1717778238319-->
 END
 
 ---
@@ -311,7 +282,7 @@ END
 START
 BI-SZZ
 
-Jaký typ rovnic řešíme **asymptoickým řešením** a co je **cílem**?
+Jaký tvar mají rovnice při **asymptotickém řešení rekurentních rovnic**?
 
 Back:
 
@@ -324,7 +295,7 @@ END
 START
 BI-SZZ
 
-Kdy je funkce *f* **nejvýše řádu** *g*?
+Definice: **Horní mez $\mathcal{O}$**
 
 Back:
 
@@ -337,7 +308,7 @@ END
 START
 BI-SZZ
 
-Kdy je funkce *f* **striktně nižšího řádu** než *g*?
+Definice: **Striktně větší horní mez** $o$
 
 Back:
 
@@ -350,7 +321,7 @@ END
 START
 BI-SZZ
 
-Kdy je funkce *f* **nejméně řádu** *g*?
+Definice: **Dolní mez $\Omega$**
 
 Back:
 
@@ -363,7 +334,7 @@ END
 START
 BI-SZZ
 
-Kdy je funkce *f* **striktně vyššího řádu** než *g*?
+Definice: **Striktně menší dolní mez $\omega$**
 
 Back:
 
@@ -376,7 +347,7 @@ END
 START
 BI-SZZ
 
-Kdy je funkce *f*  **téhož řádu** jako *g*?
+Definice: **Těsná mez $\Theta$**
 
 Back:
 
@@ -395,22 +366,10 @@ Co je **iterační metoda**, co je řešením a kdy ji můžeme použít?
 Back:
 
 ![](../Assets/Pasted%20image%2020240607154015.png)
-<!--ID: 1717778238341-->
-END
-
----
-
-START
-BI-SZZ
-
-Co dostaneme **postupnou iterací** rovnice
-![](../Assets/Pasted%20image%2020240607154154.png)
-
-Back:
 
 ![](../Assets/Pasted%20image%2020240607154219.png)
 ![](../Assets/Pasted%20image%2020240607154236.png)
-<!--ID: 1717778238344-->
+<!--ID: 1717778238341-->
 END
 
 ---
@@ -440,36 +399,14 @@ Věta: **mistrovská metoda**
 Back:
 
 ![](../Assets/Pasted%20image%2020240607154507.png)
-<!--ID: 1717778238350-->
-END
-
----
-
-START
-BI-SZZ
-
-Mistrovská metoda - **čemu odpovídá rovnice**
-
-Back:
-
-![](../Assets/Pasted%20image%2020240607154927.png)
-<!--ID: 1717778238352-->
-END
-
----
-
-START
-BI-SZZ
-
-Mistrovská metoda - **čím je dáno řešení**
-
-Back:
 
 ![](../Assets/Pasted%20image%2020240607155046.png)
-
-
 ![](../Assets/Pasted%20image%2020240607155151.png)
-<!--ID: 1717778238355-->
+
+
+_Např._
+![](../Assets/Pasted%20image%2020240607155435.png)
+<!--ID: 1717778238350-->
 END
 
 ---
@@ -491,77 +428,7 @@ END
 START
 BI-SZZ
 
-Aplikuj na rovnici **mistrovskou metodu**
-![](../Assets/Pasted%20image%2020240607155405.png)
-
-Back:
-
-![](../Assets/Pasted%20image%2020240607155435.png)
-<!--ID: 1717778238364-->
-END
-
----
-
-START
-BI-SZZ
-
-Aplikuj na rovnici **mistrovskou metodu**
-![](../Assets/Pasted%20image%2020240607155521.png)
-
-Back:
-
-![](../Assets/Pasted%20image%2020240607155530.png)
-<!--ID: 1717778238369-->
-END
-
----
-
-START
-BI-SZZ
-
-Aplikuj na rovnici **mistrovskou metodu**
-![](../Assets/Pasted%20image%2020240607155601.png)
-
-Back:
-
-![](../Assets/Pasted%20image%2020240607155613.png)
-<!--ID: 1717778238372-->
-END
-
----
-
-START
-BI-SZZ
-
-Aplikuj na rovnici **mistrovskou metodu**
-![](../Assets/Pasted%20image%2020240607155621.png)
-
-Back:
-
-![](../Assets/Pasted%20image%2020240607155634.png)
-<!--ID: 1717778238375-->
-END
-
----
-
-START
-BI-SZZ
-
-Aplikuj na rovnici **mistrovskou metodu**
-![](../Assets/Pasted%20image%2020240607155647.png)
-
-Back:
-
-![](../Assets/Pasted%20image%2020240607155656.png)
-<!--ID: 1717778238377-->
-END
-
----
-
-START
-BI-SZZ
-
-Popiš řešení **substituční metodou**
+Popiš řešení **substituční metodou** (stačí jen tušit základní kroky, tohle jsme zas tak neprobírali)
 
 Back:
 
@@ -570,6 +437,8 @@ Back:
 ![](../Assets/Pasted%20image%2020240607155848.png)
 ![](../Assets/Pasted%20image%2020240607155901.png)
 ![](../Assets/Pasted%20image%2020240607155914.png)
+
+Tags: optional
 <!--ID: 1717778238380-->
 END
 

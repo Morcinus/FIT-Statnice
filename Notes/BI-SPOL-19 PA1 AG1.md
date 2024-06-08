@@ -417,7 +417,7 @@ END
 START
 BI-SZZ
 
-Jak funguje **InsertSort** (řzení vkládáním)?
+Jak funguje **InsertSort** (řazení vkládáním)?
 
 Back:
 

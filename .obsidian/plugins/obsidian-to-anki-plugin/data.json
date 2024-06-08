@@ -1000,7 +1000,10 @@
     "../Assets/Pasted image 20240607155829.png",
     "../Assets/Pasted image 20240607155848.png",
     "../Assets/Pasted image 20240607155901.png",
-    "../Assets/Pasted image 20240607155914.png"
+    "../Assets/Pasted image 20240607155914.png",
+    "../Assets/Pasted image 20240608111903.png",
+    "../Assets/Pasted image 20240608114145.png",
+    "../Assets/Pasted image 20240608114123.png"
   ],
   "File Hashes": {
     "Templates/📜 Note.md": "6474a472ede0bb4f09e443014e496f89",
@@ -1009,7 +1012,7 @@
     "CONTRIBUTING.md": "8f0d4a614671f707fc6c061fa8f90518",
     "Notes/BI-SPOL-10 DBS.md": "aebbfb8cd503620a6194f1c0de48d111",
     "Notes/BI-SPOL-11 DBS.md": "2f0f2edcbe64c36775b6abd8beabae90",
-    "Notes/BI-SI-4 DBS.md": "00273c9122ef8bcfeeadd85a14597aed",
+    "Notes/BI-SI-4 DBS.md": "99d045c8505e09152e10a837a55ea0e9",
     "Notes/BI-SI-18 SI1.2.md": "3bfff40fc248d175f6fb0664e626f5d7",
     "Notes/BI-SPOL-31 SI1.2.md": "ba1619e050a871603001aec16fbd000d",
     "Notes/BI-SI-19 SI1.2.md": "553ff0379f08d554260b4ea3dcf1e6c3",
@@ -1048,9 +1051,9 @@
     "Notes/BI-SI-1 BEZ.md": "1d0b5720201708b5291f4d8e3225bf30",
     "Notes/BI-SPOL-15 MLO.md": "5a8f62ab3f6d3e8bd9cf8358c3e54c74",
     "Notes/BI-SPOL-12 LIN.md": "071c1d1e345165a89efc73b2b3ec9951",
-    "Notes/BI-SPOL-34 ZMA.md": "bed9abf7bcdb63d85af2afc70b030ec7",
+    "Notes/BI-SPOL-34 ZMA.md": "750bf6d94fcaea6b05b5c3280c9e6335",
     "Notes/BI-SPOL-18 PA1.md": "b212fb4e775355e35e6a71a393d0fa63",
-    "Notes/BI-SPOL-36 ZMA.md": "5865f528e6403d7702f876906aff3613",
+    "Notes/BI-SPOL-36 ZMA.md": "efe32a165205c5382ad95f6bb4b47476",
     "Notes/BI-SPOL-26 PST.md": "b27ea783bbde96ec200a36ef5c454a64",
     "Notes/BI-SPOL-25 PST.md": "32177866e747f40080e00703607c1057",
     "Notes/BI-SI-14 PPA.md": "08e32d723280dd69f3498b971d8f7a11",
@@ -1058,18 +1061,18 @@
     "Notes/BI-SI-7 KOM.md": "0573f156cea79a420a4fd2c44b64b17a",
     "Notes/BI-SPOL-13 LIN.md": "bc6da90ba2687c9d055033fe9d41e23e",
     "Notes/BI-SPOL-20 PA1 AG1.md": "62b02a69e660e5c1834991ff696c631d",
-    "Notes/BI-SPOL-19 PA1 AG1.md": "0049c6d8fe8848c509604e5686fc7302",
-    "Notes/BI-SPOL-4 AG1.md": "57212a629e7a20553324f1542187ba5b",
+    "Notes/BI-SPOL-19 PA1 AG1.md": "10bdc6daef22c67fcef04990eacf18ff",
+    "Notes/BI-SPOL-4 AG1.md": "6274170ca17f553358065cc8ccaf49fd",
     "Notes/BI-SPOL-22 PA2.md": "1918bf60684d9b045bf33b67243ac817",
     "Templates/🪛 NoteBoilerplate.md": "d449a5310dab0bdc82306f952b56f56d",
     "Notes/BI-SI-16 PPA.md": "91a3c13ebba824eea3f05f71d75a270f",
     "Notes/BI-SI-15 PPA.md": "3b3ea9b542cba60e0f08eab2a676a9f6",
     "Notes/BI-SPOL-5 AG1.md": "83155e941eab4a6afe2cac3bfb05d340",
-    "Notes/BI-SPOL-35 ZMA.md": "2ebae1a5e31a93a02c4f4fd7f59befce",
+    "Notes/BI-SPOL-35 ZMA.md": "d9b15d953962589628812d12fbd12ad4",
     "Notes/BI-SPOL-16 OSY.md": "be9b6524515c51ec78afa99071dc8a92",
-    "Notes/BI-SPOL-33 ZDM.md": "d1cd753fa9c0a0056a972fff305b2181",
-    "Notes/BI-SPOL-32 ZDM.md": "9a1b84417382e60c7312553f0deded5a",
-    "Notes/BI-SPOL-1 AAG.md": "94149c8f54cb87307153ac0e0e60a500"
+    "Notes/BI-SPOL-33 ZDM.md": "22d45966d7e56236f4eaf6cbb12e1ddc",
+    "Notes/BI-SPOL-32 ZDM.md": "85d96759a6f2022267e130d28e2e7e08",
+    "Notes/BI-SPOL-1 AAG.md": "e12ede513097db0a00f8a81406f623e0"
   },
   "fields_dict": {
     "Basic": [

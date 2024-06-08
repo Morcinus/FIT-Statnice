@@ -2,6 +2,7 @@
 
 Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.
 ### Přidány otázky
+- BI-SPOL-1 AAG
 - BI-SPOL-16 OSY
 
 ## [v0.8.0] - 2024-06-06

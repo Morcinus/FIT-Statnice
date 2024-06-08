@@ -53,11 +53,13 @@ END
 START
 BI-SZZ
 
-Co je to **rekurzivně spočetný jazyk**?
+Co je to **rekurzivně spočetný jazyk**? (jakou gramatikou je generovaný + jakým automatem je přijímaný?)
 
 Back:
 
 generovaný neomezenou gramatikou = přijímaný nějakým Turingovým strojem
+
+![](../Assets/Pasted%20image%2020240607162918.png)
 <!--ID: 1717778217040-->
 END
 
@@ -71,6 +73,8 @@ Co je to **rekurzivní jazyk**?
 Back:
 
 rozhodnutelný nějakým Turingovým strojem
+
+![](../Assets/Pasted%20image%2020240607162918.png)
 <!--ID: 1717778217043-->
 END
 
@@ -79,12 +83,13 @@ END
 START
 BI-SZZ
 
-Co je to **kontextový jazyk**?
+Co je to **kontextový jazyk**? (jakou gramatikou je generovaný + jakým automatem je přijímaný?)
 
 Back:
 
 generovaný kontextovou gramatikou = generovaný nezkracující gramatikou = přijímaný nedeterministickým lineárně omezeným Turingovým strojem
 
+![](../Assets/Pasted%20image%2020240607162918.png)
 <!--ID: 1717778217046-->
 END
 
@@ -93,11 +98,13 @@ END
 START
 BI-SZZ
 
-Co je to **bezkontextový jazyk**?
+Co je to **bezkontextový jazyk**? (jakou gramatikou je generovaný + jakým automatem je přijímaný?)
 
 Back:
 
 generovaný bezkontextovou gramatikou = přijímaný nedeterministickým zásobníkovým automatem
+
+![](../Assets/Pasted%20image%2020240607162918.png)
 <!--ID: 1717778217049-->
 END
 
@@ -106,11 +113,13 @@ END
 START
 BI-SZZ
 
-Co je to **regulární jazyk**?
+Co je to **regulární jazyk**? (jakou gramatikou je generovaný + jakým automatem je přijímaný?)
 
 Back:
 
 generovaný regulární gramatikou = přijímaný nějakým konečným automatem = popsatelný regulárním výrazem
+
+![](../Assets/Pasted%20image%2020240607162918.png)
 <!--ID: 1717778217052-->
 END
 
@@ -132,12 +141,13 @@ END
 START
 BI-SZZ
 
-Popiš **hierarchii formálních jazyků*
+Popiš **hierarchii formálních jazyků** (7)
 
 Back:
 
-![](../Assets/Pasted%20image%2020240607162918.png)
 konečné jazyky $\subseteq$ regulární jazyky $\subseteq$ bezkontextové jazyky $\subseteq$ kontextové jazyky $\subseteq$ rekurzivní jazyky $\subseteq$ rekurzivně spočetné jazyky $\subseteq$ všechny (formální) jazyky
+
+![](../Assets/Pasted%20image%2020240607162918.png)
 <!--ID: 1717778217057-->
 END
 
@@ -195,13 +205,27 @@ Co je to **regulární gramatika**?
 Back:
 
 její pravidla jsou ve tvaru $A \to a | aB$, případně ještě $S \to \varepsilon$, pokud $S$ není na žádné pravé straně
-- regulární gramatiky $\subseteq$ bezkontextové gramatiky $\subseteq$ všechny (neomezené) gramatiky
-- regulární gramatiky $\subseteq$ kontextové gramatiky $\subseteq$ všechny (neomezené) gramatiky
-- mezi kontextovými a bezkontextovými ale žádná podmnožinovost není!
 <!--ID: 1717778217069-->
 END
 
 ---
+
+
+START
+BI-SZZ
+
+Jaký je vztah (podmnožiny) regulárních, bezkontextových a kontextových gramatik?
+
+Back:
+
+- regulární gramatiky $\subseteq$ bezkontextové gramatiky $\subseteq$ všechny (neomezené) gramatiky
+- regulární gramatiky $\subseteq$ kontextové gramatiky $\subseteq$ všechny (neomezené) gramatiky
+- mezi kontextovými a bezkontextovými ale žádná podmnožinovost není!
+<!--ID: 1717852602316-->
+END
+
+---
+
 
 START
 BI-SZZ
@@ -211,11 +235,26 @@ Co je to **nezkracující gramatika**?
 Back:
 
 = neobsahuje žádné pravidlo, které by zkrátilo větnou formu, tj. napravo mělo méně symbolů než nalevo (s výjimkou $S \to \varepsilon$, pokud $S$ není na žádné pravé straně)
-- regulární a kontextové gramatiky jsou nezkracující
 <!--ID: 1717778217072-->
 END
 
 ---
+
+
+START
+BI-SZZ
+
+Jaké gramatiky jsou nezkracující?
+
+Back:
+
+**regulární** a **kontextové gramatiky** jsou nezkracující
+<!--ID: 1717856407850-->
+END
+
+---
+
+
 
 START
 BI-SZZ
@@ -246,7 +285,7 @@ END
 START
 BI-SZZ
 
-Co je to **derivace**?
+Co je to **derivace**? (AAG)
 
 Back:
 
@@ -272,7 +311,7 @@ END
 START
 BI-SZZ
 
-Co je to **Turingův stroj**?
+Definice: (deterministický) **Turingův stroj**
 
 Back:
 
@@ -302,7 +341,7 @@ Co je to **nedeterministický Turingův stroj** (NTS)?
 
 Back:
 
-přechodová funkce může pro jeden vstup vrátit různé výstupy $(\delta : (Q \setminus F) \times \Sigma \to \mathcal P ( Q \times G \times \{ -1, 0, 1 \} ) )$
+přechodová funkce může pro jeden vstup vrátit různé výstupy $(\delta : (Q \setminus F) \times G \to \mathcal P ( Q \times G \times \{ -1, 0, 1 \} ) )$
 - je stejně silný jako DTS (oba přijímají stejnou množinu jazyků)
 <!--ID: 1717778217093-->
 END

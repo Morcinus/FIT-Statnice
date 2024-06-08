@@ -161,7 +161,7 @@ Jak lze násobit dvě celá čísla pomocí **rekurze**?
 Back:
 
 násobení lze převést na čtyři násobení čísel poloviční délky, což je ale stále $\mathcal O (n^2)$
-- $x \cdot y = x_U \cdot y_U \cdot 10^n + (x_U \cdot y_L + x_L \cdot y_U) \cdot 10^{n/2} + xL \cdot yL$, kde $x_U$ je horních $n/2$ cifer čísla $x$ a $x_L$ je dolních $n/2$ cifer (pro jednoduchost je $n$ mocnina dvou)
+- $x \cdot y = x_U \cdot y_U \cdot 10^n + (x_U \cdot y_L + x_L \cdot y_U) \cdot 10^{n/2} + x_L \cdot y_L$, kde $x_U$ je horních $n/2$ cifer čísla $x$ a $x_L$ je dolních $n/2$ cifer (pro jednoduchost je $n$ mocnina dvou)
 <!--ID: 1717408187958-->
 END
 
@@ -424,7 +424,9 @@ Back:
 ![](../Assets/Pasted%20image%2020240603144109.png)
 ![](../Assets/Pasted%20image%2020240603112824.png)
 
+
 Tags: optional
+
 <!--ID: 1717418664495-->
 END
 
