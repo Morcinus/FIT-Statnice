@@ -78,7 +78,7 @@ END
 START
 BI-SZZ
 
-Jak lze definovat třídu v C a C++?
+Jak lze definovat třídu v C++?
 
 Back:
 

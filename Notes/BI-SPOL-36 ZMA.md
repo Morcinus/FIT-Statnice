@@ -69,6 +69,8 @@ Definice: **limita posloupnosti**
 Back:
 
 ![](../Assets/Pasted%20image%2020240528172126.png)
+
+Tags: core
 <!--ID: 1716916322251-->
 END
 
@@ -121,6 +123,8 @@ Back:
 
 Formální výraz $$\sum^\infty_{k=0}{a_k} = a_0 + a_1 + a_2 + \dots$$
 kde $(a_k)^\infty_{k=0}$ je zadaná číselná posloupnost, nazýváme **číselnou řadou**.
+
+Tags: core
 <!--ID: 1716916322254-->
 END
 
@@ -137,6 +141,8 @@ Back:
 $$s_n := \sum^n_{k=0}{a_k}, n \in \mathbb{N}_0$$
 
 obecně je dobré si řadu představovat jako členy posloupnosti částečných součtů
+
+Tags: core
 <!--ID: 1716916322256-->
 END
 
@@ -153,6 +159,8 @@ Back:
 Pokud je posloupnost částečných součtů definovaná předpisem:
 $$s_n := \sum^n_{k=0}{a_k}, n \in \mathbb{N}_0$$
 konvergentní, nazýváme příslušnou **řadu** také **konvergentní**.
+
+Tags: core
 <!--ID: 1716916322259-->
 END
 
@@ -167,14 +175,14 @@ Definice: **Součet konvergentní řady**
 Back:
 
 Součtem konvergentní řady $\sum^\infty_{k=0}a_k$ nazýváme hodnotu limity $\lim_{n\to\infty}{s_n}$
+
+Tags: core
 <!--ID: 1716916322262-->
 END
 
 ---
 
 ### Kritéria konvergence
-
-
 START
 BI-SZZ
 
@@ -223,6 +231,8 @@ Back:
 ![](../Assets/Pasted%20image%2020240528172914.png)
 
 vágně řečeno: pro libovolně malé $ε$ musí existovat takový index (dostatečně velký) ve sčítané posloupnosti, že libovolná podposloupnost po sobě jdoucích čísel od indexu dál bude menší než to $ε$
+
+Tags: core
 <!--ID: 1716916322267-->
 END
 
@@ -270,6 +280,8 @@ Back:
 
 _Příklad_
 ![](../Assets/Pasted%20image%2020240528173043.png)
+
+Tags: core
 <!--ID: 1716916322274-->
 END
 
@@ -284,6 +296,8 @@ Věta: **Srovnávací kritérium**
 Back:
 
 ![](../Assets/Pasted%20image%2020240528173103.png)
+
+Tags: core
 <!--ID: 1716916322278-->
 END
 
@@ -303,6 +317,8 @@ Takzvané podílové kritérium pro řady, **neplést** s podílovým kritériem
 
 _Příklad_
 ![](../Assets/Pasted%20image%2020240528173424.png)
+
+Tags: core
 <!--ID: 1716916322280-->
 END
 
@@ -326,6 +342,8 @@ _Obrázek_:
 
 _Příklad:_
 ![](../Assets/Pasted%20image%2020240528173801.png)
+
+Tags: core
 <!--ID: 1716916322283-->
 END
 
@@ -342,6 +360,8 @@ Věta: **Integrální kritérium**
 Back:
 
 ![](../Assets/Pasted%20image%2020240528173903.png)
+
+Tags: core
 <!--ID: 1716916322286-->
 END
 

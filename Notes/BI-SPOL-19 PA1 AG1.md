@@ -4,7 +4,7 @@ parent: "[[FIT]]"
 ---
 
 TARGET DECK: BI-SZZ
-FILE TAGS: BI-SPOL-19 PA1 AG1
+FILE TAGS: BI-SPOL-19 PA1AG1
 
 > BI-SPOL-19 (PA1 + AG1)
 > Časová a paměťová složitost algoritmů. Algoritmy vyhledávání (sekvenční, půlením intervalu), slučování a řazení (BubbleSort, SelectSort, InsertSort, MergeSort, QuickSort). Dolní mez složitosti řazení v porovnávacím modelu. Řazení v lineárním čase.

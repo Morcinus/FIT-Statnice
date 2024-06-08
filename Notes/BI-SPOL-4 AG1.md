@@ -120,7 +120,7 @@ END
 START
 BI-SZZ
 
-Definice: **stupeň vrcholu**
+Definice: **stupeň vrcholu** + jak se značí
 
 Back:
 
@@ -680,7 +680,7 @@ Back:
 
 začne s jedním vrcholem, opakovaně přidává nejlehčí hrany, které strom rozšíří
 
-Tags: algoritmus
+Tags: algoritmus core
 <!--ID: 1717437781737-->
 END
 
@@ -775,7 +775,7 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240603194341.png)
 
-Tags: algoritmus
+Tags: algoritmus core
 <!--ID: 1717437781754-->
 END
 
@@ -847,7 +847,7 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240603194801.png)
 
-Tags: algoritmus
+Tags: algoritmus core
 <!--ID: 1717437781765-->
 END
 
@@ -951,7 +951,7 @@ Základní idea:
 
 ![](../Assets/Pasted%20image%2020240604125018.png)
 
-Tags: algoritmus
+Tags: algoritmus core
 <!--ID: 1717437781782-->
 END
 
@@ -981,7 +981,7 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240603195630.png)
 
-Tags: algoritmus
+Tags: algoritmus core
 <!--ID: 1717437781788-->
 END
 
@@ -1046,7 +1046,7 @@ Bellman Ford je jakoby taková hloupější verze Dijsktrova algoritmu.
 - Nepoužíváme prioritní frontu, ale jen frontu
 - Je sice "hloupější", ale je lepší v tom, že zvládá i záporné hrany!
 
-Tags: algoritmus
+Tags: algoritmus core
 <!--ID: 1717437781799-->
 END
 
@@ -1064,7 +1064,7 @@ Back:
 
 Rozdíl je v tom, že se prostě nepoužívá fronta, ale $n$-krát se udělá relaxace.
 
-Tags: algoritmus
+Tags: algoritmus core
 <!--ID: 1717437781802-->
 END
 

@@ -228,7 +228,8 @@ Back:
 - Najde-li odpovídající klauzuli, pak se provede unifikace mezi cílem a hlavou klauzule a začne se vykonávat tělo (s substitucemi, které vznikly unifikací).
 - Pokud je klauzule faktem, máme hotovo.
 - Pokud je klauzule pravidlem, pak se postupně pokoušíme splnit cíle v pořadí zleva doprava. Uspějí-li všechny, pak uspěl i původní cíl. Pokud nějaký neuspěl, pomocí backtrackingu se vrací k poslednímu bodu rozhodnutí a zkouší se rozhodnout jinak.
-- 
+
+![](../Assets/Pasted%20image%2020240606143717.png)
 <!--ID: 1717529248346-->
 END
 
@@ -244,7 +245,7 @@ Back:
 Řešení se hledá pomocí backtrackingu a unifikace (tj prohledávání grafu do hloubky).
 
 *“Vyhodnocuj dokud můžeš a každý bod rozhodnutí si zapamatuj. V momentě kdy se něco nedá splnit (unifikovat), vrať se k nejbližšímu bodu a proveď jiné rozhodnutí.”*
-
+<!--ID: 1717675053184-->
 END
 
 ---
@@ -286,6 +287,8 @@ parent(X,X) = parent(petr, Z)
 parent(X,eva) = parent(petr, X)
 % neunifikovatelné
 ```
+
+![](../Assets/Pasted%20image%2020240606144909.png)
 <!--ID: 1717529248352-->
 END
 
@@ -313,6 +316,27 @@ pridej(X,L,L) :- prvek(X,L),
 
 pridej(X,L,[X|L]).
 % X není prvkem L (jinak bych se sem nedostal), mohu ho tedy přidat
+```
+
+_Další příklad:_
+```prolog
+?- a(X), b(X).
+false.
+
+?- a(X), b(Y).
+X = 1, Y = 3 ;
+X = 1, Y = 4 ;
+X = 2, Y = 3 ;
+X = 2, Y = 4.
+
+% Řez nedovolí backtrackovat zpět po "vymyšlení" hodnoty `X`.
+?- a(X), !, b(Y).
+X = 1, Y = 3 ;
+X = 1, Y = 4. 
+
+% Zde nemůžeme backtrackovat zpět po "vymyšlení" hodnoty v `X` a `Y`.
+?- a(X), b(Y), !.
+X = 1, Y = 3.
 ```
 <!--ID: 1717529248355-->
 END
@@ -380,7 +404,6 @@ marada(jana,X) :- plesaty(X), % je-li X plešaté uspěje,
 fail. % a selže.
 
 marada(jana,X) :- % k této klauzuli se výpočet dostane, pokud X není plešaté,
-
 muz(X). % je-li to muz, má ho Jana ráda
 ```
 <!--ID: 1717529248364-->

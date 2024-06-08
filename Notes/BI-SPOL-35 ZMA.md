@@ -18,6 +18,8 @@ Definice: **primitivní funkce**
 Back:
 
 ![](../Assets/Pasted%20image%2020240605130915.png)
+
+Tags: core
 <!--ID: 1717594648446-->
 END
 
@@ -214,10 +216,36 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240605133146.png)
 ![](../Assets/Pasted%20image%2020240605133229.png)
+![](../Assets/Pasted%20image%2020240606104816.png)
+
+Tags: core
 <!--ID: 1717594648489-->
 END
 
 ---
+
+
+START
+BI-SZZ
+
+Jak bych řešil tohle pomocí per partes? (napiš to co by následovalo za $=$)
+
+![](../Assets/Pasted%20image%2020240606095049.png)
+
+Back:
+
+![](../Assets/Pasted%20image%2020240606095014.png)
+
+_Pozn. Souvislost s definicí:_
+- $f$ v tomto příkladě odpovídá $v$
+- $g$ v tomto příkladě odpovídá $u'$
+- $G$ v tomto příkladě odpovídá $u$
+![](../Assets/Pasted%20image%2020240605133146.png)
+<!--ID: 1717660269825-->
+END
+
+---
+
 
 START
 BI-SZZ
@@ -228,8 +256,12 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240605133505.png)
 
+_Pozn._ ten 3. bod znamená, že když do $\varphi$ budu dosazovat hodnoty z intervalu $(\alpha, \beta)$, tak se mi to zobrazí do intervalu $(a,b)$.
+
 
 ![](../Assets/Pasted%20image%2020240605133411.png)
+
+Tags: core
 <!--ID: 1717594648492-->
 END
 
@@ -251,11 +283,13 @@ END
 START
 BI-SZZ
 
-Definice: **dělení intervalu**
+Definice: **dělení intervalu**, norma dělení
 
 Back:
 
 ![](../Assets/Pasted%20image%2020240605133857.png)
+
+Tags: core
 <!--ID: 1717594648497-->
 END
 
@@ -264,7 +298,7 @@ END
 START
 BI-SZZ
 
-Definice: **součet funkce**
+Definice: **horní a dolní součet funkce**
 
 Back:
 
@@ -274,6 +308,8 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240605134412.png)
 ![](../Assets/Pasted%20image%2020240605134422.png)
+
+Tags: core
 <!--ID: 1717594648500-->
 END
 
@@ -289,6 +325,8 @@ Back:
 ![](../Assets/Pasted%20image%2020240605134526.png)
 - poskytují horní (resp. dolní) odhad obsahu hledané plochy
 - vágně řečeno: horní integrál je v podstatě ten nejmenší horní součet ze všech možných dělení, analogicky pak i dolní
+
+Tags: core
 <!--ID: 1717594648502-->
 END
 
@@ -302,6 +340,8 @@ Definice: **Riemannův integrál**
 Back:
 
 ![](../Assets/Pasted%20image%2020240605135239.png)
+
+Tags: core
 <!--ID: 1717594648505-->
 END
 
@@ -468,6 +508,8 @@ Věta: o **výpočtu plošných útvarů**
 Back:
 
 ![](../Assets/Pasted%20image%2020240605142332.png)
+
+Tags: core
 <!--ID: 1717594648538-->
 END
 

@@ -53,6 +53,8 @@ _Neformálně řečeno:_
 pro libovolně malé okolí hodnoty limity $c$ jsem schopen najít takové okolí kolem bodu $a$, že všechny funkční hodnoty bodů z tohoto okolí spadnou do toho okolí $c$
 
 ![](../Assets/Pasted%20image%2020240527175332.png)
+
+Tags: core
 <!--ID: 1716877593232-->
 END
 
@@ -123,6 +125,8 @@ Díky této větě můžeme některé limity posloupností počítat pomocí zna
 
 _Příklad_
 ![](../Assets/Pasted%20image%2020240527180133.png)
+
+Tags: core
 <!--ID: 1716877593243-->
 END
 
@@ -220,6 +224,8 @@ Back:
 
 _Grafické znázornění (tomu bychom měli taky rozumět!):_
 ![](../Assets/Pasted%20image%2020240527181513.png)
+
+Tags: core
 <!--ID: 1716877593259-->
 END
 
@@ -254,6 +260,8 @@ Back:
 _Grafické znázornění:_
 V prvním případě svírá tečna grafu funkce $f$ v bodě $a$ úhel $\frac{π}{2}$ s osou $x$, ve druhém případě svírá s osou $x$ úhel $α$ splňující $\text{tg} \ α = f^′(a)$
 ![](../Assets/Pasted%20image%2020240527181708.png)
+
+Tags: core
 <!--ID: 1716877593264-->
 END
 
@@ -522,6 +530,8 @@ _(Kompletní definice ze script):_
 ![](../Assets/Pasted%20image%2020240527182909.png)
 
 basically prostě vždycky stačí, aby to bylo minimum/maximum na nějakém okolí — ať už libovolně malém
+
+Tags: core
 <!--ID: 1716877593312-->
 END
 
@@ -542,6 +552,8 @@ _(Kompletní definice ze script):_
 ![](../Assets/Pasted%20image%2020240527182909.png)
 
 basically prostě vždycky stačí, aby to bylo minimum/maximum na nějakém okolí — ať už libovolně malém
+
+Tags: core
 <!--ID: 1716877593315-->
 END
 
@@ -562,6 +574,8 @@ _(Kompletní definice ze script):_
 ![](../Assets/Pasted%20image%2020240527182909.png)
 
 basically prostě vždycky stačí, aby to bylo minimum/maximum na nějakém okolí — ať už libovolně malém
+
+Tags: core
 <!--ID: 1716877593318-->
 END
 
@@ -582,6 +596,8 @@ _(Kompletní definice ze script):_
 ![](../Assets/Pasted%20image%2020240527182909.png)
 
 basically prostě vždycky stačí, aby to bylo minimum/maximum na nějakém okolí — ať už libovolně malém
+
+Tags: core
 <!--ID: 1716877593321-->
 END
 
@@ -599,6 +615,8 @@ Back:
 
 _Poznámka:_
 Tato věta udává pouze nutnou podmínku pro existenci lokálního extrému, viz např. funkce $x^3$, která má v bodě $0$ nulovou derivaci, ale nikoliv lokální extrém → hovoříme tedy pouze o bodu podezřelém z extrému
+
+Tags: core
 <!--ID: 1716877593323-->
 END
 
@@ -615,6 +633,8 @@ Back:
 ![](../Assets/Pasted%20image%2020240527183540.png)
 
 ![](../Assets/Pasted%20image%2020240603105619.png)
+
+Tags: core
 <!--ID: 1716877593326-->
 END
 
@@ -632,6 +652,8 @@ Back:
 
 _Fyzikální analogie_
 Pokud jsme se v daném časovém intervalu pohybovali průměrnou rychlostí $v$, pak musí existovat časový okamžik, v němž naše okamžitá rychlost byla rovna $v$
+
+Tags: core
 <!--ID: 1716877593329-->
 END
 
@@ -662,6 +684,8 @@ Definice: **rostoucí, klesající, ostře rostoucí, ostře klesající, konsta
 Back:
 
 ![](../Assets/Pasted%20image%2020240527183809.png)
+
+Tags: core
 <!--ID: 1716877593334-->
 END
 
@@ -680,6 +704,8 @@ Back:
 ![](../Assets/Pasted%20image%2020240527183845.png)
 
 ![](../Assets/Pasted%20image%2020240527183910.png)
+
+Tags: core
 <!--ID: 1716877593337-->
 END
 
@@ -879,6 +905,8 @@ Např.
 ![](../Assets/Pasted%20image%2020240530163327.png)
 ![](../Assets/Pasted%20image%2020240530165341.png)
 ![](../Assets/Pasted%20image%2020240530165602.png)
+
+Tags: core
 <!--ID: 1717097564425-->
 END
 

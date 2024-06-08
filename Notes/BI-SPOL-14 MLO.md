@@ -205,7 +205,7 @@ END
 START
 BI-SZZ
 
-Definice: **Fromule výrokové logiky**
+Definice: **Formule výrokové logiky**
 
 Back:
 
