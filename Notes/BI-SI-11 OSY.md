@@ -14,7 +14,7 @@ FILE TAGS: BI-SI-11 OSY
 START
 BI-SZZ
 
-Co poskytuje File System?
+Co poskytuje **File System**?
 
 Back:
 
@@ -27,7 +27,7 @@ END
 START
 BI-SZZ
 
-Jak vidí File System uživatel?
+Jak vidí **File System** uživatel?
 
 Back:
 
@@ -43,7 +43,7 @@ END
 START
 BI-SZZ
 
-K čemu slouží soubor a čím je reprezentován?
+K čemu slouží **soubor** a čím je **reprezentován**?
 
 Back:
 
@@ -73,7 +73,7 @@ END
 START
 BI-SZZ
 
-Jaké je rozlož disk?
+Jaké je **rozložení disku**?
 
 Back:
 
@@ -88,7 +88,7 @@ END
 START
 BI-SZZ
 
-Jaké je rozložení dat ve File Systému?
+Jaké je **rozložení dat** ve File Systému?
 
 Back:
 
@@ -108,7 +108,7 @@ END
 START
 BI-SZZ
 
-Co je to sektor?
+Co je to **sektor**?
 
 Back:
 
@@ -121,7 +121,7 @@ END
 START
 BI-SZZ
 
-Co je to datový blok? Co obsahuje?
+Co je to a co obsahuje **datový blok**?
 
 Back:
 
@@ -323,7 +323,7 @@ END
 START
 BI-SZZ
 
-Jak jsou implementovány systémy souborů v OS?
+Jak jsou implementovány **systémy souborů** v OS?
 
 Back:
 
@@ -374,7 +374,7 @@ Co je to **Block cache/Page cache**?
 Back:
 
 - množina nedávno používaných datových bloků z FS (obsah souborů/adresářů) uložená v hlavní paměti z důvodu zlepšení výkonu FS
-- když proces čte obsah adresáře/souboru, OS hledá bloky (obsah) nejdříve v hlavní paměti — pokud zde nejsou, pak je načte z FS
+- když proces čte obsah adresáře/souboru, OS hledá bloky (obsah) nejdříve v hlavní paměti – pokud zde nejsou, pak je načte z FS
 
 END
 
