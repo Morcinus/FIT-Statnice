@@ -86,7 +86,7 @@ Jaké jsou 3 typy ontologií?
 
 Back:
 
-- **Vyšší ontologie (upper ontology)** = Základní ontologie (founational ontology)
+- **Vyšší ontologie (upper ontology)** = Základní ontologie (foundational ontology)
 - **Doménové ontologie (domain ontology)**
 - **Klíčové ontologie (core ontology)** = Referenční ontologie (reference ontology)
 <!--ID: 1716107685078-->
