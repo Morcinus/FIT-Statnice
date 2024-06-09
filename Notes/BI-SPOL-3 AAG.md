@@ -9,7 +9,6 @@ FILE TAGS: BI-SPOL-3 AAG
 > BI-SPOL-3 (AAG)
 > Bezkontextové jazyky: Bezkontextové gramatiky, zásobníkové automaty a jejich varianty. Modely syntaktické analýzy bezkontextových jazyků.
 
-
 START
 BI-SZZ
 
@@ -18,7 +17,7 @@ Co je to **bezkontextový jazyk**?
 Back:
 
 jazyk generovaný nějakou bezkontextovou gramatikou = jazyk přijímaný nedeterministickým zásobníkovým automatem
-
+<!--ID: 1717934966275-->
 END
 
 ---
@@ -31,7 +30,7 @@ BI-SZZ
 Back:
 
 jsou uzavřené na $\cup, \cdot, ^*$
-
+<!--ID: 1717934966278-->
 END
 
 ---
@@ -39,12 +38,12 @@ END
 START
 BI-SZZ
 
-Jaké jazyky jsou **bezkontextové**?
+Jaké jazyky jsou také **bezkontextové**?
 
 Back:
 
-všechny konečné a regulární jazyky jsou bezkontextové
-
+všechny **konečné** a **regulární jazyky** jsou bezkontextové
+<!--ID: 1717934966281-->
 END
 
 ---
@@ -52,12 +51,12 @@ END
 START
 BI-SZZ
 
-Jaké jsou všechny **bezkontextové jazyky**?
+Bezkontextové jazyky jsou také jaké jazyky?
 
 Back:
 
-všechny bezkontextové jazyky jsou kontextové, rekurzivní a rekurzivně spočetné
-
+všechny bezkontextové jazyky jsou **kontextové**, **rekurzivní** a **rekurzivně spočetné**
+<!--ID: 1717934966284-->
 END
 
 ---
@@ -83,7 +82,7 @@ Které gramatiky jsou **bezkontextové**?
 Back:
 
 všechny regulární gramatiky jsou bezkontextové
-
+<!--ID: 1717934966287-->
 END
 
 ---
@@ -96,7 +95,7 @@ Musí být **bezkontextová gramatika kontextová**?
 Back:
 
 bezkontextová gramatika může být zkracující, takže nemusí být vždy kontextová
-
+<!--ID: 1717934966289-->
 END
 
 ---
@@ -109,7 +108,7 @@ Jak lze **vizualizovat bezkontextové gramatiky**?
 Back:
 
 lze vizualizovat **derivačním stromem**
-
+<!--ID: 1717934966292-->
 END
 
 ---
@@ -117,12 +116,12 @@ END
 START
 BI-SZZ
 
-Co je to **derivace bezkontextové gramatiky**?
+Co je to **derivace v bezkontextové gramatice**?
 
 Back:
 
 **derivace** = posloupnost úprav z jedné větné formy na jinou pomocí přepisovacích pravidel
-
+<!--ID: 1717934966295-->
 END
 
 ---
@@ -135,7 +134,7 @@ Co je to **nejednozančná bezkontextová gramatika**?
 Back:
 
 **nejednozančná** BG = existuje věta vzniklá více různými derivačními stromy
-
+<!--ID: 1717934966298-->
 END
 
 ---
@@ -143,13 +142,15 @@ END
 START
 BI-SZZ
 
-Co je to **bezkontextová gramatika bez cyklů**?
+Co je to **bezkontextová gramatika bez cyklů**? Co musí splňovat aby byla bez cyklů?
 
 Back:
 
 BG **bez cyklů** = neexistuje v ní derivace $A \Rightarrow^+ A$
-- je bez $\varepsilon$-pravidel a bez jednoduchých pravidel $(A \to B)$
 
+Musí splňovat:
+- je bez $\varepsilon$-pravidel a bez jednoduchých pravidel $(A \to B)$
+<!--ID: 1717934966301-->
 END
 
 ---
@@ -162,7 +163,7 @@ Co je to **redukovaná** bezkontextová gramatika?
 Back:
 
 = bez negenerujících a nedostupných symbolů (analogie zbytečných a nedosažitelných stavů z konečných automatů)
-
+<!--ID: 1717934966303-->
 END
 
 ---
@@ -175,7 +176,7 @@ Co je to **vlastní** bezkontextová gramatika?
 Back:
 
 bez $\varepsilon$-přechodů, bez cyklů a redukovaná
-
+<!--ID: 1717934966306-->
 END
 
 ---
@@ -183,13 +184,14 @@ END
 START
 BI-SZZ
 
-Popiš BG v **normálním tvaru podle Chomského**
+Kdy je bezkontextová gramatika v **normálním tvaru podle Chomského**?
 
 Back:
 
 = pravidla mají tvar $A \to BC$ nebo $A \to a$, případně ještě $S \to \varepsilon$, pokud $S$ není na žádné pravé straně
-- každá BG lze převést do normálního tvaru
 
+Pozn. každá BG lze převést do normálního tvaru
+<!--ID: 1717934966309-->
 END
 
 ---
@@ -197,7 +199,7 @@ END
 START
 BI-SZZ
 
-Popiš **zásobníkový automat**
+Definice: **zásobníkový automat**
 
 Back:
 
@@ -212,8 +214,8 @@ Back:
 - $Z_0$ = **počáteční symbol** na zásobníku $\in G$
 - $F$ = množina **koncových stavů** $\subseteq Q$
 
-- vlastně konečné automaty navíc ještě se zásobníkovou pamětí
-
+_Pozn._ vlastně to jsou konečné automaty navíc ještě se zásobníkovou pamětí
+<!--ID: 1717934966311-->
 END
 
 ---
@@ -230,7 +232,7 @@ Back:
 - $w$ = dosud nepřečtená část vstupního řetězce $\in \Sigma^*$
 - $\alpha$ = aktuální obsah zásobníku $\in G^*$
 - je důležité určit, zda má zásobník vrchol vlevo nebo vpravo
-
+<!--ID: 1717934966314-->
 END
 
 ---
@@ -244,7 +246,7 @@ Back:
 
 = přechod je v každé konfiguraci jednoznačný
 - nelze vytvořit pro každý bezkontextový jazyk ani pro každou bezkontextovou gramatiku (je výpočetně slabší než nedeterministický zásobníkový automat)
-
+<!--ID: 1717934966317-->
 END
 
 ---
@@ -258,7 +260,7 @@ Back:
 
 - $R_f$ - přijímají řetězec, pokud jsou po dočtení vstupu v koncovém stavu
 - $R_\varepsilon$ - přijímají řetězec, pokud mají po dočtení vstupu prázdný zásobník
-
+<!--ID: 1717934966319-->
 END
 
 ---
@@ -271,7 +273,7 @@ Co je to **syntaktická analýza bezkontextových jazyků**?
 Back:
 
 proces pro rozhodnutí, zda řetězec patří do jazyka popsaného danou gramatikou
-
+<!--ID: 1717934966322-->
 END
 
 ---
@@ -284,7 +286,7 @@ Co provádí **syntaktickou analýzu bezkontextových jazyků**?
 Back:
 
 zásobníkový automat je syntaktickým analyzátorem (= provádí tuto analýzu)
-
+<!--ID: 1717934966325-->
 END
 
 ---
@@ -298,7 +300,7 @@ Back:
 
 = používání pravidel tak, že nahrazuji vždy nejlevější neterminál
 - pravá derivace analogicky
-
+<!--ID: 1717934966327-->
 END
 
 ---
@@ -312,7 +314,7 @@ Back:
 
 = posloupnost čísel použitých pravidel při levé derivaci
 - pravá derivace analogicky, ale posloupnost čísel je obrácená!
-
+<!--ID: 1717934966330-->
 END
 
 ---
@@ -320,12 +322,12 @@ END
 START
 BI-SZZ
 
-V čem spočívá **metoda shora dolů**?
+V čem spočívá **metoda shora dolů** u syntaktické analýzy bezkontextových jazyků?
 
 Back:
 
-z gramatiky vytvoříme zásobníkový automat $(\{q\}, \Sigma, N \cup \Sigma, \delta, q, S, \emptyset)$ přijímající **prázdným zásobníkem** s vrcholem **vlevo**
-
+z gramatiky vytvoříme zásobníkový automat přijímající **prázdným zásobníkem** s vrcholem **vlevo**
+<!--ID: 1717934966333-->
 END
 
 ---
@@ -333,16 +335,18 @@ END
 START
 BI-SZZ
 
-Jaké má automat **přechody** v metodě **shora dolů**?
+**Definuj** a **nakresli** zásobníkový automat pro **metodu shora dolů** při syntaktické analýze bezkontextového jazyka
 
 Back:
 
+$R = (\{q\}, \Sigma, N \cup \Sigma, \delta, q, S, \emptyset)$
 - $(\varepsilon, A / \alpha)$ pro každé pravidlo $A \to \alpha$ (tzv. **expanze**)
 - $(a, a/\varepsilon)$ pro každý terminál $a \in \Sigma$ (tzv. **srovnání**)
 
 obrázek přechodové funkce:
 ![](../Assets/Pasted%20image%2020240609134428.png)
   
+<!--ID: 1717934966335-->
 END
 
 ---
@@ -350,12 +354,12 @@ END
 START
 BI-SZZ
 
-Jaký **rozklad vstupní věty** najde automat vytvořený metodou shora dolů?
+Jaký **rozklad vstupní věty** najde automat vytvořený metodou shora dolů? (levý/pravý)
 
 Back:
 
 tento automat najde **levý** rozklad vstupní věty
-
+<!--ID: 1717934966338-->
 END
 
 ---
@@ -363,12 +367,12 @@ END
 START
 BI-SZZ
 
-V čem spočívá **metoda zdola nahoru**?
+V čem spočívá **metoda zdola nahoru** u syntaktické analýzy bezkontextových jazyků?
 
 Back:
 
-z gramatiky vytvoříme zásobníkový automat $(\{q,r\}, \Sigma, N \cup \Sigma \cup {Z_0}, \delta, q, Z_0, \{r\})$ přijímající **přechodem do koncového stavu** $r$ s vrcholem zásobníku **vpravo**
-
+z gramatiky vytvoříme zásobníkový automat přijímající **přechodem do koncového stavu** $r$ s vrcholem zásobníku **vpravo**
+<!--ID: 1717934966341-->
 END
 
 ---
@@ -376,18 +380,18 @@ END
 START
 BI-SZZ
 
-Jaké má automat **přechody** v metodě **zdola nahoru**?
+**Definuj** a **nakresli** zásobníkový automat pro **metodu zdola nahoru** při syntaktické analýze bezkontextového jazyka
 
 Back:
 
+$R = (\{q,r\}, \Sigma, N \cup \Sigma \cup {Z_0}, \delta, q, Z_0, \{r\})$
 - $(a, \varepsilon / a)$ z $q$ do $q$ pro každý terminál $a \in \Sigma$ (tzv. **přesun**)
 - $(\varepsilon, \alpha/A)$ z $q$ do $q$ pro každé pravidlo $A \to \alpha$ (tzv. **redukce**)
 - $(\varepsilon, Z_0S/\varepsilon)$ z $q$ do koncového stavu $r$ (tzv. **přijetí**)
 
 obrázek přechodové funkce:
 ![](../Assets/Pasted%20image%2020240609134843.png)
-
-
+<!--ID: 1717934966344-->
 END
 
 ---
@@ -395,12 +399,12 @@ END
 START
 BI-SZZ
 
-Jaký **rozklad vstupní věty** najde automat vytvořený metodou **zdola nahoru**?
+Jaký **rozklad vstupní věty** najde automat vytvořený metodou **zdola nahoru**? (pravý/levý)
 
 Back:
 
 tento automat najde **pravý** rozklad vstupní věty
-
+<!--ID: 1717934966347-->
 END
 
 ---

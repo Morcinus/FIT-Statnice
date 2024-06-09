@@ -1,9 +1,15 @@
-## [v0.9.0] - 2024-xx-xx
+## [v1.0.0] - 2024-06-09
 
 Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.
 ### Přidány otázky
+- BI-SI-11 OSY
+- BI-SI-12 PA2
 - BI-SPOL-1 AAG
+- BI-SPOL-2 AAG
+- BI-SPOL-3 AAG
 - BI-SPOL-16 OSY
+- BI-SPOL-17 OSY
+- BI-SPOL-32 ZDM
 
 ## [v0.8.0] - 2024-06-06
 

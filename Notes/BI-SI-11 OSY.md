@@ -11,6 +11,7 @@ FILE TAGS: BI-SI-11 OSY
 > Principy, implementace a vlastnosti klasických souborových systémů/moderních souborových systémů založených na B-B/+-stromech (rozložení dat na disku, implementace souborů/adresářů, implementace v jádru OS).
 
 
+
 START
 BI-SZZ
 
@@ -19,7 +20,7 @@ Co poskytuje **File System**?
 Back:
 
 FS poskytují abstrakci nad úložištěm dat
-
+<!--ID: 1717961032421-->
 END
 
 ---
@@ -35,7 +36,7 @@ Back:
 	- jeden strom adresářů – Unix
 	- několik stromů adresářů – Windows
 - Adresáře pro něj představují homogenní strukturu
-
+<!--ID: 1717961032424-->
 END
 
 ---
@@ -49,7 +50,7 @@ Back:
 
 - **soubor** slouží k uložení informace/dat ve FS a k jejímu pozdějšímu použití
 - Reprezentován: jménem, atributy a obsahem
-
+<!--ID: 1717961032427-->
 END
 
 ---
@@ -65,7 +66,7 @@ Back:
 - **Vlastníci souboru:** uživatel, skupina, ostatní,..
 - **Přístupová práva:** pro čtení, modifikaci a spuštění, setuid-bit, ACL práva,..
 - **Různé časy:** čas přístupu, modifikace,..
-
+<!--ID: 1717961032430-->
 END
 
 ---
@@ -80,7 +81,7 @@ Back:
 - Logický/fyzický disk je typicky rozdělen na několik částí, které obsahují informace/data s různým významem pro OS
 - **disk label —** Nachází se na začátku disku a obsahuje informace o rozdělení disku na jednotlivé oblasti (_Partition table_), může také obsahovat zavaděč OS
 - **Jednotlivé diskové oblasti (partitions/slices) —** Každá disková oblast obsahuje jeden FS
-
+<!--ID: 1717961032433-->
 END
 
 ---
@@ -100,7 +101,7 @@ Back:
 - datové struktury pro **správu volného prostoru** (datových bloků, i-nodů,...)
 - datové struktury pro uložení **atributů souborů** (Tabulka i-nodů,...)
 - **datové bloky**, do kterých se ukládá obsah souborů a adresářů
-
+<!--ID: 1717961032436-->
 END
 
 ---
@@ -113,7 +114,7 @@ Co je to **sektor**?
 Back:
 
 nejmenší adresovatelná jednotka datového úložiště (4 KB/512 B)
-
+<!--ID: 1717961032439-->
 END
 
 ---
@@ -127,7 +128,7 @@ Back:
 
 - velikost sektoru je obvykle moc malá, proto FS alokují po blocích (ve Windows _clusters)_
 - obsahahuje obsah souborů/adresářů
-
+<!--ID: 1717961032442-->
 END
 
 ---
@@ -141,7 +142,7 @@ Back:
 
 - pomocí souvislých oblastí datových bloků
 - alokace souboru po jednotlivých datových blocích
-
+<!--ID: 1717961032444-->
 END
 
 ---
@@ -159,7 +160,7 @@ Back:
 - **nevýhody**
     - je nutné pravidelně defragmentovat
 - např. NTFS
-
+<!--ID: 1717961032448-->
 END
 
 ---
@@ -177,7 +178,7 @@ Back:
 - **nevýhody**
     - pro každý soubor si FS musí pamatovat velký počet informací
     - horší výkon při sekvenčním přístupu
-
+<!--ID: 1717961032450-->
 END
 
 ---
@@ -192,7 +193,7 @@ Back:
 - FAT (File Allocation Table)
 - I-node (Index node)
 - sdílené soubory
-
+<!--ID: 1717961032453-->
 END
 
 ---
@@ -210,7 +211,7 @@ Back:
 - pro velké disky vzniká problém s velikostí FAT, protože velikost datových bloků se v čase příliš nenavyšuje
 
 ![](../Assets/Pasted%20image%2020240609183246.png)
-
+<!--ID: 1717961032456-->
 END
 
 ---
@@ -225,7 +226,7 @@ Back:
 - Free: datový blok je volný,
 - Adresa: adresa následujícího bloku, kde pokračuje obsah souboru,
 - EOF: konec zřetězení
-
+<!--ID: 1717961032458-->
 END
 
 ---
@@ -239,7 +240,7 @@ Back:
 
 -  datová struktura s fixní velikostí
 - obsahuje atributy souboru/adresáře a adresy datových bloků, kde je uložen jeho obsah
-
+<!--ID: 1717961032462-->
 END
 
 ---
@@ -256,7 +257,7 @@ Back:
 - samotná velikost i-nodu není závislá na velikosti FS nebo velikosti souboru
 
 ![](../Assets/Pasted%20image%2020240609183416.png)
-
+<!--ID: 1717961032464-->
 END
 
 ---
@@ -273,7 +274,7 @@ Back:
     - **1 nepřímá adresa první úrovně**: ukazuje na blok, ve kterém jsou přímé adresy
     - **1 nepřímá adresa druhé úrovně**
     - **1 nepřímá adresa třetí úrovně**
-
+<!--ID: 1717961032467-->
 END
 
 ---
@@ -287,7 +288,7 @@ Back:
 
 - **Soft link:** odkaz na existující soubor/adresář je implementován pomocí cesty k souboru
 - **Hard link:** implementován pouze u minimalistických adresářů přímo pomocí odkazu na "speciální datovou strukturu" (i-node/MFT položku)
-
+<!--ID: 1717961032470-->
 END
 
 ---
@@ -300,7 +301,7 @@ Jakým způsobem je uložen **obsah adresářů**?
 Back:
 
 - obsah adresářů je podobně jako obsah souborů uložen v jednom nebo několika datových blocích
-
+<!--ID: 1717961032472-->
 END
 
 ---
@@ -315,7 +316,7 @@ Back:
 - adresář obsahuje **většinu informací** o souborech a podadresářích (jméno, atributy a adresy bloků s obsahem souboru)
 	- Např. FAT32
 - adresář obsahuje **minimum informací** (jméno a odkaz do "speciální" datové struktury (např. i-node v UFS nebo položka Master File Table v NTFS), ve které jsou uloženy ostatní informace)
-
+<!--ID: 1717961032475-->
 END
 
 ---
@@ -332,7 +333,7 @@ Back:
 - Block cache/Page cache
 - Přednačítání datových bloků FS (Block Read Ahead)
 - Žurnálovaný FS (Journaling FS)
-
+<!--ID: 1717961032478-->
 END
 
 ---
@@ -346,7 +347,7 @@ Back:
 
 - framework, v rámci kterého jsou v OS unixového typu implementovány konkrétní systémy souborů
 - vrstva jádra OS, která představuje rozhraní mezi procesy a jednotlivými implementacemi konkrétních FS
-
+<!--ID: 1717961032481-->
 END
 
 ---
@@ -361,7 +362,7 @@ Back:
 - rozhraní v OS unixového typu, které umožňuje neprivilegovaným uživatelům vytvářet své vlastní FS bez nutnosti modifikovat jádro OS
 - nový FS je pomocí FUSE implementován jako proces, ve kterém musíme definovat standardní operace nad novým FS
 - vhodný pro implementaci pseudo FS (FS, který existuje pouze v hlavní paměti) a data uložit prostřednictvím existujících FS
-
+<!--ID: 1717961032484-->
 END
 
 ---
@@ -375,7 +376,7 @@ Back:
 
 - množina nedávno používaných datových bloků z FS (obsah souborů/adresářů) uložená v hlavní paměti z důvodu zlepšení výkonu FS
 - když proces čte obsah adresáře/souboru, OS hledá bloky (obsah) nejdříve v hlavní paměti – pokud zde nejsou, pak je načte z FS
-
+<!--ID: 1717961032486-->
 END
 
 ---
@@ -389,7 +390,7 @@ Back:
 
 - **write-behind cache:** modifikace je zapsána ihned do datového bloku v hlavní paměti a se zpožděním do FS (běžně používané u FS na interních datových úložištích)
 - **write-through cache:** modifikace je současně zapsána do hlavní paměti i do FS (běžně používané u FS na přenosných datových úložištích typu flash-disk)
-
+<!--ID: 1717961032489-->
 END
 
 ---
@@ -403,7 +404,7 @@ Back:
 
 - při požadavku čtení konkrétního datového bloku se z FS do paměti načte současně tento blok a několik následujících bloků
 - tímto přístupem lze zlepšit např. sekvenční čtení nebo využítí datového úložiště typu RAID
-
+<!--ID: 1717961032492-->
 END
 
 ---
@@ -418,7 +419,7 @@ Back:
 - snaží se ochránit FS před nekonzistencí a ztrátou dat
 - FS si alokuje na disku speciální oblast _journal_, do které si v předstihu zapíše záznam o změnách, které se budou následně provádět. Potom, co se změny úspěšně zapíší do FS, je záznam z journalu **odstraněn
 - v případě havarie se po zotavení systému přehrávají záznamy z journalu a FS se vrátí do konzistentního stavu
-
+<!--ID: 1717961032494-->
 END
 
 ---
@@ -438,7 +439,7 @@ Back:
 - podpora vytváření clonů a snapshotů
 - podpora šifrování a komprese
 - např. ZFS
-
+<!--ID: 1717961032497-->
 END
 
 ---
@@ -457,7 +458,7 @@ Back:
 - uzly s klíči mohou být nahrány do paměti, zatímco data zůstávají na disku
 
 ![](../Assets/Pasted%20image%2020240609185919.png)
-
+<!--ID: 1717961032500-->
 END
 
 ---
@@ -473,7 +474,7 @@ Back:
 - ve skutečnosti se realizuje tak, že je vždy ve všech listech uložen kromě vlastních klíčů a dat také odkaz (ukazatel) na následujícího sourozence
 
 ![](../Assets/Pasted%20image%2020240609185935.png)
-
+<!--ID: 1717961032502-->
 END
 
 ---
@@ -489,7 +490,7 @@ Back:
 - v moderních FS jsou SW RAID a FS implementovány jako celek (jedna SW vrstva)
 - fyzické disky se zařadí do _poolu_, který představuje konkrétní typ RAIDu
 - v rámci poolu se pak vytváří jednotlivé FS
-
+<!--ID: 1717961032505-->
 END
 
 ---
@@ -503,7 +504,7 @@ Back:
 
 - původní data se nepřepisují, ale vytvoří se kopie, která se teprve modifikuje
 - po provedení všech změn se atomicky přepíše ukazatel v Super bloku, takže je FS neustále konzistentní
-
+<!--ID: 1717961032508-->
 END
 
 ---
@@ -519,7 +520,7 @@ Back:
 - ZFS data authentication
     - kontrolní součty jsou umístěné v rodičovských metadatech
     - data a kontrolní součty jsou oddělené
-
+<!--ID: 1717961032511-->
 END
 
 ---

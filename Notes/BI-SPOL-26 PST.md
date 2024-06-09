@@ -212,7 +212,7 @@ Jak se spočtě rozptyl náhodné veličiny $X$?
 Back:
 
 $$var(X) = E(X-EX)^2=EX^2-(EX)^2$$
-
+<!--ID: 1717961032514-->
 END
 
 ---

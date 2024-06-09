@@ -11,6 +11,7 @@ FILE TAGS: BI-SPOL-17 OSY
 > Virtualizace paměti pomocí stránkování, principy překladu logických adres na fyzické, algoritmy pro nahrazování stránek.
 
 
+
 START
 BI-SZZ
 
@@ -20,7 +21,7 @@ Back:
 
 - fyzická paměť
 - virtuální adresový prostor (VAS)
-
+<!--ID: 1717961032517-->
 END
 
 ---
@@ -33,7 +34,7 @@ Co je to **fyzická paměť**?
 Back:
 
 skutečné hardwarová RAMka, používá fyzické adresy
-
+<!--ID: 1717961032519-->
 END
 
 ---
@@ -49,7 +50,7 @@ Back:
 	- naivní -> VAS může být i větší než celá fyzická paměť
 - používá **virtuální (aka logické) adresy**, které se musí nějak překládat na **fyzické**
 - typicky obsahuje **program** (TEXT), **globální proměnné** (DATA), haldu, knihovny, zásobník
-
+<!--ID: 1717961032522-->
 END
 
 ---
@@ -66,7 +67,7 @@ Back:
 - používané stránky se nahávají do rámců (v RAM), nepoužívané se odkládají na disk
 
 *Poznámka: moderní CPU podporují různě velké stránky a rámce*
-
+<!--ID: 1717961032525-->
 END
 
 ---
@@ -79,7 +80,7 @@ Co je to **virtuální adresa**?
 Back:
 
 index do tabulky stránek + offset
-
+<!--ID: 1717961032528-->
 END
 
 ---
@@ -92,7 +93,7 @@ Co je to **fyzická adresa**?
 Back:
 
 číslo rámce + offset (stejný jako ve virtuální adrese)
-
+<!--ID: 1717961032530-->
 END
 
 ---
@@ -106,7 +107,7 @@ Co je to **Memory Management Unit (MMU)**?
 Back:
 
 část CPU, která zajišťuje tento překlad
-
+<!--ID: 1717961032533-->
 END
 
 ---
@@ -120,7 +121,7 @@ Back:
 
 - cache posledních překladů přímo v CPU
 - záznam v TLB obsahuje valid bit, číslo stránky, číslo rámce, ASID (identifikátor adresního prostoru), kontrolní bity, …
-
+<!--ID: 1717961032536-->
 END
 
 ---
@@ -135,7 +136,7 @@ Back:
 1. MMU zkusí najít číslo stránky v TLB, pokud ho najde a je validní, máme číslo rámce (k němu už jen přidáme offset a máme fyzickou adresu)
 2. pokud záznam není v TLB, MMU se podívá do (nejvyšší) tabulky stránek v jádru OS (viz níže), pokud ho najde a je validní, máme číslo rámce (a aktualizuje se TLB)
 3. pokud stránka není v tabulkách nebo nalezený záznam není validní (= **výpadek stránky**), MMU vyvolá přerušení, OS najde volný rámec (pokud je paměť plná, tak se vhodný rámec uvolní odložením na disk, viz níže) a požadovanou stránku do rámce nahraje (příp. ještě musí zneplatnit záznamy ukazující na odložený rámec)
-
+<!--ID: 1717961032539-->
 END
 
 ---
@@ -150,7 +151,7 @@ Back:
 - jednoúrovňová tabulka stránek
 - n-úrovňová tabulka stránek
 - invertovaná tabulka stránek
-
+<!--ID: 1717961032541-->
 END
 
 ---
@@ -169,7 +170,7 @@ Back:
 - **nevýhoda**: plýtvání pamětí, protože tabulka zbytečně obsahuje i nepoužité stránky
 
 ![](../Assets/Pasted%20image%2020240608174701.png)
-
+<!--ID: 1717961032545-->
 END
 
 ---
@@ -192,7 +193,7 @@ Back:
 - **nevýhoda**: pomalejší překlad
 
 ![](../Assets/Pasted%20image%2020240608174853.png)
-
+<!--ID: 1717961032548-->
 END
 
 ---
@@ -214,7 +215,7 @@ Back:
 - zabírá méně místa, ale překlad je pomalý
 
 ![](../Assets/Pasted%20image%2020240608175052.png)
-
+<!--ID: 1717961032551-->
 END
 
 ---
@@ -229,7 +230,7 @@ Back:
 - jakmile je fyzická paměť (skoro) plná, musí OS vybírat vhodné rámce k odložení na disk	
 - I**deální přístup**: nahrazování stránek, ke kterým budeme přistupovat za dlouho
 	- Problém je, že bychom museli umět předpovídat budoucnost
-
+<!--ID: 1717961032554-->
 END
 
 ---
@@ -245,7 +246,7 @@ Back:
 - jednoduché,
 - minimalizovat výpadky
 - brát v potaz prostorovou a časovou lokalitu (v nejbližší době budu pravděpodobněji potřebovat stránky, které jsou ve VAS blízko za aktuálně používanými stránkami)
-
+<!--ID: 1717961032557-->
 END
 
 ---
@@ -263,7 +264,7 @@ Back:
 - Two-handed clock algoritmus
 - LRU algoritmus (Least Recently Used)
 - Aging algoritmus
-
+<!--ID: 1717961032560-->
 END
 
 ---
@@ -280,7 +281,7 @@ Back:
 - jednoduchá implementace, relativně málo výpadků
 
 ![](../Assets/Pasted%20image%2020240608181120.png)
-
+<!--ID: 1717961032562-->
 END
 
 ---
@@ -296,7 +297,7 @@ Back:
 - jednoduchá implementace, relativně hodně výpadků (protože se nezohledňují přístupy)
 
 ![](../Assets/Pasted%20image%2020240608181130.png)
-
+<!--ID: 1717961032565-->
 END
 
 ---
@@ -311,7 +312,7 @@ Back:
 - rozumně složitá implementce, málo výpadků
 
 ![](../Assets/Pasted%20image%2020240608181140.png)
-
+<!--ID: 1717961032568-->
 END
 
 ---
@@ -327,7 +328,7 @@ Back:
 - parametrem je rozevření ručiček a jejich rychlost (např. podle množství volné paměti)
 
 ![](../Assets/Pasted%20image%2020240608181204.png)
-
+<!--ID: 1717961032571-->
 END
 
 ---
@@ -343,7 +344,7 @@ Back:
 - blízko optimálnímu algoritmu, ale implementace je složitější (je potřeba pamatovat si čas přístupu a pak tyto časy porovnávat)
 
 ![](../Assets/Pasted%20image%2020240608181218.png)
-
+<!--ID: 1717961032574-->
 END
 
 ---
@@ -363,7 +364,7 @@ Back:
 ![](../Assets/Pasted%20image%2020240608181409.png)
 
 ![](../Assets/Pasted%20image%2020240608181326.png)
-
+<!--ID: 1717961032577-->
 END
 
 ---

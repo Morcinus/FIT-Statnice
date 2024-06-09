@@ -228,6 +228,7 @@ Back:
 
 - jméno
 - rozsah platnosti (scope)
+- datový typ
 <!--ID: 1716877593406-->
 END
 

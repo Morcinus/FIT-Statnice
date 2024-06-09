@@ -358,6 +358,10 @@ Jak funguje **mutex**?
 Back:
 
 zámek s informací, jestli je zamčený + která vlákna jsou jím blokovaná (POSIXově typ `pthread_mutex_t` s funkcemi `pthread_mutex_lock()` a `pthread_mutex_unlock()`, v C++ třída `std::mutex`)
+
+_Např._
+![](../Assets/Pasted%20image%2020240609133102.png)
+![](../Assets/Pasted%20image%2020240609133053.png)
 <!--ID: 1717767801258-->
 END
 
@@ -372,6 +376,10 @@ Jak funguje **podmíněná proměnná**?
 Back:
 
 informace, která vlákna jsou jí blokována (POSIXově typ `pthread_cond_t` s funkcemi `pthread_cond_wait()` a `pthread_cond_signal()`, v C++ třída `std::condition_variable`)
+
+_Např._
+![](../Assets/Pasted%20image%2020240609133146.png)
+![](../Assets/Pasted%20image%2020240609133123.png)
 <!--ID: 1717767801261-->
 END
 
@@ -387,6 +395,8 @@ Back:
 
 celočíselný čítač + informace, která vlákna jsou jím blokována (POSIXově typ `sem_t` s funkcemi `sem_init()`, `sem_wait()`, `sem_post()`, v C++ nejsou)
 
+_Např._
+![](../Assets/Pasted%20image%2020240609133215.png)
 ![](../Assets/Pasted%20image%2020240607170318.png)
 <!--ID: 1717767801264-->
 END
@@ -402,6 +412,11 @@ Jak funguje **bariéra**?
 Back:
 
 čítač síly bariéry (kolik vláken je potřeba k prolomení bariéry) + fronta vláken, která jsou jí blokována (POSIXově typ `barrier_t` s funkcemi `pthread_barrier_init()`, `pthread_barrier_wait()` apod., v C++ třída `std::experimental::barrier`)
+
+Např.
+![](../Assets/Pasted%20image%2020240609133228.png)
+![](../Assets/Pasted%20image%2020240609133248.png)
+![](../Assets/Pasted%20image%2020240609133236.png)
 <!--ID: 1717767801267-->
 END
 
@@ -671,14 +686,15 @@ Co jsou to **Coffmanovy podmínky**? Vyjmenuj je (4)
 
 Back:
 
-- Podmínky určující, kdy nastane uváznutí
-- První tři podmínky jsou nutné, ale ne dostačující k uváznutí
+Podmínky, určující, kdy nastane uváznutí. Uváznutí, když jsou **všechny podmínky** splněny najednou.
 
 **Podmínky**
-1. **vzájemné vyloučení** - žádný prostředek nemůže být sdílen více vlákny
-2. **neodnímatelnost** - přidělený prostředek nemůže být násilím odebrán
-3. **“drž a čekej”** - vlákno s prostředky může žádat o další prostředky
+1. **vzájemné vyloučení** - každý prostředek je buď přidělen právě jednomu vláknu a nebo je volný (prostředek nemůže být sdílen více vlákny)
+2. **neodnímatelnost** - prostředek, který byl již přidělen nejakému vláknu, nemůže mu být násilím odebrán (musí být dobrovolně uvolněn daným vláknem)
+3. **“drž a čekej”** - vlákno, které má již přiděleny nějaké prostředky, může žádat o další prostředky (vlákno může žádat o prostředky postupne)
 4. **kruhové čekání** - musí existovat smyčka více vláken (každé vlákno čeká na prostředek přidělený dalšímu vláknu ve smyčce)
+
+Pozn. První tři podmínky jsou nutné, ale ne dostačující k uváznutí
 <!--ID: 1717743656889-->
 END
 
@@ -758,12 +774,24 @@ END
 START
 BI-SZZ
 
-Co je to **bankéřův algoritmus** a k čemu slouží?
+Jak funguje **bankéřův algoritmus** a k čemu slouží?
 
 Back:
 
- když vlákno požádá o prostředek, bude přidělen, jen když tím systém zůstane v bezpečném stavu (= existuje posloupnost alokací, která garantuje postupné uspokojení všech vláken), jinak bude vlákno zablokováno
+Když vlákno požádá o prostředek, bude přidělen, jen když tím systém zůstane v bezpečném stavu (= existuje posloupnost alokací, která garantuje postupné uspokojení všech vláken), jinak bude vlákno zablokováno
 
+**Jak to funguje**:
+1. Odečteme $Q - A = M$, čímž získáme matici toho, jaké prostředky ještě vlánka potřebují
+2. Zjistíme, jestil můžeme nějaké vlákno v $M$ uspokojit pomocí $F$. Když můžeme nějaké uspokojit, uspokojíme ho, počkáme až doběhne a pak nám to vlákno vrátí ty prostředky do $F$. To vlákno pak je vynulované, protože už žádné prostředky nepotřebuje.
+3. Tahle se postupuje furt dokola.
+	1. Pokud jsem schopný se dostat na nulovou matici $M$, je systém bude po přidělování prostředků v **bezpečném stavu**
+	2. Pokud ne, systém by zahlásil, že ten prostředek nelze přidělit
+
+**Vysvětlení**:
+- **Request matrix** - matice toho, co vlákna potřebují za prostředky
+- **Allocation matrix** - matice toho, co vlákna už mají za přidělené prostředky
+
+_Příklad:_
 ![](../Assets/Pasted%20image%2020240605201453.png)
 ![](../Assets/Pasted%20image%2020240605201501.png)
 <!--ID: 1717743656902-->

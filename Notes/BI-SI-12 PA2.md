@@ -10,6 +10,7 @@ FILE TAGS: BI-SI-12 PA2
 > Šablony funkcí a tříd v C++, knihovna STL, iterátor, komparátor.
 
 
+
 START
 BI-SZZ
 
@@ -20,7 +21,7 @@ Back:
 - šablony jsou způsob, jak parametrizovat různé entity
 - před deklaraci a definici parametrizované entity přidáme `template < template_args >`
 - kód šablony se kompiluje, až když je instanciována s konkrétními parametry — v runtime už se žádné šablony nevyskytují
-
+<!--ID: 1717961032381-->
 END
 
 ---
@@ -36,7 +37,7 @@ Back:
 - jiná šablona
 - netypový parametr (celá čísla, floating-point, ukazatele, reference)
 - parameter pack (`template <typename... Ts>`, variadické šablony)
-
+<!--ID: 1717961032385-->
 END
 
 ---
@@ -57,7 +58,7 @@ auto plus(const auto& a, const auto& b) {
 	return a + b;
 }
 ```
-
+<!--ID: 1717961032388-->
 END
 
 ---
@@ -80,7 +81,7 @@ Back:
 template < typename T >
 void A<T>::foo() { /* ... */ }
 ```
-
+<!--ID: 1717961032391-->
 END
 
 ---
@@ -94,7 +95,7 @@ Back:
 
 - Standard Template Library
 - je postavena na generických třídách
-
+<!--ID: 1717961032393-->
 END
 
 ---
@@ -110,7 +111,7 @@ Back:
 - pomocné struktury
 - interní struktury STL (iterátory, funktory)
 - funkce, algoritmy
-
+<!--ID: 1717961032396-->
 END
 
 ---
@@ -143,7 +144,7 @@ Back:
     - asociativní kontejner
 - **dále existuje:**
 	- forward_list, stack, queue, priority_queue, multiset, multimap, bitset, unordered_set
-
+<!--ID: 1717961032399-->
 END
 
 ---
@@ -157,7 +158,7 @@ Back:
 
 - pair
 - tuple
-
+<!--ID: 1717961032402-->
 END
 
 ---
@@ -170,7 +171,7 @@ Jaké jsou **interní struktury** v STL?
 Back:
 
 - funktor — objekt, který lze použít jako funkci, musí přetěžovat operátor ()
-
+<!--ID: 1717961032404-->
 END
 
 ---
@@ -189,7 +190,7 @@ Back:
 - lower_bound, binary_search
 - merge
 - make_heap
-
+<!--ID: 1717961032407-->
 END
 
 ---
@@ -203,7 +204,7 @@ Back:
 
 - jsou to zpravidla šablony tříd, jejich přetížené rozhraní se chová jako ukazatel
 - některé kontejnery neumožňují iterování (stack, queue)
-
+<!--ID: 1717961032410-->
 END
 
 ---
@@ -219,7 +220,7 @@ Back:
 - určení místa v kontejneru (např. kam má být vložen prvek)
 - určení rozsahu prvků, které má nějaká funkce zpracovávat
 - vyhledávání v kontejneru
-
+<!--ID: 1717961032412-->
 END
 
 ---
@@ -236,7 +237,7 @@ Back:
 - **ForwardIterator** – kombinuje předchozí
 - **BidirectionalIterator** – navíc možnost posunu zpět operátorem `--`
 - **RandomAccessIterator** – navíc možnost posunu vpřed/zpět o zadaný počet pozic (operace `+=` a `-=`), indexace operátorem `[n]`
-
+<!--ID: 1717961032415-->
 END
 
 ---
@@ -253,7 +254,7 @@ Back:
 - v C++11 k tomu přibyly i lambda funkce
 
 ![](../Assets/Pasted%20image%2020240609205720.png)
-
+<!--ID: 1717961032418-->
 END
 
 ---
