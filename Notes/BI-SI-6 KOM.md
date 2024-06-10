@@ -382,7 +382,9 @@ Co je **esenciální část**? `{essential}`
 
 Back:
 
-Celek **nemůže existovat** bez instance jeho části. Ta část je **neměnná**.
+- Povinnost z hlediska celku.
+- Celek **nemůže existovat** bez instance jeho části.
+- Ta část je vždy **stejná** a **neměnná**.
 
 Např. Osoba _John_ nemůže existovat bez instance _Johnův mozek_ jako jeho části.
 
@@ -400,7 +402,9 @@ Co je **neoddělitelná část**? `{inseparable}`
 
 Back:
 
-Část **nemůže existovat** bez instance celku. Ten celek je **neměnný**.
+- Část **nemůže existovat** bez instance celku.
+- Povinnost z hlediska části
+- Ten celek je vždy **stejný** a **neměnný**.
 
 Např. _Johnův mozek_ nemůže existovat bez toho aniž by byl částí osoby _John_.
 ![](../Assets/Pasted%20image%2020240517141821.png)
@@ -495,7 +499,8 @@ Co je **Subkind** v OntoUML?
 
 Back:
 
-Značí nám nějaký podtyp ostatních typů.
+- Značí nám nějaký podtyp ostatních typů.
+- Nemá identitu a musí ji dědit
 
 (rigidní sortál)
 
@@ -560,6 +565,7 @@ Označuje nějakou skupinu, kde **všechny prvky mají stejnou roli**.
 
 Používají se vztahy:
 - `memberOf` - vztah kolektivu a nějakého prvku
+	- multiplicita vždy min. 2 (2..*)
 - `subCollectionOf` - vztah dvou kolektivů
 
 (rigidní sortál)
