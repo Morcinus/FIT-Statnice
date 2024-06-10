@@ -92,7 +92,7 @@ Na čem je založen lambda kalkulus? (2)
 
 Back:
 
-Na matematické **abstrakci** (=funkce) a její **aplikaci** (=vyhodnocení pomocí subs)
+Na matematické **abstrakci** (=funkce) a její **aplikaci** (=vyhodnocení pomocí substituce)
 <!--ID: 1717181000754-->
 END
 
@@ -216,13 +216,15 @@ END
 START
 BI-SZZ
 
-Jak funguje **beta redukce**?
+Jak funguje **beta redukce**? Za jaké podmínky je možné ji provést?
 
 Např. u `(λ x . + x 1)4`
 
 Back:
 
-Jednoduše, pokud se proměnná ve funkci vyskytuje, tak dosadím za tu proměnnou.
+- Jednoduše, pokud se proměnná ve funkci vyskytuje, tak dosadím za tu proměnnou.
+- **Podmínka**: Po dosazení výrazu se nesmí stát z žádné volné proměnné vázaná
+
 
 ```
 (λ x . + x 1)4
@@ -284,13 +286,17 @@ END
 START
 BI-SZZ
 
-Co je **alfa konverze**?
+Co je **alfa konverze**? Za jaké podmínky je možné ji provést?
 
 Back:
 
 Odstranění přetížení identifikátorů
 
 Lze chápat jako přejmenování argumentů a jejich vázaných proměnných
+
+**Podmínky**
+- Lze použít pouze na vázané proměnné
+- Výraz nesmí obsahovat takové volné proměnné, které by se staly vázanými.
 
 _Příklad_:
 ```
@@ -316,7 +322,7 @@ Back:
 Obrácená beta redukce
 
 _Příklad:_
-`+ 4 1 ← (λx . + x 1) 4`
+`+ 4 1 → (λx . + x 1) 4`
 <!--ID: 1717181000789-->
 END
 
@@ -326,13 +332,16 @@ END
 START
 BI-SZZ
 
-Co je **eta konverze**? Za jaké podmínky je možné ji provést
+Co je **eta konverze**? Za jaké podmínky je možné ji provést?
 
 Back:
 
 Nemění výsledek lambda výrazu
+- Také se nazývá optimalizace
 - `(λx.fx) = f`
-- Lze použít jen pokud `f` je funkce, ve které se nenachází volné `x`
+- funkce s proměnnou x je vlastně pouze wrapper – `f(x) { return g(x); }`
+
+**Podmínka**: Lze použít jen pokud `f` je funkce, ve které se nenachází volné `x`
 
 _Např._
 ```
@@ -606,22 +615,16 @@ END
 START
 BI-SZZ
 
-Jak se dá v lambda kalkulu zapsat **Fibonacciho posloupnost**?
+Jak se dá v lambda kalkulu zapsat $f(n) = 3 \cdot f(n - 2) + n$?
 
 Back:
 
-Zadefinuju $F_0 =$ `(λf.λx.(= n 0) 1 (f (− n 1)))`
+![](../Assets/Pasted%20image%2020240610165441.png)
 
-Potom před to přidám $Y$-kombinátor:
-`F = Y F0 = (λf.(λx. f (x x)) (λx. f (x x)))(λf.λx.(= n 0) 1 (f (− n 1)))`
-
-Potom za to předhodím číslo, do kterého se chci dostat:
-`F 5 = 120`
 <!--ID: 1717181000830-->
 END
 
 ---
-
 
 ### Reprezentace čísel
 
