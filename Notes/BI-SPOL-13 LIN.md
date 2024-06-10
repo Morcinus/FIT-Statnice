@@ -906,7 +906,6 @@ Potom je matice diagonalizovatelná!
 Díky tomu si můžu ušetřit práci a nemusím nutně počítat $\nu_g(\lambda)$
 
 ![](../Assets/Pasted%20image%2020240602151915.png)
-
 <!--ID: 1717334730161-->
 END
 

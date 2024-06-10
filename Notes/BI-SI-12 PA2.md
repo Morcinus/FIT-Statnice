@@ -9,7 +9,11 @@ FILE TAGS: BI-SI-12 PA2
 > BI-WSI-SI-12 (PA2)
 > Šablony funkcí a tříd v C++, knihovna STL, iterátor, komparátor.
 
-
+### TODO
+- Tady by to chtělo trošku líp udělat kartičky na konkrétní syntax, protože nevím, na co jiného by se u této otázky ptali
+- Chtělo by to podrobnější info o **iterátorech** a **komparátorech**!
+- Obecně by to chtělo tuto otázku zpracovat víc do hloubky.. Tohle je hrozně málo
+- Obecně by to chtělo přidat nějakou basic syntax C++ (klidně do jiné otázky), aby když řeknou, že má člověk napsat kód, tak aby tušil, jak se píšou ty basic věci (ukazatele, reference, volání funkce, psaní na výstup atd.)
 
 START
 BI-SZZ
@@ -103,7 +107,7 @@ END
 START
 BI-SZZ
 
-Jaké **typy komponent** obsahuje **STL**?
+Jaké **typy komponent** obsahuje **STL**? (4)
 
 Back:
 
@@ -119,7 +123,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou **kontejnery** v STL?
+Jaké jsou **kontejnery** v STL? (6)
 
 Back:
 
@@ -152,12 +156,35 @@ END
 START
 BI-SZZ
 
-Jaké jsou **pomocné struktury** v STL?
+Jaké jsou **pomocné struktury** v STL? (2)
 
 Back:
 
-- pair
-- tuple
+- **pair**
+- **tuple**
+
+Např.
+```cpp
+// Creating a pair
+std::pair<int, std::string> myPair(1, "Hello");
+
+// Accessing elements of the pair
+std::cout << "First element: " << myPair.first << std::endl;
+
+// Modifying elements of the pair
+myPair.second = "World";
+
+
+
+// Creating a tuple
+std::tuple<int, double, std::string> myTuple(1, 2.5, "Hello");
+
+// Accessing elements of the tuple
+std::cout << "First element: " << std::get<0>(myTuple) << std::endl;
+
+// Modifying elements of the tuple
+std::get<2>(myTuple) = "World";
+```
 <!--ID: 1717961032402-->
 END
 
@@ -166,11 +193,38 @@ END
 START
 BI-SZZ
 
-Jaké jsou **interní struktury** v STL?
+Jaké jsou **interní struktury** v STL? (2)
 
 Back:
 
-- funktor — objekt, který lze použít jako funkci, musí přetěžovat operátor ()
+- **funktor** — objekt, který lze použít jako funkci, musí přetěžovat operátor `()`
+- **iterátory**
+
+Např.
+```cpp
+// Define a functor by creating a class that overloads the operator()
+class Adder {
+public:
+    // Constructor to initialize the functor with a value
+    Adder(int value) : value_(value) {}
+
+    // Overload the function call operator
+    int operator()(int x) const {
+        return value_ + x;
+    }
+
+private:
+    int value_;
+};
+
+int main() {
+    // Create a functor object with a value of 10
+    Adder add10(10);
+
+    // Use the functor to add 10 to different numbers
+    std::cout << "10 + 5 = " << add10(5) << std::endl;  // Output: 15
+}
+```
 <!--ID: 1717961032404-->
 END
 
@@ -179,7 +233,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou **funce/algoritmy** v STL?
+Jaké jsou **funkce/algoritmy** v STL? (8)
 
 Back:
 
@@ -187,9 +241,52 @@ Back:
 - find
 - transform
 - sort
-- lower_bound, binary_search
+- lower_bound
+- binary_search
 - merge
 - make_heap
+
+_Příklad použití od pana ChatGPT:_
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <iterator>
+
+int main() {
+    std::vector<int> v = {1, 2, 3, 4, 5};
+    std::vector<int> v1 = {1, 3, 5, 7};
+    std::vector<int> v2 = {2, 4, 6, 8};
+    std::vector<int> v3;
+
+    // for_each
+    std::for_each(v.begin(), v.end(), [](int &n){ n++; });
+
+    // find
+    auto it = std::find(v.begin(), v.end(), 3);
+
+    // transform
+    std::transform(v.begin(), v.end(), v.begin(), [](int n){ return n * n; });
+
+    // sort
+    std::sort(v.begin(), v.end());
+
+    // lower_bound
+    auto lb = std::lower_bound(v.begin(), v.end(), 4);
+
+    // binary_search
+    bool found = std::binary_search(v.begin(), v.end(), 4);
+
+    // merge
+    std::merge(v1.begin(), v1.end(), v2.begin(), v2.end(), std::back_inserter(v3));
+
+    // make_heap
+    std::make_heap(v.begin(), v.end());
+
+    return 0;
+}
+
+```
 <!--ID: 1717961032407-->
 END
 
@@ -212,7 +309,7 @@ END
 START
 BI-SZZ
 
-K čemu slouží **iterátory**?
+K čemu slouží **iterátory**? (4)
 
 Back:
 
@@ -228,19 +325,91 @@ END
 START
 BI-SZZ
 
-Co je to **typy iterátorů**?
+Jaké jsou **typy iterátorů**? (5)
 
 Back:
 
-- **InputIterator** – poskytuje pouze dereferenci pro čtení, posuv vpřed a test na (ne)rovnost
-- **OutputIterator** – poskytuje pouze dereferenci pro zápis, posuv vpřed a test na (ne)rovnost
-- **ForwardIterator** – kombinuje předchozí
-- **BidirectionalIterator** – navíc možnost posunu zpět operátorem `--`
-- **RandomAccessIterator** – navíc možnost posunu vpřed/zpět o zadaný počet pozic (operace `+=` a `-=`), indexace operátorem `[n]`
+- **InputIterator**
+- **OutputIterator**
+- **ForwardIterator**
+- **BidirectionalIterator**
+- **RandomAccessIterator**
 <!--ID: 1717961032415-->
 END
 
 ---
+
+
+START
+BI-SZZ
+
+Co poskytuje **InputIterator**?
+
+Back:
+
+poskytuje pouze dereferenci pro **čtení**, **posuv vpřed** a test na (ne)**rovnost**
+<!--ID: 1718030833866-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Co poskytuje **OutputIterator**?
+
+Back:
+
+poskytuje pouze dereferenci pro **zápis**, **posuv vpřed** a test na (ne)**rovnost**
+<!--ID: 1718030833874-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Co obsahuje **ForwardIterator**?
+
+Back:
+
+Kombinuje **InputIterator** a **OutputIterator**
+<!--ID: 1718030833880-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Co obsahuje **BidirectionalIterator**?
+
+Back:
+
+Jako ForwardIterator, navíc možnost posunu zpět operátorem `--`
+<!--ID: 1718030833884-->
+END
+
+---
+
+
+START
+BI-SZZ
+
+Co obsahuje **RandomAccessIterator**?
+
+Back:
+
+Jako BidirectionalIterator, navíc možnost posunu vpřed/zpět o **zadaný počet pozic** (operace `+=` a `-=`), indexace operátorem `[n]`
+<!--ID: 1718030833888-->
+END
+
+---
+
+
 
 START
 BI-SZZ

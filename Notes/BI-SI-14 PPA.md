@@ -508,7 +508,7 @@ END
 START
 BI-SZZ
 
-Má každý **alfa výraz** v lambda kalkulu normální tvar?
+Má každý **výraz** v lambda kalkulu normální tvar?
 
 Back:
 

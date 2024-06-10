@@ -10,7 +10,8 @@ FILE TAGS: BI-SI-11 OSY
 > 
 > Principy, implementace a vlastnosti klasických souborových systémů/moderních souborových systémů založených na B-B/+-stromech (rozložení dat na disku, implementace souborů/adresářů, implementace v jádru OS).
 
-
+### TODO
+- doplnit detailnější informace o přímých adresách a nepřímých adresách dané úrovně u i-node např. jak jsou velké a kolik jich je
 
 START
 BI-SZZ
@@ -74,7 +75,7 @@ END
 START
 BI-SZZ
 
-Jaké je **rozložení disku**?
+Jaké jsou 2 části **rozložení disku**?
 
 Back:
 
@@ -89,7 +90,7 @@ END
 START
 BI-SZZ
 
-Jaké je **rozložení dat** ve File Systému?
+Jaké je **rozložení dat** ve File Systému? (5)
 
 Back:
 
@@ -136,7 +137,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou přístupy alokace bloků? (2)
+Jaké jsou přístupy alokace datových bloků? (2)
 
 Back:
 
@@ -150,7 +151,7 @@ END
 START
 BI-SZZ
 
-Jak funguje alokace pomocí  **souvislých oblastí datových bloků**?
+Co je alokace pomocí **souvislých oblastí datových bloků**? Jaké má **výhody** a **nevýhody**?
 
 Back:
 
@@ -168,11 +169,12 @@ END
 START
 BI-SZZ
 
-Jak funguje **alokace souboru po jednotlivých datových blocích**?
+Co je **alokace souboru po jednotlivých datových blocích**? Jaké má **výhody** a **nevýhody**?
 
 Back:
 
-- FS si musí pamatovat adresy všech bloků, kde je uložený obsah souboru
+FS si musí pamatovat adresy všech bloků, kde je uložený obsah souboru
+
 - **výhody**
     - dobrý výkon při náhodném přístupu a u malých souborů
 - **nevýhody**
@@ -186,7 +188,7 @@ END
 START
 BI-SZZ
 
-Jaké struktury se používají pro **uložení adres** v bloků při **uložení adres bloků se používají následující struktury**? (3)
+Jaké **struktury** se používají pro **uložení adres** datových bloků? (3)
 
 Back:
 
@@ -219,13 +221,13 @@ END
 START
 BI-SZZ
 
-Co obsahuje každý řádek FAT tabulky? (3)
+Co může obsahovat řádek FAT tabulky? (3 - vždy jedno z toho)
 
 Back:
 
-- Free: datový blok je volný,
-- Adresa: adresa následujícího bloku, kde pokračuje obsah souboru,
-- EOF: konec zřetězení
+- **Free**: datový blok je volný,
+- **Adresa**: adresa následujícího bloku, kde pokračuje obsah souboru,
+- **EOF**: konec zřetězení
 <!--ID: 1717961032458-->
 END
 
@@ -252,6 +254,7 @@ Jak funguje **I-node (Index node)**?
 
 Back:
 
+- každý soubor má jednu i-node
 - při zápisu do souboru se postupně využívají přímé adresy, nepřímé adresy první, druhé a nakonec třetí úrovně v závislosti na velikosti souboru
 - horší využití prostoru FS, protože část datových bloků se používá na metadata (bloky s adresami)
 - samotná velikost i-nodu není závislá na velikosti FS nebo velikosti souboru
@@ -282,7 +285,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou **typy** a jak **fungují** **sdílené soubory**?
+Jak **fungují** **sdílené soubory** a jaké jsou jejich **typy**?
 
 Back:
 
@@ -324,7 +327,7 @@ END
 START
 BI-SZZ
 
-Jak jsou implementovány **systémy souborů** v OS?
+Jak jsou implementovány **systémy souborů** (file systémy) v OS? (5)
 
 Back:
 
@@ -427,14 +430,14 @@ END
 START
 BI-SZZ
 
-Jak jsou implementovány moderní **File Systémy**?
+Jak jsou implementovány moderní **File Systémy**? (co se většinou využívá?)
 
 Back:
 
 - při implementaci FS se používají
-	- B stromy
-	- B+ stromy
-- většinou reprezentují kombinaci SW RAIDu a FS
+	- **B stromy**
+	- **B+ stromy**
+- většinou reprezentují kombinaci **SW RAIDu a FS**
 - integrita dat – FS je neustále v konzistentním stavu (RAID, copy on write, checksums)
 - podpora vytváření clonů a snapshotů
 - podpora šifrování a komprese
@@ -490,6 +493,9 @@ Back:
 - v moderních FS jsou SW RAID a FS implementovány jako celek (jedna SW vrstva)
 - fyzické disky se zařadí do _poolu_, který představuje konkrétní typ RAIDu
 - v rámci poolu se pak vytváří jednotlivé FS
+
+_Detailnější info z přednášky:_
+![](../Assets/Pasted%20image%2020240610152742.png)
 <!--ID: 1717961032505-->
 END
 
@@ -512,7 +518,7 @@ END
 START
 BI-SZZ
 
-Jak funguje **zabezpečení dat**?
+Jak funguje **zabezpečení dat** ve file systémech?
 
 Back:
 
