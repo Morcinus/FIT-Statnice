@@ -1,3 +1,7 @@
+## [v1.0.1] - 2024-06-10
+
+Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.
+
 ## [v1.0.0] - 2024-06-09
 
 Opravení chyb, lepší formulace otázek, zlepšení některých odpovědí.
