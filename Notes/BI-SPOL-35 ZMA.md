@@ -216,7 +216,7 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240605133146.png)
 ![](../Assets/Pasted%20image%2020240605133229.png)
-![](../Assets/Pasted%20image%2020240606104816.png)
+
 
 Tags: core
 <!--ID: 1717594648489-->
@@ -260,6 +260,8 @@ _Pozn._ ten 3. bod znamená, že když do $\varphi$ budu dosazovat hodnoty z int
 
 
 ![](../Assets/Pasted%20image%2020240605133411.png)
+![](../Assets/Pasted%20image%2020240606104816.png)
+
 
 Tags: core
 <!--ID: 1717594648492-->
