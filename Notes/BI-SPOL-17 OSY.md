@@ -11,7 +11,6 @@ FILE TAGS: BI-SPOL-17 OSY
 > Virtualizace paměti pomocí stránkování, principy překladu logických adres na fyzické, algoritmy pro nahrazování stránek.
 
 
-
 START
 BI-SZZ
 

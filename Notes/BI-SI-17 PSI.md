@@ -9,6 +9,7 @@ FILE TAGS: BI-SI-17 PSI
 > BI-WSI-SI-17 (PSI)
 > Adresace IPv4, rozdělení adresního prostoru. Rozdíly mezi IPv4 a IPv6.
 
+
 ### TODO
 - Přidat sem nějaký algoritmus/postupy na příklady adresace, co se dělaly na cvikách
 

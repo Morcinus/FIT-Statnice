@@ -9,7 +9,6 @@ FILE TAGS: BI-SI-13 PPA
 > BI-WSI-SI-13 / BI-WSI-WI-8 (PPA)
 > Rozdělení paměti při implementaci programovacích jazyků: statické části, zásobník, halda. Aktivační záznamy, mechanismus implementace volání funkcí.
 
-
 ### Paměť
 
 
@@ -196,7 +195,6 @@ Na zásobník (do aktivačního záznamu - Function Call **Stack Frame**) se př
 ![](../Assets/Pasted%20image%2020240610125500.png)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Q2sFmqvpBe0?si=jqslx4I7MTC2sOSi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 <!--ID: 1717181000892-->
 END
 

@@ -9,6 +9,7 @@ FILE TAGS: BI-SPOL-22 PA2
 > BI-SPOL-22 (PA2)
 > Abstraktní datový typ, jeho specifikace a implementace. Zásobník, fronta, pole, seznam, tabulka, množina. Implementace pomocí pole, spojových struktur a stromů.
 
+
 ### abstraktní datový typ
 
 START

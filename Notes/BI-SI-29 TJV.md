@@ -9,6 +9,7 @@ FILE TAGS: BI-SI-29 BI-WI-19 TJV
 > BI-WSI-SI-29 / BI-WSI-WI-19 (TJV)
 > Objektově relační mapování: koncept, výhody i nevýhody. Rozdíly mezi objektovým a relačním modelem dat. Rozdíl v realizaci vazeb (1:1, 1:N, M:N) v objektovém a relačním modelu
 
+
 ### TODO
 - Tady by to chtělo dát víc kartiček na konkrétní syntax/implementaci v javě.. Prý to na fitwiki někdo měl u otázek
 

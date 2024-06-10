@@ -9,6 +9,7 @@ FILE TAGS: BI-SI-12 PA2
 > BI-WSI-SI-12 (PA2)
 > Šablony funkcí a tříd v C++, knihovna STL, iterátor, komparátor.
 
+
 ### TODO
 - Tady by to chtělo trošku líp udělat kartičky na konkrétní syntax, protože nevím, na co jiného by se u této otázky ptali
 - Chtělo by to podrobnější info o **iterátorech** a **komparátorech**!

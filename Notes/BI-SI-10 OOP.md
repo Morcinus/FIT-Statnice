@@ -9,6 +9,7 @@ FILE TAGS: BI-SI-10 OOP
 > BI-WSI-SI-10 (OOP)
 > OOP chybový stav a reflexe - signalizování výjimečných stavů, výjimky, stack trace, total functions, design by contract, object model a dynamic code invocation.
 
+
 ### TODO
 - Tady by případně šlo ještě přidat více metod ohledně reflexe z tohoto zdroje https://gitlab.fit.cvut.cz/BI-OOP/B231/lecture-code/-/blob/master/src/main/scala/lecture10/basics/basics.sc?ref_type=heads
 

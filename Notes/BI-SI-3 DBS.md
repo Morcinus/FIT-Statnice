@@ -9,6 +9,7 @@ FILE TAGS: BI-SI-3 BI-WI-6 DBS
 > BI-WSI-SI-3 / BI-WSI-WI-6 (DBS)
 > Normalizace relačního schématu a normální formy (první, druhá, třetí, BCNF).
 
+
 ### Příklady
 - Kromě teorie je asi fajn si procvičit odvozování funkční závislosti na nějakém příkladu
 

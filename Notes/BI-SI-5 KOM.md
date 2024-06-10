@@ -10,6 +10,7 @@ FILE TAGS: BI-SI-5 KOM
 > Konceptuální modelování, jeho význam, základní pojmy a způsoby modelování reálného světa.
 
 
+
 START
 BI-SZZ
 

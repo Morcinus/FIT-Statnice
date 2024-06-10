@@ -9,6 +9,7 @@ FILE TAGS: BI-SPOL-5 AG1
 > BI-SPOL-5 (AG1)
 > Binární haldy, binomiální haldy. Vyhledávací stromy a jejich vyvažování. Tabulky s rozptylováním (hešováním).
 
+
 ### zakořeněné stromy
 
 

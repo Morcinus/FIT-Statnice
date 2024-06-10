@@ -10,6 +10,7 @@ FILE TAGS: BI-SPOL-13 LIN
 > Matice: součin matic, regulární matice, inverzní matice a její výpočet, vlastní čísla matice a jejich výpočet, diagonalizace matice.
 
 
+
 START
 BI-SZZ
 

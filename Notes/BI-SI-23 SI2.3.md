@@ -9,6 +9,7 @@ FILE TAGS: BI-SI-23 SI2.3
 > BI-WSI-SI-23 (SI2.3)
 > Release management, automatizace při sestavení, testování, nasazení, DevOps, přínosy a používané nástroje. (BI-SI2.3)
 
+
 ### Release management
 
 START

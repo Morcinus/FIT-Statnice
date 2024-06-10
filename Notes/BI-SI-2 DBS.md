@@ -9,6 +9,7 @@ FILE TAGS: BI-SI-2 BI-WI-5 DBS
 > BI-WSI-SI-2 / BI-WSI-WI-5 (DBS)
 > Transformace konceptuálního schématu (v ER nebo jiné notaci) na relační.
 
+
 ### Transformace konceptuálního schématu na relační
 
 START

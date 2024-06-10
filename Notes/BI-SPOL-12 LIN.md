@@ -9,6 +9,7 @@ FILE TAGS: BI-SPOL-12 LIN
 > BI-SPOL-12 (LIN) Soustavy lineárních rovnic: 
 > Frobeniova věta a související pojmy, vlastnosti a popis množiny řešení, Gaussova eliminační metoda.
 
+
 ### Pojmy
 
 #### Soustava lineárních rovnic

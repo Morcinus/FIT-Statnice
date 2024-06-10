@@ -12,7 +12,6 @@ FILE TAGS: BI-SI-15 BI-WI-10 PPA
 ### TODO
 - tady by to chtělo víc kartiček na to, jak se definují jednotlivé funkce atd.
 
-
 START
 BI-SZZ
 

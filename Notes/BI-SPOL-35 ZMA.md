@@ -10,6 +10,7 @@ FILE TAGS: BI-SPOL-35 ZMA
 > Základy integrálního počtu (primitivní funkce, neurčitý integrál, Riemannův integrál (definice, vlastnosti a geometrický význam)).
 
 
+
 START
 BI-SZZ
 

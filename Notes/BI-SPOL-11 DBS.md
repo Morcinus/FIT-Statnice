@@ -8,6 +8,7 @@ FILE TAGS: BI-SPOL-11 DBS
 > BI-SPOL-11 (DBS) 
 > 3 úrovně pohledu na data (konceptuální, implementační, fyzická). Struktury pro ukládání dat v relačních databázích s ohledem na rychlý přístup k nim (speciální způsoby uložení, indexy apod.)
 
+
 ### 3 úrovně pohledu na data
 
 START

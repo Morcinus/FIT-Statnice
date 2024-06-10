@@ -9,6 +9,7 @@ FILE TAGS: BI-SPOL-26 PST
 > BI-SPOL-26 (PST)
 > Základy statistické indukce, náhodný výběr, bodové odhady pro střední hodnotu a rozptyl, intervalové odhady pro střední hodnotu, testování statistických hypotéz o střední hodnotě
 
+
 ### TODO
 - Přidat flashcards na studentovo t rozdělení a kritickou hodnotu standardního normálního rozdělení - jen abych věděl, jak tyhle věci získat, když počítám intervaly spolehlivosti
 

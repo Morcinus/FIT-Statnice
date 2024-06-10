@@ -9,7 +9,6 @@ FILE TAGS: BI-SPOL-4 AG1
 > BI-SPOL-4 (AG1)
 > Základní pojmy teorie grafů. Grafové algoritmy: procházení grafu do šířky a do hloubky, určení souvislých komponent, topologické uspořádání, vzdálenosti v grafech, konstrukce minimální kostry a nejkratších cest v ohodnoceném grafu.
 
-
 ### Základní pojmy
 
 START

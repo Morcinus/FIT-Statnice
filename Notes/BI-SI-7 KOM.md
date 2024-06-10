@@ -9,6 +9,7 @@ FILE TAGS: BI-SI-7 KOM
 > BI-WSI-SI-7 (KOM)
 > Klíčové pojmy inženýrství podniků a metoda DEMO.
 
+
 ### Klíčové pojmy inženýrství podniků
 
 START

@@ -9,6 +9,7 @@ FILE TAGS: BI-SPOL-15 MLO
 > BI-SPOL-15 (MLO)
 > Predikátová logika: definice formule, pravdivost a splnitelnost formulí, teorie a její modely, logické důsledky teorie.
 
+
 ### Jazyk predikátové logiky
 
 

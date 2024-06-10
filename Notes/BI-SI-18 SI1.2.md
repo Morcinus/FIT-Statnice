@@ -9,6 +9,7 @@ FILE TAGS: BI-SI-18 BI-WI-13 SI1.2
 > BI-WSI-SI-18 / BI-WSI-WI-13 (SI1.2)
 > Analýza a správa požadavků (cíle, kategorizace, UML diagram případů užití, scénáře případů užití, UML diagram aktivit).
 
+
 ### ToDo
 - [ ] Tady by se hodilo u UML diagramu aktivit ještě podrobněji rozepsat, co znamenají jednotlivý věci v diagramu - u zkoušky chtějí kreslit diagram aktivit, tak aby člověk tušil jak to udělat
 

@@ -9,6 +9,7 @@ FILE TAGS: BI-SI-28 BI-WI-18 TJV
 > BI-WSI-SI-28 / BI-WSI-WI-18 (TJV)
 > Slabé vazby mezi objekty: význam a výhody. Princip obrácení řízení (inversion of control) a vkládání závislostí (dependency injection)
 
+
 ### slabé vazby mezi objekty
 
 START

@@ -9,6 +9,7 @@ FILE TAGS: BI-SPOL-21 PA2
 > BI-SPOL-21 (PA2)
 > Objektově orientované programování v C++, zapouzdření, dědičnost, atributy a metody, statické atributy a metody, virtuální metody, polymorfismus, abstraktní třídy, výjimky, šablony, přetěžování operátorů, mělká a hluboká kopie.
 
+
 ### objektově orientované programování v C++
 
 START

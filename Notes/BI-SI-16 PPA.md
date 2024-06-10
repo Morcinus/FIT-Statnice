@@ -7,8 +7,8 @@ TARGET DECK: BI-SZZ
 FILE TAGS: BI-SI-16 BI-WI-11 PPA
 
 >BI-WSI-SI-16 / BI-WSI-WI-11 (PPA)
-> 
 > Logické programování, Prolog: fakta, pravidla, dotazy, způsob vyhodnocení dotazů, unifikace, operátor řezu.
+
 
 START
 BI-SZZ

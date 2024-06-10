@@ -9,6 +9,7 @@ FILE TAGS: BI-SPOL-1 AAG
 > BI-SPOL-1 (AAG)
 > Přehled Chomského hierarchie formálních jazyků a gramatik. Turingovy stroje. Třídy problémů P, NP, NP-těžký, NP-úplný.
 
+
 START
 BI-SZZ
 

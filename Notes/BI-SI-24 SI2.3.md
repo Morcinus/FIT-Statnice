@@ -9,6 +9,7 @@ FILE TAGS: BI-SI-24 SI2.3
 > BI-WSI-SI-24 (SI2.3)
 > Projektové řízení a měření: modely SDLC, plánování krátkodobé a dlouhodobé, kategorie metrik a jejich využití, historie projektu, odhady, způsob jejich tvorby a verifikace.
 
+
 ### Modely SDLC
 
 START

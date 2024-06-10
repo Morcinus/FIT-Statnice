@@ -9,6 +9,7 @@ FILE TAGS: BI-SI-26 SI2.3
 > BI-WSI-SI-26 (SI2.3)
 > Údržba: život softwarového díla, role a význam údržby, vazba na SDLC a jednotlivé činnosti softwarového inženýrství, servisní smlouva, role měření (pracnosti, nákladů a dalších metrik) při údržbě.
 
+
 START
 BI-SZZ
 

@@ -9,6 +9,7 @@ FILE TAGS: BI-SPOL-3 AAG
 > BI-SPOL-3 (AAG)
 > Bezkontextové jazyky: Bezkontextové gramatiky, zásobníkové automaty a jejich varianty. Modely syntaktické analýzy bezkontextových jazyků.
 
+
 START
 BI-SZZ
 
@@ -69,7 +70,7 @@ Co je to **bezkontextová gramatika**?
 Back:
 
 gramatika, jejíž pravidla mají tvar $A \to \alpha$ ($A$ $A$$\alpha$ je libovolná kombinace terminálů a neterminálů)
-
+<!--ID: 1718035849117-->
 END
 
 ---

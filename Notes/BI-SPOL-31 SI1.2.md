@@ -9,6 +9,7 @@ FILE TAGS: BI-SPOL-31 SI1.2
 > BI-SPOL-31 (SI1.2)
 > Analytický doménový model tříd a popis životního cyklu identifikovaných tříd (cíle, UML diagram tříd, UML stavový diagram)
 
+
 ### ToDo
 - [ ] Možná přidat další informace nebo příklady k otázce - přijde mi to moc stručný
 

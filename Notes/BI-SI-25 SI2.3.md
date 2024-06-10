@@ -9,6 +9,7 @@ FILE TAGS: BI-SI-25 SI2.3
 > BI-WSI-SI-25 (SI2.3)
 > Konfigurační řízení: řízení verzí, řízení změn, správa prostředí, řízení dodávek, správa dokumentace a vzájemné souvislosti.
 
+
 ### Konfigurační řízení
 
 START

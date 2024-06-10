@@ -10,6 +10,7 @@ FILE TAGS: BI-SPOL-30 SI1.2
 > Nástroje pro podporu tvorby softwarových produktů: Sledování chyb a správa úkolů (používané nástroje, typický životní cyklus úkolu/chyby), správa a sdílení zdrojových kódů (principy řešení spolupráce, hlavní přínosy, používané nástroje)
 
 
+
 START
 BI-SZZ
 

@@ -9,6 +9,7 @@ FILE TAGS: BI-SI-20 BI-WI-15 SI1.2
 > BI-WSI-SI-20 / BI-WSI-WI-15 (SI1.2)
 > Přiřazení zodpovědností třídám během návrhu, GRASP vzory (Nízká provázanost, Vysoká soudržnost), popis spolupráce objektů (UML sekvenční diagram, UML diagram tříd - využití během návrhu).
 
+
 ### GRASP
 
 START

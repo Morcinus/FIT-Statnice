@@ -10,6 +10,7 @@ FILE TAGS: BI-SPOL-36 ZMA
 > Číselné řady (konvergence číselné řady, kritéria konvergence, odhadování rychlosti růstu řad pomocí určitého integrálu)
 
 
+
 START
 BI-SZZ
 

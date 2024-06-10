@@ -10,6 +10,7 @@ FILE TAGS: BI-SPOL-33 ZDM
 > Modulární aritmetika, základy teorie čísel, Malá Fermatova věta, diofantické rovnice, lineární kongruence, Čínská věta o zbytcích
 
 
+
 START
 BI-SZZ
 

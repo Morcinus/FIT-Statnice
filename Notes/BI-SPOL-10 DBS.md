@@ -10,7 +10,6 @@ FILE TAGS: BI-SPOL-10 DBS
 > Transakce a jejich vlastnosti - ACID.
 ### Základy transakcí
 
-
 START
 BI-SZZ
 

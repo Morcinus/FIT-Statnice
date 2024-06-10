@@ -11,6 +11,7 @@ FILE TAGS: BI-SPOL-23 PSI
 TODO:
 - Přidat otázku na to, co je to ARP tabulka a kde se nachází
 
+
 ### ISO/OSI model
 
 START

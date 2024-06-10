@@ -9,6 +9,7 @@ FILE TAGS: BI-SPOL-34 ZMA
 > BI-SPOL-34 (ZMA)
 > Limita a derivace funkce (definice a vlastnosti, geometrický význam), využití při vyšetřování průběhu funkce
 
+
 ### Limity
 
 START

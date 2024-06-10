@@ -9,6 +9,7 @@ FILE TAGS: BI-SPOL-14 MLO
 > BI-SPOL-14 (MLO)
 > Výroková logika: základní logické zákony, universální systém logických spojek, disjunktivní a konjunktivní normální tvary.
 
+
 ### ToDo
 - Můžu sem přidat otázku "jak se UDNT a minDNT" váže na pravdivostní tabulku - to je otázka v podotázce z fitwiki, co někdo měl 
 

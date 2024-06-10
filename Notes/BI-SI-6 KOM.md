@@ -9,6 +9,7 @@ FILE TAGS: BI-SI-6 KOM
 > BI-WSI-SI-6 (KOM)
 > OntoUML a jeho konstrukty, transformace do objektového modelu.
 
+
 ### OntoUML obecně 
 
 START

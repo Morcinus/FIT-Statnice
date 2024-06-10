@@ -9,6 +9,7 @@ FILE TAGS: BI-SPOL-2 AAG
 > BI-SPOL-2 (AAG)
 > Regulární jazyky: Deterministické a nedeterministické konečné automaty. Determinizace konečného automatu. Minimalizace deterministického konečného automatu. Operace s konečnými automaty. Regulární gramatiky, regulární výrazy, regulární rovnice.
 
+
 START
 BI-SZZ
 
@@ -476,7 +477,7 @@ Back:
 
 gramatika, jejíž pravidla mají tvar 
 $A \to a | aB$, případně ještě $S \to \varepsilon$, pokud $S$ není na žádné pravé straně ($A, B, S$ jsou neterminály, $a$ je terminál)
-
+<!--ID: 1718035849123-->
 END
 
 ---

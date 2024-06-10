@@ -9,6 +9,7 @@ FILE TAGS: BI-SPOL-16 OSY
 > BI-SPOL-16 (OSY)
 > Procesy a vlákna, jejich implementace. Synchronizační nástroje. Klasické synchronizační úlohy. Plánování vláken. Přidělování prostředků, Coffmanovy podmínky, způsoby řešení uváznutí.
 
+
 ### todo
 - přidat podrobnější karičky ohledně implementace mutexu, semaforů, podmínek atd. (konkrétní keywords)
 

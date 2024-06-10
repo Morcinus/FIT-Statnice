@@ -9,6 +9,7 @@ FILE TAGS: BI-SPOL-8 BEZ
 > BI-SPOL-8 (BEZ)
 > Infrastruktura veřejného klíče, distribuce klíčů, digitální podpis. Certifikáty, certifikační autority. Kryptograficky bezpečné generátory náhodných čísel.
 
+
 ### infrastruktura a distribuce veřejných klíčů
 
 START

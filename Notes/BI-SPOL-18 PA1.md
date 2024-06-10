@@ -9,6 +9,7 @@ FILE TAGS: BI-SPOL-18 PA1
 > BI-SPOL-18 (PA1)
 > Datové typy v programovacích jazycích. Staticky a dynamicky alokované proměnné, spojové seznamy. Modulární programování, procedury a funkce, vstupní a výstupní parametry. Překladač, linker, debugger.
 
+
 ### datové typy v programovacích jazycích
 
 START

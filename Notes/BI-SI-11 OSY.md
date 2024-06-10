@@ -10,6 +10,7 @@ FILE TAGS: BI-SI-11 OSY
 > 
 > Principy, implementace a vlastnosti klasických souborových systémů/moderních souborových systémů založených na B-B/+-stromech (rozložení dat na disku, implementace souborů/adresářů, implementace v jádru OS).
 
+
 ### TODO
 - doplnit detailnější informace o přímých adresách a nepřímých adresách dané úrovně u i-node např. jak jsou velké a kolik jich je
 

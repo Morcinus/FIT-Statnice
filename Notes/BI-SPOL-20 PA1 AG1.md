@@ -9,6 +9,7 @@ FILE TAGS: BI-SPOL-20 PA1AG1
 > BI-SPOL-20 (PA1 + AG1)
 > Rekurzivní rozklad problému na podproblémy metodou Rozděl-a-panuj. Rekurze vs iterace. Dynamické programování.
 
+
 ### Todo
 - možná přidat náznaky těch algoritmů v dynamickém programování?
 	- Na fitwiki někdo měl například: "ukažte na hledání nejdelší rostoucí posloupnosti"

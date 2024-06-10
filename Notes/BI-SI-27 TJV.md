@@ -9,6 +9,7 @@ FILE TAGS: BI-SI-27 BI-WI-17 TJV
 > BI-WSI-SI-27 / BI-WSI-WI-17 (TJV)
 > Architektura podnikových aplikací. Popis jednotlivých vrstev podnikových aplikací: klientská vrstva, webová vrstva, vrstva obchodní logiky, perzistentní vrstva
 
+
 ### architektura podnikových aplikací
 
 START

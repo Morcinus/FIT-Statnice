@@ -9,6 +9,7 @@ FILE TAGS: BI-SI-22 SI2.3
 > BI-WSI-SI-22 (SI2.3)
 > Zajištění kvality software: Způsoby zjišťování kvality, typologie testů, atributy testů, black vs. white box, akceptační, kvalifikační, regresní testy, automatizace testů.
 
+
 ### Testování softwaru
 
 START

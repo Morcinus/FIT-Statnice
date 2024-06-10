@@ -9,6 +9,7 @@ FILE TAGS: BI-SPOL-25 PST
 > BI-SPOL-25 (PST)
 > Pravidla pro výpočty pravděpodobností, Bayesův vzorec. Náhodné veličiny, příklady rozdělení, distribuční funkce, hustota, momenty. Nezávislost náhodných jevů a veličin. Centrální limitní věta, zákony velkých čísel
 
+
 ### TODO
 - Zde by možná stálo za to přidat ještě rozptyly a střední hodnoty jednotlivých rozdělení
 - Ještě možná přidat podmíněnou pravděpodobnost u spojitých veličin

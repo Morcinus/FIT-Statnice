@@ -9,6 +9,7 @@ FILE TAGS: BI-SI-19 BI-WI-14 SI1.2
 > BI-WSI-SI-19 / BI-WSI-WI-14 (SI1.2)
 > Vzory používané během návrhu: třívrstvá architektura, Model View Controller, GoF vzory (Abstraktní továrna, Stav, Adaptér).
 
+
 ### Třívrstvá architektura
 
 START

@@ -9,6 +9,7 @@ FILE TAGS: BI-SPOL-27 SAP
 > BI-SPOL-27 (SAP)
 > Kombinační a sekvenční logické obvody (Mealy, Moore), popis a možnosti implementace na úrovni hradel. Minimalizace vyjádření logické funkce (s využitím map)
 
+
 ### logické obvody
 
 START

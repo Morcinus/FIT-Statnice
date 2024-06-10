@@ -9,6 +9,7 @@ FILE TAGS: BI-SI-1 BEZ
 > BI-WSI-SI-1 (BEZ)
 > Informační bezpečnost, architektura bezpečnosti v modelu OSI. (BI-BEZ)
 
+
 ## Informační bezpečnost
 ### Komponenty informační bezpečnosti
 

@@ -8,6 +8,7 @@ FILE TAGS: BI-SPOL-28 SAP
 
 > BI-SPOL-28 (SAP)
 > Architektura číslicového počítače, instrukční cyklus počítače, základní třídy souborů instrukcí (ISA). Paměťový subsystém počítače, paměťová hierarchie, cache
+
 ### architektura číslicového počítače
 
 START

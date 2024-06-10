@@ -9,6 +9,7 @@ FILE TAGS: BI-SI-8 OOP
 > BI-WSI-SI-8 (OOP)
 > OOP abstrakce a hierarchie tříd - balíčky, třídy, atributy, metody, konstruktory, traity, ekvivalence a identita, nadtřídy, podtřídy, dědičnost, statický a dynamický dispatch.
 
+
 ### TODO
 - Přidat to jak se řeší diamond problem ve scale (jestli vůbec - nevím, jestli scala používá vícenásobnou dědičnost)
 - Přidat příklady na dynamic dispatch

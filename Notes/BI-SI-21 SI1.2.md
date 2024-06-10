@@ -10,6 +10,7 @@ FILE TAGS: BI-SI-21 BI-WI-16 SI1.2
 > Klasické a agilní metodiky vývoje software (základní principy, vhodnost použití, řešené problémy). Základní popis metodik Unified Process (UP), Extrémní programování (XP) a SCRUM.
 
 
+
 START
 BI-SZZ
 

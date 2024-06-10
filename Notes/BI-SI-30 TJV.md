@@ -9,6 +9,7 @@ FILE TAGS: BI-SI-30 BI-WI-20 TJV
 > BI-WSI-SI-30/BI-WSI-WI-20 (TJV)
 > Syntaxe protokolu HTTP. Použití metod POST, PUT, GET, DELETE protokolu HTTP u webových služeb REST a SOAP. Souvislost webových služeb, protokolu HTTP a architektury klient–server.
 
+
 ### architektura klient-server
 
 START

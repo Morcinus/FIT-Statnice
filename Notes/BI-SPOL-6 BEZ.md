@@ -9,6 +9,7 @@ FILE TAGS: BI-SPOL-6 BEZ
 > BI-SPOL-6 (BEZ)
 > Asymetrické kryptosystémy (šifra RSA, Diffie-Hellman, RSA digitální podpis), hešovací funkce (SHA-2, HMAC).
 
+
 ### asymetrické kryptosystémy
 
 START
@@ -563,7 +564,7 @@ END
 START
 BI-SZZ
 
-Co je **HMAC**?
+Co je a jak funguje **HMAC**?
 
 Back:
 

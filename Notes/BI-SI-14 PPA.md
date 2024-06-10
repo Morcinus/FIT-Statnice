@@ -8,7 +8,6 @@ FILE TAGS: BI-SI-14 PPA
 
 > BI-WSI-SI-14 / BI-WSI-WI-9 (PPA)
 > Lambda kalkul: definice pojmů, operací, reprezentace čísel.
-
 ### Funkcionální programování
 
 
@@ -620,7 +619,6 @@ Jak se dá v lambda kalkulu zapsat $f(n) = 3 \cdot f(n - 2) + n$?
 Back:
 
 ![](../Assets/Pasted%20image%2020240610165441.png)
-
 <!--ID: 1717181000830-->
 END
 
