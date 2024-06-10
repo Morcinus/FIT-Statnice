@@ -192,6 +192,11 @@ Na zásobník (do aktivačního záznamu - Function Call **Stack Frame**) se př
 - **funkční parametry**
 - **lokální proměnné**
 - **return address** = odkaz na to, odkud byla funkce volána
+
+![](../Assets/Pasted%20image%2020240610125500.png)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Q2sFmqvpBe0?si=jqslx4I7MTC2sOSi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 <!--ID: 1717181000892-->
 END
 
@@ -314,7 +319,7 @@ Back:
 - strategie, kdy se automaticky udržuje počet referencí na objekt
 - pokud dosáhne 0, objekt je z paměti odstraněn
 
-**Mark-and-seep**
+**Mark-and-sweep**
 - Označí všechny objekty přístupné ze zásobníku, ke kterým se lze dostat
 - Vymaže ostatní
 <!--ID: 1717181000914-->
@@ -409,6 +414,7 @@ Back:
 - **Řídící link** - adresa, kam se má program vrátit, až se dokončí ta funkce (tzn. typicky místo odkud se funkce volala)
 - **Přístupový link** - některé jazyky umožňují uvnitř funkce definovat **lokální funkci** (Lisp, JavaScript, Pascal,...). Tento link ukazuje na vyšší proceduru - abych přes to mohl přistupovat k proměnným v té vyšší proceduře.
 - **Uložené údaje počítače** - tam se ukládá kontext (např. proměnné), ve kterém jsem se nacházel před tím, než jsem volal danou funkci.
+- **Lokální proměnné**
 - **Pomocné dočasné proměnné** - generovány překladačem
 <!--ID: 1717181000931-->
 END
