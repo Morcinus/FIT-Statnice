@@ -391,7 +391,7 @@ Jak ukládají záznamy jazyky s **vnořenými procedurami** (např. Pascal, Lis
 
 Back:
 
-Ukládají **link** mezi aktivačními záznamy procedur (funkcí)
+Ukládají **přístupový link** mezi aktivačními záznamy procedur (funkcí)
 <!--ID: 1717181000928-->
 END
 

@@ -691,7 +691,7 @@ END
 START
 BI-SZZ
 
-Jaký je standard pro formát mřížky?
+Jaký je standard pro formát řádové mřížky?
 
 Back:
 

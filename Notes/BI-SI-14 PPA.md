@@ -614,7 +614,9 @@ END
 START
 BI-SZZ
 
-Jak se dá v lambda kalkulu zapsat $f(n) = 3 \cdot f(n - 2) + n$?
+Jak se dá v lambda kalkulu zapsat $f(n) = 3 \cdot f(n - 2) + n$? Kde:
+- $f(0)=0$
+- $f(1)=2$
 
 Back:
 

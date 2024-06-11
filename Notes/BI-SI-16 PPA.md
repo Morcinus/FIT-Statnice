@@ -213,15 +213,22 @@ START
 BI-SZZ
 
 Jak se **vyhodnocují dotazy** v Prologu?
+- Jaké dvě techniky se využívají?
+- V jakém pořadí se vyhodnocuje?
+- Jak fungují obecně vyhodnocování
+
+Např.
+![](../Assets/Pasted%20image%2020240611115103.png)
+
 
 Back:
 
 - Vyhodnocuje se na principu procházení stavového prostoru
-- Řešení se hledá pomocí backtrackingu a unifikace
+- Řešení se hledá pomocí **backtrackingu** a **unifikace**
 - Postupné vyhodnocování
-	1. Fakty
-	2. Pravidla bez rekurze
-	3. Rekurzivní pravidla (preferovaná koncová rekurze)
+	1. **Fakty**
+	2. **Pravidla bez rekurze**
+	3. **Rekurzivní pravidla** (preferovaná koncová rekurze)
 
 **Splnění dotazů**
 - Při splňování cíle hledá prolog nejdříve první klauzuli, která odpovídá jménem a aritou cíli. Hledání této klauzule probíhá v pořadí specifikace klauzulí v programu (tedy od začátku směrem ke konci programu)
@@ -272,7 +279,7 @@ Co je to **unifikace** v Prologu?
 
 Back:
 
-Proces, při kterém dochází ke snaze o dosazení termů za proměnné výrazu tak, že se původní termy stanou identickými
+Proces, při kterém dochází ke snaze o **dosazení termů za proměnné** výrazu tak, že se původní termy stanou identickými
 
 ```prolog
 parent(X) = parent(petr)
@@ -307,19 +314,13 @@ Back:
 - Překročení řezu zamezí využití ostatních pravidel.
 - Řez neovlivňuje zpětný chod vpravo do svého výskytu
 
+_Příklad:_
 ```prolog
-% přidání prvku X na jeho začátek ovšem jen v tom případě,
-% že X v L již není
-% pridej(+X,+L,-NL) seznam NL vznikne ze seznamu L
-pridej(X,L,L) :- prvek(X,L),
-% je-li X již prvkem L, nepřidám ho ! . % a zakáži návrat
+a(1).
+a(2).
+b(3).
+b(4).
 
-pridej(X,L,[X|L]).
-% X není prvkem L (jinak bych se sem nedostal), mohu ho tedy přidat
-```
-
-_Další příklad:_
-```prolog
 ?- a(X), b(X).
 false.
 

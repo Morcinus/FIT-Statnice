@@ -11,6 +11,7 @@ FILE TAGS: BI-SI-15 BI-WI-10 PPA
 
 ### TODO
 - tady by to chtělo víc kartiček na to, jak se definují jednotlivé funkce atd.
+- chtělo by to rozdělit kartičku na mapovací funkcionály do více kartiček o jednotlivých funkcionálech (foldr, foldl, filter, map, apply) - co dělají a jakou mají syntax
 
 START
 BI-SZZ
@@ -94,7 +95,7 @@ END
 START
 BI-SZZ
 
-Jaké datové typy lze uložit do **atomů**? (5)
+Jaké datové typy lze uložit do **atomů** v Lispu? (5)
 
 Back:
 
@@ -178,6 +179,8 @@ BI-SZZ
 
 Co je to Closure?
 
+(můžeš uvést na příkladu s `make-counter`)
+
 Back:
 
 - Funkce, jejíž prostředí zahrnuje proměnné a jejich hodnoty ve scope, ve kterém byla funkce definována
@@ -231,7 +234,7 @@ END
 START
 BI-SZZ
 
-Jaký typ rekurze je obecně dobré v využívat a proč?
+Jaký typ rekurze je obecně dobré využívat a proč?
 
 Back:
 
