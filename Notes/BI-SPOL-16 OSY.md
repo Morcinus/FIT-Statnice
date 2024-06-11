@@ -115,12 +115,13 @@ END
 START
 BI-SZZ
 
-Co je to **multitasking** a **multithreading**?
+Co je to **multitasking** a **multithreading** a **multiprocessing**?
 
 Back:
 
-- **multitasking** = více procesů, v každém jedno vlákno
-- **multithreading** = více vláken v procesu
+- **multitasking** = schopnost CPU managovat víc **procesů** najednou (např. že jim přiděluje čas atd.)
+- **multithreading** = to, že má jeden proces více vláken 
+- **multiprocessing** = schopnost CPU managovat víc **procesů** na **více CPU jádrech** 
 <!--ID: 1717743656813-->
 END
 
@@ -240,7 +241,7 @@ END
 START
 BI-SZZ
 
-Jaké problémy mohou nastat při **synchronizaci vláken**?
+Jaké problémy mohou nastat při **synchronizaci vláken**? (3)
 
 Back:
 
