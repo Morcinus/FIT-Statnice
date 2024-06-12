@@ -9,6 +9,8 @@ FILE TAGS: BI-SPOL-29 SAP
 > BI-SPOL-29 (SAP)
 > Kódy pro zobrazení čísel se znaménkem a realizace aritmetických operací (paralelní sčítačka/odčítačka, realizace aritmetických posuvů, dekodér, multiplexor, čítač). Reprezentace čísel v pohyblivé řádové čárce
 
+### TODO
+- přidat podrobnější informace o dekóderu a multiplexoru a sčítačkách a aritmetických posuvech.. hlavně o jejich implementaci pomocí logických obvodů..
 
 ### Převody
 
