@@ -116,9 +116,15 @@ Co jsou to **seznamy** ve funkcionálním programování? (3)
 
 Back:
 
-- Prázdný seznam – `()` , stejné jako nil
-- Seznam se třemi prvky – `(a b c)`
-- Seznam se třemi prvky, poslední prvek je seznam – `(a b (c))`
+Seznamy jsou sekvence skládající se z:
+1. Otevírací závorka
+2. Žádný nebo více atomů
+3.  Ukončovací závorka
+
+**Příklady**
+- Prázdný seznam – `'()` , stejné jako `nil`
+- Seznam se třemi prvky – `'(a b c)`
+- Seznam se třemi prvky, poslední prvek je seznam – `'(a b (c))`
 <!--ID: 1717529248385-->
 END
 
@@ -212,7 +218,8 @@ Další vysvětlivky:
 	- např. `(let ([nazev hodnota]) body)`, kde body je kód, co tu proměnnou využívá
 - `(define counter1 (make-counter))` mi udělá instanci closure (tzn. jakoby té funkce s custom prostředím)
 - return hodnota funkce je její poslední prvek - tady v `lambda` funkci je to `count`
-- 
+
+
 <!--ID: 1717529248397-->
 END
 
@@ -286,25 +293,32 @@ Jak lze v LISPu zapsat funkci na faktoriál? (normálně + pomocí koncové reku
 
 Back:
 
+**Normální zápis**:
 ```lisp
-(defun factorial (N)
-	;;;"Compute the factorial of N."
-	(if (= N 0)
-		1
-		(* N (factorial (- N 1)))
-))
+(define (factorial n)
+  ( if (= n 0)
+      1
+      (* n (factorial (- n 1)))
+  )
+)
+    
+(print (factorial 5))
+```
 
-(defun fast-factorial (N)
-	;;;"A tail-recursive version of factorial."
-	(fast-factorial-aux N 1)
+Zápis pomocí **koncové rekurze**:
+```lisp
+(define (factorial n)
+  (factorial-aux n 1)
 )
 
-(defun fast-factorial-aux (N ACC)
-	;;;"Multiply A by the factorial of N."
-	(if (= N 0)
-		ACC
-		(fast-factorial-aux (- N 1) (* N ACC))
-))
+(define (factorial-aux n acc)
+  ( if (= n 0)
+      acc
+      (factorial-aux (- n 1) (* acc n) )
+  )
+)
+
+(print (factorial 5))
 ```
 <!--ID: 1717529248411-->
 END

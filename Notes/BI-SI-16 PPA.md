@@ -165,7 +165,7 @@ Back:
 - **Atomy** – začínají na malé písmeno (`x`, `y`, `z`, `fred`)
 - **Čísla** – celá, reálná
 - **Proměnné** – začínají na velké písmeno
-- Struktury – obsahují atom, kterému se říká funktor, a seznam argumentů (`edge(a,b)`, `line(1,2,4)`)
+- **Struktury** – obsahují atom, kterému se říká funktor, a seznam argumentů (`edge(a,b)`, `line(1,2,4)`)
 
 ![](../Assets/Pasted%20image%2020240604165311.png)
 <!--ID: 1717529248337-->
@@ -180,6 +180,9 @@ Co jsou to **seznamy** v Prologu?
 
 Back:
 
+Jsou to kolekce prvků.
+
+Příklady:
 - `[]` – prázdný seznam
 - `[1]`
 - `[1,2,3]`
@@ -197,9 +200,13 @@ Jaké jsou **operátory** v Prologu?
 
 Back:
 
-- **Přiřazování**: `Z is Z+1`
-- **Konjunkce**: `,`
-- **Disjunkce** `;`
+- `,` and
+- `;` or (má menší prioritu než and!)
+- `:-` dosazení ("if")
+- `=` unifikace
+- `\\=` nelze unifikovat nerovno (zpětné lomeno rovná se)
+- `is` vyhodnocení aritmetiky na pravé straně operátoru a unifikace do levé strany
+- `=:=` aritmetické porovnání
 
 ```prolog
 p(X):- a(X,Y),b(Y);c(Y),d(X,Y). % is equivalent to p(X):- a(X,Y),b(Y). p(X):- c(Y),d(X,Y).
@@ -231,8 +238,8 @@ Back:
 	3. **Rekurzivní pravidla** (preferovaná koncová rekurze)
 
 **Splnění dotazů**
-- Při splňování cíle hledá prolog nejdříve první klauzuli, která odpovídá jménem a aritou cíli. Hledání této klauzule probíhá v pořadí specifikace klauzulí v programu (tedy od začátku směrem ke konci programu)
-- Najde-li odpovídající klauzuli, pak se provede unifikace mezi cílem a hlavou klauzule a začne se vykonávat tělo (s substitucemi, které vznikly unifikací).
+- Při splňování cíle hledá prolog nejdříve první klauzuli, která odpovídá jménem a počtem argumentů v cíli. Hledání této klauzule probíhá v pořadí specifikace klauzulí v programu (tedy od začátku směrem ke konci programu)
+- Najde-li odpovídající klauzuli, pak se provede unifikace mezi cílem a hlavičkou klauzule a začne se vykonávat tělo (s substitucemi, které vznikly unifikací).
 - Pokud je klauzule faktem, máme hotovo.
 - Pokud je klauzule pravidlem, pak se postupně pokoušíme splnit cíle v pořadí zleva doprava. Uspějí-li všechny, pak uspěl i původní cíl. Pokud nějaký neuspěl, pomocí backtrackingu se vrací k poslednímu bodu rozhodnutí a zkouší se rozhodnout jinak.
 
@@ -279,7 +286,16 @@ Co je to **unifikace** v Prologu?
 
 Back:
 
-Proces, při kterém dochází ke snaze o **dosazení termů za proměnné** výrazu tak, že se původní termy stanou identickými
+Proces, při kterém dochází ke snaze o **dosazení termů za proměnné** výrazu tak, že se původní termy stanou **identickými**.
+
+- Operátor unifikace je `=`
+	- Pokouší se o ztotožnění operátorů na obou stranách tím, že dosadí hodnoty  za proměnné (a tím je instanciuje, pokud ještě nebyly).
+	- Pokud se mu to nepodaří, tak vrátí false
+
+**Algoritmus** – Mějme dva termy T1 a T2, které chceme unifikovat:
+- Pokud T1 i T2 jsou konstanty, pak se unifikují pouze pokud jsou stejné.
+- Pokud T1 je proměnná a T2 cokoliv jiného, pak se T1 a T2 unifikují a T1 je **instanciována** (pokud již instanciována není) na T2. Toto platí i obráceně. Pokud jsou T1 i T2 proměnné, pak se obě instanciují na tu druhou (a tedy sdílí hodnotu).
+- Pokud T1 a T2 jsou komplexnější termy, pak se unifikují pokud jsou to funktory se stejným jménem, aritou a všechny jejich argumenty se unifikují.
 
 ```prolog
 parent(X) = parent(petr)
@@ -330,12 +346,12 @@ X = 1, Y = 4 ;
 X = 2, Y = 3 ;
 X = 2, Y = 4.
 
-% Řez nedovolí backtrackovat zpět po "vymyšlení" hodnoty `X`.
+% Řez nedovolí backtrackovat zpět po "vymyšlení" hodnoty `X`.
 ?- a(X), !, b(Y).
 X = 1, Y = 3 ;
 X = 1, Y = 4. 
 
-% Zde nemůžeme backtrackovat zpět po "vymyšlení" hodnoty v `X` a `Y`.
+% Zde nemůžeme backtrackovat zpět po "vymyšlení" hodnoty v `X` a `Y`.
 ?- a(X), b(Y), !.
 X = 1, Y = 3.
 ```
