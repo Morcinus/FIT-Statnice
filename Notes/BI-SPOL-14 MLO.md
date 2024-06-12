@@ -587,9 +587,9 @@ K čemu je dobré vytvářet sémantické stromy? (3)
 
 Back:
 
-- Naleznu tím DNT
-- Rozhodnu o splnitelnosti formule
-- Ověřím logický důsledek
+- **Naleznu tím DNT** (disjunkce otevřených větví)
+- Rozhodnu o **splnitelnosti formule** (alespoň jedna větev je otevřená)
+- Ověřím **logický důsledek** ($A \Rightarrow B$ pokud $A \land \neg B$ má uzavřený strom)
 <!--ID: 1715601679324-->
 END
 

@@ -426,6 +426,8 @@ Jaké jazyky **TS přijímají** a které **rozhodují**?
 Back:
 
 TS **přijímají** rekurzivně spočetné jazyky a **rozhodují** rekurzivní jazyky (= přijímají je a nikdy se nezacyklí)
+
+Tzn. TS se může u rekurzivně spočetných jazyků zacyklit, pokud je vstup mimo daný jazyk
 <!--ID: 1717778217110-->
 END
 

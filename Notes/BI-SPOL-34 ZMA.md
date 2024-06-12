@@ -274,7 +274,7 @@ END
 START
 BI-SZZ
 
-Věta: **diferencovatelnost a spojitost** funkce v bodě
+Věta: souvislost **diferencovatelnosti a spojitosti** funkce v bodě
 
 Back:
 
@@ -850,7 +850,7 @@ Back:
 
 $$q = \lim_{x \to \pm\infty} f (x) - kx$$
 
-(To $kx$ je mimo tu limitu)
+(To $kx$ je uvnitř té limity)
 <!--ID: 1716877593364-->
 END
 
