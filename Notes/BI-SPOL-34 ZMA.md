@@ -889,7 +889,7 @@ Back:
 ![](../Assets/Pasted%20image%2020240530170258.png)
 
 1. Určím $D_f$, $H_f$, sudost/lichost (souměrné podle osy y nebo podle 0) a periodicitu, průsečíky s osami
-2. Spočtu **limity** v krajních bodech definičního oboru ($\pm \infty$) - abych věděl, kam ta funkce směřuje
+2. (Optional pokud nevím jak graf cca vypadá: Spočtu **limity** v krajních bodech definičního oboru ($\pm \infty$) - abych věděl, kam ta funkce směřuje)
 3. Spočtu **asymptoty** v krajních bodech $D_f$ (buď $x=a$ nebo $y = kx+q$)
 4. **Zjistím monotónnost**
 	1. Najdu **body podezřelé z extrémů** - tzn. body, kde 1. derivace **neexistuje** nebo je **nulová** (pomocí rovnice $f'(x)=0$).
@@ -898,7 +898,7 @@ Back:
 5. **Zjistím konvexnost/konkávnost**
 	1. Najdu **inflexní body** - tzn. body, kde 2. derivace **neexistuje** nebo je **nulová** (pomocí rovnice $f''(x)=0$).
 	2. Podle těchto bodů rozdělím $D_f$ na **intervaly**
-	3. V každém intervalu dosadám nějaké číslo z toho intervalu do $f'(x)$. Pokud je výsledek kladný, je funkce konvexní, pokud záporný, je funkce konkávní.
+	3. V každém intervalu dosadím nějaké číslo z toho intervalu do $f'(x)$. Pokud je výsledek kladný, je funkce konvexní, pokud záporný, je funkce konkávní.
 6. Načrtnu **graf funkce**
 
 Např.
