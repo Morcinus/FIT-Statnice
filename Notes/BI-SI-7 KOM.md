@@ -39,7 +39,7 @@ Back:
 - **Enterprise Ontology** – ontologie
 - **Enterprise Architecture** – architektura podniku (důležité části, organizační struktury, vazby…)
 - **Enterprise Governance** – rozdělení odpovědností ve firmě a nastavení principu rozhodování a řešení problémů
-- Enterprise Design – úzce souvisí s předchozími
+- **Enterprise Design** – úzce souvisí s předchozími
 <!--ID: 1717269874214-->
 END
 
@@ -102,7 +102,7 @@ END
 START
 BI-SZZ
 
-Co je **operační axiom (princip práce)** v EE?
+Co je **operační axiom (princip práce)** v **EE**?
 
 Back:
 
@@ -191,7 +191,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou 2 typy závazků v PSI?
+Jaké jsou 2 **typy závazků** v **PSI**?
 
 Back:
 
@@ -257,7 +257,7 @@ END
 START
 BI-SZZ
 
-Co je **role aktora** v PSI?
+Co je **role aktora** v **PSI**?
 
 Back:
 
@@ -271,7 +271,7 @@ END
 START
 BI-SZZ
 
-Co je **aktor** v PSI?
+Co je **aktor** v **PSI**?
 
 Back:
 
@@ -285,7 +285,7 @@ END
 START
 BI-SZZ
 
-Jak vypadá schéma fungování organizace v PSI?
+Jak vypadá schéma fungování organizace v **PSI**?
 
 Back:
 
@@ -302,7 +302,7 @@ END
 START
 BI-SZZ
 
-Co je **transakce** v EE? Mezi kým probíhá?
+Co je **transakce** v **EE**? Mezi kým probíhá?
 
 Back:
 
@@ -320,7 +320,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou tři fáze transakcí v EE?
+Jaké jsou tři **fáze** transakcí v **EE**?
 
 Back:
 
@@ -339,7 +339,7 @@ END
 START
 BI-SZZ
 
-Co je **order fáze** transakce v EE?
+Co je **order fáze** transakce v **EE**?
 
 Back:
 
@@ -353,7 +353,7 @@ END
 START
 BI-SZZ
 
-Co je **execution fáze** transakce v EE?
+Co je **execution fáze** transakce v **EE**?
 
 Back:
 
@@ -366,7 +366,7 @@ END
 START
 BI-SZZ
 
-Co je **result fáze** transakce v EE?
+Co je **result fáze** transakce v **EE**?
 
 Back:
 
@@ -384,18 +384,11 @@ BI-SZZ
 Popiš/nakresli jak vypadá **základní transakční vzor**.
 
 Back:
-
-![](../Assets/Pasted%20image%2020240601210708.png)
+![](../Assets/Pasted%20image%2020240611125522.png)
 
 - Takto vzniká produkt
-- Modrá kolečka jsou C-fact
 - Produkt začíná existovat v okamžiku jeho přijetí (placení je zase jiná transakce)
-- Každá struktura C-act/fact se dá zobecnit: p_erformer_ – někdo kdo koná záměr (_intention_) a adresuje to protistranně (_addressee_) a týká se to nějakého produktu (_product_)
-- Popis
-    - Bílý čtverec – C-act
-    - Kruh – C-fact
-    - Šedý kosočtverec – P-act
-    - Kosočtverec – P-fact
+- Každá struktura C-act/fact se dá zobecnit: _performer_ – někdo kdo koná záměr (_intention_) a adresuje to protistranně (_addressee_) a týká se to nějakého produktu (_product_)
 
 _Příklad_
 ![](../Assets/Pasted%20image%2020240601210736.png)
@@ -412,7 +405,10 @@ Jak vypadá **standardní transakční vzor**? (nakresli/popiš)
 
 Back:
 
-Obsahuje navíc i situace odmítání při domlouvání produktu i při přijímání produktu
+- Obsahuje navíc i situace odmítání při domlouvání produktu i při přijímání produktu
+- Pro úsporu jsou sloučeny symboly P-act a P-fact
+- `decline` – exekutor není schopen dodat požadovaný produkt
+- `reject` –dodaný produkt neodpovídá požadavkům specifikovaným v `request`
 
 ![](../Assets/Pasted%20image%2020240601210802.png)
 <!--ID: 1717269874274-->
@@ -480,7 +476,7 @@ END
 START
 BI-SZZ
 
-Co je **kompetence** v OMEGA? Uveď příklad.
+Co je **kompetence** v **OMEGA**? Uveď příklad.
 
 Back:
 
@@ -497,7 +493,7 @@ END
 START
 BI-SZZ
 
-Co je **autorita** v OMEGA? Uveď příklad.
+Co je **autorita** v **OMEGA**? Uveď příklad.
 
 Back:
 
@@ -514,7 +510,7 @@ END
 START
 BI-SZZ
 
-Co je **odpovědnost** v OMEGA? Uveď příklad.
+Co je **odpovědnost** v **OMEGA**? Uveď příklad.
 
 Back:
 
@@ -531,7 +527,7 @@ END
 START
 BI-SZZ
 
-Co je **provoz systému** v OMEGA?
+Co je **provoz systému** v **OMEGA**?
 
 Back:
 
@@ -545,7 +541,7 @@ END
 START
 BI-SZZ
 
-Co je **cyklus aktora** v OMEGA?
+Co je **cyklus aktora** v **OMEGA**?
 
 Back:
 
@@ -566,7 +562,7 @@ END
 START
 BI-SZZ
 
-Co je **teorie alpha** v EE?
+Co je **teorie alpha** v **EE**?
 
 Back:
 
@@ -596,7 +592,7 @@ END
 START
 BI-SZZ
 
-Co je **Koordinace (C-akty)** v Teorii Alpha?
+Co je **Koordinace (C-akty)** v teorii **Alpha**?
 
 Back:
 
@@ -614,7 +610,7 @@ END
 START
 BI-SZZ
 
-Co je **Produkce (P-akty)** v Teorii Alpha? Na jaké dva typy se dělí?
+Co je **Produkce (P-akty)** v teorii **Alpha**? Na jaké dva typy se dělí?
 
 Back:
 
@@ -632,7 +628,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou typy DEMO modelů? (4)
+Jaké jsou **typy** DEMO modelů? (4)
 
 Back:
 
@@ -672,7 +668,7 @@ Co je **Procesní Model (Process Model, PM)**?
 
 Back:
 
-Druhy transakcí a detailní vyjádření mezi vztahů mezi akty
+Druhy transakcí a detailní vyjádření vztahů mezi akty
 
 ![](../Assets/Pasted%20image%2020240601211530.png)
 <!--ID: 1717269874312-->
@@ -721,15 +717,16 @@ Co je **cooperation model**? Pomocí čeho je vytvářen? (2)
 
 Back:
 
-Model spolupráce organizace je modelem konstrukce jeho rolí transaktorů a koordinačních struktur mezi nimi
+Model spolupráce organizace je modelem konstrukce rolí transaktorů a koordinačních struktur mezi nimi
 
 Vyjádřen pomocí
 
 (1) **Diagramu koordinační struktury** (Organisation Construction Diagram)
-![](../Assets/Pasted%20image%2020240601211744.png)
+![](../Assets/Pasted%20image%2020240601211807.png)
 
 (2) **Tabulky produktů transactorů**
-![](../Assets/Pasted%20image%2020240601211807.png)
+![](../Assets/Pasted%20image%2020240601211744.png)
+
 <!--ID: 1717269874320-->
 END
 
