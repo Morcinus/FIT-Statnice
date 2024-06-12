@@ -726,7 +726,6 @@ Vyjádřen pomocí
 
 (2) **Tabulky produktů transactorů**
 ![](../Assets/Pasted%20image%2020240601211744.png)
-
 <!--ID: 1717269874320-->
 END
 
