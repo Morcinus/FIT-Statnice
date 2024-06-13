@@ -95,6 +95,9 @@ Back:
 
 **sled** v grafu = sekvence střídavě vrcholů a k nim přiléhajících hran
 - $v_0, e_1, v_1, e_2, \dots, e_k, v_k$, kde $e_i = \{v_{i-1}, v_i\}, (\forall i =1,\dots,k) : e_i \in E(G)$
+
+![](../Assets/Pasted%20image%2020240613091812.png)
+
 <!--ID: 1717437781635-->
 END
 
@@ -110,6 +113,9 @@ Back:
 
 **cesta** v grafu = sled, ve kterém se neopakují vrcholy
 - délka cesty = počet hran v cestě
+
+![](../Assets/Pasted%20image%2020240613091812.png)
+
 <!--ID: 1717437781638-->
 END
 
@@ -184,8 +190,11 @@ BI-SZZ
 Definice: graf **cesta**
 
 Back:
+Cesta délky $m$ (s $m$ hranami) je graf: $P_m = (\{0,\dots,m\}, \{\{i,i+1\} | i \in \{ 0,\dots,m-1 \} \}); m\ge0$
 
-**cesta** $P_m = (\{0,\dots,m\}, \{\{i,i+1\} | i \in \{ 0,\dots,m-1 \} \})$
+
+![](../Assets/Pasted%20image%2020240613093012.png)
+
 <!--ID: 1717437781652-->
 END
 
@@ -199,7 +208,10 @@ Definice: **kružnice**
 
 Back:
 
-**kružnice $C_n = (\{1,\dots,n\}, \{\{i,i+1\} | i \in \{1,\dots,n-1\} \} \cup \{\{1,n\}\})$**
+Kružnice délky $n$ (s $n$ vrcholy) $C_n = (\{1,\dots,n\}, \{\{i,i+1\} | i \in \{1,\dots,n-1\} \} \cup \{\{1,n\}\}); n\ge3$
+
+![](../Assets/Pasted%20image%2020240613093826.png)
+
 <!--ID: 1717437781655-->
 END
 
@@ -214,6 +226,9 @@ Definice: **doplněk grafu**
 Back:
 
 **doplněk** $\overline G = (V, \binom V 2 \setminus E)$ grafu $G = (V, E)$
+
+![](../Assets/Pasted%20image%2020240613094456.png)
+
 <!--ID: 1717437781658-->
 END
 
@@ -243,6 +258,9 @@ Definice: **podgraf**
 Back:
 
 graf $H$ je **podgraf $G$ $\iff V(H) \subseteq V(G) \land E(H) \subseteq E(G)$**
+
+![](../Assets/Pasted%20image%2020240613094819.png)
+
 <!--ID: 1717437781663-->
 END
 
@@ -258,7 +276,10 @@ Back:
 
 graf $H$ je **indukovaný podgraf $G$** (značí se $H \le G)$**$\iff V(H) \subseteq V(G) \land E(H) = E(G) \cap \binom{V(H)}{2}$**
 
-Tzn. podgraf, kde jsou všechny hrany původního grafu
+Tzn. podgraf, kde jsou všechny hrany původního grafu.
+
+![](../Assets/Pasted%20image%2020240613094831.png)
+
 <!--ID: 1717437781666-->
 END
 
@@ -333,9 +354,12 @@ Definice: **strom**
 Back:
 
 **strom** = souvislý graf bez kružnic (= acyklický)
-- $\iff$mezi každou dvojicí vrcholů existuje právě jedna cesta
+- $\iff$ mezi každou dvojicí vrcholů existuje právě jedna cesta
 - $\iff$ je souvislý a vynecháním libovolné hrany přestane být souvislý
 - $\iff$ je souvislý a $|E| = |V| -1$
+
+![](../Assets/Pasted%20image%2020240613101621.png)
+
 <!--ID: 1717437781680-->
 END
 
@@ -350,6 +374,9 @@ Definice: **les**
 Back:
 
 graf bez kružnic
+
+![](../Assets/Pasted%20image%2020240613101638.png)
+
 <!--ID: 1717437781682-->
 END
 
@@ -364,6 +391,9 @@ Definice: **list**
 Back:
 
 vrchol stupně $1$
+
+![](../Assets/Pasted%20image%2020240613102133.png)
+
 <!--ID: 1717437781685-->
 END
 
@@ -392,6 +422,9 @@ Definice: **kostra** souvislého grafu
 Back:
 
 **kostra** souvislého grafu $G$ = podgraf $G$, který obsahuje všechny vrcholy a je stromem
+
+![](../Assets/Pasted%20image%2020240613102311.png)
+
 <!--ID: 1717437781690-->
 END
 
@@ -407,6 +440,9 @@ Back:
 
 **topologické uspořádání** orientovaného grafu = seřazení vrcholů do řady, aby všechny hrany vedly doprava
 - takové seřazení vrcholů $V = \{ v_1, \dots, v_n \}$, že pro každou orientovanou hranu $(v_i, v_j) \in E$ platí $i < j$
+
+![](../Assets/Pasted%20image%2020240613101939.png)
+
 <!--ID: 1717437781693-->
 END
 
@@ -507,8 +543,13 @@ Jakými způsoby lze reprezentovat graf v paměti? (2)
 
 Back:
 
-- maticí sousedů
-- seznam sousedů/následníků
+- maticí sousednosti
+- seznam sousedů
+	- resp. seznam následníků (u orientovaných grafů)
+
+![](../Assets/Pasted%20image%2020240613103027.png)
+![](../Assets/Pasted%20image%2020240613103049.png)
+![](../Assets/Pasted%20image%2020240613103100.png)
 <!--ID: 1717437781711-->
 END
 
