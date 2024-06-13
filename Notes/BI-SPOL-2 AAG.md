@@ -353,7 +353,7 @@ Pro jaké jazyky lze sestrojit **minimální DKA**?
 
 Back:
 
-pro každý jazyk lze sestrojit a je unikátní
+pro každý regulární jazyk lze sestrojit a je unikátní
 <!--ID: 1717928191761-->
 END
 
@@ -489,7 +489,7 @@ BI-SZZ
 
 Back:
 
-všechny regulární gramatiky jsou **bezkontextové**, **kontextové** a **nezkracující**
+všechny regulární gramatiky jsou **bezkontextové**, **kontextové** a **nezkracující** a **neomezené**
 <!--ID: 1717928191784-->
 END
 
