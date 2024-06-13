@@ -423,7 +423,7 @@ Back:
 ![](../Assets/Pasted%20image%2020240602115159.png)
 
 _Vlastními slovy_:
-- Vezmu matici $\Bbb{A}$ ze které vyříznu (odstraním) $k$tý řádek a $l$tý sloupec
+- Vezmu matici $\Bbb{A}$ ze které vyříznu (odstraním) $k$tý řádek a $l$tý sloupec, u té matice pak spočtu determinant a hodím tam nějaké znaménko
 ![](../Assets/Pasted%20image%2020240602115711.png)
 <!--ID: 1717269874391-->
 END
@@ -708,9 +708,10 @@ Výpočet: Jak se vypočte **geometrická násobnost vlastního čísla**?
 
 Back:
 
-Mějme matici $\Bbb{A} \in \Bbb{C}^{n,n}$a a její vlastní číslo $λ ∈ \Bbb{C}$:
+Mějme matici $\Bbb{A} \in \Bbb{C}^{n,n}$ a její vlastní číslo $λ ∈ \Bbb{C}$:
 1. Vlastní vektory příslušné vlastnímu číslu $λ$ jsou všechna nenulová řešení homogenní rovnice $(\Bbb{A} − λ\Bbb{E}) \cdot x = θ$.
 2. Geometrická násobnost vlastního čísla $λ$, tj. $\nu_g(λ)$, je dimenze podprostoru všech řešení homogenní rovnice $(\Bbb{A} − λ\Bbb{E}) \cdot x = θ$.
+	1. Tzn. za $\lambda$ dosadím už to konkrétní číslo a vyřeším to jako homogenní SLR, dimenze toho řešení je pak geometrická násobnost
 
 ![](../Assets/Pasted%20image%2020240601203151.png)
 ![](../Assets/Pasted%20image%2020240601203206.png)
@@ -796,6 +797,9 @@ Nechť $\mathcal{X} = (x_1, \dots , x_m)$ a $\mathcal{Y} = (y_1, \dots , y_n)$ j
 
 Pozn.
 - ve svých sloupcích obsahuje souřadnice vektorů z $\mathcal{X}$ vzhledem k bázi $\mathcal{Y}$.
+
+_Příklad:_
+![](../Assets/Pasted%20image%2020240613120407.png)
 <!--ID: 1717269874455-->
 END
 
@@ -855,7 +859,7 @@ END
 START
 BI-SZZ
 
-Jak vyřeším příklad typu: "**ověřte, zda je operátor diagonalizovatelný, a nalezněte bázi, ve které je jeho matice diagonální**"
+Jak vyřeším příklad typu: "**ověřte, zda je operátor diagonalizovatelný, a nalezněte bázi, ve které je jeho matice diagonální**" + sestavte matici operátoru a matici přechodu
 
 Back:
 
