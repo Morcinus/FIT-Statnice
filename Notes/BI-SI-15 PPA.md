@@ -218,7 +218,6 @@ Další vysvětlivky:
 	- např. `(let ([nazev hodnota]) body)`, kde body je kód, co tu proměnnou využívá
 - `(define counter1 (make-counter))` mi udělá instanci closure (tzn. jakoby té funkce s custom prostředím)
 - return hodnota funkce je její poslední prvek - tady v `lambda` funkci je to `count`
-
 <!--ID: 1717529248397-->
 END
 

@@ -97,7 +97,6 @@ Back:
 - $v_0, e_1, v_1, e_2, \dots, e_k, v_k$, kde $e_i = \{v_{i-1}, v_i\}, (\forall i =1,\dots,k) : e_i \in E(G)$
 
 ![](../Assets/Pasted%20image%2020240613091812.png)
-
 <!--ID: 1717437781635-->
 END
 
@@ -115,7 +114,6 @@ Back:
 - délka cesty = počet hran v cestě
 
 ![](../Assets/Pasted%20image%2020240613091812.png)
-
 <!--ID: 1717437781638-->
 END
 
@@ -194,7 +192,6 @@ Cesta délky $m$ (s $m$ hranami) je graf: $P_m = (\{0,\dots,m\}, \{\{i,i+1\} | i
 
 
 ![](../Assets/Pasted%20image%2020240613093012.png)
-
 <!--ID: 1717437781652-->
 END
 
@@ -211,7 +208,6 @@ Back:
 Kružnice délky $n$ (s $n$ vrcholy) $C_n = (\{1,\dots,n\}, \{\{i,i+1\} | i \in \{1,\dots,n-1\} \} \cup \{\{1,n\}\}); n\ge3$
 
 ![](../Assets/Pasted%20image%2020240613093826.png)
-
 <!--ID: 1717437781655-->
 END
 
@@ -228,7 +224,6 @@ Back:
 **doplněk** $\overline G = (V, \binom V 2 \setminus E)$ grafu $G = (V, E)$
 
 ![](../Assets/Pasted%20image%2020240613094456.png)
-
 <!--ID: 1717437781658-->
 END
 
@@ -260,7 +255,6 @@ Back:
 graf $H$ je **podgraf $G$ $\iff V(H) \subseteq V(G) \land E(H) \subseteq E(G)$**
 
 ![](../Assets/Pasted%20image%2020240613094819.png)
-
 <!--ID: 1717437781663-->
 END
 
@@ -279,7 +273,6 @@ graf $H$ je **indukovaný podgraf $G$** (značí se $H \le G)$**$\iff V(H) \subs
 Tzn. podgraf, kde jsou všechny hrany původního grafu.
 
 ![](../Assets/Pasted%20image%2020240613094831.png)
-
 <!--ID: 1717437781666-->
 END
 
@@ -359,7 +352,6 @@ Back:
 - $\iff$ je souvislý a $|E| = |V| -1$
 
 ![](../Assets/Pasted%20image%2020240613101621.png)
-
 <!--ID: 1717437781680-->
 END
 
@@ -376,7 +368,6 @@ Back:
 graf bez kružnic
 
 ![](../Assets/Pasted%20image%2020240613101638.png)
-
 <!--ID: 1717437781682-->
 END
 
@@ -393,7 +384,6 @@ Back:
 vrchol stupně $1$
 
 ![](../Assets/Pasted%20image%2020240613102133.png)
-
 <!--ID: 1717437781685-->
 END
 
@@ -424,7 +414,6 @@ Back:
 **kostra** souvislého grafu $G$ = podgraf $G$, který obsahuje všechny vrcholy a je stromem
 
 ![](../Assets/Pasted%20image%2020240613102311.png)
-
 <!--ID: 1717437781690-->
 END
 
@@ -442,7 +431,6 @@ Back:
 - takové seřazení vrcholů $V = \{ v_1, \dots, v_n \}$, že pro každou orientovanou hranu $(v_i, v_j) \in E$ platí $i < j$
 
 ![](../Assets/Pasted%20image%2020240613101939.png)
-
 <!--ID: 1717437781693-->
 END
 
