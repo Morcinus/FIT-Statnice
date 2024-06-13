@@ -100,11 +100,11 @@ Jaké existují **stavy vláken** a co znamenají?
 Back:
 
 - **Idle** – vznik nového vlákna
-- **Ready** –vlákno čeká na přidělení jádra CPU
-- **Running** – Vlákno je zpracováváno jádrem CPU
-- **Blocked** – vlákno čeká na událost (příchod signálu, ukončení IO operace...)
-- **Zombie** – vlákno je ukončováno, ale ještě nebylo vše doknčeno
-- **Free** – vlákno bylo kompletně zrušeno (teoretický stav)
+- **Ready** – čekání na přidělení jádra CPU
+- **Running** –  zpracovávání jádrem CPU
+- **Blocked** –  čekání na událost (příchod signálu, ukončení IO operace...)
+- **Zombie** – ukončování vlákna, ale ještě nebylo vše doknčeno
+- **Free** – kompletní zrušení vlákna (teoretický stav)
 
 ![](../Assets/Pasted%20image%2020240605191519.png)
 <!--ID: 1717743656810-->
@@ -185,9 +185,9 @@ Jaké existují **implementace vláken**?
 
 Back:
 
--  **user-level vlákna** - run-time správa, kooperativní plánování, spíše historické
--  **kernel-level vlákna** - správa v jádru OS, modernější
--  **hybridně** - $m$ user-level vláken je namapováno na $n$ kernel-level vláken
+-  **user-level vlákna** – run-time správa, kooperativní plánování, spíše historické
+-  **kernel-level vlákna** – správa v jádru OS, modernější
+-  **hybridně** – $m$ user-level vláken je namapováno na $n$ kernel-level vláken
 
 Poznámka: *počet procesů a vláken bývá omezen (pro celý systém i pro každého uživatele)*
 <!--ID: 1717743656818-->
@@ -308,7 +308,7 @@ Co je to instrukce TSL?
 Back:
 
 - TSL = test-and-set-lock
-- Hypotetická instrukce sloužííc ke korektní implementaci aktivního čekání na HW úrovni
+- Hypotetická instrukce sloužící ke korektní implementaci aktivního čekání na HW úrovni
 - **Dva kroky**
 	- Načtení obsahu slova z dané adresy v paměti do registru
 	- Nastavení obsahu slova v paměti na nenulovou hodnotu (zamknutí kritické sekce)
@@ -543,9 +543,9 @@ Jaké jsou **typy vláken** dle **priorit při plánování**? (3)
 
 Back:
 
-- **vlákna orientovaná na CPU** - potřebují CPU na dlouho, blokací je málo
-- **vlákna orientovaná na vstupy a výstupy** - CPU používají krátce, blokací je hodně
-- **vlákna reálného času** - prioritou je stihnout reakci na událost do deadlinu
+- **vlákna orientovaná na CPU** – potřebují CPU na dlouho, blokací je málo
+- **vlákna orientovaná na vstupy a výstupy** – CPU používají krátce, blokací je hodně
+- **vlákna reálného času** – prioritou je stihnout reakci na událost do deadlinu
 <!--ID: 1717743656867-->
 END
 
@@ -670,8 +670,9 @@ Co je to **alokační graf**?
 Back:
 
 - orientovaný graf, kde prostředky a vlákna jsou vrcholy
-- hrany prostředek → vlákno, které jej alokuje
-- hrany vlákno → prostředek, na který vlákno čeká
+- Hrany typu
+	- prostředek → vlákno, které jej alokuje
+	- vlákno → prostředek, na který vlákno čeká
 - smyčka znamená uváznutí
 
 _Např._
@@ -691,12 +692,12 @@ Back:
 Podmínky, určující, kdy nastane uváznutí. Uváznutí, když jsou **všechny podmínky** splněny najednou.
 
 **Podmínky**
-1. **vzájemné vyloučení** - každý prostředek je buď přidělen právě jednomu vláknu a nebo je volný (prostředek nemůže být sdílen více vlákny)
-2. **neodnímatelnost** - prostředek, který byl již přidělen nejakému vláknu, nemůže mu být násilím odebrán (musí být dobrovolně uvolněn daným vláknem)
-3. **“drž a čekej”** - vlákno, které má již přiděleny nějaké prostředky, může žádat o další prostředky (vlákno může žádat o prostředky postupne)
-4. **kruhové čekání** - musí existovat smyčka více vláken (každé vlákno čeká na prostředek přidělený dalšímu vláknu ve smyčce)
+1. **vzájemné vyloučení** – každý prostředek je buď přidělen právě jednomu vláknu a nebo je volný (prostředek nemůže být sdílen více vlákny)
+2. **neodnímatelnost** – prostředek, který byl již přidělen nejakému vláknu, nemůže mu být násilím odebrán (musí být dobrovolně uvolněn daným vláknem)
+3. **“drž a čekej”** – vlákno, které má již přiděleny nějaké prostředky, může žádat o další prostředky (vlákno může žádat o prostředky postupně)
+4. **kruhové čekání** – musí existovat smyčka více vláken (každé vlákno čeká na prostředek přidělený dalšímu vláknu ve smyčce)
 
-Pozn. První tři podmínky jsou nutné, ale ne dostačující k uváznutí
+Pozn. První tři podmínky jsou nutné, ale ne dostačující k uváznutí.
 <!--ID: 1717743656889-->
 END
 
@@ -807,7 +808,7 @@ Co je to **detekce uváznutí a zotavení**?
 
 Back:
 
-- využíváme pokud požadavky předem nenzáme
+- využíváme pokud požadavky předem neznáme
 - nástroje OS pro detekci uváznutí: `ps`, `gstack`, debuggery, Valgrind apod.
 - zotavení např. (postupným) ukončením uvázlých vláken nebo restartem uvázlých vláken (to vyžaduje nějaký mechanismus pravidelných “záloh” a rollbacků)
 <!--ID: 1717743656905-->

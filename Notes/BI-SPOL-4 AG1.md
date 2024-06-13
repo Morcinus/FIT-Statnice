@@ -1091,6 +1091,7 @@ Back:
 ![](../Assets/Pasted%20image%2020240603200122.png)
 
 Rozdíl je v tom, že se prostě nepoužívá fronta, ale $n$-krát se udělá relaxace.
+*Pozn. $n$ je počet vrcholů.*
 
 Tags: algoritmus core
 <!--ID: 1717437781802-->

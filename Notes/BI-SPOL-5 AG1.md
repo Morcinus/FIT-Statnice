@@ -92,6 +92,9 @@ Definice: **binární strom**
 Back:
 
 zakořeněný + uspořádaný + každý vrchol má nejvýše dva syny
+
+![](../Assets/Pasted%20image%2020240613141025.png)
+
 <!--ID: 1717529248431-->
 END
 
@@ -109,6 +112,9 @@ Back:
 binární strom, v jehož každém vrcholu $x$ je klíč $k(x)$ a splňuje:
 1. **tvar haldy** = všechny hladiny kromě poslední jsou zaplněné, poslední je zaplněná zleva
 2. **haldové uspořádání** = $k(v) \le k(s)$, pokud $s$ je syn $v$ (tzn. v kořeni je minimum)
+
+![](../Assets/Pasted%20image%2020240613141047.png)
+
 <!--ID: 1717529248434-->
 END
 
@@ -278,7 +284,7 @@ Popiš implementaci `HeapBuild` u **binární haldy**
 
 Back:
 
-`HeapBuild` = vytvoření haldy `H` z neseřazených prvků `x = x_1...x_n` v $\mathcal O (n)​$
+`HeapBuild` = vytvoření haldy `H` z neseřazených prvků $x = x_1, \dots, x_n$ v $\mathcal O (n)​$
 
 ![](../Assets/Pasted%20image%2020240604203908.png)
 <!--ID: 1717529248470-->
@@ -350,6 +356,10 @@ Back:
 - $B_0$ je tvořen jen kořenem
 - $B_k$ (pro $k \ge 1$) získáme zavěšením stromů $B_0, B_1,\dots, B_{k-1}$ pod nový kořen
 	- alternativní definice tohoto bodu: $B_k$ (pro $k \ge 1$) se skládá ze stromu $B_{k-1}$, pod jehož kořen je jako nejpravější syn zavěšen další $B_{k-1}$
+
+![](../Assets/Pasted%20image%2020240613141138.png)
+![](../Assets/Pasted%20image%2020240613141200.png)
+
 <!--ID: 1717529248482-->
 END
 
@@ -405,7 +415,7 @@ Kolik **hladin** má binomiální strom pokud má $n$ vrcholů?
 
 Back:
 
-$1+\log n$
+$\log (n) + 1$
 <!--ID: 1717529248496-->
 END
 
@@ -437,7 +447,7 @@ END
 START
 BI-SZZ
 
-Co platí pro
+Co platí pro:
 
 strom $B_i$ je v $n$-prvkové BH $\iff \ ???$
 
@@ -863,7 +873,7 @@ Definice: **hloubkově vyvážený** BVS
 Back:
 
 **hloubkově vyvážený** BVS = hloubky podstromů každého vrcholu se liší nejvýš o jedna $(\left| h(L(v)) - h(R(v)) \right| \le 1$ pro každý vrchol$)$
-- pokud má $n$ vrcholů, pak má $\Theta(\log n)$ hladin
+- pokud má $n$ vrcholů, pak má přibližně $\lfloor \log(n) \rfloor$ hladin
 <!--ID: 1717529248585-->
 END
 
