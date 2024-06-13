@@ -221,6 +221,8 @@ Back:
 ![](../Assets/Pasted%20image%2020240526191845.png)
 
 (axiomy jsou na další kartičce)
+
+(Pozn. komutativní těleso = má komutativní vlastnosti pro sčítání a násobení, každý nenulový prvek má multiplikativní inverzi)
 <!--ID: 1716747519727-->
 END
 
