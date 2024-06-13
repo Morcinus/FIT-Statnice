@@ -208,7 +208,7 @@ Back:
 - $Q$ = konečná množina vnitřních **stavů**
 - $\Sigma$ = konečná **vstupní abeceda**
 - $G$ = konečná neprázdná **abeceda zásobníku**
-- $\delta$ = __přechodová funkce $Q \times (\Sigma \cup \{\varepsilon\}) \times G^* \to Q \times G^*$
+- $\delta$ = **přechodová funkce** $Q \times (\Sigma \cup \{\varepsilon\}) \times G^* \to Q \times G^*$
     - $G^*$ nalevo je řetězec vybraný ze zásobníku, $G^*$ napravo je vkládaný řetězec
     - přechody se zapisují $(x, y/z)$, což znamená znamená přečíst $x$ ze vstupu, vybrat $y$ ze zásobníku a vložit $z$ na zásobník
 - $q_0$ = **počáteční stav** $\in Q$
