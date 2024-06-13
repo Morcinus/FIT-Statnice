@@ -404,7 +404,7 @@ Co obsahuje **RandomAccessIterator**?
 
 Back:
 
-Jako BidirectionalIterator, navíc možnost posunu vpřed/zpět o **zadaný počet pozic** (operace `+=` a `-=`), indexace operátorem `[n]`
+Jako `BidirectionalIterator`, navíc možnost posunu vpřed/zpět o **zadaný počet pozic** (operace `+=` a `-=`), indexace operátorem `[n]`
 <!--ID: 1718030833888-->
 END
 
@@ -420,7 +420,7 @@ Co je to **komparátor**?
 Back:
 
 - některé funkce jako sort() potřebují funkci, podle které budou porovnávat
-- typicky se používá funktor, např. `less`z STL, nebo ukazatel na funkci
+- typicky se používá funktor, např. `less` z STL, nebo ukazatel na funkci
 - v C++11 k tomu přibyly i lambda funkce
 
 ![](../Assets/Pasted%20image%2020240609205720.png)
