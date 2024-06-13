@@ -164,8 +164,8 @@ Back:
 **(neomezená formální) gramatika $G$** = struktura popisující formální jazyk, formálně je to čtveřice $G = (N, \Sigma, P, S)$, kde: 
 - $N$ = konečná množina **neterminálů** $(A, B, C, \dots)$
 - $\Sigma$ = konečná množina **terminálů** $(a, b, c, \dots)$ $(N \cap \Sigma = \emptyset)$
-- řecká písmena $(\alpha, \beta, \gamma \dots)$ jsou libovolné kombinace terminálů a neterminálů
 - $P$ = konečná množina **(přepisovacích) pravidel** ve tvaru $\gamma A \delta \to \alpha$
+	- řecká písmena $(\alpha, \beta, \gamma \dots)$ jsou libovolné kombinace terminálů a neterminálů
 - $S$ = **počáteční neterminál/symbol** $\in N$
 <!--ID: 1717778217060-->
 END
@@ -299,11 +299,11 @@ END
 START
 BI-SZZ
 
-Co je to **Turingův model**?
+Co je to **Turingův stroj**?
 
 Back:
 
-teoretický model počítače s řídící jednotkou (ta má konečný počet stavů a přechodových pravidel), nekonečnou páskou a čtecí hlavou
+Teoretický model počítače s řídící jednotkou (ta má konečný počet stavů a přechodových pravidel), nekonečnou páskou a čtecí hlavou.
 <!--ID: 1717778217084-->
 END
 
@@ -369,7 +369,7 @@ Co je to **univerzální Turingův stroj** $R_U$?
 
 Back:
 
-dokáže simulovat libovolný TS (na vstupu dostane binárně zakódovaný popis jiného TS $R$ a vstupní řetězec $w$, výsledek $R_U$ bude stejný jako kdyby $R$ dostal an vstupu $w$)
+dokáže simulovat libovolný TS (na vstupu dostane binárně zakódovaný popis jiného TS $R$ a vstupní řetězec $w$, výsledek $R_U$ bude stejný jako kdyby $R$ dostal na vstupu $w$)
 <!--ID: 1717778217098-->
 END
 
@@ -456,7 +456,7 @@ Co je to **rozhodnutelný problém**? Jakým jazykům odpovídají a co je opake
 Back:
 
 **rozhodnutelný problém** = rozhodovací problém, který umíme vyřešit algoritmem
-- odpovídají rekurzivním jazykům, např. hledání nejkratší cesty v grafu)
+- odpovídají rekurzivním jazykům (např. hledání nejkratší cesty v grafu)
 - opakem je nerozhodnutelný problém (např. halting problem)
 <!--ID: 1717778217115-->
 END
