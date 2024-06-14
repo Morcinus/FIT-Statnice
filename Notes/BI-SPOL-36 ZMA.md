@@ -187,7 +187,7 @@ END
 START
 BI-SZZ
 
-Věta: **nutná podmínka konvergence**
+Věta: **nutná podmínka konvergence** (aneb jak zjistím, že řada konverguje)
 
 Back:
 
@@ -207,15 +207,19 @@ END
 START
 BI-SZZ
 
-Jaká máme v ZMA kritéria pro konvergenci řad? (5)
+Jak můžu v ZMA ověřit, že je řada konvergentní? Aneb jaká kritéria konvergence existují a jak se to dá ještě jinak ověřit? (1+5)
 
 Back:
 
-- Bolzano-Cauchyho
-- Leibnizovo
-- Sovnávací
-- d'Alembertovo
-- Integrální
+**Nutná podmínka konvergence**:
+- Pokud limita $\lim_{k \rightarrow \infty} a_k \neq 0$ nebo neexistuje, pak není řada konvergentní
+
+Kritéria:
+- **Bolzano-Cauchyho**
+- **Leibnizovo**
+- **Sovnávací**
+- **d'Alembertovo**
+- **Integrální**
 <!--ID: 1717097564431-->
 END
 
@@ -332,7 +336,7 @@ END
 START
 BI-SZZ
 
-Věta: **Odhad asymptotického chování součtů integrálem**
+Věta: **Odhad asymptotického chování součtů integrálem** (aneb jak zjistit "rychlost růstu" řady)
 
 Back:
 

@@ -728,7 +728,7 @@ END
 START
 BI-SZZ
 
-Co je **optiomální algoritmus** řazení?
+Co je **optimální algoritmus** řazení?
 
 Back:
 

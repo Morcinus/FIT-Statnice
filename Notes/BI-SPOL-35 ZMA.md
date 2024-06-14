@@ -286,7 +286,7 @@ END
 START
 BI-SZZ
 
-Definice: **dělení intervalu**, norma dělení
+Definice: **dělení intervalu**, dělící body intervalu, částečný interval, norma dělení
 
 Back:
 
