@@ -57,7 +57,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou možnosti implementace VAC? (segmentace jednoho segmentu VAC)
+Jaké jsou možnosti implementace VAS (virtuálního adresového prostoru)? (příp. segmentace jednoho segmentu VAS)
 
 Back:
 
@@ -192,7 +192,7 @@ END
 START
 BI-SZZ
 
-Jaké jsou typy tabulky stránek? (3)
+Jaké jsou **typy** tabulky stránek? (3)
 
 Back:
 
@@ -221,7 +221,7 @@ END
 START
 BI-SZZ
 
-Z čeho se skládá virtuální adresa v jednoúrovňové tabulce?
+Z čeho se skládá **virtuální adresa** v **jednoúrovňové tabulce**?
 
 Back:
 
@@ -235,7 +235,7 @@ END
 START
 BI-SZZ
 
-Co je pro každou stránku uloženo v jednoúrovňové tabulce?
+Co je pro každou stránku uloženo v **jednoúrovňové tabulce**?
 
 Back:
 
@@ -250,7 +250,7 @@ END
 START
 BI-SZZ
 
-Jaká je nevýhoda jednoúrovňové tabulky?
+Jaká je **nevýhoda jednoúrovňové tabulky**?
 
 Back:
 
@@ -281,7 +281,7 @@ END
 START
 BI-SZZ
 
-Z čeho se skládá virtuální adresa v n-úrovňové tabulce stránek?
+Z čeho se skládá **virtuální adresa** v **n-úrovňové tabulce stránek**?
 
 Back:
 
@@ -295,7 +295,7 @@ END
 START
 BI-SZZ
 
-Co je v každé tabulce v n-úrovňové tabulce stránek?
+Co je v každé v **n-úrovňové tabulce stránek**?
 
 Back:
 
@@ -315,7 +315,7 @@ END
 START
 BI-SZZ
 
-Jaká je výhoda a nevýhoda n-úrovňové tabulky stránek oproti jednoúrovňové?
+Jaká je výhoda a nevýhoda **n-úrovňové tabulky stránek** oproti **jednoúrovňové**?
 
 Back:
 
@@ -400,8 +400,8 @@ Jaké by měly být algoritmy k výběru rámců při nahrazování stránek? (4
 
 Back:
 
-- rychlé,
-- jednoduché,
+- rychlé
+- jednoduché
 - minimalizovat výpadky
 - brát v potaz prostorovou a časovou lokalitu (v nejbližší době budu pravděpodobněji potřebovat stránky, které jsou ve VAS blízko za aktuálně používanými stránkami)
 <!--ID: 1717961032557-->
@@ -416,11 +416,11 @@ Jaké algoritmy pro náhradu stránek se používají? (6)
 
 Back:
 
-- NRU algoritmus
+- NRU algoritmus *(Not Recently Used)*
 - FIFO algoritmus
 - Clock algoritmus
 - Two-handed clock algoritmus
-- LRU algoritmus (Least Recently Used)
+- LRU algoritmus *(Least Recently Used)*
 - Aging algoritmus
 <!--ID: 1717961032560-->
 END
