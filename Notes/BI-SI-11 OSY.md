@@ -51,7 +51,10 @@ K čemu slouží **soubor** a čím je **reprezentován**?
 Back:
 
 - **soubor** slouží k uložení informace/dat ve FS a k jejímu pozdějšímu použití
-- Reprezentován: jménem, atributy a obsahem
+- **Reprezentován**:
+	- jménem,
+	- atributy,
+	- obsahem.
 <!--ID: 1717961032427-->
 END
 
@@ -80,8 +83,10 @@ Jaké jsou 2 části **rozložení disku**?
 
 Back:
 
-- Logický/fyzický disk je typicky rozdělen na několik částí, které obsahují informace/data s různým významem pro OS
-- **disk label —** Nachází se na začátku disku a obsahuje informace o rozdělení disku na jednotlivé oblasti (_Partition table_), může také obsahovat zavaděč OS
+Logický/fyzický disk je typicky rozdělen na několik částí, které obsahují informace/data s různým významem pro OS
+
+**Části**
+- **Disk label —** Nachází se na začátku disku a obsahuje informace o rozdělení disku na jednotlivé oblasti (_Partition table_), může také obsahovat zavaděč OS
 - **Jednotlivé diskové oblasti (partitions/slices) —** Každá disková oblast obsahuje jeden FS
 <!--ID: 1717961032433-->
 END
@@ -98,10 +103,10 @@ Back:
 - **boot block —** kód sloužící k zavedení OS
 - **super block —** informace popisující konfiguraci FS
     - typ FS, velikost datových bloků
-    - informace o celkové velikosti a aktuální obsazenosti FS (např. počet i-nodů, datových bloků,...)
+    - informace o celkové velikosti a aktuální obsazenosti FS (např. počet i-nodů, datových bloků, ...)
     - informace o diskových adresách důležitých struktur FS
-- datové struktury pro **správu volného prostoru** (datových bloků, i-nodů,...)
-- datové struktury pro uložení **atributů souborů** (Tabulka i-nodů,...)
+- datové struktury pro **správu volného prostoru** (datových bloků, i-nodů, ...)
+- datové struktury pro uložení **atributů souborů** (tabulka i-nodů, ...)
 - **datové bloky**, do kterých se ukládá obsah souborů a adresářů
 <!--ID: 1717961032436-->
 END
@@ -138,12 +143,12 @@ END
 START
 BI-SZZ
 
-Jaké jsou přístupy alokace datových bloků? (2)
+Jaké jsou **přístupy alokace** datových bloků? (2)
 
 Back:
 
-- pomocí souvislých oblastí datových bloků
-- alokace souboru po jednotlivých datových blocích
+- alokace souvislých oblastí datových bloků
+- alokace po jednotlivých datových blocích
 <!--ID: 1717961032444-->
 END
 
@@ -155,6 +160,8 @@ BI-SZZ
 Co je alokace pomocí **souvislých oblastí datových bloků**? Jaké má **výhody** a **nevýhody**?
 
 Back:
+
+Všechny datové bloky tvořící soubor jsou umístěny vedle sebe.
 
 - **výhody**
     - pro každý soubor si FS musí pamatovat malý počet informací
@@ -209,9 +216,10 @@ Jakým způsobem funguje **FAT (File Allocation Table)**?
 Back:
 
 - tabulka obsahuje tolik řádek, kolik je datových bloků ve FS
-- Pro každý soubor si musíme pamatovat pouze adresu prvního bloku, adresy dalších bloků jsou uloženy ve FAT formou zřetězení
+- p1ro každý soubor si musíme pamatovat pouze adresu prvního bloku, adresy dalších bloků jsou uloženy ve FAT formou zřetězení
 - informace o volných datových blocích se dají vyčíst přímo z FAT
-- pro velké disky vzniká problém s velikostí FAT, protože velikost datových bloků se v čase příliš nenavyšuje
+- pro velké disky vzniká problém s velikostí FAT (čím větší disk, tím více bloků)
+	- Šlo by teoreticky řešit zvětšením datových bloků, ale to se moc nestává z důvodu větší neefektivity ukládání malých souborů nebo větší fragmentace.
 
 ![](../Assets/Pasted%20image%2020240609183246.png)
 <!--ID: 1717961032456-->
@@ -222,7 +230,7 @@ END
 START
 BI-SZZ
 
-Co může obsahovat řádek FAT tabulky? (3 - vždy jedno z toho)
+Co může obsahovat řádek FAT tabulky? (3 – vždy jedno z toho)
 
 Back:
 
@@ -421,7 +429,7 @@ Jak funguje **žurnálový FS**?
 Back:
 
 - snaží se ochránit FS před nekonzistencí a ztrátou dat
-- FS si alokuje na disku speciální oblast _journal_, do které si v předstihu zapíše záznam o změnách, které se budou následně provádět. Potom, co se změny úspěšně zapíší do FS, je záznam z journalu **odstraněn
+- FS si alokuje na disku speciální oblast _journal_, do které si v předstihu zapíše záznam o změnách, které se budou následně provádět. Potom, co se změny úspěšně zapíší do FS, je záznam z journalu **odstraněn**
 - v případě havarie se po zotavení systému přehrávají záznamy z journalu a FS se vrátí do konzistentního stavu
 <!--ID: 1717961032494-->
 END
@@ -458,7 +466,7 @@ Back:
 - data v uzlech stromu tvoří uspořádanou posloupnost:
     - `p0, [k1, d1], p1, [k2, d2], p2, ...` (kořen/vnitřní uzel)
     - `[k1, d1], [k2, d2], ...` (list stromu)
-- vložení/smazání/hledání prvku má časovou složitost O(log(N)), kde N je počet záznamů ve stromě
+- vložení/smazání/hledání prvku má časovou složitost O(log(N)), kde N je počet záznamů ve stromu
 - uzly s klíči mohou být nahrány do paměti, zatímco data zůstávají na disku
 
 ![](../Assets/Pasted%20image%2020240609185919.png)
@@ -490,8 +498,11 @@ Jak funguje kombinace **kombinace SW RAIDu a FS**?
 
 Back:
 
-- v původních FS se vytvoří z fyzických disků logický disk (Volume) s příslušnými vlastnostmi a v něm se následně vytvoří příslušný FS
-- v moderních FS jsou SW RAID a FS implementovány jako celek (jedna SW vrstva)
+**Původní FS**
+- vytvoří se z fyzických disků logický disk (Volume) s příslušnými vlastnostmi a v něm se následně vytvoří příslušný FS
+
+**Moderní FS**
+- SW RAID a FS implementovány jako celek (jedna SW vrstva)
 - fyzické disky se zařadí do _poolu_, který představuje konkrétní typ RAIDu
 - v rámci poolu se pak vytváří jednotlivé FS
 
