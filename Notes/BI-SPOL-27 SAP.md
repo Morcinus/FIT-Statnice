@@ -546,6 +546,8 @@ Back:
 
 _Doplňující obrázek:_
 ![](../Assets/Pasted%20image%2020240326094017.png)
+
+![](../Assets/Pasted%20image%2020240616215631.png)
 <!--ID: 1714747088010-->
 END
 
@@ -564,6 +566,12 @@ Back:
 
 _Doplňující obrázek:_
 ![](../Assets/Pasted%20image%2020240326094008.png)
+
+![](../Assets/Pasted%20image%2020240616215618.png)
+
+např.
+![](../Assets/Pasted%20image%2020240616215644.png)
+
 <!--ID: 1714747088013-->
 END
 
