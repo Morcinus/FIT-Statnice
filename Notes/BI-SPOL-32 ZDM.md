@@ -10,7 +10,6 @@ FILE TAGS: BI-SPOL-32 ZDM
 > Metody řešení rekurentních rovnic, sestavování a řešení rekurentních rovnic při analýze časové složitosti algoritmů
 
 
-
 START
 BI-SZZ
 

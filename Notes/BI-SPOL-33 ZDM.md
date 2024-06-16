@@ -324,6 +324,8 @@ Věta: **základní věta aritmetiky**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606133339.png)
+
+Tags: core
 <!--ID: 1717701419209-->
 END
 
@@ -452,6 +454,8 @@ Věta: **o počtu prvočísel**
 Back:
 
 ![](../Assets/Pasted%20image%2020240606135414.png)
+
+Tags: core
 <!--ID: 1717701419232-->
 END
 

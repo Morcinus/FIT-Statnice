@@ -94,7 +94,6 @@ Back:
 zakořeněný + uspořádaný + každý vrchol má nejvýše dva syny
 
 ![](../Assets/Pasted%20image%2020240613141025.png)
-
 <!--ID: 1717529248431-->
 END
 
@@ -114,7 +113,6 @@ binární strom, v jehož každém vrcholu $x$ je klíč $k(x)$ a splňuje:
 2. **haldové uspořádání** = $k(v) \le k(s)$, pokud $s$ je syn $v$ (tzn. v kořeni je minimum)
 
 ![](../Assets/Pasted%20image%2020240613141047.png)
-
 <!--ID: 1717529248434-->
 END
 
@@ -359,7 +357,6 @@ Back:
 
 ![](../Assets/Pasted%20image%2020240613141138.png)
 ![](../Assets/Pasted%20image%2020240613141200.png)
-
 <!--ID: 1717529248482-->
 END
 
