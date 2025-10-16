@@ -1,0 +1,70 @@
+---
+alwaysApply: true
+---
+
+# Guidelines for flaschard and note creation and management
+
+In the Obsidian.md vault, there is a system for creating and managing flashcards. The system consists of these parts:
+
+- "Notes" - these are notes in the "Notes/Magisterske" directory. They cover topics from software engineering. These notes consist of flashcards that are written directly in the notes. One note covers one exam quesion (which can consist of many topics).
+- "Flashcards" - have a format specified below
+
+## Example note template
+
+File location: "Notes/Magisterske/NI-SI-1 NI-ADP.md"
+
+```markdown
+---
+created: 2024-05-26T10:17:27
+parent: "[[FIT]]"
+---
+
+TARGET DECK: NI-SZZ
+FILE TAGS: NI-SI-1 NI-ADP
+
+> NI-SI-1 (NI-ADP)
+> Informační bezpečnost, architektura bezpečnosti v modelu OSI. (BI-BEZ)
+```
+
+Description:
+
+- Note Name - always consists of `<note id>` and `<subject id>`
+- TARGET DECK - is always `NI-SZZ`
+- FILE TAGS - consist of `<note id>` and `<subject id>`
+- In the note there is then a short description consisting of `<note id>` and `<subject id>` and on the next line the exact description of the exam question
+
+## Example flashcard format
+
+Flashcards are created directly in the note. Here is the example format:
+
+```markdown
+START
+NI-SZZ
+
+Co je **Informační technologie (IT)**?
+
+Back:
+
+technologie na zpracování informací
+
+Tags: should-know N001F001
+
+<!-- Documentation comments - dont put the comments in the note -->
+<!-- first tag must always be the priority of how important the flashcard is to know. The options are: must-know | should-know | could-know | fun-to-know. Always put should-know as the default option. -->
+<!-- second tag represents the order of the flashcards and notes. N001 stands for note index, F001 for flashcard index inside that note. -->
+
+<!-- Flashcards that already have been synchronized to Anki will have the following comment here. Never remove or change that ID comment! -->
+<!--ID: some number -->
+
+END
+
+---
+```
+
+### Flashcard conventions
+
+- In the question and answer sections, always highlight the most important phrase or word with a bold text, so that it is easier to read quickly.
+- In the flashcard, it is possible that there will be image references (`![[image_name]]`) - always keep those images in the flashcards
+- In the flashcard, it is also possible that there will be some special comments (e.g. `DetailInfoStart`, `ExampleStart` etc.). These comment sections represent a detailed explanation of the answer. Never remove those!
+- When copying flashcards from some source, DON'T CHANGE the content of the flashcard! Always copy the whole flashcard.
+- In the note, you can split the flashcards using `###` markdown headers based on the parts of the exam questions so that it is easier to read
