@@ -571,7 +571,6 @@ _Doplňující obrázek:_
 
 např.
 ![](../../Assets/Pasted%20image%2020240616215644.png)
-
 <!--ID: 1714747088013-->
 END
 
