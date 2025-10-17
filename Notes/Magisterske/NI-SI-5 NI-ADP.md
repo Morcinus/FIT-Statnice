@@ -8,11 +8,12 @@ FILE TAGS: NI-SI-5 NI-ADP
 
 > NI-SI-5 (NI-ADP)
 > Architektonické vzory (MVC, MVP, MVVM, Client-Server, Microservices vs monolithic server, Asynchronous messaging, Blackboard architecture, Rule-based architecture, Publish-subscribe).
+### MVC
 
 START
 NI-SZZ
 
-Co je **MVC** architektura?
+Co to je **MVC** architektura?
 
 Back:
 
@@ -22,13 +23,13 @@ Back:
 - **Controller** - zpracovává vstup uživatele a updatuje model
 - **View** - zobrazuje data, typicky GUI nebo API
 
-![](../../Assets/Pasted%20image%2020250130115027.png)
+![](../../../Assets/Pasted%20image%2020250130115027.png)
 
 <!-- ExplanationStart -->
 
 Nowadays it’s hard to find out, which implementation of this design pattern/architecture is correct because everyone all over the world is “bending” it to his/her needs. No matter what, the idea stays the same and that is [Separation of Concerns](https://courses.fit.cvut.cz/NI-ADP/materials/design-principles/soc.html), loose coupling and high cohesion, etc.
 
-![](../../Assets/Pasted%20image%2020250130115054.png)
+![](../../../Assets/Pasted%20image%2020250130115054.png)
 
 **Model**
 
@@ -46,6 +47,9 @@ This layer contains displaying logic. Typically it’s GUI but it doesn’t have
 
 <!-- ExplanationEnd -->
 
+Tags: should-know N005F001
+<!--ID: 1760705194395-->
+
 END
 
 ---
@@ -59,11 +63,14 @@ Back:
 
 **Možnost 1:**
 **Controller** zavolá update na **View**, když byly provedeny změny v modelu.
-![](../../Assets/Pasted%20image%2020250130115125.png)
+![](../../../Assets/Pasted%20image%2020250130115125.png)
 
 **Možnost 2:**
 **Model** zavolá update na **View**, když se změní. Toto používá typicky Observer pattern, kdy View observuje změny v Modelu.
-![](../../Assets/Pasted%20image%2020250130115146.png)
+![](../../../Assets/Pasted%20image%2020250130115146.png)
+
+Tags: should-know N005F002
+<!--ID: 1760705194398-->
 
 END
 
@@ -84,9 +91,14 @@ Back:
 
 ❌ Tight coupling of **View** and **Controller**. That makes testing harder.
 
+Tags: should-know N005F003
+<!--ID: 1760705194400-->
+
 END
 
 ---
+
+### MVP
 
 START
 NI-SZZ
@@ -102,7 +114,7 @@ Back:
 - **View** - volá funkce z presentera, je velice jednoduchý
 
 The typical interactions taking place in MVP architecture can be understood through the following:
-![](../../Assets/Pasted%20image%2020250130115225.png)
+![](../../../Assets/Pasted%20image%2020250130115225.png)
 
 <!-- ExplanationStart -->
 
@@ -116,6 +128,9 @@ The Presenter is responsible to act as the middleman between View and Model. It 
 The only thing that the view will do is to call a method from the Presenter every time there is an interface action. It is only responsible for presenting data in a way decided by the presenter. The functionality of view is typically reduced to a minimum such as simple validation, and it’s made as a passive component, by moving the business logic to the presenter. The view is also shielded from the model by delegating all the interaction to happen through the middleman presenter.
 
 <!-- ExplanationEnd -->
+
+Tags: should-know N005F004
+<!--ID: 1760705194404-->
 
 END
 
@@ -132,12 +147,17 @@ Back:
 - **Modularita** - můžu prohazovat různé implementace view
 - **Lehčí testování** - tím, že jsou jasně definované meze mezi komponenty, můžu je jednoduše mockovat a testovat
 
-![](../../Assets/Pasted%20image%2020250130115309.png)
-![](../../Assets/Pasted%20image%2020250130115313.png)
+![](../../../Assets/Pasted%20image%2020250130115309.png)
+![](../../../Assets/Pasted%20image%2020250130115313.png)
+
+Tags: should-know N005F005
+<!--ID: 1760705194406-->
 
 END
 
 ---
+
+### MVVM
 
 START
 NI-SZZ
@@ -154,7 +174,10 @@ Back:
 
 Oproti MVP je View "chytřejší" protože se samo updatuje a observuje změny v ViewModelu.
 
-![](../../Assets/Pasted%20image%2020250130115455.png)
+![](../../../Assets/Pasted%20image%2020250130115455.png)
+
+Tags: should-know N005F006
+<!--ID: 1760705194409-->
 
 END
 
@@ -172,18 +195,23 @@ For these regular updates are usually used:
 - Reactive programming
 - Data Binding
 
-![](../../Assets/Pasted%20image%2020250130115516.png)
+![](../../../Assets/Pasted%20image%2020250130115516.png)
 
 <!-- ExampleStart -->
 
 This is example of **MVVM** how it is used in android programming.
-![](../../Assets/Pasted%20image%2020250130115556.png)
+![](../../../Assets/Pasted%20image%2020250130115556.png)
 
 <!-- ExampleEnd -->
+
+Tags: should-know N005F007
+<!--ID: 1760705194412-->
 
 END
 
 ---
+
+### Client-server
 
 START
 NI-SZZ
@@ -194,7 +222,10 @@ Back:
 
 In client-server architecture, the client and the server are typically connected over a network, such as the internet. The client initiates a request to the server, which can be a request for data or a request to perform an action. The server receives the request, processes it, and sends back a response.
 
-![](../../Assets/Pasted%20image%2020250130115951.png)
+![](../../../Assets/Pasted%20image%2020250130115951.png)
+
+Tags: should-know N005F008
+<!--ID: 1760705194415-->
 
 END
 
@@ -215,6 +246,9 @@ Another benefit is that it allows for scalability. If the server is designed to 
 **Nevýhody:**
 There are also some challenges to using client-server architecture. One challenge is that it requires a network connection between the client and the server, which can introduce latency and other issues. Another challenge is that the server may be a single point of failure, meaning that if the server goes down, the entire application may become unavailable.
 
+Tags: should-know N005F009
+<!--ID: 1760705194418-->
+
 END
 
 ---
@@ -231,9 +265,18 @@ Back:
 - **Mobile Apps**: Same as desktop applications, only the client is the mobile app running on the user’s device.
 - **Online Games**: Online games often use client-server architecture to support multiplayer gameplay. In this case, the client is the game running on the user’s device, and the server is a game server that manages the game world and handles communication between players.
 
+Tags: should-know N005F010
+<!--ID: 1760705194421-->
+
 END
 
 ---
+
+### Microservices vs monolithic server
+
+??? O tomhle nic není v předmětu
+
+### Asynchronous messaging
 
 START
 NI-SZZ
@@ -250,7 +293,7 @@ A layer that allows heterogenous components to asynchronously communicate despit
 
 Tight coupling with Publish-subscribe architecture
 
-![](../../Assets/Pasted%20image%2020250130124045.png)
+![](../../../Assets/Pasted%20image%2020250130124045.png)
 
 <!-- ExampleStart -->
 
@@ -264,9 +307,12 @@ Tight coupling with Publish-subscribe architecture
 - **.Net Messaging Service**
   - MS alternative to support their platform and programming languages
 
-![](../../Assets/Pasted%20image%2020250130124107.png)
+![](../../../Assets/Pasted%20image%2020250130124107.png)
 
 <!-- ExampleEnd -->
+
+Tags: should-know N005F011
+<!--ID: 1760705194424-->
 
 END
 
@@ -290,9 +336,14 @@ Back:
 - Bus/Broker maintenance
 - Many inter-application communications have an intrinsically synchronous aspect => a need for facilities to group a request and a response as a single pseudo-synchronous transaction
 
+Tags: should-know N005F012
+<!--ID: 1760705194428-->
+
 END
 
 ---
+
+### Blackboard architecture
 
 START
 NI-SZZ
@@ -331,9 +382,12 @@ _StackOverflow is pretty much a Blackboard system, with developers as agents, sh
   - …
 - There is no consistent algorithm that combines all the necessary procedures for recognising speech
 - Problem = ambiguities of spoken language: - noisy data - peculiarities of speakers - vocabulary - pronunciation - syntax
-  ![](../../Assets/Pasted%20image%2020250130124453.png)
+  ![](../../../Assets/Pasted%20image%2020250130124453.png)
 
 <!-- ExampleEnd -->
+
+Tags: should-know N005F013
+<!--ID: 1760705194431-->
 
 END
 
@@ -354,10 +408,17 @@ Ne, už se to nepoužívá, protože to bylo špatně škálovatelné na tehdej�
 - offers non-functional properties such as: reusability, changeability, robustness.
 - allows multiple agents to work closer together on separate threads, polling and reacting when necessary
 - The pattern was abandoned in past because: - Did not scale well to real problems on the available computers of the time - Most problems using blackboards are inherently NP-hard, so resist tractable solution by any algorithm in the large size limit - Blackboard was outperformed by statistical pattern recognition techniques, most notably by simple Hidden Markov Models
-  <!-- DetailInfoEnd -->
+
+<!-- DetailInfoEnd -->
+
+Tags: should-know N005F014
+<!--ID: 1760705194435-->
+
 END
 
 ---
+
+### Rule-based architecture
 
 START
 NI-SZZ
@@ -374,7 +435,7 @@ Rule-based architectures provide a means of codifying the problem-solving knowho
   - The control state of the interpretation engine, in this case the rule and data element selector
   - The current state of the program running on the virtual machine, in this case the working memory.
 
-![](../../Assets/Pasted%20image%2020250130124714.png)
+![](../../../Assets/Pasted%20image%2020250130124714.png)
 
 <!-- ExampleStart -->
 
@@ -384,9 +445,12 @@ Rule-based architectures provide a means of codifying the problem-solving knowho
 - BioNetGen, a widely used tool for rule-based modeling of biochemical reactions. It includes a language to describe chemical substances, including the states they can assume and the bindings they can undergo. These rules can be used to create a reaction model or to perform computer simulations directly on the rule set.
 - The biochemical modeling framework Virtual Cell includes a BioNetGen interpreter.
 
-![](../../Assets/Pasted%20image%2020250130124758.png)
+![](../../../Assets/Pasted%20image%2020250130124758.png)
 
 <!-- ExampleEnd -->
+
+Tags: should-know N005F015
+<!--ID: 1760705194437-->
 
 END
 
@@ -406,9 +470,14 @@ Back:
 - The action can be a change in working memory or an external operation supported by the interpreter.
 - Interpreter performs the **match-resolve-act** cycle: - **Match**: In this first phase, the left-hand sides of all rules are matched against the contents of working memory. As a result a conflict set is obtained, which consists of instantiations of all satisfied rules. - An instantiation of a rule is an ordered list of working megnory elements that satisfies the left-hand side of the production. - **Conflict-Resolution**: In this second phase, one of the rule instantiations in the conflict set is chosen for execution. If no rules are satisfied, the interpreter halts. - **Act**: In this third phase, the actions of the rule selected in the conflict-resolution phase are executed. These actions may change the contents o% working memory. At the end of this phase, execution returns to the first phase.
 
+Tags: should-know N005F016
+<!--ID: 1760705194440-->
+
 END
 
 ---
+
+### Publish-subscribe
 
 START
 NI-SZZ
@@ -421,7 +490,10 @@ Back:
 - **Middleware** - má u sebe seznam subscribers a rozesílá zprávy podle typu
 - **Subscriber** - může se u middlewaru zaregistrovat tak, aby přijímal určité typy zpráv
 
-![](../../Assets/Pasted%20image%2020250130124958.png)
+![](../../../Assets/Pasted%20image%2020250130124958.png)
+
+Tags: should-know N005F017
+<!--ID: 1760705194443-->
 
 END
 
@@ -444,6 +516,9 @@ Back:
 
 - Každý publisher a subscriber o sobě sdílí meta-data přes IP multicast (tzn. všichni o sobě vědí), tyto informace si každý publisher/subscriber cachuje
 - Podle meta-dat publisher rovnou posílá informace subscriberovi
+
+Tags: should-know N005F018
+<!--ID: 1760705194447-->
 
 END
 
@@ -476,6 +551,9 @@ Back:
   - For example: there are frameworks and software products using XML configuration files to register subscribers during system initialization
 - Runtime - For example: database triggers, mailing lists, and RSS
 
+Tags: should-know N005F019
+<!--ID: 1760705194450-->
+
 END
 
 ---
@@ -490,6 +568,9 @@ Back:
 - **Message delivery issues**
   - Publishing recipes by subscribers
 - **Limited maximum scalability of a pub/sub network** - Load surges: periods when subscriber requests saturate network throughput followed by periods of low message volume (underutilized network bandwidth) - Slowdowns: as more and more applications use the system (even if they are communicating on separate pub/sub channels) the message volume flow to an individual subscriber will slow
+
+Tags: should-know N005F020
+<!--ID: 1760705194453-->
 
 END
 

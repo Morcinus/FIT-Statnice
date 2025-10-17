@@ -50,6 +50,7 @@ technologie na zpracování informací
 Tags: should-know N001F001
 
 <!-- Documentation comments - dont put the comments in the note -->
+<!-- Tags - this should be always put above the ID comment or above the END if there is no ID comment -->
 <!-- first tag must always be the priority of how important the flashcard is to know. The options are: must-know | should-know | could-know | fun-to-know. Always put should-know as the default option. -->
 <!-- second tag represents the order of the flashcards and notes. N001 stands for note index, F001 for flashcard index inside that note. -->
 
