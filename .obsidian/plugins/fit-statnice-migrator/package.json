@@ -11,6 +11,7 @@
     "cli:migration": "node cli.js migration",
     "cli:all": "node cli.js all",
     "cli:prepare": "node cli.js prepare-sections",
+    "cli:anki-sync": "node cli.js anki-sync",
     "version": "node scripts/version-bump.js"
   },
   "devDependencies": {

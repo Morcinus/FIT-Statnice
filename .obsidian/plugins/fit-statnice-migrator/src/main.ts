@@ -10,6 +10,7 @@ import { ConsoleLoggingService, LoggingService } from "./logging";
 import { MigratorFacade } from "./core/MigratorFacade";
 import { MigratedFlashcardsRunner } from "./migration/MigratedFlashcardsRunner";
 import { MigrationCommentsRunner } from "./comments/MigrationCommentsRunner";
+import { AnkiSyncRunner } from "./anki/AnkiSyncRunner";
 
 export interface MigratorSettings {
   testCourses: string[];
@@ -93,6 +94,25 @@ export default class FitStatniceMigratorPlugin extends Plugin {
         );
         this.logger.success("Prepare Migration Sections finished");
         new Notice(output || `No exam notes found for ${courseId}.`, 0);
+      },
+    });
+
+    this.addCommand({
+      id: "fit-statnice-anki-sync-check",
+      name: "Anki Sync Check",
+      callback: async () => {
+        new Notice("Anki Sync Check: started");
+        this.logger.info("Starting: Anki Sync Check");
+        const baseVaultPath =
+          (this.app.vault.adapter as any).getBasePath?.() ?? "";
+        const runner = new AnkiSyncRunner(this.logger);
+        const res = runner.run(baseVaultPath);
+        this.logger.success("Finished: Anki Sync Check", {
+          total: res.totalFlashcards,
+          issues: res.issues.length,
+        });
+        const summary = `Flashcards checked: ${res.totalFlashcards}\nIssues: ${res.issues.length}`;
+        new Notice(summary, 0);
       },
     });
 

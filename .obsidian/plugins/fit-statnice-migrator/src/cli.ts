@@ -4,6 +4,7 @@ import { MigratorFacade } from "./core/MigratorFacade";
 import * as path from "path";
 import { MigratedFlashcardsRunner } from "./migration/MigratedFlashcardsRunner";
 import { MigrationCommentsRunner } from "./comments/MigrationCommentsRunner";
+import { AnkiSyncRunner } from "./anki/AnkiSyncRunner";
 
 async function main() {
   const logger = new QuietConsoleLoggingService();
@@ -45,6 +46,13 @@ async function main() {
     const output = await facade.prepareMigrationSections(courseId, vaultPath);
     console.log(output);
     console.log("\nPrepared Note Sections");
+  } else if (cmd === "anki-sync") {
+    const vaultPath = path.resolve(__dirname, "..", "..", "..");
+    const runner = new AnkiSyncRunner(logger);
+    const res = runner.run(vaultPath);
+    console.log(`Flashcards checked: ${res.totalFlashcards}`);
+    console.log(`Issues: ${res.issues.length}`);
+    console.log("Ran Anki Sync Check");
   } else if (cmd === "all") {
     await facade.runAllChecks();
     console.log("Ran All Tests");
@@ -53,7 +61,7 @@ async function main() {
       name: "InvalidCLICommand",
       message: `Unknown command: ${cmd}`,
       fixInstructions:
-        "Use one of: comments | migration | all | prepare-sections <courseId>",
+        "Use one of: comments | migration | all | prepare-sections <courseId> | anki-sync",
     });
     process.exitCode = 1;
   }
