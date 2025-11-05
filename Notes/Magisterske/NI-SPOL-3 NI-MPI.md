@@ -8,3 +8,13 @@ FILE TAGS: NI-SPOL-3 NI-MPI
 
 > NI-SPOL-3 (NI-MPI)
 > Funkce více proměnných: gradient, Hessián, definitnost matic, extrémy funkcí více proměnných bez omezení a s rovnostními omezeními.
+
+## Funkce více proměnných
+
+## Gradient
+
+## Hessián
+
+## Definitnost matic
+
+## Extrémy funkcí více proměnných bez omezení a s rovnostními omezeními

@@ -8,3 +8,7 @@ FILE TAGS: NI-SPOL-10 NI-VSM
 
 > NI-SPOL-10 (NI-VSM)
 > Systémy hromadné obsluhy a jejich limitní vlastnosti. Souvislost s Markovskými řetězci se spojitým časem.
+
+## Systémy hromadné obsluhy a jejich limitní vlastnosti
+
+## Souvislost s Markovskými řetězci se spojitým časem

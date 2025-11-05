@@ -8,3 +8,11 @@ FILE TAGS: NI-SI-8 NI-FME
 
 > NI-SI-8 (NI-FME)
 > Automatizace dokazování správnosti programů: principy, možnosti, omezení.
+
+## Automatizace dokazování správnosti programů
+
+## Principy
+
+## Možnosti
+
+## Omezení

@@ -9,6 +9,7 @@ FILE TAGS: NI-SI-4 NI-ADP
 > NI-SI-4 (NI-ADP)
 > Vzory pro chování objektů (Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, State, Strategy, Template method, Visitor).
 
+## Vzory pro chování objektů (Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, State, Strategy, Template method, Visitor)
 
 START
 NI-SZZ
@@ -30,6 +31,7 @@ Back:
 - **Visitor**
 
 Tags: should-know N004F001
+
 <!--ID: 1760705194277-->
 
 END
@@ -98,6 +100,7 @@ As a result, commands become a convenient middle layer that reduces coupling bet
 <!-- ExplanationEnd -->
 
 Tags: should-know N004F002
+
 <!--ID: 1760705194289-->
 
 END
@@ -127,6 +130,7 @@ Back:
 <!-- ExampleEnd -->
 
 Tags: should-know N004F003
+
 <!--ID: 1760705194292-->
 
 END
@@ -153,6 +157,7 @@ Back:
 ❌ The code may become more complicated since you’re introducing a whole new layer between senders and receivers.
 
 Tags: should-know N004F004
+
 <!--ID: 1760705194295-->
 
 END
@@ -215,6 +220,7 @@ It’s crucial that all handler classes implement the same interface. Each concr
 <!-- ExplanationEnd -->
 
 Tags: should-know N004F005
+
 <!--ID: 1760705194299-->
 
 END
@@ -244,6 +250,7 @@ Back:
 <!-- ExampleEnd -->
 
 Tags: should-know N004F006
+
 <!--ID: 1760705194302-->
 
 END
@@ -266,6 +273,7 @@ Back:
 ❌ Some requests may end up unhandled.
 
 Tags: should-know N004F007
+
 <!--ID: 1760705194305-->
 
 END
@@ -301,6 +309,7 @@ An abstract base class specifies the method `interpret()`. Each concrete subcla
 <!-- ExplanationEnd -->
 
 Tags: should-know N004F008
+
 <!--ID: 1760705194308-->
 
 END
@@ -319,6 +328,7 @@ Back:
 Interpreter suggests modeling the domain with a recursive grammar. Each rule in the grammar is either a ‘composite’ (a rule that references other rules) or a terminal (a leaf node in a tree structure). Interpreter relies on the recursive traversal of the Composite pattern to interpret the ‘sentences’ it is asked to process.
 
 Tags: should-know N004F009
+
 <!--ID: 1760705194311-->
 
 END
@@ -337,6 +347,7 @@ Back:
 ❌ When the grammar is getting more complex, it becomes harder to maintain.
 
 Tags: should-know N004F010
+
 <!--ID: 1760705194314-->
 
 END
@@ -389,6 +400,7 @@ All iterators must implement the same interface. This makes the client code comp
 <!-- ExplanationEnd -->
 
 Tags: should-know N004F011
+
 <!--ID: 1760705194317-->
 
 END
@@ -418,6 +430,7 @@ Back:
 <!-- ExampleEnd -->
 
 Tags: should-know N004F012
+
 <!--ID: 1760705194320-->
 
 END
@@ -444,6 +457,7 @@ Back:
 ❌ Using an iterator may be less efficient than going through elements of some specialized collections directly.
 
 Tags: should-know N004F013
+
 <!--ID: 1760705194323-->
 
 END
@@ -492,6 +506,7 @@ This way, the Mediator pattern lets you encapsulate a complex web of relations b
 <!-- ExplanationEnd -->
 
 Tags: should-know N004F014
+
 <!--ID: 1760705194326-->
 
 END
@@ -520,6 +535,7 @@ Back:
 <!-- ExampleEnd -->
 
 Tags: should-know N004F015
+
 <!--ID: 1760705194329-->
 
 END
@@ -544,6 +560,7 @@ Back:
 ❌ Over time a mediator can evolve into a [God Object](https://courses.fit.cvut.cz/antipatterns/god-object).
 
 Tags: should-know N004F016
+
 <!--ID: 1760705194333-->
 
 END
@@ -602,6 +619,7 @@ When a user triggers the undo, the history grabs the most recent memento from th
 <!-- ExplanationEnd -->
 
 Tags: should-know N004F017
+
 <!--ID: 1760705194336-->
 
 END
@@ -631,6 +649,7 @@ The classic implementation of the pattern relies on support for nested classes, 
 <!-- ExampleEnd -->
 
 Tags: should-know N004F018
+
 <!--ID: 1760705194339-->
 
 END
@@ -652,6 +671,7 @@ There’s an alternative implementation, suitable for programming languages that
 2. On the other hand, originators can work with a memento object directly, accessing fields and methods declared in the memento class. The downside of this approach is that you need to declare all members of the memento public.
 
 Tags: should-know N004F019
+
 <!--ID: 1760705194342-->
 
 END
@@ -674,6 +694,7 @@ There’s another implementation which is useful when you don’t want to leave 
 3. Each memento becomes linked to the originator that produced it. The originator passes itself to the memento’s constructor, along with the values of its state. Thanks to the close relationship between these classes, a memento can restore the state of its originator, given that the latter has defined the appropriate setters.
 
 Tags: should-know N004F020
+
 <!--ID: 1760705194344-->
 
 END
@@ -698,6 +719,7 @@ Back:
 ❌ Most dynamic programming languages, such as PHP, Python and JavaScript, can’t guarantee that the state within the memento stays untouched.
 
 Tags: should-know N004F021
+
 <!--ID: 1760705194347-->
 
 END
@@ -750,6 +772,7 @@ If your app has several different types of publishers and you want to make your 
 <!-- ExplanationEnd -->
 
 Tags: should-know N004F022
+
 <!--ID: 1760705194350-->
 
 END
@@ -779,6 +802,7 @@ Back:
 <!-- ExampleEnd -->
 
 Tags: should-know N004F023
+
 <!--ID: 1760705194353-->
 
 END
@@ -799,6 +823,7 @@ Back:
 ❌ Subscribers are notified in random order.
 
 Tags: should-know N004F024
+
 <!--ID: 1760705194357-->
 
 END
@@ -874,6 +899,7 @@ This structure may look similar to the [Strategy](https://courses.fit.cvut.cz/N
 <!-- ExplanationEnd -->
 
 Tags: should-know N004F025
+
 <!--ID: 1760705194359-->
 
 END
@@ -902,6 +928,7 @@ Back:
 <!-- ExampleEnd -->
 
 Tags: should-know N004F026
+
 <!--ID: 1760705194362-->
 
 END
@@ -924,6 +951,7 @@ Back:
 ❌ Applying the pattern can be overkill if a state machine has only a few states or rarely changes.
 
 Tags: should-know N004F027
+
 <!--ID: 1760705194365-->
 
 END
@@ -980,6 +1008,7 @@ Even though given the same arguments, each routing class might build a different
 <!-- ExplanationEnd -->
 
 Tags: should-know N004F028
+
 <!--ID: 1760705194368-->
 
 END
@@ -1002,6 +1031,7 @@ Back:
 5. The **Client** creates a specific strategy object and passes it to the context. The context exposes a setter which lets clients replace the strategy associated with the context at runtime.
 
 Tags: should-know N004F029
+
 <!--ID: 1760705194371-->
 
 END
@@ -1030,6 +1060,7 @@ Back:
 ❌ A lot of modern programming languages have functional type support that lets you implement different versions of an algorithm inside a set of anonymous functions. Then you could use these functions exactly as you’d have used the strategy objects, but without bloating your code with extra classes and interfaces.
 
 Tags: should-know N004F030
+
 <!--ID: 1760705194374-->
 
 END
@@ -1085,6 +1116,7 @@ There’s another type of step, called *hooks*. A hook is an optional step with
 <!-- ExplanationEnd -->
 
 Tags: should-know N004F031
+
 <!--ID: 1760705194377-->
 
 END
@@ -1110,6 +1142,7 @@ Back:
 <!-- ExampleEnd -->
 
 Tags: should-know N004F032
+
 <!--ID: 1760705194380-->
 
 END
@@ -1134,6 +1167,7 @@ Back:
 ❌ Template methods tend to be harder to maintain the more steps they have.
 
 Tags: should-know N004F033
+
 <!--ID: 1760705194383-->
 
 END
@@ -1224,6 +1258,7 @@ Now, if we extract a common interface for all visitors, all existing nodes can w
 <!-- ExplanationEnd -->
 
 Tags: should-know N004F034
+
 <!--ID: 1760705194386-->
 
 END
@@ -1252,6 +1287,7 @@ Back:
 <!-- ExampleEnd -->
 
 Tags: should-know N004F035
+
 <!--ID: 1760705194388-->
 
 END
@@ -1276,6 +1312,7 @@ Back:
 ❌ Visitors might lack the necessary access to the private fields and methods of the elements that they’re supposed to work with.
 
 Tags: should-know N004F036
+
 <!--ID: 1760705194391-->
 
 END

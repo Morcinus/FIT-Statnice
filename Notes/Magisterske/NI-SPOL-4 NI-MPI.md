@@ -8,3 +8,5 @@ FILE TAGS: NI-SPOL-4 NI-MPI
 
 > NI-SPOL-4 (NI-MPI)
 > Integrál funkcí více proměnných (Darbouxova konstrukce).
+
+## Integrál funkcí více proměnných (Darbouxova konstrukce)

@@ -8,3 +8,7 @@ FILE TAGS: NI-SPOL-14 NI-KOP
 
 > NI-SPOL-14 (NI-KOP)
 > Princip genetických algoritmů, význam selekčního tlaku pro jejich funkci.
+
+## Princip genetických algoritmů
+
+## Význam selekčního tlaku pro jejich funkci

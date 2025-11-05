@@ -8,3 +8,7 @@ FILE TAGS: NI-SPOL-7 NI-VSM
 
 > NI-SPOL-7 (NI-VSM)
 > Základy teorie informace a kódování, entropie.
+
+## Základy teorie informace a kódování
+
+## Entropie

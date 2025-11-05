@@ -8,3 +8,7 @@ FILE TAGS: NI-SPOL-20 NI-PDP
 
 > NI-SPOL-20 (NI-PDP)
 > Paralelní algoritmy pro redukci, prefixový součet a segmentový prefixový součet na PRAM, v ortogonálních, hyperkubických a obecných topologiích, aplikace.
+
+## Paralelní algoritmy pro redukci
+
+## Prefixový součet a segmentový prefixový součet na PRAM, v ortogonálních, hyperkubických a obecných topologiích, aplikace

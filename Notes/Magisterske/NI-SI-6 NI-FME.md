@@ -8,3 +8,9 @@ FILE TAGS: NI-SI-6 NI-FME
 
 > NI-SI-6 (NI-FME)
 > Specifikace správnosti programů, psaní specifikací v predikátové logice, axiomatické modelování datových struktur.
+
+## Specifikace správnosti programů
+
+## Psaní specifikací v predikátové logice
+
+## Axiomatické modelování datových struktur

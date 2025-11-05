@@ -8,3 +8,7 @@ FILE TAGS: NI-SI-13 NI-NUR
 
 > NI-SI-13 (NI-NUR)
 > Proces návrhu uživatelských rozhraní. Parametry lidského vnímání a jejich vliv na tento návrh.
+
+## Proces návrhu uživatelských rozhraní
+
+## Parametry lidského vnímání a jejich vliv na tento návrh

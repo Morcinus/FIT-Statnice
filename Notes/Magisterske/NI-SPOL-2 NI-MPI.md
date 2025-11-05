@@ -8,3 +8,11 @@ FILE TAGS: NI-SPOL-2 NI-MPI
 
 > NI-SPOL-2 (NI-MPI)
 > Tělesa a okruhy: Základní definice a vlastnosti. Konečná tělesa. Okruhy polynomů, ireducibilní polynom.
+
+## Tělesa a okruhy
+
+## Základní definice a vlastnosti
+
+## Konečná tělesa
+
+## Okruhy polynomů, ireducibilní polynom

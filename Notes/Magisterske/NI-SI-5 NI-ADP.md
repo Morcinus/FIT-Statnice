@@ -8,6 +8,9 @@ FILE TAGS: NI-SI-5 NI-ADP
 
 > NI-SI-5 (NI-ADP)
 > Architektonické vzory (MVC, MVP, MVVM, Client-Server, Microservices vs monolithic server, Asynchronous messaging, Blackboard architecture, Rule-based architecture, Publish-subscribe).
+
+## Architektonické vzory (MVC, MVP, MVVM, Client-Server, Microservices vs monolithic server, Asynchronous messaging, Blackboard architecture, Rule-based architecture, Publish-subscribe)
+
 ### MVC
 
 START
@@ -48,6 +51,7 @@ This layer contains displaying logic. Typically it’s GUI but it doesn’t have
 <!-- ExplanationEnd -->
 
 Tags: should-know N005F001
+
 <!--ID: 1760705194395-->
 
 END
@@ -70,6 +74,7 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130115146.png)
 
 Tags: should-know N005F002
+
 <!--ID: 1760705194398-->
 
 END
@@ -92,6 +97,7 @@ Back:
 ❌ Tight coupling of **View** and **Controller**. That makes testing harder.
 
 Tags: should-know N005F003
+
 <!--ID: 1760705194400-->
 
 END
@@ -130,6 +136,7 @@ The only thing that the view will do is to call a method from the Presenter ever
 <!-- ExplanationEnd -->
 
 Tags: should-know N005F004
+
 <!--ID: 1760705194404-->
 
 END
@@ -151,6 +158,7 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130115313.png)
 
 Tags: should-know N005F005
+
 <!--ID: 1760705194406-->
 
 END
@@ -177,6 +185,7 @@ Oproti MVP je View "chytřejší" protože se samo updatuje a observuje změny v
 ![](../../../Assets/Pasted%20image%2020250130115455.png)
 
 Tags: should-know N005F006
+
 <!--ID: 1760705194409-->
 
 END
@@ -205,6 +214,7 @@ This is example of **MVVM** how it is used in android programming.
 <!-- ExampleEnd -->
 
 Tags: should-know N005F007
+
 <!--ID: 1760705194412-->
 
 END
@@ -225,6 +235,7 @@ In client-server architecture, the client and the server are typically connected
 ![](../../../Assets/Pasted%20image%2020250130115951.png)
 
 Tags: should-know N005F008
+
 <!--ID: 1760705194415-->
 
 END
@@ -247,6 +258,7 @@ Another benefit is that it allows for scalability. If the server is designed to 
 There are also some challenges to using client-server architecture. One challenge is that it requires a network connection between the client and the server, which can introduce latency and other issues. Another challenge is that the server may be a single point of failure, meaning that if the server goes down, the entire application may become unavailable.
 
 Tags: should-know N005F009
+
 <!--ID: 1760705194418-->
 
 END
@@ -266,6 +278,7 @@ Back:
 - **Online Games**: Online games often use client-server architecture to support multiplayer gameplay. In this case, the client is the game running on the user’s device, and the server is a game server that manages the game world and handles communication between players.
 
 Tags: should-know N005F010
+
 <!--ID: 1760705194421-->
 
 END
@@ -312,6 +325,7 @@ Tight coupling with Publish-subscribe architecture
 <!-- ExampleEnd -->
 
 Tags: should-know N005F011
+
 <!--ID: 1760705194424-->
 
 END
@@ -337,6 +351,7 @@ Back:
 - Many inter-application communications have an intrinsically synchronous aspect => a need for facilities to group a request and a response as a single pseudo-synchronous transaction
 
 Tags: should-know N005F012
+
 <!--ID: 1760705194428-->
 
 END
@@ -387,6 +402,7 @@ _StackOverflow is pretty much a Blackboard system, with developers as agents, sh
 <!-- ExampleEnd -->
 
 Tags: should-know N005F013
+
 <!--ID: 1760705194431-->
 
 END
@@ -412,6 +428,7 @@ Ne, už se to nepoužívá, protože to bylo špatně škálovatelné na tehdej�
 <!-- DetailInfoEnd -->
 
 Tags: should-know N005F014
+
 <!--ID: 1760705194435-->
 
 END
@@ -450,6 +467,7 @@ Rule-based architectures provide a means of codifying the problem-solving knowho
 <!-- ExampleEnd -->
 
 Tags: should-know N005F015
+
 <!--ID: 1760705194437-->
 
 END
@@ -471,6 +489,7 @@ Back:
 - Interpreter performs the **match-resolve-act** cycle: - **Match**: In this first phase, the left-hand sides of all rules are matched against the contents of working memory. As a result a conflict set is obtained, which consists of instantiations of all satisfied rules. - An instantiation of a rule is an ordered list of working megnory elements that satisfies the left-hand side of the production. - **Conflict-Resolution**: In this second phase, one of the rule instantiations in the conflict set is chosen for execution. If no rules are satisfied, the interpreter halts. - **Act**: In this third phase, the actions of the rule selected in the conflict-resolution phase are executed. These actions may change the contents o% working memory. At the end of this phase, execution returns to the first phase.
 
 Tags: should-know N005F016
+
 <!--ID: 1760705194440-->
 
 END
@@ -493,6 +512,7 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130124958.png)
 
 Tags: should-know N005F017
+
 <!--ID: 1760705194443-->
 
 END
@@ -518,6 +538,7 @@ Back:
 - Podle meta-dat publisher rovnou posílá informace subscriberovi
 
 Tags: should-know N005F018
+
 <!--ID: 1760705194447-->
 
 END
@@ -552,6 +573,7 @@ Back:
 - Runtime - For example: database triggers, mailing lists, and RSS
 
 Tags: should-know N005F019
+
 <!--ID: 1760705194450-->
 
 END
@@ -570,6 +592,7 @@ Back:
 - **Limited maximum scalability of a pub/sub network** - Load surges: periods when subscriber requests saturate network throughput followed by periods of low message volume (underutilized network bandwidth) - Slowdowns: as more and more applications use the system (even if they are communicating on separate pub/sub channels) the message volume flow to an individual subscriber will slow
 
 Tags: should-know N005F020
+
 <!--ID: 1760705194453-->
 
 END

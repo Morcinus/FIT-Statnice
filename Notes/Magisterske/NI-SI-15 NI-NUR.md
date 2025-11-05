@@ -8,3 +8,5 @@ FILE TAGS: NI-SI-15 NI-NUR
 
 > NI-SI-15 (NI-NUR)
 > Metody vyhodnocování a testování uživatelských rozhraní.
+
+## Metody vyhodnocování a testování uživatelských rozhraní

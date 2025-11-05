@@ -9,6 +9,7 @@ FILE TAGS: NI-SI-2 NI-ADP
 > NI-SI-2 (NI-ADP)
 > Vytvářecí návrhové vzory (Abstract factory, Factory method, Builder, Prototype, Singleton) a Non-GoF návrhové vzory (Double-checked locking, Thread pool, Mock object, Null object).
 
+## Vytvářecí návrhové vzory (Abstract factory, Factory method, Builder, Prototype, Singleton)
 
 START
 NI-SZZ
@@ -24,6 +25,7 @@ Back:
 - **Singleton**
 
 Tags: should-know N002F001
+
 <!--ID: 1760705194546-->
 
 END
@@ -70,6 +72,7 @@ There’s one more thing left to clarify: if the client is only exposed to the a
 <!-- ExplanationEnd -->
 
 Tags: should-know N002F002
+
 <!--ID: 1760705194549-->
 
 END
@@ -98,6 +101,7 @@ Back:
 <!-- ExampleEnd -->
 
 Tags: should-know N002F003
+
 <!--ID: 1760705194552-->
 
 END
@@ -119,6 +123,7 @@ Back:
 ❌ The code may become more complicated than it should be, since a lot of new interfaces and classes are introduced along with the pattern.
 
 Tags: should-know N002F004
+
 <!--ID: 1760705194555-->
 
 END
@@ -183,6 +188,7 @@ In addition, the director class completely hides the details of product construc
 <!-- ExplanationEnd -->
 
 Tags: should-know N002F005
+
 <!--ID: 1760705194558-->
 
 END
@@ -211,6 +217,7 @@ Back:
 <!-- ExampleEnd -->
 
 Tags: should-know N002F006
+
 <!--ID: 1760705194561-->
 
 END
@@ -233,6 +240,7 @@ Back:
 ❌ The overall complexity of the code increases since the pattern requires creating multiple new classes.
 
 Tags: should-know N002F007
+
 <!--ID: 1760705194564-->
 
 END
@@ -294,6 +302,7 @@ The code that uses the factory method (often called the *client* code) doesn�
 <!-- ExplanationEnd -->
 
 Tags: should-know N002F008
+
 <!--ID: 1760705194567-->
 
 END
@@ -324,6 +333,7 @@ Back:
 <!-- ExampleEnd -->
 
 Tags: should-know N002F009
+
 <!--ID: 1760705194570-->
 
 END
@@ -346,6 +356,7 @@ Back:
 ❌ The code may become more complicated since you need to introduce a lot of new subclasses to implement the pattern. The best case scenario is when you’re introducing the pattern into an existing hierarchy of creator classes.
 
 Tags: should-know N002F010
+
 <!--ID: 1760705194573-->
 
 END
@@ -390,6 +401,7 @@ Here’s how it works: you create a set of objects, configured in various ways. 
 <!-- ExplanationEnd -->
 
 Tags: should-know N002F011
+
 <!--ID: 1760705194576-->
 
 END
@@ -416,6 +428,7 @@ Back:
 <!-- ExampleEnd -->
 
 Tags: should-know N002F012
+
 <!--ID: 1760705194578-->
 
 END
@@ -434,6 +447,7 @@ Back:
 1. The **Prototype Registry** provides an easy way to access frequently-used prototypes. It stores a set of pre-built objects that are ready to be copied. The simplest prototype registry is a `name → prototype` hash map. However, if you need better search criteria than a simple name, you can build a much more robust version of the registry.
 
 Tags: should-know N002F013
+
 <!--ID: 1760705194581-->
 
 END
@@ -458,6 +472,7 @@ Back:
 ❌ Cloning complex objects that have circular references might be very tricky.
 
 Tags: should-know N002F014
+
 <!--ID: 1760705194584-->
 
 END
@@ -508,6 +523,7 @@ If your code has access to the Singleton class, then it’s able to call the Sin
 <!-- ExplanationEnd -->
 
 Tags: should-know N002F015
+
 <!--ID: 1760705194586-->
 
 END
@@ -528,6 +544,7 @@ Back:
 The Singleton’s constructor should be hidden from the client code. Calling the `getInstance` method should be the only way of getting the Singleton object.
 
 Tags: should-know N002F016
+
 <!--ID: 1760705194589-->
 
 END
@@ -556,13 +573,14 @@ Back:
 ❌ It may be difficult to unit test the client code of the Singleton because many test frameworks rely on inheritance when producing mock objects. Since the constructor of the singleton class is private and overriding static methods is impossible in most languages, you will need to think of a creative way to mock the singleton. Or just don’t write the tests. Or don’t use the Singleton pattern.
 
 Tags: should-know N002F017
+
 <!--ID: 1760705194592-->
 
 END
 
 ---
 
-### Non-GoF vzory
+## Non-GoF návrhové vzory (Double-checked locking, Thread pool, Mock object, Null object)
 
 START
 NI-SZZ
@@ -581,6 +599,7 @@ Back:
 - **Thread pool**
 
 Tags: should-know N002F018
+
 <!--ID: 1760705194594-->
 
 END
@@ -611,6 +630,7 @@ if(ins == null) {
 ```
 
 Tags: should-know N002F019
+
 <!--ID: 1760705194597-->
 
 END
@@ -630,6 +650,7 @@ Back:
 Proto je fajn to nejdřív checknout, potom locknout a potom checknout znovu.
 
 Tags: should-know N002F020
+
 <!--ID: 1760705194599-->
 
 END
@@ -661,6 +682,7 @@ Back:
 <!-- ImageEnd -->
 
 Tags: should-know N002F021
+
 <!--ID: 1760705194602-->
 
 END
@@ -681,6 +703,7 @@ Objekt, který je náhradou za nějaký reálný objekt, simuluje jeho chování
 ![](../../../Assets/Pasted%20image%2020250130113938.png)
 
 Tags: should-know N002F022
+
 <!--ID: 1760705194605-->
 
 END
@@ -700,6 +723,7 @@ Back:
 - **Když reálný objekt vrací nedeterministické výsledky** - např. čas, seed atd.
 
 Tags: should-know N002F023
+
 <!--ID: 1760705194608-->
 
 END
@@ -730,6 +754,7 @@ Díky tomu:
 <!-- ImageEnd -->
 
 Tags: should-know N002F024
+
 <!--ID: 1760705194611-->
 
 END

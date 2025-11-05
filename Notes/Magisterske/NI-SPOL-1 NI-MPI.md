@@ -8,3 +8,9 @@ FILE TAGS: NI-SPOL-1 NI-MPI
 
 > NI-SPOL-1 (NI-MPI)
 > Teorie grup: Grupoidy, pologrupy, monoidy a grupy. Podgrupy, cyklické grupy a jejich generátory.
+
+## Teorie grup
+
+## Grupoidy, pologrupy, monoidy a grupy
+
+## Podgrupy, cyklické grupy a jejich generátory

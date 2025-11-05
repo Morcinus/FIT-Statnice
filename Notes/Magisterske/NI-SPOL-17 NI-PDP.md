@@ -8,3 +8,13 @@ FILE TAGS: NI-SPOL-17 NI-PDP
 
 > NI-SPOL-17 (NI-PDP)
 > Programování nad sdílenou pamětí, programový model OpenMP, datový a funkční paralelismus, synchronizace vláken, vícevláknové algoritmy (násobení polynomů, násobení matic a vektorů, řazení).
+
+## Programování nad sdílenou pamětí
+
+## Programový model OpenMP
+
+## Datový a funkční paralelismus
+
+## Synchronizace vláken
+
+## Vícevláknové algoritmy (násobení polynomů, násobení matic a vektorů, řazení)
