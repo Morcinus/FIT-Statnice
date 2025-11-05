@@ -8,6 +8,7 @@ import {
 } from "obsidian";
 import { ConsoleLoggingService, LoggingService } from "./logging";
 import { MigratorFacade } from "./core/MigratorFacade";
+import { MigrationCommentsRunner } from "./comments/MigrationCommentsRunner";
 
 export interface MigratorSettings {
   testCourses: string[];
@@ -33,9 +34,17 @@ export default class FitStatniceMigratorPlugin extends Plugin {
       callback: async () => {
         new Notice("Test all migration comments: started");
         this.logger.info("Starting: Test all migration comments");
-        await facade.runCommentsChecks();
-        this.logger.success("Finished: Test all migration comments");
-        new Notice("Test all migration comments: finished", 0);
+        const runner = new MigrationCommentsRunner(this.logger);
+        const res = runner.run(
+          this.settings.fitNotesRepoPath,
+          this.settings.testCourses
+        );
+        this.logger.success("Finished: Test all migration comments", {
+          total: res.totalFlashcards,
+          issues: res.issues.length,
+        });
+        const summary = `Comments checked: ${res.totalFlashcards}\nIssues: ${res.issues.length}`;
+        new Notice(summary, 0);
       },
     });
 

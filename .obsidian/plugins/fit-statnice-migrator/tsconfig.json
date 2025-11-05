@@ -11,7 +11,8 @@
     "noUnusedParameters": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["node", "obsidian"],
+    "types": ["node", "obsidian", "jest"],
+    "esModuleInterop": true,
     "skipLibCheck": true
   },
   "include": ["src/**/*.ts"],

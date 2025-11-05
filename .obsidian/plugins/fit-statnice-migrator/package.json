@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "esbuild src/main.ts src/cli.ts --bundle --outdir=. --format=cjs --target=es2018 --platform=node --external:obsidian --external:electron --sourcemap=inline --watch",
     "build": "esbuild src/main.ts src/cli.ts --bundle --outdir=. --format=cjs --target=es2018 --platform=node --external:obsidian --external:electron --minify",
+    "test": "jest -c jest.config.cjs",
     "cli:comments": "node cli.js comments",
     "cli:migration": "node cli.js migration",
     "cli:all": "node cli.js all",
@@ -14,8 +15,11 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.30",
+    "@types/jest": "^29.5.12",
     "obsidian": "^1.5.8",
     "esbuild": "^0.21.5",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
     "typescript": "^5.6.3"
   },
   "dependencies": {
