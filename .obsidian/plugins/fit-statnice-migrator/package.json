@@ -9,6 +9,7 @@
     "cli:comments": "node cli.js comments",
     "cli:migration": "node cli.js migration",
     "cli:all": "node cli.js all",
+    "cli:prepare": "node cli.js prepare-sections",
     "version": "node scripts/version-bump.js"
   },
   "devDependencies": {

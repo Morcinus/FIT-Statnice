@@ -1,4 +1,11 @@
-import { App, Plugin, PluginSettingTab, Setting, Notice } from "obsidian";
+import {
+  App,
+  Plugin,
+  PluginSettingTab,
+  Setting,
+  Notice,
+  SuggestModal,
+} from "obsidian";
 import { ConsoleLoggingService, LoggingService } from "./logging";
 import { MigratorFacade } from "./core/MigratorFacade";
 
@@ -44,6 +51,31 @@ export default class FitStatniceMigratorPlugin extends Plugin {
       },
     });
 
+    this.addCommand({
+      id: "fit-statnice-prepare-migration-sections",
+      name: "Prepare Migration Sections",
+      callback: async () => {
+        new Notice("Prepare Migration Sections: started");
+        this.logger.info("Starting: Prepare Migration Sections");
+        const courseId = await new CoursePickModal(
+          this.app,
+          this.settings.testCourses
+        ).openAndGet();
+        if (!courseId) {
+          this.logger.info("Prepare Migration Sections cancelled");
+          return;
+        }
+        const baseVaultPath =
+          (this.app.vault.adapter as any).getBasePath?.() ?? "";
+        const output = await facade.prepareMigrationSections(
+          courseId,
+          baseVaultPath
+        );
+        this.logger.success("Prepare Migration Sections finished");
+        new Notice(output || `No exam notes found for ${courseId}.`, 0);
+      },
+    });
+
     this.addSettingTab(new MigratorSettingTab(this.app, this));
   }
 
@@ -55,6 +87,42 @@ export default class FitStatniceMigratorPlugin extends Plugin {
 
   async saveSettings() {
     await this.saveData(this.settings);
+  }
+}
+
+class CoursePickModal extends SuggestModal<string> {
+  private readonly options: string[];
+  private resolveFn: ((value: string | null) => void) | null = null;
+
+  constructor(app: App, options: string[]) {
+    super(app);
+    this.options = options;
+    this.setPlaceholder("Select a courseId...");
+  }
+
+  getSuggestions(query: string): string[] {
+    const q = query.toLowerCase();
+    return this.options.filter((o) => o.toLowerCase().includes(q));
+  }
+
+  renderSuggestion(value: string, el: HTMLElement) {
+    el.setText(value);
+  }
+
+  onChooseSuggestion(item: string) {
+    if (this.resolveFn) this.resolveFn(item);
+    this.close();
+  }
+
+  onClose(): void {
+    if (this.resolveFn) this.resolveFn(null);
+  }
+
+  openAndGet(): Promise<string | null> {
+    this.open();
+    return new Promise((resolve) => {
+      this.resolveFn = resolve;
+    });
   }
 }
 

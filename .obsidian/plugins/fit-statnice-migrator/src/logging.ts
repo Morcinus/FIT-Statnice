@@ -25,3 +25,18 @@ export class ConsoleLoggingService implements LoggingService {
     });
   }
 }
+
+export class QuietConsoleLoggingService implements LoggingService {
+  info(_message: string, _context?: Record<string, unknown>): void {
+    // no-op for CLI cleanliness
+  }
+  success(_message: string, _context?: Record<string, unknown>): void {
+    // no-op for CLI cleanliness
+  }
+  error(err: ActionableError): void {
+    console.error(`[Migrator][ERROR][${err.name}] ${err.message}`, {
+      fixInstructions: err.fixInstructions,
+      context: err.context ?? {},
+    });
+  }
+}
