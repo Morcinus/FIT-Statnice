@@ -8,6 +8,7 @@ import {
 } from "obsidian";
 import { ConsoleLoggingService, LoggingService } from "./logging";
 import { MigratorFacade } from "./core/MigratorFacade";
+import { MigratedFlashcardsRunner } from "./migration/MigratedFlashcardsRunner";
 import { MigrationCommentsRunner } from "./comments/MigrationCommentsRunner";
 
 export interface MigratorSettings {
@@ -54,9 +55,19 @@ export default class FitStatniceMigratorPlugin extends Plugin {
       callback: async () => {
         new Notice("Test flashcards migrated correctly: started");
         this.logger.info("Starting: Test flashcards migrated correctly");
-        await facade.runMigrationChecks();
-        this.logger.success("Finished: Test flashcards migrated correctly");
-        new Notice("Test flashcards migrated correctly: finished", 0);
+        const runner = new MigratedFlashcardsRunner(this.logger);
+        const res = runner.run(
+          this.settings.fitNotesRepoPath,
+          (this.app.vault.adapter as any).getBasePath?.() ?? "",
+          this.settings.testCourses
+        );
+        this.logger.success("Finished: Test flashcards migrated correctly", {
+          totalSource: res.totalSource,
+          totalTarget: res.totalTarget,
+          issues: res.issues.length,
+        });
+        const summary = `Source: ${res.totalSource}\nMigrated: ${res.totalTarget}\nIssues: ${res.issues.length}`;
+        new Notice(summary, 0);
       },
     });
 

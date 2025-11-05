@@ -2,6 +2,8 @@
 import { QuietConsoleLoggingService } from "./logging";
 import { MigratorFacade } from "./core/MigratorFacade";
 import * as path from "path";
+import { MigratedFlashcardsRunner } from "./migration/MigratedFlashcardsRunner";
+import { MigrationCommentsRunner } from "./comments/MigrationCommentsRunner";
 
 async function main() {
   const logger = new QuietConsoleLoggingService();
@@ -9,10 +11,22 @@ async function main() {
   const cmd = process.argv[2]?.toLowerCase() ?? "all";
   console.log("=== Running Migrator Tool ===");
   if (cmd === "comments") {
-    await facade.runCommentsChecks();
+    const vaultPath = path.resolve(__dirname, "..", "..", "..");
+    const fitNotesPath = path.resolve(vaultPath, "..", "FIT-Notes");
+    const runner = new MigrationCommentsRunner(logger);
+    const res = runner.run(fitNotesPath, process.argv.slice(3));
+    console.log(`Comments checked: ${res.totalFlashcards}`);
+    console.log(`Issues: ${res.issues.length}`);
     console.log("Ran Comments Test");
   } else if (cmd === "migration") {
-    await facade.runMigrationChecks();
+    const courseIds = process.argv.slice(3);
+    const vaultPath = path.resolve(__dirname, "..", "..", "..");
+    const fitNotesPath = path.resolve(vaultPath, "..", "FIT-Notes");
+    const runner = new MigratedFlashcardsRunner(logger);
+    const res = runner.run(fitNotesPath, vaultPath, courseIds);
+    console.log(`Source: ${res.totalSource}`);
+    console.log(`Migrated: ${res.totalTarget}`);
+    console.log(`Issues: ${res.issues.length}`);
     console.log("Ran Migration Test");
   } else if (cmd === "prepare-sections") {
     const courseId = process.argv[3];
