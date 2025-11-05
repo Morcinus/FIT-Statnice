@@ -1,0 +1,12 @@
+{
+  "id": "fit-statnice-migrator",
+  "name": "FIT Statnice Migrator",
+  "version": "0.1.0",
+  "minAppVersion": "1.4.0",
+  "description": "Testing tools for validating migration between FIT-Notes and FIT-Statnice vaults.",
+  "author": "FIT-Statnice Generator",
+  "authorUrl": "",
+  "isDesktopOnly": false
+}
+
+

@@ -1,0 +1,9 @@
+node_modules/
+main.js
+main.js.map
+cli.js
+cli.js.map
+.obsidian/
+data.json
+
+
