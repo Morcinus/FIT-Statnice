@@ -1,0 +1,106 @@
+import { App, Plugin, PluginSettingTab, Setting, Notice } from "obsidian";
+import { ConsoleLoggingService, LoggingService } from "./logging";
+import { MigratorFacade } from "./core/MigratorFacade";
+
+export interface MigratorSettings {
+  testCourses: string[];
+  fitNotesRepoPath: string;
+}
+
+const DEFAULT_SETTINGS: MigratorSettings = {
+  testCourses: [],
+  fitNotesRepoPath: "",
+};
+
+export default class FitStatniceMigratorPlugin extends Plugin {
+  settings: MigratorSettings;
+  logger: LoggingService = new ConsoleLoggingService();
+
+  async onload() {
+    await this.loadSettings();
+    const facade = new MigratorFacade({ logger: this.logger });
+
+    this.addCommand({
+      id: "fit-statnice-test-migration-comments",
+      name: "Test all migration comments",
+      callback: async () => {
+        new Notice("Test all migration comments: started");
+        this.logger.info("Starting: Test all migration comments");
+        await facade.runCommentsChecks();
+        this.logger.success("Finished: Test all migration comments");
+        new Notice("Test all migration comments: finished", 0);
+      },
+    });
+
+    this.addCommand({
+      id: "fit-statnice-test-flashcards-migrated",
+      name: "Test flashcards migrated correctly",
+      callback: async () => {
+        new Notice("Test flashcards migrated correctly: started");
+        this.logger.info("Starting: Test flashcards migrated correctly");
+        await facade.runMigrationChecks();
+        this.logger.success("Finished: Test flashcards migrated correctly");
+        new Notice("Test flashcards migrated correctly: finished", 0);
+      },
+    });
+
+    this.addSettingTab(new MigratorSettingTab(this.app, this));
+  }
+
+  onunload() {}
+
+  async loadSettings() {
+    this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
+  }
+
+  async saveSettings() {
+    await this.saveData(this.settings);
+  }
+}
+
+class MigratorSettingTab extends PluginSettingTab {
+  plugin: FitStatniceMigratorPlugin;
+
+  constructor(app: App, plugin: FitStatniceMigratorPlugin) {
+    super(app, plugin);
+    this.plugin = plugin;
+  }
+
+  display(): void {
+    const { containerEl } = this;
+    containerEl.empty();
+
+    containerEl.createEl("h2", { text: "FIT Statnice Migrator - Settings" });
+
+    new Setting(containerEl)
+      .setName("Test Courses")
+      .setDesc("Comma-separated course IDs to test (e.g., NI-ADP, NI-SI).")
+      .addText((text) =>
+        text
+          .setPlaceholder("NI-ADP, NI-SI")
+          .setValue(this.plugin.settings.testCourses.join(", "))
+          .onChange(async (value) => {
+            this.plugin.settings.testCourses = value
+              .split(",")
+              .map((s) => s.trim())
+              .filter((s) => s.length > 0);
+            await this.plugin.saveSettings();
+          })
+      );
+
+    new Setting(containerEl)
+      .setName("FIT-Notes Repository Path")
+      .setDesc(
+        "Absolute path to the FIT-Notes repository for source flashcards."
+      )
+      .addText((text) =>
+        text
+          .setPlaceholder("D:/path/to/FIT-Notes")
+          .setValue(this.plugin.settings.fitNotesRepoPath)
+          .onChange(async (value) => {
+            this.plugin.settings.fitNotesRepoPath = value.trim();
+            await this.plugin.saveSettings();
+          })
+      );
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "fit-statnice-migrator",
+  "version": "0.1.0",
+  "description": "Testing tools for validating migration between FIT-Notes and FIT-Statnice vaults.",
+  "main": "main.js",
+  "scripts": {
+    "dev": "esbuild src/main.ts src/cli.ts --bundle --outdir=. --format=cjs --target=es2018 --platform=node --external:obsidian --external:electron --sourcemap=inline --watch",
+    "build": "esbuild src/main.ts src/cli.ts --bundle --outdir=. --format=cjs --target=es2018 --platform=node --external:obsidian --external:electron --minify",
+    "cli:comments": "node cli.js comments",
+    "cli:migration": "node cli.js migration",
+    "cli:all": "node cli.js all",
+    "version": "node scripts/version-bump.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "obsidian": "^1.5.8",
+    "esbuild": "^0.21.5",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "tslib": "^2.7.0"
+  }
+}
