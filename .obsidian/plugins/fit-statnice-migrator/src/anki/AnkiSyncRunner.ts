@@ -5,7 +5,7 @@ import { AnkiIdValidator, AnkiIssue } from "./AnkiIdValidator";
 
 export interface AnkiRunnerResult {
   totalFlashcards: number;
-  issues: Array<AnkiIssue & { file: string; flashcardIndex: number }>;
+  issues: Array<AnkiIssue & { file: string; flashcardIndex: number; question?: string }>;
 }
 
 export class AnkiSyncRunner {
@@ -37,6 +37,7 @@ export class AnkiSyncRunner {
           let j = i + 1;
           while (j < lines.length && lines[j].trim() !== "END") j++;
           if (j < lines.length && lines[j].trim() === "END") {
+            const question = this.extractQuestion(lines, i);
             const res = this.validator.validateForFlashcard(lines, j);
             result.totalFlashcards += 1;
             if (!res.isValid) {
@@ -45,6 +46,7 @@ export class AnkiSyncRunner {
                   ...issue,
                   file,
                   flashcardIndex: cardIndex,
+                  question,
                 });
               }
             }
@@ -55,6 +57,30 @@ export class AnkiSyncRunner {
       }
     }
     return result;
+  }
+
+  private extractQuestion(lines: string[], startIdx: number): string {
+    // START is at startIdx, next line is type (NI-SZZ), then question until "Back:"
+    let i = startIdx + 1;
+    // Skip type line
+    if (i < lines.length && lines[i].trim() === 'NI-SZZ') {
+      i++;
+    }
+    const questionLines: string[] = [];
+    while (i < lines.length) {
+      const trimmed = lines[i].trim();
+      if (trimmed === 'Back:') break;
+      if (trimmed === 'END') break;
+      questionLines.push(lines[i]);
+      i++;
+    }
+    let question = questionLines.join('\n').trim();
+    // Remove "(FIT-Notes flashcard)" text if present
+    question = question.replace(/\(FIT-Notes flashcard\)/gi, '').trim();
+    // Replace newlines with spaces and normalize whitespace
+    question = question.replace(/\s+/g, ' ').trim();
+    // Truncate if too long
+    return question.length > 100 ? question.substring(0, 100) + '...' : question;
   }
 
   private listMarkdownFiles(dir: string): string[] {

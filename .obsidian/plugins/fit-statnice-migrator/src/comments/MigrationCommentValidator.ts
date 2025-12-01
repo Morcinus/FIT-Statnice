@@ -39,42 +39,68 @@ export class MigrationCommentValidator {
       });
       return { isValid: false, issues };
     }
-    const prevLine = lines[startIndex - 1];
-    if (!prevLine.trim().startsWith("<!--") || !prevLine.includes("-->")) {
-      // Either not a comment, or multiline comment not on single line
-      // Allow multiline comments: find the nearest comment block ending at startIndex - 1 with no blank lines between
-      const block = this.extractImmediateCommentBlock(lines, startIndex - 1);
-      if (!block) {
-        // Not a comment
-        issues.push({
-          name: "NotHtmlComment",
-          message: "Expected HTML comment directly above START",
-        });
-        return { isValid: false, issues };
-      }
-      return this.validateCommentBlock(block, issues);
+    // Look for comment block, skipping blank lines between comment and START
+    const block = this.extractCommentBlock(lines, startIndex - 1);
+    if (!block) {
+      issues.push({
+        name: "MissingMigrationComment",
+        message: "No migration comment found above START",
+      });
+      return { isValid: false, issues };
     }
-    // Single-line HTML comment directly above
-    const block = prevLine;
     return this.validateCommentBlock(block, issues);
   }
 
-  private extractImmediateCommentBlock(
+  private extractCommentBlock(
     lines: string[],
-    lastIdx: number
+    startIdx: number
   ): string | null {
-    // Walk upwards until we hit a non-empty line that is not part of an HTML comment block
-    // Require that the line immediately above START is either '-->' or part of comment; no blank line allowed
-    let i = lastIdx;
-    if (lines[i].trim().length === 0) return null; // blank line not allowed
-    let collected: string[] = [];
-    while (i >= 0) {
-      const line = lines[i];
-      if (line.trim().length === 0) break;
-      collected.unshift(line);
-      if (line.includes("<!--")) break;
+    // Walk upwards from startIdx, skipping blank lines, to find the comment block
+    let i = startIdx;
+    // Skip blank lines
+    while (i >= 0 && lines[i].trim().length === 0) {
       i--;
     }
+    if (i < 0) return null; // No non-blank lines found
+
+    // Now collect the comment block, starting from the first non-blank line
+    let collected: string[] = [];
+    let foundCommentStart = false;
+
+    while (i >= 0) {
+      const line = lines[i];
+      const trimmed = line.trim();
+
+      // If we hit a blank line after starting to collect, stop
+      if (trimmed.length === 0 && collected.length > 0) {
+        break;
+      }
+
+      // If we hit a non-blank line that's not part of a comment and we've already collected something, stop
+      if (
+        trimmed.length > 0 &&
+        !trimmed.includes("<!--") &&
+        !trimmed.includes("-->") &&
+        collected.length > 0 &&
+        foundCommentStart
+      ) {
+        break;
+      }
+
+      if (trimmed.length > 0) {
+        collected.unshift(line);
+        if (trimmed.includes("<!--")) {
+          foundCommentStart = true;
+        }
+        // If we found the start and end of comment, we're done
+        if (foundCommentStart && collected.join("\n").includes("-->")) {
+          break;
+        }
+      }
+
+      i--;
+    }
+
     const text = collected.join("\n");
     if (text.includes("<!--") && text.includes("-->")) return text;
     return null;

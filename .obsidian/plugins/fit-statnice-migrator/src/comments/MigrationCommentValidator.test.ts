@@ -56,11 +56,20 @@ describe('MigrationCommentValidator', () => {
     expect(res.issues.some(i => i.name === 'EmptyValue')).toBe(true);
   });
 
-  test('blank line between comment and START is invalid', () => {
-    const comment = `<!-- Exam Note ID: NI-SI-1 -->`;
-    const lines = [comment, '', ...makeCard(null)];
+  test('blank line between comment and START is allowed', () => {
+    const comment = `<!--\nExam Note ID: NI-SI-1\nExam Note Section Name: Foo\nMigration Status: review\n-->`;
+    const lines = [comment, '', 'START', 'FIT-Card', '', 'Back:', '', 'END'];
     const res = v.validateForFlashcard(lines, 2);
-    expect(res.isValid).toBe(false);
+    expect(res.isValid).toBe(true);
+    expect(res.issues).toHaveLength(0);
+  });
+
+  test('multiple blank lines between comment and START are allowed', () => {
+    const comment = `<!--\nExam Note ID: NI-SI-1\nExam Note Section Name: Foo\nMigration Status: review\n-->`;
+    const lines = [comment, '', '', 'START', 'FIT-Card', '', 'Back:', '', 'END'];
+    const res = v.validateForFlashcard(lines, 3);
+    expect(res.isValid).toBe(true);
+    expect(res.issues).toHaveLength(0);
   });
 });
 
