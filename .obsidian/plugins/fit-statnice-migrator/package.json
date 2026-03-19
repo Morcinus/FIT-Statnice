@@ -11,6 +11,7 @@
     "cli:migrate-notes": "node cli.js migrate-notes",
     "cli:test-migrated-cards": "node cli.js test-migrated-cards",
     "cli:test-anki-sync": "node cli.js test-anki-sync",
+    "cli:stats": "node cli.js stats",
     "cli:test-all": "node cli.js test-all",
     "cli:prepare": "node cli.js prepare-sections",
     "version": "node scripts/version-bump.js"

@@ -7,6 +7,7 @@ import { MigratedFlashcardsRunner } from "./migration/MigratedFlashcardsRunner";
 import { MigrationNotesRunner } from "./migration/MigrationNotesRunner";
 import { MigrationCommentsRunner } from "./comments/MigrationCommentsRunner";
 import { AnkiSyncRunner } from "./anki/AnkiSyncRunner";
+import { StatsColor, StatsRunner } from "./stats/StatsRunner";
 
 interface Config {
   testCourses?: string[];
@@ -118,6 +119,38 @@ async function main() {
     console.log("Ran Anki Sync Check");
   };
 
+  const colorize = (text: string, color: StatsColor | "gray"): string => {
+    const reset = "\x1b[0m";
+    const code =
+      color === "green"
+        ? "\x1b[92m"
+        : color === "gray"
+          ? "\x1b[30m"
+        : color === "yellow"
+          ? "\x1b[33m"
+          : "\x1b[31m";
+    return `${code}${text}${reset}`;
+  };
+
+  const runStats = () => {
+    const runner = new StatsRunner(logger);
+    const res = runner.run(fitNotesPath, vaultPath);
+    console.log("Exam note stats:");
+    for (const note of res.notes) {
+      const coloredCount = colorize(`${note.flashcards} cards`, note.color);
+      const courseLabel = note.courseId ?? "unknown-course";
+      const statusIcon = note.finished
+        ? colorize("✓", "green")
+        : colorize("✕", "gray");
+      console.log(
+        `  ${note.examNoteId} (${courseLabel}): ${coloredCount} | ${statusIcon}`
+      );
+    }
+    console.log(`Finished exam notes: ${res.finishedNotes}/${res.totalNotes}`);
+    console.log(`Total flashcards in exam notes: ${res.totalFlashcards}`);
+    console.log("Ran Stats");
+  };
+
   if (cmd === "comments") {
     runCommentsCheck();
   } else if (cmd === "migrate-notes") {
@@ -151,6 +184,8 @@ async function main() {
     console.log("\nPrepared Note Sections");
   } else if (cmd === "test-anki-sync") {
     runAnkiSyncCheck();
+  } else if (cmd === "stats") {
+    runStats();
   } else if (cmd === "test-all") {
     // Run Comments Check
     console.log("\n--- Comments Check ---");
@@ -170,7 +205,7 @@ async function main() {
       name: "InvalidCLICommand",
       message: `Unknown command: ${cmd}`,
       fixInstructions:
-        "Use one of: comments | migrate-notes | test-migrated-cards | test-anki-sync | test-all | prepare-sections <courseId>",
+        "Use one of: comments | migrate-notes | test-migrated-cards | test-anki-sync | stats | test-all | prepare-sections <courseId>",
     });
     process.exitCode = 1;
   }
