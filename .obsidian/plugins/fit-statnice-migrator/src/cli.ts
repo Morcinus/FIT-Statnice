@@ -32,12 +32,11 @@ async function main() {
   const cmd = process.argv[2]?.toLowerCase() ?? "all";
   console.log("=== Running Migrator Tool ===");
   if (cmd === "comments") {
-    const courseIds = process.argv.slice(3).length > 0 
-      ? process.argv.slice(3) 
-      : (config.testCourses || []);
+    const courseIds = config.testCourses || [];
     const fitNotesPath = config.fitNotesRepoPath || path.resolve(__dirname, "..", "..", "..", "..", "FIT-Notes");
+    const vaultPath = path.resolve(__dirname, "..", "..", "..");
     const runner = new MigrationCommentsRunner(logger);
-    const res = runner.run(fitNotesPath, courseIds);
+    const res = runner.run(fitNotesPath, vaultPath, courseIds);
     console.log(`Comments checked: ${res.totalFlashcards}`);
     console.log(`Issues: ${res.issues.length}`);
     if (res.issues.length > 0) {
@@ -111,7 +110,7 @@ async function main() {
     // Run Comments Check
     console.log("\n--- Comments Check ---");
     const commentsRunner = new MigrationCommentsRunner(logger);
-    const commentsRes = commentsRunner.run(fitNotesPath, courseIds);
+    const commentsRes = commentsRunner.run(fitNotesPath, vaultPath, courseIds);
     console.log(`Comments checked: ${commentsRes.totalFlashcards}`);
     console.log(`Issues: ${commentsRes.issues.length}`);
     if (commentsRes.issues.length > 0) {

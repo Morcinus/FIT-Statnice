@@ -36,9 +36,12 @@ export default class FitStatniceMigratorPlugin extends Plugin {
       callback: async () => {
         new Notice("Test all migration comments: started");
         this.logger.info("Starting: Test all migration comments");
+        const baseVaultPath =
+          (this.app.vault.adapter as any).getBasePath?.() ?? "";
         const runner = new MigrationCommentsRunner(this.logger);
         const res = runner.run(
           this.settings.fitNotesRepoPath,
+          baseVaultPath,
           this.settings.testCourses
         );
         this.logger.success("Finished: Test all migration comments", {
