@@ -29,6 +29,11 @@ export class AnkiSyncRunner {
       return result;
     }
     const files = this.listMarkdownFiles(notesDir);
+    const idOccurrences = new Map<
+      string,
+      Array<{ file: string; flashcardIndex: number; question?: string }>
+    >();
+
     for (const file of files) {
       const lines = fs.readFileSync(file, "utf8").split(/\r?\n/);
       let cardIndex = 0;
@@ -49,6 +54,14 @@ export class AnkiSyncRunner {
                   question,
                 });
               }
+            } else if (res.idValue) {
+              const occurrences = idOccurrences.get(res.idValue) ?? [];
+              occurrences.push({
+                file,
+                flashcardIndex: cardIndex,
+                question,
+              });
+              idOccurrences.set(res.idValue, occurrences);
             }
             cardIndex += 1;
             i = j;
@@ -56,6 +69,8 @@ export class AnkiSyncRunner {
         }
       }
     }
+
+    this.appendDuplicateIdIssues(idOccurrences, result);
     return result;
   }
 
@@ -99,7 +114,28 @@ export class AnkiSyncRunner {
         }
       }
     }
-    return out;
+    return out.sort((a, b) => a.localeCompare(b, "cs"));
+  }
+
+  private appendDuplicateIdIssues(
+    idOccurrences: Map<
+      string,
+      Array<{ file: string; flashcardIndex: number; question?: string }>
+    >,
+    result: AnkiRunnerResult
+  ): void {
+    for (const [idValue, occurrences] of idOccurrences.entries()) {
+      if (occurrences.length < 2) continue;
+      for (const occurrence of occurrences) {
+        result.issues.push({
+          name: "DuplicateAnkiId",
+          message: `Duplicate Anki ID value: ${idValue}`,
+          context: { idValue, occurrences: occurrences.length },
+          file: occurrence.file,
+          flashcardIndex: occurrence.flashcardIndex,
+          question: occurrence.question,
+        });
+      }
+    }
   }
 }
-

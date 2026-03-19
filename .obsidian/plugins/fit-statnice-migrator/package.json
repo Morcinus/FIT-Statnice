@@ -8,12 +8,11 @@
     "build": "esbuild src/main.ts src/cli.ts --bundle --outdir=. --format=cjs --target=es2018 --platform=node --external:obsidian --external:electron --minify",
     "test": "jest -c jest.config.cjs",
     "cli:comments": "node cli.js comments",
-    "cli:migration": "node cli.js migration",
     "cli:migrate-notes": "node cli.js migrate-notes",
     "cli:test-migrated-cards": "node cli.js test-migrated-cards",
-    "cli:all": "node cli.js all",
+    "cli:test-anki-sync": "node cli.js test-anki-sync",
+    "cli:test-all": "node cli.js test-all",
     "cli:prepare": "node cli.js prepare-sections",
-    "cli:anki-sync": "node cli.js anki-sync",
     "version": "node scripts/version-bump.js"
   },
   "devDependencies": {

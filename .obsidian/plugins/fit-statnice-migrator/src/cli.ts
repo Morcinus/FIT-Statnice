@@ -30,29 +30,97 @@ async function main() {
   const logger = new QuietConsoleLoggingService();
   const facade = new MigratorFacade({ logger });
   const config = loadConfig();
-  const cmd = process.argv[2]?.toLowerCase() ?? "all";
+  const cmd = process.argv[2]?.toLowerCase() ?? "test-all";
+  const vaultPath = path.resolve(__dirname, "..", "..", "..");
+  const fitNotesPath =
+    config.fitNotesRepoPath || path.resolve(vaultPath, "..", "FIT-Notes");
+  const courseIds = config.testCourses || [];
   console.log("=== Running Migrator Tool ===");
-  if (cmd === "comments") {
-    const courseIds = config.testCourses || [];
-    const fitNotesPath = config.fitNotesRepoPath || path.resolve(__dirname, "..", "..", "..", "..", "FIT-Notes");
-    const vaultPath = path.resolve(__dirname, "..", "..", "..");
+
+  const printCommentIssues = (sourcePath: string, issues: ReturnType<MigrationCommentsRunner["run"]>["issues"]) => {
+    if (issues.length === 0) return;
+    console.log("\nIssues found:");
+    for (const issue of issues) {
+      const fileName = path.relative(sourcePath, issue.file);
+      const question = issue.question
+        ? `"${issue.question}"`
+        : `(flashcard #${issue.flashcardIndex})`;
+      console.log(`  [${issue.name}] ${fileName} (${question}): ${issue.message}`);
+    }
+  };
+
+  const printMigratedIssues = (
+    basePath: string,
+    issues: ReturnType<MigratedFlashcardsRunner["run"]>["issues"]
+  ) => {
+    if (issues.length === 0) return;
+    console.log("\nIssues found:");
+    for (const issue of issues) {
+      const fileInfo = issue.file ? ` in ${path.relative(basePath, issue.file)}` : "";
+      const idInfo = issue.id ? ` (ID: ${issue.id})` : "";
+      console.log(`  [${issue.name}]${fileInfo}${idInfo}: ${issue.message}`);
+    }
+  };
+
+  const printMigrationNotesIssues = (
+    sourcePath: string,
+    issues: ReturnType<MigrationNotesRunner["run"]>["issues"]
+  ) => {
+    if (issues.length === 0) return;
+    console.log("\nIssues found:");
+    for (const issue of issues) {
+      const fileInfo = issue.file ? ` in ${path.relative(sourcePath, issue.file)}` : "";
+      const idInfo = issue.id ? ` (ID: ${issue.id})` : "";
+      console.log(`  [${issue.name}]${fileInfo}${idInfo}: ${issue.message}`);
+    }
+  };
+
+  const printAnkiIssues = (
+    basePath: string,
+    issues: ReturnType<AnkiSyncRunner["run"]>["issues"]
+  ) => {
+    if (issues.length === 0) return;
+    console.log("\nIssues found:");
+    for (const issue of issues) {
+      const fileName = path.relative(basePath, issue.file);
+      const question = issue.question
+        ? `"${issue.question}"`
+        : `(flashcard #${issue.flashcardIndex})`;
+      console.log(`  [${issue.name}] ${fileName} (${question}): ${issue.message}`);
+    }
+  };
+
+  const runCommentsCheck = () => {
     const runner = new MigrationCommentsRunner(logger);
     const res = runner.run(fitNotesPath, vaultPath, courseIds);
     console.log(`Comments checked: ${res.totalFlashcards}`);
     console.log(`Issues: ${res.issues.length}`);
-    if (res.issues.length > 0) {
-      console.log("\nIssues found:");
-      for (const issue of res.issues) {
-        const fileName = path.relative(fitNotesPath, issue.file);
-        const question = issue.question ? `"${issue.question}"` : `(flashcard #${issue.flashcardIndex})`;
-        console.log(`  [${issue.name}] ${fileName} (${question}): ${issue.message}`);
-      }
-    }
+    printCommentIssues(fitNotesPath, res.issues);
     console.log("Ran Comments Test");
+  };
+
+  const runMigratedCardsCheck = () => {
+    const runner = new MigratedFlashcardsRunner(logger);
+    const res = runner.run(fitNotesPath, vaultPath, courseIds);
+    console.log(`Source (done non-none): ${res.totalSource}`);
+    console.log(`Target flashcards: ${res.totalTarget}`);
+    console.log(`Issues: ${res.issues.length}`);
+    printMigratedIssues(vaultPath, res.issues);
+    console.log("Ran Migrated Cards Test");
+  };
+
+  const runAnkiSyncCheck = () => {
+    const runner = new AnkiSyncRunner(logger);
+    const res = runner.run(vaultPath);
+    console.log(`Flashcards checked: ${res.totalFlashcards}`);
+    console.log(`Issues: ${res.issues.length}`);
+    printAnkiIssues(vaultPath, res.issues);
+    console.log("Ran Anki Sync Check");
+  };
+
+  if (cmd === "comments") {
+    runCommentsCheck();
   } else if (cmd === "migrate-notes") {
-    const courseIds = config.testCourses || [];
-    const vaultPath = path.resolve(__dirname, "..", "..", "..");
-    const fitNotesPath = config.fitNotesRepoPath || path.resolve(vaultPath, "..", "FIT-Notes");
     const runner = new MigrationNotesRunner(logger);
     const res = runner.run(fitNotesPath, vaultPath, courseIds);
     console.log(`Scanned flashcards: ${res.scannedFlashcards}`);
@@ -61,33 +129,10 @@ async function main() {
     console.log(`Skipped duplicates: ${res.skippedDuplicates}`);
     console.log(`Statuses updated: ${res.updatedStatuses}`);
     console.log(`Issues: ${res.issues.length}`);
-    if (res.issues.length > 0) {
-      console.log("\nIssues found:");
-      for (const issue of res.issues) {
-        const fileInfo = issue.file ? ` in ${path.relative(fitNotesPath, issue.file)}` : "";
-        const idInfo = issue.id ? ` (ID: ${issue.id})` : "";
-        console.log(`  [${issue.name}]${fileInfo}${idInfo}: ${issue.message}`);
-      }
-    }
+    printMigrationNotesIssues(fitNotesPath, res.issues);
     console.log("Ran Migrate Notes");
-  } else if (cmd === "migration" || cmd === "test-migrated-cards") {
-    const courseIds = config.testCourses || [];
-    const vaultPath = path.resolve(__dirname, "..", "..", "..");
-    const fitNotesPath = config.fitNotesRepoPath || path.resolve(vaultPath, "..", "FIT-Notes");
-    const runner = new MigratedFlashcardsRunner(logger);
-    const res = runner.run(fitNotesPath, vaultPath, courseIds);
-    console.log(`Source (done non-none): ${res.totalSource}`);
-    console.log(`Target flashcards: ${res.totalTarget}`);
-    console.log(`Issues: ${res.issues.length}`);
-    if (res.issues.length > 0) {
-      console.log("\nIssues found:");
-      for (const issue of res.issues) {
-        const fileInfo = issue.file ? ` in ${path.relative(vaultPath, issue.file)}` : "";
-        const idInfo = issue.id ? ` (ID: ${issue.id})` : "";
-        console.log(`  [${issue.name}]${fileInfo}${idInfo}: ${issue.message}`);
-      }
-    }
-    console.log("Ran Migrated Cards Test");
+  } else if (cmd === "test-migrated-cards") {
+    runMigratedCardsCheck();
   } else if (cmd === "prepare-sections") {
     const courseId = process.argv[3];
     if (!courseId) {
@@ -101,78 +146,23 @@ async function main() {
       return;
     }
     // Resolve vault root as the plugin is inside <vault>/.obsidian/plugins/fit-statnice-migrator
-    const vaultPath = path.resolve(__dirname, "..", "..", "..");
     const output = await facade.prepareMigrationSections(courseId, vaultPath);
     console.log(output);
     console.log("\nPrepared Note Sections");
-  } else if (cmd === "anki-sync") {
-    const vaultPath = path.resolve(__dirname, "..", "..", "..");
-    const runner = new AnkiSyncRunner(logger);
-    const res = runner.run(vaultPath);
-    console.log(`Flashcards checked: ${res.totalFlashcards}`);
-    console.log(`Issues: ${res.issues.length}`);
-    if (res.issues.length > 0) {
-      console.log("\nIssues found:");
-      for (const issue of res.issues) {
-        const fileName = path.relative(vaultPath, issue.file);
-        const question = issue.question ? `"${issue.question}"` : `(flashcard #${issue.flashcardIndex})`;
-        console.log(`  [${issue.name}] ${fileName} (${question}): ${issue.message}`);
-      }
-    }
-    console.log("Ran Anki Sync Check");
-  } else if (cmd === "all") {
-    const courseIds = config.testCourses || [];
-    const vaultPath = path.resolve(__dirname, "..", "..", "..");
-    const fitNotesPath = config.fitNotesRepoPath || path.resolve(vaultPath, "..", "FIT-Notes");
-    
+  } else if (cmd === "test-anki-sync") {
+    runAnkiSyncCheck();
+  } else if (cmd === "test-all") {
     // Run Comments Check
     console.log("\n--- Comments Check ---");
-    const commentsRunner = new MigrationCommentsRunner(logger);
-    const commentsRes = commentsRunner.run(fitNotesPath, vaultPath, courseIds);
-    console.log(`Comments checked: ${commentsRes.totalFlashcards}`);
-    console.log(`Issues: ${commentsRes.issues.length}`);
-    if (commentsRes.issues.length > 0) {
-      console.log("\nIssues found:");
-      for (const issue of commentsRes.issues) {
-        const fileName = path.relative(fitNotesPath, issue.file);
-        const question = issue.question ? `"${issue.question}"` : `(flashcard #${issue.flashcardIndex})`;
-        console.log(`  [${issue.name}] ${fileName} (${question}): ${issue.message}`);
-      }
-    }
-    console.log("Ran Comments Test");
+    runCommentsCheck();
     
     // Run Migration Check
     console.log("\n--- Migration Check ---");
-    const migrationRunner = new MigratedFlashcardsRunner(logger);
-    const migrationRes = migrationRunner.run(fitNotesPath, vaultPath, courseIds);
-    console.log(`Source (done non-none): ${migrationRes.totalSource}`);
-    console.log(`Target flashcards: ${migrationRes.totalTarget}`);
-    console.log(`Issues: ${migrationRes.issues.length}`);
-    if (migrationRes.issues.length > 0) {
-      console.log("\nIssues found:");
-      for (const issue of migrationRes.issues) {
-        const fileInfo = issue.file ? ` in ${path.relative(vaultPath, issue.file)}` : "";
-        const idInfo = issue.id ? ` (ID: ${issue.id})` : "";
-        console.log(`  [${issue.name}]${fileInfo}${idInfo}: ${issue.message}`);
-      }
-    }
-    console.log("Ran Migration Test");
+    runMigratedCardsCheck();
     
     // Run Anki Sync Check
     console.log("\n--- Anki Sync Check ---");
-    const ankiRunner = new AnkiSyncRunner(logger);
-    const ankiRes = ankiRunner.run(vaultPath);
-    console.log(`Flashcards checked: ${ankiRes.totalFlashcards}`);
-    console.log(`Issues: ${ankiRes.issues.length}`);
-    if (ankiRes.issues.length > 0) {
-      console.log("\nIssues found:");
-      for (const issue of ankiRes.issues) {
-        const fileName = path.relative(vaultPath, issue.file);
-        const question = issue.question ? `"${issue.question}"` : `(flashcard #${issue.flashcardIndex})`;
-        console.log(`  [${issue.name}] ${fileName} (${question}): ${issue.message}`);
-      }
-    }
-    console.log("Ran Anki Sync Check");
+    runAnkiSyncCheck();
     
     console.log("\nRan All Tests");
   } else {
@@ -180,7 +170,7 @@ async function main() {
       name: "InvalidCLICommand",
       message: `Unknown command: ${cmd}`,
       fixInstructions:
-        "Use one of: comments | migrate-notes | test-migrated-cards | migration | all | prepare-sections <courseId> | anki-sync",
+        "Use one of: comments | migrate-notes | test-migrated-cards | test-anki-sync | test-all | prepare-sections <courseId>",
     });
     process.exitCode = 1;
   }

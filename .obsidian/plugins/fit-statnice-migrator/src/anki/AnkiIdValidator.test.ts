@@ -75,11 +75,12 @@ describe("AnkiIdValidator", () => {
     ).toBe(true);
   });
 
-  test("blank line between comment and END is invalid", () => {
+  test("blank line between comment and END is valid", () => {
     const comment = `<!-- ID: anki-12345 -->`;
     const lines = ["START", "NI-SZZ", "Q", "Back:", "A", comment, "", "END"];
     const res = v.validateForFlashcard(lines, lines.length - 1);
-    expect(res.isValid).toBe(false);
+    expect(res.isValid).toBe(true);
+    expect(res.idValue).toBe("anki-12345");
   });
 
   test("case-insensitive ID matching", () => {

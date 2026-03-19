@@ -1,4 +1,7 @@
-export type AnkiIssueName = "MissingAnkiIdComment" | "InvalidIdCommentFormat";
+export type AnkiIssueName =
+  | "MissingAnkiIdComment"
+  | "InvalidIdCommentFormat"
+  | "DuplicateAnkiId";
 
 export interface AnkiIssue {
   name: AnkiIssueName;
@@ -23,15 +26,29 @@ export class AnkiIdValidator {
       });
       return { isValid: false, issues };
     }
-    const prevLine = lines[endIndex - 1];
+
+    // Allow blank lines between the ID comment and END.
+    let commentEndIndex = endIndex - 1;
+    while (commentEndIndex >= 0 && lines[commentEndIndex].trim().length === 0) {
+      commentEndIndex -= 1;
+    }
+    if (commentEndIndex < 0) {
+      issues.push({
+        name: "MissingAnkiIdComment",
+        message: "Expected HTML comment before END",
+      });
+      return { isValid: false, issues };
+    }
+
+    const prevLine = lines[commentEndIndex];
     if (!prevLine.trim().startsWith("<!--") || !prevLine.includes("-->")) {
       // Either not a comment, or multiline comment not on single line
-      // Allow multiline comments: find the nearest comment block ending at endIndex - 1 with no blank lines between
-      const block = this.extractImmediateCommentBlock(lines, endIndex - 1);
+      // Allow multiline comments and blank lines between END and comment.
+      const block = this.extractImmediateCommentBlock(lines, commentEndIndex);
       if (!block) {
         issues.push({
           name: "MissingAnkiIdComment",
-          message: "Expected HTML comment directly before END",
+          message: "Expected HTML comment before END",
         });
         return { isValid: false, issues };
       }

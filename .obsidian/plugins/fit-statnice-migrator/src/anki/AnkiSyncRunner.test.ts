@@ -31,6 +31,14 @@ function card(id: string | null) {
   return `START\nNI-SZZ\nQ\n\nBack:\nA${comment ? `\n${comment}` : ""}\nEND\n\n---`;
 }
 
+function cardWithBlankLinesBeforeEnd(id: string): string {
+  return `START\nNI-SZZ\nQ\n\nBack:\nA\n<!-- ID: ${id} -->\n\n\nEND\n\n---`;
+}
+
+function cardWithOriginalFlashcardIdOnly(originalId: string): string {
+  return `<!--\nOriginal Flashcard ID: ${originalId}\n-->\nSTART\nNI-SZZ\nQ\n\nBack:\nA\nEND\n\n---`;
+}
+
 describe("AnkiSyncRunner", () => {
   test("counts flashcards and reports missing ID comments", () => {
     const md = `# Note\n\n${card("anki-1")}\n\n${card(null)}`;
@@ -63,6 +71,41 @@ describe("AnkiSyncRunner", () => {
     const res = runner.run(tmpDir);
     expect(res.totalFlashcards).toBe(2);
     expect(res.issues).toHaveLength(0);
+  });
+
+  test("allows blank lines between ID comment and END", () => {
+    writeFile("blanks.md", cardWithBlankLinesBeforeEnd("anki-blank"));
+    const runner = new AnkiSyncRunner(new QuietConsoleLoggingService());
+    const res = runner.run(tmpDir);
+    expect(res.totalFlashcards).toBe(1);
+    expect(res.issues).toHaveLength(0);
+  });
+
+  test("reports duplicate IDs across files", () => {
+    writeFile("a.md", card("dup-1"));
+    writeFile("nested/b.md", card("dup-1"));
+    const runner = new AnkiSyncRunner(new QuietConsoleLoggingService());
+    const res = runner.run(tmpDir);
+    const duplicateIssues = res.issues.filter((i) => i.name === "DuplicateAnkiId");
+    expect(res.totalFlashcards).toBe(2);
+    expect(duplicateIssues).toHaveLength(2);
+  });
+
+  test("reports duplicate IDs in same file", () => {
+    writeFile("same.md", `${card("dup-same")}\n\n${card("dup-same")}`);
+    const runner = new AnkiSyncRunner(new QuietConsoleLoggingService());
+    const res = runner.run(tmpDir);
+    const duplicateIssues = res.issues.filter((i) => i.name === "DuplicateAnkiId");
+    expect(res.totalFlashcards).toBe(2);
+    expect(duplicateIssues).toHaveLength(2);
+  });
+
+  test("original flashcard id comment above START is not accepted as Anki ID", () => {
+    writeFile("orig-only.md", cardWithOriginalFlashcardIdOnly("source-123"));
+    const runner = new AnkiSyncRunner(new QuietConsoleLoggingService());
+    const res = runner.run(tmpDir);
+    expect(res.totalFlashcards).toBe(1);
+    expect(res.issues.some((i) => i.name === "MissingAnkiIdComment")).toBe(true);
   });
 });
 
