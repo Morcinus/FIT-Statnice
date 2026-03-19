@@ -30,7 +30,6 @@ Back:
 - Znemožňuje to efektivně dělat změny v kódu
 
 Tags: should-know N001F001
-
 <!--ID: 1760705194617-->
 
 END
@@ -61,7 +60,6 @@ Například se dá kód rozpadnout do menších částí.
 <!-- ExampleEnd -->
 
 Tags: should-know N001F002
-
 <!--ID: 1760705194619-->
 
 END
@@ -86,7 +84,6 @@ Back:
 - Costs: - **cost of building** = strávíme čas na něčem co možná ani nevyužijeme - **cost of delay** = zpomalíme tím projekt, protože jsme se mohli věnovat něčemu jinému - **cost of carry** = budeme mít od začátku složitější systém, což je horší na údržbu, debuggování, rozšiřování atd. - **cost of repairs** = v době, kdy to bude potřeba, pravděpodobně daná funkcionalita stejně bude mít hodně technical debt
 
 Tags: should-know N001F003
-
 <!--ID: 1760705194622-->
 
 END
@@ -111,7 +108,6 @@ Back:
 - **Dependency Inversion** = High-level moduly by neměly záviset na low-level modulech. Obojí by mělo záviset na abstrakci.
 
 Tags: should-know N001F004
-
 <!--ID: 1760705194625-->
 
 END
@@ -148,7 +144,6 @@ This principle aims to separate behaviours so that if bugs arise as a result of 
 <!-- DetailInfoEnd -->
 
 Tags: should-know N001F005
-
 <!--ID: 1760705194627-->
 
 END
@@ -186,7 +181,6 @@ This principle aims to extend a Class’s behaviour without changing the existin
 <!-- DetailInfoEnd -->
 
 Tags: should-know N001F006
-
 <!--ID: 1760705194630-->
 
 END
@@ -230,7 +224,6 @@ This principle aims to enforce consistency so that the parent Class or its child
 <!-- DetailInfoEnd -->
 
 Tags: should-know N001F007
-
 <!--ID: 1760705194633-->
 
 END
@@ -268,7 +261,6 @@ This principle aims at splitting a set of actions into smaller sets so that a Cl
 <!-- DetailInfoEnd -->
 
 Tags: should-know N001F008
-
 <!--ID: 1760705194636-->
 
 END
@@ -318,7 +310,6 @@ This principle aims at reducing the dependency of a high-level Class on the low-
 <!-- DetailInfoEnd -->
 
 Tags: should-know N001F009
-
 <!--ID: 1760705194639-->
 
 END
@@ -342,7 +333,6 @@ Back:
 - S kódem se lépe pracuje, když je předvídatelný
 
 Tags: should-know N001F010
-
 <!--ID: 1760705194642-->
 
 END
@@ -366,7 +356,6 @@ Back:
 - Díky tomu se postupně zbavujeme tech debtu, aniž bychom museli stopnout veškerou práci a dělat obří refaktoring
 
 Tags: should-know N001F011
-
 <!--ID: 1760705194644-->
 
 END
@@ -400,7 +389,6 @@ Např.
 - Neúmyslný a rozumný - "Teď víme, že jsme to měli udělat jinak" (např. najdeme lepší řešení až po tom, co jsme to udělali)
 
 Tags: should-know N001F012
-
 <!--ID: 1760705194647-->
 
 END
@@ -430,7 +418,6 @@ Např.
 - Systém je tak přehlednější, lépe se udržuje, debuguje atd.
 
 Tags: should-know N001F013
-
 <!--ID: 1760705194650-->
 
 END
@@ -470,7 +457,6 @@ An object can call methods that are apart of:
 <!-- ExplanationEnd -->
 
 Tags: should-know N001F014
-
 <!--ID: 1760705194652-->
 
 END
@@ -503,7 +489,6 @@ Místo toho bychom měli nejdříve vyvinout funkční kód, pak až zjistit, kt
 <!-- ExampleEnd -->
 
 Tags: should-know N001F015
-
 <!--ID: 1760705194655-->
 
 END

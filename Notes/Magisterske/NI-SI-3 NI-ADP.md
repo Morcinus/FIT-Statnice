@@ -27,7 +27,6 @@ Back:
 - **Proxy**
 
 Tags: should-know N003F001
-
 <!--ID: 1760705194456-->
 
 END
@@ -85,7 +84,6 @@ Let’s get back to our stock market app. To solve the dilemma of incompatible f
 <!-- ExplanationEnd -->
 
 Tags: should-know N003F002
-
 <!--ID: 1760705194459-->
 
 END
@@ -115,7 +113,6 @@ Adapter implementuje nějaké rozhraní.
 <!-- ExampleEnd -->
 
 Tags: should-know N003F003
-
 <!--ID: 1760705194461-->
 
 END
@@ -136,7 +133,6 @@ Adapter dědí z dané classy a servicy. Toto lze využít pouze u jazyků, co u
 1. The **Class Adapter** doesn’t need to wrap any objects because it inherits behaviors from both the client and the service. The adaptation happens within the overridden methods. The resulting adapter can be used in place of an existing client class.
 
 Tags: should-know N003F004
-
 <!--ID: 1760705194464-->
 
 END
@@ -157,7 +153,6 @@ Back:
 ❌ The overall complexity of the code increases because you need to introduce a set of new interfaces and classes. Sometimes it’s simpler just to change the service class so that it matches the rest of your code.
 
 Tags: should-know N003F005
-
 <!--ID: 1760705194467-->
 
 END
@@ -215,7 +210,6 @@ Following this approach, we can extract the color-related code into its own clas
 <!-- ExplanationEnd -->
 
 Tags: should-know N003F006
-
 <!--ID: 1760705194470-->
 
 END
@@ -245,7 +239,6 @@ Back:
 <!-- ExampleEnd -->
 
 Tags: should-know N003F007
-
 <!--ID: 1760705194473-->
 
 END
@@ -270,7 +263,6 @@ Back:
 ❌ You might make the code more complicated by applying the pattern to a highly cohesive class.
 
 Tags: should-know N003F008
-
 <!--ID: 1760705194476-->
 
 END
@@ -325,7 +317,6 @@ The greatest benefit of this approach is that you don’t need to care about the
 <!-- ExplanationEnd -->
 
 Tags: should-know N003F009
-
 <!--ID: 1760705194480-->
 
 END
@@ -355,7 +346,6 @@ Back:
 <!-- ExampleEnd -->
 
 Tags: should-know N003F010
-
 <!--ID: 1760705194484-->
 
 END
@@ -376,7 +366,6 @@ Back:
 ❌ It might be difficult to provide a common interface for classes whose functionality differs too much. In certain scenarios, you’d need to overgeneralize the component interface, making it harder to comprehend.
 
 Tags: should-know N003F011
-
 <!--ID: 1760705194487-->
 
 END
@@ -451,7 +440,6 @@ We could apply the same approach to other behaviors such as formatting messages 
 <!-- ExplanationEnd -->
 
 Tags: should-know N003F012
-
 <!--ID: 1760705194490-->
 
 END
@@ -480,7 +468,6 @@ Back:
 <!-- ExampleEnd -->
 
 Tags: should-know N003F013
-
 <!--ID: 1760705194494-->
 
 END
@@ -509,7 +496,6 @@ Back:
 ❌ The initial configuration code of layers might look pretty ugly.
 
 Tags: should-know N003F014
-
 <!--ID: 1760705194497-->
 
 END
@@ -548,7 +534,6 @@ For instance, an app that uploads short funny videos with cats to social media c
 <!-- ExplanationEnd -->
 
 Tags: should-know N003F015
-
 <!--ID: 1760705194501-->
 
 END
@@ -577,7 +562,6 @@ Back:
 <!-- ExampleEnd -->
 
 Tags: should-know N003F016
-
 <!--ID: 1760705194504-->
 
 END
@@ -596,7 +580,6 @@ Back:
 ❌ A facade can become a god object coupled to all classes of an app.
 
 Tags: should-know N003F017
-
 <!--ID: 1760705194507-->
 
 END
@@ -651,7 +634,6 @@ Let’s return to our game. Assuming that we had extracted the extrinsic state f
 <!-- ExplanationEnd -->
 
 Tags: should-know N003F018
-
 <!--ID: 1760705194510-->
 
 END
@@ -681,7 +663,6 @@ Back:
 <!-- ExampleEnd -->
 
 Tags: should-know N003F019
-
 <!--ID: 1760705194513-->
 
 END
@@ -702,7 +683,6 @@ Back:
 ❌ The code becomes much more complicated. New team members will always be wondering why the state of an entity was separated in such a way.
 
 Tags: should-know N003F020
-
 <!--ID: 1760705194521-->
 
 END
@@ -745,7 +725,6 @@ But what’s the benefit? If you need to execute something either before or afte
 <!-- ExplanationEnd -->
 
 Tags: should-know N003F021
-
 <!--ID: 1760705194525-->
 
 END
@@ -773,7 +752,6 @@ Back:
 <!-- ExampleEnd -->
 
 Tags: should-know N003F022
-
 <!--ID: 1760705194528-->
 
 END
@@ -800,7 +778,6 @@ Back:
 ❌ The response from the service might get delayed.
 
 Tags: should-know N003F023
-
 <!--ID: 1760705194531-->
 
 END
@@ -832,7 +809,6 @@ Na webových stránkách se načtou obrázky, až když k nim uživatel doscroll
 - **Šetří to komunikaci a zdroje** - nepřistupuje se tak moc do databáze, neposílá se tolik requestů
 
 Tags: should-know N003F024
-
 <!--ID: 1760705194534-->
 
 END
@@ -852,7 +828,6 @@ Back:
 - **Value holder** - generický objekt se stará o lazy loading, tento objekt se používá místo nějaké proměnné data objektu
 
 Tags: should-know N003F025
-
 <!--ID: 1760705194537-->
 
 END
@@ -970,7 +945,6 @@ class MyApp {
 <!-- DetailInfoEnd -->
 
 Tags: should-know N003F026
-
 <!--ID: 1760705194540-->
 
 END
@@ -1001,7 +975,6 @@ There are libraries that solve this problem by automating the process of creatin
 <!-- DetailInfoEnd -->
 
 Tags: should-know N003F027
-
 <!--ID: 1760705194542-->
 
 END

@@ -23,7 +23,7 @@ Definice: **architektura systému** (aka co mi určuje?)
 Back:
 
 Architektura určuje **strukturu** a **chování** sytému.
-
+<!--ID: 1773945940289-->
 END
 
 ---
@@ -40,7 +40,7 @@ Jaké jsou části Enterprise Architektury? (přehled)
 Back:
 
 ![](../../Assets/Pasted%20image%2020240930093046.png)
-
+<!--ID: 1773945940297-->
 END
 
 ---
@@ -63,7 +63,7 @@ Back:
 - **OIS** (office information systems)
 
 ![](../../Assets/Pasted%20image%2020240930093423.png)
-
+<!--ID: 1773945940300-->
 END
 
 ---
@@ -88,7 +88,7 @@ systémy pro řízení pro manažery
 ![](../../Assets/Pasted%20image%2020240930093423.png)
 
 <!-- ImageEnd -->
-
+<!--ID: 1773945940304-->
 END
 
 ---
@@ -113,7 +113,7 @@ systémy, co působí v jednotlivých odděleních (např. hr, finance, marketin
 ![](../../Assets/Pasted%20image%2020240930093423.png)
 
 <!-- ImageEnd -->
-
+<!--ID: 1773945940307-->
 END
 
 ---
@@ -138,7 +138,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020240930093423.png)
 
 <!-- ImageEnd -->
-
+<!--ID: 1773945940311-->
 END
 
 ---
@@ -163,7 +163,7 @@ Zajišťuje integraci s externíma systémama, dalšíma firmama (např. automat
 ![](../../Assets/Pasted%20image%2020240930093423.png)
 
 <!-- ImageEnd -->
-
+<!--ID: 1773945940314-->
 END
 
 ---
@@ -188,7 +188,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020240930093423.png)
 
 <!-- ImageEnd -->
-
+<!--ID: 1773945940317-->
 END
 
 ---
@@ -205,7 +205,7 @@ Co je **process classification framework** (PCF)?
 Back:
 
 PCF je **standard** - říká mi jakoby seznam obecných požadavků, co je dobrý implementovat v systémech. Když budu dělat systém, podívám se do standardu a on mi řekne, co všechno bych měl v systému vytvořit za funkcionality.
-
+<!--ID: 1773945940320-->
 END
 
 ---
@@ -233,7 +233,7 @@ Back:
 Fun fact:
 
 - Skype fungoval tak, že když člověk nepotřebuje komunikovat se serverem. Když člověk byl na veřejné síti, tak vpodstatě fungoval jako relay pro ostatní uživatele -> komunikace šla přes ostatní uživatele. - Teď už to není, dřív to tak bylo.
-
+<!--ID: 1773945940323-->
 END
 
 ---
@@ -252,7 +252,7 @@ Back:
 Systém je vrstvenej. Mezi vrstvami mohu definovat **interface**/rozhraní.
 
 ![](../../Assets/Pasted%20image%2020240930103530.png)
-
+<!--ID: 1773945940327-->
 END
 
 ---
@@ -274,7 +274,7 @@ Back:
 - **Three-tier client/server**
 - **Mutli-tier client/server**
 - **Client/server** (microservices)
-
+<!--ID: 1773945940330-->
 END
 
 ---
@@ -306,7 +306,7 @@ Např. desktopové aplikace
 ![](../../Assets/Pasted%20image%2020241007092310.png)
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940333-->
 END
 
 ---
@@ -338,7 +338,7 @@ Tzv. **tlustý klient**
 ![](../../Assets/Pasted%20image%2020241007092429.png)
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940337-->
 END
 
 ---
@@ -357,7 +357,7 @@ Back:
 
 - **Není sjednocená aplikační logika** - každý klient může mít u sebe jinou verzi aplikační vrstvy
 - **Hůř se dělají upgrady aplikace** - klient si musí sám stáhnout aktualizaci, nebo tam musím vytvořit automatické aktualizace
-
+<!--ID: 1773945940340-->
 END
 
 ---
@@ -387,7 +387,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241007092723.png)
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940343-->
 END
 
 ---
@@ -411,7 +411,7 @@ Je třeba řešit **škálovatelnost**.
 Oproti two-tier, kde si každý prostě stáhne program k sobě, tady musím rozkládat zátěž na servery, protože uživatel vždy používá server.
 
 <!-- ExplanationEnd -->
-
+<!--ID: 1773945940347-->
 END
 
 ---
@@ -442,7 +442,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241007093040.png)
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940350-->
 END
 
 ---
@@ -472,7 +472,7 @@ Backend mám rozdělený do více **komponentů**, kde každý běží jako **sa
 ![](../../Assets/Pasted%20image%2020241007093318.png)
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940353-->
 END
 
 ---
@@ -490,7 +490,7 @@ Proč firmy nerefaktorují svoje staré aplikace na microservice architekture?
 Back:
 
 Protože to je často **nákladné překódit** celou codebase.
-
+<!--ID: 1773945940357-->
 END
 
 ---
@@ -522,7 +522,7 @@ Má to výhody a je to podobné microservices, ale **není** to microservice arc
 ![](../../Assets/Pasted%20image%2020241007094458.png)
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940360-->
 END
 
 ---
@@ -543,7 +543,7 @@ Back:
   - Je to legacy (vznikli v roce 2005), už se toho lidi spíš zbavují
 - **Mikroslužby** - relativně nový, populární
 - **Kubernetes** - v tom běží (mimo jiné) mikroslužby
-
+<!--ID: 1773945940364-->
 END
 
 ---
@@ -563,7 +563,7 @@ Back:
 - **Data, procesy, funkce**
 - **Software**
 - **Hardware**
-
+<!--ID: 1773945940367-->
 END
 
 ---
@@ -603,7 +603,7 @@ V monolitické aplikaci mám celou aplikaci jako jeden proces.
 ![](../../Assets/Pasted%20image%2020241021121921.png)
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940370-->
 END
 
 ---
@@ -627,7 +627,7 @@ Back:
 - **logical** view
 - **software architecture** view
 - **technology architecture** view
-
+<!--ID: 1773945940374-->
 END
 
 ---
@@ -651,7 +651,7 @@ Služba přináší nějakou byznys hodnotu uživateli té služby.
 ![](../../Assets/Pasted%20image%2020241007095748.png)
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940377-->
 END
 
 ---
@@ -671,7 +671,7 @@ Back:
 Pohled z hlediska návrhu, design patternů a principů.
 
 ![](../../Assets/Pasted%20image%2020241007095755.png)
-
+<!--ID: 1773945940381-->
 END
 
 ---
@@ -694,7 +694,7 @@ Interface služby, její popis a implementace
   - pracuje se zdrojema, např. REST
   - metody, co používám pro manipulaci dat jsou standardizovaný (POST, PUT, DELETE, atd.)
 - **message-oriented** - zavádím operace, co jsou doménově závislé - např. SOAP - např. mám na rozhraní konkrétní metodu "createCustomer" - nevýhoda: je potřeba zavést nějaký standard pro vytváření metod, aby v tom nebyl chaos
-
+<!--ID: 1773945940384-->
 END
 
 ---
@@ -721,7 +721,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241007095811.png)
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940388-->
 END
 
 ---
@@ -741,7 +741,7 @@ Back:
 Protokoly a standardy, které se používají.
 
 ![](../../Assets/Pasted%20image%2020241007095820.png)
-
+<!--ID: 1773945940391-->
 END
 
 ---
@@ -765,7 +765,7 @@ Můžu pak mít **více implementací** daného rozhraní (např. v jiných jazy
 ![](../../Assets/Pasted%20image%2020241007100632.png)
 
 <!-- ImageEnd -->
-
+<!--ID: 1773945940394-->
 END
 
 ---
@@ -783,7 +783,7 @@ Pomocí jakého **diagramu** se modeluje **fungování dané service**?
 Back:
 
 Pomocí **stavového diagramu**.
-
+<!--ID: 1773945940397-->
 END
 
 ---
@@ -813,7 +813,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241007101250.png)
 
 <!-- ImageEnd -->
-
+<!--ID: 1773945940401-->
 END
 
 ---
@@ -845,7 +845,7 @@ Pomůcka: CLEARCD nebo LCDRACE
 ![](../../Assets/Pasted%20image%2020241007102911.png)
 
 <!-- ImageEnd -->
-
+<!--ID: 1773945940404-->
 END
 
 ---
@@ -863,7 +863,7 @@ Co je **loose coupling** služeb (services)?
 Back:
 
 V klientovi není "pevně zadrátované", jaké endpointy se volají atd. (např. díky HATEOAS).
-
+<!--ID: 1773945940408-->
 END
 
 ---
@@ -889,7 +889,7 @@ Když dělám API, měl bych ho navrhovat tak, jako kdyby s ním v budoucnu komu
 Samozřejmě je v tom tradeoff. Čím víc reusable to dělám, tím víc fičur tam musím dát, tím víc času mi to zabere.
 
 <!-- ExampleEnd -->
-
+<!--ID: 1773945940411-->
 END
 
 ---
@@ -907,7 +907,7 @@ NI-SZZ
 Back:
 
 **Service Oriented architecture**
-
+<!--ID: 1773945940414-->
 END
 
 ---
@@ -925,7 +925,7 @@ Co je **ESB**?
 Back:
 
 **Enterprise Service Bus** - systém komunikace mezi services
-
+<!--ID: 1773945940417-->
 END
 
 ---
@@ -951,7 +951,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241007103247.png)
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940420-->
 END
 
 ---
@@ -981,7 +981,7 @@ Pozn. je to trochu legacy, ale velké firmy ČEZ, banky atd. to používají.
 ![](../../Assets/Pasted%20image%2020241007103545.png)
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940423-->
 END
 
 ---
@@ -1011,7 +1011,7 @@ Mám hromadu systémy/services, komunikují vždy **jedna na jednu**.
 ![](../../Assets/Pasted%20image%2020241007103657.png)
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940427-->
 END
 
 ---
@@ -1037,7 +1037,7 @@ _To se pak nazývá špagetová architektura :D_
 ![](../../Assets/Pasted%20image%2020241007103648.png)
 
 <!-- ImageEnd -->
-
+<!--ID: 1773945940430-->
 END
 
 ---
@@ -1069,7 +1069,7 @@ Vytvoří se **Enterprise Service Bus** (ESB), který je middlewarem mezi jednot
 ![](../../Assets/Pasted%20image%2020241007104148.png)
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940433-->
 END
 
 ---
@@ -1089,7 +1089,7 @@ Back:
 Protože se tam často ten chaos zůstane, akorát se rodělí do menších podčástí.
 
 (Ale aspoň ten hlavní flow dat je uspořádaný)
-
+<!--ID: 1773945940436-->
 END
 
 ---
@@ -1114,7 +1114,7 @@ Vyobrazení škálování:
 - **Osa Z** - **data partitioning**
   - mám několik oddělených databází (jedna má např. záznamy od A-J, druhá od J-Z), mám systém, co mi rozhazuje data do těch databází, čímž opět rozložím zátěž
 - **Osa Y** - **mikroservisy** - oddělím určitou funkci aplikace, čímž dělám "dekompozici funkcí"
-
+<!--ID: 1773945940439-->
 END
 
 ---
@@ -1139,7 +1139,7 @@ Back:
 - **scaling up** = to co se typicky chápe pod pojmem škálování
 - **scaling down** = když se mi např. snižují počty uživatelů, tak nemá cenu mít obrovský systém, protože tím vyhazuju peníze.
   <!-- ExplanationEnd -->
-
+<!--ID: 1773945940442-->
 END
 
 ---
@@ -1169,7 +1169,7 @@ Když by mi dvě mikroslužby pak potřebovaly využívat stejnou funkcionalitu,
 - Nevýhoda: mám duplicitní kód v systému (několik mikroslužeb má nainstalováno stejnou knihovnu -> snižuje to výkon)
 - Výhoda: je to všechno přehledný a funguje to dobře.
   <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940446-->
 END
 
 ---
@@ -1205,7 +1205,7 @@ Nevýhoda toho je, že pak nastává "**ping pong**" game, kde si ty oddělení 
 Ten novější přístup je právě pomocí menších týmů, který obsáhne celý development cycle, tudíž je jasný, kdo má za co zodpovědnost a nedochází k tomuhle přehazování.
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940449-->
 END
 
 ---
@@ -1225,7 +1225,7 @@ Používá se v praxi HATEOAS?
 Back:
 
 Je to fajn koncept, ale reálně se to moc nepoužívá, protože je prostě jednodušší si držet stav na serveru (pomocí sessions).
-
+<!--ID: 1773945940452-->
 END
 
 ---
@@ -1243,7 +1243,7 @@ NI-SZZ
 Back:
 
 Representational State Transfer
-
+<!--ID: 1773945940455-->
 END
 
 ---
@@ -1266,7 +1266,7 @@ Např.
   - **nejsou** tam endpointy ale **zdroje**
   - operace jsou doménově nezávislé (GET, PUT,..)
 - RPC - vstupní data, operace, výstupní data (funkce) - **endpointy** mají názvy operace - operace jsou doménově závislé (CreateCustomer)
-
+<!--ID: 1773945940458-->
 END
 
 ---
@@ -1286,7 +1286,7 @@ Back:
 - **Identifikace**: univerzální identifikace zdrojů pomocí URI
 - **Interakce**: protokoly pro získávání zdrojů - HTTP
 - **Formáty**: reprezentace zdrojů (data a metadata)
-
+<!--ID: 1773945940462-->
 END
 
 ---
@@ -1315,7 +1315,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241120151248.png)
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940465-->
 END
 
 ---
@@ -1336,7 +1336,7 @@ Back:
 - **Identifikátor** 
 - **Data**
 - **Metadata**
-
+<!--ID: 1773945940468-->
 END
 
 ---
@@ -1354,7 +1354,7 @@ Co je **URI**?
 Back:
 
 Unified Resource Identifier = identifikuje zdroj
-
+<!--ID: 1773945940471-->
 END
 
 ---
@@ -1372,7 +1372,7 @@ Co je URL?
 Back:
 
 Uniform Resource Locator = identifikuje zdroj + obsahuje jeho lokaci
-
+<!--ID: 1773945940475-->
 END
 
 ---
@@ -1390,7 +1390,7 @@ Co je URN?
 Back:
 
 Uniform Resource Name = název, který je globálně unikátní
-
+<!--ID: 1773945940478-->
 END
 
 ---
@@ -1413,7 +1413,7 @@ Back:
 - `fragment` - odkazuje na sekundární zdroj (např. odstavec v html)
 
 ![](../../Assets/Pasted%20image%2020241125122945.png)
-
+<!--ID: 1773945940481-->
 END
 
 ---
@@ -1445,7 +1445,7 @@ Např. když mám orders, tak se k tomu můžu dostat mnoha způsoby. Tomu se po
 ![](../../Assets/Pasted%20image%2020241125123343.png)
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940484-->
 END
 
 ---
@@ -1472,7 +1472,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241125123518.png)
 
 <!-- ExampleEnd -->
-
+<!--ID: 1773945940488-->
 END
 
 ---
@@ -1496,7 +1496,7 @@ Používá se hash, znamená to "subresource". Díky tomu mohu odkazovat na konk
 ![](../../Assets/Pasted%20image%2020241125123814.png)
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940491-->
 END
 
 ---
@@ -1518,7 +1518,7 @@ Back:
 - **URI Opacity** - když jako součást URI mám i formát
 - **Resource versions** - když mi URI definuje i verzi toho zdroje
 - **Persistent URL** - adresa by měla být validní i když zdroj už neexistuje (neměl bych smazat URI, ale třeba přesměrovat člověka na novou URI)
-
+<!--ID: 1773945940494-->
 END
 
 ---
@@ -1545,7 +1545,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241125124338.png)
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940497-->
 END
 
 ---
@@ -1577,7 +1577,7 @@ Tzn. když čtu data z REST zdroje, získám tím momentální **stav** toho zdr
 ![](../../Assets/Pasted%20image%2020241125125052.png)
 
 <!-- ExampleEnd -->
-
+<!--ID: 1773945940500-->
 END
 
 ---
@@ -1596,7 +1596,7 @@ Back:
 
 - Mám omezené množství operací (POST, GET,...)
 - Operace jsou **doménově nezávislé**
-
+<!--ID: 1773945940503-->
 END
 
 ---
@@ -1639,7 +1639,7 @@ Idempotence:
 ![](../../Assets/Pasted%20image%2020241125125930.png)
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940506-->
 END
 
 ---
@@ -1672,7 +1672,7 @@ Delete je idempotentní, takže když to udělám znovu:
 **Výsledek** = nic jsme nesmazali
 
 <!-- ExplanationEnd -->
-
+<!--ID: 1773945940509-->
 END
 
 ---
@@ -1699,7 +1699,7 @@ Např. u POSTu se může v databázi vytvořit nový záznam, který má random 
 U GET, PUT a DELETE furt pracuju s těmi samými daty, takže v tom není problém a je to idempotentní.
 
 <!-- ExplanationEnd -->
-
+<!--ID: 1773945940513-->
 END
 
 ---
@@ -1729,7 +1729,7 @@ Když mám např. formulář a provedu POST, a pak ho vyplním datama, ze server
 Správně by se měl provést POST, v tom by měl být odkaz na zdroj a klient si pak znovu fetchne pomocí GET. Díky tomu se POST provede pouze jednou.
 
 <!-- ExampleEnd -->
-
+<!--ID: 1773945940516-->
 END
 
 ---
@@ -1754,7 +1754,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241125150154.png)
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940519-->
 END
 
 ---
@@ -1781,7 +1781,7 @@ Updatuje celý resource.
 ![](../../Assets/Pasted%20image%2020241125150145.png)
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940521-->
 END
 
 ---
@@ -1806,7 +1806,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241125150219.png)
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940525-->
 END
 
 ---
@@ -1831,7 +1831,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241125150314.png)
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940528-->
 END
 
 ---
@@ -1856,7 +1856,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241125150340.png)
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940531-->
 END
 
 ---
@@ -1881,7 +1881,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241125150802.png)
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940534-->
 END
 
 ---
@@ -1910,7 +1910,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241125151104.png)
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940538-->
 END
 
 ---
@@ -1936,7 +1936,7 @@ Klient může aplikovat metody na daném linku (PUT, POST, DELETE...) aby se př
 Když mám HTML stránku, tak každý link v ní je linkem an jinou HTML stránku. To jakou stránku mám načtenou je ten stav.
 
 <!-- ExampleEnd -->
-
+<!--ID: 1773945940541-->
 END
 
 ---
@@ -1954,7 +1954,7 @@ Co je **Richardson Maturity Model**?
 Back:
 
 Model vyspělosti/kvality RESTového API.
-
+<!--ID: 1773945940544-->
 END
 
 ---
@@ -1982,7 +1982,7 @@ Back:
    - Používáme HATEOAS
 
 Nemusím nutně používat co nejvyšší level, ale měl bych rozumět tomu, proč danou úroveň používám. Je např. okay použít Level 0, když vím, že mám omezené zdroje a mám k tomu legitimní důvod.
-
+<!--ID: 1773945940547-->
 END
 
 ---
@@ -2004,7 +2004,7 @@ Back:
 "All people seem to need data processing"
 
 ![](../../Assets/Pasted%20image%2020241021125455.png)
-
+<!--ID: 1773945940550-->
 END
 
 ---
@@ -2023,7 +2023,7 @@ Back:
 
 - **HTTP 1.1** - data uložena textově
 - **HTTP 2.0** - data uložena binárně
-
+<!--ID: 1773945940553-->
 END
 
 ---
@@ -2041,7 +2041,7 @@ Co je latence?
 Back:
 
 Jak dlouho na síti trvá přenos elementárních dat (malých dat).
-
+<!--ID: 1773945940557-->
 END
 
 ---
@@ -2061,7 +2061,7 @@ Back:
 Round trip time. Čas než po síti přejde požadavek a odpověď.
 
 Je to $2 \times \text{latence}$
-
+<!--ID: 1773945940560-->
 END
 
 ---
@@ -2079,7 +2079,7 @@ Co je RPT?
 Back:
 
 Request processing time - jak dlouho trvá zpracování požadvku na serveru.
-
+<!--ID: 1773945940563-->
 END
 
 ---
@@ -2097,7 +2097,7 @@ Co je výsledkem three way handshaku?
 Back:
 
 Vytvoří se TCP socket
-
+<!--ID: 1773945940567-->
 END
 
 ---
@@ -2120,7 +2120,7 @@ Back:
 - **cílová port** (serveru)
 
 Tím je jednoznačně identifikovaný každý TCP socket na internetu
-
+<!--ID: 1773945940570-->
 END
 
 ---
@@ -2146,7 +2146,7 @@ Back:
 Tím řeším ten problém, když navazuju hodně spojení, tak abych neměl tak dlouhou odezvu
 
 <!-- ExampleEnd -->
-
+<!--ID: 1773945940573-->
 END
 
 ---
@@ -2172,7 +2172,7 @@ V klientovi se vytvoří request queue, kde čekají requesty na poslání přes
 Např. v request queue bude nejdřív HTML soubor, potom CSS soubor, potom obrázky atd.
 
 <!-- ExampleEnd -->
-
+<!--ID: 1773945940581-->
 END
 
 ---
@@ -2208,7 +2208,7 @@ Normálně, když nedělám pipelining, mám na klientovi frontu requestů a pos
 Tento způsob se v dnešní době nepoužívá.
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940586-->
 END
 
 ---
@@ -2234,7 +2234,7 @@ Tento problém nastává u HTTP pipeliningu.
 Mám velký request jako první, ostatní už jsem zpracoval, ale musím je poslat popořadě, tudíž mi to ten první blokuje
 
 <!-- ExampleEnd -->
-
+<!--ID: 1773945940589-->
 END
 
 ---
@@ -2260,7 +2260,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241021131825.png)
 
 <!-- ImageEnd -->
-
+<!--ID: 1773945940593-->
 END
 
 ---
@@ -2290,7 +2290,7 @@ Origin je na klientovi, každý origin může mít až 6 TCP socketů najednou. 
 V HTTP 2.0 je změna, že se navazuje **pouze jedno** TCP spojení a dělá se tzv. prokládání, což znamená, že skrze jeden socket se přenáší všechny ty soubory.
 
 <!-- DetailInfoEnd -->
-
+<!--ID: 1773945940595-->
 END
 
 ---
@@ -2316,7 +2316,7 @@ Když si stahuju v HTTP 1 sto obrázků, tak se bude vytvářet 6 spojení najed
 V HTTP 2 by se vytvořil jeden a díky multiplexingu by se vše posílalo přes to persistentní spojení.
 
 <!-- ExampleEnd -->
-
+<!--ID: 1773945940599-->
 END
 
 ---
@@ -2340,7 +2340,7 @@ Server name information, hodnota hlavičky, kde je uložena adresa _(např. exam
 Je to to samý jako `Host` v hlavičce, ale **není to šifrovaný**, takže si to může přečíst kdokoliv, na té cestě toho streamu
 
 <!-- ExplanationEnd -->
-
+<!--ID: 1773945940602-->
 END
 
 ---
@@ -2381,7 +2381,7 @@ body
 ```
 
 <!-- ExampleEnd -->
-
+<!--ID: 1773945940605-->
 END
 
 ---
@@ -2422,7 +2422,7 @@ body
 ```
 
 <!-- ExampleEnd -->
-
+<!--ID: 1773945940608-->
 END
 
 ---
@@ -2455,7 +2455,7 @@ Na serveru si pak vytvořím virtual host, aby mi to pro ty poddomény zpracová
 ![](../../Assets/Pasted%20image%2020241104101248.png)
 
 <!-- ExampleEnd -->
-
+<!--ID: 1773945940611-->
 END
 
 ---
@@ -2473,7 +2473,7 @@ Co se využívá v rámci šifrování (encryption) v TLS na začátku spojení?
 Back:
 
 **TLS handshake**
-
+<!--ID: 1773945940614-->
 END
 
 ---
@@ -2506,7 +2506,7 @@ Pak se můžou začít posílat data.
 ![](../../Assets/Pasted%20image%2020241113173449.png)
 
 <!-- ImageEnd -->
-
+<!--ID: 1773945940617-->
 END
 
 ---
@@ -2527,7 +2527,7 @@ Back:
 - **Umožnění multiplexingu** - stačí jedno TCP spojení
 - **Optimalizace hlaviček** - aby byly menší, lepší komprese
 - **Prioritizace requestů a responses** (aby prohlížeč věděl, které requesty jsou důležitější)
-
+<!--ID: 1773945940620-->
 END
 
 ---
