@@ -156,5 +156,20 @@ describe("MigratedFlashcardsRunner", () => {
     const res = runner.run(path.join(tmp, "FIT-Notes"), path.join(tmp, "FIT-Statnice"), ["NI-AM1"]);
     expect(res.issues.some((i) => i.name === "MissingAssetInTarget")).toBe(true);
   });
-});
 
+  test("non-canonical migrated asset link format is reported", () => {
+    writeFile(path.join(srcNotes, "Semestr 1", "NI-AM1", "src.md"), sourceCard());
+    writeFile(
+      path.join(tgtNotes, "NI-SI-9 NI-AM1.md"),
+      `# Header\n\n## Section A\n\n${targetCard().replace(
+        "![](../../Assets/test%20image.png)",
+        "![[../../Assets/test%20image.png]]"
+      )}`
+    );
+    writeFile(path.join(tgtAssets, "test image.png"), "asset");
+
+    const runner = new MigratedFlashcardsRunner(new QuietConsoleLoggingService());
+    const res = runner.run(path.join(tmp, "FIT-Notes"), path.join(tmp, "FIT-Statnice"), ["NI-AM1"]);
+    expect(res.issues.some((i) => i.name === "InvalidMigratedFormat")).toBe(true);
+  });
+});

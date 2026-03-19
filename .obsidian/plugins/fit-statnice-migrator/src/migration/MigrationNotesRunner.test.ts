@@ -217,7 +217,7 @@ END
       path.join(tgtNotes, "NI-SI-9 NI-AM1.md"),
       "utf8"
     );
-    expect(updatedTarget).toContain("![[../../Assets/test%20image.png]]");
+    expect(updatedTarget).toContain("![](../../Assets/test%20image.png)");
     expect(fs.existsSync(path.join(tgtAssets, "test image.png"))).toBe(true);
   });
 });

@@ -7,9 +7,11 @@ import {
   extractOriginalIdAboveStart,
   extractOwnIdFromBlock,
   extractSourceIdFromBlock,
+  findNonCanonicalLocalAssetLinks,
   findSectionNameForLine,
   FlashcardBlock,
   listMarkdownFiles,
+  normalizeLocalAssetLinkSyntax,
   normalizeForComparison,
   parseFlashcardBlocks,
   parseRecommendationAboveStart,
@@ -373,7 +375,9 @@ export class MigratedFlashcardsRunner {
     answer: string;
   } {
     const body = targetBlock.rawLines.slice(2, targetBlock.rawLines.length - 1);
-    const normalizedBody = body.filter((line) => !line.match(/<!--\s*ID\s*:/i));
+    const normalizedBody = body
+      .filter((line) => !line.match(/<!--\s*ID\s*:/i))
+      .map((line) => normalizeLocalAssetLinkSyntax(line));
     return this.splitQuestionAnswer(normalizedBody);
   }
 
@@ -421,6 +425,16 @@ export class MigratedFlashcardsRunner {
     result: MigratedRunnerResult
   ): void {
     for (const line of target.block.rawLines) {
+      const formatIssues = findNonCanonicalLocalAssetLinks(line);
+      for (const formatIssue of formatIssues) {
+        result.issues.push({
+          name: "InvalidMigratedFormat",
+          message: `Invalid local asset link format. Expected ${formatIssue.expected} but found ${formatIssue.actual}`,
+          file: sourceFilePath,
+          id: sourceId,
+        });
+      }
+
       const names = extractLocalAssetFileNamesFromLine(line);
       for (const name of names) {
         const assetPath = path.join(targetAssetsDir, name);
@@ -436,4 +450,3 @@ export class MigratedFlashcardsRunner {
     }
   }
 }
-

@@ -33,6 +33,11 @@ export interface AssetReference {
   rewrittenPath: string;
 }
 
+export interface NonCanonicalLocalAssetLink {
+  actual: string;
+  expected: string;
+}
+
 const ID_COMMENT_RE = /<!--\s*ID\s*:\s*([^\n<]+?)\s*-->/i;
 const ORIGINAL_ID_COMMENT_RE = /Original Flashcard ID:\s*([^\n<]+?)(?:\s*-->|\s*$)/i;
 
@@ -295,6 +300,55 @@ export function extractLocalAssetFileNamesFromLine(line: string): string[] {
   return names;
 }
 
+export function findNonCanonicalLocalAssetLinks(
+  line: string
+): NonCanonicalLocalAssetLink[] {
+  const issues: NonCanonicalLocalAssetLink[] = [];
+
+  const markdownImageRe = /!\[[^\]]*]\(([^)]+)\)/g;
+  for (const match of line.matchAll(markdownImageRe)) {
+    const full = match[0];
+    const linkTarget = String(match[1]).trim();
+    const canonical = buildCanonicalAssetLink(linkTarget);
+    if (!canonical) continue;
+    if (full !== canonical) {
+      issues.push({ actual: full, expected: canonical });
+    }
+  }
+
+  const wikiImageRe = /!\[\[([^\]]+)]]/g;
+  for (const match of line.matchAll(wikiImageRe)) {
+    const full = match[0];
+    const inner = String(match[1]);
+    const pipeIdx = inner.indexOf("|");
+    const baseTarget = pipeIdx === -1 ? inner : inner.substring(0, pipeIdx);
+    const canonical = buildCanonicalAssetLink(baseTarget.trim());
+    if (!canonical) continue;
+    issues.push({ actual: full, expected: canonical });
+  }
+
+  return issues;
+}
+
+export function normalizeLocalAssetLinkSyntax(line: string): string {
+  const markdownImageRe = /!\[[^\]]*]\(([^)]+)\)/g;
+  let normalized = line.replace(markdownImageRe, (full, rawTarget: string) => {
+    const canonical = buildCanonicalAssetLink(String(rawTarget).trim());
+    return canonical ?? full;
+  });
+
+  const wikiImageRe = /!\[\[([^\]]+)]]/g;
+  normalized = normalized.replace(wikiImageRe, (full, rawInner: string) => {
+    const inner = String(rawInner);
+    const pipeIdx = inner.indexOf("|");
+    const baseTarget = pipeIdx === -1 ? inner : inner.substring(0, pipeIdx);
+    const canonical = buildCanonicalAssetLink(baseTarget.trim());
+    return canonical ?? full;
+  });
+
+  return normalized;
+}
+
 function rewriteMarkdownAssetLinks(
   line: string,
   sourceFilePath: string,
@@ -306,7 +360,7 @@ function rewriteMarkdownAssetLinks(
     const resolved = resolveLocalAsset(linkTarget, sourceFilePath);
     if (!resolved) return full;
     assets.push(resolved);
-    return full.replace(linkTarget, resolved.rewrittenPath);
+    return `![](${resolved.rewrittenPath})`;
   });
 }
 
@@ -320,11 +374,10 @@ function rewriteWikiAssetLinks(
     const inner = String(rawInner);
     const pipeIdx = inner.indexOf("|");
     const baseTarget = pipeIdx === -1 ? inner : inner.substring(0, pipeIdx);
-    const suffix = pipeIdx === -1 ? "" : inner.substring(pipeIdx);
     const resolved = resolveLocalAsset(baseTarget.trim(), sourceFilePath);
     if (!resolved) return full;
     assets.push(resolved);
-    return `![[${resolved.rewrittenPath}${suffix}]]`;
+    return `![](${resolved.rewrittenPath})`;
   });
 }
 
@@ -394,6 +447,13 @@ function toLocalAssetFileName(linkTarget: string): string | null {
   const encodedName = path.posix.basename(noQuery);
   if (!encodedName || encodedName === "." || encodedName === "..") return null;
   return safeDecodeURIComponent(encodedName);
+}
+
+function buildCanonicalAssetLink(linkTarget: string): string | null {
+  const fileName = toLocalAssetFileName(linkTarget);
+  if (!fileName) return null;
+  const canonicalPath = `../../Assets/${encodeURIComponent(fileName)}`;
+  return `![](${canonicalPath})`;
 }
 
 function stripQueryAndHash(linkTarget: string): string {
