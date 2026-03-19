@@ -9,6 +9,7 @@ import {
 import { ConsoleLoggingService, LoggingService } from "./logging";
 import { MigratorFacade } from "./core/MigratorFacade";
 import { MigratedFlashcardsRunner } from "./migration/MigratedFlashcardsRunner";
+import { MigrationNotesRunner } from "./migration/MigrationNotesRunner";
 import { MigrationCommentsRunner } from "./comments/MigrationCommentsRunner";
 import { AnkiSyncRunner } from "./anki/AnkiSyncRunner";
 
@@ -55,22 +56,55 @@ export default class FitStatniceMigratorPlugin extends Plugin {
 
     this.addCommand({
       id: "fit-statnice-test-flashcards-migrated",
-      name: "Test flashcards migrated correctly",
+      name: "Test migrated flashcards",
       callback: async () => {
-        new Notice("Test flashcards migrated correctly: started");
-        this.logger.info("Starting: Test flashcards migrated correctly");
+        new Notice("Test migrated flashcards: started");
+        this.logger.info("Starting: Test migrated flashcards");
         const runner = new MigratedFlashcardsRunner(this.logger);
         const res = runner.run(
           this.settings.fitNotesRepoPath,
           (this.app.vault.adapter as any).getBasePath?.() ?? "",
           this.settings.testCourses
         );
-        this.logger.success("Finished: Test flashcards migrated correctly", {
+        this.logger.success("Finished: Test migrated flashcards", {
           totalSource: res.totalSource,
           totalTarget: res.totalTarget,
           issues: res.issues.length,
         });
-        const summary = `Source: ${res.totalSource}\nMigrated: ${res.totalTarget}\nIssues: ${res.issues.length}`;
+        const summary = `Source (done non-none): ${res.totalSource}\nTarget flashcards: ${res.totalTarget}\nIssues: ${res.issues.length}`;
+        new Notice(summary, 0);
+      },
+    });
+
+    this.addCommand({
+      id: "fit-statnice-migrate-notes",
+      name: "Migrate notes (migrate -> done)",
+      callback: async () => {
+        new Notice("Migrate notes: started");
+        this.logger.info("Starting: Migrate notes");
+        const baseVaultPath =
+          (this.app.vault.adapter as any).getBasePath?.() ?? "";
+        const runner = new MigrationNotesRunner(this.logger);
+        const res = runner.run(
+          this.settings.fitNotesRepoPath,
+          baseVaultPath,
+          this.settings.testCourses
+        );
+        this.logger.success("Finished: Migrate notes", {
+          scanned: res.scannedFlashcards,
+          candidates: res.candidateFlashcards,
+          migrated: res.migratedFlashcards,
+          skippedDuplicates: res.skippedDuplicates,
+          updatedStatuses: res.updatedStatuses,
+          issues: res.issues.length,
+        });
+        const summary =
+          `Scanned flashcards: ${res.scannedFlashcards}\n` +
+          `Candidates (migrate): ${res.candidateFlashcards}\n` +
+          `Migrated: ${res.migratedFlashcards}\n` +
+          `Skipped duplicates: ${res.skippedDuplicates}\n` +
+          `Statuses updated: ${res.updatedStatuses}\n` +
+          `Issues: ${res.issues.length}`;
         new Notice(summary, 0);
       },
     });

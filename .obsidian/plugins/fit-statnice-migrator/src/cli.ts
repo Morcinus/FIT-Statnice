@@ -4,6 +4,7 @@ import { MigratorFacade } from "./core/MigratorFacade";
 import * as path from "path";
 import * as fs from "fs";
 import { MigratedFlashcardsRunner } from "./migration/MigratedFlashcardsRunner";
+import { MigrationNotesRunner } from "./migration/MigrationNotesRunner";
 import { MigrationCommentsRunner } from "./comments/MigrationCommentsRunner";
 import { AnkiSyncRunner } from "./anki/AnkiSyncRunner";
 
@@ -48,16 +49,35 @@ async function main() {
       }
     }
     console.log("Ran Comments Test");
-  } else if (cmd === "migration") {
-    const courseIds = process.argv.slice(3).length > 0 
-      ? process.argv.slice(3) 
-      : (config.testCourses || []);
+  } else if (cmd === "migrate-notes") {
+    const courseIds = config.testCourses || [];
+    const vaultPath = path.resolve(__dirname, "..", "..", "..");
+    const fitNotesPath = config.fitNotesRepoPath || path.resolve(vaultPath, "..", "FIT-Notes");
+    const runner = new MigrationNotesRunner(logger);
+    const res = runner.run(fitNotesPath, vaultPath, courseIds);
+    console.log(`Scanned flashcards: ${res.scannedFlashcards}`);
+    console.log(`Candidates (migrate): ${res.candidateFlashcards}`);
+    console.log(`Migrated: ${res.migratedFlashcards}`);
+    console.log(`Skipped duplicates: ${res.skippedDuplicates}`);
+    console.log(`Statuses updated: ${res.updatedStatuses}`);
+    console.log(`Issues: ${res.issues.length}`);
+    if (res.issues.length > 0) {
+      console.log("\nIssues found:");
+      for (const issue of res.issues) {
+        const fileInfo = issue.file ? ` in ${path.relative(fitNotesPath, issue.file)}` : "";
+        const idInfo = issue.id ? ` (ID: ${issue.id})` : "";
+        console.log(`  [${issue.name}]${fileInfo}${idInfo}: ${issue.message}`);
+      }
+    }
+    console.log("Ran Migrate Notes");
+  } else if (cmd === "migration" || cmd === "test-migrated-cards") {
+    const courseIds = config.testCourses || [];
     const vaultPath = path.resolve(__dirname, "..", "..", "..");
     const fitNotesPath = config.fitNotesRepoPath || path.resolve(vaultPath, "..", "FIT-Notes");
     const runner = new MigratedFlashcardsRunner(logger);
     const res = runner.run(fitNotesPath, vaultPath, courseIds);
-    console.log(`Source: ${res.totalSource}`);
-    console.log(`Migrated: ${res.totalTarget}`);
+    console.log(`Source (done non-none): ${res.totalSource}`);
+    console.log(`Target flashcards: ${res.totalTarget}`);
     console.log(`Issues: ${res.issues.length}`);
     if (res.issues.length > 0) {
       console.log("\nIssues found:");
@@ -67,7 +87,7 @@ async function main() {
         console.log(`  [${issue.name}]${fileInfo}${idInfo}: ${issue.message}`);
       }
     }
-    console.log("Ran Migration Test");
+    console.log("Ran Migrated Cards Test");
   } else if (cmd === "prepare-sections") {
     const courseId = process.argv[3];
     if (!courseId) {
@@ -101,9 +121,7 @@ async function main() {
     }
     console.log("Ran Anki Sync Check");
   } else if (cmd === "all") {
-    const courseIds = process.argv.slice(3).length > 0 
-      ? process.argv.slice(3) 
-      : (config.testCourses || []);
+    const courseIds = config.testCourses || [];
     const vaultPath = path.resolve(__dirname, "..", "..", "..");
     const fitNotesPath = config.fitNotesRepoPath || path.resolve(vaultPath, "..", "FIT-Notes");
     
@@ -127,8 +145,8 @@ async function main() {
     console.log("\n--- Migration Check ---");
     const migrationRunner = new MigratedFlashcardsRunner(logger);
     const migrationRes = migrationRunner.run(fitNotesPath, vaultPath, courseIds);
-    console.log(`Source: ${migrationRes.totalSource}`);
-    console.log(`Migrated: ${migrationRes.totalTarget}`);
+    console.log(`Source (done non-none): ${migrationRes.totalSource}`);
+    console.log(`Target flashcards: ${migrationRes.totalTarget}`);
     console.log(`Issues: ${migrationRes.issues.length}`);
     if (migrationRes.issues.length > 0) {
       console.log("\nIssues found:");
@@ -162,7 +180,7 @@ async function main() {
       name: "InvalidCLICommand",
       message: `Unknown command: ${cmd}`,
       fixInstructions:
-        "Use one of: comments | migration | all | prepare-sections <courseId> | anki-sync",
+        "Use one of: comments | migrate-notes | test-migrated-cards | migration | all | prepare-sections <courseId> | anki-sync",
     });
     process.exitCode = 1;
   }

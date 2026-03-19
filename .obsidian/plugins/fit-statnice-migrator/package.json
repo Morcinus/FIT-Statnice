@@ -9,6 +9,8 @@
     "test": "jest -c jest.config.cjs",
     "cli:comments": "node cli.js comments",
     "cli:migration": "node cli.js migration",
+    "cli:migrate-notes": "node cli.js migrate-notes",
+    "cli:test-migrated-cards": "node cli.js test-migrated-cards",
     "cli:all": "node cli.js all",
     "cli:prepare": "node cli.js prepare-sections",
     "cli:anki-sync": "node cli.js anki-sync",
