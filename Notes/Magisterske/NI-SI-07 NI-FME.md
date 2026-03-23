@@ -4,9 +4,9 @@ parent: "[[FIT]]"
 ---
 
 TARGET DECK: NI-SZZ
-FILE TAGS: NI-SI-7 NI-FME
+FILE TAGS: NI-SI-07 NI-FME
 
-> NI-SI-7 (NI-FME)
+> NI-SI-07 (NI-FME)
 > Dokazování správnosti programů: aserce, ověřovací podmínky, invarianty smyček, důkazy terminace.
 
 ## Dokazování správnosti programů

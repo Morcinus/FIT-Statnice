@@ -4,9 +4,9 @@ parent: "[[FIT]]"
 ---
 
 TARGET DECK: NI-SZZ
-FILE TAGS: NI-SPOL-8 NI-VSM
+FILE TAGS: NI-SPOL-08 NI-VSM
 
-> NI-SPOL-8 (NI-VSM)
+> NI-SPOL-08 (NI-VSM)
 > Markovské řetězce s diskrétním časem. Jejich limitní vlastnosti.
 
 ## Markovské řetězce s diskrétním časem

@@ -4,9 +4,9 @@ parent: "[[FIT]]"
 ---
 
 TARGET DECK: NI-SZZ
-FILE TAGS: NI-SI-2 NI-ADP
+FILE TAGS: NI-SI-02 NI-ADP
 
-> NI-SI-2 (NI-ADP)
+> NI-SI-02 (NI-ADP)
 > Vytvářecí návrhové vzory (Abstract factory, Factory method, Builder, Prototype, Singleton) a Non-GoF návrhové vzory (Double-checked locking, Thread pool, Mock object, Null object).
 
 ## Vytvářecí návrhové vzory (Abstract factory, Factory method, Builder, Prototype, Singleton)

@@ -4,9 +4,9 @@ parent: "[[FIT]]"
 ---
 
 TARGET DECK: NI-SZZ
-FILE TAGS: NI-SI-3 NI-ADP
+FILE TAGS: NI-SI-03 NI-ADP
 
-> NI-SI-3 (NI-ADP)
+> NI-SI-03 (NI-ADP)
 > Strukturální návrhové vzory (Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy) a Non-GoF návrhové vzory (Lazy loading, Dependency injection)
 
 ## Strukturální návrhové vzory (Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy)

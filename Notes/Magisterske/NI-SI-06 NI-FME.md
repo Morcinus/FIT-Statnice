@@ -4,9 +4,9 @@ parent: "[[FIT]]"
 ---
 
 TARGET DECK: NI-SZZ
-FILE TAGS: NI-SI-6 NI-FME
+FILE TAGS: NI-SI-06 NI-FME
 
-> NI-SI-6 (NI-FME)
+> NI-SI-06 (NI-FME)
 > Specifikace správnosti programů, psaní specifikací v predikátové logice, axiomatické modelování datových struktur.
 
 ## Specifikace správnosti programů

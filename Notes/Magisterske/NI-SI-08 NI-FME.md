@@ -4,9 +4,9 @@ parent: "[[FIT]]"
 ---
 
 TARGET DECK: NI-SZZ
-FILE TAGS: NI-SI-8 NI-FME
+FILE TAGS: NI-SI-08 NI-FME
 
-> NI-SI-8 (NI-FME)
+> NI-SI-08 (NI-FME)
 > Automatizace dokazování správnosti programů: principy, možnosti, omezení.
 
 ## Automatizace dokazování správnosti programů

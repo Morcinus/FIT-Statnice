@@ -4,9 +4,9 @@ parent: "[[FIT]]"
 ---
 
 TARGET DECK: NI-SZZ
-FILE TAGS: NI-SI-5 NI-ADP
+FILE TAGS: NI-SI-05 NI-ADP
 
-> NI-SI-5 (NI-ADP)
+> NI-SI-05 (NI-ADP)
 > Architektonické vzory (MVC, MVP, MVVM, Client-Server, Microservices vs monolithic server, Asynchronous messaging, Blackboard architecture, Rule-based architecture, Publish-subscribe).
 
 ## Architektonické vzory (MVC, MVP, MVVM, Client-Server, Microservices vs monolithic server, Asynchronous messaging, Blackboard architecture, Rule-based architecture, Publish-subscribe)
