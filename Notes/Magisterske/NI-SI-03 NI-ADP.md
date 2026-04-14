@@ -168,9 +168,9 @@ K čemu slouží **Bridge** design pattern?
 
 Back:
 
-Umožňuje to rozdělit nějakou velkou classu do více malých class, které spolu souvisí.
+Umožňuje rozdělit nějakou velkou třídu na dvě třídy - na **abstrakci** (která zajišťuje high level business logiku) a **implementaci** (která obsahuje detailní vlastnosti a funkce).
 
-Tím rozdělím velkou třídu do dvou hierarchií - abstrakce a implementace.
+Klient pak používá funkce abstrakce, což je jednodušší, protože nemusí řešit ty detaily. Zároveň můžeme implementace vyměňovat, takže ta high level abstraktní business logika se dá využít s více implementacemi.
 
 ![](../../../Assets/Pasted%20image%2020250130105740.png)
 
