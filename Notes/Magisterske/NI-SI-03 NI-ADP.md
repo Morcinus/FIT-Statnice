@@ -643,7 +643,7 @@ END
 START
 NI-SZZ
 
-Jaká je struktura **Flyweight** design patternu?
+Jaká je struktura **Flyweight** design patternu? Popiš **přesně** každou operaci a atribut.
 
 Back:
 
