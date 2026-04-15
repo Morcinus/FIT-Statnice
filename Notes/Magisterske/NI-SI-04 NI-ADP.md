@@ -609,6 +609,23 @@ END
 
 ---
 
+
+START
+FIT-Card
+
+Jaké jsou 3 možné způsoby jak implementovat Memento? 
+
+Back:
+
+- **Pomocí vnitřní třídy** - Memento je jako vnitřní třída uvnitř Originatora
+- **Pomocí interfacu** - Memento je interface, který využívá Caretaker. Originator pak pracuje s memento třídou co implementuje ten interface.
+- **Pomocí striktní enkapsulace** - Originator i memento mají interfacy a třídy co je implementují. Originator má v sobě `save()` a `setState()`, Memento má v sobě `restore()` a `originator`. Memento pak provádí ten restore v originatoru.
+<!--ID: 1776243585027-->
+END
+
+---
+
+
 START
 NI-SZZ
 
@@ -645,7 +662,10 @@ Jaká je struktura **Memento** design patternu - **Implementation based on an in
 
 Back:
 
-There’s an alternative implementation, suitable for programming languages that don’t support nested classes (yeah, PHP, I’m talking about you).
+Jediná změna je že Memento nebude vnitřní třída ale rozdělí se na interface a třídu co implementuje ten interface. Client pracuje s interfacem, originator s konkrétní třídou.
+
+**Výhoda**: dá se to použít i v jazycích co nepodporují vnitřní třídy (PHP,...)
+**Nevýhoda**: memento má public atributy, takže to je accessible z venku 
 
 ![](../../../Assets/Pasted%20image%2020250130112242.png)
 
