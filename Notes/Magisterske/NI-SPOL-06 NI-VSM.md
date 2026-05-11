@@ -9,6 +9,11 @@ FILE TAGS: NI-SPOL-06 NI-VSM
 > NI-SPOL-06 (NI-VSM)
 > Testování statistických hypotéz. T-testy, testy nezávislosti, testy dobré shody.
 
+<!--
+TODO:
+- zde asi přihodit aspoň jak spočítat střední hodnotu, var X a další základní blbosti
+-->
+
 ## Testování statistických hypotéz
 
 <!--
