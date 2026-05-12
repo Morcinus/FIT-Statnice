@@ -194,8 +194,9 @@ Jaké jsou 2 typy hypotéz (podle parametrů) a co znamenají?
 
 Back:
 
-- **Parametrické** - zkoumáme daný parametr
-- **Neparametrické** - zkoumáme rozdělení obecně
+Máme nasbíraná data a můžeme udělat testy:
+- **Parametrické** - řekneme si, že to má asi nějaké rozdělení a zkoumáme jaké by to mělo parametry (průměr, rozptyl)
+- **Neparametrické** - zkoumáme vlastnosti rozdělení obecně (tvar, medián, nezávislost,...)
 
 ![](../../Assets/Pasted%20image%2020250322075915.png)
 <!--ID: 1778521859948-->
@@ -288,9 +289,10 @@ Original Flashcard ID: 1746599650089
 START
 NI-SZZ
 
-
-Jak funguje:
+Jak provedu:
 ![](../../Assets/Pasted%20image%2020250322080207.png)
+
+při **známém** a **neznámém** rozptylu
 
 Back:
 
@@ -326,7 +328,7 @@ START
 NI-SZZ
 
 
-Jak funguje:
+Jak provedu:
 ![](../../Assets/Pasted%20image%2020250322080223.png)
 
 Back:
@@ -345,8 +347,10 @@ START
 NI-SZZ
 
 
-Jak funguje:
+Jak provedu:
 ![](../../Assets/Pasted%20image%2020250322080237.png)
+
+při **známém** a **neznámém** rozptylu
 
 Back:
 
@@ -364,7 +368,7 @@ START
 NI-SZZ
 
 
-Jak funguje
+Jak provedu:
 ![](../../Assets/Pasted%20image%2020250322080254.png)
 
 Back:
@@ -454,17 +458,16 @@ START
 NI-SZZ
 
 
-Jak funguje testování dobré shody?
+Jak funguje **testování dobré shody**?
 
 Back:
 
 1. Máme data $X_1, \dots, X_n$ a myslíme si, že to má nějaké rozdělení $F_0$
-2. Rozdělníme to do binů
-3. Napočítáme počty pozorování, co padnou do těch binů
-4. Spočteme, jaká je pravděpodobnost, že to padne do $i$ tého binu
-5. Pak použijeme chí kvadrát, ve kterém odečítáme ty naměřená data od toho teoretického rozdělení. To se nasčítá přes všechny biny
-6. Pokud je to n dostatečně velký, tak výsledné rozdělení odpovídá rozdělení $\chi^2(k-1-p)$
-7. Pokud se trefím mimo kritickou oblast, nezamítám. Pokud se tam trefím, tak zamítám.
+2. Rozdělníme data do binů tak, aby v každém bylo teoreticky aspoň 5 hodnot
+3. Napočítáme počty pozorování, co padnou do těch binů $N_i$
+4. Spočteme pravděpodobnost $p_i$, že to padne do $i$ tého binu
+5. Pak spočteme $\chi^{2}(\textbf{X})$ (které při velkým $n$ odpovídá $\chi^2(k-1-p)$)
+6. Pokud $\chi^{2}(\textbf{X}) \geq \chi^{2}_{\alpha,k-1-p}$, tak zamítáme $H_0$
 
 Je vhodné, aby ty _teoretické_ četnosti v každém binu měly alespoň 5. Když by to bylo méně než 5, tak není zaručeno, že mi vyjde chí kvadrát
 
@@ -482,13 +485,14 @@ START
 NI-SZZ
 
 
-Jak funguje test v kontingenční tabulce?
+Jak funguje **test v kontingenční tabulce**?
 
 Back:
 
-1. Máme 2 rozdělení $X$ a $Y$ a chcem otestovat jestli jsou nezávislé, tedy $H_0$: jsou nezávislé, $H_A$ jsou závislé
-2. Uděláme tabulku, najdeme marginály (to v posledním řádku, resp. sloupečku)
-3. Sestavíme chí kvadrát podle vzorečku (podobně jako u dobré shody, jen to dělám u 2D rozdělení)
+1. Máme 2 rozdělení $Y$ a $Z$ a chcem otestovat jestli jsou nezávislé, tedy $H_0$: jsou nezávislé, $H_A$ jsou závislé
+2. **Uděláme tabulku naměřených hodnot** a jejich součtů ve sloupcích a řádcích
+3. **Uděláme tabulku pravděpodobností**, kde spočteme pravděpodobnosti, že se trefíme do daného chlívečku, sloupce a řádku (hodnoty předchozí tabulky jen vydělíme celkovým počtem hodnot $n$)
+4. Sestavíme $\chi^2$ podle vzorečku níže (podobně jako u dobré shody, jen to dělám u 2D rozdělení)
 
 ![](../../Assets/Pasted%20image%2020250329134349.png)
 <!--ID: 1778521859982-->

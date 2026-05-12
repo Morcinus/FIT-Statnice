@@ -25,3 +25,10 @@ ODPOVĚĎ
 END
 
 ---
+
+### Flagování kartiček
+- `Red` - je tam důležitá chyba
+- `Orange` - je tam drobná chyba
+- `Green` - chtělo by to přeformulovat
+- `Turquoise` - chce to kartičku smazat, protože není důlěžitá
+- `Pink` - duplicitní kartička
