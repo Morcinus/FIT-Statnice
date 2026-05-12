@@ -71,17 +71,22 @@ END
 START
 NI-SZZ
 
-Vysvětli design princip **YAGNI** - co to znamená a proč by se to mělo dodržovat (4 costs).
+Vysvětli design princip **YAGNI**
+- co to znamená
+- proč by se to mělo dodržovat (4 costs)
 
 Back:
 
-**You Ain’t Gonna Need It**
-= Měli bychom programovat pouze věci, které jsou momentálně potřeba nebo 100% víme, že budou potřeba.
+**You Ain’t Gonna Need It** = Měli bychom programovat pouze věci, které jsou momentálně potřeba nebo 100% víme, že budou potřeba.
 
 **Proč:**
-
 - Špatně se odhaduje, co bude potřeba v budoucnu, požadavky se hodně mění. To co si myslíme, že bude potřeba teď, nemusí být potřeba později.
-- Costs: - **cost of building** = strávíme čas na něčem co možná ani nevyužijeme - **cost of delay** = zpomalíme tím projekt, protože jsme se mohli věnovat něčemu jinému - **cost of carry** = budeme mít od začátku složitější systém, což je horší na údržbu, debuggování, rozšiřování atd. - **cost of repairs** = v době, kdy to bude potřeba, pravděpodobně daná funkcionalita stejně bude mít hodně technical debt
+
+**Costs**: 
+- **cost of building** = strávíme čas na něčem co možná ani nevyužijeme
+- **cost of delay** = zpomalíme tím projekt, protože jsme se mohli věnovat něčemu jinému
+- **cost of carry** = budeme mít od začátku složitější systém, což je horší na údržbu, debuggování, rozšiřování atd.
+- **cost of repairs** = v době, kdy to bude potřeba, pravděpodobně daná funkcionalita stejně bude mít hodně technical debt
 
 Tags: should-know N001F003
 <!--ID: 1760705194622-->
@@ -97,9 +102,9 @@ NI-SZZ
 
 Vysvětli design princip **SOLID** - z jakých pojmů se to skládá?
 
-Back:
+(nemusíš vysvětlovat jednotlivé pojmy)
 
-**SOLID**
+Back:
 
 - **Single responsibility** = třída by měla mít jednu zodpovědnost
 - **Open-closed** = třídy by měly být otevřené pro rozšíření, uzavřené pro modifikaci
@@ -196,12 +201,10 @@ Vysvětli **Liskov Substitution** princip (ze SOLID) - co to znamená a proč by
 
 Back:
 
-**Liskov Substitution**
-= pokud $S$ je podtypem $T$, potom všude kde se používá objekt $T$, můžu použít bez změny programu i objekt $S$
+**Liskov Substitution** = pokud $S$ je podtypem $T$, potom všude kde se používá objekt $T$, můžu použít bez změny programu i objekt $S$
 
 **Proč:**
-
-- Cílem je vynutit konzistenci tak, aby rodiče a potomci mohli být použiti stejným způsobem
+Cílem je vynutit konzistenci tak, aby rodiče a potomci mohli být použiti stejným způsobem
 
 <!-- DetailInfoStart -->
 
@@ -367,26 +370,22 @@ END
 START
 NI-SZZ
 
-Vysvětli co je **Tech debt** - co to je, jaké má kvadranty?
+Vysvětli co je **Tech debt** - co to je, jaké má kvadranty (typy)?
 
 Back:
 
-**Technical debt:**
-= za cenu rychlosti produkujeme horší kód
+**Technical debt** = za cenu rychlosti produkujeme horší kód
 
-Pozn. tech debt se může vytvářet i sám (tím že zastarávají technologie atd.) - není to nutně to, že jsme "odfláknuli práci".
-
-**Kvadranty:**
-
+**Kvadranty (typy):**
 - Úmyslný/Neúmyslný
 - Lehkovážný/Rozumný
 
-Např.
-
-- Úmyslný a lehkovážný - "Nemáme čas na design"
-- Úmyslný a rozumný - "Neuděláme to, ale počítáme s dopady"
-- Neúmyslný a lehkovážný - "Co je layering?"
-- Neúmyslný a rozumný - "Teď víme, že jsme to měli udělat jinak" (např. najdeme lepší řešení až po tom, co jsme to udělali)
+<!-- ExampleStart -->
+- **Úmyslný a lehkovážný** - "Nemáme čas na design"
+- **Úmyslný a rozumný** - "Neuděláme to, ale počítáme s dopady"
+- **Neúmyslný a lehkovážný** - "Co je layering?"
+- **Neúmyslný a rozumný** - "Teď víme, že jsme to měli udělat jinak" (např. najdeme lepší řešení až po tom, co jsme to udělali)
+<!-- ExampleEnd -->
 
 Tags: should-know N001F012
 <!--ID: 1760705194647-->

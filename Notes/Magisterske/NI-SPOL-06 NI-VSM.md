@@ -261,7 +261,6 @@ Back:
 	- $p'=p$ při známých parametrech
 	- $p'=p$ při neznámých parametrech
 - **Kontingenční tabulka** - testujeme nezávislost dvou rozdělení
-
 <!--ID: 1778521860042-->
 END
 
@@ -1110,7 +1109,7 @@ OTÁZKA
 Back:
 
 ODPOVĚĎ
-
+<!--ID: 1778621133830-->
 END
 
 ---

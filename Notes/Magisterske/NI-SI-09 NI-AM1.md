@@ -264,8 +264,9 @@ Original Flashcard ID: 1729237386393
 START
 NI-SZZ
 
+Jaké jsou typy softwarových architektur podle rozdělení kódu? (5)
 
-Jaké jsou typy softwarových architektur (monolit,...)? (5)
+(nápověda: monolit, ...)
 
 Back:
 
@@ -273,7 +274,7 @@ Back:
 - **Two-Tier client/server**
 - **Three-tier client/server**
 - **Mutli-tier client/server**
-- **Client/server** (microservices)
+- **Microservices client/server**
 <!--ID: 1773945940330-->
 END
 
@@ -1106,14 +1107,18 @@ Co je **The Scale Cube**?
 
 Back:
 
-Vyobrazení škálování:
+Vyobrazení **tří možností škálování**:
+
 ![](../../Assets/Pasted%20image%2020241014185045.png)
 
-- **Osa X** - **instance**
-  - mám např. web server, udělám si více **instancí**, čímž rozložím zátěž
-- **Osa Z** - **data partitioning**
+**Osa X** - **instance**
+- mám např. web server, udělám si více **instancí**, čímž rozložím zátěž
+
+**Osa Z** - **data partitioning**
   - mám několik oddělených databází (jedna má např. záznamy od A-J, druhá od J-Z), mám systém, co mi rozhazuje data do těch databází, čímž opět rozložím zátěž
-- **Osa Y** - **mikroservisy** - oddělím určitou funkci aplikace, čímž dělám "dekompozici funkcí"
+
+**Osa Y** - **mikroservisy**
+- oddělím určitou funkci aplikace, čímž dělám "dekompozici funkcí"
 <!--ID: 1773945940439-->
 END
 
@@ -1151,8 +1156,7 @@ Original Flashcard ID: 1736496141956
 START
 NI-SZZ
 
-
-Co jsou 3 základní pojmy (začínající na $M$, které) se používají v architektuře mikroslužeb?
+Jaký je rozdíl mezi **monolitem**, **mikroslužbou** a **modulitem**? Čeho bychom se měli snažit docílit?
 
 Back:
 
@@ -1255,17 +1259,19 @@ Original Flashcard ID: 1735205750018
 START
 NI-SZZ
 
-
-Jaké jsou základní 2 standardy ve Web Service Architectuře?
+Jaký je rozdíl mezi **REST** a **RPC**?
 
 Back:
 
-Např.
+REST
+- endpointy jsou **zdroje**
+- operace jsou doménově nezávislé (GET, PUT,..)
+- používá se často pro client-server komunikaci
 
-- REST
-  - **nejsou** tam endpointy ale **zdroje**
-  - operace jsou doménově nezávislé (GET, PUT,..)
-- RPC - vstupní data, operace, výstupní data (funkce) - **endpointy** mají názvy operace - operace jsou doménově závislé (CreateCustomer)
+RPC
+- endpointy jsou **operace** (např. createCustomer)
+- operace jsou doménově závislé
+- používá se hlavně pro server-server komunikaci
 <!--ID: 1773945940458-->
 END
 
@@ -1608,23 +1614,17 @@ Original Flashcard ID: 1735205749851
 START
 NI-SZZ
 
-
-Jaké vlastnosti mají operace RESTu? (2)
+Jaké **vlastnosti** mají operace RESTu z hlediska měnění stavu zdroje? (2)
 
 Back:
 
-Safeness:
-
+**Safeness**:
 - **Safe** - operace nemění stav (např. GET)
 - **Unsafe** - mohou měnit stav (např. POST, PUT, DELETE)
 
-Idempotence:
-
-- **Idempotent** - Když zavolám metodu na zdroji (na stejných datech/vstupech), bude výsledek vždy stejný (GET, PUT, DELETE)
-  - Pozn. idempotence má obecně dost výhod - je to spolehlivější a předvídatelnější
+**Idempotence**:
+- **Idempotent** - Když zavolám metodu na zdroji (na stejných datech/vstupech), bude efekt vždy stejný (GET, PUT, DELETE)
 - **Non-idempotent** - Když zavolám metodu na zdroji (na stejných datech/vstupech), může být stav jiný (POST)
-
-Pozn. u idempotence se jedná o **state change**. Tzn. není stejný **výsledek** (data), ale změna **stavu**.
 
 <!-- ExampleStart -->
 
@@ -1824,7 +1824,7 @@ Jaké vlastnosti má POST? (safeness a idempotence)
 Back:
 
 - Je **unsafe**
-- Je **not-idempotent**
+- Není **idempotentní**
 
 <!-- DetailInfoStart -->
 

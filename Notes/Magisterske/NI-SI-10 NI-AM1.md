@@ -155,12 +155,15 @@ Original Flashcard ID: 1728921215039
 START
 NI-SZZ
 
-Co je **interface**?
+Jak lze obecně **chápat** interface ve službách?
 
 Back:
 
-Lze ho chápat jako **dohodu** (agreement, contract) mezi dvěma systémama.
+Lze ho chápat jako **dohodu/smlouvu** (agreement, contract) mezi dvěma systémama.
 
+Pokud chceme smlouvu měnit, musíme ji verzovat.
+
+<!-- DetailInfoStart -->
 Domluví se na tom, jak bude ta komunikace fungovat.
 ![](../../Assets/Pasted%20image%2020240930103653.png)
 ![](../../Assets/Pasted%20image%2020240930103616.png)
@@ -169,6 +172,8 @@ Pokud tu "smlouvu" chci změnit, musím to verzovat. Nemůžu to jen tak měnit 
 
 Např.
 ![](../../Assets/Pasted%20image%2020240930104117.png)
+
+<!-- DetailInfoEnd -->
 <!--ID: 1773945940648-->
 END
 
@@ -203,7 +208,7 @@ START
 NI-SZZ
 
 
-Jaké jsou **zaměření middlewarů**? (3)
+Jaké jsou **nejčastější zaměření middlewarů**? (3)
 
 Back:
 
@@ -494,31 +499,28 @@ Original Flashcard ID: 1729236693105
 START
 NI-SZZ
 
-
-Co je **synchronní a asynchronní** integrace?
+Co znamenají **synchronní** a **asynchronní** integrace?
 
 Back:
 
-- **Synchronní**
-  - Vytvoří se jeden TCP socket, pošle se request a response.
-  - Doba odezvy je velice **malá**
-  - Např. client-server
-- **Asynchronní**
-  - Pro request se použije jeden socket
-  - Pro response se použije druhý socket
-  - Doba může být větší (hodiny, dny)
-  - Tohle nemůžu dělat na client-serveru, protože by client musel taky otevřít server a poslouchat, jestli nepřišel response na nějaký jeho endpoint. Slouží to pro server-server komunikaci
-    - Asynchronní integrace se takto přímo nedělá, dělá se to jinými způsoby (viz další kartičky)
+**Synchronní**
+- Vytvoří se jeden TCP socket, pošle se request a response.
+- Doba odezvy je velice **malá**
+- Např. client-server
 
-![](../../Assets/Pasted%20image%2020250111182953.png)
+**Asynchronní**
+- Pro **request** se použije **jeden socket**
+- Pro **response** se použije **druhý socket**
+- Doba může být větší (hodiny, dny)
+- Tohle nemůžu dělat na client-serveru, protože by client musel taky otevřít server a poslouchat, jestli nepřišel response na nějaký jeho endpoint. Slouží to pro server-server komunikaci
+	- U klienta lze dělat něco podobného pomocí pollingu (viz další kartičky)
 
-<!-- ImageStart -->
 
 ![](../../Assets/Pasted%20image%2020241014182713.png)
 
-<!-- ImageEnd -->
-
 <!-- DetailInfoStart -->
+
+![](../../Assets/Pasted%20image%2020250111182953.png)
 
 ![](../../Assets/Pasted%20image%2020241014182721.png)
 
@@ -731,7 +733,6 @@ Original Flashcard ID: 1735205749789
 START
 NI-SZZ
 
-
 Jak se dá vyřešit to, když mám synchronní přístup do databáze ale ta databáze je pomalá (a my nemáme kontrolu nad tou databází) a až moc nám to zahlcuje servery? (Takový worst case scenario)
 
 Back:
@@ -771,19 +772,17 @@ START
 NI-SZZ
 
 
-Jak funguje Asynchronní IO?
+Jak funguje **Asynchronní IO**?
 
 Back:
 
-Používám **jedno vlákno** pro přístup do databáze/filesystému pro obsloužení všech requestů.
-
-Když funkce provádí IO operaci (read write), vlákno se přepíná mezi úlohami.
+Vlákna nečekají na vykonání outbound požadavku, ale mezitím začnou zpracovávat další požadavek.
 
 Např.
-
-1. Funkce $A$ požádá o přečtení databáze
+1. Request $A$ požádá o přečtení databáze
 2. Vlákno o to požádá databázi a čeká na odpověď, má volný čas
 3. Mezitím začne obsluhovat požadavek funkce $B$
+4. Pomocí **callbacku** vlákno pak dostane response od databáze s výsledky požadavku $A$. S nimi pak dokončí daný požadavek.
 
 <!-- DetailInfoStart -->
 

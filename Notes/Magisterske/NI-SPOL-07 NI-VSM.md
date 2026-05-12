@@ -218,7 +218,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250307130753.png)
 
 Je to jakoby to samé jako Kraftova nerovnost ale pro jednoznačně dekódovatelné kódy
-
 <!--ID: 1778521859831-->
 END
 
@@ -659,7 +658,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250307130116.png)
 
 Připomenutí: $f$ je ryze konvexní, pokud spojnice libovolných dvou bodů leží nad grafem
-
 <!--ID: 1778521859889-->
 END
 
@@ -800,7 +798,6 @@ Back:
 Neboli, pokud to dobře chápu, tak $H(X^\Delta)$ mi říká, že máme entropii **diskrétní** náhodné veličiny rozsekané do intervalů šířky $\Delta$ a tato entropie se spočte tím vzorcem nahoře (resp. tak to je definovaný).
 
 Tzn. máme diskrétní entropii, tu rozsekáme na kousíčky a ty plochy zintegrujeme
-
 <!--ID: 1778521859905-->
 END
 

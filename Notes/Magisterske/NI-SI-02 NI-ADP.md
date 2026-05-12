@@ -362,7 +362,7 @@ K čemu slouží **Prototype** design pattern?
 
 Back:
 
-Umožňuje vytvářet kopie existujících objektů, aniž by byl kód závislý na jejich třídách.
+Umožňuje vytvářet kopie existujících objektů, aniž by byl kód závislý na třídách, které jsou potřeba v konstruktorech těchto objektů.
 
 ![](../../../Assets/Pasted%20image%2020250130104639.png)
 
@@ -601,7 +601,7 @@ Cílem je **snížit počet volání locku** (např. mutexu) tak, že zkontroluj
 
 Příklad u singletonu:
 
-```
+```cpp
 if(ins == null) {
 	mutex_lock()
 	if(ins == null) {
@@ -691,7 +691,7 @@ END
 START
 NI-SZZ
 
-Proč by člověk měl používat **Mock object**?
+Proč by člověk měl používat **Mock object**? (4)
 
 Back:
 
