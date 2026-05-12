@@ -1,6 +1,6 @@
 
 START
-BI-SZZ
+NI-SZZ
 
 OTÁZKA
 
@@ -11,3 +11,4 @@ ODPOVĚĎ
 END
 
 ---
+

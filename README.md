@@ -11,8 +11,8 @@ Easy as that. 🍻
 
 ## 📑Tagy
 Jednotlivé kartičky mohou mít následující tagy:
-- identifikátor otázky (např. `BI-SPOL-10`)
-- předmět (např. `DBS`)
+- identifikátor otázky (např. `NI-SPOL-17`)
+- předmět (např. `NI-PDP`)
 - `optional` - je u otázek, které jsou spíše "navíc" a je fajn je umět, kdyby člověk aspiroval na Ačko.
 
 Podle těchto tagů pak můžete v Anki kartičky jednoduše filtrovat a vytvářet si vlastní [filtered decks](https://docs.ankiweb.net/filtered-decks.html) (to vysoce doporučuju, je to lepší, než se učit všechno najednou).
