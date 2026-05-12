@@ -31,4 +31,5 @@ END
 - `Orange` - je tam drobná chyba
 - `Green` - chtělo by to přeformulovat
 - `Turquoise` - chce to kartičku smazat, protože není důlěžitá
+- `Blue` - kartičku tam můžem nechat, ale není imho tak podstatná
 - `Pink` - duplicitní kartička

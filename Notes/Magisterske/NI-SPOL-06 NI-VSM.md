@@ -12,6 +12,10 @@ FILE TAGS: NI-SPOL-06 NI-VSM
 <!--
 TODO:
 - zde asi přihodit aspoň jak spočítat střední hodnotu, var X a další základní blbosti
+- Jak spočíst X_n (čárka nad tím)
+- Jak spočíst s_n
+- Jak spočíst z_alpha/2
+- Jak spočíst t_alpha/2
 -->
 
 ## Testování statistických hypotéz
@@ -218,6 +222,47 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020250322075944.png)
 <!--ID: 1778521859950-->
+END
+
+---
+
+<!--
+Original Flashcard ID: 1747739265159
+-->
+
+START
+NI-SZZ
+
+
+Přehled: Jaké všechny **statistické testy** jsme ve VSM probírali? (6)
+
+Back:
+
+**Testy bez použití testové statistiky** (to jsme dělali na PST)
+- $\mu$ při známém rozptylu
+- $\mu$ při neznámém rozptylu
+- $\sigma^2$
+
+**Základní testy s využitím statistiky:**
+- **Jednovýběrový t-test** - testujeme jestli $\mu$ nebo $\sigma^2$ odpovídá odhadům
+	- $\mu$ při známém rozptylu
+	- $\mu$ při neznámém rozptylu
+	- $\sigma^2$
+
+**Testy s více rozděleními** (testujeme rovnost středních hodnot $\mu_1 = \mu_2$):
+- **Párový t-test** - u obou rozděleních máme stejné množství dat
+	- při neznámém rozptylu (ten odhadnem z $Z$)
+- **Dvouvýběrový t-test** - můžeme mít různé množství dat
+	- $\mu$ při stejných rozptylech $\sigma_1^2 = \sigma_2^2$
+	- $\mu$ při různých rozptylech $\sigma_1^2 \neq \sigma_2^2$
+
+**Multinomické rozdělení**:
+- $\chi^2$ **test Multinomického rozdělení** - testujeme, že data odpovídají nějakému rozdělení (resp. že pravděpodobnosti spadnutí do binu odpovídají očekávaným pravděpodobnostem)
+	- $p'=p$ při známých parametrech
+	- $p'=p$ při neznámých parametrech
+- **Kontingenční tabulka** - testujeme nezávislost dvou rozdělení
+
+<!--ID: 1778521860042-->
 END
 
 ---
@@ -467,7 +512,7 @@ Back:
 3. Napočítáme počty pozorování, co padnou do těch binů $N_i$
 4. Spočteme pravděpodobnost $p_i$, že to padne do $i$ tého binu
 5. Pak spočteme $\chi^{2}(\textbf{X})$ (které při velkým $n$ odpovídá $\chi^2(k-1-p)$)
-6. Pokud $\chi^{2}(\textbf{X}) \geq \chi^{2}_{\alpha,k-1-p}$, tak zamítáme $H_0$
+6. Pokud $\chi^{2}(\textbf{X}) \geq \chi^{2}_{\alpha,k-1-p}$ tak zamítáme $H_0$
 
 Je vhodné, aby ty _teoretické_ četnosti v každém binu měly alespoň 5. Když by to bylo méně než 5, tak není zaručeno, že mi vyjde chí kvadrát
 
@@ -1056,46 +1101,3 @@ END
 
 ---
 
-<!--
-Original Flashcard ID: 1747739265159
--->
-
-START
-NI-SZZ
-
-
-Přehled: Jaké všechny statistické testy jsme ve VSM probírali? (6)
-
-Back:
-
-Testy bez použití testové statistiky:
-
-- **Pro střední hodnotu**
-	- $\mu$ při známém rozptylu
-	- $\mu$ při neznámém rozptylu
-
-Základní test:
-
-- **Jednoduchý test** - testujeme jestli $\mu$ nebo $\sigma^2$ odpovídá odhadům
-	- $\mu$ při známém rozptylu
-	- $\mu$ při neznámém rozptylu
-	- $\sigma^2$
-
-Více rozdělení:
-
-- **Párový t-test** - testujeme $\mu_1 = \mu_2$, páry
-	- při neznámém rozptylu (ten odhadnem z $Z$)
-- **Dvouvýběrový t-test** - testujeme $\mu_1 = \mu_2$, může být různé množství
-	- $\mu$ při stejných rozptylech $\sigma_1^2 = \sigma_2^2$
-	- $\mu$ při různých rozptylech $\sigma_1^2 \neq \sigma_2^2$
-
-Multinomické rozdělení:
-
-- $\chi^2$ **test Multinomického rozdělení**
-	- $p'=p$ při známých parametrech
-	- $p'=p$ při neznámých parametrech
-- **Kontingenční tabulka** - porovnáváme pravděpodobnosti
-<!--ID: 1778521860042-->
-END
-
----

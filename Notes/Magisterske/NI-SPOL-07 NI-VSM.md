@@ -9,6 +9,18 @@ FILE TAGS: NI-SPOL-07 NI-VSM
 > NI-SPOL-07 (NI-VSM)
 > Základy teorie informace a kódování, entropie.
 
+<!--
+TODO:
+- Jak spočíst H_D(x)
+- Co je chí v definici kódu a kódového slova
+- Co je optimální kód? (dát k první zmínce o optimalitě)
+- Dát entropii před kódy + dát definici entropie před další kartičky
+- Přidat kartičku co nám říká entropie (hned po entropii)
+- Jaký je význam vzájemné informace? (a I)
+- Jaký je význam D (relativní entropie)
+- Možná ještě jak spočítat hustotu f(x), resp. marginální hustotu f(x) a f(y) sdruženého rozdělení X a Y
+-->
+
 ## Základy teorie informace a kódování
 
 <!--
@@ -204,6 +216,9 @@ Věta: **McMillan**
 Back:
 
 ![](../../Assets/Pasted%20image%2020250307130753.png)
+
+Je to jakoby to samé jako Kraftova nerovnost ale pro jednoznačně dekódovatelné kódy
+
 <!--ID: 1778521859831-->
 END
 
@@ -317,7 +332,6 @@ Original Flashcard ID: 1746518365068
 START
 NI-SZZ
 
-
 Jaké rozdělení maximální entropii?
 
 Back:
@@ -334,7 +348,6 @@ Original Flashcard ID: 1746599650130
 
 START
 NI-SZZ
-
 
 Definice: **Etropie**
 
@@ -393,7 +406,7 @@ Definice: **míra neurčitosti**
 Back:
 
 **Míra neurčitosti**:
-$$I(X) = -\log(x)$$
+$$I(x) = -\log p(x)$$
 
 Entropie je tedy očekávanou mírou neurčitosti:
 $$H(X)=EI(X)$$
@@ -644,6 +657,9 @@ Věta: Jensenova nerovnost
 Back:
 
 ![](../../Assets/Pasted%20image%2020250307130116.png)
+
+Připomenutí: $f$ je ryze konvexní, pokud spojnice libovolných dvou bodů leží nad grafem
+
 <!--ID: 1778521859889-->
 END
 
@@ -780,6 +796,11 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020250320103330.png)
 ![](../../Assets/Pasted%20image%2020250320103338.png)
+
+Neboli, pokud to dobře chápu, tak $H(X^\Delta)$ mi říká, že máme entropii **diskrétní** náhodné veličiny rozsekané do intervalů šířky $\Delta$ a tato entropie se spočte tím vzorcem nahoře (resp. tak to je definovaný).
+
+Tzn. máme diskrétní entropii, tu rozsekáme na kousíčky a ty plochy zintegrujeme
+
 <!--ID: 1778521859905-->
 END
 
