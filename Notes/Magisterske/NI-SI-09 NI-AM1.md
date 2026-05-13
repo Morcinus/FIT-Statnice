@@ -204,7 +204,8 @@ Co je **process classification framework** (PCF)?
 
 Back:
 
-PCF je **standard** - říká mi jakoby seznam obecných požadavků, co je dobrý implementovat v systémech. Když budu dělat systém, podívám se do standardu a on mi řekne, co všechno bych měl v systému vytvořit za funkcionality.
+PCF je **standard** = seznam obecných požadavků, které je dobré implementovat v systémech.
+- Když budu dělat systém, podívám se do standardu a on mi řekne, co všechno bych měl v systému vytvořit za funkcionality.
 <!--ID: 1773945940320-->
 END
 
@@ -222,17 +223,20 @@ Jaké jsou **typy softwarové architektury** (dle centralizovanosti)? (2)
 Back:
 
 - **centralizovaná** - client server
-  - Nevýhoda - když spadne server, tak to nefunguje nic (single point of failure)
+  - Nevýhoda - když spadne server, tak nefunguje nic (single point of failure)
 - **decentralizovaná** - peer to peer
-  - Uzly v architektuře jsou nezávislý
+  - Uzly v architektuře jsou nezávislé
+  - Dobré škálování
   - Když failne jedna node, tak se to přepojí na jinou
   - Např. Torrent, Skype
 
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020240930103343.png)
+<!-- DetailInfoEnd -->
 
 Fun fact:
 
-- Skype fungoval tak, že když člověk nepotřebuje komunikovat se serverem. Když člověk byl na veřejné síti, tak vpodstatě fungoval jako relay pro ostatní uživatele -> komunikace šla přes ostatní uživatele. - Teď už to není, dřív to tak bylo.
+- Skype fungoval tak, že když člověk nepotřebuje komunikovat se serverem. Když člověk byl na veřejné síti, tak vpodstatě fungoval jako relay pro ostatní uživatele -> komunikace šla přes ostatní uživatele. - Teď už to není, dřív to tak bylo. R.I.P Skype 🥀
 <!--ID: 1773945940323-->
 END
 
@@ -249,9 +253,14 @@ Co je **separation of concerns**?
 
 Back:
 
-Systém je vrstvenej. Mezi vrstvami mohu definovat **interface**/rozhraní.
+- Systém obsahuje vrstvy s přesně definovaným účelem.
+	- Prezentační, aplikační a datová vrstva
+- Mezi vrstvami mohu definovat **interface** (rozhraní).
 
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020240930103530.png)
+<!-- DetailInfoEnd -->
+
 <!--ID: 1773945940327-->
 END
 
@@ -264,7 +273,7 @@ Original Flashcard ID: 1729237386393
 START
 NI-SZZ
 
-Jaké jsou typy softwarových architektur podle rozdělení kódu? (5)
+Jaké jsou typy softwarových architektur podle rozdělení kódu? (7)
 
 (nápověda: monolit, ...)
 
@@ -275,6 +284,8 @@ Back:
 - **Three-tier client/server**
 - **Mutli-tier client/server**
 - **Microservices client/server**
+- **Nemikroservisní**
+- **Cloud-native**
 <!--ID: 1773945940330-->
 END
 
@@ -292,9 +303,11 @@ Co je **monolit**?
 
 Back:
 
-Architektura, kde všechny vstvy jsou na jednom zařízení
-
-Např. desktopové aplikace
+- Všechny vrstvy aplikace jsou na jednom stroji
+- Typicky desktopové aplikace
+- Určené pro jednoho uživatele
+- Nevýhody
+    - Těžko se spravuje, problém se škálováním a výkone
 
 <!-- ImageStart -->
 
@@ -324,9 +337,10 @@ Co je **two-tier client/server** architektura?
 
 Back:
 
-Tzv. **tlustý klient**
-
-**Prezentační a aplikační vstva** je oddělená od **datové vrstvy**
+- Prezentační a aplikační vrstva jsou odděleny od datové
+- Tzv. tlustý klient – desktopová aplikace
+- Data jsou na jiném serveru (DBMS)
+- Více uživatelů sdílí jednu DB
 
 <!-- ImageStart -->
 
@@ -356,8 +370,9 @@ Jaká je **nevýhoda** **two-tier client server** architecture?
 
 Back:
 
-- **Není sjednocená aplikační logika** - každý klient může mít u sebe jinou verzi aplikační vrstvy
-- **Hůř se dělají upgrady aplikace** - klient si musí sám stáhnout aktualizaci, nebo tam musím vytvořit automatické aktualizace
+- Tlustý klient se těžko spravuje – každý update znamená reinstalaci
+- Nesdílí se aplikační logika – pouze skrze kopie. Každý klient může mít jinou verzi aplikační logiky
+- Datově orientovaná integrace – integrita v aplikační logice
 <!--ID: 1773945940340-->
 END
 
@@ -375,7 +390,10 @@ Co je **three-tier client/server architecture**?
 
 Back:
 
-**Každý layer je na jiném zařízený** (typicky)
+- Každá vrstva na separátním stroji
+    - Tenký klient – desktopová aplikace nebo interpretovaný kód
+    - Podpora více uživatelů sdílejících stejnou aplikační logiku a DB
+    - Vysoký výkon a škálovatelnost
 
 <!-- ImageStart -->
 
@@ -400,12 +418,12 @@ Original Flashcard ID: 1729237386407
 START
 NI-SZZ
 
-
 Jaká je nevýhoda three-tier client/serveru?
 
 Back:
 
-Je třeba řešit **škálovatelnost**.
+- Je třeba řešit **škálovatelnost**.
+- Špagetová integrace
 
 <!-- ExplanationStart -->
 
@@ -460,7 +478,9 @@ Co je **Client/Server Architecture (microservices)**?
 
 Back:
 
-Backend mám rozdělený do více **komponentů**, kde každý běží jako **samostatný proces**.
+- Backend mám rozdělený do více **komponentů**, kde každý běží jako **samostatný proces**.
+- Velmi dobré škálování a technologická nezávislost
+- Správa mikroslužeb např. skrze Kubernetes
 
 <!-- ImageStart -->
 
@@ -510,7 +530,12 @@ Back:
 
 Vezme se monolit a pustí se v **Kubernetes**.
 
-Má to výhody a je to podobné microservices, ale **není** to microservice architekture.
+- Snazší nasazení skrze containerové obrazy
+- Vylepšení fail-overu
+- Nevýhody
+    - Drahé
+
+*Má to výhody a je to podobné microservices, ale **není** to microservice architekture.*
 
 <!-- ImageStart -->
 
@@ -528,6 +553,24 @@ END
 
 ---
 
+
+START
+NI-SZZ
+
+Co je to Cloud-native architektura?
+
+Back:
+
+- navržená pro cloud
+- děláme architekturu microslužeb
+- vlastně Kubernetes
+
+END
+
+---
+
+
+
 <!--
 Original Flashcard ID: 1729236693163
 -->
@@ -541,7 +584,7 @@ Jaký je rozdíl mezi SOA, Miscroservices a Kubernetes?
 Back:
 
 - **SOA** - starší legacy systém obecně na služby
-  - Je to legacy (vznikli v roce 2005), už se toho lidi spíš zbavují
+  - Je to legacy (vznikl v roce 2005), už se toho lidi spíš zbavují
 - **Mikroslužby** - relativně nový, populární
 - **Kubernetes** - v tom běží (mimo jiné) mikroslužby
 <!--ID: 1773945940364-->
@@ -1096,60 +1139,6 @@ END
 ---
 
 <!--
-Original Flashcard ID: 1729236693173
--->
-
-START
-NI-SZZ
-
-
-Co je **The Scale Cube**?
-
-Back:
-
-Vyobrazení **tří možností škálování**:
-
-![](../../Assets/Pasted%20image%2020241014185045.png)
-
-**Osa X** - **instance**
-- mám např. web server, udělám si více **instancí**, čímž rozložím zátěž
-
-**Osa Z** - **data partitioning**
-  - mám několik oddělených databází (jedna má např. záznamy od A-J, druhá od J-Z), mám systém, co mi rozhazuje data do těch databází, čímž opět rozložím zátěž
-
-**Osa Y** - **mikroservisy**
-- oddělím určitou funkci aplikace, čímž dělám "dekompozici funkcí"
-<!--ID: 1773945940439-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1736496141940
--->
-
-START
-NI-SZZ
-
-
-Jaké jsou **dva směry škálování**?
-
-Back:
-
-- **scaling up** - rozšiřování systémů
-- **scaling down** - zmenšování systémů
-
-<!-- ExplanationStart -->
-
-- **scaling up** = to co se typicky chápe pod pojmem škálování
-- **scaling down** = když se mi např. snižují počty uživatelů, tak nemá cenu mít obrovský systém, protože tím vyhazuju peníze.
-  <!-- ExplanationEnd -->
-<!--ID: 1773945940442-->
-END
-
----
-
-<!--
 Original Flashcard ID: 1736496141956
 -->
 
@@ -1228,7 +1217,8 @@ Používá se v praxi HATEOAS?
 
 Back:
 
-Je to fajn koncept, ale reálně se to moc nepoužívá, protože je prostě jednodušší si držet stav na serveru (pomocí sessions).
+Je to fajn koncept, ale reálně se to moc nepoužívá, protože je prostě jednodušší vědět specifikaci API a s tou pracovat.
+
 <!--ID: 1773945940452-->
 END
 
@@ -1614,7 +1604,7 @@ Original Flashcard ID: 1735205749851
 START
 NI-SZZ
 
-Jaké **vlastnosti** mají operace RESTu z hlediska měnění stavu zdroje? (2)
+Jaké **vlastnosti** mají operace RESTu z hlediska změn stavu zdroje? (2)
 
 Back:
 
@@ -1898,9 +1888,9 @@ Jaké jsou třídy status kódů?
 
 Back:
 
-- `1xx` - něco se stalo, ale ne v aplikaci, moc se nevyužívá
+- `1xx` - informační stavy, něco se stalo, ale ne v aplikaci, moc se nevyužívá
 - `2xx` - je to správně, nenastala chyba
-- `3xx` - redirection
+- `3xx` - přesměrování
 - `4xx` - chyba na straně klienta
 - `5xx` - chyba na straně serveru
 
@@ -1997,11 +1987,12 @@ START
 NI-SZZ
 
 
-Jaká je pomůcka pro zapamatování OSY vrstev?
+Jaká je pomůcka pro zapamatování ISO/OSI vrstev?
 
 Back:
 
-"All people seem to need data processing"
+"All people seem to need data processing" (L7->L1)
+"Please do not throw sausage pizza away." (L1->L7)
 
 ![](../../Assets/Pasted%20image%2020241021125455.png)
 <!--ID: 1773945940550-->
@@ -2017,12 +2008,12 @@ START
 NI-SZZ
 
 
-Jak jsou uložena data v **HTTP 1.1** a **2.0**?
+Jak jsou odesílána data skrze **HTTP 1.1** a **2.0**?
 
 Back:
 
-- **HTTP 1.1** - data uložena textově
-- **HTTP 2.0** - data uložena binárně
+- **HTTP 1.1** - textově
+- **HTTP 2.0** - binárně
 <!--ID: 1773945940553-->
 END
 
@@ -2036,11 +2027,13 @@ START
 NI-SZZ
 
 
-Co je latence?
+Co je **Latence**?
 
 Back:
 
-Jak dlouho na síti trvá přenos elementárních dat (malých dat).
+- Jak dlouho na síti trvá přenos elementárních dat (malých dat).
+- Doba od odeslání požadavku po jeho přijetí na serveru.
+- Jednosměrné
 <!--ID: 1773945940557-->
 END
 
@@ -2054,11 +2047,13 @@ START
 NI-SZZ
 
 
-Co je RTT?
+Co je **RTT**?
 
 Back:
 
-Round trip time. Čas než po síti přejde požadavek a odpověď.
+- Round Trip Time
+- Čas než po síti přejde požadavek na server a zpět odpověď na klienta.
+- Obousměrné
 
 Je to $2 \times \text{latence}$
 <!--ID: 1773945940560-->
@@ -2074,11 +2069,12 @@ START
 NI-SZZ
 
 
-Co je RPT?
+Co je **RPT**?
 
 Back:
 
-Request processing time - jak dlouho trvá zpracování požadvku na serveru.
+- Request Processing Time
+- Jak dlouho trvá zpracování požadvku na serveru.
 <!--ID: 1773945940563-->
 END
 
@@ -2119,7 +2115,7 @@ Back:
 - **cílová IP adresa** (serveru)
 - **cílová port** (serveru)
 
-Tím je jednoznačně identifikovaný každý TCP socket na internetu
+Tím je jednoznačně identifikovaný každý TCP socket na internetu.
 <!--ID: 1773945940570-->
 END
 
@@ -2167,9 +2163,16 @@ Jeden TCP socket se využije na více requestů.
 
 V klientovi se vytvoří request queue, kde čekají requesty na poslání přes to TCP spojení.
 
+<!-- ImageStart -->
+![](../../Assets/Pasted%20image%2020260513175901.png)
+<!-- ImageEnd -->
+
+
 <!-- ExampleStart -->
 
 Např. v request queue bude nejdřív HTML soubor, potom CSS soubor, potom obrázky atd.
+
+![](../../Assets/Pasted%20image%2020260513175846.png)
 
 <!-- ExampleEnd -->
 <!--ID: 1773945940581-->
@@ -2194,6 +2197,11 @@ Ta fronta na requesty, co je na klientovi se jakoby přesune na server.
 1. Udělá se three way handshake
 2. Potom naposílám requesty najednou, nečekám na response.
 3. Sever si drží frontu, potom postupně posílá odpovědi na requesty
+
+<!-- ImageStart -->
+![](../../Assets/Pasted%20image%2020260513175958.png)
+<!-- ImageEnd -->
+
 
 <!-- ExampleStart -->
 
@@ -2221,7 +2229,7 @@ START
 NI-SZZ
 
 
-Co je **pipeline locking**?
+Co je **head of line blocking**?
 
 Back:
 
@@ -2252,10 +2260,12 @@ Jak funguje **TCP fast open**?
 Back:
 
 1. Když se naváže spojení pomocí three way handshaku, uloží se na klienta **TCP cookie**.
-2. Když chce klient znovu navázat TCP socket se serverem, pošle rovnou tu cookie s requestem, čímž se přeskočí three way handshake
+2. Když chce klient znovu navázat TCP socket se serverem, pošle rovnou tu cookie s requestem. Server rovnou odpoví a klient už nemusí realizovat ACK část.
 3. Server pak rovnou odpoví s datama
 
 <!-- ImageStart -->
+
+![](../../Assets/Pasted%20image%2020260513180245.png)
 
 ![](../../Assets/Pasted%20image%2020241021131825.png)
 
@@ -2457,77 +2467,3 @@ Na serveru si pak vytvořím virtual host, aby mi to pro ty poddomény zpracová
 <!-- ExampleEnd -->
 <!--ID: 1773945940611-->
 END
-
----
-
-<!--
-Original Flashcard ID: 1735205750031
--->
-
-START
-NI-SZZ
-
-
-Co se využívá v rámci šifrování (encryption) v TLS na začátku spojení?
-
-Back:
-
-**TLS handshake**
-<!--ID: 1773945940614-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205750036
--->
-
-START
-NI-SZZ
-
-
-Jak funguje TLS handshake?
-
-Back:
-
-(Před tím se provede TCP handshake)
-
-1. **ClientHello**: Klient pošle zprávu serveru
-2. **ServerHello**: Server pošle zprávu klientovi + certifikát
-3. **Poslání klíče**: Klient pošle serveru klíč (RSA nebo Diffie-Hellman)
-4. **Kontrola integrity** zprávy - server pošle "finished" zašifrovanou zprávu klientovi
-5. **Dešifrování** - klient si dešifruje zprávu
-
-Pak se můžou začít posílat data.
-
-<!-- ImageStart -->
-
-![](../../Assets/Pasted%20image%2020241113173436.png)
-![](../../Assets/Pasted%20image%2020241113173449.png)
-
-<!-- ImageEnd -->
-<!--ID: 1773945940617-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205750057
--->
-
-START
-NI-SZZ
-
-
-Jaké byly cíle HTTP2?
-
-Back:
-
-- **Snížení latence**
-- **Umožnění multiplexingu** - stačí jedno TCP spojení
-- **Optimalizace hlaviček** - aby byly menší, lepší komprese
-- **Prioritizace requestů a responses** (aby prohlížeč věděl, které requesty jsou důležitější)
-<!--ID: 1773945940620-->
-END
-
----

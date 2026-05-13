@@ -22,11 +22,30 @@ Co je **integrační middleware**?
 
 Back:
 
-Řeší integraci více systémů. Propojuje mi to jednotlivé aplikace.
+- Slouží k propojování aplikací umožňující výměnu a sdílení schopností (capabilities) – konkrétně informace a funkce
 <!--ID: 1773945940629-->
 END
 
 ---
+
+START
+NI-SZZ
+
+Co je to interoperabilita?
+
+Back:
+
+Schopnost, aby si dva systémy rozuměly.
+
+**Úrovně**
+- Data – syntaxe/struktura a sémantika
+- Funkce/procesy – syntaxe a sémantika
+- Technické aspekty – protokoly, síťové adresy atd.
+
+END
+
+---
+
 
 <!--
 Original Flashcard ID: 1728921215011
@@ -258,7 +277,11 @@ Co je **data-oriented integrace**?
 
 Back:
 
-Integrace, kde jedna aplikace přistupuje **přímo do databáze** druhé aplikace.
+- Přístup do databáze aplikace třetí strany přímo pomocí SQL
+- Nutnost znát strukturu databáze B a její omezení
+- Historicky velmi využívána monolitickými a two-tier client/server architekturami
+- Dnes: ETL (Extract, Transform, Load)
+- Batchové zpracování dat (zpracování dat po větších částech)
 
 <!-- ImageStart -->
 
@@ -277,7 +300,7 @@ Struktura moderní aplikace $A$ vypadá cca takto:
 - **Databázová vrstva**
   - Databáze
 
-**Prolém** nastane, když aplikace $B$, co má stejnou strukturu potřebuje přímo přistupovat do databáze aplikace $A$ (tzn. nemůže použít APIčko - to se může někdy stát). Tím by obcházela ty pravidla.
+**Problém** nastane, když aplikace $B$, co má stejnou strukturu potřebuje přímo přistupovat do databáze aplikace $A$ (tzn. nemůže použít APIčko - to se může někdy stát). Tím by obcházela ty pravidla.
 
 Kdy takový stav může například nastat:
 
@@ -307,6 +330,10 @@ Co je **service-oriented integrace**?
 Back:
 
 Integrace dvou aplikací, kde mám **integrační middleware**.
+
+- Integrace na aplikační vrstvě
+- Aplikace vystavuje servisy, které ostatní aplikace mohou konzumovat
+- Servisy skrývají implementační detaily a definují pouze integrační rozhraní
 
 Aplikace $A$ zavolá middleware, ten pak zavolá aplikaci $B$ a naopak.
 
@@ -362,7 +389,7 @@ Co je **Bulk data (ETL)** integrace?
 
 Back:
 
-**Data-oriented** integrace, která používá **ETL** technologii pro integraci **velkého množství dat** (tzv. bulk data).
+**Data-oriented** integrace, která používá **ETL** (Export, Transform, Load) technologii pro integraci **velkého množství dat** (tzv. bulk data).
 
 <!-- InformallySaidStart -->
 
@@ -456,7 +483,12 @@ Co je **Enterprise Service Bus**?
 
 Back:
 
-Aplikace, která běží na aplikačním serveru. Pomocí integračních vzorů v ní můžu vytvářet integrační procesy.
+- Aplikace, která běží na aplikačním serveru.
+- Pomocí integračních vzorů v ní můžu vytvářet integrační procesy.
+- Plní roli prostředníka (intermediary) v SOA
+- ESB aplikace
+	- Typy služeb: sdílené a infrastruktura
+	- Typy procesů: technické a businessové
 <!--ID: 1773945940684-->
 END
 
@@ -470,14 +502,17 @@ START
 NI-SZZ
 
 
-Jaké jsou **integrační vzory** a co znamenají? (4)
+Jaké jsou **integrační vzory** a co znamenají? (7)
 
 Back:
 
-- **Technical-level interoperability - message broker** - middleware, který od jedné služby dostává data např. REST a posílá jiné službě v jiném formátu např. binárně
-- **Session pooling** - pool je množina připojení do databáze. Middleware tenhle pool využívá. Když nepoužívá přístup, zase ho odevzdá session poolu. Je to rychlejší než kdybych to dělal bez toho.
-- **Data transformation** - middleware přeloží data z jedné struktury do druhé. Např. mezi dvěma aplikacema, které používají XML.
-- **Key mapping** - middleware, který má překladovou tabulku a mapuje identifikátory (např. id uživatelů) v jednom systému do druhého systému
+- **Technical-level interoperability - message broker**
+- **Location transparency**
+- **Dynamic routing**
+- **Session pooling**
+- **Message enrichment**
+- **Data transformation** 
+- **Key mapping**
 
 <!-- DetailInfoStart -->
 
@@ -490,23 +525,162 @@ END
 
 ---
 
-## Synchronní a asynchronní komunikace
+START
+NI-SZZ
 
-<!--
-Original Flashcard ID: 1729236693105
--->
+K čemu slouží **Technical-level interoperability – message broker**?
+
+Back:
+
+- Dokáže převádět různé typy zpráv mezi sebou, tak aby si systémy využívající různé formáty zpráv mohli povídat
+- může být součástí ESB
+
+<!-- ImageStart -->
+![](../../Assets/Pasted%20image%2020260513195958.png)
+<!-- ImageEnd -->
+
+
+END
+
+---
 
 START
 NI-SZZ
 
-Co znamenají **synchronní** a **asynchronní** integrace?
+K čemu slouží **Location transparency**?
 
 Back:
 
-**Synchronní**
-- Vytvoří se jeden TCP socket, pošle se request a response.
-- Doba odezvy je velice **malá**
+- Skrývá fyzické umístění služby
+- Klient není ovlivňován přenosem služby jinam
+- Může být využito i jako Load Balancer
+
+<!-- ImageStart -->
+![](../../Assets/Pasted%20image%2020260513200044.png)
+<!-- ImageEnd -->
+
+END
+
+---
+
+START
+NI-SZZ
+
+K čemu slouží **Dynamic routing**?
+
+Back:
+
+- Připojení se na více backendových služeb na základě obsahu zprávy
+- Zpráva musí být naplněna business logikou
+
+<!-- ImageStart -->
+![](../../Assets/Pasted%20image%2020260513200119.png)
+<!-- ImageEnd -->
+
+
+END
+
+---
+
+START
+NI-SZZ
+
+K čemu slouží **Session pooling**?
+
+Back:
+
+- Automatická správa spojení se službami
+- Využívá se zejména pokud je vytvoření spojení náročné na čas nebo prostředky
+- Po dokončení operace se spojení neodstraňuje, ale vrací se do poolu a následně přepoužívá
+
+<!-- ImageStart -->
+![](../../Assets/Pasted%20image%2020260513200153.png)
+<!-- ImageEnd -->
+
+END
+
+---
+
+START
+NI-SZZ
+
+K čemu slouží **Message enrichment**?
+
+Back:
+
+- Obohacení původní zprávy o další data, která jsou potřeba pro její provedení
+
+<!-- ImageStart -->
+![](../../Assets/Pasted%20image%2020260513200225.png)
+<!-- ImageEnd -->
+
+END
+
+---
+
+START
+NI-SZZ
+
+K čemu slouží **Data transformation**?
+
+Back:
+
+- Mapování dat z jedné struktury do druhé
+- Řeší konverze mezi rozdílnými formáty
+
+END
+
+---
+
+
+START
+NI-SZZ
+
+K čemu slouží **Key mapping**?
+
+Back:
+
+- Umožňuje mapování různých (primárních) klíčů v různých službách
+- Každá služba může využívat vlastní klíče
+
+<!-- ImageStart -->
+![](../../Assets/Pasted%20image%2020260513200324.png)
+<!-- ImageEnd -->
+
+END
+
+---
+
+## Synchronní a asynchronní komunikace
+
+
+START
+NI-SZZ
+
+Co je to **synchronní integrace**?
+
+Back:
+
+- Využívá jeden TCP socket
+- Odesílá se požadavek a přijímá se odpověď
+- Mnoho requestů, kde doba mezi požadavkem a odpovědí je krátká
 - Např. client-server
+
+<!-- ImageStart -->
+![](../../Assets/Pasted%20image%2020260513200513.png)
+<!-- ImageEnd -->
+
+
+END
+
+---
+
+START
+NI-SZZ
+
+Co je to **asynchronní** integrace?
+
+Back:
 
 **Asynchronní**
 - Pro **request** se použije **jeden socket**
@@ -515,8 +689,9 @@ Back:
 - Tohle nemůžu dělat na client-serveru, protože by client musel taky otevřít server a poslouchat, jestli nepřišel response na nějaký jeho endpoint. Slouží to pro server-server komunikaci
 	- U klienta lze dělat něco podobného pomocí pollingu (viz další kartičky)
 
-
-![](../../Assets/Pasted%20image%2020241014182713.png)
+<!-- ImageStart -->
+![](../../Assets/Pasted%20image%2020260513200704.png)
+<!-- ImageEnd -->
 
 <!-- DetailInfoStart -->
 
@@ -525,10 +700,28 @@ Back:
 ![](../../Assets/Pasted%20image%2020241014182721.png)
 
 <!-- DetailInfoEnd -->
-<!--ID: 1773945940690-->
 END
 
 ---
+
+
+START
+NI-SZZ
+
+Co umožňuje **asynchronní komunikace přes prostředníka**?
+
+Back:
+
+- Prostředník (Intermediary) = Komponenta, která odstraňuje závislost (decoupling) v klient-server komunikaci
+- Zvyšuje spolehlivost a výkon
+    - Server nemusí být dostupný, když klient odesílá požadavek
+    - Může zde být více serverů, které požadavky zpracováváají
+
+END
+
+---
+
+
 
 <!--
 Original Flashcard ID: 1729236693124
@@ -536,7 +729,6 @@ Original Flashcard ID: 1729236693124
 
 START
 NI-SZZ
-
 
 Jak funguje **asynchronní komunikace přes prostředníka**?
 
@@ -630,7 +822,7 @@ Back:
 
 Server si u sebe chvíli podrží ten request klienta, díky čemuž zamezí tomu, aby se furt klient dotazoval na status monitor.
 
-Tzn. server si tím reguluje zátěž, protože schválně na každý request odpoví po nějakém čase.
+Tzn. server si tím reguluje zátěž, protože schválně na každý request odpoví po nějakém čase. Nicméně udržuje si pro každého klienta vlákno, které se v pravidelných časových intervalech probouzí.
 <!--ID: 1773945940703-->
 END
 
