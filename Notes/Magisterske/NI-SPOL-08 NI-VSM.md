@@ -107,7 +107,6 @@ Back:
 <!-- ExplanationStart -->
 Jinými slovy, že markovský proces "zapomíná historii", tedy nezávisí na tom, co se dělo ve stavech předtím (kromě toho předchozího stavu).
 <!-- ExplanationEnd -->
-
 <!--ID: 1778521859636-->
 END
 
@@ -155,7 +154,6 @@ Pravděpodobnost, že se v průběhu času přejdeme konkrétní sérií stavů 
 Tzn. jakoby $p_{s_0}(n_0)$ mi říká, že začnem v daném stavu a $P_{s_0s_1}(n_0,n_1)$ nás přesouvá do dalšího stavu.
 <!-- ExplanationEnd -->
 
-
 <!--ID: 1778521859641-->
 END
 
@@ -196,7 +194,6 @@ Back:
 <!-- ExplanationStart -->
 Neboli je homogenní, pokud ty pravděpodobnosti přechodu jsou ve všech stavech stejný. Pak můžeme udělat tu jednokrokovou matici přechodu, kterou použijeme k přesunu do dalšího stavu v jakémkoliv stavu.
 <!-- ExplanationEnd -->
-
 
 <!--ID: 1778521859646-->
 END
@@ -562,7 +559,7 @@ START
 NI-SZZ
 
 
-Definice: **Střední doba návratu** do stavu
+Definice: **Střední doba návratu** do stavu + čemu je rovna pro **trvalý** a **přechodný** stav?
 
 Back:
 
@@ -588,9 +585,9 @@ Back:
 
 <!-- ExplanationStart -->
 
-Nenulový - máme třeba stavy $A$ a $B$, mezi kterýma přeskakujeme. S nějakou střední hodnotou budu v tom savu
+**Nenulový** (někdy se do něj vrátím) - máme třeba stavy $A$ a $B$, mezi kterýma přeskakujeme. S nějakou střední hodnotou budu v tom savu
 
-Nulový - máme např. nekonečně stavů $0,1,2,\dots$ a můžeme se posouvat o jeden dopředu nebo dozadu.
+**Nulový** (skoro nikdy se do něj nevrátím) - máme např. nekonečně stavů $0,1,2,\dots$ a můžeme se posouvat o jeden dopředu nebo dozadu.
 
 Když to odstartuju v $0$, tak se tam někdy vrátím, ale bude to za hrozně dlouho - střední hodnota bude nekonečno
 
@@ -608,7 +605,7 @@ START
 NI-SZZ
 
 
-Definice: **Periodicita stavu** (periodický a aperiodický stav)
+Definice: **Periodicita stavu** (+ periodický a aperiodický stav)
 
 Back:
 
@@ -644,7 +641,7 @@ START
 NI-SZZ
 
 
-Poznámka: čemu je rovna limita u **periodického stavu**
+Poznámka: čemu je rovna limita $P_{ii}(k\cdot d(i))$ u **periodického stavu**
 
 Back:
 
@@ -668,7 +665,7 @@ START
 NI-SZZ
 
 
-Vysvětli vlastními slovy, jak se liší následující typy stavů:
+Vysvětli vlastními slovy, jak se liší následující typy stavů z hlediska toho, jestli se do něj vrátím a kdy:
 
 - **přechodný stav**
 - **trvalý nulový**
@@ -696,7 +693,7 @@ START
 NI-SZZ
 
 
-Definice: **přechodný stav** (pomocí matice přechodu $P$)
+Definice: **přechodný stav** (pomocí matice přechodu $P$) + **jak vypadá $P_{ji}(n)$**
 
 Back:
 
@@ -714,7 +711,7 @@ START
 NI-SZZ
 
 
-Definice: **trvalý nulový stav** (pomocí matice přechodu $P$)
+Definice: **trvalý nulový stav** (pomocí matice přechodu $P$) + **jak vypadá $P_{ji}(n)$**
 
 Back:
 
@@ -732,7 +729,7 @@ START
 NI-SZZ
 
 
-Definice: **trvalý nenulový aperiodický stav** (pomocí matice přechodu $P$)
+Definice: **trvalý nenulový aperiodický stav** (pomocí matice přechodu $P$) + **jak vypadá $P_{ji}(n)$**
 
 Back:
 
@@ -786,7 +783,7 @@ START
 NI-SZZ
 
 
-Věta: dosažitelnost stavů a stejný typ
+Věta: **dosažitelnost stavů a jejich typ**
 
 Back:
 
@@ -864,7 +861,7 @@ START
 NI-SZZ
 
 
-Věta: **o jednoznačném rozkladu**
+Věta: **o jednoznačném rozkladu** + jak vypadá matice přechodů, pokud uspořádáme množinu stavů
 
 Back:
 
@@ -932,6 +929,8 @@ Věta: jak v konečné množině stavů $S$ rozhodnout, jestli je stav _trvalý 
 Back:
 
 ![](../../Assets/Pasted%20image%2020250410115116.png)
+
+Díky téhle větě můžeme snadno na obrázku zjistit, které jsou přechodné a které trvalé.
 
 <!-- ExerciseStart -->
 
@@ -1105,19 +1104,17 @@ NI-SZZ
 Mějme matici přechodů:
 ![](../../Assets/Pasted%20image%2020250516155913.png)
 
-Co mi říkají $U_{ij}$, $N_{ik}$ a $N_{i \circ }$?
+**Co mi říkají** $U_{ij}$, $N_{ik}$ a $N_{i \circ }$?
 
 Back:
 
-![](../../Assets/Pasted%20image%2020250516160210.png)
-
-- $U_{ij}$ - Vezmu libovolný přechodný stav a chci zjistit pravděpodobnost, že první stav z $C$ (trvalých stavů) bude zrovna stav $j$
-- $N_{ik}$ - střední počet přechodného stavu k, když začnu ve stavu i
-  - Kolik času strávím ve stavu $k$ (kolikrát tam budu), než bude řetězec pohlcen v $C$
+- $U_{ij}$ - pravděpodobnost, že budu pohlcen trvalým stavem $j$, pokud začnu v přechodném stavu $i$
+- $N_{ik}$ - střední počet, kolikrát navštívím stav $k$, než budu pohlcen, když začínám ve stavu $i$
 - $N_i$ - střední doba, jak dlouho trvá, než se pohltím do nějakého stavu
 
-<!-- DetailInfoStart -->
+Pohlcení = přesunu se do trvalého stavu
 
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020250411112710.png)
 
 ![](../../Assets/Pasted%20image%2020250411112705.png)
@@ -1210,7 +1207,7 @@ NI-SZZ
 
 Jak získáme pravděpodobnost pohlcení na množině $C_r$?
 
-(tzn. pravděpodobnost, že řetězec byl pohlcen tou množinou)
+(tzn. pravděpodobnost, že řetězec byl pohlcen stavy z $C_r$ pokud jsme začínali ve stavu $i$)
 
 Back:
 
@@ -1429,6 +1426,8 @@ Jak se spočte $N_\circ$? (to kolečko má být vyplněné)
 Back:
 
 ![](../../Assets/Pasted%20image%2020250411160145.png)
+
+Tzn. pronásobíme $N=(I-T)^{-1}$ jedničkovým vektorem.
 <!--ID: 1778521859681-->
 END
 
@@ -1450,6 +1449,8 @@ $N_{i \circ}  = \ ?$
 Back:
 
 ![](../../Assets/Pasted%20image%2020250411113214.png)
+
+Tzn. pronásobíme $N=(I-T)^{-1}$ jedničkovým vektorem $\textbf{1}$ a vezmeme z toho ten $i$-tý prvek.
 
 Pozn. $I$ je identita, tedy to, co jsme v jiných předmětech značili jako $E$
 
@@ -1474,6 +1475,8 @@ NI-SZZ
 Limita matice $C^n$
 
 Back:
+
+Pokud jsou všechny stavy $C$ aperiodické, pak má $C_r$ v řádcích stacionární rozdělení podřetězce $C_r$.
 
 ![](../../Assets/Pasted%20image%2020250411113245.png)
 <!--ID: 1778521859800-->
