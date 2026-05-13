@@ -1,5 +1,6 @@
 {
-  "testCourses": ["NI-ADP"],
+  "testCompletedCourses": [],
+  "testMigratedCourses": ["NI-ADP"],
   "fitNotesRepoPath": "D:/Morcinus/Git Repositories/FIT-Statnice-Generator/FIT-Notes"
 }
 

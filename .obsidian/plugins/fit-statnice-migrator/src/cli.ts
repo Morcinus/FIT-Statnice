@@ -10,7 +10,8 @@ import { AnkiSyncRunner } from "./anki/AnkiSyncRunner";
 import { StatsColor, StatsRunner } from "./stats/StatsRunner";
 
 interface Config {
-  testCourses?: string[];
+  testCompletedCourses?: string[];
+  testMigratedCourses?: string[];
   fitNotesRepoPath?: string;
 }
 
@@ -35,7 +36,13 @@ async function main() {
   const vaultPath = path.resolve(__dirname, "..", "..", "..");
   const fitNotesPath =
     config.fitNotesRepoPath || path.resolve(vaultPath, "..", "FIT-Notes");
-  const courseIds = config.testCourses || [];
+  const migratedCourseIds = config.testMigratedCourses || [];
+  const ankiCourseIds = [
+    ...new Set([
+      ...(config.testCompletedCourses || []),
+      ...migratedCourseIds,
+    ].filter(Boolean)),
+  ];
   console.log("=== Running Migrator Tool ===");
 
   const printCommentIssues = (sourcePath: string, issues: ReturnType<MigrationCommentsRunner["run"]>["issues"]) => {
@@ -93,7 +100,7 @@ async function main() {
 
   const runCommentsCheck = () => {
     const runner = new MigrationCommentsRunner(logger);
-    const res = runner.run(fitNotesPath, vaultPath, courseIds);
+    const res = runner.run(fitNotesPath, vaultPath, migratedCourseIds);
     console.log(`Comments checked: ${res.totalFlashcards}`);
     console.log(`Issues: ${res.issues.length}`);
     printCommentIssues(fitNotesPath, res.issues);
@@ -102,7 +109,7 @@ async function main() {
 
   const runMigratedCardsCheck = () => {
     const runner = new MigratedFlashcardsRunner(logger);
-    const res = runner.run(fitNotesPath, vaultPath, courseIds);
+    const res = runner.run(fitNotesPath, vaultPath, migratedCourseIds);
     console.log(`Source (done non-none): ${res.totalSource}`);
     console.log(`Target flashcards: ${res.totalTarget}`);
     console.log(`Issues: ${res.issues.length}`);
@@ -112,7 +119,7 @@ async function main() {
 
   const runAnkiSyncCheck = () => {
     const runner = new AnkiSyncRunner(logger);
-    const res = runner.run(vaultPath);
+    const res = runner.run(vaultPath, ankiCourseIds);
     console.log(`Flashcards checked: ${res.totalFlashcards}`);
     console.log(`Issues: ${res.issues.length}`);
     printAnkiIssues(vaultPath, res.issues);
@@ -155,7 +162,7 @@ async function main() {
     runCommentsCheck();
   } else if (cmd === "migrate-notes") {
     const runner = new MigrationNotesRunner(logger);
-    const res = runner.run(fitNotesPath, vaultPath, courseIds);
+    const res = runner.run(fitNotesPath, vaultPath, migratedCourseIds);
     console.log(`Scanned flashcards: ${res.scannedFlashcards}`);
     console.log(`Candidates (migrate): ${res.candidateFlashcards}`);
     console.log(`Migrated: ${res.migratedFlashcards}`);

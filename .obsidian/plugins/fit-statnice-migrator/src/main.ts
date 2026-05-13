@@ -14,12 +14,14 @@ import { MigrationCommentsRunner } from "./comments/MigrationCommentsRunner";
 import { AnkiSyncRunner } from "./anki/AnkiSyncRunner";
 
 export interface MigratorSettings {
-  testCourses: string[];
+  testCompletedCourses: string[];
+  testMigratedCourses: string[];
   fitNotesRepoPath: string;
 }
 
 const DEFAULT_SETTINGS: MigratorSettings = {
-  testCourses: [],
+  testCompletedCourses: [],
+  testMigratedCourses: [],
   fitNotesRepoPath: "",
 };
 
@@ -43,7 +45,7 @@ export default class FitStatniceMigratorPlugin extends Plugin {
         const res = runner.run(
           this.settings.fitNotesRepoPath,
           baseVaultPath,
-          this.settings.testCourses
+          this.settings.testMigratedCourses
         );
         this.logger.success("Finished: Test all migration comments", {
           total: res.totalFlashcards,
@@ -64,7 +66,7 @@ export default class FitStatniceMigratorPlugin extends Plugin {
         const res = runner.run(
           this.settings.fitNotesRepoPath,
           (this.app.vault.adapter as any).getBasePath?.() ?? "",
-          this.settings.testCourses
+          this.settings.testMigratedCourses
         );
         this.logger.success("Finished: Test migrated flashcards", {
           totalSource: res.totalSource,
@@ -88,7 +90,7 @@ export default class FitStatniceMigratorPlugin extends Plugin {
         const res = runner.run(
           this.settings.fitNotesRepoPath,
           baseVaultPath,
-          this.settings.testCourses
+          this.settings.testMigratedCourses
         );
         this.logger.success("Finished: Migrate notes", {
           scanned: res.scannedFlashcards,
@@ -117,7 +119,7 @@ export default class FitStatniceMigratorPlugin extends Plugin {
         this.logger.info("Starting: Prepare Migration Sections");
         const courseId = await new CoursePickModal(
           this.app,
-          this.settings.testCourses
+          this.settings.testMigratedCourses
         ).openAndGet();
         if (!courseId) {
           this.logger.info("Prepare Migration Sections cancelled");
@@ -143,7 +145,7 @@ export default class FitStatniceMigratorPlugin extends Plugin {
         const baseVaultPath =
           (this.app.vault.adapter as any).getBasePath?.() ?? "";
         const runner = new AnkiSyncRunner(this.logger);
-        const res = runner.run(baseVaultPath);
+        const res = runner.run(baseVaultPath, this.getAnkiTestCourseIds());
         this.logger.success("Finished: Anki Sync Check", {
           total: res.totalFlashcards,
           issues: res.issues.length,
@@ -157,6 +159,15 @@ export default class FitStatniceMigratorPlugin extends Plugin {
   }
 
   onunload() {}
+
+  getAnkiTestCourseIds(): string[] {
+    return [
+      ...new Set([
+        ...this.settings.testCompletedCourses,
+        ...this.settings.testMigratedCourses,
+      ].filter(Boolean)),
+    ];
+  }
 
   async loadSettings() {
     this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
@@ -218,14 +229,30 @@ class MigratorSettingTab extends PluginSettingTab {
     containerEl.createEl("h2", { text: "FIT Statnice Migrator - Settings" });
 
     new Setting(containerEl)
-      .setName("Test Courses")
-      .setDesc("Comma-separated course IDs to test (e.g., NI-ADP, NI-SI).")
+      .setName("Completed Test Courses")
+      .setDesc("Comma-separated course IDs checked only for FIT-Statnice Anki sync.")
       .addText((text) =>
         text
           .setPlaceholder("NI-ADP, NI-SI")
-          .setValue(this.plugin.settings.testCourses.join(", "))
+          .setValue(this.plugin.settings.testCompletedCourses.join(", "))
           .onChange(async (value) => {
-            this.plugin.settings.testCourses = value
+            this.plugin.settings.testCompletedCourses = value
+              .split(",")
+              .map((s) => s.trim())
+              .filter((s) => s.length > 0);
+            await this.plugin.saveSettings();
+          })
+      );
+
+    new Setting(containerEl)
+      .setName("Migrated Test Courses")
+      .setDesc("Comma-separated course IDs checked against FIT-Notes migration data and Anki sync.")
+      .addText((text) =>
+        text
+          .setPlaceholder("NI-ADP, NI-SI")
+          .setValue(this.plugin.settings.testMigratedCourses.join(", "))
+          .onChange(async (value) => {
+            this.plugin.settings.testMigratedCourses = value
               .split(",")
               .map((s) => s.trim())
               .filter((s) => s.length > 0);

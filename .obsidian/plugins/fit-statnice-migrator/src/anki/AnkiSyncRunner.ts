@@ -15,7 +15,7 @@ export class AnkiSyncRunner {
     this.logger = logger;
   }
 
-  run(statniceVaultPath: string): AnkiRunnerResult {
+  run(statniceVaultPath: string, courseIds?: string[]): AnkiRunnerResult {
     const notesDir = path.join(statniceVaultPath, "Notes", "Magisterske");
     const result: AnkiRunnerResult = { totalFlashcards: 0, issues: [] };
     if (!fs.existsSync(notesDir)) {
@@ -28,7 +28,10 @@ export class AnkiSyncRunner {
       });
       return result;
     }
-    const files = this.listMarkdownFiles(notesDir);
+    const normalizedCourseIds = [...new Set((courseIds ?? []).filter(Boolean))];
+    const files = this.listMarkdownFiles(notesDir).filter((filePath) =>
+      this.matchesConfiguredCourse(filePath, normalizedCourseIds)
+    );
     const idOccurrences = new Map<
       string,
       Array<{ file: string; flashcardIndex: number; question?: string }>
@@ -115,6 +118,12 @@ export class AnkiSyncRunner {
       }
     }
     return out.sort((a, b) => a.localeCompare(b, "cs"));
+  }
+
+  private matchesConfiguredCourse(filePath: string, courseIds: string[]): boolean {
+    if (courseIds.length === 0) return true;
+    const fileName = path.basename(filePath);
+    return courseIds.some((courseId) => fileName.includes(courseId));
   }
 
   private appendDuplicateIdIssues(

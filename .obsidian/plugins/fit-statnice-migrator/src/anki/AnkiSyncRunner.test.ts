@@ -73,6 +73,24 @@ describe("AnkiSyncRunner", () => {
     expect(res.issues).toHaveLength(0);
   });
 
+  test("filters scanned exam notes by configured course IDs", () => {
+    writeFile("NI-SI-09 NI-AM1.md", card("anki-am1"));
+    writeFile("NI-SI-13 NI-NUR.md", card(null));
+    const runner = new AnkiSyncRunner(new QuietConsoleLoggingService());
+    const res = runner.run(tmpDir, ["NI-AM1"]);
+    expect(res.totalFlashcards).toBe(1);
+    expect(res.issues).toHaveLength(0);
+  });
+
+  test("duplicate ID detection is scoped to scanned courses", () => {
+    writeFile("NI-SI-09 NI-AM1.md", card("shared-id"));
+    writeFile("NI-SI-13 NI-NUR.md", card("shared-id"));
+    const runner = new AnkiSyncRunner(new QuietConsoleLoggingService());
+    const res = runner.run(tmpDir, ["NI-AM1"]);
+    expect(res.totalFlashcards).toBe(1);
+    expect(res.issues.filter((i) => i.name === "DuplicateAnkiId")).toHaveLength(0);
+  });
+
   test("allows blank lines between ID comment and END", () => {
     writeFile("blanks.md", cardWithBlankLinesBeforeEnd("anki-blank"));
     const runner = new AnkiSyncRunner(new QuietConsoleLoggingService());
