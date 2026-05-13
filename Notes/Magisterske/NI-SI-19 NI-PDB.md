@@ -7,12 +7,8 @@ TARGET DECK: NI-SZZ
 FILE TAGS: NI-SI-19 NI-PDB
 
 > NI-SI-19 (NI-PDB)
-> OLTP vs. OLAP databáze. Komplexní benchmarky (TPC-C, TPC-E, TPC-H): princip, metriky.
+> OLTP vs. OLAP databáze. Komplexní benchmarky (TPC-C, TPC-E, TPC-H) - princip a metriky.
 
 ## OLTP vs. OLAP databáze
 
-## Komplexní benchmarky (TPC-C, TPC-E, TPC-H)
-
-## Princip
-
-## Metriky
+## Komplexní benchmarky (TPC-C, TPC-E, TPC-H) - princip a metriky
