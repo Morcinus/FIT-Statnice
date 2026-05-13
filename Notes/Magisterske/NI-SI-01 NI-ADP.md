@@ -77,16 +77,19 @@ Vysvětli design princip **YAGNI**
 
 Back:
 
-**You Ain’t Gonna Need It** = Měli bychom programovat pouze věci, které jsou momentálně potřeba nebo 100% víme, že budou potřeba.
+**You Ain’t Gonna Need It** = Měli bychom programovat pouze věci, které jsou momentálně potřeba nebo 100 % víme, že budou potřeba.
 
 **Proč:**
-- Špatně se odhaduje, co bude potřeba v budoucnu, požadavky se hodně mění. To co si myslíme, že bude potřeba teď, nemusí být potřeba později.
+- Špatně se odhaduje, co bude potřeba v budoucnu, požadavky se hodně mění.
+- To co si myslíme, že bude potřeba teď, nemusí být potřeba později.
 
 **Costs**: 
-- **cost of building** = strávíme čas na něčem co možná ani nevyužijeme
-- **cost of delay** = zpomalíme tím projekt, protože jsme se mohli věnovat něčemu jinému
-- **cost of carry** = budeme mít od začátku složitější systém, což je horší na údržbu, debuggování, rozšiřování atd.
-- **cost of repairs** = v době, kdy to bude potřeba, pravděpodobně daná funkcionalita stejně bude mít hodně technical debt
+- **Building** = strávíme čas na něčem, co možná ani nevyužijeme
+- **Delay** = zpomalíme tím projekt, protože jsme se mohli věnovat něčemu jinému
+- **Carry** = budeme mít od začátku složitější systém, což je horší na údržbu, debuggování, rozšiřování atd.
+- **Repairs** = v době, kdy to bude potřeba, pravděpodobně daná funkcionalita stejně bude mít hodně technical debt
+
+![](../../Assets/Pasted%20image%2020260513100740.png)
 
 Tags: should-know N001F003
 <!--ID: 1760705194622-->
@@ -307,7 +310,6 @@ This principle says a Class should not be fused with the tool it uses to execute
 It also says that both the Class and the interface should not know how the tool works. However, the tool needs to meet the specification of the interface.
 
 **Goal**
-
 This principle aims at reducing the dependency of a high-level Class on the low-level Class by introducing an interface.
 
 <!-- DetailInfoEnd -->
@@ -334,6 +336,8 @@ Back:
 **Proč:**
 
 - S kódem se lépe pracuje, když je předvídatelný
+
+![](../../Assets/Pasted%20image%2020260513100922.png)
 
 Tags: should-know N001F010
 <!--ID: 1760705194642-->
@@ -380,12 +384,17 @@ Back:
 - Úmyslný/Neúmyslný
 - Lehkovážný/Rozumný
 
+
 <!-- ExampleStart -->
+![](../../Assets/Pasted%20image%2020260513101113.png)
+
 - **Úmyslný a lehkovážný** - "Nemáme čas na design"
 - **Úmyslný a rozumný** - "Neuděláme to, ale počítáme s dopady"
 - **Neúmyslný a lehkovážný** - "Co je layering?"
 - **Neúmyslný a rozumný** - "Teď víme, že jsme to měli udělat jinak" (např. najdeme lepší řešení až po tom, co jsme to udělali)
 <!-- ExampleEnd -->
+
+![](../../Assets/Pasted%20image%2020260513101055.png)
 
 Tags: should-know N001F012
 <!--ID: 1760705194647-->

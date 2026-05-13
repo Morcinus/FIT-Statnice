@@ -11,6 +11,54 @@ FILE TAGS: NI-SI-02 NI-ADP
 
 ## Vytvářecí návrhové vzory (Abstract factory, Factory method, Builder, Prototype, Singleton)
 
+
+START
+NI-SZZ
+
+Co to jsou návrhové vzory?
+
+Back:
+
+Návrhové vzory jsou typická řešení k běžně objevujícím se problémům v softwarovém návrhu.
+
+<!-- DetailInfoStart -->
+- Vzor není specifický kód, který řeší nějaký konkrétní problém. Jedná se o něco, co je dobré následovat při návrhu řešení konkrétního typu problému.
+<!-- DetailInfoEnd -->
+
+END
+
+---
+
+START
+NI-SZZ
+
+Z čeho se návrhový vzor typicky skládá?
+
+Back:
+
+- **Záměr**: stručný popis problému a jeho řešení
+- **Motivace**: detailnější popis problému a proč ho navrhovaný způsob řešení řeší
+- Struktura: Třídy, které je potřebné přidat a jak jsou na sobě závislé.
+
+END
+
+---
+
+START
+NI-SZZ
+
+Co jsou to **Vytvářecí návrhové vzory**?
+
+Back:
+
+- Návrhové vzory, které se zabývají mechanismy tvorby objektů
+- Hlavní myšlenkou je oddělit vytváření objektů od kódu, který tyto objekty využívá
+
+END
+
+---
+
+
 START
 NI-SZZ
 
@@ -126,6 +174,21 @@ END
 
 ---
 
+START
+NI-SZZ
+
+Kdy použít **Abstract factory**?
+
+Back:
+
+- Pokud pracujeme s rodinami produktů
+	- Např. různé typy nepřátel
+	- Nechceme, aby kód závisel na konkrétních třídach, ale na rozhraních
+- Pokud máme třídu s několika Factory metodama, které znejasňují primární účel třídy. (SRP princip)
+END
+
+---
+
 ### Builder
 
 START
@@ -216,6 +279,21 @@ Tags: should-know N002F006
 
 END
 
+
+---
+
+START
+NI-SZZ
+
+Kdy použít **Builder**?
+
+Back:
+
+- Pokud máme konstruktor s velkým množstvím parametrů 7+
+- Pokud máme ve třídě více konstruktorů, kde každý má jinou sadu parametrů a plní tvoří jinou část objektu
+- 
+END
+
 ---
 
 START
@@ -249,7 +327,8 @@ K čemu slouží **Factory method** design pattern?
 
 Back:
 
-Třídá má **factory method** a podtřídy si pak tu metodu mohou implementovat podle sebe.
+- Třídá má **factory method** a podtřídy si pak tu metodu mohou implementovat podle sebe.
+- Odděluje tvorbu produktu od jejího využití v kódu
 
 ![](../../../Assets/Pasted%20image%2020250130104630.png)
 
@@ -330,7 +409,18 @@ Tags: should-know N002F009
 END
 
 ---
+START
+NI-SZZ
 
+Kdy použít **Factory method**?
+
+Back:
+
+- Pokud na  začátku nevíme přesnou specifikaci typů a jejich závislostí
+- Pokud tvoříme framework a chceme umožnit uživatelům upravit si chování jeho interních částí
+END
+
+---
 START
 NI-SZZ
 
@@ -444,6 +534,18 @@ END
 START
 NI-SZZ
 
+Kdy použít **Prototype**?
+
+Back:
+
+- Pokud nechceme, aby náš kód závisel na konkrétních třídách objektů, které potřebuje zkopírovat
+END
+
+---
+
+START
+NI-SZZ
+
 Jaké jsou výhody a nevýhody **Prototype** design patternu? (4 + 1)
 
 Back:
@@ -534,7 +636,17 @@ Tags: should-know N002F016
 END
 
 ---
+START
+NI-SZZ
 
+Kdy použít **Singleton**?
+
+Back:
+
+- Pokud chceme zajistit, že existuje pouze jedna instance třídy pro celou aplikaci
+END
+
+---
 START
 NI-SZZ
 
@@ -597,7 +709,8 @@ Jak funguje **Double-checked locking**?
 
 Back:
 
-Cílem je **snížit počet volání locku** (např. mutexu) tak, že zkontroluju danou podmínku ještě před zavoláním mutexu.
+- Cílem je **snížit počet volání locku** (např. mutexu) tak, že zkontroluju danou podmínku ještě před zavoláním mutexu.
+- Aplikování pravidla check-lock-check
 
 Příklad u singletonu:
 
@@ -627,6 +740,7 @@ Back:
 
 - **Performance boost**: Kdyby člověk používal jen `lock + check`, tak by to bylo pomalé, protože by člověk musel vždy locknout.
 - (Kdyby člověk nelockoval vůbec, tak by si to vlákna přepisovala)
+	- Jeden ani dva checky bez locku problém nevyřeší
 
 Proto je fajn to nejdřív checknout, potom locknout a potom checknout znovu.
 
@@ -677,7 +791,8 @@ Jak funguje **Mock object**?
 
 Back:
 
-Objekt, který je náhradou za nějaký reálný objekt, simuluje jeho chování. Typicky se používá pro testování.
+- Objekt, který je náhradou za nějaký reálný objekt, simuluje jeho chování. Typicky se používá pro testování.
+	- Mock je jeden z tzv. Test Doubles
 
 ![](../../../Assets/Pasted%20image%2020250130113938.png)
 

@@ -11,6 +11,22 @@ FILE TAGS: NI-SI-04 NI-ADP
 
 ## Vzory pro chování objektů (Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, State, Strategy, Template method, Visitor)
 
+
+START
+NI-SZZ
+
+Na co se zaměřují vzory pro **chování objektů**?
+
+Back:
+
+- Zaměřují se na algoritmy, rozdělení odpovědnosti mezi objekty a na to, jak spolu objekty komunikují.
+- Řeší, jak si objekty předávají zprávy, jak spolupracují na složitějších úlohách a jak je řízen tok programu (control flow).
+
+END
+
+---
+
+
 START
 NI-SZZ
 
@@ -134,6 +150,23 @@ END
 
 ---
 
+
+START
+NI-SZZ
+
+Kdy použít **Command** pattern?
+
+Back:
+
+- Pokud chceme parametrizovat objekt operacema
+- Pokud potřebujeme tvořit frontu commandů, plánovat dobu jejich spuštění nebo je spouštět vzdáleně.
+
+END
+
+---
+
+
+
 START
 NI-SZZ
 
@@ -250,6 +283,22 @@ Tags: should-know N004F006
 END
 
 ---
+
+START
+NI-SZZ
+
+Kdy použít **Chain of Responsibility** pattern? 
+
+Back:
+
+- Pokud očekáváme, že náš program bude řešit různé typy požadavků různými cestami, ale přesně typy požadavků a jejich pořadí je nám předem neznámé.
+- Pokud potřebujeme spouštět handlery v přesně daném pořadí.
+- Pokud potřebujeme pořadí handlerů měnit za běhu
+
+END
+
+---
+
 
 START
 NI-SZZ
@@ -428,6 +477,21 @@ END
 START
 NI-SZZ
 
+Kdy využít **Iterator** pattern?
+
+Back:
+
+- Pokud má kolekce komplexní datovou strukturu, od které chceme klienty odstínit
+- Pokud chceme omezit udplikaci kódu pro průchod kolekcí v aplikaci
+
+END
+
+---
+
+
+START
+NI-SZZ
+
 Jaké jsou výhody a nevýhody **Iterator** design patternu? (4 + 2)
 
 Back:
@@ -526,6 +590,22 @@ Tags: should-know N004F015
 END
 
 ---
+
+
+START
+NI-SZZ
+
+Kdy využít **Mediator** pattern?
+
+Back:
+
+- Pokud je komplikované měnit některé třídy, protože jsou silně spojeny (coupled) k jiným třídám.
+- Pokud chceme komponentu využít i v jiném programu, ale nemůžeme kvůli silným závislostem na jiné části systému
+END
+
+---
+
+
 
 START
 NI-SZZ
@@ -704,6 +784,21 @@ END
 START
 NI-SZZ
 
+Kdy využít **Memento** pattern?
+
+Back:
+
+- Pokud chceme tvořit snapshoty objektu, ke kterým se můžeme v budoucnu chtít vrátit
+- Pokud přímý přístup k vlastnostem objektu porušuje jeho zapouzdření
+
+END
+
+---
+
+
+START
+NI-SZZ
+
 Jaké jsou výhody a nevýhody **Memento** design patternu? (2 + 3)
 
 Back:
@@ -805,6 +900,20 @@ Tags: should-know N004F023
 END
 
 ---
+
+START
+NI-SZZ
+
+Kdy využít **Observer** pattern? 
+
+Back:
+
+Pokud změny jednoho objektu mají ovlivňovat i jiné objekty, a to i pouze na omezený část nebo ve specifických případech.
+
+END
+
+---
+
 
 START
 NI-SZZ
@@ -932,6 +1041,22 @@ END
 START
 NI-SZZ
 
+Kdy použít **State** pattern?
+
+Back:
+
+- Pokud se má objekt chovat odlišně v závilosti na jeho aktuálním stavu
+- Pokud máme třídu zaplavenou rozhodováním na základě vnitřního stavu
+- Pokud je mnoho duplicitního kódu napříč podobnými stavy
+
+END
+
+---
+
+
+START
+NI-SZZ
+
 Jaké jsou výhody a nevýhody **State** design patternu? (3 + 1)
 
 Back:
@@ -1028,6 +1153,22 @@ Tags: should-know N004F029
 END
 
 ---
+
+START
+NI-SZZ
+
+Kdy použít **Strategy** pattern?
+
+Back:
+
+- Pokud chceme podporovat více variant algoritmu v rámci jednoho objektu a chceme mezi nimi přepínat
+- Pokud máme mnoho tříd, které se liší pouze konkrétní implementací konkrétní části
+- Pro izolaci implementačních detailů byznys logiky třídy, které nemusí být v kontextu třídy tak důležité 
+
+END
+
+---
+
 
 START
 NI-SZZ
@@ -1136,6 +1277,20 @@ Tags: should-know N004F032
 END
 
 ---
+
+START
+NI-SZZ
+
+Kdy využít **Template method** pattern? 
+
+Back:
+
+- Pokud chceme umožnit klientům rozšířit only konkrétní krok v rámci algoritmu
+- Pokud máme několik tříd se skoro totožným algoritmem, pouze s malými změnami
+END
+
+---
+
 
 START
 NI-SZZ
@@ -1278,6 +1433,21 @@ Tags: should-know N004F035
 END
 
 ---
+
+START
+NI-SZZ
+
+Kdy využít **Visitor** pattern?
+
+Back:
+
+- Pokud chceme provádět operace na všech elementech komplexní struktury objektů
+- Pokud chceme vyčistit pomocnou business logiku z objektů
+- Pokud konkrétní chování dává smysl pouze pro nějaké třídy
+END
+
+---
+
 
 START
 NI-SZZ

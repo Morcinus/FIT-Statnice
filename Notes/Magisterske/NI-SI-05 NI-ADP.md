@@ -116,7 +116,7 @@ Back:
 - **Presenter** - prostředník mezi View a Modelem
 - **View** - volá funkce z presentera, je velice jednoduchý
 
-The typical interactions taking place in MVP architecture can be understood through the following:
+Struktura typických operací:
 ![](../../../Assets/Pasted%20image%2020250130115225.png)
 
 <!-- ExplanationStart -->
@@ -172,8 +172,10 @@ Back:
 **Model - View - ViewModel**:
 
 - **Model** - byznys logika a data
-- **ViewModel** - něco jako presenter, ale neví nic o view, jen poskytuje data. View může subscribnout do ViewModelu, aby vědělo, kdy se data updatnula
-- **View** - zobrazuje data, sám se přerenderovává
+- **ViewModel** - něco jako presenter, ale neví nic o view, jen poskytuje data.
+	- View může subscribnout do ViewModelu, aby vědělo, kdy se data updatnula
+- **View** - zobrazuje data
+	- Sám se přerenderovává
 
 Oproti MVP je View "chytřejší" protože se samo updatuje a observuje změny v ViewModelu.
 
@@ -193,10 +195,11 @@ Jaká je struktura **MVVM** architektury?
 
 Back:
 
-For these regular updates are usually used:
+Pro běžné aktualizace jsou typicky využívány:
 
-- Reactive programming
-- Data Binding
+- **Reaktivní programování** – pracuje se s událostmi, když jsou nová data dostupná, tak se odesílá událost. K odběru událostí se lze přihlásit.
+- **Data Binding** – Místo psaní kódu, který přesouvá data, tak se řekne UI, aby určitou hodnotu samo sledovalo
+	- Dva typy: jednosměrné, oboursměrné
 
 ![](../../../Assets/Pasted%20image%2020250130115516.png)
 
@@ -223,7 +226,8 @@ K čemu slouží **Client-server** architektura?
 
 Back:
 
-In client-server architecture, the client and the server are typically connected over a network, such as the internet. The client initiates a request to the server, which can be a request for data or a request to perform an action. The server receives the request, processes it, and sends back a response.
+- Klienti jsou typicky připojeni k serveru pomocí sítě, jako je Internet
+- Klient odesílá požadavek, který server zpracovává a odesílá odpověď
 
 ![](../../../Assets/Pasted%20image%2020250130115951.png)
 
@@ -242,12 +246,14 @@ Jaké jsou výhody a nevýhody **Client-server** architektury? (2 + 1)
 Back:
 
 **Výhody**:
-There are several benefits to using client-server architecture. One benefit is that it allows for a separation of concerns, with the client responsible for the user interface and the server responsible for the business logic and data storage. This makes it easier to develop and maintain the application, as changes to one side of the application do not affect the other.
-
-Another benefit is that it allows for scalability. If the server is designed to handle multiple clients concurrently, it can handle an increased load by adding more hardware or by distributing the load across multiple servers.
+- Podpora Separation of Concerns
+	- Klient – UI
+	- Server – Business logika a ukládání dat
+- Škálovatelnost – server je navržen, aby mohl komunikovat s více klienty souběžně. Serverové prostředky lze škálovat.
 
 **Nevýhody:**
-There are also some challenges to using client-server architecture. One challenge is that it requires a network connection between the client and the server, which can introduce latency and other issues. Another challenge is that the server may be a single point of failure, meaning that if the server goes down, the entire application may become unavailable.
+- Vyžaduje připojení k síti, což může přináše problémy s latencí
+- Server je Single point of Failure
 
 Tags: should-know N005F009
 <!--ID: 1760705194418-->
@@ -263,10 +269,9 @@ Kdy se používá **Client-Server architektura**? (4)
 
 Back:
 
-- **Web Applications**: Most modern web applications use client-server architecture. In this case, the client is typically a web browser, and the server is a web server that serves up HTML, CSS, and JavaScript to the client. The client sends requests to the server to retrieve data or perform actions, and the server responds with the appropriate data or result.
-- **Desktop Applications**: In this case, the client is the desktop application running on the user’s computer, and the server is a remote server that stores data and performs backend tasks. The desktop application sends requests to the server to retrieve data or perform actions, and the server responds with the appropriate data or result.
-- **Mobile Apps**: Same as desktop applications, only the client is the mobile app running on the user’s device.
-- **Online Games**: Online games often use client-server architecture to support multiplayer gameplay. In this case, the client is the game running on the user’s device, and the server is a game server that manages the game world and handles communication between players.
+- Webové aplikace
+- Desktopové aplikace
+- Mobilní aplikace
 
 Tags: should-know N005F010
 <!--ID: 1760705194421-->
@@ -277,8 +282,88 @@ END
 
 ### Microservices vs monolithic server
 
-??? O tomhle nic není v předmětu
 
+START
+NI-SZZ
+
+Co je to **monolitická architektura**?
+
+Back:
+
+- Celá aplikace je vyvinuta, zkompilována a nasazena jako jeden nedělitelný celek.
+- Běží jako jeden proces.
+- Schopnost škálování je velmi omezená, protože Server musí být připraven vždy na ten nejvyšší výkon, i přesto, že je přes den pouze chvilkový.
+
+![](../../Assets/Pasted%20image%2020260513151521.png)
+
+END
+
+---
+
+
+START
+NI-SZZ
+
+Jaké jsou výhody a nevýhody **monolitické architektury** (4+4)?
+
+Back:
+
+**Výhody**
+- Snadné nasazení
+- Vysoký výkon
+- Snadné ladění
+- Datová konzistence skrze transakce
+
+**Nevýhody**
+- **Neefektivní škálování**
+- **Technologický lock-in** – Změna programovacího jazyka znamená kompletní přepis aplikace
+- **Složitost při růstu** – Při rozšiřování se stává projekt obrovským, nepřehledným a obtížným na orientaci (Big Ball of Mud)
+- **Náchylnost na chyby** – Jedna chyba ovlivní fungování celého systému
+
+END
+
+---
+
+START
+NI-SZZ
+
+Co jsou to **mikroslužby**?
+
+Back:
+
+- Architektonický styl pro tvorbu softwaru
+- Systém je rozdělen do sady malých, nezávislých služeb
+- Každá řeší svůj účel (concern)
+- Služby spolu komunikují skrze definovaná rozhraní v síti (např. REST, messages)
+
+![](../../Assets/Pasted%20image%2020260513151444.png)
+
+END
+
+---
+
+START
+NI-SZZ
+
+Jaké jsou výhody a nevýhody **mikroslužeb**?
+
+Back:
+
+**Výhody**
+- Nezávislé nasazování
+- Snadné škálování – cílené přidávání výkonu jen službám, které to potřebují
+- Technologická svoboda – každá služba může být v jiném programovacím jazyce
+- Izolace chyb – vyšší odolnost systému
+
+**Nevýhody**
+- Složitost infrasturktury
+- Síťová latence a spolehlivost – komunikace přes síť je násobně pomalejší než v paměti
+- Komplikované ladění – distribuované sledování chyby
+- Problémy s udržením datové konzistence – transakce napříč mikroslužbami je mnohem komplikovanější.
+
+END
+
+---
 ### Asynchronous messaging
 
 START
@@ -288,13 +373,13 @@ K čemu slouží **Asynchronous messaging** architektura?
 
 Back:
 
-A layer that allows heterogenous components to asynchronously communicate despite their differences
+Slouží k přidání komunikační vrstvy, která umožňuje asychronně komunikovat službám nezávisle na jejich rozdílěch.
 
-- Usually realized by a Message-oriented middleware (MOM)
-- A message is an item of data that is sent to a specific destination
-- A message-driven system concentrates on addressable recipients
+- Typicky využívá Message-oriented middleware (MOM)
+- Zpráva (message) jsou data, která jsou odesílány na konkrétní cílovou adresu
+- Message-driven architektura odesílá příkazy do nějaké fronty a nezajímá ji, který konkrétní server to zpracuje. Ale je zde konkrétní adresát.
 
-Tight coupling with Publish-subscribe architecture
+Vysoká provázanost s Publish-subscribe architekturou
 
 ![](../../../Assets/Pasted%20image%2020250130124045.png)
 
@@ -330,14 +415,14 @@ Back:
 
 **Pros**
 
-- ability to store (buffer), route, or transform messages while conveying them from senders to receivers
-- by adding an administrative interface, you can monitor and tune performance => the messaging system, not components, resolves issues like interoperability, reliability, security, scalability and performance
-- messages storing solves intermittent connectivity and sender/receiver failure problems
+- Možnost ukládat, směrovat nebo transformovat zprávy po cestě od odesílatele k příjemci
+- Možnost monitorování výkonu, bezpečnosti, auditovatelnosti
+- Ukládání zpráv umožňuje řešit problém, pokud není dostupný žádný příjemce zpráv
 
 **Cons**
 
-- Bus/Broker maintenance
-- Many inter-application communications have an intrinsically synchronous aspect => a need for facilities to group a request and a response as a single pseudo-synchronous transaction
+- Nutnost správy další infrastruktury
+- V případě, že se jedná o synchronní komunikaci, tak je nutné spojovat požadavek a odpověď do jedné pseudosynchronní transakce
 
 Tags: should-know N005F012
 <!--ID: 1760705194428-->
@@ -351,18 +436,12 @@ END
 START
 NI-SZZ
 
-K čemu slouží **Blackboard architecture**?
+Co je to **Blackboard architecture**?
 
 Back:
 
-How to design a system that integrates large and diverse specialized modules, and implements complex, non-deterministic control strategy.
-
-- Blackboard
-  - a structured global memory containing objects from the solution space
-- Knowledge sources (agents)
-  - specialized modules with their own representation
-- Control component
-  - selects, configures and executes modules
+- Architektonický softwarový vzor, který se používá primárně v umělé inteligenci
+- Řešení velmi složitých, nestrukturovaných problémů, na které neexistuje jeden jasný a přímočarý algoritmus
 
 <!-- ExampleStart -->
 
@@ -399,20 +478,43 @@ END
 START
 NI-SZZ
 
+Z jakých komponent se skládá **Blackboard architektura** (3)?
+
+Back:
+
+- **Blackboard (Tabule):**
+    - **centrální úložiště dat** (sdílená paměť), které obsahuje data spojená s problémem.
+    - Nachází se zde počáteční zadání, mezivýsledky (částečná řešení), hypotézy a nakonec i konečné řešení.
+    - Stav na tabuli se neustále vyvíjí.
+- **Knowledge Sources (Zdroje znalostí / Experti):**
+    - Nezávislé a specializované moduly (kusy kódu, algoritmy, neuronové sítě).
+    - Každý modul umí řešit jen svou specifickou část problému.
+    - **Klíčové pravidlo:** Tito experti **nikdy nekomunikují přímo mezi sebou**. Sledují pouze tabuli. Jakmile se na tabuli objeví data, kterým rozumí, "zvednou ruku", že chtějí přispět.
+- **Control Shell (Řídicí komponenta / Moderátor):**
+    - Aby se experti u tabule neprali, musí tam být moderátor.
+    - Tato komponenta neustále monitoruje změny na tabuli a "zvednuté ruce" expertů.
+    - Rozhoduje, komu dá slovo (zavolá jeho metodu) a jakým způsobem se bude řešení vyvíjet. Řídí tedy celý průběh programu.
+
+END
+
+---
+
+
+START
+NI-SZZ
+
 Používá se **Blackboard architecture**?
 
 Back:
 
-Ne, už se to nepoužívá, protože to bylo špatně škálovatelné na tehdejších počítačích.
+- Ano, používá, ale rozhodně to není vzor pro každodenní programování.
+- Je to vysoce specializovaný nástroj pro specifické problémy.
 
-<!-- DetailInfoStart -->
-
-- solution for designing and implementing complex systems where heterogeneous modules have to be dynamically combined to solve a complex problem
-- offers non-functional properties such as: reusability, changeability, robustness.
-- allows multiple agents to work closer together on separate threads, polling and reacting when necessary
-- The pattern was abandoned in past because: - Did not scale well to real problems on the available computers of the time - Most problems using blackboards are inherently NP-hard, so resist tractable solution by any algorithm in the large size limit - Blackboard was outperformed by statistical pattern recognition techniques, most notably by simple Hidden Markov Models
-
-<!-- DetailInfoEnd -->
+**Případy užití:**
+- Robotika a vozidla se senzory
+- Kybernetická bezpečnost (SIEM a detekce hrozeb)
+- Kompilátory a moderní IDE – pracují nad jedním syntaktickým stromem
+- Uměla inteligence a experní systémy
 
 Tags: should-know N005F014
 <!--ID: 1760705194435-->
@@ -426,19 +528,29 @@ END
 START
 NI-SZZ
 
-K čemu slouží **Rule-based architecture** architektura?
+Co je hlavním cílem Rule-based (pravidlové) architektury?
 
 Back:
 
-Rule-based architectures provide a means of codifying the problem-solving knowhow of human experts.
+Poskytnout způsob, jak zakódovat (formalizovat) know-how a proces řešení problémů **lidských expertů**.
 
-- The basic features of a rule-based architecture are essentially the features of a table-driven interpreter:
-  - The pseudo-code to be executed, in this case the knowledge base
-  - The interpretation engine, in this case the rule interpreter, the heart of the inference engine
-  - The control state of the interpretation engine, in this case the rule and data element selector
-  - The current state of the program running on the virtual machine, in this case the working memory.
+END
 
-![](../../../Assets/Pasted%20image%2020250130124714.png)
+---
+
+START
+NI-SZZ
+
+Jaké jsou 4 základní komponenty Rule-based architektury (v analogii k tabulkovému interpretu)?
+
+Back:
+
+1. **Knowledge base (Znalostní báze)** = "pseudo-kód" k provedení.
+2. **Inference engine / Rule interpreter** = jádro interpretu.
+3. **Selector (Selektor)** = řídicí mechanismus vybírající pravidla a data.
+4. **Working memory (Pracovní paměť)** = aktuální stav běžícího programu.
+
+![](../../Assets/Pasted%20image%2020260513153735.png)
 
 <!-- ExampleStart -->
 
@@ -452,8 +564,20 @@ Rule-based architectures provide a means of codifying the problem-solving knowho
 
 <!-- ExampleEnd -->
 
-Tags: should-know N005F015
-<!--ID: 1760705194437-->
+END
+
+---
+
+START
+NI-SZZ
+
+V jakém formátu jsou uložena pravidla ve Znalostní bázi (Rule-base) a z čeho se skládají?
+
+Back:
+
+Ve formátu **IF (podmínka) THEN (akce)**.
+- **Podmínka (Condition):** Testuje obsah _Working memory_ (např. přítomnost symbolů) nebo data ze senzorů.
+- **Akce (Action):** Změní stav _Working memory_ nebo spustí externí operaci.
 
 END
 
@@ -462,19 +586,40 @@ END
 START
 NI-SZZ
 
-Jaká je struktura **Rule-based architecture** architektury?
+Z jakých 3 fází se skládá cyklus interpretu (Match-Resolve-Act cycle) v Rule-based systému?
 
 Back:
 
-- Knowledge is stored as rules in the rule-base (also known as the knowledge base).
-  - Rules are of the form: `IF condition THEN action`.
-- The condition tests working memory, e.g. for the presence of certain symbols or patterns of symbols.
-  - conditions are expressed logically as conjunctions (occasionally, disjunctions) of predicates, in some systems, some conditions correspond to sensor data
-- The action can be a change in working memory or an external operation supported by the interpreter.
-- Interpreter performs the **match-resolve-act** cycle: - **Match**: In this first phase, the left-hand sides of all rules are matched against the contents of working memory. As a result a conflict set is obtained, which consists of instantiations of all satisfied rules. - An instantiation of a rule is an ordered list of working megnory elements that satisfies the left-hand side of the production. - **Conflict-Resolution**: In this second phase, one of the rule instantiations in the conflict set is chosen for execution. If no rules are satisfied, the interpreter halts. - **Act**: In this third phase, the actions of the rule selected in the conflict-resolution phase are executed. These actions may change the contents o% working memory. At the end of this phase, execution returns to the first phase.
+1. **Match (Shoda):** Porovnání podmínek všech pravidel s obsahem _Working memory_.
+2. **Conflict-Resolution (Řešení konfliktů):** Výběr _jednoho_ konkrétního pravidla z těch, která splnila podmínku.
+3. **Act (Akce):** Provedení akce vybraného pravidla (často změní paměť) a návrat zpět na fázi 1.
+    
+END
 
-Tags: should-know N005F016
-<!--ID: 1760705194440-->
+---
+
+START
+NI-SZZ
+
+Co je to _Conflict set_ (vznikající ve fázi "Match") v Rule-based architektuře? 
+
+Back:
+
+Je to seznam všech pravidel (instancí), jejichž levá strana (podmínka) se **aktuálně shoduje se stavem pracovní paměti**. Z tohoto seznamu se následně vybírá jedno pravidlo k provedení. _(Pozn.: Pokud je conflict set prázdný, interpret se zastaví)._
+
+END
+
+---
+
+START
+NI-SZZ
+
+Kdy je Rule-based architektura obzvláště efektivní (Applicability)?
+
+Back:
+
+Když je **sada pravidel výrazně jednodušší než samotný model**, který z nich vznikne (model je tvořen opakováním omezeného množství vzorů).
+- _Pozn.:_ Používá se v AI pro ručně psaná/spravovaná pravidla (typicky _nezahrnuje_ pravidla automaticky vygenerovaná strojovým učením).
 
 END
 
@@ -530,33 +675,40 @@ END
 START
 NI-SZZ
 
-Jaká je struktura **Publish-subscribe** architektury? (todo smazat tuhle kartičku)
+Na základě čeho se lze přihlásit k odběru zpráv v **Publish-subscribe** modelu?
 
 Back:
 
-**Filtering forms**
+ 1. **Směrování na základě témat (Topic-based)**
+	- Zprávy jsou publikovány do takzvaných „témat“ (_topics_) nebo do pojmenovaných logických kanálů. Za určení a definici těchto kanálů je zodpovědný odesílatel (_publisher_).
+	- Odběratelé (_subscribers_) přijímají naprosto všechny zprávy, které jsou publikovány do témat, k jejichž odběru se přihlásili.
+    - Všichni odběratelé přihlášení k danému tématu obdrží tytéž zprávy.
+2. **Směrování na základě obsahu (Content-based)**
+	- Zprávy jsou odběrateli doručeny pouze v případě, že atributy nebo samotný obsah zprávy splňují podmínky (filtry), které si nadefinoval sám odběratel.
+	- Za klasifikaci a třídění zpráv je v tomto modelu zodpovědný odběratel.
+ 3. **Hybridní přístup (Hybrid)**
+	- Některé systémy podporují kombinaci obou výše zmíněných přístupů.
+	- Odesílatelé běžně publikují zprávy do určitého tématu, zatímco odběratelé si nad jedním nebo více tématy registrují odběr s dodatečným filtrováním na základě obsahu zprávy.
 
-- Topic-based
-  - Messages are published to “topics” or named logical channels. The publisher is responsible for defining that.
-  - Subscribers receive all messages published to the topics to which they subscribe.
-  - All subscribers to a topic will receive the same messages.
-- Content-based
-  - Messages are only delivered to a subscriber if the attributes or content of those messages match constraints defined by the subscriber.
-  - The subscriber is responsible for classifying the messages.
-- Hybrid
-  - Some systems support a hybrid of the two; publishers post messages to a topic while subscribers register content-based subscriptions. to one or more topics.
+END
 
-**Registration time**
+---
 
-- Build time
-  - For example: in GUI systems, subscribers can be coded to handle user commands (e.g., click of a button)
-- Initialization time
-  - For example: there are frameworks and software products using XML configuration files to register subscribers during system initialization
-- Runtime - For example: database triggers, mailing lists, and RSS
 
-Tags: should-know N005F019
-<!--ID: 1760705194450-->
+START
+NI-SZZ
 
+Kdy se lze přihlásit k odběru v **Publish-sbuscribe** modelu?
+
+Back:
+
+- **Build time**
+    - Příklad: V systémech s grafickým uživatelským rozhraním (GUI) mohou být klienti pevně naprogramováni přímo v kódu tak, aby obsluhovali uživatelské příkazy (např. událost kliknutí na tlačítko).
+- **Initialization time**
+    - Příklad: Existují frameworky a softwarové produkty, které k registraci odběratelů využívají konfigurační XML soubory. Tato registrace proběhne jednorázově během úvodního načítání (inicializace) systému.
+- **Runtime**
+    - Příklad: Databázové triggery (spouštěče), e-mailové konference (mailing listy) a RSS kanály. (Uživatel nebo systém může odběr dynamicky vytvářet či rušit kdykoliv během toho, co aplikace běží).
+    
 END
 
 ---
@@ -568,9 +720,11 @@ Jaké jsou nevýhody **publish-subscribe** architektury? (2)
 
 Back:
 
-- **Message delivery issues**
-  - Publishing recipes by subscribers
-- **Limited maximum scalability of a pub/sub network** - Load surges: periods when subscriber requests saturate network throughput followed by periods of low message volume (underutilized network bandwidth) - Slowdowns: as more and more applications use the system (even if they are communicating on separate pub/sub channels) the message volume flow to an individual subscriber will slow
+**Problémy s doručováním zpráv**
+- **Potvrzování přijetí zpráv odběrateli:** (Řeší se, jakým způsobem odběratelé odesílají zpět potvrzení o úspěšném zpracování zprávy, aby ji broker mohl smazat).
+- **Omezená maximální škálovatelnost pub/sub sítě:**
+    - **Nárazová zátěž (Load surges):** Období, kdy požadavky odběratelů (nebo nápor zpráv) zcela zahltí propustnost sítě, po kterých následují období s nízkým objemem zpráv (kdy je přenosová kapacita sítě naopak nevyužita).
+    - **Zpomalování (Slowdowns):** S tím, jak systém využívá stále více aplikací (a to i v případě, že komunikují na zcela oddělených pub/sub kanálech), celkový objem a tok zpráv způsobí, že doručování dat k jednotlivému odběrateli se začne zpomalovat (z důvodu celkového zatížení centrální infrastruktury/brokera).
 
 Tags: should-know N005F020
 <!--ID: 1760705194453-->
