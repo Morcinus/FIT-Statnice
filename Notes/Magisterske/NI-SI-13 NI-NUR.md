@@ -83,11 +83,7 @@ Original Flashcard ID: 1765204625565
 START
 NI-SZZ
 
-(1)
-Jaké jsou základní kroky návrhu UI?
-
-Hint:
-(8 kroků)
+Jaké jsou základní kroky návrhu UI? (8 kroků)
 
 Back:
 
@@ -110,7 +106,6 @@ Back:
 
 <!-- DetailInfoEnd -->
 
-(zdroj: 04 Jaké jsou kroky designu?)
 <!--ID: 1778682874706-->
 END
 
@@ -122,7 +117,6 @@ Original Flashcard ID: 1765204625571
 START
 NI-SZZ
 
-(2)
 Co je to "Product statement"?
 
 Hint:
@@ -157,7 +151,6 @@ Back:
 
 <!-- ExampleEnd -->
 
-(zdroj: 04 Co je **product statement**?)
 <!--ID: 1778682874709-->
 END
 
@@ -169,7 +162,6 @@ Original Flashcard ID: 1765204625574
 START
 NI-SZZ
 
-(3)
 Co říká zásada 80:20 (někdy se jí říká také 90:10)?
 
 Back:
@@ -184,7 +176,6 @@ Obecně se principu říká napříč obory Paretovo Pravidlo
 ![](../../Assets/Pasted%20image%2020251208155458.png)
 <!-- DetailInfoEnd -->
 
-(zdroj: AI + mozek Honzy + slide z přednášek, o kterém nic moc Pavlíček neříkal)
 <!--ID: 1778682874712-->
 END
 
@@ -214,14 +205,12 @@ START
 NI-SZZ
 
 
-Z čeho se typicky skládá user centered design?
+Z čeho se typicky skládá **user centered design**? (z jakých kroků)
 
 Back:
 
-- designer musí **analyzovat a předvídat**, jak uživatelé budou používat interface
-- musí se tyto předpoklady **testovat** (uživatelské testy)
-- musí se objevit uživatelské **potřeby**
-- designovat, aby uživatel **chtěl** používat ten produkt
+1. designer **analyzuje potřeby uživatelů** a **předvídá**, jak budou uživatelé používat interface (jak to je pro ně nejlepší)
+2. tyto předpoklady následně **testuje** (např. pomocí uživatelských testů)
 
 <!-- DetailInfoStart -->
 
@@ -285,7 +274,6 @@ Original Flashcard ID: 1765204625642
 START
 NI-SZZ
 
-(27)
 Co je to persona?
 
 Back:
@@ -294,7 +282,6 @@ Fiktivní uživatelé pro které vytváříme uživatelský návrh.
 
 Formalizace určitých lidských vlastností. Je to důležité, protože si tím člověk vytváří v hlavě **model** toho, jak ti lidé vypadají.
 
-(zdroj: 01 Co jsou persony?; 04 Co jsou v zásadě persony?)
 <!--ID: 1778682874726-->
 END
 
@@ -465,7 +452,6 @@ Original Flashcard ID: 1765204625644
 START
 NI-SZZ
 
-(28)
 Jaké typy person znáte?
 
 Back:
@@ -474,7 +460,6 @@ Back:
 - **Persona B** - uživatel, co to nepoužívá často
 - **Persona C** - antipersona, někdo kdo by aplikaci nepoužíval
 
-(zdroj: 01 Jaké jsou typy person?)
 <!--ID: 1778682874753-->
 END
 
@@ -486,7 +471,6 @@ Original Flashcard ID: 1765204625647
 START
 NI-SZZ
 
-(29)
 Co je to "Story telling"?
 
 Back:
@@ -499,7 +483,6 @@ Díky tomu získáme více informací, ale je těžší to vyhodnotit.
 ![](../../Assets/Pasted%20image%2020251208165928.png)
 <!-- DetailInfoEnd -->
 
-(zdroj: Přednáška User Interface Testing)
 <!--ID: 1778682874755-->
 END
 
@@ -543,11 +526,11 @@ Jak se píše **Use Case** v NUR?
 
 Back:
 
-**Očekávání uživatele** - např. píšeme, že uživatel očekává, že tam zadá info do formuláře, ale neřeším konkrétní atributy, co člověk zadává.
+Píšeme věty s **požadavky** a **očekáváními** uživatele.
 
-V Use Casu bych **neměl psát fyzický vzhled toho systému**
+Např. Uživatel požaduje aby se mohl přihlásit. Očekává, že se bude moci přihlásit zadáním jména a hesla.
 
-Měli bychom to psát z pohledu uživatele, aby to bralo v potaz ten jejich **mentální model** (personu). Neměl bych to psát z pohledu, co dělá systém
+Typicky **požadavky** jsou cca 20% use casu a **očekávání** cca 80% use casu.
 <!--ID: 1778682874761-->
 END
 
@@ -564,34 +547,14 @@ Co by člověk neměl psát do Use Casů?
 
 Back:
 
-Neměli bychom tam psát konkrétní komponenty atd.
+**Neměli** bychom tam psát **konkrétní komponenty nebo vzhled systému** atd.
 
-Měli bychom psát, co ten uživatel **očekává** od toho systému z hlediska toho, co on chce získat. Jakou value
-
-**Neměli bychom tam psát konkrétní komponenty**. Ty by měly být ve scénářích.
+Ty konkrétní komponenty se pak píšou do scénářů.
 <!--ID: 1778682874764-->
 END
 
 ---
-<!--
-Original Flashcard ID: 1760708147879
--->
 
-START
-NI-SZZ
-
-
-V jakém formátu by se měly psát scénáře u use casu v NURech?
-
-Back:
-
-- Uživatel **požaduje ...** - tohle by mělo být, co ten uživatel/klient chce, aby to dělalo. Tohle je jakoby ten requirement - co uživatel chce aby se stalo
-  - Tohle by mělo být cca 20% toho use casu - co člověk požaduje
-- Uživatel **očekává ...** - tohle by mělo být, co se cca stane - Tohle by mělo být cca 80% use casu
-<!--ID: 1778682874767-->
-END
-
----
 <!--
 Original Flashcard ID: 1762184131493
 -->
@@ -638,7 +601,6 @@ Original Flashcard ID: 1762184131348
 
 START
 NI-SZZ
-
 
 Co je **task**? Z čeho se skládá?
 
@@ -790,9 +752,7 @@ Original Flashcard ID: 1765719865890
 START
 NI-SZZ
 
-(0 - přidal Pavlíček pár dnů před zkouškou `-___-`)
-
-**Theory of Information, Information systems theory**
+Popiš **Theory of Information** - jaké jsou 3 části a co znamenají
 
 Back:
 
@@ -800,6 +760,23 @@ Back:
 - **Informace** - zpráva, která může změnit znalosti uživatele (dá se získat z dat)
 - **Data** - zaznamenaná zpráva, množina nějakých hodnot
 - **Databáze** - organizovaná kolekce dat
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020251214144411.png)
+
+<!-- DetailInfoEnd -->
+<!--ID: 1778682874796-->
+END
+
+---
+
+
+START
+NI-SZZ
+
+Popiš **Information systems theory** - z čeho se informační systémy skládají
+
+Back:
 
 **Information systems theory** - Informační systém se skládá z:
 - **Hardware**
@@ -809,13 +786,13 @@ Back:
 - **Lidi**
 
 <!-- DetailInfoStart -->
-![](../../Assets/Pasted%20image%2020251214144411.png)
 ![](../../Assets/Pasted%20image%2020251214144418.png)
 <!-- DetailInfoEnd -->
-<!--ID: 1778682874796-->
+<!--ID: 1778688339378-->
 END
 
 ---
+
 
 ## Parametry lidského vnímání a jejich vliv na tento návrh
 <!--
@@ -825,7 +802,6 @@ Original Flashcard ID: 1765204625669
 START
 NI-SZZ
 
-(37)
 Nakreslete základní schéma jakým lidé zpracovávají informace.
 
 Back:
@@ -837,7 +813,6 @@ Back:
 	- Např. když řídíme auto, tak se to všechno řeší v pracovní paměti
 3. **Long term memory** - tam si uchováváme data
 
-(zdroj: 06 Jak lidé zpracovávají informace?)
 <!--ID: 1778682874799-->
 END
 
@@ -925,13 +900,13 @@ START
 NI-SZZ
 
 
-Jaké **činnosti zabírají energii**?
+Jaké **činnosti ubírají uživateli energii** při používání UI? (3)
 
 Back:
 
-- **Instinkt** - klikání na čudlíky, scrollování - **to děláme automaticky**
-- **Emoce** - jakmile UI vytváří nějaké emoce, tak ztrácí energii a myšlení! Např. **ztracení provedené práce, když crashne program**
-- **Higher thoughts** - konzumuje obří množství energie (např. ztracení partnera, umře pes atd.)
+- **Instinkt** - klikání na čudlíky, scrollování - **to děláme automaticky**, není to tak náročné
+- **Emoce a přemýšlení** - **ztrácí energii** - Např. ztracení provedené práce, když crashne program
+- **Higher thoughts** - konzumuje obří množství energie (např. ztracení partnera, umře pes atd.) - jsou to myšlenky o něčem jiném než o tom tasku co provádíme
 
 Pozn. tohle platí pro negativní emoce. Naopak poitivní emoce je super vytvářet, protože nám potom uživatelé hodně odpustí
 <!--ID: 1778682874814-->
@@ -946,7 +921,7 @@ START
 NI-SZZ
 
 
-Co **vyplývá pro UI**?
+Co **vyplývá pro design UI** z toho, jak jsou činnosti energeticky náročné?
 
 Back:
 
@@ -1003,31 +978,7 @@ Back:
 END
 
 ---
-<!--
-Original Flashcard ID: 1762184131279
--->
 
-START
-NI-SZZ
-
-
-Kde na obrazovce jsou komponenty nejlépe dostupné? Kam se typicky dává co za komponenty?
-
-Back:
-
-Na **hranách** obrazovky.
-
-Proto se:
-
-- **Menu** dává typicky doleva nahoru
-- **Login a podobný settings** doprava nahoru
-- **Další "globálnější" akce** se dávají taky kolem hran
-
-Např. představ si Word nebo Photoshop (komplikovaný UI) - tam to je nejlépe vidět tyto principy
-<!--ID: 1778682874826-->
-END
-
----
 <!--
 Original Flashcard ID: 1765204625576
 -->
@@ -1035,7 +986,6 @@ Original Flashcard ID: 1765204625576
 START
 NI-SZZ
 
-(4)
 Na jaké pozici by měla být v menu položka, která se používá statisticky nejčastěji?
 
 Back:
@@ -1044,7 +994,6 @@ Tak aby byla **nejsnáze dosažitelná**.
 
 Typicky to znamená **vlevo nahoře** nebo na **začátku menu**, protože v naší zemi čteme **zeshora dolů, zleva doprava**.
 
-(zdroj: AI + mozek Honzy)
 <!--ID: 1778682874829-->
 END
 
@@ -1056,7 +1005,6 @@ Original Flashcard ID: 1765204625715
 START
 NI-SZZ
 
-(54)
 Kolik položek by mělo mít maximálně menu telefonní aplikace a proč?
 
 Back:
@@ -1065,7 +1013,6 @@ Back:
 - omezená kapacita krátkodobé paměti (4±1 chunky)
 - Hick's law, který říká, že čas potřebný k rozhodnutí roste s počtem možností. Méně možností -> rychlejší rozhodnutí
 
-(zdroj: AI)
 <!--ID: 1778682874832-->
 END
 
@@ -1077,7 +1024,6 @@ Original Flashcard ID: 1765204625717
 START
 NI-SZZ
 
-(55)
 Které části desktopu jsou z hlediska ovládání myší nejsnáze dosažitelné a proč?
 
 Back:
@@ -1092,7 +1038,6 @@ Proto se:
 
 Např. představ si Word nebo Photoshop (komplikovaný UI) - tam to je nejlépe vidět tyto principy
 
-(zdroj: 06 Kde na obrazovce jsou komponenty nejlépe dostupné? Kam se typicky dává co za komponenty?)
 <!--ID: 1778682874835-->
 END
 
@@ -1111,9 +1056,9 @@ Back:
 
 **Popisuje:** Čas, jak dlouho trvá udělat rozhodnutí, roste velice rychle s tím, kolik možností máme.
 
-Reaction Time = Movement Time + log2(n) / Processing Speed
+$$\text{doba reakce} = \text{doba pohybu}+\frac{\log_2(n)}{\text{processing speed}}$$
 
-n je nejspíš ten počet variant
+$n$ je nejspíše ten počet variant
 <!--ID: 1778682874838-->
 END
 
@@ -1146,7 +1091,6 @@ Original Flashcard ID: 1765204625672
 START
 NI-SZZ
 
-(38)
 Jaká je kapacita krátkodobé paměti?
 
 Back:
@@ -1156,7 +1100,6 @@ Back:
 
 Pro UI to znamená, že by například menu a skupiny měly být rozděleny po 5 itemech
 
-(zdroj: 06 Jak je limitovaná pracovní paměť v mozku?)
 <!--ID: 1778682874844-->
 END
 
@@ -1168,7 +1111,6 @@ Original Flashcard ID: 1765204625675
 START
 NI-SZZ
 
-(39)
 Jaká je kapacita dlouhodobé paměti?
 
 Back:
@@ -1177,7 +1119,6 @@ Back:
 
 Je tam ale pomalejší access (třeba 0.1 sekundy), používanější informace jsou získávány rychleji
 
-(zdroj: 06 Je limitovaná long-term memory?)
 <!--ID: 1778682874847-->
 END
 
@@ -1189,7 +1130,6 @@ Original Flashcard ID: 1765204625677
 START
 NI-SZZ
 
-(40)
 Jaké základní druhy senzorů obsahuje lidské oko?
 
 Back:
@@ -1202,8 +1142,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020251208173037.png)
 <!-- DetailInfoEnd -->
 
-
-(zdroj: 06 Z čeho se skládá lidské oko?)
 <!--ID: 1778682874850-->
 END
 
@@ -1215,7 +1153,6 @@ Original Flashcard ID: 1765204625680
 START
 NI-SZZ
 
-(41)
 Kolik druhů čípků obsahuje lidské oko?
 
 Back:
@@ -1226,8 +1163,6 @@ Tři druhy pro různé vlnové délky světla:
 - **modrou** (B)
 
 Tyto čípy umožňují vnímat barvy
-
-(zdroj: AI)
 <!--ID: 1778682874853-->
 END
 
@@ -1239,14 +1174,11 @@ Original Flashcard ID: 1765204625683
 START
 NI-SZZ
 
-(42)
 Na jaké barvy jsou citlivé čípky v lidském oku?
 
 Back:
 
 **RGB - červená, zelená, modrá**
-
-(zdroj: AI)
 <!--ID: 1778682874856-->
 END
 
@@ -1258,7 +1190,6 @@ Original Flashcard ID: 1765204625752
 START
 NI-SZZ
 
-(68)
 Na jakou barvu je lidské oko nejcitlivější?
 
 Back:
@@ -1267,7 +1198,6 @@ Zelené - protože to má nejvyšší intenzitu, tak jsme schopni ji nejlépe ro
 
 ![](../../Assets/Pasted%20image%2020251026141109.png)
 
-(zdroj: 06 Jaké barvy vidíme nejvíce odstínů?)
 <!--ID: 1778682874859-->
 END
 
@@ -1279,7 +1209,6 @@ Original Flashcard ID: 1765204625760
 START
 NI-SZZ
 
-(71)
 Co je to tzv. žlutá skvrna a jak ovlivňuje vizuální vnímání?
 
 Back:
@@ -1289,8 +1218,6 @@ Místo na sítnici, kde je největší hustota světlocitlivých buňek (hlavně
 Toto místo má nejvíce sharp/focused vision, poznáváme tím obličeje, čteme pomocí toho apod. používá se, když se díváme přímo na nějaký objekt.
 
 Je to "yellow spot", protože to má žluté zbarvení (kvůli pigmentů, co ochraňují oko)
-
-(zdroj: 06 Co je "yellow spot"?)
 <!--ID: 1778682874862-->
 END
 
@@ -1342,7 +1269,6 @@ Original Flashcard ID: 1765204625706
 START
 NI-SZZ
 
-(51)
 Co je to a co zobrazuje spektrogram?
 
 Back:
@@ -1355,7 +1281,6 @@ Graf který zobrazuje funkci frekvence signálu a amplitudu v čase.
 
 ![](../../Assets/Pasted%20image%2020251208173913.png)
 
-(zdroj: přednáška Colors)
 <!--ID: 1778682874871-->
 END
 
@@ -1521,7 +1446,6 @@ Original Flashcard ID: 1765204625685
 START
 NI-SZZ
 
-(43)
 Proč nejde dohromady červená barva textu a modré pozadí?
 
 Back:
@@ -1531,9 +1455,6 @@ Když se spojí modrá a červená (např. červená na modrým pozadí), tak st
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020251208173117.png)
 <!-- DetailInfoEnd -->
-
-
-(zdroj: 06 Co je blue red paradox?)
 <!--ID: 1778682874895-->
 END
 
@@ -1545,7 +1466,6 @@ Original Flashcard ID: 1765204625688
 START
 NI-SZZ
 
-(44)
 Co je to doplňková barva?
 
 Back:
@@ -1560,8 +1480,6 @@ Např. k modrý je komplementární žlutá
 ![](../../Assets/Pasted%20image%2020251208173410.png)
 ![](../../Assets/Pasted%20image%2020251208173437.png)
 <!-- DetailInfoEnd -->
-
-(zdroj: 06 Co je komplementární barva?)
 <!--ID: 1778682874898-->
 END
 
@@ -1573,14 +1491,11 @@ Original Flashcard ID: 1765204625690
 START
 NI-SZZ
 
-(45)
 Jaká je doplňková barva k červené? (#FF0000) (hexadecimálně)
 
 Back:
 
 #00FFFF (azurová/cyan)
-
-(zdroj: AI, ověřeno)
 <!--ID: 1778682874901-->
 END
 
@@ -1592,14 +1507,11 @@ Original Flashcard ID: 1765204625693
 START
 NI-SZZ
 
-(46)
 Jaká je doplňková barva k zelené? (#00FF00) (hexadecimálně)
 
 Back:
 
 #FF00FF (purpurová/magenta)
-
-(zdroj: AI, ověřeno)
 <!--ID: 1778682874904-->
 END
 
@@ -1611,14 +1523,11 @@ Original Flashcard ID: 1765204625696
 START
 NI-SZZ
 
-(47)
 Jaká je doplňková barva k modré? (#0000FF) (hexadecimálně)
 
 Back:
 
 #FFFF00 (žlutá/yellow)
-
-(zdroj: AI, ověřeno)
 <!--ID: 1778682874907-->
 END
 
@@ -1630,14 +1539,11 @@ Original Flashcard ID: 1765204625698
 START
 NI-SZZ
 
-(48)
 Jaká je doplňková barva k purpurové (#FF00FF)? (uveďte hexadecimálně)
 
 Back:
 
 #00FF00 (zelená/green)
-
-(zdroj: AI, ověřeno)
 <!--ID: 1778682874910-->
 END
 
@@ -1649,14 +1555,11 @@ Original Flashcard ID: 1765204625701
 START
 NI-SZZ
 
-(49)
 Jaká je doplňková barva k žluté (#FFFF00)? (uveďte hexadecimálně)
 
 Back:
 
 #0000FF (modrá/blue)
-
-(zdroj: AI, ověřeno)
 <!--ID: 1778682874913-->
 END
 
@@ -1668,14 +1571,11 @@ Original Flashcard ID: 1765204625704
 START
 NI-SZZ
 
-(50)
 Jaká je doplňková barva k azurové (#00FFFF)? (uveďte hexadecimálně)
 
 Back:
 
 #FF0000 (červená/red)
-
-(zdroj: AI, ověřeno)
 <!--ID: 1778682874916-->
 END
 
@@ -1738,7 +1638,6 @@ Back:
 Tip: s červenou je dobré hodně šetřit, stačí jí málo v designu
 
 Fun fact: ženy oblečené do červeného jsou podle Pavlíčka atraktivnější :D čistě z toho psychologického hlediska
-
 <!--ID: 1778682874925-->
 END
 
