@@ -7,7 +7,7 @@ OTÁZKA
 Back:
 
 ODPOVĚĎ
-<!--ID: 1778621133826-->
+
 END
 
 ---

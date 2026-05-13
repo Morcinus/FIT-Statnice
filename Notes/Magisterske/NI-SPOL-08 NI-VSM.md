@@ -103,6 +103,11 @@ Definice: **Markovský řetězec s diskrétním časem**
 Back:
 
 ![](../../Assets/Pasted%20image%2020250411135848.png)
+
+<!-- ExplanationStart -->
+Jinými slovy, že markovský proces "zapomíná historii", tedy nezávisí na tom, co se dělo ve stavech předtím (kromě toho předchozího stavu).
+<!-- ExplanationEnd -->
+
 <!--ID: 1778521859636-->
 END
 
@@ -141,6 +146,16 @@ Věta: **Náhodný proces je markovský** $\Leftrightarrow \dots$
 Back:
 
 ![](../../Assets/Pasted%20image%2020250411135941.png)
+
+<!-- ExplanationStart -->
+Jinými slovy, řetězec je markovský, pokud:
+
+Pravděpodobnost, že se v průběhu času přejdeme konkrétní sérií stavů $=$ pravděpodobnost že začneme v prvním stavu a pak to vynásobíme maticemi přechodu mezi jednotlivými stavy.
+
+Tzn. jakoby $p_{s_0}(n_0)$ mi říká, že začnem v daném stavu a $P_{s_0s_1}(n_0,n_1)$ nás přesouvá do dalšího stavu.
+<!-- ExplanationEnd -->
+
+
 <!--ID: 1778521859641-->
 END
 
@@ -177,6 +192,12 @@ Definice: **homogenní markovský řetězec** + jeho matice přechodu
 Back:
 
 ![](../../Assets/Pasted%20image%2020250411140017.png)
+
+<!-- ExplanationStart -->
+Neboli je homogenní, pokud ty pravděpodobnosti přechodu jsou ve všech stavech stejný. Pak můžeme udělat tu jednokrokovou matici přechodu, kterou použijeme k přesunu do dalšího stavu v jakémkoliv stavu.
+<!-- ExplanationEnd -->
+
+
 <!--ID: 1778521859646-->
 END
 
@@ -215,6 +236,8 @@ Jaký tvar má Chapman-Kolmogorova rovnice pro **homogenní markovský řetězec
 $P(n+m)= \ ???= \ ???$
 
 Back:
+
+$$P(n+m)= \ P(n)\cdot P(m)= \ P^{n+m}=P^n \cdot P^m$$
 
 ![](../../Assets/Pasted%20image%2020250411140114.png)
 
@@ -410,60 +433,6 @@ END
 ## Jejich limitní vlastnosti
 
 <!--
-Original Flashcard ID: 1746518365057
--->
-
-START
-NI-SZZ
-
-
-Jak se spočte $N$?
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250411160037.png)
-<!--ID: 1778521859676-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746518365059
--->
-
-START
-NI-SZZ
-
-
-Jak se spočte $U$?
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250411160048.png)
-<!--ID: 1778521859678-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746518365062
--->
-
-START
-NI-SZZ
-
-
-Jak se spočte $N_\circ$? (to kolečko má být vyplněné)
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250411160145.png)
-<!--ID: 1778521859681-->
-END
-
----
-
-<!--
 Original Flashcard ID: 1746518364660
 -->
 
@@ -555,7 +524,9 @@ START
 NI-SZZ
 
 
-Definice $f_{ij}(n)$ a $f_{ij}$ - v kontextu první návštěvy stavů
+**Definice**:
+- $f_{ij}(n)$ pravděpodobnost první návštěvy stavu $j$ v $n$ krocích pokud jsme začínali ve stavu $i$
+- $f_{ij}$ pravděpodobnost že někdy navštívíme stav $j$ pokud jsme začínali ve stavu $i$
 
 Back:
 
@@ -1407,6 +1378,62 @@ Pozn. $I$ je identita, tedy to, co jsme v jiných předmětech značili jako $E$
 END
 
 ---
+
+
+<!--
+Original Flashcard ID: 1746518365057
+-->
+
+START
+NI-SZZ
+
+
+Jak se spočte $N$?
+
+Back:
+
+![](../../Assets/Pasted%20image%2020250411160037.png)
+<!--ID: 1778521859676-->
+END
+
+---
+
+<!--
+Original Flashcard ID: 1746518365059
+-->
+
+START
+NI-SZZ
+
+
+Jak se spočte $U$?
+
+Back:
+
+![](../../Assets/Pasted%20image%2020250411160048.png)
+<!--ID: 1778521859678-->
+END
+
+---
+
+<!--
+Original Flashcard ID: 1746518365062
+-->
+
+START
+NI-SZZ
+
+
+Jak se spočte $N_\circ$? (to kolečko má být vyplněné)
+
+Back:
+
+![](../../Assets/Pasted%20image%2020250411160145.png)
+<!--ID: 1778521859681-->
+END
+
+---
+
 
 <!--
 Original Flashcard ID: 1746518364649
