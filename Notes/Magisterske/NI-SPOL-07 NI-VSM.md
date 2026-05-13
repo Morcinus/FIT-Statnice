@@ -331,7 +331,7 @@ Original Flashcard ID: 1746518365068
 START
 NI-SZZ
 
-Jaké rozdělení maximální entropii?
+Jaké rozdělení má maximální entropii?
 
 Back:
 

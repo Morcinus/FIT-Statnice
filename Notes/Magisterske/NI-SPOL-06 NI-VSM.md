@@ -314,6 +314,8 @@ Back:
    1. Zamítneme hypotézu $H_0$, jestliže $\theta_0 \not \in (L,+\infty)$
    2. Nezamítneme $H_0$, jestliže $\theta_0 \in (L,+\infty)$
 
+Analogicky pro $\geq$ (jen to bude všechno otočené)
+
 <!-- DetailInfoStart -->
 
 ![](../../Assets/Pasted%20image%2020250322080127.png)
@@ -502,16 +504,17 @@ START
 NI-SZZ
 
 
-Jak funguje **testování dobré shody**?
+Popiš jak provést **testování dobré shody**
 
 Back:
 
-1. Máme data $X_1, \dots, X_n$ a myslíme si, že to má nějaké rozdělení $F_0$
-2. Rozdělníme data do binů tak, aby v každém bylo teoreticky aspoň 5 hodnot
-3. Napočítáme počty pozorování, co padnou do těch binů $N_i$
-4. Spočteme pravděpodobnost $p_i$, že to padne do $i$ tého binu
-5. Pak spočteme $\chi^{2}(\textbf{X})$ (které při velkým $n$ odpovídá $\chi^2(k-1-p)$)
-6. Pokud $\chi^{2}(\textbf{X}) \geq \chi^{2}_{\alpha,k-1-p}$ tak zamítáme $H_0$
+Máme data $X_1, \dots, X_n$ a myslíme si, že to má nějaké rozdělení $F_0$ - to chceme ověřit.
+
+1. Rozdělníme data do binů tak, aby v každém bylo teoreticky aspoň 5 hodnot
+2. Napočítáme počty pozorování, co padnou do těch binů $N_i$
+3. Spočteme pravděpodobnost $p_i$, že to padne do $i$ tého binu
+4. Pak spočteme $\chi^{2}(\textbf{X})$ (které při velkým $n$ odpovídá $\chi^2(k-1-p)$)
+5. Pokud $\chi^{2}(\textbf{X}) \geq \chi^{2}_{\alpha,k-1-p}$ tak zamítáme $H_0$
 
 Je vhodné, aby ty _teoretické_ četnosti v každém binu měly alespoň 5. Když by to bylo méně než 5, tak není zaručeno, že mi vyjde chí kvadrát
 
@@ -668,7 +671,7 @@ START
 NI-SZZ
 
 
-Jak funguje: **párový $t$-test**?
+Popiš jak udělat **párový $t$-test**
 
 Back:
 
@@ -732,7 +735,7 @@ START
 NI-SZZ
 
 
-Jak funguje: **dvouvýběrový t-test při stejných rozptylech**?
+Popiš jak udělat **dvouvýběrový t-test při stejných rozptylech**
 
 Back:
 Pozn. ten vzoreček dole nemáme umět! (Prý ani u státnic :D)
@@ -761,7 +764,7 @@ START
 NI-SZZ
 
 
-Jak funguje: **dvouvýběrový t-test při různých rozptylech**?
+Popiš jak udělat **dvouvýběrový t-test při různých rozptylech**
 
 Back:
 
@@ -974,7 +977,7 @@ Jak se provede **test $\chi^2$ multinomického rozdělení při neznámých para
 
 Back:
 
-Stejné jako při známých parametrech, akorát neznáme parametry daného rozdělení, takže parametry odhadneme a ty pak do testu dosadíme
+**Stejné jako při známých parametrech**, akorát neznáme parametry daného rozdělení, takže parametry odhadneme a do testu (u kritického oboru) pak dosadíme počet odhadovaných parametrů $m$
 
 ![](../../Assets/Pasted%20image%2020250520122726.png)
 
@@ -1096,20 +1099,6 @@ Testujeme že se rovnají naměřené pravděpodobnosti očekávaným pravděpod
 
 <!-- ExerciseEnd -->
 <!--ID: 1778521860039-->
-END
-
----
-
-
-START
-BI-SZZ
-
-OTÁZKA
-
-Back:
-
-ODPOVĚĎ
-<!--ID: 1778621133830-->
 END
 
 ---
