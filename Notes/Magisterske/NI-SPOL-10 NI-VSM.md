@@ -125,9 +125,8 @@ Back:
 
 **Předpis**: $X \sim Poisson(\lambda)$
 **Parametry**:
-
-- $\lambda$ - počet pokusů
-  **Definice**:
+- $\lambda$ - střední počet událostí v daném intervalu
+**Definice**:
 - $P(X=k) = \frac{\lambda^k}{k!}e^{-\lambda}$
 
 <!-- DetailInfoStart -->
@@ -516,228 +515,67 @@ Pro $t \rightarrow \infty$ to pak vychází $\frac{\lambda}{\mu}$
 <!--ID: 1778521859443-->
 END
 
----
-
-<!--
-Original Flashcard ID: 1746599649215
--->
-
-START
-NI-SZZ
-
-
-Čím se zabývá hromadná obsluha v síti?
-
-Back:
-
-Hlavní myšlenka: dáme dva servery do série za sebe, každý má nějakou frontu
-
-![](../../Assets/Pasted%20image%2020250501154047.png)
-<!--ID: 1778521859445-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746599649221
--->
-
-START
-NI-SZZ
-
-
-Věta: Systém hromadné obsluhy $M|M|c$, pak proces odchodů
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250501154125.png)
-
-ve stacionárním stavu = rozdělení v každém čase je stacionární
-
-<!-- ExplanationStart -->
-
-![](../../Assets/Pasted%20image%2020250501154149.png)
-
-<!-- ExplanationEnd -->
-<!--ID: 1778521859448-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746599649228
--->
-
-START
-NI-SZZ
-
-
-Jak vypadají dva servery v sérii (stacionární stav)?
-
-- Jaký $M|M|c$ má první server
-- Jaký $M|M|c$ má druhý server
-- Jaká je podmínka stability systému?
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250501154213.png)
-<!--ID: 1778521859451-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746599649236
--->
-
-START
-NI-SZZ
-
-
-Jak vypadají dva servery $M|M|1$ v sérii (stacionární rozdělení)
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250501154245.png)
-<!--ID: 1778521859454-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746599649242
--->
-
-START
-NI-SZZ
-
-
-Jak vypadají intenzity přechodu pro dva servery $M|M|1$?
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250501154311.png)
-
-Např. na prvním serveru mám $m-1$ zákazníků a na druhém $n$ a pak mi přijde zákazník na první server a jsem v $(m,n)$ - první horizontální šipka.
-<!--ID: 1778521859456-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746599649249
--->
-
-START
-NI-SZZ
-
-
-Věta: **stacionární rozdělení pro dva servery** $M|M|1$
-
-(čemu se rovná)
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250501154419.png)
-<!--ID: 1778521859459-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746599649256
--->
-
-START
-NI-SZZ
-
-
-Věta: stacionární rozdělení pro **uzavřenou** soustavu $L$ serverů
-
-(Pozn. tohle jsme s Maruškou usoudili, že to nemá cenu se učit :D)
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250501154451.png)
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020250501154501.png)
-![](../../Assets/Pasted%20image%2020250501154508.png)
-![](../../Assets/Pasted%20image%2020250501154526.png)
-
-<!-- DetailInfoEnd -->
-<!--ID: 1778521859462-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746599649263
--->
-
-START
-NI-SZZ
-
-
-Jak vypadá otevřená soustava serverů?
-
-(Pozn. tohle jsme s Maruškou usoudili, že to nemá cenu se učit :D)
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250501154549.png)
-![](../../Assets/Pasted%20image%2020250501154558.png)
-<!--ID: 1778521859464-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746599649270
--->
-
-START
-NI-SZZ
-
-
-Věta: co platí pro **otevřenou** soustavu $L$ serverů
-
-(Pozn. tohle jsme s Maruškou usoudili, že to nemá cenu se učit :D)
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250501154622.png)
-
-<!-- ExerciseStart -->
-
-![](../../Assets/Pasted%20image%2020250501154635.png)
-![](../../Assets/Pasted%20image%2020250501154642.png)
-
-<!-- ExerciseEnd -->
-<!--ID: 1778521859467-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746599649277
--->
-
-START
-NI-SZZ
-
-
-Jaké stacionární vlastnosti má otevřená soustava serverů?
-
-(Pozn. tohle jsme s Maruškou usoudili, že to nemá cenu se učit :D)
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250501154714.png)
-<!--ID: 1778521859470-->
-END
-
----
 
 ## Souvislost s Markovskými řetězci se spojitým časem
+
+START
+NI-SZZ
+
+
+Proč lze systém $M|M|1$ chápat jako **Markovský řetězec se spojitým časem**?
+
+Back:
+
+Stavem může být počet zákazníků v systému v čase $t$:
+
+$$X_t \in \{0,1,2,\dots\}$$
+
+Proces je Markovský, protože:
+
+- **příchody** mají **Poissonův proces** s intenzitou $\lambda$,
+- **doby obsluhy** mají **exponenciální rozdělení** s parametrem $\mu$,
+- exponenciální rozdělení je bezpaměťové.
+
+Díky bezpaměťovosti další vývoj závisí jen na aktuálním počtu zákazníků v systému, ne na tom, jak dlouho už zákazníci čekají nebo jsou obsluhováni.
+
+(Pozn. tuhle kartičku jsem přidal pomocí AI, protože byla prázdná sekce "Souvislost s Markovskými řetězci se spojitým časem")
+<!--ID: 1778764368759-->
+END
+
+---
+
+START
+NI-SZZ
+
+
+Jaké jsou **intenzity přechodu** u systému $M|M|1$ chápaného jako Markovský řetězec se spojitým časem?
+
+Back:
+
+Markovský řetězec vypadá takhle:
+- stav $n$ je počet zákazníků v systému
+- přechod $n \to n+1 \quad \text{s intenzitou } \lambda$ (=příchod zákazníka)
+- přechod $n \to n-1 \quad \text{s intenzitou } \mu \quad \text{pro } n \geq 1$ (=odchod zákazníka)
+
+Celý systém se chová jako markovský proces.
+
+(Pozn. tuhle kartičku jsem přidal pomocí AI, protože byla prázdná sekce "Souvislost s Markovskými řetězci se spojitým časem")
+<!--ID: 1778764368771-->
+END
+
+---
+
+START
+NI-SZZ
+
+Co popisuje **stacionární rozdělení** u systému hromadné obsluhy?
+
+Back:
+
+Složka stacionárního rozdělení $\pi_n$ nám říká, jaká je dlouhodobá pravděpodobnost, že v systému bude právě $n$ zákazníků. 
+
+(za předpokladu, že stacionární rozdělení existuje)
+<!--ID: 1778764368774-->
+END
+
+---

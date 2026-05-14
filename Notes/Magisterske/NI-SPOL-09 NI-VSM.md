@@ -9,6 +9,11 @@ FILE TAGS: NI-SPOL-09 NI-VSM
 > NI-SPOL-09 (NI-VSM)
 > Markovské řetězce se spojitým časem. Souvislost s Markovskými řetezci s diskrétním časem a s Poissonovým procesem.
 
+<!--
+TODO:
+- přidat co mi říká matice skokových intenzit (už je to v kartičce definice, ale oddělit to do samostatné kartičky)
+-->
+
 ## Markovské řetězce se spojitým časem
 
 <!--
@@ -25,7 +30,6 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020250419140332.png)
 ![](../../Assets/Pasted%20image%2020250419140338.png)
-
 <!--ID: 1778521859473-->
 END
 
@@ -44,7 +48,6 @@ Věta: **náhodný (_spojitý_) proces je markovský právě tehdy když**
 Back:
 
 ![](../../Assets/Pasted%20image%2020250419140359.png)
-
 <!--ID: 1778521859476-->
 END
 
@@ -63,7 +66,6 @@ Věta: **Chapman-Kolmogorov** (pro spojité markovské řetězce)
 Back:
 
 ![](../../Assets/Pasted%20image%2020250419140410.png)
-
 <!--ID: 1778521859478-->
 END
 
@@ -151,7 +153,6 @@ Back:
 $$\textbf{Q}=\textbf{P}'(0)$$
 
 Tzn. prostě zderivuju každý prvek té matice $\textbf{P}$
-
 <!--ID: 1778521859486-->
 END
 
@@ -178,7 +179,6 @@ Back:
 2. $\frac{\textbf{Q}_{ij}}{-\textbf{Q}_{ii}}$
 
 ![](../../Assets/Pasted%20image%2020250419140652.png)
-
 <!--ID: 1778521859489-->
 END
 
@@ -296,7 +296,7 @@ START
 NI-SZZ
 
 
-Definice: **Markovský řetězec je nerozložitelný**
+Definice: **Markovský řetězec je nerozložitelný** (spojitý čas)
 
 Back:
 
@@ -363,16 +363,21 @@ START
 NI-SZZ
 
 
-Jak bychom prakticky použili rovnici detailní rovnováhy pro nalezení stacionárního rozdělení této matice?
+Jak z $\textbf{Q}$ dostaneme stacionární rozdělení $\pi$ (pomocí detailní rovnováhy)
 
 ![](../../Assets/Pasted%20image%2020250522185031.png)
 
 Back:
 
-Vypíšeme rovnice:
-![](../../Assets/Pasted%20image%2020250522185039.png)
+1. **Víme** že $\pi_1 + \pi_2 + \dots \pi_k = 1$
+2. **Vypíšeme rovnice** podle prvků kolem diagonály
+3. **Dosazováním rovnic** do sebe vypočítáme postupně všechny prvky $\pi$
 
-Postupně dosadíme a vyjádříme složky $\pi$
+**Vypsání rovnic**:
+![](../../Assets/q_podtrhany.png)
+![](../../Assets/rov_podtrhany.png)
+
+**Posrtupný dosazování:**
 ![](../../Assets/Pasted%20image%2020250522185120.png)
 <!--ID: 1778521859514-->
 END
@@ -434,7 +439,7 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020250422093005.png)
 
-Neboli že $T$ nebo $S$ vyhraje závod
+$P(T<S)$ znamená, že $T$ vyhraje "závod"
 <!--ID: 1778521859522-->
 END
 
@@ -468,19 +473,16 @@ START
 NI-SZZ
 
 
-Lemma: Nezávislost ${min\{T,S\}>u}$ a $T<S$ (aneb vítěz a délka závodu jsou nezávislé)
+Lemma: Nezávislost ${min\{T,S\}>u}$ a $T<S$
 
 Back:
 
 ![](../../Assets/Pasted%20image%2020250422093107.png)
 
-Jinými slovy:
-
-- Představme si 2 závodníky, co doběhnou v časech $T$ a $S$
+**Jinými slovy:** Představme si 2 závodníky, co doběhnou v časech $T$ a $S$
 
 Lemma pak říká, že pro $u \geq 0$ jsou nezávislé následující dvě věci:
-
-- Jak dlouho závod trval (že závod trval déle než $u$)
+- Jak dlouhý čas měl vítěz (že byl delší než $u$)
 - Kdo vyhrál závod (že $T < S$ - tedy že závodník $T$ byl rychlejší)
 <!--ID: 1778521859527-->
 END
@@ -530,6 +532,16 @@ proces je markovský řetězec se spojitým časem $\Leftrightarrow \dots$
 Back:
 
 ![](../../Assets/Pasted%20image%2020250422093838.png)
+
+<!-- ExplanationStart -->
+Protože:
+1. Jsme v nějakém stavu
+2. Generujeme náhodný čas $t$ podle exponenciálního rozdělení (to je jakoby čas vítěze)
+3. Pak přeskočíme do dalšího stavu (ten stav co vyhrál)
+
+Tohle furt opakujeme, takže každý přesun do dalšího stavu je jakoby závod.
+<!-- ExplanationEnd -->
+
 
 Pozn. Co po nás podle Hrabáka budou chtít:
 
@@ -624,11 +636,26 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020250419135938.png)
 
-<!-- ImageStart -->
+<!-- ExplanationStart -->
+$X_j$ je náhodná veličina s rozdělením $\text{Exp}(\lambda)$, která určuje ty časy mezi příchody (např. zákazníků do obchodu)
+- i.i.d = jsou nezávislé a se stejným rozdělením
+$T_n$ je pak čas kdy nastane $n$-tá událost (příchod).
+- Ten se spočítá buď že vezmu čas předchozího příchodu a přičtu k tomu ten náhodný čas dalšího příchodu $T_{n-1}+X_n$
+- Nebo se spočte jako že sečtu časy všech příchodů do té události $\sum_{j=1}^nXj$
+$N_t$ pak znamená, kolik událostí nastalo do času $t$.
+- $\omega$ je konkrétní hodnota náhodné veličiny $N_t$, tzn. jakoby ta konkrétní náhoda
+
+$\lambda$ mi určuje jak rychle chodí ty události. 
+- Pokud je vyšší, chodí častěji
+- Pokud je nižší, chodí méně často
 
 ![](../../Assets/Pasted%20image%2020250419135951.png)
 
-<!-- ImageEnd -->
+Poissonův proces je podobný čítacímu procesu, jen v tom stavu vždy zůstává nějaký spojitý čas.
+
+Např. počítáme příchody zákazníků do obchodu, takže vždy přijde jeden, pak nějakou dobu nic, pak přijde druhý atd. a my sčítáme třeba příchody za den
+
+<!-- ExplanationEnd -->
 <!--ID: 1778521859540-->
 END
 
@@ -648,6 +675,7 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020250419140015.png)
 
+Definujeme to vlastně podle "přírůstků" těch počtů, které jsou mezi dvěma časy podle Poissonova rozdělení
 <!--ID: 1778521859543-->
 END
 
@@ -735,7 +763,6 @@ Jaká je distribuční funkce exponenciálního rozdělení?
 Back:
 
 ![](../../Assets/Pasted%20image%2020250525180005.png)
-
 <!--ID: 1778521859551-->
 END
 
@@ -755,6 +782,7 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020250419140119.png)
 
+Tzn. čas čekání $T$ nezávisí na tom, jak dlouho jsme už čekali (tedy na $t$)
 <!--ID: 1778521859553-->
 END
 
@@ -774,6 +802,7 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020250419140137.png)
 
+Tzn. čas čekání $T$ nezávisí na jakékoliv nezáporné nezávislé veličině $A$
 <!--ID: 1778521859556-->
 END
 
@@ -791,8 +820,15 @@ Věta: **Součet exponenciálních je gamma**
 
 Back:
 
-![](../../Assets/Pasted%20image%2020250419140156.png)
+Nechť $X_1,X_2 \dots$ i.i.d kde $X_j \sim$ Exp($\lambda$). Pak
 
+$$X_1 + X_2 + \dots + X_n \sim \text{Ga}(\lambda,n)$$
+
+Neboli součet exponenciálních rozdělení má gamma rozdělení.
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020250419140156.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1778521859559-->
 END
 
@@ -810,8 +846,11 @@ Věta: **Ekvivalence definic Poissonova procesu**
 
 Back:
 
-![](../../Assets/Pasted%20image%2020250419140214.png)
+Pokud jsou splněny podmínky jedné definice, tak pro ní platí vlastnosti druhé definice. A naopak.
 
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020250419140214.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1778521859561-->
 END
 
@@ -825,12 +864,11 @@ START
 NI-SZZ
 
 
-Lemma: **Jaké rozdělení má náhodná veličina**
+Lemma: **Jaké rozdělení má náhodná veličina** $N_s$ (z poissonova procesu)
 
 Back:
 
 ![](../../Assets/Pasted%20image%2020250419140250.png)
-
 <!--ID: 1778521859564-->
 END
 
@@ -849,7 +887,6 @@ Lemma: **Bezpaměťovost Poissonova procesu**
 Back:
 
 ![](../../Assets/Pasted%20image%2020250419140308.png)
-
 <!--ID: 1778521859567-->
 END
 
@@ -909,388 +946,17 @@ END
 
 ---
 
-<!--
-Original Flashcard ID: 1746599649285
--->
-
 START
 NI-SZZ
 
-
-Co znamená model náhodných příchodů?
-
-Back:
-
-Události náhodně nastávají v časovém rozmezí podle Uniformního rozdělení.
-
-![](../../Assets/Pasted%20image%2020250501142037.png)
-<!--ID: 1778521859577-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746599649293
--->
-
-START
-NI-SZZ
-
-
-Definice: **proces příchodů do času $t$**
+Co znamená že veličiny jsou $\text{i.i.d.}$?
 
 Back:
 
-![](../../Assets/Pasted%20image%2020250501142100.png)
+Že jsou **nezávislé** a **mají stejné rozdělení**.
 
-$L$ = jak dlouhý je čas
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020250501142109.png)
-
-<!-- DetailInfoEnd -->
-<!--ID: 1778521859580-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746599649301
--->
-
-START
-NI-SZZ
-
-
-Pozorování: **Binomické přírustky u modelu náhodných příchodů**
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250501142134.png)
-
-Přírustky jsou jakoby ty skoky mezi těmi časy příchodu
-
-<!-- ProofStart -->
-
-![](../../Assets/Pasted%20image%2020250501144223.png)
-
-<!-- ProofEnd -->
-<!--ID: 1778521859582-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746599649308
--->
-
-START
-NI-SZZ
-
-
-Pozorování: **Přírustky procesu a Poissonovo rozdělení** (u modelu náhodných příchodů)
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250501142157.png)
-
-<!-- ProofStart -->
-
-![](../../Assets/Pasted%20image%2020250501144349.png)
-
-<!-- ProofEnd -->
-<!--ID: 1778521859585-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746599649315
--->
-
-START
-NI-SZZ
-
-
-Pozorování: **Přírustky procesu a nezávislost** (u modelu náhodných příchodů)
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250501142214.png)
-<!--ID: 1778521859587-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746599649323
--->
-
-START
-NI-SZZ
-
-
-Věta: $f_{T_1, \dots, T_n|N_t = n}(t_1, \dots, t_n) = \ ?$
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250501142312.png)
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020250501142322.png)
-
-<!-- DetailInfoEnd -->
-<!--ID: 1778521859590-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746599649330
--->
-
-START
-NI-SZZ
-
-
-Důsledek: $P(N_s = m | N_t = n) = \ ???$
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250501142354.png)
-<!--ID: 1778521859593-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746599649338
--->
-
-START
-NI-SZZ
-
-
-Definice: **Nehomogenní Poissonův proces**
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250501142412.png)
-
-Nehomogenní Proces = Umožňuje nám modelovat to, že události nastávají v nějakých časech častěji a v nějaké časy méně často.
-
-Např. homogenní je radioaktivní rozpad, nehomogenní je příchod zákazníků do restaurace v průběhu dne
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020250501142432.png)
-
-<!-- DetailInfoEnd -->
-<!--ID: 1778521859595-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746599649344
--->
-
-START
-NI-SZZ
-
-
-Poznámka: Značení $\Lambda (t)$
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250501142513.png)
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020250501142521.png)
-
-<!-- DetailInfoEnd -->
-<!--ID: 1778521859598-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746599649352
--->
-
-START
-NI-SZZ
-
-
-Věta: **Nehomogenní Poisson a rozdělení času příchodu**
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250501142617.png)
-
-<!-- ImageStart -->
-
-![](../../Assets/Pasted%20image%2020250501142632.png)
-
-<!-- ImageEnd -->
-<!--ID: 1778521859601-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746599649359
--->
-
-START
-NI-SZZ
-
-
-Důsledek: $P(N_s=m|N_t=n) = \ ???$ pro nehomogenní Poisson a rozdělení času příchodu
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250501142713.png)
-<!--ID: 1778521859604-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746599649366
--->
-
-START
-NI-SZZ
-
-
-**Jak funguje dělení Poissonova procesu** (thinning)?
-
-Back:
-
-1. Máme $\text{Poisson}(\lambda)$
-2. Když nastane událost, můžeme s určitou pravděpodobností ji označit za určitý typ události
-3. Procesy těch daných typů budou taky poissonovy s parametrem $\text{Poisson}(\lambda p_i)$
-
-Vzniklé procesy se označují jako $\{N_t^{(i)}|t \geq 0\}$
-
-![](../../Assets/Pasted%20image%2020250501142731.png)
-<!--ID: 1778521859606-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746599649373
--->
-
-START
-NI-SZZ
-
-
-Věta: Procesy $\dots$ jsou nezávislé Poissonovy s intenzitou $\dots$
-
-(procesy po provedení thinningu)
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250501142758.png)
-<!--ID: 1778521859609-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746599649380
--->
-
-START
-NI-SZZ
-
-
-Důsledek: Pokud platí ..., pak jsou procesy nezávislé Poissonovy procesy s intenzitou
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250501142837.png)
-<!--ID: 1778521859612-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746599649388
--->
-
-START
-NI-SZZ
-
-
-**Jak funguje skládání Poissonových procesů**? (superpozice)
-
-Back:
-
-1. Máme 2 poissonovské procesy s $\lambda_1$ a $\lambda_2$
-2. Když je složíme, tak z toho vznikne $\text{Poisson}(\lambda_1+\lambda_2)$
-
-![](../../Assets/Pasted%20image%2020250501142902.png)
-<!--ID: 1778521859615-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746599649395
--->
-
-START
-NI-SZZ
-
-
-Věta: Proces $N_t = N_t^{(1)}+ N_t^{(2)}$
-
-(skládání poissonovských procesů)
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250501142945.png)
-<!--ID: 1778521859621-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746599649403
--->
-
-START
-NI-SZZ
-
-
-Jak lze sestavit **nehomogenní Poissonův proces** pomocí **Nehomogenního dělení**?
-
-Back:
-
-1. Nagenerujeme si časy $\text{Poisson}(\lambda)$ - exponenciální časy mezi událostmi (modré puntíky)
-2. Pro každý čas vygenerujeme náhodné číslo mezi $0$ a $1$, tedy $\text{Unif}(0,1)$
-3. Zadefinujeme si funkci $p(t)$, která nám řekne, jestli daný bod podle vygenerovaného čísla přijmeme nebo ne
-4. Přijmuté body nám pak tvoří **nehomogenní** $Poisson(\lambda p(t))$
-
-Pozn. $\lambda p(t) = \lambda (t)$
-
-![](../../Assets/Pasted%20image%2020250501143006.png)
-
-![](../../Assets/Pasted%20image%2020250501143034.png)
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020250501143059.png)
-
-<!-- DetailInfoEnd -->
-<!--ID: 1778521859625-->
+Např. $X_1, X_2, \dots X_n$ mohou být i.i.d. a mít rozdělení $\text{Exp}(\lambda)$
+<!--ID: 1778762614288-->
 END
 
 ---
