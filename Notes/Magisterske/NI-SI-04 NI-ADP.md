@@ -9,6 +9,7 @@ FILE TAGS: NI-SI-04 NI-ADP
 > NI-SI-04 (NI-ADP)
 > Vzory pro chování objektů (Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, State, Strategy, Template method, Visitor).
 
+
 ## Vzory pro chování objektů (Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, State, Strategy, Template method, Visitor)
 
 
@@ -21,7 +22,7 @@ Back:
 
 - Zaměřují se na algoritmy, rozdělení odpovědnosti mezi objekty a na to, jak spolu objekty komunikují.
 - Řeší, jak si objekty předávají zprávy, jak spolupracují na složitějších úlohách a jak je řízen tok programu (control flow).
-
+<!--ID: 1778786460746-->
 END
 
 ---
@@ -160,7 +161,7 @@ Back:
 
 - Pokud chceme parametrizovat objekt operacema
 - Pokud potřebujeme tvořit frontu commandů, plánovat dobu jejich spuštění nebo je spouštět vzdáleně.
-
+<!--ID: 1778786460749-->
 END
 
 ---
@@ -294,7 +295,7 @@ Back:
 - Pokud očekáváme, že náš program bude řešit různé typy požadavků různými cestami, ale přesně typy požadavků a jejich pořadí je nám předem neznámé.
 - Pokud potřebujeme spouštět handlery v přesně daném pořadí.
 - Pokud potřebujeme pořadí handlerů měnit za běhu
-
+<!--ID: 1778786460752-->
 END
 
 ---
@@ -483,7 +484,7 @@ Back:
 
 - Pokud má kolekce komplexní datovou strukturu, od které chceme klienty odstínit
 - Pokud chceme omezit udplikaci kódu pro průchod kolekcí v aplikaci
-
+<!--ID: 1778786460755-->
 END
 
 ---
@@ -601,6 +602,7 @@ Back:
 
 - Pokud je komplikované měnit některé třídy, protože jsou silně spojeny (coupled) k jiným třídám.
 - Pokud chceme komponentu využít i v jiném programu, ale nemůžeme kvůli silným závislostem na jiné části systému
+<!--ID: 1778786460758-->
 END
 
 ---
@@ -790,7 +792,7 @@ Back:
 
 - Pokud chceme tvořit snapshoty objektu, ke kterým se můžeme v budoucnu chtít vrátit
 - Pokud přímý přístup k vlastnostem objektu porušuje jeho zapouzdření
-
+<!--ID: 1778786460760-->
 END
 
 ---
@@ -909,7 +911,7 @@ Kdy využít **Observer** pattern?
 Back:
 
 Pokud změny jednoho objektu mají ovlivňovat i jiné objekty, a to i pouze na omezený část nebo ve specifických případech.
-
+<!--ID: 1778786460763-->
 END
 
 ---
@@ -1048,7 +1050,7 @@ Back:
 - Pokud se má objekt chovat odlišně v závilosti na jeho aktuálním stavu
 - Pokud máme třídu zaplavenou rozhodováním na základě vnitřního stavu
 - Pokud je mnoho duplicitního kódu napříč podobnými stavy
-
+<!--ID: 1778786460766-->
 END
 
 ---
@@ -1164,7 +1166,7 @@ Back:
 - Pokud chceme podporovat více variant algoritmu v rámci jednoho objektu a chceme mezi nimi přepínat
 - Pokud máme mnoho tříd, které se liší pouze konkrétní implementací konkrétní části
 - Pro izolaci implementačních detailů byznys logiky třídy, které nemusí být v kontextu třídy tak důležité 
-
+<!--ID: 1778786460769-->
 END
 
 ---
@@ -1287,6 +1289,7 @@ Back:
 
 - Pokud chceme umožnit klientům rozšířit only konkrétní krok v rámci algoritmu
 - Pokud máme několik tříd se skoro totožným algoritmem, pouze s malými změnami
+<!--ID: 1778786460772-->
 END
 
 ---
@@ -1444,6 +1447,7 @@ Back:
 - Pokud chceme provádět operace na všech elementech komplexní struktury objektů
 - Pokud chceme vyčistit pomocnou business logiku z objektů
 - Pokud konkrétní chování dává smysl pouze pro nějaké třídy
+<!--ID: 1778786460776-->
 END
 
 ---

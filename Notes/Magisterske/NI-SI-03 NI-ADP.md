@@ -9,6 +9,7 @@ FILE TAGS: NI-SI-03 NI-ADP
 > NI-SI-03 (NI-ADP)
 > Strukturální návrhové vzory (Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy) a Non-GoF návrhové vzory (Lazy loading, Dependency injection)
 
+
 ## Strukturální návrhové vzory (Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy)
 
 START
@@ -20,7 +21,7 @@ Back:
 
 - Návrhové vzory, které se zabývají tím, jak skládat třídy do komplexnějších struktur
 - Řeší jak jsou tyto objekty navzájem propojeny a jak spolupracují
-
+<!--ID: 1778786460782-->
 END
 
 ---
@@ -270,7 +271,7 @@ Back:
 - Pokud chceme rozdělit funkcionalitu jedné monolitické třídy s více variantami použití (např. práce s více DB servery)
 - Pokud chceme třídu rozšiřovat ve více nezávislých (ortogonálních) dimenzích
 - Pokud chceme být schopni měnit implementaci v době běhu
-
+<!--ID: 1778786460785-->
 END
 
 ---
@@ -392,6 +393,7 @@ Back:
 
 - Při implementaci stuktury, která připomíná strom
 - Pokud chceme, aby se klient choval stejně k jednoduchým a komplexním objektům stejně
+<!--ID: 1778786460788-->
 END
 
 ---
@@ -527,6 +529,7 @@ Back:
 
 - Pokud chceme přidávat dodatečné chování objektům v době runtime bez rozbíjení kódu, který s nimi pracuje
 - Pokud je rozšiřování třídy pomocí dědičnosti obtížné nebo nemožné
+<!--ID: 1778786460792-->
 END
 
 ---
@@ -635,6 +638,7 @@ Back:
 
 - Pokud chceme mít rozhraní s omezenou sadou funkcí ke komplexnímu systému
 - Pokud chceme strukturovat subsystém do vrstev
+<!--ID: 1778786460796-->
 END
 
 ---
@@ -749,7 +753,7 @@ Kdy použít **Flyweight** pattern?
 Back:
 
 - Pokud musí program podporovat velké množství objektů, které se obtížně vejdou do RAM
-
+<!--ID: 1778786460800-->
 END
 
 ---
@@ -856,6 +860,7 @@ Back:
 - Pro vzdálené spuštění kódu (Remote proxy) – Pokud je logika umístěna na vzdáleném serveru
 - Pro logování (Logging proxy)
 - Pro cachování (Caching proxy)
+<!--ID: 1778786460803-->
 END
 
 ---
@@ -949,6 +954,7 @@ Technika umožňující, aby třída nezávisla na svých závislostech.
 - Dosahuje toho declouplingem využití objektu od jeho tvorby.
 - Pomáhá dodržovat S a D principy z SOLID
 - Umožňuje nahrazování implementací bez změny závislostí ve třídách.
+<!--ID: 1778786460807-->
 END
 
 ---
@@ -1110,6 +1116,7 @@ Back:
 
 - Řešení založená na reflexi (reflection-based), která propojují závislosti za běhu programu (runtime).
 - Statická řešení, která generují kód pro propojení závislostí v době překladu (compile time).“
+<!--ID: 1778786460810-->
 END
 
 ---

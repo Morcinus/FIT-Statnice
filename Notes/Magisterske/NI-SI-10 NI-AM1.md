@@ -9,6 +9,7 @@ FILE TAGS: NI-SI-10 NI-AM1
 > NI-SI-10 (NI-AM1)
 > Integrační návrhové vzory, synchronní a asynchronní komunikace, blocking a non-blocking I/O.
 
+
 ## Integrační návrhové vzory
 
 <!--
@@ -41,7 +42,7 @@ Schopnost, aby si dva systémy rozuměly.
 - Data – syntaxe/struktura a sémantika
 - Funkce/procesy – syntaxe a sémantika
 - Technické aspekty – protokoly, síťové adresy atd.
-
+<!--ID: 1778786460867-->
 END
 
 ---
@@ -539,7 +540,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020260513195958.png)
 <!-- ImageEnd -->
 
-
+<!--ID: 1778786460870-->
 END
 
 ---
@@ -558,7 +559,7 @@ Back:
 <!-- ImageStart -->
 ![](../../Assets/Pasted%20image%2020260513200044.png)
 <!-- ImageEnd -->
-
+<!--ID: 1778786460874-->
 END
 
 ---
@@ -577,7 +578,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020260513200119.png)
 <!-- ImageEnd -->
 
-
+<!--ID: 1778786460877-->
 END
 
 ---
@@ -596,7 +597,7 @@ Back:
 <!-- ImageStart -->
 ![](../../Assets/Pasted%20image%2020260513200153.png)
 <!-- ImageEnd -->
-
+<!--ID: 1778786460881-->
 END
 
 ---
@@ -613,7 +614,7 @@ Back:
 <!-- ImageStart -->
 ![](../../Assets/Pasted%20image%2020260513200225.png)
 <!-- ImageEnd -->
-
+<!--ID: 1778786460884-->
 END
 
 ---
@@ -627,7 +628,7 @@ Back:
 
 - Mapování dat z jedné struktury do druhé
 - Řeší konverze mezi rozdílnými formáty
-
+<!--ID: 1778786460889-->
 END
 
 ---
@@ -646,7 +647,7 @@ Back:
 <!-- ImageStart -->
 ![](../../Assets/Pasted%20image%2020260513200324.png)
 <!-- ImageEnd -->
-
+<!--ID: 1778786460897-->
 END
 
 ---
@@ -670,7 +671,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020260513200513.png)
 <!-- ImageEnd -->
 
-
+<!--ID: 1778786460900-->
 END
 
 ---
@@ -700,6 +701,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241014182721.png)
 
 <!-- DetailInfoEnd -->
+<!--ID: 1778786460904-->
 END
 
 ---
@@ -716,7 +718,7 @@ Back:
 - Zvyšuje spolehlivost a výkon
     - Server nemusí být dostupný, když klient odesílá požadavek
     - Může zde být více serverů, které požadavky zpracováváají
-
+<!--ID: 1778786460907-->
 END
 
 ---
