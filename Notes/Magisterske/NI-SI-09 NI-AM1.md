@@ -260,7 +260,6 @@ Back:
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020240930103530.png)
 <!-- DetailInfoEnd -->
-
 <!--ID: 1773945940327-->
 END
 
@@ -1218,7 +1217,6 @@ Používá se v praxi HATEOAS?
 Back:
 
 Je to fajn koncept, ale reálně se to moc nepoužívá, protože je prostě jednodušší vědět specifikaci API a s tou pracovat.
-
 <!--ID: 1773945940452-->
 END
 
