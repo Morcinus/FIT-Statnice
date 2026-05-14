@@ -14,6 +14,21 @@ FILE TAGS: NI-SI-03 NI-ADP
 START
 NI-SZZ
 
+Co jsou to **Strukturální návrhové vzory**?
+
+Back:
+
+- Návrhové vzory, které se zabývají tím, jak skládat třídy do komplexnějších struktur
+- Řeší jak jsou tyto objekty navzájem propojeny a jak spolupracují
+
+END
+
+---
+
+
+START
+NI-SZZ
+
 Jaké jsou **structural design patterns**? (7)
 
 Back:
@@ -248,6 +263,21 @@ END
 START
 NI-SZZ
 
+Kdy využít **Bridge** pattern? 
+
+Back:
+
+- Pokud chceme rozdělit funkcionalitu jedné monolitické třídy s více variantami použití (např. práce s více DB servery)
+- Pokud chceme třídu rozšiřovat ve více nezávislých (ortogonálních) dimenzích
+- Pokud chceme být schopni měnit implementaci v době běhu
+
+END
+
+---
+
+START
+NI-SZZ
+
 Jaké jsou výhody a nevýhody **Bridge** design patternu? (4 + 1)
 
 Back:
@@ -348,6 +378,20 @@ Back:
 Tags: should-know N003F010
 <!--ID: 1760705194484-->
 
+END
+
+---
+
+
+START
+NI-SZZ
+
+Kdy využít **Composite** pattern?
+
+Back:
+
+- Při implementaci stuktury, která připomíná strom
+- Pokud chceme, aby se klient choval stejně k jednoduchým a komplexním objektům stejně
 END
 
 ---
@@ -477,6 +521,20 @@ END
 START
 NI-SZZ
 
+Kdy využít **Decorator** pattern? 
+
+Back:
+
+- Pokud chceme přidávat dodatečné chování objektům v době runtime bez rozbíjení kódu, který s nimi pracuje
+- Pokud je rozšiřování třídy pomocí dědičnosti obtížné nebo nemožné
+END
+
+---
+
+
+START
+NI-SZZ
+
 Jaké jsou výhody a nevýhody **Decorator** design patternu? (4 + 3)
 
 Back:
@@ -567,6 +625,20 @@ Tags: should-know N003F016
 END
 
 ---
+
+START
+NI-SZZ
+
+Kdy použít **Facade** pattern?
+
+Back:
+
+- Pokud chceme mít rozhraní s omezenou sadou funkcí ke komplexnímu systému
+- Pokud chceme strukturovat subsystém do vrstev
+END
+
+---
+
 
 START
 NI-SZZ
@@ -672,6 +744,20 @@ END
 START
 NI-SZZ
 
+Kdy použít **Flyweight** pattern?
+
+Back:
+
+- Pokud musí program podporovat velké množství objektů, které se obtížně vejdou do RAM
+
+END
+
+---
+
+
+START
+NI-SZZ
+
 Jaké jsou výhody a nevýhody **Flyweight** design patternu? (1 + 2)
 
 Back:
@@ -761,6 +847,23 @@ END
 START
 NI-SZZ
 
+Kdy použít **Proxy** pattern?
+
+Back:
+
+- Pro lazy inicializaci (Virtual proxy) – pokud je objekt servicy velký a je potřeba jen někdy. Umožňuje zpozdit tvorbu objektu až když je potřeba.
+- Pro řízení přístupu (Protection proxy) – pokud  k objektu můžou přistupovat jen některé části systému
+- Pro vzdálené spuštění kódu (Remote proxy) – Pokud je logika umístěna na vzdáleném serveru
+- Pro logování (Logging proxy)
+- Pro cachování (Caching proxy)
+END
+
+---
+
+
+START
+NI-SZZ
+
 Jaké jsou výhody a nevýhody **Proxy** design patternu? (4 + 2)
 
 Back:
@@ -833,6 +936,23 @@ Tags: should-know N003F025
 END
 
 ---
+
+START
+NI-SZZ
+
+Co je to **Dependency injection**?
+
+Back:
+
+Technika umožňující, aby třída nezávisla na svých závislostech.
+
+- Dosahuje toho declouplingem využití objektu od jeho tvorby.
+- Pomáhá dodržovat S a D principy z SOLID
+- Umožňuje nahrazování implementací bez změny závislostí ve třídách.
+END
+
+---
+
 
 #### Dependency injection
 
@@ -980,3 +1100,17 @@ Tags: should-know N003F027
 END
 
 ---
+
+START
+NI-SZZ
+
+Jaké jsou dva typy **automatizované dependency injection**?
+
+Back:
+
+- Řešení založená na reflexi (reflection-based), která propojují závislosti za běhu programu (runtime).
+- Statická řešení, která generují kód pro propojení závislostí v době překladu (compile time).“
+END
+
+---
+
