@@ -23,7 +23,7 @@ Definice: **Model hromadné obsluhy**
 
 Back:
 
-Nezapomenout na nezávislost - je to důležitý!
+Nezapomenout na nezávislost $c$ a nezávislost veličin $A$ a $S$ (podle Hrabáka to je důležitý)
 
 ![](../../Assets/Pasted%20image%2020250423090622.png)
 
@@ -97,6 +97,19 @@ Definice: **Kandallova notace** ($A|S|c$ notace)
 
 Back:
 
+Popisuje nám systém hromadné obsluhy $A|S|c|K|N|D$:
+- $A$ - **rozdělení časů příchodu** $F_A$
+- $S$ - **rozdělení časů obsluhy** $F_S$
+- $c$ - **počet obslužných míst**
+- $K$ - kapacita systému (pokud neuvedeno tak $+\infty$)
+- $N$ - velikost populace (pokud neuvedeno tak $+\infty$)
+- $D$ - typ obsluhy (pokud neuvedeno tak FIFO)
+
+Rozdělení $A$ a $S$ jsou značena:
+- $M, M(\lambda)$ - exponenciální rozdělení
+- $G$ -obecné/neznámé nebo známé neexponenciální rozdělení
+- $D, D(d)$ - degenerované rozdělení v hodnotě $d$
+
 ![](../../Assets/Pasted%20image%2020250423090710.png)
 
 <!-- ExampleStart -->
@@ -125,7 +138,7 @@ Back:
 
 **Předpis**: $X \sim Poisson(\lambda)$
 **Parametry**:
-- $\lambda$ - střední počet událostí v daném intervalu
+- $\lambda>0$
 **Definice**:
 - $P(X=k) = \frac{\lambda^k}{k!}e^{-\lambda}$
 
@@ -147,7 +160,7 @@ START
 NI-SZZ
 
 
-Jaká je střední hodnota **Poissonovo rozdělení**?
+Jaká je střední hodnota **Poissonova rozdělení**?
 
 Back:
 
@@ -165,7 +178,7 @@ START
 NI-SZZ
 
 
-Jaký je rozptyl **Poissonovo rozdělení**?
+Jaký je rozptyl **Poissonova rozdělení**?
 
 Back:
 
@@ -215,6 +228,10 @@ Jak vypadá systém $M|M|1$?
 Back:
 
 ![](../../Assets/Pasted%20image%2020250423090738.png)
+
+Jak si zapamatovat stacionární rozdělení:
+![](../../Assets/Pasted%20image%2020260514160947.png)
+![](../../Assets/Pasted%20image%2020260514160956.png)
 <!--ID: 1778521859410-->
 END
 
@@ -228,11 +245,21 @@ START
 NI-SZZ
 
 
-Věta: Existence stacionárního rozdělení pro $M|M|1$
+Věta: Existence **stacionárního rozdělení** pro $M|M|1$ a **jak se spočte**
 
 Back:
 
 ![](../../Assets/Pasted%20image%2020250423090829.png)
+
+<!-- ExplanationStart -->
+- $\varrho = \lambda/\mu$ je přímo ze vzorečku pro $\varrho$, když $c=1$
+
+První možnost říká, že se nám ty pravděpodobnosti dlouhodobě ustálí na tom $\pi$.
+
+Druhá možnost říká, že se systém přeplní, takže tam budou neustále narůstat zákazníci, takže šance, že tam bude jeden konkrétní počet zákazníků se blíží nule (když těch zákazníků tam bude nekonečno).
+
+<!-- ExplanationEnd -->
+
 
 <!-- DetailInfoStart -->
 
@@ -270,7 +297,11 @@ $$EN_s = \varrho$$
 
 $$EN_f = \frac{\varrho^2}{1-\varrho}$$
 
+Dále platí, že $EN = EN_s + EN_f$
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020250423090859.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1778521859415-->
 END
 
@@ -347,11 +378,13 @@ START
 NI-SZZ
 
 
-Jak vypadá stacionární rozdělení pro systém $M|M|\infty$?
+Jak vypadá **stacionární rozdělení** pro systém $M|M|\infty$?
 
 Back:
 
-Aneb co mi toto říká je, že se ten celý systém chová jako Poissonovo rozdělení s tím parametrem $\lambda / \mu$.
+Stacionární rozdělení je Poissonovo s parametrem $\lambda/\mu$
+
+(ten vzoreček dole je jen dosazení $\lambda/\mu$ jako parametr toho Poissonova rozdělení)
 
 ![](../../Assets/Pasted%20image%2020250423091059.png)
 
@@ -443,12 +476,29 @@ Original Flashcard ID: 1746599649205
 START
 NI-SZZ
 
-
-Jak vypadá systém $G|G|1$?
-
-Resp. jak se dostaneme k spočtení $\pi_0$?
+Jak spočteme $\pi_0$ v systému $G|G|1$ s využitím Littleho věty?
 
 Back:
+
+Dobu strávenou $k$-tým zákazníkem v systému rozdělíme na:
+
+$$T_k = W_k + S_k$$
+
+kde:
+
+- $W_k$ je doba čekání ve frontě,
+- $S_k$ je doba obsluhy.
+- $ES_k = 1/\mu$ - střední doba obsluhy
+
+Pomocí Littleho věty:
+
+$$EN = \lambda ET_k$$
+
+$$EN_f = \lambda EW_k$$
+
+Protože $EN =  EN_f + EN_s = EN_f + (1-\pi_0)$, dostaneme:
+
+$$\pi_0 = 1- (EN-EN_f) = \text{dosadíme a upravíme} = 1 - \frac{\lambda}{\mu}$$
 
 ![](../../Assets/Pasted%20image%2020250423091348.png)
 <!--ID: 1778521859437-->
@@ -464,7 +514,7 @@ START
 NI-SZZ
 
 
-Jak se spočte $EN$ v systému?
+Jak se spočte $EN$ v systému $M|M|1$ a $M|M|\infty$?
 
 Aneb střední počet požadavků/zákazníků v systému z dlouhodobého hlediska.
 
@@ -521,22 +571,21 @@ END
 START
 NI-SZZ
 
-
-Proč lze systém $M|M|1$ chápat jako **Markovský řetězec se spojitým časem**?
+Proč lze systém $M|M|1$ chápat jako **Markovský řetězec se spojitým časem** proč ne $M|D(1)|1$?
 
 Back:
 
-Stavem může být počet zákazníků v systému v čase $t$:
+Proč ano $M|M|1$
+- Příchody se řídí Poissonovým procesem s intenzitou $\lambda$
+- Doby obsluhy mají exponenciální rozdělení s parametrem $\mu$
+- Jedná se tedy o homogenní markovský řetězec se stavy $\{0,1,2,\dots\}$
 
-$$X_t \in \{0,1,2,\dots\}$$
+Proč ne $M|D(1)|1$:
+- Příchody jsou opět Poissonový proces
+- Doba obsluhy je vždy konstantní $\mu = 1$
+- Nejedná se o markovský řetězec, protože doba obsluhy není bezpaměťová. Závisí totiž na tom, kdy jsem začal obsluhovat jednotlivé zákazníky (protože ta doba obsluhy není random).
 
-Proces je Markovský, protože:
-
-- **příchody** mají **Poissonův proces** s intenzitou $\lambda$,
-- **doby obsluhy** mají **exponenciální rozdělení** s parametrem $\mu$,
-- exponenciální rozdělení je bezpaměťové.
-
-Díky bezpaměťovosti další vývoj závisí jen na aktuálním počtu zákazníků v systému, ne na tom, jak dlouho už zákazníci čekají nebo jsou obsluhováni.
+![](../../Assets/Pasted%20image%2020260514172647.png)
 
 (Pozn. tuhle kartičku jsem přidal pomocí AI, protože byla prázdná sekce "Souvislost s Markovskými řetězci se spojitým časem")
 <!--ID: 1778764368759-->
