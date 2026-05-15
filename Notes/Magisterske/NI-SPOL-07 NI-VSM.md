@@ -251,7 +251,7 @@ START
 NI-SZZ
 
 
-Věta: **Střední délka optimálního kódu**
+Věta: **Střední délka optimálního kódu** (omezení té střední délky)
 
 Back:
 

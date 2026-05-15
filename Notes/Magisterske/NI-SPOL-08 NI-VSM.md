@@ -153,7 +153,6 @@ Pravděpodobnost, že se v průběhu času přejdeme konkrétní sérií stavů 
 
 Tzn. jakoby $p_{s_0}(n_0)$ mi říká, že začnem v daném stavu a $P_{s_0s_1}(n_0,n_1)$ nás přesouvá do dalšího stavu.
 <!-- ExplanationEnd -->
-
 <!--ID: 1778521859641-->
 END
 
@@ -194,7 +193,6 @@ Back:
 <!-- ExplanationStart -->
 Neboli je homogenní, pokud ty pravděpodobnosti přechodu jsou ve všech stavech stejný. Pak můžeme udělat tu jednokrokovou matici přechodu, kterou použijeme k přesunu do dalšího stavu v jakémkoliv stavu.
 <!-- ExplanationEnd -->
-
 <!--ID: 1778521859646-->
 END
 
@@ -1385,7 +1383,7 @@ START
 NI-SZZ
 
 
-Jak se spočte $N$?
+Jak se spočte $N$? (v kontextu matic markovských řetězců)
 
 Back:
 
@@ -1403,7 +1401,7 @@ START
 NI-SZZ
 
 
-Jak se spočte $U$?
+Jak se spočte $U$? (v kontextu matic markovských řetězců)
 
 Back:
 
@@ -1422,6 +1420,8 @@ NI-SZZ
 
 
 Jak se spočte $N_\circ$? (to kolečko má být vyplněné)
+
+ (v kontextu matic markovských řetězců)
 
 Back:
 

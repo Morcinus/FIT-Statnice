@@ -384,6 +384,8 @@ Jak se z Cayleyovy tabulky pozná **asociativita**?
 
 Back:
 
+**Blbě :D**
+
 Z tabulky nepoznáme, musíme si vypsat všechny trojice prvků a ověřit to manuálně.
 
 <!-- DetailInfoStart -->
@@ -410,11 +412,7 @@ Back:
 
 V "jeho" řádcích a sloupcích se přesně opakují označení řádku a sloupce tabulky.
 
-<!-- ImageStart -->
-
 ![](../../Assets/Pasted%20image%2020241226114417.png)
-
-<!-- ImageEnd -->
 
 <!-- DetailInfoStart -->
 
@@ -438,14 +436,14 @@ Jak se z Cayleyovy tabulky pozná **inverzní prvek**?
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241125154446.png)
-
-<!-- ExampleStart -->
+Najdeme v tabulce kde všude se nachází **neutrální prvek** a ty prvky v hlavičce tabulky jsou k sobě inverzní
 
 Např. zde máme neutrální prvek $0$ a pro $3$ bude zde inverzní prvek $1$
 ![](../../Assets/Pasted%20image%2020241226114547.png)
 
-<!-- ExampleEnd -->
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020241125154446.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1778786397139-->
 END
 
@@ -627,7 +625,7 @@ START
 NI-SZZ
 
 
-Věta: **Lagrangeova**
+Věta: **Lagrangeova** (v kontextu grupy)
 
 Back:
 
@@ -653,7 +651,7 @@ START
 NI-SZZ
 
 
-Věta: Sylowova
+Věta: **Sylowova**
 
 Back:
 
@@ -903,7 +901,7 @@ START
 NI-SZZ
 
 
-Důsledek: řád grupy a $\varphi$
+Důsledek: **jak zjistím počet generátorů v cyklické grupě řádu $n$** 
 
 Back:
 
@@ -974,8 +972,7 @@ Original Flashcard ID: 1735205749372
 START
 NI-SZZ
 
-
-Věta: co platí pro všechny prvky $a \in M$ grupy $G = (M, \circ)$
+Věta: čemu je rovno $a^n$ v grupě řádu $n$
 
 Back:
 
@@ -1181,6 +1178,7 @@ Original Flashcard ID: 1735925651147
 START
 NI-SZZ
 
+Jak bychom řešili příklad tohoto typu?
 
 ![](../../Assets/Pasted%20image%2020241231163153.png)
 

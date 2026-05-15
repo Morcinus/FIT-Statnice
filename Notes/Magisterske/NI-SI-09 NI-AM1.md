@@ -1504,7 +1504,7 @@ START
 NI-SZZ
 
 
-Jaké jsou hlavní charakteristiky URI? (5)
+Jaké jsou **hlavní typy** URI? (5)
 
 Back:
 
