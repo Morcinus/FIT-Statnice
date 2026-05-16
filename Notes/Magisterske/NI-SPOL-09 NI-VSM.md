@@ -332,7 +332,7 @@ START
 NI-SZZ
 
 
-Pozorování: **detailní rovnováha**
+Pozorování: **detailní rovnováha** (aneb do splňuje $\pi$ v markovských řetězcích se spojitým časem)
 
 Back:
 

@@ -164,7 +164,7 @@ NI-SZZ
 
 Jak jsou hierarchicky uspořádány kódy:
 
-- **Jednnoznačně dekódovatelné**
+- **Jednoznačně dekódovatelné**
 - **Instantní**
 - **Nesingulární**
 - **Všechny**
@@ -428,7 +428,7 @@ START
 NI-SZZ
 
 
-Lemma: nezápornost entropie
+Lemma: **může být entropie záporná**?
 
 Back:
 
@@ -731,7 +731,7 @@ START
 NI-SZZ
 
 
-Věta: **podmiňování redukuje entropii**
+Věta: **je $H(X|Y)$ nižší nebo vyšší než $H(x)$**
 
 +Kdy nastává rovnost?
 
@@ -921,7 +921,7 @@ START
 NI-SZZ
 
 
-Věta: $h(X) \leq \dots$ pro spojitou náhodnou veličinu
+Věta: $h(X) \leq \dots$ pro spojitou náhodnou veličinu s $\mu$ a oborem hodnot $[0,+\infty)$
 
 +Kdy nastává rovnost?
 

@@ -37,7 +37,6 @@ Original Flashcard ID: 1765204625594
 START
 NI-SZZ
 
-(10)
 Jaké druhy testování bez uživatelů znáte?
 
 Back:
@@ -61,7 +60,6 @@ Original Flashcard ID: 1765204625597
 START
 NI-SZZ
 
-(11)
 Kdo provádí testování bez uživatelů?
 
 Back:
@@ -82,7 +80,6 @@ Original Flashcard ID: 1765204625599
 START
 NI-SZZ
 
-(12)
 Co je to "cognitive walkthrough"?
 
 Back:
@@ -152,7 +149,6 @@ Original Flashcard ID: 1765204625602
 START
 NI-SZZ
 
-(13)
 Co je to **heuristická evaluace**?
 
 Hint: zkus taky vyjmenovat heuristiky (aspoň nějaké)
@@ -250,7 +246,6 @@ Original Flashcard ID: 1765204625605
 START
 NI-SZZ
 
-(14)
 Jaké jsou jednotlivé kroky heuristické evaluace?
 
 Back:
@@ -288,7 +283,6 @@ Original Flashcard ID: 1765204625607
 START
 NI-SZZ
 
-(15)
 Jaký je ideální počet expertů k provedení heuristické evaluace?
 
 Back:
@@ -606,7 +600,6 @@ Original Flashcard ID: 1765204625613
 START
 NI-SZZ
 
-(17)
 Co je to "Usability testing"?
 
 Back:
@@ -655,7 +648,6 @@ Original Flashcard ID: 1765204625616
 START
 NI-SZZ
 
-(18)
 Co je to "Qualitative Usability Testing"?
 
 Back:
@@ -678,7 +670,6 @@ Original Flashcard ID: 1765204625619
 START
 NI-SZZ
 
-(19)
 Co je to "Quantitative Usability Testing"?
 
 Back:
@@ -729,7 +720,6 @@ Original Flashcard ID: 1765204625622
 START
 NI-SZZ
 
-(20)
 Jaké typy testování s uživateli znáte?
 
 Back:
@@ -750,7 +740,6 @@ Original Flashcard ID: 1765204625625
 START
 NI-SZZ
 
-(21)
 Co je to "Ethnographic observation"?
 
 Back:
@@ -769,7 +758,6 @@ Original Flashcard ID: 1765204625628
 START
 NI-SZZ
 
-(22)
 Co je to "Usability engineering"?
 
 Back:
@@ -792,7 +780,6 @@ Original Flashcard ID: 1765204625631
 START
 NI-SZZ
 
-(23)
 Kde a v jakých podmínkách se odehrává "usability engineering"?
 
 Back:
@@ -815,7 +802,6 @@ Original Flashcard ID: 1765204625634
 START
 NI-SZZ
 
-(24)
 Jakými způsoby můžeme vybrat účastníky uživatelského průzkumu? (5)
 
 Back:
@@ -838,7 +824,6 @@ Original Flashcard ID: 1765204625636
 START
 NI-SZZ
 
-(25)
 Co je to **demografická analýza**?
 
 Back:
@@ -873,7 +858,6 @@ Original Flashcard ID: 1765204625639
 START
 NI-SZZ
 
-(26)
 Co je to "**screener**"?
 
 Back:
@@ -899,7 +883,6 @@ Original Flashcard ID: 1765204625650
 START
 NI-SZZ
 
-(30)
 Jaké hlavní části by měl mít uživatelský dotazník (user survey)?
 
 Back:
@@ -941,7 +924,6 @@ Original Flashcard ID: 1765204625652
 START
 NI-SZZ
 
-(31)
 Jak maximálně dlouho by mělo vyplňování uživatelského dotazníku trvat?
 
 Back:
@@ -1132,7 +1114,6 @@ Original Flashcard ID: 1765204625655
 START
 NI-SZZ
 
-(32)
 Co to je a jaké nástroje používá "Remote testing"?
 
 Back:
@@ -1159,7 +1140,6 @@ Original Flashcard ID: 1765204625658
 START
 NI-SZZ
 
-(33)
 Jaké jsou výhody a nevýhody remote testingu?
 
 Back:
@@ -1211,7 +1191,6 @@ Original Flashcard ID: 1765204625661
 START
 NI-SZZ
 
-(34)
 Co je to "Heat map"?
 
 Back:
@@ -1230,7 +1209,6 @@ Original Flashcard ID: 1765204625666
 START
 NI-SZZ
 
-(36)
 Jaké uživatelské akce sledují tzv "Heat maps"?
 
 Back:
@@ -1254,7 +1232,6 @@ Original Flashcard ID: 1765204625664
 START
 NI-SZZ
 
-(35)
 Jaké chování uživatelů nejvíce snižuje výpovědní hodnotu tzv. „Heat maps"?
 
 Back:

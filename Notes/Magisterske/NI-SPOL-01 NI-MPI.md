@@ -680,7 +680,7 @@ START
 NI-SZZ
 
 
-Věta: Grupa generovaná množinou
+Věta: **podgrupa generovaná množinou $N$**
 
 Back:
 
@@ -767,6 +767,8 @@ Věta: $\mathbb{Z}_n^+$ je rovno $⟨k⟩ \Leftrightarrow \dots$
 Back:
 
 ![](../../Assets/Pasted%20image%2020241125162851.png)
+
+Tedy $\gcd (k,n) = 1$
 <!--ID: 1778786397177-->
 END
 
@@ -932,6 +934,8 @@ Kolik generátorů má grupa $\mathbb{Z}_p^\times$, kde $p$ je prvočíslo?
 Back:
 
 ![](../../Assets/Pasted%20image%2020241127132308.png)
+
+Protože multiplikativní grupa má $p-1$ prvků, protože tam není $0$ a z předchozí věty počet generátorů zjistíme pomocí $\varphi{(n)} = \varphi{(p-1)}$
 
 Tags: core
 <!--ID: 1778786397196-->

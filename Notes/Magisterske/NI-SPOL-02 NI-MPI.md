@@ -2,7 +2,7 @@
 created: 2025-10-16T10:05:00
 parent: "[[FIT]]"
 ---
-
+me
 TARGET DECK: NI-SZZ
 FILE TAGS: NI-SPOL-02 NI-MPI
 
@@ -67,7 +67,7 @@ START
 NI-SZZ
 
 
-Definice: Okruh
+Definice: **Okruh**
 
 Back:
 
@@ -87,7 +87,7 @@ START
 NI-SZZ
 
 
-Názvosloví: komutativní okruh
+Názvosloví: **komutativní okruh**
 
 Back:
 
@@ -131,7 +131,7 @@ START
 NI-SZZ
 
 
-Názvosloví: multiplikativní monoid okruhu $R$
+Názvosloví: **multiplikativní monoid okruhu** $R$
 
 Back:
 
@@ -153,11 +153,11 @@ START
 NI-SZZ
 
 
-Názvosloví: neutrální prvek grupy $(M,+)$ v okruhu $R$
+Názvosloví: **neutrální prvek grupy** $(M,+)$ v okruhu $R$
 
 Back:
 
-Neutrální prvek grupy $(M, +)$ se nazývá **nulový prvek**
+Neutrální prvek grupy $(M, +)$ se nazývá **nulový prvek** $0$
 
 Tags: algebra4
 <!--ID: 1778786396995-->
@@ -173,7 +173,7 @@ START
 NI-SZZ
 
 
-Názvosloví: neutrální prvek $(M,\cdot)$ v okruhu $R$
+Názvosloví: **neutrální prvek** $(M,\cdot)$ v okruhu $R$
 
 Back:
 
@@ -216,34 +216,6 @@ END
 ---
 
 ## Konečná tělesa
-
-<!--
-Original Flashcard ID: 1735812207577
--->
-
-START
-NI-SZZ
-
-
-Jak se spočte řád grup:
-
-- $GF(p^n)$ - multiplikativní
-- $GF(p^n)$ - aditivní
-- $Z_n^{+}$
-- $Z_n^{\times}$
-
-Back:
-
-- $GF(p^n)$ - $n-1$
-- $GF(p^n)$ - $n$
-- $Z_n^{+}$ - $n$
-- $Z_n^{\times}$ - $\varphi(n)$ - Eulerova funkce.
-
-Tags: algebra3 core
-<!--ID: 1778786397003-->
-END
-
----
 
 <!--
 Original Flashcard ID: 1735205749320
@@ -310,16 +282,28 @@ START
 NI-SZZ
 
 
-Algoritmus: Jak se dá sestavit konečné těleso neprvočíselného řádu?
+Algoritmus: Sestavení konečného tělesa řádu $p^n$ (tedy neprvočíselného řádu)
 
 Back:
 
 ![](../../Assets/Pasted%20image%2020241221095458.png)
 
+<!-- ExplanationStart -->
+Umíme sestavit třeba $\mathbb{Z}_5$, což je prvočíselného řádu, ale my chceme třeba $\mathbb{Z}_4$, tedy neprvočíselného.
+
+Máme prvočíslo $p$ a celé číslo $n \geq 2$ a chceme sestavit těleso o $p^n$ prvcích
+
+1. Uděláme těleso $p$ prvků např $T=\mathbb{Z}_2 = \{0,1\}$ (a tedy počítáme modulo $2$)
+2. $T[x]$ budou všechny polynomy nad tím tělesem, tedy všechny s koeficienty $0$ nebo $1$ (např. $x^3+x+1$)
+3. Najdeme ireducibilní polynom (tedy ten co nejde rozložit - např. $x^2-1=(x-1)(x+1)$ je reducibilní) - např. $P(x)=x^4+x+1$
+4. Potom vezmeme množinu $F$ všechy polynomů z $T[x]$ stupně $n-1$ a menšího a na této množině zavedeme operace sčítání a násobení (viz výše). $F$ je pak těleso mající $p^n$ prvků
+
+<!-- ExplanationEnd -->
+
 <!-- ExerciseStart -->
 
 ![](../../Assets/Pasted%20image%2020241221101100.png)
-
+![](../../Assets/Pasted%20image%2020260516104618.png)
 <!-- ExerciseEnd -->
 <!--ID: 1778786397011-->
 END
@@ -334,7 +318,7 @@ START
 NI-SZZ
 
 
-Postup: Jak najdu inverzní prvek vůči násobení pro polynom $h(x)$ modulo $P(x)$?
+Postup: Jak najdu **inverzní prvek vůči násobení** pro polynom $h(x)$ modulo $P(x)$?
 
 Back:
 
@@ -372,7 +356,7 @@ START
 NI-SZZ
 
 
-Věta: Jaký řád musí mít konečné těleso?
+Věta: Jaký **řád musí mít konečné těleso**? (+ jak to je s **izomorfismem**)
 
 Back:
 
@@ -392,11 +376,13 @@ START
 NI-SZZ
 
 
-Důsledek: tělesa jakých řádů neexistují? (na tohle se ptají u zkoušky)
+Důsledek: **tělesa jakých řádů neexistují**? (na tohle se ptají u zkoušky)
 
 Back:
 
 ![](../../Assets/Pasted%20image%2020241221102416.png)
+
+Protože musí mít řád $p^n$ kde $p$ je prvočíslo a $n$ je kladné celé číslo
 <!--ID: 1778786397019-->
 END
 
@@ -421,6 +407,36 @@ Tags: core
 END
 
 ---
+
+
+<!--
+Original Flashcard ID: 1735812207577
+-->
+
+START
+NI-SZZ
+
+
+Jak se spočte řád grup:
+
+- $GF(p^n)$ - multiplikativní
+- $GF(p^n)$ - aditivní
+- $Z_n^{+}$
+- $Z_n^{\times}$
+
+Back:
+
+- $GF(p^n)$ - $p^n-1$
+- $GF(p^n)$ - $p^n$
+- $Z_n^{+}$ - $n$
+- $Z_n^{\times}$ - $\varphi(n)$ - Eulerova funkce. Pokud navíc $n$ je prvočíslo, tak řád je $n-1$
+
+Tags: algebra3 core
+<!--ID: 1778786397003-->
+END
+
+---
+
 
 <!--
 Original Flashcard ID: 1735205749345
@@ -460,9 +476,9 @@ Jaké neutrální prvky mají aditivní a multiplikativní grupa tělesa $GF(p^n
 Back:
 
 - Aditivní: $0=00\dots 0 = 0^n$
-  - Např. $000$
+	- Např. $000$
 - Multiplikativní: $00 \dots 1 = 0^{n-1}1$
-  - Např. $001$
+	- Např. $001$
 
 Tags: core
 <!--ID: 1778786397027-->
@@ -485,7 +501,7 @@ Jak se spočte inverze k prvku v aditivní a multiplikativní grupě tělesa $GF
 Back:
 
 - Aditivní: inverze prvku $b_1b_2 \dots b_n$ je $(p-b_1)(p-b_2) \dots (p-b_n)$
-  - Např v $(\mathbb{Z}_3^+)^3 : 333-101 = 232$
+	- Např v $(\mathbb{Z}_3^+)^3 : 333-101 = 232$
 - Multiplikativní: pomocí REA v polynomiálním čase
 
 Tags: core
@@ -551,7 +567,7 @@ Jaký je postup při řešení tohoto příkladu?
 
 Back:
 
-Pomocí EEA získám Bezoutovu rovnost.
+Pomocí REA získám Bezoutovu rovnost.
 
 ![](../../Assets/Pasted%20image%2020241221114159.png)
 <!--ID: 1778786397038-->
@@ -574,8 +590,8 @@ Jak se spočte příklad typu:
 Back:
 
 1. Zjistíme, jeslti mí $P_a(x)$ v $\mathbb{Z}_5$ kořen.
-   1. Postupně dosazuju prvky $\mathbb{Z}_5$
-   2. Pokud najdu nějaký prvek, kde se $P_a(x) = 0$, je $x$ kořen. Pokud takový prvek nenajdu, tak to nemá kořen.
+	1. Postupně dosazuju za $x$ prvky $\mathbb{Z}_5$
+	2. Pokud najdu nějaký prvek, kde se $P_a(x) = 0$, je $x$ kořen. Pokud takový prvek nenajdu, tak to nemá kořen.
 2. Pokud **nemá kořen**, nemá faktorizaci (viz věta), **je ireducibilní**.
 3. Pozor, může nastat divný případ, viz cvičení 23.3b) níže
 
@@ -653,7 +669,7 @@ START
 NI-SZZ
 
 
-Definice: Polynom nad okruhem
+Definice: **Polynom nad okruhem**
 
 Back:
 
@@ -945,13 +961,15 @@ $S(x)=x^2+x$
 
 Ireducibilní polynom $P(x)=x^4+x+1$
 
+nad $\mathbb{Z}_2$
+
 Back:
 
 1. Vynásobíme polynomy ($1101$ a $0110$), vyjde nám $x^5+x^3+x^2+x$
 2. Zmodulíme výsledek polynomem $P(x)$
-   1. Položíme $P(x) = 0$ (protože když bych to modulil $P(x)$, tak to bude $0$) a vyjádříme nejvyšší mocninu (zde $x^4=-x^2-1$)
-   2. Tu rovnici pak mohu násobit $x$ a tím získávat vyjádření polynomů o vyšších mocninách (např. $x^5=-x^2-x$)
-   3. To jsem pak budu dosazovat do výsledku, dokud nedostanu polynom, co je v tom daném tělese $T$
+	1. Položíme $P(x) = 0$ (protože když bych to modulil $P(x)$, tak to bude $0$) a vyjádříme nejvyšší mocninu (zde $x^4=-x^2-1$)
+	2. Tu rovnici pak mohu násobit $x$ a tím získávat vyjádření polynomů o vyšších mocninách (např. $x^5=-x^2-x$)
+	3. To pak budu dosazovat do výsledku, dokud nedostanu polynom, co je v tom daném tělese $T$
 
 ![](../../Assets/Pasted%20image%2020241227135810.png)
 ![](../../Assets/Pasted%20image%2020241221101735.png)
