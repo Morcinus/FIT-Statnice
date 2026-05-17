@@ -151,8 +151,6 @@ NI-SZZ
 
 Co je to **heuristická evaluace**?
 
-Hint: zkus taky vyjmenovat heuristiky (aspoň nějaké)
-
 Back:
 
 Metoda testování použitelnosti bez uživatelů, při které několik odborníků (typicky 3-5) prochází rozhraní aplikace dle scénáře a hodnotí ho podle vybraných heuristik (nebo podotázek ke každé heuristice). Z toho se pak vyhodnotí, které heuristiky jsou splněny a do jaké míry. Dále se vyhodnotí, jak závažné jsou nalezené problémy. 

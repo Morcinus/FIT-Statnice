@@ -1203,7 +1203,10 @@
     "../../Assets/Pasted image 20260513200324.png",
     "../../Assets/Pasted image 20260513200513.png",
     "../../Assets/Pasted image 20260513200704.png",
-    "../../Assets/Pasted image 20260516104618.png"
+    "../../Assets/Pasted image 20260516104618.png",
+    "../../Assets/Pasted image 20260517110227.png",
+    "../../Assets/Pasted image 20260517110258.png",
+    "../../Assets/Pasted image 20260517110914.png"
   ],
   "File Hashes": {
     "Templates/🪛 NoteBoilerplate.md": "d449a5310dab0bdc82306f952b56f56d",
@@ -1243,7 +1246,7 @@
     "Notes/Magisterske/NI-SI-18 NI-PDB.md": "438a7de0e8335599466a9971f4d7f497",
     "Notes/Magisterske/NI-SI-17 NI-PDB.md": "98a649c8944e74b9b5fa90ecdc717303",
     "Notes/Magisterske/NI-SI-16 NI-PDB.md": "2f6896123e00bc409cb500e981bcf734",
-    "Notes/Magisterske/NI-SI-15 NI-NUR.md": "a0a3661ac9983b1f97a96e45e20a02df",
+    "Notes/Magisterske/NI-SI-15 NI-NUR.md": "389c54a4e8903a657aa1b7db3741b808",
     "Notes/Magisterske/NI-SI-14 NI-NUR.md": "d91cd0eb1b29b87ff39e5a2035f625aa",
     "Notes/Magisterske/NI-SI-13 NI-NUR.md": "32ddd4aa7dbf22b7f783734890b24a6c",
     "Notes/Magisterske/NI-SI-12 NI-NSS.md": "22051a48616ba5031f37d556837f0e74",
@@ -1325,7 +1328,7 @@
     "Notes/Magisterske/NI-SPOL-06 NI-VSM.md": "83a37976c631be17e6ab67c6f39d8745",
     "Notes/Magisterske/NI-SPOL-05 NI-MPI.md": "83d96dac18e23ee8beca0bb3d01bbb18",
     "Notes/Magisterske/NI-SPOL-04 NI-MPI.md": "3895b11b394cf71e220a023cc01440c0",
-    "Notes/Magisterske/NI-SPOL-03 NI-MPI.md": "c21cddaec255425f134d01b4d3c17b10",
+    "Notes/Magisterske/NI-SPOL-03 NI-MPI.md": "e65316bed34fb894ea737518e0dabab4",
     "Notes/Magisterske/NI-SPOL-02 NI-MPI.md": "55ead41c5d6667c3ebaa506dc0ff7d1d",
     "Notes/Magisterske/NI-SPOL-01 NI-MPI.md": "0dd5e9104ea9146a0c41b1bf938f9041",
     "Notes/Magisterske/NI-SI-09 NI-AM1.md": "767f6ea885a30eabae88b7fdecc3e2de",
@@ -1343,7 +1346,8 @@
     "Templates/📝 Exercise.md": "d14f54127b99353eaefed1161cffdbf6",
     "Templates/📝 Example.md": "7fee4765af13b3fd4a245213dbd02ca5",
     "Templates/📝 Detail.md": "5a09185a4ce5b5c04da0a510cd585421",
-    "Templates/🎴 Flashcard.md": "7417484e224d5c8a549097f2513db970"
+    "Templates/🎴 Flashcard.md": "7417484e224d5c8a549097f2513db970",
+    "Notes/Priklady/Seznam příkladů.md": "a07566f1d8ac98ac1a44e082faf0038e"
   },
   "fields_dict": {
     "Basic": [
