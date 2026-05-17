@@ -689,21 +689,21 @@ Back:
 **Postupujeme podle věty.**
 
 1. **(0. derivace) + aktivní a neaktivní vazby** Ověříme, že bod leží uvnitř vazby nebo na její hranici
-   - Tzn. dosadíme $(x,y)$ do podmínky a zjistíme, jeslti je to menší než nula, nula nebo větší než nula).
-   - Podmínky $\lt 0$ budou uvnitř vazby a budou mít $\mu = 0$
-   - Podmínky $= 0$ budou na hranici vazby
-   - Body mimo vazbu automaticky vyřadíme.
+	- Tzn. dosadíme $(x,y)$ do podmínky a zjistíme, jeslti je to menší než nula, nula nebo větší než nula).
+	- Podmínky $\lt 0$ budou uvnitř vazby a budou mít $\mu = 0$
+	- Podmínky $= 0$ budou na hranici vazby
+	- Body mimo vazbu automaticky vyřadíme.
 2. **(1. derivace)** Ověříme, že gradient Lagrangeovy funkce bez $\mu$ je nulový:
-   - Spočteme $L(x,y,\mu)$ a její gradient $\nabla L_{(x,y)}$
-   - U bodů, co jsou uvnitř, platí, že $\mu = 0$, tzn. jen dosadím $x,y,\mu$ do gradientu a musí mi všechny složky vyjít nula.
-   - U bodů, co jsou na hranici dosadím $x,y$ a budu řešit soustavu rovnic. Pokud najdu $\mu$ pro které to platí, je to ok. Pokud ne, končím.
+	- Spočteme $L(x,y,\mu)$ a její gradient $\nabla L_{(x,y)}$
+	- U bodů, co jsou uvnitř, platí, že $\mu = 0$, tzn. jen dosadím $x,y,\mu$ do gradientu a musí mi všechny složky vyjít nula.
+	- U bodů, co jsou na hranici dosadím $x,y$ a budu řešit soustavu rovnic. Pokud najdu $\mu$ pro které to platí, je to ok. Pokud ne, končím.
 3. **2. derivace** Spočteme Hessovu matici v daném bodě.
-   - Pokud $\mu = 0$, vynásobím to vektorem $(a,b)$
-   - Pokud $\mu \neq 0$, musím najít obecný vektor, co splňuje to, že je kolmý na gradient vazby. Tzn. spočtu $\nabla h$. Pak mi musí platit, že to je kolmý na to. Např. když vyjde $(1,2)$, bude to $(-2a, a)$.
-   2. Potom zkoumáme jestli jsme schopný mít výsledek větší než nula, resp. menší než nula.
-      - Pokud to najdu tak, aby to bylo $< 0$ i $>0$, pak to je **indefinitní**.
-      - Pokud $< 0$, je to podezřelé z maxima
-      - Pokud $>0$, je to podezřelé z minima
+	- Pokud $\mu = 0$, vynásobím to vektorem $(a,b)$
+	- Pokud $\mu \neq 0$, musím najít obecný vektor, co splňuje to, že je kolmý na gradient vazby. Tzn. spočtu $\nabla h$. Pak mi musí platit, že to je kolmý na to. Např. když vyjde $(1,2)$, bude to $(-2a, a)$.
+	1. Potom zkoumáme jestli jsme schopný mít výsledek větší než nula, resp. menší než nula.
+		- Pokud to najdu tak, aby to bylo $< 0$ i $>0$, pak to je **indefinitní**.
+		- Pokud $< 0$, je to podezřelé z maxima
+		- Pokud $>0$, je to podezřelé z minima
 4. **směr od hranice**: Zkontrolujeme, že nám znaménko multiplikátoru $\mu$ sedí s tím jeslti to je maximum nebo minimum
 
 Hint: V kroku (2. derivace) můžu zkusit na Hessovu matici uplatnit Sylvestrovo kritérium. Pak to je rovnou lok. minimum, resp. maximum.
@@ -885,9 +885,9 @@ Back:
 
 1. Najdu **kritické body** (stacionární + ty, kde alespoň jedna parciální derivace neexistuje)
 2. Pokud jsou **všechny 2. parciální derivace** v okolí stacionárního bodu $\textbf{b}$ spojité, najít **Hessovu matici**. Pokud je matice
-   1. **pozitivně definitní**, pak je bod $\textbf{b}$ bodem ostrého lokálního **minima**
-   2. **negativně definitní**, pak je bod $\textbf{b}$ bodem ostrého lokálního **maxima**
-   3. **indefinitní**, pak je bod $\textbf{b}$ sedlovým bodem (tj. není extrém)
+	1. **pozitivně definitní**, pak je bod $\textbf{b}$ bodem ostrého lokálního **minima**
+	2. **negativně definitní**, pak je bod $\textbf{b}$ bodem ostrého lokálního **maxima**
+	3. **indefinitní**, pak je bod $\textbf{b}$ sedlovým bodem (tj. není extrém)
 
 <!-- DetailInfoStart -->
 
@@ -1235,16 +1235,16 @@ Back:
 1. **(0. derivace)** bod $x^*$ musí být uvnitř nějaké té vazby.
 2. **(1. derivace)** podle $x$-ových proměnných toho bodu musí být rovna $0$
 3. **(aktivní a neaktivní vazby)**
-   1. **aktivní vazba** = bod je na té vazbě (tzn. na "hranici" té množiny)
-      1. $h_k(x^*)=0$ - jsme na "hranici" té množiny
-   2. **neaktivní vazba** = bod je mimo tu vazbu (tzn. uvnitř té množiny)
-      1. $k\in \hat{p}, \mu_k = 0$ - tzn. jsme "uvnitř" té množiny
+	1. **aktivní vazba** = bod je na té vazbě (tzn. na "hranici" té množiny)
+		- $h_k(x^*)=0$ - jsme na "hranici" té množiny
+	2. **neaktivní vazba** = bod je mimo tu vazbu (tzn. uvnitř té množiny)
+		- $k\in \hat{p}, \mu_k = 0$ - tzn. jsme "uvnitř" té množiny
 4. **(2. derivace)** = opět to potřebuju jen ve směrech mých vazeb
-   1. $v^T\cdot  \nabla g_j(x^*)=0$ - Vektor je **kolmý na gradient** té naší vazby (tzn.)
-   2. $v^T\cdot  \nabla h_k(x^*)=0, \ \mu_k^* \neq 0$ - U nerovnostních vazeb to musí platit v případě, že je ta vazba aktivní
-   3. Z Lagrangeovy funkce $L$ uděláme **Hessovu matici** pouze podle $x$-ových proměnných. Tu pak pronásobíme s vektory $v$ a $v^T$, které jsou na těch našich vazbách. Tzn. jsou **kolmé** na gradient každé té vazby - viz. první dva body (2. derivace).
+	1. $v^T\cdot  \nabla g_j(x^*)=0$ - Vektor je **kolmý na gradient** té naší vazby (tzn.)
+	2. $v^T\cdot  \nabla h_k(x^*)=0, \ \mu_k^* \neq 0$ - U nerovnostních vazeb to musí platit v případě, že je ta vazba aktivní
+	3. Z Lagrangeovy funkce $L$ uděláme **Hessovu matici** pouze podle $x$-ových proměnných. Tu pak pronásobíme s vektory $v$ a $v^T$, které jsou na těch našich vazbách. Tzn. jsou **kolmé** na gradient každé té vazby - viz. první dva body (2. derivace).
 5. **(správný "směr" od hranice $\cal{M}$)** = Tento bod mi to omezí tak abych vybíral jen body uvnitř té vazby (viz obrázek).
-   - Zařídí mi to, abych pro lokální minimum bral v potaz ty body, co jsou "směrem dovnitř" té vazby (protože tam může být to minimum, i když není na hranici té vazby).
+	- Zařídí mi to, abych pro lokální minimum bral v potaz ty body, co jsou "směrem dovnitř" té vazby (protože tam může být to minimum, i když není na hranici té vazby).
 
 ![](../../Assets/Pasted%20image%2020241011151014.png)
 
@@ -1320,7 +1320,7 @@ NI-SZZ
 Back:
 
 1. Spočtu vlastní čísla matice - matice se mi zredukuje na 2x2 (nuly se mi odstraní)
-   - Determinant matice, kde diagonály odečtu $\lambda$, vyjádřím $\lambda$
+	- Determinant matice, kde diagonály odečtu $\lambda$, vyjádřím $\lambda$
 2. Mám kvadratickou rovnici $\lambda^2-2\lambda-3$, tedy vlastní čísla budou $3, -1, 0, 0, \dots$
 3. Vlastní čísla se liší, tedy je **indefinitní** (A)
 
