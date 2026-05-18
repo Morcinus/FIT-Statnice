@@ -9,7 +9,6 @@ FILE TAGS: NI-SI-03 NI-ADP
 > NI-SI-03 (NI-ADP)
 > Strukturální návrhové vzory (Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy) a Non-GoF návrhové vzory (Lazy loading, Dependency injection)
 
-
 ## Strukturální návrhové vzory (Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy)
 
 START
@@ -21,11 +20,10 @@ Back:
 
 - Návrhové vzory, které se zabývají tím, jak skládat třídy do komplexnějších struktur
 - Řeší jak jsou tyto objekty navzájem propojeny a jak spolupracují
-<!--ID: 1778786460782-->
-END
+  <!--ID: 1778786460782-->
+  END
 
 ---
-
 
 START
 NI-SZZ
@@ -243,7 +241,7 @@ Back:
 
 1. The **Abstraction** provides high-level control logic. It relies on the implementation object to do the actual low-level work.
 2. The **Implementation** declares the interface that’s common for all concrete implementations. An abstraction can only communicate with an implementation object via methods that are declared here.
-   - The abstraction may list the same methods as the implementation, but usually the abstraction declares some complex behaviors that rely on a wide variety of primitive operations declared by the implementation.
+ 	- The abstraction may list the same methods as the implementation, but usually the abstraction declares some complex behaviors that rely on a wide variety of primitive operations declared by the implementation.
 3. **Concrete Implementations** contain platform-specific code.
 4. **Refined Abstractions** provide variants of control logic. Like their parent, they work with different implementations via the general implementation interface.
 5. Usually, the **Client** is only interested in working with the abstraction. However, it’s the client’s job to link the abstraction object with one of the implementation objects.
@@ -264,15 +262,15 @@ END
 START
 NI-SZZ
 
-Kdy využít **Bridge** pattern? 
+Kdy využít **Bridge** pattern?
 
 Back:
 
 - Pokud chceme rozdělit funkcionalitu jedné monolitické třídy s více variantami použití (např. práce s více DB servery)
 - Pokud chceme třídu rozšiřovat ve více nezávislých (ortogonálních) dimenzích
 - Pokud chceme být schopni měnit implementaci v době běhu
-<!--ID: 1778786460785-->
-END
+  <!--ID: 1778786460785-->
+  END
 
 ---
 
@@ -365,9 +363,9 @@ Back:
 
 1. The **Component** interface describes operations that are common to both simple and complex elements of the tree.
 2. The **Leaf** is a basic element of a tree that doesn’t have sub-elements.
-   - Usually, leaf components end up doing most of the real work, since they don’t have anyone to delegate the work to.
+ 	- Usually, leaf components end up doing most of the real work, since they don’t have anyone to delegate the work to.
 3. The **Container** (aka *composite*) is an element that has sub-elements: leaves or other containers. A container doesn’t know the concrete classes of its children. It works with all sub-elements only via the component interface.
-   - Upon receiving a request, a container delegates the work to its sub-elements, processes intermediate results and then returns the final result to the client.
+ 	- Upon receiving a request, a container delegates the work to its sub-elements, processes intermediate results and then returns the final result to the client.
 4. The **Client** works with all elements through the component interface. As a result, the client can work in the same way with both simple or complex elements of the tree.
 
 <!-- ExampleStart -->
@@ -383,7 +381,6 @@ END
 
 ---
 
-
 START
 NI-SZZ
 
@@ -393,8 +390,8 @@ Back:
 
 - Při implementaci stuktury, která připomíná strom
 - Pokud chceme, aby se klient choval stejně k jednoduchým a komplexním objektům stejně
-<!--ID: 1778786460788-->
-END
+  <!--ID: 1778786460788-->
+  END
 
 ---
 
@@ -523,17 +520,16 @@ END
 START
 NI-SZZ
 
-Kdy využít **Decorator** pattern? 
+Kdy využít **Decorator** pattern?
 
 Back:
 
 - Pokud chceme přidávat dodatečné chování objektům v době runtime bez rozbíjení kódu, který s nimi pracuje
 - Pokud je rozšiřování třídy pomocí dědičnosti obtížné nebo nemožné
-<!--ID: 1778786460792-->
-END
+  <!--ID: 1778786460792-->
+  END
 
 ---
-
 
 START
 NI-SZZ
@@ -613,7 +609,7 @@ Back:
 1. The **Facade** provides convenient access to a particular part of the subsystem’s functionality. It knows where to direct the client’s request and how to operate all the moving parts.
 2. An **Additional Facade** class can be created to prevent polluting a single facade with unrelated features that might make it yet another complex structure. Additional facades can be used by both clients and other facades.
 3. The **Complex Subsystem** consists of dozens of various objects. To make them all do something meaningful, you have to dive deep into the subsystem’s implementation details, such as initializing objects in the correct order and supplying them with data in the proper format.
-   - Subsystem classes aren’t aware of the facade’s existence. They operate within the system and work with each other directly.
+ 	- Subsystem classes aren’t aware of the facade’s existence. They operate within the system and work with each other directly.
 4. The **Client** uses the facade instead of calling the subsystem objects directly.
 
 <!-- ExampleStart -->
@@ -638,11 +634,10 @@ Back:
 
 - Pokud chceme mít rozhraní s omezenou sadou funkcí ke komplexnímu systému
 - Pokud chceme strukturovat subsystém do vrstev
-<!--ID: 1778786460796-->
-END
+  <!--ID: 1778786460796-->
+  END
 
 ---
-
 
 START
 NI-SZZ
@@ -753,11 +748,10 @@ Kdy použít **Flyweight** pattern?
 Back:
 
 - Pokud musí program podporovat velké množství objektů, které se obtížně vejdou do RAM
-<!--ID: 1778786460800-->
-END
+  <!--ID: 1778786460800-->
+  END
 
 ---
-
 
 START
 NI-SZZ
@@ -856,15 +850,14 @@ Kdy použít **Proxy** pattern?
 Back:
 
 - Pro lazy inicializaci (Virtual proxy) – pokud je objekt servicy velký a je potřeba jen někdy. Umožňuje zpozdit tvorbu objektu až když je potřeba.
-- Pro řízení přístupu (Protection proxy) – pokud  k objektu můžou přistupovat jen některé části systému
+- Pro řízení přístupu (Protection proxy) – pokud k objektu můžou přistupovat jen některé části systému
 - Pro vzdálené spuštění kódu (Remote proxy) – Pokud je logika umístěna na vzdáleném serveru
 - Pro logování (Logging proxy)
 - Pro cachování (Caching proxy)
-<!--ID: 1778786460803-->
-END
+  <!--ID: 1778786460803-->
+  END
 
 ---
-
 
 START
 NI-SZZ
@@ -954,11 +947,10 @@ Technika umožňující, aby třída nezávisla na svých závislostech.
 - Dosahuje toho declouplingem využití objektu od jeho tvorby.
 - Pomáhá dodržovat S a D principy z SOLID
 - Umožňuje nahrazování implementací bez změny závislostí ve třídách.
-<!--ID: 1778786460807-->
-END
+  <!--ID: 1778786460807-->
+  END
 
 ---
-
 
 #### Dependency injection
 
@@ -1116,8 +1108,7 @@ Back:
 
 - Řešení založená na reflexi (reflection-based), která propojují závislosti za běhu programu (runtime).
 - Statická řešení, která generují kód pro propojení závislostí v době překladu (compile time).“
-<!--ID: 1778786460810-->
-END
+  <!--ID: 1778786460810-->
+  END
 
 ---
-

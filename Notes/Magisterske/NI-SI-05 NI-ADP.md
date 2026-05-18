@@ -9,7 +9,6 @@ FILE TAGS: NI-SI-05 NI-ADP
 > NI-SI-05 (NI-ADP)
 > Architektonické vzory (MVC, MVP, MVVM, Client-Server, Microservices vs monolithic server, Asynchronous messaging, Blackboard architecture, Rule-based architecture, Publish-subscribe).
 
-
 ## Architektonické vzory (MVC, MVP, MVVM, Client-Server, Microservices vs monolithic server, Asynchronous messaging, Blackboard architecture, Rule-based architecture, Publish-subscribe)
 
 ### MVC
@@ -247,12 +246,14 @@ Jaké jsou výhody a nevýhody **Client-server** architektury? (2 + 1)
 Back:
 
 **Výhody**:
+
 - Podpora Separation of Concerns
 	- Klient – UI
 	- Server – Business logika a ukládání dat
 - Škálovatelnost – server je navržen, aby mohl komunikovat s více klienty souběžně. Serverové prostředky lze škálovat.
 
 **Nevýhody:**
+
 - Vyžaduje připojení k síti, což může přináše problémy s latencí
 - Server je Single point of Failure
 
@@ -283,7 +284,6 @@ END
 
 ### Microservices vs monolithic server
 
-
 START
 NI-SZZ
 
@@ -297,10 +297,10 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020260513151521.png)
 <!--ID: 1778786460815-->
+
 END
 
 ---
-
 
 START
 NI-SZZ
@@ -310,18 +310,20 @@ Jaké jsou výhody a nevýhody **monolitické architektury** (4+4)?
 Back:
 
 **Výhody**
+
 - Snadné nasazení
 - Vysoký výkon
 - Snadné ladění
 - Datová konzistence skrze transakce
 
 **Nevýhody**
+
 - **Neefektivní škálování**
 - **Technologický lock-in** – Změna programovacího jazyka znamená kompletní přepis aplikace
 - **Složitost při růstu** – Při rozšiřování se stává projekt obrovským, nepřehledným a obtížným na orientaci (Big Ball of Mud)
 - **Náchylnost na chyby** – Jedna chyba ovlivní fungování celého systému
-<!--ID: 1778786460818-->
-END
+  <!--ID: 1778786460818-->
+  END
 
 ---
 
@@ -339,6 +341,7 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020260513151444.png)
 <!--ID: 1778786460822-->
+
 END
 
 ---
@@ -351,20 +354,23 @@ Jaké jsou výhody a nevýhody **mikroslužeb**?
 Back:
 
 **Výhody**
+
 - Nezávislé nasazování
 - Snadné škálování – cílené přidávání výkonu jen službám, které to potřebují
 - Technologická svoboda – každá služba může být v jiném programovacím jazyce
 - Izolace chyb – vyšší odolnost systému
 
 **Nevýhody**
+
 - Složitost infrasturktury
 - Síťová latence a spolehlivost – komunikace přes síť je násobně pomalejší než v paměti
 - Komplikované ladění – distribuované sledování chyby
 - Problémy s udržením datové konzistence – transakce napříč mikroslužbami je mnohem komplikovanější.
-<!--ID: 1778786460825-->
-END
+  <!--ID: 1778786460825-->
+  END
 
 ---
+
 ### Asynchronous messaging
 
 START
@@ -387,14 +393,14 @@ Vysoká provázanost s Publish-subscribe architekturou
 <!-- ExampleStart -->
 
 - **Java Messaging Service (JMS)**
-  - Standard messaging API for JAVA platform
-  - Interoperability is only within Java and JVM languages like Scala, Groovy
-  - Does not worry about wire level protocol
-  - Supports messaging models with queues and topics
-  - Supports transactions
-  - Defines the message format (headers, properties and body)
+	- Standard messaging API for JAVA platform
+	- Interoperability is only within Java and JVM languages like Scala, Groovy
+	- Does not worry about wire level protocol
+	- Supports messaging models with queues and topics
+	- Supports transactions
+	- Defines the message format (headers, properties and body)
 - **.Net Messaging Service**
-  - MS alternative to support their platform and programming languages
+	- MS alternative to support their platform and programming languages
 
 ![](../../../Assets/Pasted%20image%2020250130124107.png)
 
@@ -449,10 +455,10 @@ Back:
 - Useful for problems for which NO deterministic solution strategies are known
 - Several specialised sub-systems assemble their knowledge to build a possibly partial or approximate solution
 - Domains:
-  - speech recognition
-  - OCR
-  - protein structure identification
-  - sonar signals interpretation
+	- speech recognition
+	- OCR
+	- protein structure identification
+	- sonar signals interpretation
 
 **StackOverflow**
 _StackOverflow is pretty much a Blackboard system, with developers as agents, sharing their expert knowledge about the undetermined problems set on the board._
@@ -460,9 +466,9 @@ _StackOverflow is pretty much a Blackboard system, with developers as agents, sh
 **Speech recognition**
 
 - Procedures (knowledge sources)
-  - A procedure divides the waveform into segments (phones)
-  - Another procedure checks the syntax of candidate phrases
-  - …
+	- A procedure divides the waveform into segments (phones)
+	- Another procedure checks the syntax of candidate phrases
+	- …
 - There is no consistent algorithm that combines all the necessary procedures for recognising speech
 - Problem = ambiguities of spoken language: - noisy data - peculiarities of speakers - vocabulary - pronunciation - syntax
   ![](../../../Assets/Pasted%20image%2020250130124453.png)
@@ -483,23 +489,13 @@ Z jakých komponent se skládá **Blackboard architektura** (3)?
 
 Back:
 
-- **Blackboard (Tabule):**
-    - **centrální úložiště dat** (sdílená paměť), které obsahuje data spojená s problémem.
-    - Nachází se zde počáteční zadání, mezivýsledky (částečná řešení), hypotézy a nakonec i konečné řešení.
-    - Stav na tabuli se neustále vyvíjí.
-- **Knowledge Sources (Zdroje znalostí / Experti):**
-    - Nezávislé a specializované moduly (kusy kódu, algoritmy, neuronové sítě).
-    - Každý modul umí řešit jen svou specifickou část problému.
-    - **Klíčové pravidlo:** Tito experti **nikdy nekomunikují přímo mezi sebou**. Sledují pouze tabuli. Jakmile se na tabuli objeví data, kterým rozumí, "zvednou ruku", že chtějí přispět.
-- **Control Shell (Řídicí komponenta / Moderátor):**
-    - Aby se experti u tabule neprali, musí tam být moderátor.
-    - Tato komponenta neustále monitoruje změny na tabuli a "zvednuté ruce" expertů.
-    - Rozhoduje, komu dá slovo (zavolá jeho metodu) a jakým způsobem se bude řešení vyvíjet. Řídí tedy celý průběh programu.
-<!--ID: 1778786460829-->
-END
+- **Blackboard (Tabule):** - **centrální úložiště dat** (sdílená paměť), které obsahuje data spojená s problémem. - Nachází se zde počáteční zadání, mezivýsledky (částečná řešení), hypotézy a nakonec i konečné řešení. - Stav na tabuli se neustále vyvíjí.
+- **Knowledge Sources (Zdroje znalostí / Experti):** - Nezávislé a specializované moduly (kusy kódu, algoritmy, neuronové sítě). - Každý modul umí řešit jen svou specifickou část problému. - **Klíčové pravidlo:** Tito experti **nikdy nekomunikují přímo mezi sebou**. Sledují pouze tabuli. Jakmile se na tabuli objeví data, kterým rozumí, "zvednou ruku", že chtějí přispět.
+- **Control Shell (Řídicí komponenta / Moderátor):** - Aby se experti u tabule neprali, musí tam být moderátor. - Tato komponenta neustále monitoruje změny na tabuli a "zvednuté ruce" expertů. - Rozhoduje, komu dá slovo (zavolá jeho metodu) a jakým způsobem se bude řešení vyvíjet. Řídí tedy celý průběh programu.
+  <!--ID: 1778786460829-->
+  END
 
 ---
-
 
 START
 NI-SZZ
@@ -512,6 +508,7 @@ Back:
 - Je to vysoce specializovaný nástroj pro specifické problémy.
 
 **Případy užití:**
+
 - Robotika a vozidla se senzory
 - Kybernetická bezpečnost (SIEM a detekce hrozeb)
 - Kompilátory a moderní IDE – pracují nad jedním syntaktickým stromem
@@ -535,6 +532,7 @@ Back:
 
 Poskytnout způsob, jak zakódovat (formalizovat) know-how a proces řešení problémů **lidských expertů**.
 <!--ID: 1778786460833-->
+
 END
 
 ---
@@ -565,6 +563,7 @@ Back:
 
 <!-- ExampleEnd -->
 <!--ID: 1778786460837-->
+
 END
 
 ---
@@ -577,10 +576,11 @@ V jakém formátu jsou uložena pravidla ve Znalostní bázi (Rule-base) a z če
 Back:
 
 Ve formátu **IF (podmínka) THEN (akce)**.
+
 - **Podmínka (Condition):** Testuje obsah _Working memory_ (např. přítomnost symbolů) nebo data ze senzorů.
 - **Akce (Action):** Změní stav _Working memory_ nebo spustí externí operaci.
-<!--ID: 1778786460840-->
-END
+  <!--ID: 1778786460840-->
+  END
 
 ---
 
@@ -594,8 +594,8 @@ Back:
 1. **Match (Shoda):** Porovnání podmínek všech pravidel s obsahem _Working memory_.
 2. **Conflict-Resolution (Řešení konfliktů):** Výběr _jednoho_ konkrétního pravidla z těch, která splnila podmínku.
 3. **Act (Akce):** Provedení akce vybraného pravidla (často změní paměť) a návrat zpět na fázi 1.
-    
 <!--ID: 1778786460844-->
+
 END
 
 ---
@@ -603,12 +603,13 @@ END
 START
 NI-SZZ
 
-Co je to _Conflict set_ (vznikající ve fázi "Match") v Rule-based architektuře? 
+Co je to _Conflict set_ (vznikající ve fázi "Match") v Rule-based architektuře?
 
 Back:
 
 Je to seznam všech pravidel (instancí), jejichž levá strana (podmínka) se **aktuálně shoduje se stavem pracovní paměti**. Z tohoto seznamu se následně vybírá jedno pravidlo k provedení. _(Pozn.: Pokud je conflict set prázdný, interpret se zastaví)._
 <!--ID: 1778786460848-->
+
 END
 
 ---
@@ -621,9 +622,10 @@ Kdy je Rule-based architektura obzvláště efektivní (Applicability)?
 Back:
 
 Když je **sada pravidel výrazně jednodušší než samotný model**, který z nich vznikne (model je tvořen opakováním omezeného množství vzorů).
+
 - _Pozn.:_ Používá se v AI pro ručně psaná/spravovaná pravidla (typicky _nezahrnuje_ pravidla automaticky vygenerovaná strojovým učením).
-<!--ID: 1778786460851-->
-END
+  <!--ID: 1778786460851-->
+  END
 
 ---
 
@@ -681,21 +683,18 @@ Na základě čeho se lze přihlásit k odběru zpráv v **Publish-subscribe** m
 
 Back:
 
- 1. **Směrování na základě témat (Topic-based)**
-	- Zprávy jsou publikovány do takzvaných „témat“ (_topics_) nebo do pojmenovaných logických kanálů. Za určení a definici těchto kanálů je zodpovědný odesílatel (_publisher_).
-	- Odběratelé (_subscribers_) přijímají naprosto všechny zprávy, které jsou publikovány do témat, k jejichž odběru se přihlásili.
-    - Všichni odběratelé přihlášení k danému tématu obdrží tytéž zprávy.
+1. **Směrování na základě témat (Topic-based)**
+ 	- Zprávy jsou publikovány do takzvaných „témat“ (_topics_) nebo do pojmenovaných logických kanálů. Za určení a definici těchto kanálů je zodpovědný odesílatel (_publisher_).
+ 	- Odběratelé (_subscribers_) přijímají naprosto všechny zprávy, které jsou publikovány do témat, k jejichž odběru se přihlásili.
+ 	- Všichni odběratelé přihlášení k danému tématu obdrží tytéž zprávy.
 2. **Směrování na základě obsahu (Content-based)**
-	- Zprávy jsou odběrateli doručeny pouze v případě, že atributy nebo samotný obsah zprávy splňují podmínky (filtry), které si nadefinoval sám odběratel.
-	- Za klasifikaci a třídění zpráv je v tomto modelu zodpovědný odběratel.
- 3. **Hybridní přístup (Hybrid)**
-	- Některé systémy podporují kombinaci obou výše zmíněných přístupů.
-	- Odesílatelé běžně publikují zprávy do určitého tématu, zatímco odběratelé si nad jedním nebo více tématy registrují odběr s dodatečným filtrováním na základě obsahu zprávy.
-<!--ID: 1778786460855-->
-END
+ 	- Zprávy jsou odběrateli doručeny pouze v případě, že atributy nebo samotný obsah zprávy splňují podmínky (filtry), které si nadefinoval sám odběratel.
+ 	- Za klasifikaci a třídění zpráv je v tomto modelu zodpovědný odběratel.
+3. **Hybridní přístup (Hybrid)** - Některé systémy podporují kombinaci obou výše zmíněných přístupů. - Odesílatelé běžně publikují zprávy do určitého tématu, zatímco odběratelé si nad jedním nebo více tématy registrují odběr s dodatečným filtrováním na základě obsahu zprávy.
+   <!--ID: 1778786460855-->
+   END
 
 ---
-
 
 START
 NI-SZZ
@@ -704,14 +703,11 @@ Kdy se lze přihlásit k odběru v **Publish-sbuscribe** modelu?
 
 Back:
 
-- **Build time**
-    - Příklad: V systémech s grafickým uživatelským rozhraním (GUI) mohou být klienti pevně naprogramováni přímo v kódu tak, aby obsluhovali uživatelské příkazy (např. událost kliknutí na tlačítko).
-- **Initialization time**
-    - Příklad: Existují frameworky a softwarové produkty, které k registraci odběratelů využívají konfigurační XML soubory. Tato registrace proběhne jednorázově během úvodního načítání (inicializace) systému.
-- **Runtime**
-    - Příklad: Databázové triggery (spouštěče), e-mailové konference (mailing listy) a RSS kanály. (Uživatel nebo systém může odběr dynamicky vytvářet či rušit kdykoliv během toho, co aplikace běží).
-    
+- **Build time** - Příklad: V systémech s grafickým uživatelským rozhraním (GUI) mohou být klienti pevně naprogramováni přímo v kódu tak, aby obsluhovali uživatelské příkazy (např. událost kliknutí na tlačítko).
+- **Initialization time** - Příklad: Existují frameworky a softwarové produkty, které k registraci odběratelů využívají konfigurační XML soubory. Tato registrace proběhne jednorázově během úvodního načítání (inicializace) systému.
+- **Runtime** - Příklad: Databázové triggery (spouštěče), e-mailové konference (mailing listy) a RSS kanály. (Uživatel nebo systém může odběr dynamicky vytvářet či rušit kdykoliv během toho, co aplikace běží).
 <!--ID: 1778786460859-->
+
 END
 
 ---
@@ -724,10 +720,9 @@ Jaké jsou nevýhody **publish-subscribe** architektury? (2)
 Back:
 
 **Problémy s doručováním zpráv**
+
 - **Potvrzování přijetí zpráv odběrateli:** (Řeší se, jakým způsobem odběratelé odesílají zpět potvrzení o úspěšném zpracování zprávy, aby ji broker mohl smazat).
-- **Omezená maximální škálovatelnost pub/sub sítě:**
-    - **Nárazová zátěž (Load surges):** Období, kdy požadavky odběratelů (nebo nápor zpráv) zcela zahltí propustnost sítě, po kterých následují období s nízkým objemem zpráv (kdy je přenosová kapacita sítě naopak nevyužita).
-    - **Zpomalování (Slowdowns):** S tím, jak systém využívá stále více aplikací (a to i v případě, že komunikují na zcela oddělených pub/sub kanálech), celkový objem a tok zpráv způsobí, že doručování dat k jednotlivému odběrateli se začne zpomalovat (z důvodu celkového zatížení centrální infrastruktury/brokera).
+- **Omezená maximální škálovatelnost pub/sub sítě:** - **Nárazová zátěž (Load surges):** Období, kdy požadavky odběratelů (nebo nápor zpráv) zcela zahltí propustnost sítě, po kterých následují období s nízkým objemem zpráv (kdy je přenosová kapacita sítě naopak nevyužita). - **Zpomalování (Slowdowns):** S tím, jak systém využívá stále více aplikací (a to i v případě, že komunikují na zcela oddělených pub/sub kanálech), celkový objem a tok zpráv způsobí, že doručování dat k jednotlivému odběrateli se začne zpomalovat (z důvodu celkového zatížení centrální infrastruktury/brokera).
 
 Tags: should-know N005F020
 <!--ID: 1760705194453-->

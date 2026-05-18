@@ -9,9 +9,7 @@ FILE TAGS: NI-SI-02 NI-ADP
 > NI-SI-02 (NI-ADP)
 > Vytvářecí návrhové vzory (Abstract factory, Factory method, Builder, Prototype, Singleton) a Non-GoF návrhové vzory (Double-checked locking, Thread pool, Mock object, Null object).
 
-
 ## Vytvářecí návrhové vzory (Abstract factory, Factory method, Builder, Prototype, Singleton)
-
 
 START
 NI-SZZ
@@ -23,10 +21,11 @@ Back:
 Návrhové vzory jsou typická řešení k běžně objevujícím se problémům v softwarovém návrhu.
 
 <!-- DetailInfoStart -->
+
 - Vzor není specifický kód, který řeší nějaký konkrétní problém. Jedná se o něco, co je dobré následovat při návrhu řešení konkrétního typu problému.
-<!-- DetailInfoEnd -->
-<!--ID: 1778786460712-->
-END
+  <!-- DetailInfoEnd -->
+  <!--ID: 1778786460712-->
+  END
 
 ---
 
@@ -40,8 +39,8 @@ Back:
 - **Záměr**: stručný popis problému a jeho řešení
 - **Motivace**: detailnější popis problému a proč ho navrhovaný způsob řešení řeší
 - Struktura: Třídy, které je potřebné přidat a jak jsou na sobě závislé.
-<!--ID: 1778786460725-->
-END
+  <!--ID: 1778786460725-->
+  END
 
 ---
 
@@ -54,11 +53,10 @@ Back:
 
 - Návrhové vzory, které se zabývají mechanismy tvorby objektů
 - Hlavní myšlenkou je oddělit vytváření objektů od kódu, který tyto objekty využívá
-<!--ID: 1778786460729-->
-END
+  <!--ID: 1778786460729-->
+  END
 
 ---
-
 
 START
 NI-SZZ
@@ -186,8 +184,8 @@ Back:
 	- Např. různé typy nepřátel
 	- Nechceme, aby kód závisel na konkrétních třídach, ale na rozhraních
 - Pokud máme třídu s několika Factory metodama, které znejasňují primární účel třídy. (SRP princip)
-<!--ID: 1778786460732-->
-END
+  <!--ID: 1778786460732-->
+  END
 
 ---
 
@@ -281,7 +279,6 @@ Tags: should-know N002F006
 
 END
 
-
 ---
 
 START
@@ -293,9 +290,8 @@ Back:
 
 - Pokud máme konstruktor s velkým množstvím parametrů 7+
 - Pokud máme ve třídě více konstruktorů, kde každý má jinou sadu parametrů a plní tvoří jinou část objektu
-- 
-<!--ID: 1778786460735-->
-END
+- <!--ID: 1778786460735-->
+  END
 
 ---
 
@@ -395,10 +391,10 @@ Back:
 1. The **Product** declares the interface, which is common to all objects that can be produced by the creator and its subclasses.
 2. **Concrete Products** are different implementations of the product interface.
 3. The **Creator** class declares the factory method that returns new product objects. It’s important that the return type of this method matches the product interface.
-   - You can declare the factory method as `abstract` to force all subclasses to implement their own versions of the method. As an alternative, the base factory method can return some default product type.
-   - Note, despite its name, product creation is **not** the primary responsibility of the creator. Usually, the creator class already has some core business logic related to products. The factory method helps to decouple this logic from the concrete product classes. Here is an analogy: a large software development company can have a training department for programmers. However, the primary function of the company as a whole is still writing code, not producing programmers.
+ 	- You can declare the factory method as `abstract` to force all subclasses to implement their own versions of the method. As an alternative, the base factory method can return some default product type.
+ 	- Note, despite its name, product creation is **not** the primary responsibility of the creator. Usually, the creator class already has some core business logic related to products. The factory method helps to decouple this logic from the concrete product classes. Here is an analogy: a large software development company can have a training department for programmers. However, the primary function of the company as a whole is still writing code, not producing programmers.
 4. **Concrete Creators** override the base factory method so it returns a different type of product.
-   - Note that the factory method doesn’t have to **create** new instances all the time. It can also return existing objects from a cache, an object pool, or another source.
+ 	- Note that the factory method doesn’t have to **create** new instances all the time. It can also return existing objects from a cache, an object pool, or another source.
 
 <!-- ExampleStart -->
 
@@ -412,6 +408,7 @@ Tags: should-know N002F009
 END
 
 ---
+
 START
 NI-SZZ
 
@@ -419,12 +416,13 @@ Kdy použít **Factory method**?
 
 Back:
 
-- Pokud na  začátku nevíme přesnou specifikaci typů a jejich závislostí
+- Pokud na začátku nevíme přesnou specifikaci typů a jejich závislostí
 - Pokud tvoříme framework a chceme umožnit uživatelům upravit si chování jeho interních částí
-<!--ID: 1778786460737-->
-END
+  <!--ID: 1778786460737-->
+  END
 
 ---
+
 START
 NI-SZZ
 
@@ -543,8 +541,8 @@ Kdy použít **Prototype**?
 Back:
 
 - Pokud nechceme, aby náš kód závisel na konkrétních třídách objektů, které potřebuje zkopírovat
-<!--ID: 1778786460740-->
-END
+  <!--ID: 1778786460740-->
+  END
 
 ---
 
@@ -641,6 +639,7 @@ Tags: should-know N002F016
 END
 
 ---
+
 START
 NI-SZZ
 
@@ -649,10 +648,11 @@ Kdy použít **Singleton**?
 Back:
 
 - Pokud chceme zajistit, že existuje pouze jedna instance třídy pro celou aplikaci
-<!--ID: 1778786460743-->
-END
+  <!--ID: 1778786460743-->
+  END
 
 ---
+
 START
 NI-SZZ
 

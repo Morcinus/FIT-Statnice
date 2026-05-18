@@ -2,6 +2,7 @@
 created: 2025-10-16T10:05:00
 parent: "[[FIT]]"
 ---
+
 me
 TARGET DECK: NI-SZZ
 FILE TAGS: NI-SPOL-02 NI-MPI
@@ -18,7 +19,6 @@ Original Flashcard ID: 1735205749280
 START
 NI-SZZ
 
-
 Definice: **těleso**
 
 Back:
@@ -27,6 +27,7 @@ Back:
 
 Tags: algebra4 core
 <!--ID: 1778786396972-->
+
 END
 
 ---
@@ -37,7 +38,6 @@ Original Flashcard ID: 1735205749282
 
 START
 NI-SZZ
-
 
 Věta: Pokud pro $a,b$ z tělesa $T$ platí $ab =0$, potom $\dots$
 
@@ -53,6 +53,7 @@ Back:
 
 Tags: algebra4 core
 <!--ID: 1778786396981-->
+
 END
 
 ---
@@ -66,7 +67,6 @@ Original Flashcard ID: 1735205749262
 START
 NI-SZZ
 
-
 Definice: **Okruh**
 
 Back:
@@ -75,6 +75,7 @@ Back:
 
 Tags: algebra4 core
 <!--ID: 1778786396983-->
+
 END
 
 ---
@@ -86,7 +87,6 @@ Original Flashcard ID: 1735205749265
 START
 NI-SZZ
 
-
 Názvosloví: **komutativní okruh**
 
 Back:
@@ -97,6 +97,7 @@ Je-li $\cdot$ komutativní, je $R$ **komutativní okruh**.
 
 Tags: algebra4
 <!--ID: 1778786396987-->
+
 END
 
 ---
@@ -108,7 +109,6 @@ Original Flashcard ID: 1735205749268
 START
 NI-SZZ
 
-
 Názvosloví: aditivní grupa okruhu $R$
 
 Back:
@@ -119,6 +119,7 @@ $(M, +)$ se nazývá **aditivní grupa** okruhu $R$
 
 Tags: algebra4
 <!--ID: 1778786396990-->
+
 END
 
 ---
@@ -130,7 +131,6 @@ Original Flashcard ID: 1735205749270
 START
 NI-SZZ
 
-
 Názvosloví: **multiplikativní monoid okruhu** $R$
 
 Back:
@@ -141,6 +141,7 @@ $(M, \cdot)$ se nazývá **multiplikativní monoid** okruhu $R$
 
 Tags: algebra4
 <!--ID: 1778786396992-->
+
 END
 
 ---
@@ -152,7 +153,6 @@ Original Flashcard ID: 1735205749273
 START
 NI-SZZ
 
-
 Názvosloví: **neutrální prvek grupy** $(M,+)$ v okruhu $R$
 
 Back:
@@ -161,6 +161,7 @@ Neutrální prvek grupy $(M, +)$ se nazývá **nulový prvek** $0$
 
 Tags: algebra4
 <!--ID: 1778786396995-->
+
 END
 
 ---
@@ -172,7 +173,6 @@ Original Flashcard ID: 1735205749275
 START
 NI-SZZ
 
-
 Názvosloví: **neutrální prvek** $(M,\cdot)$ v okruhu $R$
 
 Back:
@@ -181,6 +181,7 @@ Neutrální prvek multiplikativního monoidu $(M, \cdot)$ se nazývá **jedničk
 
 Tags: algebra4
 <!--ID: 1778786396998-->
+
 END
 
 ---
@@ -191,7 +192,6 @@ Original Flashcard ID: 1735205749277
 
 START
 NI-SZZ
-
 
 Definice: **Obor integrity**
 
@@ -211,6 +211,7 @@ $$A \cdot B = 0, \quad  A \neq 0, \quad B \neq 0 $$
 
 Tags: algebra4 core
 <!--ID: 1778786397000-->
+
 END
 
 ---
@@ -223,7 +224,6 @@ Original Flashcard ID: 1735205749320
 
 START
 NI-SZZ
-
 
 Definice: **konečné těleso**
 
@@ -244,6 +244,7 @@ $\mathbb{Z}_p$ kde $p$ je prvočíslo je např. konečné těleso, se kterým ne
 
 <!-- DetailInfoEnd -->
 <!--ID: 1778786397006-->
+
 END
 
 ---
@@ -254,7 +255,6 @@ Original Flashcard ID: 1735205749322
 
 START
 NI-SZZ
-
 
 Když máme $\mathbb{Z}_n$, kde $n$ není prvočíslo, může to být tělesem?
 
@@ -270,6 +270,7 @@ Ne! Jakmile $n$ není prvočíslo, potom $\mathbb{Z}_n$ nemůže být těleso.
 
 Tags: core
 <!--ID: 1778786397009-->
+
 END
 
 ---
@@ -281,7 +282,6 @@ Original Flashcard ID: 1735205749325
 START
 NI-SZZ
 
-
 Algoritmus: Sestavení konečného tělesa řádu $p^n$ (tedy neprvočíselného řádu)
 
 Back:
@@ -289,6 +289,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241221095458.png)
 
 <!-- ExplanationStart -->
+
 Umíme sestavit třeba $\mathbb{Z}_5$, což je prvočíselného řádu, ale my chceme třeba $\mathbb{Z}_4$, tedy neprvočíselného.
 
 Máme prvočíslo $p$ a celé číslo $n \geq 2$ a chceme sestavit těleso o $p^n$ prvcích
@@ -304,8 +305,10 @@ Máme prvočíslo $p$ a celé číslo $n \geq 2$ a chceme sestavit těleso o $p^
 
 ![](../../Assets/Pasted%20image%2020241221101100.png)
 ![](../../Assets/Pasted%20image%2020260516104618.png)
+
 <!-- ExerciseEnd -->
 <!--ID: 1778786397011-->
+
 END
 
 ---
@@ -316,7 +319,6 @@ Original Flashcard ID: 1735205749327
 
 START
 NI-SZZ
-
 
 Postup: Jak najdu **inverzní prvek vůči násobení** pro polynom $h(x)$ modulo $P(x)$?
 
@@ -330,11 +332,11 @@ Hledám $h(x)^{-1}, h(x) \in F$
 2. "Zmodulím to polynomem $P(x)$"
 3. $\gcd(h(x), P(x)) \mod P(x) = (u(x)\cdot h(x) + v(x) \cdot P(x)) \mod P(x)$, obě strany jsou $\in F$, tedy náleží zbytkům po dělení tím číslem, kterým jsem modulil
 4. v $F$:
-   - $\gcd(h(x), P(x)) = u(x) \cdot h(x)$
-   - Vím, že $\gcd$ bude polynom stupně $1$ (ty polynomy $h$ a $P$ jsou nesoudělné).
-   - Tedy vlevo v rovnici bude nenulové číslo
-   - Pak mi vyjde:
-     - $h(x)^{-1}=(\gcd(h(x), P(x)))^{-1}\cdot u(x)$
+ 	- $\gcd(h(x), P(x)) = u(x) \cdot h(x)$
+ 	- Vím, že $\gcd$ bude polynom stupně $1$ (ty polynomy $h$ a $P$ jsou nesoudělné).
+ 	- Tedy vlevo v rovnici bude nenulové číslo
+ 	- Pak mi vyjde:
+ 	- $h(x)^{-1}=(\gcd(h(x), P(x)))^{-1}\cdot u(x)$
 
 <!-- DetailInfoStart -->
 
@@ -344,6 +346,7 @@ Hledám $h(x)^{-1}, h(x) \in F$
 
 Tags: core
 <!--ID: 1778786397014-->
+
 END
 
 ---
@@ -355,7 +358,6 @@ Original Flashcard ID: 1735205749337
 START
 NI-SZZ
 
-
 Věta: Jaký **řád musí mít konečné těleso**? (+ jak to je s **izomorfismem**)
 
 Back:
@@ -364,6 +366,7 @@ $p^n$, kde $p$ je prvočíslo a $n$ je kladné celé číslo.
 
 ![](../../Assets/Pasted%20image%2020241221102012.png)
 <!--ID: 1778786397017-->
+
 END
 
 ---
@@ -375,7 +378,6 @@ Original Flashcard ID: 1735205749340
 START
 NI-SZZ
 
-
 Důsledek: **tělesa jakých řádů neexistují**? (na tohle se ptají u zkoušky)
 
 Back:
@@ -384,6 +386,7 @@ Back:
 
 Protože musí mít řád $p^n$ kde $p$ je prvočíslo a $n$ je kladné celé číslo
 <!--ID: 1778786397019-->
+
 END
 
 ---
@@ -395,7 +398,6 @@ Original Flashcard ID: 1735205749342
 START
 NI-SZZ
 
-
 Definice: Galoisovo těleso, charakteristika tělesa
 
 Back:
@@ -404,10 +406,10 @@ Back:
 
 Tags: core
 <!--ID: 1778786397022-->
+
 END
 
 ---
-
 
 <!--
 Original Flashcard ID: 1735812207577
@@ -415,7 +417,6 @@ Original Flashcard ID: 1735812207577
 
 START
 NI-SZZ
-
 
 Jak se spočte řád grup:
 
@@ -433,10 +434,10 @@ Back:
 
 Tags: algebra3 core
 <!--ID: 1778786397003-->
+
 END
 
 ---
-
 
 <!--
 Original Flashcard ID: 1735205749345
@@ -444,7 +445,6 @@ Original Flashcard ID: 1735205749345
 
 START
 NI-SZZ
-
 
 Jaký řád má aditivní a multiplikativní grupa konečného tělesa ($GF(p^n)$)?
 
@@ -457,6 +457,7 @@ Back:
 
 Tags: core
 <!--ID: 1778786397025-->
+
 END
 
 ---
@@ -467,7 +468,6 @@ Original Flashcard ID: 1735205749347
 
 START
 NI-SZZ
-
 
 Jaké neutrální prvky mají aditivní a multiplikativní grupa tělesa $GF(p^n)$?
 
@@ -482,6 +482,7 @@ Back:
 
 Tags: core
 <!--ID: 1778786397027-->
+
 END
 
 ---
@@ -492,7 +493,6 @@ Original Flashcard ID: 1735205749350
 
 START
 NI-SZZ
-
 
 Jak se spočte inverze k prvku v aditivní a multiplikativní grupě tělesa $GF(p^n)$?
 
@@ -506,6 +506,7 @@ Back:
 
 Tags: core
 <!--ID: 1778786397030-->
+
 END
 
 ---
@@ -516,7 +517,6 @@ Original Flashcard ID: 1735205749352
 
 START
 NI-SZZ
-
 
 Je aditivní a multiplikativní grupa tělesa $GF(p_n)$ cyklická?
 
@@ -529,6 +529,7 @@ Back:
 
 Tags: core
 <!--ID: 1778786397033-->
+
 END
 
 ---
@@ -540,7 +541,6 @@ Original Flashcard ID: 1735205749175
 START
 NI-SZZ
 
-
 Jak sestavím konečné těleso řádu $p^n$?
 
 Back:
@@ -549,6 +549,7 @@ Nechť $p(x)$ je ireducibilní polynom nad $\mathbb{Z}_p$ stupně $n$.
 
 ![](../../Assets/Pasted%20image%2020241221112332.png)
 <!--ID: 1778786397036-->
+
 END
 
 ---
@@ -560,7 +561,6 @@ Original Flashcard ID: 1735205749178
 START
 NI-SZZ
 
-
 Jaký je postup při řešení tohoto příkladu?
 
 ![](../../Assets/Pasted%20image%2020241221113017.png)
@@ -571,6 +571,7 @@ Pomocí REA získám Bezoutovu rovnost.
 
 ![](../../Assets/Pasted%20image%2020241221114159.png)
 <!--ID: 1778786397038-->
+
 END
 
 ---
@@ -582,7 +583,6 @@ Original Flashcard ID: 1735205749181
 START
 NI-SZZ
 
-
 Jak se spočte příklad typu:
 
 ![](../../Assets/Pasted%20image%2020241221114307.png)
@@ -590,8 +590,8 @@ Jak se spočte příklad typu:
 Back:
 
 1. Zjistíme, jeslti mí $P_a(x)$ v $\mathbb{Z}_5$ kořen.
-	1. Postupně dosazuju za $x$ prvky $\mathbb{Z}_5$
-	2. Pokud najdu nějaký prvek, kde se $P_a(x) = 0$, je $x$ kořen. Pokud takový prvek nenajdu, tak to nemá kořen.
+   1. Postupně dosazuju za $x$ prvky $\mathbb{Z}_5$
+   2. Pokud najdu nějaký prvek, kde se $P_a(x) = 0$, je $x$ kořen. Pokud takový prvek nenajdu, tak to nemá kořen.
 2. Pokud **nemá kořen**, nemá faktorizaci (viz věta), **je ireducibilní**.
 3. Pozor, může nastat divný případ, viz cvičení 23.3b) níže
 
@@ -603,6 +603,7 @@ Back:
 
 <!-- ExerciseEnd -->
 <!--ID: 1778786397041-->
+
 END
 
 ---
@@ -613,7 +614,6 @@ Original Flashcard ID: 1735205749183
 
 START
 NI-SZZ
-
 
 Jak se vyřeší cvičení tohoto typu?
 
@@ -632,6 +632,7 @@ Možnost 2: Budem upravovat rovnici:
 ![](../../Assets/Pasted%20image%2020241221121015.png)
 ![](../../Assets/Pasted%20image%2020241221121306.png)
 <!--ID: 1778786397043-->
+
 END
 
 ---
@@ -642,7 +643,6 @@ Original Flashcard ID: 1735205749185
 
 START
 NI-SZZ
-
 
 Jak se postupuje v následujícím příkladě?
 
@@ -655,6 +655,7 @@ a) Pomocí EEA s polynomy
 ![](../../Assets/Pasted%20image%2020241221122110.png)
 ![](../../Assets/Pasted%20image%2020241221122425.png)
 <!--ID: 1778786397046-->
+
 END
 
 ---
@@ -667,7 +668,6 @@ Original Flashcard ID: 1735205749294
 
 START
 NI-SZZ
-
 
 Definice: **Polynom nad okruhem**
 
@@ -683,6 +683,7 @@ Stejně jako v $\mathbb{R}$ máme polynomy, tak tohle je to samé, ale s prvky n
 
 Tags: algebra4
 <!--ID: 1778786397049-->
+
 END
 
 ---
@@ -694,7 +695,6 @@ Original Flashcard ID: 1735205749297
 START
 NI-SZZ
 
-
 Věta: **Okruh polynomů**
 
 Back:
@@ -703,6 +703,7 @@ Back:
 
 Tags: algebra4
 <!--ID: 1778786397052-->
+
 END
 
 ---
@@ -714,7 +715,6 @@ Original Flashcard ID: 1735205749300
 START
 NI-SZZ
 
-
 Lemma: **o násobení polynomů** (aneb jaký stupeň mají polynomy po násobení)
 
 Back:
@@ -723,6 +723,7 @@ Back:
 
 Tags: algebra4 core
 <!--ID: 1778786397055-->
+
 END
 
 ---
@@ -734,7 +735,6 @@ Original Flashcard ID: 1735205749302
 START
 NI-SZZ
 
-
 Lemma: **o dělení polynomů**
 
 Back:
@@ -743,6 +743,7 @@ Back:
 
 Tags: algebra4
 <!--ID: 1778786397058-->
+
 END
 
 ---
@@ -754,7 +755,6 @@ Original Flashcard ID: 1735205749305
 START
 NI-SZZ
 
-
 Definice: $h(x)$ je největší společný dělitel polynomů $f(x), g(x)$, jestliže $\dots$
 
 Back:
@@ -763,6 +763,7 @@ Back:
 
 Pozor, největší společný dělitel $h(x)$ není jednoznačný, těch polynomů může být více.
 <!--ID: 1778786397061-->
+
 END
 
 ---
@@ -773,7 +774,6 @@ Original Flashcard ID: 1735205749307
 
 START
 NI-SZZ
-
 
 Věta: Bézoutova rovnost pro polynomy
 
@@ -787,6 +787,7 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1778786397063-->
+
 END
 
 ---
@@ -798,7 +799,6 @@ Original Flashcard ID: 1735205749310
 START
 NI-SZZ
 
-
 Jak najdu Bezoutovy koeficiety u $\gcd(f(x), g(x))$?
 
 Back:
@@ -807,6 +807,7 @@ Pustím na to rozšířený Eukleidův algoritmus.
 
 Tags: core
 <!--ID: 1778786397066-->
+
 END
 
 ---
@@ -817,7 +818,6 @@ Original Flashcard ID: 1735205749312
 
 START
 NI-SZZ
-
 
 Věta: Polynomial factor theorem (aneb prvek je kořen polynomu $\Leftrightarrow \dots$)
 
@@ -834,6 +834,7 @@ Kořen = když to dosadím, tak se polynom bude rovnat nule.
 
 Tags: core
 <!--ID: 1778786397069-->
+
 END
 
 ---
@@ -844,7 +845,6 @@ Original Flashcard ID: 1735205749315
 
 START
 NI-SZZ
-
 
 Definice: **Ireducibilní polynom**
 
@@ -870,6 +870,7 @@ Např. nad $\mathbb{R}$ není ireducibilní.
 
 Tags: core
 <!--ID: 1778786397072-->
+
 END
 
 ---
@@ -881,7 +882,6 @@ Original Flashcard ID: 1735205749317
 START
 NI-SZZ
 
-
 Věta: Ireducibilní polynomy - co o nich víme
 
 (pozn. tomuhle jsme se na přednášce moc nevěnovali, Starosta působil jako že to není tak důležitý, i když to explicitně neřekl)
@@ -891,6 +891,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241221092443.png)
 ![](../../Assets/Pasted%20image%2020241221094415.png)
 <!--ID: 1778786397075-->
+
 END
 
 ---
@@ -901,7 +902,6 @@ Original Flashcard ID: 1735205749330
 
 START
 NI-SZZ
-
 
 Jak mohu zjistit, že je polynom ireducibilní?
 
@@ -919,6 +919,7 @@ Pokud najdu jeho kořen, znamená to, že lze ten polynom rozložit na dva polyn
 
 Tags: core
 <!--ID: 1778786397079-->
+
 END
 
 ---
@@ -930,7 +931,6 @@ Original Flashcard ID: 1735205749332
 START
 NI-SZZ
 
-
 Jak se sčítají polynomy?
 
 Back:
@@ -941,6 +941,7 @@ Jenom stačí posčítat ty jednotlivé koeficienty $a_i$ a $b_i$.
 
 Tags: core
 <!--ID: 1778786397082-->
+
 END
 
 ---
@@ -951,7 +952,6 @@ Original Flashcard ID: 1735205749335
 
 START
 NI-SZZ
-
 
 Jak se **násobí polynomy** mod $P(x)$?
 
@@ -967,9 +967,9 @@ Back:
 
 1. Vynásobíme polynomy ($1101$ a $0110$), vyjde nám $x^5+x^3+x^2+x$
 2. Zmodulíme výsledek polynomem $P(x)$
-	1. Položíme $P(x) = 0$ (protože když bych to modulil $P(x)$, tak to bude $0$) a vyjádříme nejvyšší mocninu (zde $x^4=-x^2-1$)
-	2. Tu rovnici pak mohu násobit $x$ a tím získávat vyjádření polynomů o vyšších mocninách (např. $x^5=-x^2-x$)
-	3. To pak budu dosazovat do výsledku, dokud nedostanu polynom, co je v tom daném tělese $T$
+   1. Položíme $P(x) = 0$ (protože když bych to modulil $P(x)$, tak to bude $0$) a vyjádříme nejvyšší mocninu (zde $x^4=-x^2-1$)
+   2. Tu rovnici pak mohu násobit $x$ a tím získávat vyjádření polynomů o vyšších mocninách (např. $x^5=-x^2-x$)
+   3. To pak budu dosazovat do výsledku, dokud nedostanu polynom, co je v tom daném tělese $T$
 
 ![](../../Assets/Pasted%20image%2020241227135810.png)
 ![](../../Assets/Pasted%20image%2020241221101735.png)
@@ -982,6 +982,7 @@ Back:
 
 Tags: core
 <!--ID: 1778786397085-->
+
 END
 
 ---

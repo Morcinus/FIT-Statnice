@@ -9,9 +9,7 @@ FILE TAGS: NI-SI-04 NI-ADP
 > NI-SI-04 (NI-ADP)
 > Vzory pro chování objektů (Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, State, Strategy, Template method, Visitor).
 
-
 ## Vzory pro chování objektů (Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, State, Strategy, Template method, Visitor)
-
 
 START
 NI-SZZ
@@ -22,11 +20,10 @@ Back:
 
 - Zaměřují se na algoritmy, rozdělení odpovědnosti mezi objekty a na to, jak spolu objekty komunikují.
 - Řeší, jak si objekty předávají zprávy, jak spolupracují na složitějších úlohách a jak je řízen tok programu (control flow).
-<!--ID: 1778786460746-->
-END
+  <!--ID: 1778786460746-->
+  END
 
 ---
-
 
 START
 NI-SZZ
@@ -134,7 +131,7 @@ Back:
 1. The **Sender** class (aka *invoker*) is responsible for initiating requests. This class must have a field for storing a reference to a command object. The sender triggers that command instead of sending the request directly to the receiver. Note that the sender isn’t responsible for creating the command object. Usually, it gets a pre-created command from the client via the constructor.
 2. The **Command** interface usually declares just a single method for executing the command.
 3. **Concrete Commands** implement various kinds of requests. A concrete command isn’t supposed to perform the work on its own, but rather to pass the call to one of the business logic objects. However, for the sake of simplifying the code, these classes can be merged.
-   - Parameters required to execute a method on a receiving object can be declared as fields in the concrete command. You can make command objects immutable by only allowing the initialization of these fields via the constructor.
+ 	- Parameters required to execute a method on a receiving object can be declared as fields in the concrete command. You can make command objects immutable by only allowing the initialization of these fields via the constructor.
 4. The **Receiver** class contains some business logic. Almost any object may act as a receiver. Most commands only handle the details of how a request is passed to the receiver, while the receiver itself does the actual work.
 5. The **Client** creates and configures concrete command objects. The client must pass all of the request parameters, including a receiver instance, into the command’s constructor. After that, the resulting command may be associated with one or multiple senders.
 
@@ -151,7 +148,6 @@ END
 
 ---
 
-
 START
 NI-SZZ
 
@@ -161,12 +157,10 @@ Back:
 
 - Pokud chceme parametrizovat objekt operacema
 - Pokud potřebujeme tvořit frontu commandů, plánovat dobu jejich spuštění nebo je spouštět vzdáleně.
-<!--ID: 1778786460749-->
-END
+  <!--ID: 1778786460749-->
+  END
 
 ---
-
-
 
 START
 NI-SZZ
@@ -267,9 +261,9 @@ Back:
 
 1. The **Handler** declares the interface, common for all concrete handlers. It usually contains just a single method for handling requests, but sometimes it may also have another method for setting the next handler on the chain.
 2. The **Base Handler** is an optional class where you can put the boilerplate code that’s common to all handler classes.
-   - Usually, this class defines a field for storing a reference to the next handler. The clients can build a chain by passing a handler to the constructor or setter of the previous handler. The class may also implement the default handling behavior: it can pass execution to the next handler after checking for its existence.
+ 	- Usually, this class defines a field for storing a reference to the next handler. The clients can build a chain by passing a handler to the constructor or setter of the previous handler. The class may also implement the default handling behavior: it can pass execution to the next handler after checking for its existence.
 3. **Concrete Handlers** contain the actual code for processing requests. Upon receiving a request, each handler must decide whether to process it and, additionally, whether to pass it along the chain.
-   - Handlers are usually self-contained and immutable, accepting all necessary data just once via the constructor.
+ 	- Handlers are usually self-contained and immutable, accepting all necessary data just once via the constructor.
 4. The **Client** may compose chains just once or compose them dynamically, depending on the application’s logic. Note that a request can be sent to any handler in the chain—it doesn’t have to be the first one.
 
 <!-- ExampleStart -->
@@ -288,18 +282,17 @@ END
 START
 NI-SZZ
 
-Kdy použít **Chain of Responsibility** pattern? 
+Kdy použít **Chain of Responsibility** pattern?
 
 Back:
 
 - Pokud očekáváme, že náš program bude řešit různé typy požadavků různými cestami, ale přesně typy požadavků a jejich pořadí je nám předem neznámé.
 - Pokud potřebujeme spouštět handlery v přesně daném pořadí.
 - Pokud potřebujeme pořadí handlerů měnit za běhu
-<!--ID: 1778786460752-->
-END
+  <!--ID: 1778786460752-->
+  END
 
 ---
-
 
 START
 NI-SZZ
@@ -460,7 +453,7 @@ Back:
 3. The **Collection** interface declares one or multiple methods for getting iterators compatible with the collection. Note that the return type of the methods must be declared as the iterator interface so that the concrete collections can return various kinds of iterators.
 4. **Concrete Collections** return new instances of a particular concrete iterator class each time the client requests one. You might be wondering, where’s the rest of the collection’s code? Don’t worry, it should be in the same class. It’s just that these details aren’t crucial to the actual pattern, so we’re omitting them.
 5. The **Client** works with both collections and iterators via their interfaces. This way the client isn’t coupled to concrete classes, allowing you to use various collections and iterators with the same client code.
-   - Typically, clients don’t create iterators on their own, but instead get them from collections. Yet, in certain cases, the client can create one directly; for example, when the client defines its own special iterator.
+ 	- Typically, clients don’t create iterators on their own, but instead get them from collections. Yet, in certain cases, the client can create one directly; for example, when the client defines its own special iterator.
 
 <!-- ExampleStart -->
 
@@ -484,11 +477,10 @@ Back:
 
 - Pokud má kolekce komplexní datovou strukturu, od které chceme klienty odstínit
 - Pokud chceme omezit udplikaci kódu pro průchod kolekcí v aplikaci
-<!--ID: 1778786460755-->
-END
+  <!--ID: 1778786460755-->
+  END
 
 ---
-
 
 START
 NI-SZZ
@@ -577,7 +569,7 @@ Back:
 2. The **Mediator** interface declares methods of communication with components, which usually include just a single notification method. Components may pass any context as arguments of this method, including their own objects, but only in such a way that no coupling occurs between a receiving component and the sender’s class.
 3. **Concrete Mediators** encapsulate relations between various components. Concrete mediators often keep references to all components they manage and sometimes even manage their lifecycle.
 4. Components must not be aware of other components. If something important happens within or to a component, it must only notify the mediator. When the mediator receives the notification, it can easily identify the sender, which might be just enough to decide what component should be triggered in return.
-   - From a component’s perspective, it all looks like a total black box. The sender doesn’t know who’ll end up handling its request, and the receiver doesn’t know who sent the request in the first place.
+ 	- From a component’s perspective, it all looks like a total black box. The sender doesn’t know who’ll end up handling its request, and the receiver doesn’t know who sent the request in the first place.
 
 <!-- ExampleStart -->
 
@@ -592,7 +584,6 @@ END
 
 ---
 
-
 START
 NI-SZZ
 
@@ -602,12 +593,10 @@ Back:
 
 - Pokud je komplikované měnit některé třídy, protože jsou silně spojeny (coupled) k jiným třídám.
 - Pokud chceme komponentu využít i v jiném programu, ale nemůžeme kvůli silným závislostem na jiné části systému
-<!--ID: 1778786460758-->
-END
+  <!--ID: 1778786460758-->
+  END
 
 ---
-
-
 
 START
 NI-SZZ
@@ -691,22 +680,20 @@ END
 
 ---
 
-
 START
 FIT-Card
 
-Jaké jsou 3 možné způsoby jak implementovat Memento? 
+Jaké jsou 3 možné způsoby jak implementovat Memento?
 
 Back:
 
 - **Pomocí vnitřní třídy** - Memento je jako vnitřní třída uvnitř Originatora
 - **Pomocí interfacu** - Memento je interface, který využívá Caretaker. Originator pak pracuje s memento třídou co implementuje ten interface.
 - **Pomocí striktní enkapsulace** - Originator i memento mají interfacy a třídy co je implementují. Originator má v sobě `save()` a `setState()`, Memento má v sobě `restore()` a `originator`. Memento pak provádí ten restore v originatoru.
-<!--ID: 1776243585027-->
-END
+  <!--ID: 1776243585027-->
+  END
 
 ---
-
 
 START
 NI-SZZ
@@ -721,7 +708,7 @@ The classic implementation of the pattern relies on support for nested classes, 
 1. The **Originator** class can produce snapshots of its own state, as well as restore its state from snapshots when needed.
 2. The **Memento** is a value object that acts as a snapshot of the originator’s state. It’s a common practice to make the memento immutable and pass it the data only once, via the constructor.
 3. The **Caretaker** knows not only “when” and “why” to capture the originator’s state, but also when the state should be restored.
-   - A caretaker can keep track of the originator’s history by storing a stack of mementos. When the originator has to travel back in history, the caretaker fetches the topmost memento from the stack and passes it to the originator’s restoration method.
+ 	- A caretaker can keep track of the originator’s history by storing a stack of mementos. When the originator has to travel back in history, the caretaker fetches the topmost memento from the stack and passes it to the originator’s restoration method.
 4. In this implementation, the memento class is nested inside the originator. This lets the originator access the fields and methods of the memento, even though they’re declared private. On the other hand, the caretaker has very limited access to the memento’s fields and methods, which lets it store mementos in a stack but not tamper with their state.
 
 <!-- ExampleStart -->
@@ -747,7 +734,7 @@ Back:
 Jediná změna je že Memento nebude vnitřní třída ale rozdělí se na interface a třídu co implementuje ten interface. Client pracuje s interfacem, originator s konkrétní třídou.
 
 **Výhoda**: dá se to použít i v jazycích co nepodporují vnitřní třídy (PHP,...)
-**Nevýhoda**: memento má public atributy, takže to je accessible z venku 
+**Nevýhoda**: memento má public atributy, takže to je accessible z venku
 
 ![](../../../Assets/Pasted%20image%2020250130112242.png)
 
@@ -792,11 +779,10 @@ Back:
 
 - Pokud chceme tvořit snapshoty objektu, ke kterým se můžeme v budoucnu chtít vrátit
 - Pokud přímý přístup k vlastnostem objektu porušuje jeho zapouzdření
-<!--ID: 1778786460760-->
-END
+  <!--ID: 1778786460760-->
+  END
 
 ---
-
 
 START
 NI-SZZ
@@ -906,16 +892,16 @@ END
 START
 NI-SZZ
 
-Kdy využít **Observer** pattern? 
+Kdy využít **Observer** pattern?
 
 Back:
 
 Pokud změny jednoho objektu mají ovlivňovat i jiné objekty, a to i pouze na omezený část nebo ve specifických případech.
 <!--ID: 1778786460763-->
+
 END
 
 ---
-
 
 START
 NI-SZZ
@@ -1024,7 +1010,7 @@ Back:
 1. **Context** stores a reference to one of the concrete state objects and delegates to it all state-specific work. The context communicates with the state object via the state interface. The context exposes a setter for passing it a new state object.
 2. The **State** interface declares the state-specific methods. These methods should make sense for all concrete states because you don’t want some of your states to have useless methods that will never be called.
 3. **Concrete States** provide their own implementations for the state-specific methods. To avoid duplication of similar code across multiple states, you may provide intermediate abstract classes that encapsulate some common behavior.
-   - State objects may store a backreference to the context object. Through this reference, the state can fetch any required info from the context object, as well as initiate state transitions.
+ 	- State objects may store a backreference to the context object. Through this reference, the state can fetch any required info from the context object, as well as initiate state transitions.
 4. Both context and concrete states can set the next state of the context and perform the actual state transition by replacing the state object linked to the context.
 
 <!-- ExampleStart -->
@@ -1050,11 +1036,10 @@ Back:
 - Pokud se má objekt chovat odlišně v závilosti na jeho aktuálním stavu
 - Pokud máme třídu zaplavenou rozhodováním na základě vnitřního stavu
 - Pokud je mnoho duplicitního kódu napříč podobnými stavy
-<!--ID: 1778786460766-->
-END
+  <!--ID: 1778786460766-->
+  END
 
 ---
-
 
 START
 NI-SZZ
@@ -1165,12 +1150,11 @@ Back:
 
 - Pokud chceme podporovat více variant algoritmu v rámci jednoho objektu a chceme mezi nimi přepínat
 - Pokud máme mnoho tříd, které se liší pouze konkrétní implementací konkrétní části
-- Pro izolaci implementačních detailů byznys logiky třídy, které nemusí být v kontextu třídy tak důležité 
-<!--ID: 1778786460769-->
-END
+- Pro izolaci implementačních detailů byznys logiky třídy, které nemusí být v kontextu třídy tak důležité
+  <!--ID: 1778786460769-->
+  END
 
 ---
-
 
 START
 NI-SZZ
@@ -1283,17 +1267,16 @@ END
 START
 NI-SZZ
 
-Kdy využít **Template method** pattern? 
+Kdy využít **Template method** pattern?
 
 Back:
 
 - Pokud chceme umožnit klientům rozšířit only konkrétní krok v rámci algoritmu
 - Pokud máme několik tříd se skoro totožným algoritmem, pouze s malými změnami
-<!--ID: 1778786460772-->
-END
+  <!--ID: 1778786460772-->
+  END
 
 ---
-
 
 START
 NI-SZZ
@@ -1447,11 +1430,10 @@ Back:
 - Pokud chceme provádět operace na všech elementech komplexní struktury objektů
 - Pokud chceme vyčistit pomocnou business logiku z objektů
 - Pokud konkrétní chování dává smysl pouze pro nějaké třídy
-<!--ID: 1778786460776-->
-END
+  <!--ID: 1778786460776-->
+  END
 
 ---
-
 
 START
 NI-SZZ
