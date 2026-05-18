@@ -11,6 +11,7 @@ FILE TAGS: NI-SPOL-07 NI-VSM
 
 <!--
 TODO:
+- Přidat sem definici pravděpodobnostního prostoru.. opakovaně se to vyskytuje v definicích
 - Jak spočíst H_D(x)
 - Co je chí v definici kódu a kódového slova
 - Co je optimální kód? (dát k první zmínce o optimalitě)

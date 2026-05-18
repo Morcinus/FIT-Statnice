@@ -902,6 +902,8 @@ NI-SZZ
 
 Pozorování: Jak vytvoříme **homogenní markovský proces se spojitým časem**
 
+Tohle je **hodně důležitý** - na to je vyloženě ta státnicová otázka
+
 Back:
 
 ![](../../Assets/Pasted%20image%2020250419140805.png)

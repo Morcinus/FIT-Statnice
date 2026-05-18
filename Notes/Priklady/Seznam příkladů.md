@@ -1,3 +1,6 @@
+## NI-SPOL-08 NI-VSM
+- GEMování (například při počítání inverze matice $(I-T)^{-1}$)
+
 ## NI-SPOL-03 NI-MPI
 - **Umět spočítat parciální derivaci**
 - Umět substituci v integrálu
