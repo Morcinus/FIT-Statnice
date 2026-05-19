@@ -150,7 +150,7 @@ Original Flashcard ID: 1728921214885
 START
 NI-SZZ
 
-Co je **grafické znázornění gradientu**? (na tohle se ptají u zkoušky!)
+Co je **grafické znázornění gradientu**?
 
 Back:
 

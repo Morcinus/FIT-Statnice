@@ -185,6 +185,19 @@ END
 
 ---
 
+START
+NI-SZZ
+
+Kdy jsou tělesa $T$ a $K$ izomorfní?
+
+Back:
+
+![](../../Assets/Pasted%20image%2020260515202324.png)
+
+END
+
+---
+
 <!--
 Original Flashcard ID: 1735205749277
 -->

@@ -39,7 +39,7 @@ Back:
 
 - **Záměr**: stručný popis problému a jeho řešení
 - **Motivace**: detailnější popis problému a proč ho navrhovaný způsob řešení řeší
-- Struktura: Třídy, které je potřebné přidat a jak jsou na sobě závislé.
+- **Struktura**: Třídy, které je potřebné přidat a jak jsou na sobě závislé.
 <!--ID: 1778786460725-->
 END
 
@@ -293,7 +293,7 @@ Back:
 
 - Pokud máme konstruktor s velkým množstvím parametrů 7+
 - Pokud máme ve třídě více konstruktorů, kde každý má jinou sadu parametrů a plní tvoří jinou část objektu
-- 
+
 <!--ID: 1778786460735-->
 END
 

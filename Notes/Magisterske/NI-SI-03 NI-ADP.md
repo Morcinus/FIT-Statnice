@@ -1115,7 +1115,8 @@ Jaké jsou dva typy **automatizované dependency injection**?
 Back:
 
 - Řešení založená na reflexi (reflection-based), která propojují závislosti za běhu programu (runtime).
-- Statická řešení, která generují kód pro propojení závislostí v době překladu (compile time).“
+- Statická řešení, která generují kód pro propojení závislostí v době překladu (compile time).
+
 <!--ID: 1778786460810-->
 END
 

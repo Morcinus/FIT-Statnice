@@ -1044,6 +1044,7 @@ Back:
 
 Mám hromadu systémy/services, komunikují vždy **jedna na jednu**.
 
+Problém je, že dochází k duplikaci integračních funkcionalit např. pro interoperabilitu řešení – např. parsování JSON.
 <!-- ImageStart -->
 
 ![](../../Assets/Pasted%20image%2020241007103648.png)
