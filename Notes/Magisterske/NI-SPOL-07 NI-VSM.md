@@ -11,6 +11,7 @@ FILE TAGS: NI-SPOL-07 NI-VSM
 
 <!--
 TODO:
+- Přidat sem definici pravděpodobnostního prostoru.. opakovaně se to vyskytuje v definicích
 - Jak spočíst H_D(x)
 - Co je chí v definici kódu a kódového slova
 - Co je optimální kód? (dát k první zmínce o optimalitě)
@@ -164,7 +165,7 @@ NI-SZZ
 
 Jak jsou hierarchicky uspořádány kódy:
 
-- **Jednnoznačně dekódovatelné**
+- **Jednoznačně dekódovatelné**
 - **Instantní**
 - **Nesingulární**
 - **Všechny**
@@ -251,7 +252,7 @@ START
 NI-SZZ
 
 
-Věta: **Střední délka optimálního kódu**
+Věta: **Střední délka optimálního kódu** (omezení té střední délky)
 
 Back:
 
@@ -428,7 +429,7 @@ START
 NI-SZZ
 
 
-Lemma: nezápornost entropie
+Lemma: **může být entropie záporná**?
 
 Back:
 
@@ -731,7 +732,7 @@ START
 NI-SZZ
 
 
-Věta: **podmiňování redukuje entropii**
+Věta: **je $H(X|Y)$ nižší nebo vyšší než $H(x)$**
 
 +Kdy nastává rovnost?
 
@@ -921,7 +922,7 @@ START
 NI-SZZ
 
 
-Věta: $h(X) \leq \dots$ pro spojitou náhodnou veličinu
+Věta: $h(X) \leq \dots$ pro spojitou náhodnou veličinu s $\mu$ a oborem hodnot $[0,+\infty)$
 
 +Kdy nastává rovnost?
 

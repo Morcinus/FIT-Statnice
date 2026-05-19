@@ -9,7 +9,6 @@ FILE TAGS: NI-SI-10 NI-AM1
 > NI-SI-10 (NI-AM1)
 > Integrační návrhové vzory, synchronní a asynchronní komunikace, blocking a non-blocking I/O.
 
-
 ## Integrační návrhové vzory
 
 <!--
@@ -24,8 +23,8 @@ Co je **integrační middleware**?
 Back:
 
 - Slouží k propojování aplikací umožňující výměnu a sdílení schopností (capabilities) – konkrétně informace a funkce
-<!--ID: 1773945940629-->
-END
+  <!--ID: 1773945940629-->
+  END
 
 ---
 
@@ -39,14 +38,14 @@ Back:
 Schopnost, aby si dva systémy rozuměly.
 
 **Úrovně**
+
 - Data – syntaxe/struktura a sémantika
 - Funkce/procesy – syntaxe a sémantika
 - Technické aspekty – protokoly, síťové adresy atd.
-<!--ID: 1778786460867-->
-END
+  <!--ID: 1778786460867-->
+  END
 
 ---
-
 
 <!--
 Original Flashcard ID: 1728921215011
@@ -61,8 +60,8 @@ Back:
 
 - **Java** a **XML** je nejpoužívanější ve **velkých organizacích**, je to už trošičku přežitek
 - U nových systémů se používá **JSON** a **modernější programovací jazyky**
-<!--ID: 1773945940632-->
-END
+  <!--ID: 1773945940632-->
+  END
 
 ---
 
@@ -82,6 +81,7 @@ Back:
 
 **Syntax** mi jasně definuje ten standard, **sémantiku** si musím zadefinovat sám např. pomocí **RDFS** nebo **JSONSchema**.
 <!--ID: 1773945940635-->
+
 END
 
 ---
@@ -101,6 +101,7 @@ Back:
 
 Standard (jazyk), který je nadstavbou **RDF** a umožňuje mi jasně definovat **sémantiku** XML a JSONu.
 <!--ID: 1773945940638-->
+
 END
 
 ---
@@ -125,6 +126,7 @@ Každý interface má:
 
 ![](../../Assets/Pasted%20image%2020240930104053.png)
 <!--ID: 1773945940641-->
+
 END
 
 ---
@@ -164,6 +166,7 @@ Je to podobný jako u **sémantiky u JSONu a XML**. Tam mě taky nic nenutí mod
 
 <!-- ExplanationEnd -->
 <!--ID: 1773945940645-->
+
 END
 
 ---
@@ -184,6 +187,7 @@ Lze ho chápat jako **dohodu/smlouvu** (agreement, contract) mezi dvěma systém
 Pokud chceme smlouvu měnit, musíme ji verzovat.
 
 <!-- DetailInfoStart -->
+
 Domluví se na tom, jak bude ta komunikace fungovat.
 ![](../../Assets/Pasted%20image%2020240930103653.png)
 ![](../../Assets/Pasted%20image%2020240930103616.png)
@@ -195,6 +199,7 @@ Např.
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940648-->
+
 END
 
 ---
@@ -216,6 +221,7 @@ Back:
 
 Co nejvíce bych se měl opírat o globální **standardy**. Neměl bych si vymýšlet něco svýho.
 <!--ID: 1773945940651-->
+
 END
 
 ---
@@ -227,7 +233,6 @@ Original Flashcard ID: 1729237386420
 START
 NI-SZZ
 
-
 Jaké jsou **nejčastější zaměření middlewarů**? (3)
 
 Back:
@@ -235,8 +240,8 @@ Back:
 - **škálovatelnost** - messaging servers, load balancers, proxy serves
 - **functional** - integrace (propojování) severů a částí aplikace, repozitáře,...
 - **security** - firewally, gateways,...
-<!--ID: 1773945940654-->
-END
+  <!--ID: 1773945940654-->
+  END
 
 ---
 
@@ -246,7 +251,6 @@ Original Flashcard ID: 1728921214954
 
 START
 NI-SZZ
-
 
 Jaké jsou 3 typy integrací?
 
@@ -262,6 +266,7 @@ Back:
 
 <!-- ImageEnd -->
 <!--ID: 1773945940658-->
+
 END
 
 ---
@@ -272,7 +277,6 @@ Original Flashcard ID: 1728921214956
 
 START
 NI-SZZ
-
 
 Co je **data-oriented integrace**?
 
@@ -295,11 +299,11 @@ Back:
 Struktura moderní aplikace $A$ vypadá cca takto:
 
 - **Backend API**
-  - Byznys logika
-  - Moje pravidla
-  - ORM vrstva
+	- Byznys logika
+	- Moje pravidla
+	- ORM vrstva
 - **Databázová vrstva**
-  - Databáze
+	- Databáze
 
 **Problém** nastane, když aplikace $B$, co má stejnou strukturu potřebuje přímo přistupovat do databáze aplikace $A$ (tzn. nemůže použít APIčko - to se může někdy stát). Tím by obcházela ty pravidla.
 
@@ -314,6 +318,7 @@ Kdy takový stav může například nastat:
 
 <!-- ExplanationEnd -->
 <!--ID: 1773945940661-->
+
 END
 
 ---
@@ -324,7 +329,6 @@ Original Flashcard ID: 1728921214959
 
 START
 NI-SZZ
-
 
 Co je **service-oriented integrace**?
 
@@ -350,6 +354,7 @@ Aplikace $A$ zavolá middleware, ten pak zavolá aplikaci $B$ a naopak.
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940664-->
+
 END
 
 ---
@@ -360,7 +365,6 @@ Original Flashcard ID: 1728921214962
 
 START
 NI-SZZ
-
 
 Co je **real-time (web services)** integrace?
 
@@ -374,6 +378,7 @@ Tzn. synchronizuje např. dvě aplikace pomocí jejich APIs.
 
 <!-- InformallySaidEnd -->
 <!--ID: 1773945940668-->
+
 END
 
 ---
@@ -384,7 +389,6 @@ Original Flashcard ID: 1728921214964
 
 START
 NI-SZZ
-
 
 Co je **Bulk data (ETL)** integrace?
 
@@ -404,6 +408,7 @@ Tato synchronizace přenáší **bulk data**, tzn velké množství dat, které 
 
 <!-- ExplanationEnd -->
 <!--ID: 1773945940671-->
+
 END
 
 ---
@@ -415,13 +420,13 @@ Original Flashcard ID: 1729236693071
 START
 NI-SZZ
 
-
 Poskytuje SOA **web services** nebo **ETL** integraci?
 
 Back:
 
 **Obojí**
 <!--ID: 1773945940674-->
+
 END
 
 ---
@@ -432,7 +437,6 @@ Original Flashcard ID: 1728921214967
 
 START
 NI-SZZ
-
 
 Co je **integrační proces** a jakou klíčovou vlastnost má?
 
@@ -448,6 +452,7 @@ Proces, kdy se nějaká informace propíše pomocí integračního middlewaru do
 
 <!-- ImageEnd -->
 <!--ID: 1773945940677-->
+
 END
 
 ---
@@ -459,7 +464,6 @@ Original Flashcard ID: 1729236693079
 START
 NI-SZZ
 
-
 Co je **rekonsiliační proces**?
 
 Back:
@@ -468,6 +472,7 @@ Proces, co zkontroluje, jeslti jsou všechny systémy správně synchronizované
 
 Tento proces se spouští například jednou za den.
 <!--ID: 1773945940681-->
+
 END
 
 ---
@@ -479,7 +484,6 @@ Original Flashcard ID: 1729236693087
 START
 NI-SZZ
 
-
 Co je **Enterprise Service Bus**?
 
 Back:
@@ -487,11 +491,9 @@ Back:
 - Aplikace, která běží na aplikačním serveru.
 - Pomocí integračních vzorů v ní můžu vytvářet integrační procesy.
 - Plní roli prostředníka (intermediary) v SOA
-- ESB aplikace
-	- Typy služeb: sdílené a infrastruktura
-	- Typy procesů: technické a businessové
-<!--ID: 1773945940684-->
-END
+- ESB aplikace - Typy služeb: sdílené a infrastruktura - Typy procesů: technické a businessové
+  <!--ID: 1773945940684-->
+  END
 
 ---
 
@@ -502,7 +504,6 @@ Original Flashcard ID: 1729236693096
 START
 NI-SZZ
 
-
 Jaké jsou **integrační vzory** a co znamenají? (7)
 
 Back:
@@ -512,7 +513,7 @@ Back:
 - **Dynamic routing**
 - **Session pooling**
 - **Message enrichment**
-- **Data transformation** 
+- **Data transformation**
 - **Key mapping**
 
 <!-- DetailInfoStart -->
@@ -522,6 +523,7 @@ Další vzory:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940687-->
+
 END
 
 ---
@@ -537,10 +539,12 @@ Back:
 - může být součástí ESB
 
 <!-- ImageStart -->
-![](../../Assets/Pasted%20image%2020260513195958.png)
-<!-- ImageEnd -->
 
+![](../../Assets/Pasted%20image%2020260513195958.png)
+
+<!-- ImageEnd -->
 <!--ID: 1778786460870-->
+
 END
 
 ---
@@ -557,9 +561,12 @@ Back:
 - Může být využito i jako Load Balancer
 
 <!-- ImageStart -->
+
 ![](../../Assets/Pasted%20image%2020260513200044.png)
+
 <!-- ImageEnd -->
 <!--ID: 1778786460874-->
+
 END
 
 ---
@@ -575,10 +582,12 @@ Back:
 - Zpráva musí být naplněna business logikou
 
 <!-- ImageStart -->
-![](../../Assets/Pasted%20image%2020260513200119.png)
-<!-- ImageEnd -->
 
+![](../../Assets/Pasted%20image%2020260513200119.png)
+
+<!-- ImageEnd -->
 <!--ID: 1778786460877-->
+
 END
 
 ---
@@ -595,9 +604,12 @@ Back:
 - Po dokončení operace se spojení neodstraňuje, ale vrací se do poolu a následně přepoužívá
 
 <!-- ImageStart -->
+
 ![](../../Assets/Pasted%20image%2020260513200153.png)
+
 <!-- ImageEnd -->
 <!--ID: 1778786460881-->
+
 END
 
 ---
@@ -612,9 +624,12 @@ Back:
 - Obohacení původní zprávy o další data, která jsou potřeba pro její provedení
 
 <!-- ImageStart -->
+
 ![](../../Assets/Pasted%20image%2020260513200225.png)
+
 <!-- ImageEnd -->
 <!--ID: 1778786460884-->
+
 END
 
 ---
@@ -628,11 +643,10 @@ Back:
 
 - Mapování dat z jedné struktury do druhé
 - Řeší konverze mezi rozdílnými formáty
-<!--ID: 1778786460889-->
-END
+  <!--ID: 1778786460889-->
+  END
 
 ---
-
 
 START
 NI-SZZ
@@ -645,15 +659,17 @@ Back:
 - Každá služba může využívat vlastní klíče
 
 <!-- ImageStart -->
+
 ![](../../Assets/Pasted%20image%2020260513200324.png)
+
 <!-- ImageEnd -->
 <!--ID: 1778786460897-->
+
 END
 
 ---
 
 ## Synchronní a asynchronní komunikace
-
 
 START
 NI-SZZ
@@ -668,10 +684,12 @@ Back:
 - Např. client-server
 
 <!-- ImageStart -->
-![](../../Assets/Pasted%20image%2020260513200513.png)
-<!-- ImageEnd -->
 
+![](../../Assets/Pasted%20image%2020260513200513.png)
+
+<!-- ImageEnd -->
 <!--ID: 1778786460900-->
+
 END
 
 ---
@@ -684,6 +702,7 @@ Co je to **asynchronní** integrace?
 Back:
 
 **Asynchronní**
+
 - Pro **request** se použije **jeden socket**
 - Pro **response** se použije **druhý socket**
 - Doba může být větší (hodiny, dny)
@@ -691,7 +710,9 @@ Back:
 	- U klienta lze dělat něco podobného pomocí pollingu (viz další kartičky)
 
 <!-- ImageStart -->
+
 ![](../../Assets/Pasted%20image%2020260513200704.png)
+
 <!-- ImageEnd -->
 
 <!-- DetailInfoStart -->
@@ -702,10 +723,10 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1778786460904-->
+
 END
 
 ---
-
 
 START
 NI-SZZ
@@ -722,8 +743,6 @@ Back:
 END
 
 ---
-
-
 
 <!--
 Original Flashcard ID: 1729236693124
@@ -750,6 +769,7 @@ Máme prostředníka, co má u sebe dvě fronty (request queue a response queue)
 
 <!-- ImageEnd -->
 <!--ID: 1773945940693-->
+
 END
 
 ---
@@ -761,15 +781,14 @@ Original Flashcard ID: 1729236693138
 START
 NI-SZZ
 
-
 Jaké jsou 2 režimy **asynchronní komunikace přes prostředníka**?
 
 Back:
 
 - **Message Queue** - jeden klient, jeden server
 - **Publish/Subscribe** - jeden klient, z queue čte více serverů _(každý např. zaměřený na určitý task)_
-<!--ID: 1773945940697-->
-END
+  <!--ID: 1773945940697-->
+  END
 
 ---
 
@@ -779,7 +798,6 @@ Original Flashcard ID: 1736674205790
 
 START
 NI-SZZ
-
 
 Co je **asynchronní komunikace přes polling**?
 
@@ -806,6 +824,7 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940700-->
+
 END
 
 ---
@@ -817,7 +836,6 @@ Original Flashcard ID: 1729236693152
 START
 NI-SZZ
 
-
 Co je **long polling**?
 
 Back:
@@ -826,6 +844,7 @@ Server si u sebe chvíli podrží ten request klienta, díky čemuž zamezí tom
 
 Tzn. server si tím reguluje zátěž, protože schválně na každý request odpoví po nějakém čase. Nicméně udržuje si pro každého klienta vlákno, které se v pravidelných časových intervalech probouzí.
 <!--ID: 1773945940703-->
+
 END
 
 ---
@@ -838,7 +857,6 @@ Original Flashcard ID: 1735205749781
 
 START
 NI-SZZ
-
 
 Co je model **synchronní IO**? Jaké **2 typy connnections** existují?
 
@@ -864,6 +882,7 @@ Problém:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940706-->
+
 END
 
 ---
@@ -874,7 +893,6 @@ Original Flashcard ID: 1735205749784
 
 START
 NI-SZZ
-
 
 Jak se řeší pomalé synchronní IO?
 
@@ -892,6 +910,7 @@ Mám 20 requestů za sekundu, rozběhnu si 20 vláken, 1 thread pool do databáz
 
 <!-- ExampleEnd -->
 <!--ID: 1773945940709-->
+
 END
 
 ---
@@ -902,7 +921,6 @@ Original Flashcard ID: 1735205749786
 
 START
 NI-SZZ
-
 
 Jaká je nevýhoda synchronního IO?
 
@@ -916,6 +934,7 @@ Mohl bych teoreticky navýšit počet spojení do databáze, ale to nemůžu dě
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940712-->
+
 END
 
 ---
@@ -933,6 +952,7 @@ Back:
 
 Nastavím tam **timeout**. Díky tomu mi request vypadne s nějakou chybou a přestane to **blokovat** ostatní requesty.
 <!--ID: 1773945940716-->
+
 END
 
 ---
@@ -944,7 +964,6 @@ Original Flashcard ID: 1735205749792
 START
 NI-SZZ
 
-
 Jak funguje **fronta requestů** před tím než se jim přiřadí vlákna?
 
 Back:
@@ -953,8 +972,8 @@ Back:
 2. Zařadí se do fronty (např. s kapacitou 100)
 3. Request čeká na to, až mu bude přiřazeno vlákno pro přístup do databáze.
 4. Pokud je kapacita fronty plná, rovnou se requesty odmítají (díky čemuž to je rychlejší, protože se nezatěžuje ten systém, když vím, že bych to stejně nestíhal zpracovávat)
-<!--ID: 1773945940719-->
-END
+   <!--ID: 1773945940719-->
+   END
 
 ---
 
@@ -965,7 +984,6 @@ Original Flashcard ID: 1735205749794
 START
 NI-SZZ
 
-
 Jak funguje **Asynchronní IO**?
 
 Back:
@@ -973,6 +991,7 @@ Back:
 Vlákna nečekají na vykonání outbound požadavku, ale mezitím začnou zpracovávat další požadavek.
 
 Např.
+
 1. Request $A$ požádá o přečtení databáze
 2. Vlákno o to požádá databázi a čeká na odpověď, má volný čas
 3. Mezitím začne obsluhovat požadavek funkce $B$
@@ -984,6 +1003,7 @@ Např.
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940721-->
+
 END
 
 ---
@@ -995,7 +1015,6 @@ Original Flashcard ID: 1735205749796
 START
 NI-SZZ
 
-
 Jaká je výhoda Node v Javascriptu?
 
 Back:
@@ -1004,6 +1023,7 @@ Na **outbound connections** umožňuje dělat asynchronní IO.
 
 Používají se k tomu callback funkce. Když vlákno dokončí operaci, zavolá mezitím jinou funkci.
 <!--ID: 1773945940725-->
+
 END
 
 ---

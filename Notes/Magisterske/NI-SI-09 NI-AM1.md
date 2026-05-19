@@ -9,7 +9,6 @@ FILE TAGS: NI-SI-09 NI-AM1
 > NI-SI-09 (NI-AM1)
 > Architektura softwarového systému, pojem služba a její charakteristiky. Architektura REST (vlastnosti, zdroj, srovnání se SOAP). Optimalizace protokolu HTTP (latence, keep-alive, pipelining).
 
-
 ## Architektura softwarového systému
 
 <!--
@@ -25,6 +24,7 @@ Back:
 
 Architektura určuje **strukturu** a **chování** sytému.
 <!--ID: 1773945940289-->
+
 END
 
 ---
@@ -42,6 +42,7 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020240930093046.png)
 <!--ID: 1773945940297-->
+
 END
 
 ---
@@ -65,6 +66,7 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020240930093423.png)
 <!--ID: 1773945940300-->
+
 END
 
 ---
@@ -75,7 +77,6 @@ Original Flashcard ID: 1736418422039
 
 START
 NI-SZZ
-
 
 Co jsou **EIS** systémy?
 
@@ -90,6 +91,7 @@ systémy pro řízení pro manažery
 
 <!-- ImageEnd -->
 <!--ID: 1773945940304-->
+
 END
 
 ---
@@ -100,7 +102,6 @@ Original Flashcard ID: 1736418422051
 
 START
 NI-SZZ
-
 
 Co jsou **BSS** systémy?
 
@@ -115,6 +116,7 @@ systémy, co působí v jednotlivých odděleních (např. hr, finance, marketin
 
 <!-- ImageEnd -->
 <!--ID: 1773945940307-->
+
 END
 
 ---
@@ -125,7 +127,6 @@ Original Flashcard ID: 1736418422054
 
 START
 NI-SZZ
-
 
 Co jsou **OSS** systémy?
 
@@ -140,6 +141,7 @@ Back:
 
 <!-- ImageEnd -->
 <!--ID: 1773945940311-->
+
 END
 
 ---
@@ -150,7 +152,6 @@ Original Flashcard ID: 1736418422057
 
 START
 NI-SZZ
-
 
 Co jsou **B2B** systémy?
 
@@ -165,6 +166,7 @@ Zajišťuje integraci s externíma systémama, dalšíma firmama (např. automat
 
 <!-- ImageEnd -->
 <!--ID: 1773945940314-->
+
 END
 
 ---
@@ -175,7 +177,6 @@ Original Flashcard ID: 1736418422060
 
 START
 NI-SZZ
-
 
 Co jsou **OIS** systémy?
 
@@ -190,6 +191,7 @@ Back:
 
 <!-- ImageEnd -->
 <!--ID: 1773945940317-->
+
 END
 
 ---
@@ -206,9 +208,10 @@ Co je **process classification framework** (PCF)?
 Back:
 
 PCF je **standard** = seznam obecných požadavků, které je dobré implementovat v systémech.
+
 - Když budu dělat systém, podívám se do standardu a on mi řekne, co všechno bych měl v systému vytvořit za funkcionality.
-<!--ID: 1773945940320-->
-END
+  <!--ID: 1773945940320-->
+  END
 
 ---
 
@@ -224,22 +227,24 @@ Jaké jsou **typy softwarové architektury** (dle centralizovanosti)? (2)
 Back:
 
 - **centralizovaná** - client server
-  - Nevýhoda - když spadne server, tak nefunguje nic (single point of failure)
+	- Nevýhoda - když spadne server, tak nefunguje nic (single point of failure)
 - **decentralizovaná** - peer to peer
-  - Uzly v architektuře jsou nezávislé
-  - Dobré škálování
-  - Když failne jedna node, tak se to přepojí na jinou
-  - Např. Torrent, Skype
+	- Uzly v architektuře jsou nezávislé
+	- Dobré škálování
+	- Když failne jedna node, tak se to přepojí na jinou
+	- Např. Torrent, Skype
 
 <!-- DetailInfoStart -->
+
 ![](../../Assets/Pasted%20image%2020240930103343.png)
+
 <!-- DetailInfoEnd -->
 
 Fun fact:
 
 - Skype fungoval tak, že když člověk nepotřebuje komunikovat se serverem. Když člověk byl na veřejné síti, tak vpodstatě fungoval jako relay pro ostatní uživatele -> komunikace šla přes ostatní uživatele. - Teď už to není, dřív to tak bylo. R.I.P Skype 🥀
-<!--ID: 1773945940323-->
-END
+  <!--ID: 1773945940323-->
+  END
 
 ---
 
@@ -259,9 +264,12 @@ Back:
 - Mezi vrstvami mohu definovat **interface** (rozhraní).
 
 <!-- DetailInfoStart -->
+
 ![](../../Assets/Pasted%20image%2020240930103530.png)
+
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940327-->
+
 END
 
 ---
@@ -286,8 +294,8 @@ Back:
 - **Microservices client/server**
 - **Nemikroservisní**
 - **Cloud-native**
-<!--ID: 1773945940330-->
-END
+  <!--ID: 1773945940330-->
+  END
 
 ---
 
@@ -298,7 +306,6 @@ Original Flashcard ID: 1729237386396
 START
 NI-SZZ
 
-
 Co je **monolit**?
 
 Back:
@@ -306,8 +313,7 @@ Back:
 - Všechny vrstvy aplikace jsou na jednom stroji
 - Typicky desktopové aplikace
 - Určené pro jednoho uživatele
-- Nevýhody
-    - Těžko se spravuje, problém se škálováním a výkone
+- Nevýhody - Těžko se spravuje, problém se škálováním a výkone
 
 <!-- ImageStart -->
 
@@ -321,6 +327,7 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940333-->
+
 END
 
 ---
@@ -331,7 +338,6 @@ Original Flashcard ID: 1729237386398
 
 START
 NI-SZZ
-
 
 Co je **two-tier client/server** architektura?
 
@@ -354,6 +360,7 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940337-->
+
 END
 
 ---
@@ -365,7 +372,6 @@ Original Flashcard ID: 1729237386401
 START
 NI-SZZ
 
-
 Jaká je **nevýhoda** **two-tier client server** architecture?
 
 Back:
@@ -373,8 +379,8 @@ Back:
 - Tlustý klient se těžko spravuje – každý update znamená reinstalaci
 - Nesdílí se aplikační logika – pouze skrze kopie. Každý klient může mít jinou verzi aplikační logiky
 - Datově orientovaná integrace – integrita v aplikační logice
-<!--ID: 1773945940340-->
-END
+  <!--ID: 1773945940340-->
+  END
 
 ---
 
@@ -385,15 +391,11 @@ Original Flashcard ID: 1729237386404
 START
 NI-SZZ
 
-
 Co je **three-tier client/server architecture**?
 
 Back:
 
-- Každá vrstva na separátním stroji
-    - Tenký klient – desktopová aplikace nebo interpretovaný kód
-    - Podpora více uživatelů sdílejících stejnou aplikační logiku a DB
-    - Vysoký výkon a škálovatelnost
+- Každá vrstva na separátním stroji - Tenký klient – desktopová aplikace nebo interpretovaný kód - Podpora více uživatelů sdílejících stejnou aplikační logiku a DB - Vysoký výkon a škálovatelnost
 
 <!-- ImageStart -->
 
@@ -407,6 +409,7 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940343-->
+
 END
 
 ---
@@ -431,6 +434,7 @@ Oproti two-tier, kde si každý prostě stáhne program k sobě, tady musím roz
 
 <!-- ExplanationEnd -->
 <!--ID: 1773945940347-->
+
 END
 
 ---
@@ -441,7 +445,6 @@ Original Flashcard ID: 1729237386409
 
 START
 NI-SZZ
-
 
 Co je **Multi-tier client/server architecture** (vícevrstvá architektura)?
 
@@ -462,6 +465,7 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940350-->
+
 END
 
 ---
@@ -472,7 +476,6 @@ Original Flashcard ID: 1729237386412
 
 START
 NI-SZZ
-
 
 Co je **Client/Server Architecture (microservices)**?
 
@@ -494,6 +497,7 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940353-->
+
 END
 
 ---
@@ -505,13 +509,13 @@ Original Flashcard ID: 1729237386415
 START
 NI-SZZ
 
-
 Proč firmy nerefaktorují svoje staré aplikace na microservice architekture?
 
 Back:
 
 Protože to je často **nákladné překódit** celou codebase.
 <!--ID: 1773945940357-->
+
 END
 
 ---
@@ -523,7 +527,6 @@ Original Flashcard ID: 1729237386418
 START
 NI-SZZ
 
-
 Co je **client/server NOT a microservice architecture**?
 
 Back:
@@ -532,10 +535,9 @@ Vezme se monolit a pustí se v **Kubernetes**.
 
 - Snazší nasazení skrze containerové obrazy
 - Vylepšení fail-overu
-- Nevýhody
-    - Drahé
+- Nevýhody - Drahé
 
-*Má to výhody a je to podobné microservices, ale **není** to microservice architekture.*
+_Má to výhody a je to podobné microservices, ale **není** to microservice architekture._
 
 <!-- ImageStart -->
 
@@ -549,10 +551,10 @@ Vezme se monolit a pustí se v **Kubernetes**.
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940360-->
+
 END
 
 ---
-
 
 START
 NI-SZZ
@@ -564,12 +566,10 @@ Back:
 - navržená pro cloud
 - děláme architekturu microslužeb
 - vlastně Kubernetes
-<!--ID: 1778786460863-->
-END
+  <!--ID: 1778786460863-->
+  END
 
 ---
-
-
 
 <!--
 Original Flashcard ID: 1729236693163
@@ -578,17 +578,16 @@ Original Flashcard ID: 1729236693163
 START
 NI-SZZ
 
-
 Jaký je rozdíl mezi SOA, Miscroservices a Kubernetes?
 
 Back:
 
 - **SOA** - starší legacy systém obecně na služby
-  - Je to legacy (vznikl v roce 2005), už se toho lidi spíš zbavují
+	- Je to legacy (vznikl v roce 2005), už se toho lidi spíš zbavují
 - **Mikroslužby** - relativně nový, populární
 - **Kubernetes** - v tom běží (mimo jiné) mikroslužby
-<!--ID: 1773945940364-->
-END
+  <!--ID: 1773945940364-->
+  END
 
 ---
 
@@ -599,7 +598,6 @@ Original Flashcard ID: 1736496141945
 START
 NI-SZZ
 
-
 Jak se dá rozdělit systém? (3 vrstvy)
 
 Back:
@@ -607,8 +605,8 @@ Back:
 - **Data, procesy, funkce**
 - **Software**
 - **Hardware**
-<!--ID: 1773945940367-->
-END
+  <!--ID: 1773945940367-->
+  END
 
 ---
 
@@ -618,7 +616,6 @@ Original Flashcard ID: 1736496141948
 
 START
 NI-SZZ
-
 
 Pomocí jakých diagramů se dají modelovat data, procesy a funkce?
 
@@ -648,6 +645,7 @@ V monolitické aplikaci mám celou aplikaci jako jeden proces.
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940370-->
+
 END
 
 ---
@@ -661,7 +659,6 @@ Original Flashcard ID: 1729237386423
 START
 NI-SZZ
 
-
 Jaké jsou různé **pohledy na služby**? (5)
 
 Back:
@@ -671,8 +668,8 @@ Back:
 - **logical** view
 - **software architecture** view
 - **technology architecture** view
-<!--ID: 1773945940374-->
-END
+  <!--ID: 1773945940374-->
+  END
 
 ---
 
@@ -682,7 +679,6 @@ Original Flashcard ID: 1729237386426
 
 START
 NI-SZZ
-
 
 Co je **business view** náhled na služby?
 
@@ -696,6 +692,7 @@ Služba přináší nějakou byznys hodnotu uživateli té služby.
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940377-->
+
 END
 
 ---
@@ -707,7 +704,6 @@ Original Flashcard ID: 1729237386429
 START
 NI-SZZ
 
-
 Co je **conceptual view** náhled na služby?
 
 Back:
@@ -716,6 +712,7 @@ Pohled z hlediska návrhu, design patternů a principů.
 
 ![](../../Assets/Pasted%20image%2020241007095755.png)
 <!--ID: 1773945940381-->
+
 END
 
 ---
@@ -727,7 +724,6 @@ Original Flashcard ID: 1729237386432
 START
 NI-SZZ
 
-
 Co je **logical view** náhled na služby? Jaké jsou 2 hlavní přístupy?
 
 Back:
@@ -735,11 +731,11 @@ Back:
 Interface služby, její popis a implementace
 
 - **resource-oriented**
-  - pracuje se zdrojema, např. REST
-  - metody, co používám pro manipulaci dat jsou standardizovaný (POST, PUT, DELETE, atd.)
+	- pracuje se zdrojema, např. REST
+	- metody, co používám pro manipulaci dat jsou standardizovaný (POST, PUT, DELETE, atd.)
 - **message-oriented** - zavádím operace, co jsou doménově závislé - např. SOAP - např. mám na rozhraní konkrétní metodu "createCustomer" - nevýhoda: je potřeba zavést nějaký standard pro vytváření metod, aby v tom nebyl chaos
-<!--ID: 1773945940384-->
-END
+  <!--ID: 1773945940384-->
+  END
 
 ---
 
@@ -750,15 +746,14 @@ Original Flashcard ID: 1729237386434
 START
 NI-SZZ
 
-
 Co je **software architecture view** náhled na služby? (2 typy služeb)
 
 Back:
 
 - **business service**
-  - Externí, exposuje funkcionalitu aplikace ostatním
+	- Externí, exposuje funkcionalitu aplikace ostatním
 - **middleware service**
-  - Interní (middleware atd.)
+	- Interní (middleware atd.)
 
 <!-- DetailInfoStart -->
 
@@ -766,6 +761,7 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940388-->
+
 END
 
 ---
@@ -777,7 +773,6 @@ Original Flashcard ID: 1729237386437
 START
 NI-SZZ
 
-
 Co je **technology architecture view** náhled na služby?
 
 Back:
@@ -786,6 +781,7 @@ Protokoly a standardy, které se používají.
 
 ![](../../Assets/Pasted%20image%2020241007095820.png)
 <!--ID: 1773945940391-->
+
 END
 
 ---
@@ -796,7 +792,6 @@ Original Flashcard ID: 1729237386440
 
 START
 NI-SZZ
-
 
 Proč je výhoda oddělovat specifikaci rozhraní a samotnou implementaci?
 
@@ -810,6 +805,7 @@ Můžu pak mít **více implementací** daného rozhraní (např. v jiných jazy
 
 <!-- ImageEnd -->
 <!--ID: 1773945940394-->
+
 END
 
 ---
@@ -821,13 +817,13 @@ Original Flashcard ID: 1729237386445
 START
 NI-SZZ
 
-
 Pomocí jakého **diagramu** se modeluje **fungování dané service**?
 
 Back:
 
 Pomocí **stavového diagramu**.
 <!--ID: 1773945940397-->
+
 END
 
 ---
@@ -839,18 +835,17 @@ Original Flashcard ID: 1729237386448
 START
 NI-SZZ
 
-
 Jaké jsou části **procesu operace** dané service? (4)
 
 Back:
 
 1. Operace má definované **preconditions**
-   - _Podmínky, co platí ve stavu aplikace před začátkm operace_
-   - _Např. abych provedl platbu, musím mít na účtu dost peněz_
+ 	- _Podmínky, co platí ve stavu aplikace před začátkm operace_
+ 	- _Např. abych provedl platbu, musím mít na účtu dost peněz_
 1. Do operace vejde **input**
 1. Z operace vyjdou **outputs**
 1. Operace má definované **effects**
-   - _Podmínky, co platí ve stavu aplikace po dokončení operace_
+ 	- _Podmínky, co platí ve stavu aplikace po dokončení operace_
 
 <!-- ImageStart -->
 
@@ -858,6 +853,7 @@ Back:
 
 <!-- ImageEnd -->
 <!--ID: 1773945940401-->
+
 END
 
 ---
@@ -868,7 +864,6 @@ Original Flashcard ID: 1729237386451
 
 START
 NI-SZZ
-
 
 Jaké jsou **charakteristiky services**? (7)
 
@@ -890,6 +885,7 @@ Pomůcka: CLEARCD nebo LCDRACE
 
 <!-- ImageEnd -->
 <!--ID: 1773945940404-->
+
 END
 
 ---
@@ -901,13 +897,13 @@ Original Flashcard ID: 1729237386454
 START
 NI-SZZ
 
-
 Co je **loose coupling** služeb (services)?
 
 Back:
 
 V klientovi není "pevně zadrátované", jaké endpointy se volají atd. (např. díky HATEOAS).
 <!--ID: 1773945940408-->
+
 END
 
 ---
@@ -918,7 +914,6 @@ Original Flashcard ID: 1729237386456
 
 START
 NI-SZZ
-
 
 Co je **reusability** služeb (services)?
 
@@ -934,6 +929,7 @@ Samozřejmě je v tom tradeoff. Čím víc reusable to dělám, tím víc fičur
 
 <!-- ExampleEnd -->
 <!--ID: 1773945940411-->
+
 END
 
 ---
@@ -945,13 +941,13 @@ Original Flashcard ID: 1729237386459
 START
 NI-SZZ
 
-
 Čeho je zkratka **SOA**?
 
 Back:
 
 **Service Oriented architecture**
 <!--ID: 1773945940414-->
+
 END
 
 ---
@@ -963,13 +959,13 @@ Original Flashcard ID: 1729237386462
 START
 NI-SZZ
 
-
 Co je **ESB**?
 
 Back:
 
 **Enterprise Service Bus** - systém komunikace mezi services
 <!--ID: 1773945940417-->
+
 END
 
 ---
@@ -981,14 +977,13 @@ Original Flashcard ID: 1729237386465
 START
 NI-SZZ
 
-
 Co jsou **Integration a Interoperability**?
 
 Back:
 
 - **Integrace** - proces propojování systémů, services
 - **Interoperability** - schopnost dvou aplikací, aby si rozuměly
-  - _Např. aby se transformovaly data aby se daly poslat dané službě. Např. XML -> JSON atd._
+	- _Např. aby se transformovaly data aby se daly poslat dané službě. Např. XML -> JSON atd._
 
 <!-- DetailInfoStart -->
 
@@ -996,6 +991,7 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940420-->
+
 END
 
 ---
@@ -1006,7 +1002,6 @@ Original Flashcard ID: 1729237386468
 
 START
 NI-SZZ
-
 
 Co je **SOA architektura**? Z čeho se skládá?
 
@@ -1026,6 +1021,7 @@ Pozn. je to trochu legacy, ale velké firmy ČEZ, banky atd. to používají.
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940423-->
+
 END
 
 ---
@@ -1036,7 +1032,6 @@ Original Flashcard ID: 1729237386471
 
 START
 NI-SZZ
-
 
 Co je **one-to-one service integration**?
 
@@ -1057,6 +1052,7 @@ Problém je, že dochází k duplikaci integračních funkcionalit např. pro in
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940427-->
+
 END
 
 ---
@@ -1067,7 +1063,6 @@ Original Flashcard ID: 1729237386474
 
 START
 NI-SZZ
-
 
 Jaký je problém s **one-to-one service integration**?
 
@@ -1083,6 +1078,7 @@ _To se pak nazývá špagetová architektura :D_
 
 <!-- ImageEnd -->
 <!--ID: 1773945940430-->
+
 END
 
 ---
@@ -1093,7 +1089,6 @@ Original Flashcard ID: 1729237386477
 
 START
 NI-SZZ
-
 
 Jak vypadá **Many-To-Many service** integrace (=realizace SOA)? Jaký **problém** řeší?
 
@@ -1115,6 +1110,7 @@ Vytvoří se **Enterprise Service Bus** (ESB), který je middlewarem mezi jednot
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940433-->
+
 END
 
 ---
@@ -1126,7 +1122,6 @@ Original Flashcard ID: 1729237386480
 START
 NI-SZZ
 
-
 Proč není **many-to-many service** tak "růžový"?
 
 Back:
@@ -1135,6 +1130,7 @@ Protože se tam často ten chaos zůstane, akorát se rodělí do menších pod�
 
 (Ale aspoň ten hlavní flow dat je uspořádaný)
 <!--ID: 1773945940436-->
+
 END
 
 ---
@@ -1162,9 +1158,9 @@ Když by mi dvě mikroslužby pak potřebovaly využívat stejnou funkcionalitu,
 
 - Nevýhoda: mám duplicitní kód v systému (několik mikroslužeb má nainstalováno stejnou knihovnu -> snižuje to výkon)
 - Výhoda: je to všechno přehledný a funguje to dobře.
-  <!-- DetailInfoEnd -->
-<!--ID: 1773945940446-->
-END
+    <!-- DetailInfoEnd -->
+  <!--ID: 1773945940446-->
+  END
 
 ---
 
@@ -1174,7 +1170,6 @@ Original Flashcard ID: 1736496141960
 
 START
 NI-SZZ
-
 
 Jaké jsou vlastnosti mikroslužeb? (6)
 
@@ -1200,6 +1195,7 @@ Ten novější přístup je právě pomocí menších týmů, který obsáhne ce
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940449-->
+
 END
 
 ---
@@ -1213,13 +1209,13 @@ Original Flashcard ID: 1731175818772
 START
 NI-SZZ
 
-
 Používá se v praxi HATEOAS?
 
 Back:
 
 Je to fajn koncept, ale reálně se to moc nepoužívá, protože je prostě jednodušší vědět specifikaci API a s tou pracovat.
 <!--ID: 1773945940452-->
+
 END
 
 ---
@@ -1231,13 +1227,13 @@ Original Flashcard ID: 1735205750015
 START
 NI-SZZ
 
-
 Čeho je zkratka REST?
 
 Back:
 
 Representational State Transfer
 <!--ID: 1773945940455-->
+
 END
 
 ---
@@ -1254,16 +1250,18 @@ Jaký je rozdíl mezi **REST** a **RPC**?
 Back:
 
 REST
+
 - endpointy jsou **zdroje**
 - operace jsou doménově nezávislé (GET, PUT,..)
 - používá se často pro client-server komunikaci
 
 RPC
+
 - endpointy jsou **operace** (např. createCustomer)
 - operace jsou doménově závislé
 - používá se hlavně pro server-server komunikaci
-<!--ID: 1773945940458-->
-END
+  <!--ID: 1773945940458-->
+  END
 
 ---
 
@@ -1274,7 +1272,6 @@ Original Flashcard ID: 1735205750020
 START
 NI-SZZ
 
-
 Z jakých částí se skládá webová architektura? (3)
 
 Back:
@@ -1282,8 +1279,8 @@ Back:
 - **Identifikace**: univerzální identifikace zdrojů pomocí URI
 - **Interakce**: protokoly pro získávání zdrojů - HTTP
 - **Formáty**: reprezentace zdrojů (data a metadata)
-<!--ID: 1773945940462-->
-END
+  <!--ID: 1773945940462-->
+  END
 
 ---
 
@@ -1294,14 +1291,13 @@ Original Flashcard ID: 1735205750023
 START
 NI-SZZ
 
-
 Jaké jsou základní principy/omezení RESTu? (5)
 
 Back:
 
 - **Client-server architektura**
 - **Statelessnes** - stav se neudržuje na serveru, ale v těch datech, co se přenáší
-  - Stavy jsou data, přechody jsou linky (např. v HTML, nebo endpointy RESTu)
+	- Stavy jsou data, přechody jsou linky (např. v HTML, nebo endpointy RESTu)
 - **Cacheability** - requesty by mělo jít cachovat
 - **Layered system**
 - **Uniform interface** - operace CRUD jsou doménově nezávislé (tzn. nemám funkci `createOrder`, ale `POST /orders`)
@@ -1312,6 +1308,7 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940465-->
+
 END
 
 ---
@@ -1323,17 +1320,16 @@ Original Flashcard ID: 1735205749817
 START
 NI-SZZ
 
-
 Na co se dělí REST? (4)
 
 Back:
 
-- **Zdroje** (resource) 
-- **Identifikátor** 
+- **Zdroje** (resource)
+- **Identifikátor**
 - **Data**
 - **Metadata**
-<!--ID: 1773945940468-->
-END
+  <!--ID: 1773945940468-->
+  END
 
 ---
 
@@ -1344,13 +1340,13 @@ Original Flashcard ID: 1735205749820
 START
 NI-SZZ
 
-
 Co je **URI**?
 
 Back:
 
 Unified Resource Identifier = identifikuje zdroj
 <!--ID: 1773945940471-->
+
 END
 
 ---
@@ -1362,13 +1358,13 @@ Original Flashcard ID: 1735205749823
 START
 NI-SZZ
 
-
 Co je URL?
 
 Back:
 
 Uniform Resource Locator = identifikuje zdroj + obsahuje jeho lokaci
 <!--ID: 1773945940475-->
+
 END
 
 ---
@@ -1380,13 +1376,13 @@ Original Flashcard ID: 1735205749825
 START
 NI-SZZ
 
-
 Co je URN?
 
 Back:
 
 Uniform Resource Name = název, který je globálně unikátní
 <!--ID: 1773945940478-->
+
 END
 
 ---
@@ -1397,7 +1393,6 @@ Original Flashcard ID: 1735205749828
 
 START
 NI-SZZ
-
 
 Jaké jsou části URI? (4)
 
@@ -1410,6 +1405,7 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020241125122945.png)
 <!--ID: 1773945940481-->
+
 END
 
 ---
@@ -1420,7 +1416,6 @@ Original Flashcard ID: 1735205749830
 
 START
 NI-SZZ
-
 
 Je good practice mít v RESTu 2 cesty k tomu samému zdroji?
 
@@ -1442,6 +1437,7 @@ Např. když mám orders, tak se k tomu můžu dostat mnoha způsoby. Tomu se po
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940484-->
+
 END
 
 ---
@@ -1453,7 +1449,6 @@ Original Flashcard ID: 1735205749833
 START
 NI-SZZ
 
-
 K čemu se používá **query** v RESTu? (3)
 
 Back:
@@ -1461,7 +1456,7 @@ Back:
 - **filtrace** (selekce) - chci vybrat jen nějaké položky
 - **projekce** - chci vypsat jen nějaký fieldy těch položek
 - **instrukce**
-  - např. formát, klíč
+	- např. formát, klíč
 
 <!-- ExampleStart -->
 
@@ -1469,6 +1464,7 @@ Back:
 
 <!-- ExampleEnd -->
 <!--ID: 1773945940488-->
+
 END
 
 ---
@@ -1479,7 +1475,6 @@ Original Flashcard ID: 1735205749836
 
 START
 NI-SZZ
-
 
 Co je fragment v URI adresách?
 
@@ -1493,6 +1488,7 @@ Používá se hash, znamená to "subresource". Díky tomu mohu odkazovat na konk
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940491-->
+
 END
 
 ---
@@ -1504,8 +1500,7 @@ Original Flashcard ID: 1735205749838
 START
 NI-SZZ
 
-
-Jaké jsou hlavní charakteristiky URI? (5)
+Jaké jsou **hlavní typy** URI? (5)
 
 Back:
 
@@ -1514,8 +1509,8 @@ Back:
 - **URI Opacity** - když jako součást URI mám i formát
 - **Resource versions** - když mi URI definuje i verzi toho zdroje
 - **Persistent URL** - adresa by měla být validní i když zdroj už neexistuje (neměl bych smazat URI, ale třeba přesměrovat člověka na novou URI)
-<!--ID: 1773945940494-->
-END
+  <!--ID: 1773945940494-->
+  END
 
 ---
 
@@ -1525,7 +1520,6 @@ Original Flashcard ID: 1735205749841
 
 START
 NI-SZZ
-
 
 Z čeho se skládají zdroje v RESTu? (3)
 
@@ -1542,6 +1536,7 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940497-->
+
 END
 
 ---
@@ -1552,7 +1547,6 @@ Original Flashcard ID: 1735205749846
 
 START
 NI-SZZ
-
 
 Co je resource state?
 
@@ -1574,6 +1568,7 @@ Tzn. když čtu data z REST zdroje, získám tím momentální **stav** toho zdr
 
 <!-- ExampleEnd -->
 <!--ID: 1773945940500-->
+
 END
 
 ---
@@ -1585,15 +1580,14 @@ Original Flashcard ID: 1735205749848
 START
 NI-SZZ
 
-
 Co znamená že má REST uniform interface?
 
 Back:
 
 - Mám omezené množství operací (POST, GET,...)
 - Operace jsou **doménově nezávislé**
-<!--ID: 1773945940503-->
-END
+  <!--ID: 1773945940503-->
+  END
 
 ---
 
@@ -1609,10 +1603,12 @@ Jaké **vlastnosti** mají operace RESTu z hlediska změn stavu zdroje? (2)
 Back:
 
 **Safeness**:
+
 - **Safe** - operace nemění stav (např. GET)
 - **Unsafe** - mohou měnit stav (např. POST, PUT, DELETE)
 
 **Idempotence**:
+
 - **Idempotent** - Když zavolám metodu na zdroji (na stejných datech/vstupech), bude efekt vždy stejný (GET, PUT, DELETE)
 - **Non-idempotent** - Když zavolám metodu na zdroji (na stejných datech/vstupech), může být stav jiný (POST)
 
@@ -1630,6 +1626,7 @@ Idempotence:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940506-->
+
 END
 
 ---
@@ -1640,7 +1637,6 @@ Original Flashcard ID: 1735205749854
 
 START
 NI-SZZ
-
 
 Jaký je rozdíl mezi efektem a výsledkem v idempotenci?
 
@@ -1663,6 +1659,7 @@ Delete je idempotentní, takže když to udělám znovu:
 
 <!-- ExplanationEnd -->
 <!--ID: 1773945940509-->
+
 END
 
 ---
@@ -1673,7 +1670,6 @@ Original Flashcard ID: 1735205749856
 
 START
 NI-SZZ
-
 
 Jaké REST metody jsou a nejsou idempotentní podle standardu?
 
@@ -1690,6 +1686,7 @@ U GET, PUT a DELETE furt pracuju s těmi samými daty, takže v tom není probl�
 
 <!-- ExplanationEnd -->
 <!--ID: 1773945940513-->
+
 END
 
 ---
@@ -1700,7 +1697,6 @@ Original Flashcard ID: 1735205749859
 
 START
 NI-SZZ
-
 
 Když mám POST, co by mělo být v response?
 
@@ -1720,6 +1716,7 @@ Správně by se měl provést POST, v tom by měl být odkaz na zdroj a klient s
 
 <!-- ExampleEnd -->
 <!--ID: 1773945940516-->
+
 END
 
 ---
@@ -1730,7 +1727,6 @@ Original Flashcard ID: 1735205749862
 
 START
 NI-SZZ
-
 
 Jaké vlastnosti má GET? (safeness a idempotence)
 
@@ -1745,6 +1741,7 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940519-->
+
 END
 
 ---
@@ -1755,7 +1752,6 @@ Original Flashcard ID: 1735205749865
 
 START
 NI-SZZ
-
 
 Jaké vlastnosti má PUT? (safeness a idempotence)
 
@@ -1772,6 +1768,7 @@ Updatuje celý resource.
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940521-->
+
 END
 
 ---
@@ -1782,7 +1779,6 @@ Original Flashcard ID: 1735205749867
 
 START
 NI-SZZ
-
 
 Jaké vlastnosti má PATCH? (safeness a idempotence)
 
@@ -1797,6 +1793,7 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940525-->
+
 END
 
 ---
@@ -1807,7 +1804,6 @@ Original Flashcard ID: 1735205749870
 
 START
 NI-SZZ
-
 
 Jaké vlastnosti má POST? (safeness a idempotence)
 
@@ -1822,6 +1818,7 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940528-->
+
 END
 
 ---
@@ -1832,7 +1829,6 @@ Original Flashcard ID: 1735205749872
 
 START
 NI-SZZ
-
 
 Jaké vlastnosti má DELETE? (safeness a idempotence)
 
@@ -1847,6 +1843,7 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940531-->
+
 END
 
 ---
@@ -1857,7 +1854,6 @@ Original Flashcard ID: 1735205749875
 
 START
 NI-SZZ
-
 
 Jaké vlastnosti mají HEAD a OPTIONS? (safeness a idempotence)
 
@@ -1872,6 +1868,7 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940534-->
+
 END
 
 ---
@@ -1882,7 +1879,6 @@ Original Flashcard ID: 1735205749877
 
 START
 NI-SZZ
-
 
 Jaké jsou třídy status kódů?
 
@@ -1901,6 +1897,7 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940538-->
+
 END
 
 ---
@@ -1911,7 +1908,6 @@ Original Flashcard ID: 1735205749924
 
 START
 NI-SZZ
-
 
 Jak obecně funguje HATEOAS?
 
@@ -1927,6 +1923,7 @@ Když mám HTML stránku, tak každý link v ní je linkem an jinou HTML stránk
 
 <!-- ExampleEnd -->
 <!--ID: 1773945940541-->
+
 END
 
 ---
@@ -1938,13 +1935,13 @@ Original Flashcard ID: 1735205749994
 START
 NI-SZZ
 
-
 Co je **Richardson Maturity Model**?
 
 Back:
 
 Model vyspělosti/kvality RESTového API.
 <!--ID: 1773945940544-->
+
 END
 
 ---
@@ -1956,23 +1953,23 @@ Original Flashcard ID: 1735205749997
 START
 NI-SZZ
 
-
 Jaké jsou úrovně **Richardson Maturity Model**? (4)
 
 Back:
 
 0. Level 0 - **The Swamp of POX**
-   - Používáme REST čistě jako mechanismus pro RPC styl
+ 	- Používáme REST čistě jako mechanismus pro RPC styl
 1. Level 1 - **Resources**
-   - Pracujeme se zdrojema, endpointama
-   - Pořád ale nerespektuju metody (např. na vše používáme POST)
+ 	- Pracujeme se zdrojema, endpointama
+ 	- Pořád ale nerespektuju metody (např. na vše používáme POST)
 1. Level 2 - **HTTP Verbs**
-   - Respektujeme i metody a jejich sémantiku (POST, GET, PUT, atd.)
+ 	- Respektujeme i metody a jejich sémantiku (POST, GET, PUT, atd.)
 1. Level 3 - **Hypermedia Controls**
-   - Používáme HATEOAS
+ 	- Používáme HATEOAS
 
 Nemusím nutně používat co nejvyšší level, ale měl bych rozumět tomu, proč danou úroveň používám. Je např. okay použít Level 0, když vím, že mám omezené zdroje a mám k tomu legitimní důvod.
 <!--ID: 1773945940547-->
+
 END
 
 ---
@@ -1986,7 +1983,6 @@ Original Flashcard ID: 1736496141963
 START
 NI-SZZ
 
-
 Jaká je pomůcka pro zapamatování ISO/OSI vrstev?
 
 Back:
@@ -1996,6 +1992,7 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020241021125455.png)
 <!--ID: 1773945940550-->
+
 END
 
 ---
@@ -2007,15 +2004,14 @@ Original Flashcard ID: 1736496141965
 START
 NI-SZZ
 
-
 Jak jsou odesílána data skrze **HTTP 1.1** a **2.0**?
 
 Back:
 
 - **HTTP 1.1** - textově
 - **HTTP 2.0** - binárně
-<!--ID: 1773945940553-->
-END
+  <!--ID: 1773945940553-->
+  END
 
 ---
 
@@ -2026,7 +2022,6 @@ Original Flashcard ID: 1736496141971
 START
 NI-SZZ
 
-
 Co je **Latence**?
 
 Back:
@@ -2034,8 +2029,8 @@ Back:
 - Jak dlouho na síti trvá přenos elementárních dat (malých dat).
 - Doba od odeslání požadavku po jeho přijetí na serveru.
 - Jednosměrné
-<!--ID: 1773945940557-->
-END
+  <!--ID: 1773945940557-->
+  END
 
 ---
 
@@ -2045,7 +2040,6 @@ Original Flashcard ID: 1736496141974
 
 START
 NI-SZZ
-
 
 Co je **RTT**?
 
@@ -2057,6 +2051,7 @@ Back:
 
 Je to $2 \times \text{latence}$
 <!--ID: 1773945940560-->
+
 END
 
 ---
@@ -2068,15 +2063,14 @@ Original Flashcard ID: 1736496141976
 START
 NI-SZZ
 
-
 Co je **RPT**?
 
 Back:
 
 - Request Processing Time
 - Jak dlouho trvá zpracování požadvku na serveru.
-<!--ID: 1773945940563-->
-END
+  <!--ID: 1773945940563-->
+  END
 
 ---
 
@@ -2087,13 +2081,13 @@ Original Flashcard ID: 1736496141979
 START
 NI-SZZ
 
-
 Co je výsledkem three way handshaku?
 
 Back:
 
 Vytvoří se TCP socket
 <!--ID: 1773945940567-->
+
 END
 
 ---
@@ -2104,7 +2098,6 @@ Original Flashcard ID: 1736496141982
 
 START
 NI-SZZ
-
 
 Čím je definovaný TCP socket? (4)
 
@@ -2117,6 +2110,7 @@ Back:
 
 Tím je jednoznačně identifikovaný každý TCP socket na internetu.
 <!--ID: 1773945940570-->
+
 END
 
 ---
@@ -2127,7 +2121,6 @@ Original Flashcard ID: 1736496141984
 
 START
 NI-SZZ
-
 
 Jaké mechanismy se používají na snížení latence při three way handshaku? (3)
 
@@ -2143,6 +2136,7 @@ Tím řeším ten problém, když navazuju hodně spojení, tak abych neměl tak
 
 <!-- ExampleEnd -->
 <!--ID: 1773945940573-->
+
 END
 
 ---
@@ -2154,7 +2148,6 @@ Original Flashcard ID: 1736496141987
 START
 NI-SZZ
 
-
 Jak funguje **HTTP Keep-alive**?
 
 Back:
@@ -2164,9 +2157,10 @@ Jeden TCP socket se využije na více requestů.
 V klientovi se vytvoří request queue, kde čekají requesty na poslání přes to TCP spojení.
 
 <!-- ImageStart -->
-![](../../Assets/Pasted%20image%2020260513175901.png)
-<!-- ImageEnd -->
 
+![](../../Assets/Pasted%20image%2020260513175901.png)
+
+<!-- ImageEnd -->
 
 <!-- ExampleStart -->
 
@@ -2176,6 +2170,7 @@ Např. v request queue bude nejdřív HTML soubor, potom CSS soubor, potom obrá
 
 <!-- ExampleEnd -->
 <!--ID: 1773945940581-->
+
 END
 
 ---
@@ -2186,7 +2181,6 @@ Original Flashcard ID: 1736496141990
 
 START
 NI-SZZ
-
 
 Jak funguje HTTP **pipelining**?
 
@@ -2199,9 +2193,10 @@ Ta fronta na requesty, co je na klientovi se jakoby přesune na server.
 3. Sever si drží frontu, potom postupně posílá odpovědi na requesty
 
 <!-- ImageStart -->
-![](../../Assets/Pasted%20image%2020260513175958.png)
-<!-- ImageEnd -->
 
+![](../../Assets/Pasted%20image%2020260513175958.png)
+
+<!-- ImageEnd -->
 
 <!-- ExampleStart -->
 
@@ -2217,6 +2212,7 @@ Tento způsob se v dnešní době nepoužívá.
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940586-->
+
 END
 
 ---
@@ -2227,7 +2223,6 @@ Original Flashcard ID: 1736496141993
 
 START
 NI-SZZ
-
 
 Co je **head of line blocking**?
 
@@ -2243,6 +2238,7 @@ Mám velký request jako první, ostatní už jsem zpracoval, ale musím je posl
 
 <!-- ExampleEnd -->
 <!--ID: 1773945940589-->
+
 END
 
 ---
@@ -2253,7 +2249,6 @@ Original Flashcard ID: 1736496141996
 
 START
 NI-SZZ
-
 
 Jak funguje **TCP fast open**?
 
@@ -2271,6 +2266,7 @@ Back:
 
 <!-- ImageEnd -->
 <!--ID: 1773945940593-->
+
 END
 
 ---
@@ -2281,7 +2277,6 @@ Original Flashcard ID: 1736496141998
 
 START
 NI-SZZ
-
 
 Co je **origin**?
 
@@ -2301,6 +2296,7 @@ V HTTP 2.0 je změna, že se navazuje **pouze jedno** TCP spojení a dělá se t
 
 <!-- DetailInfoEnd -->
 <!--ID: 1773945940595-->
+
 END
 
 ---
@@ -2311,7 +2307,6 @@ Original Flashcard ID: 1736496142001
 
 START
 NI-SZZ
-
 
 Kolik TCP spojení může prohlížeč vytvořit na jeden origin?
 
@@ -2327,6 +2322,7 @@ V HTTP 2 by se vytvořil jeden a díky multiplexingu by se vše posílalo přes 
 
 <!-- ExampleEnd -->
 <!--ID: 1773945940599-->
+
 END
 
 ---
@@ -2337,7 +2333,6 @@ Original Flashcard ID: 1736496142004
 
 START
 NI-SZZ
-
 
 Co je hlavička SNI?
 
@@ -2351,6 +2346,7 @@ Je to to samý jako `Host` v hlavičce, ale **není to šifrovaný**, takže si 
 
 <!-- ExplanationEnd -->
 <!--ID: 1773945940602-->
+
 END
 
 ---
@@ -2361,7 +2357,6 @@ Original Flashcard ID: 1731175818744
 
 START
 NI-SZZ
-
 
 Jakou strukturu má HTTP request?
 
@@ -2392,6 +2387,7 @@ body
 
 <!-- ExampleEnd -->
 <!--ID: 1773945940605-->
+
 END
 
 ---
@@ -2402,7 +2398,6 @@ Original Flashcard ID: 1731175818747
 
 START
 NI-SZZ
-
 
 Jakou strukturu má HTTP response?
 
@@ -2433,6 +2428,7 @@ body
 
 <!-- ExampleEnd -->
 <!--ID: 1773945940608-->
+
 END
 
 ---
@@ -2443,7 +2439,6 @@ Original Flashcard ID: 1731175818754
 
 START
 NI-SZZ
-
 
 Co je sharding? Jak funguje?
 
@@ -2466,4 +2461,5 @@ Na serveru si pak vytvořím virtual host, aby mi to pro ty poddomény zpracová
 
 <!-- ExampleEnd -->
 <!--ID: 1773945940611-->
+
 END

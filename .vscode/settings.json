@@ -1,0 +1,9 @@
+{
+  "[markdown]": {
+    "editor.insertSpaces": false,
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4,
+    "prettier.useTabs": true,
+    "editor.formatOnSave": false
+  }
+}

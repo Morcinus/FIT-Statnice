@@ -83,7 +83,6 @@ Original Flashcard ID: 1765204625591
 START
 NI-SZZ
 
-(9)
 Jaký je rozdíl mezi termíny "wireframe" a "mockup"?
 
 Back:
@@ -104,7 +103,6 @@ Original Flashcard ID: 1765204625579
 START
 NI-SZZ
 
-(5)
 Jaké druhy nástrojů k tvorbě lo-fi prototypu znáte?
 
 Back:
@@ -124,7 +122,6 @@ Original Flashcard ID: 1765204625582
 START
 NI-SZZ
 
-(6)
 Co je hlavní důvod výroby lo-fi prototypů?
 
 Back:
@@ -165,7 +162,6 @@ Original Flashcard ID: 1765204625585
 START
 NI-SZZ
 
-(7)
 Co to je hi-fi prototyp?
 
 Back:
@@ -191,6 +187,8 @@ NI-SZZ
 
 
 Jaké jsou prerekvizity Hi-Fi prototypu?
+
+(co už potřebujem mít než začnem dělat Hi-Fi prototyp)
 
 Back:
 
@@ -244,7 +242,6 @@ Original Flashcard ID: 1765204625588
 START
 NI-SZZ
 
-(8)
 Jaký jsou hlavní rozdíly mezi lo-fi a hi-fi prototypem?
 
 Back:
@@ -271,7 +268,7 @@ START
 NI-SZZ
 
 
-Jak vypadá **prototypový workflow**?
+Jak vypadá **prototypový workflow**? (aneb jak tvoříme prototyp)
 
 Back:
 
@@ -330,7 +327,7 @@ Co je **ergonomie**?
 
 Back:
 
-Zabývá se navrhováním věcí tak, aby byly pro uživatele dobře použitelné.
+Zabývá se navrhováním věcí tak, aby byly pro uživatele dobře použitelné (z hlediska těla a způsobu přemýšlení).
 
 <!-- DetailInfoStart -->
 
@@ -394,7 +391,7 @@ START
 NI-SZZ
 
 
-Z čeho se skládá usability?
+Z čeho **se skládá usability**? (4)
 
 Back:
 
@@ -419,7 +416,6 @@ Original Flashcard ID: 1765204625734
 START
 NI-SZZ
 
-(61)
 Co je to responsivní (responsive) uživatelské rozhraní?
 
 Back:
@@ -574,7 +570,6 @@ Original Flashcard ID: 1765204625755
 START
 NI-SZZ
 
-(69)
 Jak se uspořádávají taby (tabs) když se nevejdou vedle sebe? Nejlépe obrázek.
 
 Back:
@@ -601,7 +596,6 @@ Original Flashcard ID: 1765204625758
 START
 NI-SZZ
 
-(70)
 Jak by na stránce měly být organizovány buttony OK a Cancel a jak by mely vypadat? Nejlépe obrázek.
 
 Back:
@@ -1050,7 +1044,6 @@ Original Flashcard ID: 1765204625720
 START
 NI-SZZ
 
-(56)
 Označte nejlepší umístění popisků zatržítkem a nejhorší křížkem.
 
 ![](../../Assets/Pasted%20image%2020251208151854.png)
@@ -1072,7 +1065,6 @@ Original Flashcard ID: 1765204625723
 START
 NI-SZZ
 
-(57)
 Kdy je ve formuláři vhodné označit povinné položky a kdy naopak nepovinné?
 
 Back:
@@ -1091,7 +1083,6 @@ Original Flashcard ID: 1765204625725
 START
 NI-SZZ
 
-(58)
 Označte nejlepší indikaci povinného prvku ve formuláři zatržítkem a nejhorší křížkem
 
 - `Label*`
@@ -1100,7 +1091,8 @@ Označte nejlepší indikaci povinného prvku ve formuláři zatržítkem a nejh
 
 Back:
 
-- Nejlepší je `Label*` (hvězdička je kompaktní a univerzálně srozumitelná). 
+**Nejlepší je** `Label*` - hvězdička je kompaktní a univerzálně srozumitelná
+
 - `Label (Required)` je také přijatelné, ale zabírá více místa. 
 - `Label* (Required)` je nejhorší, protože je redundantní - hvězdička a text říkají totéž
 
@@ -1116,7 +1108,6 @@ Original Flashcard ID: 1765204625728
 START
 NI-SZZ
 
-(59)
 Kdy je pro volbu 1 z N lepší použít dropdown a kdy radio button group?
 
 ![](../../Assets/Pasted%20image%2020251208152049.png)
@@ -1335,9 +1326,11 @@ START
 NI-SZZ
 
 
-Co je UI design pattern "Continuous Filter"?
+Co je UI design pattern "**Continuous Filter**"?
 
 Back:
+
+Když aplikujeme fitry, tak se rovnou vypíše nový výsledek - nemusím klikat na submit button
 
 <!-- DetailInfoStart -->
 
@@ -1377,7 +1370,7 @@ START
 NI-SZZ
 
 
-Co je UI design pattern "Multi-Level Undo"?
+Co je UI design pattern "**Multi-Level Undo**"?
 
 Back:
 
@@ -1401,7 +1394,7 @@ START
 NI-SZZ
 
 
-Co je UI design pattern "Smart Menu Items"?
+Co je UI design pattern "**Smart Menu Items**"?
 
 Back:
 
@@ -1427,7 +1420,7 @@ START
 NI-SZZ
 
 
-Co je UI design pattern "Progress Indicator"?
+Co je UI design pattern "**Progress Indicator**"?
 
 Back:
 
@@ -1487,7 +1480,6 @@ Original Flashcard ID: 1765204625731
 START
 NI-SZZ
 
-(60)
 Když se stránka v prohlížeči do určité doby nenačte, 99% uživatelů ji zavře. Jak dlouhá je přibližně tato doba?
 
 Back:
@@ -1513,9 +1505,11 @@ START
 NI-SZZ
 
 
-Co je UI design pattern "Constrained Resize"?
+Co je UI design pattern "**Constrained Resize**"?
 
 Back:
+
+Když třeba resizujeme obrázek, tak můžeme držet Shift a ono to zachová ten poměr šířky a výšky.
 
 <!-- DetailInfoStart -->
 

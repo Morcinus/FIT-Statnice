@@ -18,14 +18,20 @@ Original Flashcard ID: 1728921214911
 START
 NI-SZZ
 
-Jak se počítá parciální derivace?
+Jak se prakticky počítá **parciální derivace**?
+
+Např. funkce
+$f(x,y)=x^2+y^2$
+
+A chceme:
+$$\frac{\partial f}{\partial x}$$
 
 Back:
 
-Pro $f(x,y)$
+1. Všechny ostatní proměnné bereme jako konstanty (tedy $y$)
+2. Derivujeme podle $x$
 
-1. Zafixuju si $y$, jako kdyby to byla konstanta
-2. Zafixuju si $x$, jako kdyby to byla konstanta
+Výsledek by byl $\frac{\partial f}{\partial x}=2x$
 <!--ID: 1778786397448-->
 END
 
@@ -59,13 +65,20 @@ Definice: **funkce více reálných proměnných**
 
 Back:
 
+Je to funkce $f : D_f \rightarrow \mathbb{R}$, kde $D_f \subseteq \mathbb{R}^n$ (pro $n$ celé kladné)
+
+$D_f$ je definiční obor
+$f(D_f)$ je obor hodnot
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020240923125515.png)
+<!-- DetailInfoEnd -->
 
-Každému vektoru přiřadí nějaké číslo.
-
+<!-- ExampleStart -->
 Např. $\mathbb{R}^2$ model terénu mám 2D plochu a každému bodu přiřadím výšku
 
 Např. $\mathbb{R}^3$ model místnosti, kde každému bodu je přiřazena teplota v tom bodě
+<!-- ExampleEnd -->
 <!--ID: 1778786397453-->
 END
 
@@ -110,6 +123,7 @@ $$\frac{\partial f}{\partial x}$$
 
 - zafixuju y souřadnici a mění se mi jen x souřadnice
 - V tom grafu pak provedu derivaci​
+- $H(b)$ je okolí bodu $b$
 
 ![](../../Assets/Pasted%20image%2020240923130229.png)
 
@@ -174,13 +188,15 @@ Original Flashcard ID: 1728921214887
 START
 NI-SZZ
 
-Definice: **Derivace funkce ve směru v v bodě**
+Definice: **Derivace funkce ve směru $\textbf{v}$ v bodě**
 
 Back:
 
 ![](../../Assets/Pasted%20image%2020240923130329.png)
 
 V nějakém bodě $\textbf{b}$ se vychýlím o h a spočtu tu derivaci.
+
+$||\textbf{v}|| = 1$ znamená, že ten vektor je jednotkový
 
 Tags: core
 <!--ID: 1778786397467-->
@@ -195,7 +211,7 @@ Original Flashcard ID: 1728921214890
 START
 NI-SZZ
 
-Věta: **Výpočet derivace funkce** ve směru v bodě
+Věta: **Výpočet derivace funkce** ve směru $\textbf{v}$ v bodě $\textbf{b}$
 
 Back:
 
@@ -206,11 +222,35 @@ Postup výpočtu:
 
 1. Spočtu si gradient (pomocí parciálních derivací)
 2. Vynásobím gradient se směrovým vektorem
-3. Tím dostanu první derivaci
+3. Tím dostanu parciální derivaci
 <!--ID: 1778786397470-->
 END
 
 ---
+
+<!--
+Original Flashcard ID: 1728921214885
+-->
+
+START
+NI-SZZ
+
+Co je **grafické znázornění gradientu**? (na tohle se ptají u zkoušky!)
+
+Back:
+
+Je to **směr nejvyššího růstu funkce**, neboli formálněji:
+
+Když vypočítáme **parciální derivaci $f$ ve směru $\textbf{v}$ v bodě** $\textbf{b}$, tak tato směrnice bude nejvyšší (ze všech směrnic v tom daném bodě).
+
+Tzn. když spočítáme tohle, tak nám to vyjde nejvyšší v tom daném směru $\textbf{v}$
+![](../../Assets/Pasted%20image%2020240930131518.png)
+![](../../Assets/Pasted%20image%2020240930131042.png)
+<!--ID: 1778786397464-->
+END
+
+---
+
 
 <!--
 Original Flashcard ID: 1728921214904
@@ -246,8 +286,8 @@ NI-SZZ
 
 Jaký je hlavní rozdíl mezi:
 
-- parciální derivací v bodě ve směru
-- derivací v bodě ve směru?
+- **parciální derivací** v bodě ve směru
+- **derivací** v bodě ve směru?
 
 Back:
 
@@ -299,13 +339,18 @@ Co je parciální derivace druhého řádu?
 
 Back:
 
+Prostě dvakrát za sebou parciálně zderivujem podle různých proměnných:
+![](../../Assets/Pasted%20image%2020260517110227.png)
+
+Lze také dvakrát zderivovat podle stejné proměnné:
+![](../../Assets/Pasted%20image%2020260517110258.png)
+
+Stejně jako bychom dvakrát derivovali při normálním zkoumání průběhu funkce ve 
+2D.
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020240930133125.png)
-
-<!-- InformallySaidStart -->
-
-Parciálně zderivuju funkci v bodě, dostanu z toho zase funkci. Tu funkci pak znovu zderivuju podle jiné proměnné.
-
-<!-- InformallySaidEnd -->
+<!-- DetailInfoEnd -->
 <!--ID: 1778786397481-->
 END
 
@@ -344,11 +389,11 @@ Věta: **pořadí parciálního derivování**
 
 Back:
 
-![](../../Assets/Pasted%20image%2020240930133621.png)
+![](../../Assets/Pasted%20image%2020260517110914.png)
 
-Pozn. tehle případ platí velice často.
+Neboli nezávisí na pořadí derivování
 
-Hessova matice je často symetrická - tzn. podle diagonály v matici.
+Důsledek: Hessova matice je často symetrická - tzn. podle diagonály v matici.
 <!--ID: 1778786397486-->
 END
 
@@ -361,7 +406,7 @@ Original Flashcard ID: 1728921214792
 START
 NI-SZZ
 
-Definice: Druhá parciální derivace funkce $f$ ve směru v bodě $\textbf{b}$
+Definice: **Druhá parciální derivace funkce $f$ ve směru $\textbf{v}$ v bodě $\textbf{b}$**
 
 Back:
 
@@ -378,7 +423,7 @@ Original Flashcard ID: 1735463085834
 START
 NI-SZZ
 
-Věta: Výpočet **druhé** derivace ve směru v bodě
+Věta: Výpočet **druhé** derivace ve směru $\textbf{v}$ v bodě $\textbf{b}$
 
 Back:
 
@@ -412,6 +457,8 @@ Back:
 
 Jejich **Hessova matice** je **konstantní**.
 
+Tzn. v každém bodě je stejná a její hodnoty jsou konstanty.
+
 <!-- ExampleStart -->
 
 Hessova matice je konstantní pro:
@@ -419,6 +466,15 @@ $f(x,y) = x^2+y^2$
 $f(x,y) = x^2-y^2$
 $f(x,y) = xy$
 $f(x,y) = (x+y)^2$
+
+Konstantní hessova matice vypadá třeba takhle:
+$$ 
+H =  
+\begin{pmatrix}  
+6 & 2 \\  
+2 & 10  
+\end{pmatrix}  
+$$
 
 <!-- ExampleEnd -->
 <!--ID: 1778786397494-->
@@ -468,6 +524,8 @@ Buď $\textbf{A} \in \mathbb{R}^{n,n}$ **symetrická** matice. Potom platí nás
 Back:
 
 ![](../../Assets/Pasted%20image%2020240930135024.png)
+
+Symetrická matice = symetrická podle hlavní diagonály
 
 Tags: core
 <!--ID: 1778786397499-->
@@ -625,114 +683,17 @@ START
 NI-SZZ
 
 
-Jak souvisí determinant $A$ s definitností?
-
-Pozn. touhle kartičkou si nejsem moc jistý. Něco takového tvrdil Spěvák, ale trochu mi to nesedělo s definicema..
+SMAZAT
 
 Back:
 
-- Když je determinant **kladný**, tak je matice **definitní** nebo **indefinitní**
-- Když je determinant **nula**, tak je matice **semidefinitní** nebo **indefinitní**
-- Když je determinant **záporný**, tak je matice **indefinitní**
+SMAZAT
 <!--ID: 1778786397528-->
 END
 
 ---
 
-<!--
-Original Flashcard ID: 1729236692608
--->
-
-START
-NI-SZZ
-
-
-Když při **hledání extrémů** **nemáme aktivní vazbu** a vyjde nám **indefinitní matice**, co to znamená? Jaký **závěr** z toho můžeme vyvodit?
-$$\nabla ^2_{x}L(-1,0)=\begin{pmatrix} -2 & 0 \\ 0 & 2 \end{pmatrix}$$
-
-Back:
-
-Vidíme, že matice je **indefinitní**. Jelikož je mimo aktivní vazbu (je uvnitř), znamená to, že to je **sedlový bod** a kvůli tomu to **nemůže** být **minimum** ani **maximum**.
-
-<!-- ExplanationStart -->
-
-Je to protože budou existovat body, které jsou **výše** nebo **níže**.
-![](../../Assets/Pasted%20image%2020241017162130.png)
-
-**Červený** je ten stacionární bod, kde je matice **indefinitní**.
-**Zelený** jsou ty ostatní stacionární body.
-
-<!-- ExplanationEnd -->
-<!--ID: 1778786397531-->
-END
-
----
-
 ## Extrémy funkcí více proměnných bez omezení a s rovnostními omezeními
-
-<!--
-Original Flashcard ID: 1735922645583
--->
-
-START
-NI-SZZ
-
-
-Jak se řeší příklad tohoto typu? (obecný postup)
-
-![](../../Assets/Pasted%20image%2020250103141128.png)
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250103142615.png)
-
-**Postupujeme podle věty.**
-
-1. **(0. derivace) + aktivní a neaktivní vazby** Ověříme, že bod leží uvnitř vazby nebo na její hranici
-   - Tzn. dosadíme $(x,y)$ do podmínky a zjistíme, jeslti je to menší než nula, nula nebo větší než nula).
-   - Podmínky $\lt 0$ budou uvnitř vazby a budou mít $\mu = 0$
-   - Podmínky $= 0$ budou na hranici vazby
-   - Body mimo vazbu automaticky vyřadíme.
-2. **(1. derivace)** Ověříme, že gradient Lagrangeovy funkce bez $\mu$ je nulový:
-   - Spočteme $L(x,y,\mu)$ a její gradient $\nabla L_{(x,y)}$
-   - U bodů, co jsou uvnitř, platí, že $\mu = 0$, tzn. jen dosadím $x,y,\mu$ do gradientu a musí mi všechny složky vyjít nula.
-   - U bodů, co jsou na hranici dosadím $x,y$ a budu řešit soustavu rovnic. Pokud najdu $\mu$ pro které to platí, je to ok. Pokud ne, končím.
-3. **2. derivace** Spočteme Hessovu matici v daném bodě.
-   - Pokud $\mu = 0$, vynásobím to vektorem $(a,b)$
-   - Pokud $\mu \neq 0$, musím najít obecný vektor, co splňuje to, že je kolmý na gradient vazby. Tzn. spočtu $\nabla h$. Pak mi musí platit, že to je kolmý na to. Např. když vyjde $(1,2)$, bude to $(-2a, a)$.
-   2. Potom zkoumáme jestli jsme schopný mít výsledek větší než nula, resp. menší než nula.
-      - Pokud to najdu tak, aby to bylo $< 0$ i $>0$, pak to je **indefinitní**.
-      - Pokud $< 0$, je to podezřelé z maxima
-      - Pokud $>0$, je to podezřelé z minima
-4. **směr od hranice**: Zkontrolujeme, že nám znaménko multiplikátoru $\mu$ sedí s tím jeslti to je maximum nebo minimum
-
-Hint: V kroku (2. derivace) můžu zkusit na Hessovu matici uplatnit Sylvestrovo kritérium. Pak to je rovnou lok. minimum, resp. maximum.
-
-Tags: analyza3 core
-<!--ID: 1778786397533-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735922645587
--->
-
-START
-NI-SZZ
-
-
-Jak se prakticky počítají lokální extrémy? (jednotlivé kroky)
-
-Back:
-
-1. Vyjádříme Lagrangeovu funkci $L(x^*, \lambda) = \dots$
-2. Spočteme gradient $\nabla L(x^*,\lambda^*) = 0$, čímž dostaneme soustavu rovnic a najdeme jednotlivé složky $x$ a $\lambda$
-3. Spočteme Hessovu matici
-<!--ID: 1778786397536-->
-END
-
----
 
 <!--
 Original Flashcard ID: 1728921214871
@@ -797,10 +758,11 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020240923130621.png)
 
-_Vysvětlení_
-Je to analogicky jako u 2D grafů. Aby tam byl extrém, tak tam musí být nulová derivace. Tady ve 3D tam musí být derivace nulová ve všech směrech, tzn. všechny parciální derivace (gradient) musí být v bodě nulový.
-
 Tzn. **gradient musí být nulový** - na každou stranu se nezvednu vůbec
+
+<!-- ExplanationStart -->
+Je to analogicky jako u 2D grafů. Aby tam byl extrém, tak tam musí být nulová derivace. Tady ve 3D tam musí být derivace nulová ve všech směrech, tzn. všechny parciální derivace (gradient) musí být v bodě nulový.
+<!-- ExplanationEnd -->
 
 Tags: core
 <!--ID: 1778786397544-->
@@ -885,9 +847,9 @@ Back:
 
 1. Najdu **kritické body** (stacionární + ty, kde alespoň jedna parciální derivace neexistuje)
 2. Pokud jsou **všechny 2. parciální derivace** v okolí stacionárního bodu $\textbf{b}$ spojité, najít **Hessovu matici**. Pokud je matice
-   1. **pozitivně definitní**, pak je bod $\textbf{b}$ bodem ostrého lokálního **minima**
-   2. **negativně definitní**, pak je bod $\textbf{b}$ bodem ostrého lokálního **maxima**
-   3. **indefinitní**, pak je bod $\textbf{b}$ sedlovým bodem (tj. není extrém)
+	1. **pozitivně definitní**, pak je bod $\textbf{b}$ bodem ostrého lokálního **minima**
+	2. **negativně definitní**, pak je bod $\textbf{b}$ bodem ostrého lokálního **maxima**
+	3. **indefinitní**, pak je bod $\textbf{b}$ sedlovým bodem (tj. není extrém)
 
 <!-- DetailInfoStart -->
 
@@ -1235,16 +1197,16 @@ Back:
 1. **(0. derivace)** bod $x^*$ musí být uvnitř nějaké té vazby.
 2. **(1. derivace)** podle $x$-ových proměnných toho bodu musí být rovna $0$
 3. **(aktivní a neaktivní vazby)**
-   1. **aktivní vazba** = bod je na té vazbě (tzn. na "hranici" té množiny)
-      1. $h_k(x^*)=0$ - jsme na "hranici" té množiny
-   2. **neaktivní vazba** = bod je mimo tu vazbu (tzn. uvnitř té množiny)
-      1. $k\in \hat{p}, \mu_k = 0$ - tzn. jsme "uvnitř" té množiny
+	1. **aktivní vazba** = bod je na té vazbě (tzn. na "hranici" té množiny)
+		- $h_k(x^*)=0$ - jsme na "hranici" té množiny
+	2. **neaktivní vazba** = bod je mimo tu vazbu (tzn. uvnitř té množiny)
+		- $k\in \hat{p}, \mu_k = 0$ - tzn. jsme "uvnitř" té množiny
 4. **(2. derivace)** = opět to potřebuju jen ve směrech mých vazeb
-   1. $v^T\cdot  \nabla g_j(x^*)=0$ - Vektor je **kolmý na gradient** té naší vazby (tzn.)
-   2. $v^T\cdot  \nabla h_k(x^*)=0, \ \mu_k^* \neq 0$ - U nerovnostních vazeb to musí platit v případě, že je ta vazba aktivní
-   3. Z Lagrangeovy funkce $L$ uděláme **Hessovu matici** pouze podle $x$-ových proměnných. Tu pak pronásobíme s vektory $v$ a $v^T$, které jsou na těch našich vazbách. Tzn. jsou **kolmé** na gradient každé té vazby - viz. první dva body (2. derivace).
+	1. $v^T\cdot  \nabla g_j(x^*)=0$ - Vektor je **kolmý na gradient** té naší vazby (tzn.)
+	2. $v^T\cdot  \nabla h_k(x^*)=0, \ \mu_k^* \neq 0$ - U nerovnostních vazeb to musí platit v případě, že je ta vazba aktivní
+	3. Z Lagrangeovy funkce $L$ uděláme **Hessovu matici** pouze podle $x$-ových proměnných. Tu pak pronásobíme s vektory $v$ a $v^T$, které jsou na těch našich vazbách. Tzn. jsou **kolmé** na gradient každé té vazby - viz. první dva body (2. derivace).
 5. **(správný "směr" od hranice $\cal{M}$)** = Tento bod mi to omezí tak abych vybíral jen body uvnitř té vazby (viz obrázek).
-   - Zařídí mi to, abych pro lokální minimum bral v potaz ty body, co jsou "směrem dovnitř" té vazby (protože tam může být to minimum, i když není na hranici té vazby).
+	- Zařídí mi to, abych pro lokální minimum bral v potaz ty body, co jsou "směrem dovnitř" té vazby (protože tam může být to minimum, i když není na hranici té vazby).
 
 ![](../../Assets/Pasted%20image%2020241011151014.png)
 
@@ -1320,12 +1282,105 @@ NI-SZZ
 Back:
 
 1. Spočtu vlastní čísla matice - matice se mi zredukuje na 2x2 (nuly se mi odstraní)
-   - Determinant matice, kde diagonály odečtu $\lambda$, vyjádřím $\lambda$
+	- Determinant matice, kde diagonály odečtu $\lambda$, vyjádřím $\lambda$
 2. Mám kvadratickou rovnici $\lambda^2-2\lambda-3$, tedy vlastní čísla budou $3, -1, 0, 0, \dots$
 3. Vlastní čísla se liší, tedy je **indefinitní** (A)
 
 Tags: maly
 <!--ID: 1778786397596-->
+END
+
+---
+
+<!--
+Original Flashcard ID: 1735922645583
+-->
+
+START
+NI-SZZ
+
+
+Jak se řeší příklad tohoto typu? (obecný postup)
+
+![](../../Assets/Pasted%20image%2020250103141128.png)
+
+Back:
+
+![](../../Assets/Pasted%20image%2020250103142615.png)
+
+**Postupujeme podle věty.**
+
+1. **(0. derivace) + aktivní a neaktivní vazby** Ověříme, že bod leží uvnitř vazby nebo na její hranici
+	- Tzn. dosadíme $(x,y)$ do podmínky a zjistíme, jeslti je to menší než nula, nula nebo větší než nula).
+	- Podmínky $\lt 0$ budou uvnitř vazby a budou mít $\mu = 0$
+	- Podmínky $= 0$ budou na hranici vazby
+	- Body mimo vazbu automaticky vyřadíme.
+2. **(1. derivace)** Ověříme, že gradient Lagrangeovy funkce bez $\mu$ je nulový:
+	- Spočteme $L(x,y,\mu)$ a její gradient $\nabla L_{(x,y)}$
+	- U bodů, co jsou uvnitř, platí, že $\mu = 0$, tzn. jen dosadím $x,y,\mu$ do gradientu a musí mi všechny složky vyjít nula.
+	- U bodů, co jsou na hranici dosadím $x,y$ a budu řešit soustavu rovnic. Pokud najdu $\mu$ pro které to platí, je to ok. Pokud ne, končím.
+3. **2. derivace** Spočteme Hessovu matici v daném bodě.
+	- Pokud $\mu = 0$, vynásobím to vektorem $(a,b)$
+	- Pokud $\mu \neq 0$, musím najít obecný vektor, co splňuje to, že je kolmý na gradient vazby. Tzn. spočtu $\nabla h$. Pak mi musí platit, že to je kolmý na to. Např. když vyjde $(1,2)$, bude to $(-2a, a)$.
+	1. Potom zkoumáme jestli jsme schopný mít výsledek větší než nula, resp. menší než nula.
+		- Pokud to najdu tak, aby to bylo $< 0$ i $>0$, pak to je **indefinitní**.
+		- Pokud $< 0$, je to podezřelé z maxima
+		- Pokud $>0$, je to podezřelé z minima
+4. **směr od hranice**: Zkontrolujeme, že nám znaménko multiplikátoru $\mu$ sedí s tím jeslti to je maximum nebo minimum
+
+Hint: V kroku (2. derivace) můžu zkusit na Hessovu matici uplatnit Sylvestrovo kritérium. Pak to je rovnou lok. minimum, resp. maximum.
+
+Tags: analyza3 core
+<!--ID: 1778786397533-->
+END
+
+---
+
+<!--
+Original Flashcard ID: 1735922645587
+-->
+
+START
+NI-SZZ
+
+
+Jak se prakticky počítají lokální extrémy? (jednotlivé kroky)
+
+Back:
+
+1. Vyjádříme Lagrangeovu funkci $L(x^*, \lambda) = \dots$
+2. Spočteme gradient $\nabla L(x^*,\lambda^*) = 0$, čímž dostaneme soustavu rovnic a najdeme jednotlivé složky $x$ a $\lambda$
+3. Spočteme Hessovu matici
+<!--ID: 1778786397536-->
+END
+
+---
+
+<!--
+Original Flashcard ID: 1729236692608
+-->
+
+START
+NI-SZZ
+
+
+Když při **hledání extrémů** **nemáme aktivní vazbu** a vyjde nám **indefinitní matice**, co to znamená? Jaký **závěr** z toho můžeme vyvodit?
+$$\nabla ^2_{x}L(-1,0)=\begin{pmatrix} -2 & 0 \\ 0 & 2 \end{pmatrix}$$
+
+Back:
+
+Vidíme, že matice je **indefinitní**. Jelikož je mimo aktivní vazbu (je uvnitř), znamená to, že to je **sedlový bod** a kvůli tomu to **nemůže** být **minimum** ani **maximum**.
+
+<!-- ExplanationStart -->
+
+Je to protože budou existovat body, které jsou **výše** nebo **níže**.
+![](../../Assets/Pasted%20image%2020241017162130.png)
+
+**Červený** je ten stacionární bod, kde je matice **indefinitní**.
+**Zelený** jsou ty ostatní stacionární body.
+
+<!-- ExplanationEnd -->
+<!--ID: 1778786397531-->
 END
 
 ---

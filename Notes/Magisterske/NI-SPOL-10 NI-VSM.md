@@ -137,10 +137,9 @@ Pozn. tohle je dobrý umět, tu definici, protože to bylo v jedné zkoušce z f
 Back:
 
 **Předpis**: $X \sim Poisson(\lambda)$
-**Parametry**:
-- $\lambda>0$
+**Parametry**: $\lambda>0$
 **Definice**:
-- $P(X=k) = \frac{\lambda^k}{k!}e^{-\lambda}$
+$$P(X=n) = \frac{\lambda^n}{n!}e^{-\lambda}$$
 
 <!-- DetailInfoStart -->
 

@@ -27,7 +27,6 @@ Original Flashcard ID: 1746599650006
 START
 NI-SZZ
 
-
 Definice: **Nulová a alternativní hypotéza**
 
 Back:
@@ -42,6 +41,7 @@ Pozn.
 zamítneme = jsme si jistí s určitou pravděpodobností
 nezamítneme = nemáme tolik dat abychom mohli zamítnout
 <!--ID: 1778521859929-->
+
 END
 
 ---
@@ -53,7 +53,6 @@ Original Flashcard ID: 1746599650013
 START
 NI-SZZ
 
-
 Jaké jsou **chyby** při testování hypotéz?
 
 Back:
@@ -63,14 +62,14 @@ Back:
 Vysvětlení:
 
 - Testujeme člověka na covid a můžou se stát dvě chyby:
-  - Má covid a my ho do karantény nedáme - to je ta horší varianta (chyba prvního druhu)
-  - Nemá covid a dáme ho do karantény - furt chyba, ale není tak hrozná (chyba druhého druhu)
+	- Má covid a my ho do karantény nedáme - to je ta horší varianta (chyba prvního druhu)
+	- Nemá covid a dáme ho do karantény - furt chyba, ale není tak hrozná (chyba druhého druhu)
 
 Tzn. dobrý postup je:
 
 - Předpokládáme, že je nemocný a pouze pokud bude mít dost protilátek, tak ho prohlásíme za zdravého
-<!--ID: 1778521859932-->
-END
+  <!--ID: 1778521859932-->
+  END
 
 ---
 
@@ -80,7 +79,6 @@ Original Flashcard ID: 1746599650020
 
 START
 NI-SZZ
-
 
 **Co říkáme**, když testujeme hypotézu?
 
@@ -94,6 +92,7 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1778521859935-->
+
 END
 
 ---
@@ -104,7 +103,6 @@ Original Flashcard ID: 1746599650027
 
 START
 NI-SZZ
-
 
 Definice: **Kritický obor**
 
@@ -118,6 +116,7 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1778521859937-->
+
 END
 
 ---
@@ -129,7 +128,6 @@ Original Flashcard ID: 1746599650039
 START
 NI-SZZ
 
-
 Definice: $p$-hodnota
 
 Back:
@@ -140,6 +138,7 @@ Je to minimální hladina významnosti, na které lze zamítnout $H_0$ **při da
 
 ![](../../Assets/Pasted%20image%2020250322075825.png)
 <!--ID: 1778521859940-->
+
 END
 
 ---
@@ -151,7 +150,6 @@ Original Flashcard ID: 1746599650047
 START
 NI-SZZ
 
-
 Jaký **význam** má $p$-hodnota?
 
 Back:
@@ -160,6 +158,7 @@ P-hodnota mi říká, jaká je pravděpodobnost, že bychom daný výsledek dost
 
 ![](../../Assets/Pasted%20image%2020250322075840.png)
 <!--ID: 1778521859943-->
+
 END
 
 ---
@@ -171,7 +170,6 @@ Original Flashcard ID: 1746599650053
 START
 NI-SZZ
 
-
 Lemma: **rozdělení p-hodnoty**
 
 Back:
@@ -182,6 +180,7 @@ Jinými slovy "když je všechno hezký", tak $p$-hodnota má uniformní rozděl
 
 Když je všechno hezký = pravděpodobnost 1. druhu je vždy $\alpha$, pak vím, že distribuční funkce p hodnoty je v bodě $u$ rovna $u$, tedy je to distribuční funkce Uniformního rozdělení
 <!--ID: 1778521859945-->
+
 END
 
 ---
@@ -193,17 +192,18 @@ Original Flashcard ID: 1746599650061
 START
 NI-SZZ
 
-
 Jaké jsou 2 typy hypotéz (podle parametrů) a co znamenají?
 
 Back:
 
 Máme nasbíraná data a můžeme udělat testy:
+
 - **Parametrické** - řekneme si, že to má asi nějaké rozdělení a zkoumáme jaké by to mělo parametry (průměr, rozptyl)
 - **Neparametrické** - zkoumáme vlastnosti rozdělení obecně (tvar, medián, nezávislost,...)
 
 ![](../../Assets/Pasted%20image%2020250322075915.png)
 <!--ID: 1778521859948-->
+
 END
 
 ---
@@ -215,13 +215,13 @@ Original Flashcard ID: 1746599650068
 START
 NI-SZZ
 
-
 Jaké jsou **2 typy hypotéz** podle **množství rozdělení**?
 
 Back:
 
 ![](../../Assets/Pasted%20image%2020250322075944.png)
 <!--ID: 1778521859950-->
+
 END
 
 ---
@@ -233,23 +233,25 @@ Original Flashcard ID: 1747739265159
 START
 NI-SZZ
 
-
 Přehled: Jaké všechny **statistické testy** jsme ve VSM probírali? (6)
 
 Back:
 
 **Testy bez použití testové statistiky** (to jsme dělali na PST)
+
 - $\mu$ při známém rozptylu
 - $\mu$ při neznámém rozptylu
 - $\sigma^2$
 
 **Základní testy s využitím statistiky:**
+
 - **Jednovýběrový t-test** - testujeme jestli $\mu$ nebo $\sigma^2$ odpovídá odhadům
 	- $\mu$ při známém rozptylu
 	- $\mu$ při neznámém rozptylu
 	- $\sigma^2$
 
 **Testy s více rozděleními** (testujeme rovnost středních hodnot $\mu_1 = \mu_2$):
+
 - **Párový t-test** - u obou rozděleních máme stejné množství dat
 	- při neznámém rozptylu (ten odhadnem z $Z$)
 - **Dvouvýběrový t-test** - můžeme mít různé množství dat
@@ -257,12 +259,13 @@ Back:
 	- $\mu$ při různých rozptylech $\sigma_1^2 \neq \sigma_2^2$
 
 **Multinomické rozdělení**:
+
 - $\chi^2$ **test Multinomického rozdělení** - testujeme, že data odpovídají nějakému rozdělení (resp. že pravděpodobnosti spadnutí do binu odpovídají očekávaným pravděpodobnostem)
 	- $p'=p$ při známých parametrech
 	- $p'=p$ při neznámých parametrech
 - **Kontingenční tabulka** - testujeme nezávislost dvou rozdělení
-<!--ID: 1778521860042-->
-END
+  <!--ID: 1778521860042-->
+  END
 
 ---
 
@@ -272,7 +275,6 @@ Original Flashcard ID: 1746599650075
 
 START
 NI-SZZ
-
 
 Jak funguje **parametrický test hypotézy proti oboustranné alternativě**?
 
@@ -292,6 +294,7 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1778521859953-->
+
 END
 
 ---
@@ -302,7 +305,6 @@ Original Flashcard ID: 1746599650082
 
 START
 NI-SZZ
-
 
 Jak funguje **parametrický test hypotézy proti jednostranné alternativě**?
 
@@ -324,6 +326,7 @@ Analogicky pro $\geq$ (jen to bude všechno otočené)
 
 <!-- DetailInfoEnd -->
 <!--ID: 1778521859956-->
+
 END
 
 ---
@@ -344,6 +347,7 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020250322080213.png)
 <!--ID: 1778521859958-->
+
 END
 
 ---
@@ -355,13 +359,13 @@ Original Flashcard ID: 1746599650097
 START
 NI-SZZ
 
-
 Proč není nutné hlídat, jestli má výběr **normální rozdělení** při testování pro střední hodnotu?
 
 Back:
 
 Protože podle centrální limitní věty to rozdělení se stejně bude v limitě chovat jako normální.
 <!--ID: 1778521859961-->
+
 END
 
 ---
@@ -373,7 +377,6 @@ Original Flashcard ID: 1746599650104
 START
 NI-SZZ
 
-
 Jak provedu:
 ![](../../Assets/Pasted%20image%2020250322080223.png)
 
@@ -381,6 +384,7 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020250322080228.png)
 <!--ID: 1778521859964-->
+
 END
 
 ---
@@ -392,7 +396,6 @@ Original Flashcard ID: 1746599650111
 START
 NI-SZZ
 
-
 Jak provedu:
 ![](../../Assets/Pasted%20image%2020250322080237.png)
 
@@ -402,6 +405,7 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020250322080244.png)
 <!--ID: 1778521859966-->
+
 END
 
 ---
@@ -413,7 +417,6 @@ Original Flashcard ID: 1746599650118
 START
 NI-SZZ
 
-
 Jak provedu:
 ![](../../Assets/Pasted%20image%2020250322080254.png)
 
@@ -421,6 +424,7 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020250322080300.png)
 <!--ID: 1778521859969-->
+
 END
 
 ---
@@ -431,7 +435,6 @@ Original Flashcard ID: 1746518364826
 
 START
 NI-SZZ
-
 
 Jak funguje **Testování hypotéz pomocí testových statistik**?
 
@@ -452,6 +455,7 @@ Statistikou může být například průměr.
 
 <!-- DetailInfoEnd -->
 <!--ID: 1778521859971-->
+
 END
 
 ---
@@ -463,7 +467,6 @@ Original Flashcard ID: 1746518364832
 START
 NI-SZZ
 
-
 Kde se na grafu nachází p hodnota?
 
 (na tohle se prý můžou ptát u zkoušky)
@@ -472,6 +475,7 @@ Back:
 
 Těsně na hranici zamítnutí a nezamítnutí
 <!--ID: 1778521859974-->
+
 END
 
 ---
@@ -483,13 +487,13 @@ Original Flashcard ID: 1746518364834
 START
 NI-SZZ
 
-
 Jaký je rozdíl mezi **normálním testováním** a **testování pomocí statistiky**?
 
 Back:
 
 Je to v zásadě to samé, testování pomocí statistiky nám umožňuje to jednodušeji porovnávat, je to takové přehlednější
 <!--ID: 1778521859977-->
+
 END
 
 ---
@@ -502,7 +506,6 @@ Original Flashcard ID: 1746599651205
 
 START
 NI-SZZ
-
 
 Popiš jak provést **testování dobré shody**
 
@@ -520,6 +523,7 @@ Je vhodné, aby ty _teoretické_ četnosti v každém binu měly alespoň 5. Kdy
 
 ![](../../Assets/Pasted%20image%2020250329132648.png)
 <!--ID: 1778521859980-->
+
 END
 
 ---
@@ -530,7 +534,6 @@ Original Flashcard ID: 1746599651216
 
 START
 NI-SZZ
-
 
 Jak funguje **test v kontingenční tabulce**?
 
@@ -543,6 +546,7 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020250329134349.png)
 <!--ID: 1778521859982-->
+
 END
 
 ---
@@ -554,13 +558,13 @@ Original Flashcard ID: 1746599651223
 START
 NI-SZZ
 
-
 Co můžu udělat, když mám biny s málo prvky?
 
 Back:
 
 Můžu je spojit.
 <!--ID: 1778521859985-->
+
 END
 
 ---
@@ -571,7 +575,6 @@ Original Flashcard ID: 1746599651235
 
 START
 NI-SZZ
-
 
 Jaké jsou 2 způsoby testování?
 
@@ -591,6 +594,7 @@ Varianta 2 - uděláme testovou baterii:
 
 Lepší je prý dělat tu první variantu
 <!--ID: 1778521859987-->
+
 END
 
 ---
@@ -601,7 +605,6 @@ Original Flashcard ID: 1746518364840
 
 START
 NI-SZZ
-
 
 Jak funguje: **jednovýběrový t-test pro $\mu$ při známém rozptylu**?
 
@@ -619,6 +622,7 @@ Pozn. $\mu_0$ je ta střední hodnota, co bychom teoreticky očekávali.. Idk, t
 
 <!-- ExerciseEnd -->
 <!--ID: 1778521859990-->
+
 END
 
 ---
@@ -630,7 +634,6 @@ Original Flashcard ID: 1746518364842
 START
 NI-SZZ
 
-
 Jak funguje: **jednovýběrový t-test pro $\mu$ při neznámém rozptylu**?
 
 Back:
@@ -641,6 +644,7 @@ Pozn. $\mu_0$ je ta střední hodnota, co bychom teoreticky očekávali.. Idk, t
 
 ![](../../Assets/Pasted%20image%2020250322080731.png)
 <!--ID: 1778521859993-->
+
 END
 
 ---
@@ -652,13 +656,13 @@ Original Flashcard ID: 1747730582227
 START
 NI-SZZ
 
-
 Jak funguje: **jednovýběrový t-test pro $\sigma^2$**?
 
 Back:
 
 ![](../../Assets/Pasted%20image%2020250322080751.png)
 <!--ID: 1778521859995-->
+
 END
 
 ---
@@ -669,7 +673,6 @@ Original Flashcard ID: 1746518364846
 
 START
 NI-SZZ
-
 
 Popiš jak udělat **párový $t$-test**
 
@@ -699,6 +702,7 @@ Pozn. párový t-test dává smysl používat u subjektů, které se nemění. N
 
 <!-- ExerciseEnd -->
 <!--ID: 1778521859998-->
+
 END
 
 ---
@@ -709,7 +713,6 @@ Original Flashcard ID: 1746518364848
 
 START
 NI-SZZ
-
 
 Jak funguje: **dvouvýběrový t-test**? (obecně)
 
@@ -723,6 +726,7 @@ Chceme testovat jestli 2 výběry mají stejné střední hodnoty. Tady na rozd�
 
 <!-- DetailInfoEnd -->
 <!--ID: 1778521860000-->
+
 END
 
 ---
@@ -733,7 +737,6 @@ Original Flashcard ID: 1746518364851
 
 START
 NI-SZZ
-
 
 Popiš jak udělat **dvouvýběrový t-test při stejných rozptylech**
 
@@ -752,6 +755,7 @@ Pozn. Když zkoumám rovnost, tak vždy $H_0$ je rovnost a $H_A$ je nerovnost.
 
 <!-- ExerciseEnd -->
 <!--ID: 1778521860003-->
+
 END
 
 ---
@@ -763,7 +767,6 @@ Original Flashcard ID: 1746518364854
 START
 NI-SZZ
 
-
 Popiš jak udělat **dvouvýběrový t-test při různých rozptylech**
 
 Back:
@@ -774,6 +777,7 @@ Pozn. ten vzoreček dole nemáme umět! (Prý ani u státnic :D)
 
 ![](../../Assets/Pasted%20image%2020250322080940.png)
 <!--ID: 1778521860006-->
+
 END
 
 ---
@@ -785,7 +789,6 @@ Original Flashcard ID: 1746518364856
 START
 NI-SZZ
 
-
 **Kdy** bych měl použít **párový vs dvouvýběrový test**?
 
 Back:
@@ -794,6 +797,7 @@ Pokud mám dva výběry, které mají **stejnou délku** a ta data jsou párová
 
 Pokud by ta data ovšem nebyla párová, je třeba použít vždy ten dvouvýběrový. Jinak to je chyba.
 <!--ID: 1778521860008-->
+
 END
 
 ---
@@ -804,7 +808,6 @@ Original Flashcard ID: 1746599649731
 
 START
 NI-SZZ
-
 
 Definice: **Multinomické rozdělení**
 
@@ -826,6 +829,7 @@ Mutlinomické rozdělení je jako binomické (např. házíme několikrát minc�
 
 <!-- ExampleEnd -->
 <!--ID: 1778521860011-->
+
 END
 
 ---
@@ -837,13 +841,13 @@ Original Flashcard ID: 1746599649738
 START
 NI-SZZ
 
-
 Jak se spočte $EN_i$ u multinomického rozdělení?
 
 Back:
 
 ![](../../Assets/Pasted%20image%2020250329103530.png)
 <!--ID: 1778521860014-->
+
 END
 
 ---
@@ -855,13 +859,13 @@ Original Flashcard ID: 1746599649745
 START
 NI-SZZ
 
-
 Jak se spočte $\text{var} N_i$ multinomického rozdělení?
 
 Back:
 
 ![](../../Assets/Pasted%20image%2020250329103559.png)
 <!--ID: 1778521860018-->
+
 END
 
 ---
@@ -873,7 +877,6 @@ Original Flashcard ID: 1746599649752
 START
 NI-SZZ
 
-
 Jak se spočte $\text{cov }(N_i, N_j)$ multinomického rozdělení?
 
 Back:
@@ -881,6 +884,7 @@ Back:
 $$\text{cov}(N_i,N_j)=-np_ip_j$$
 pro každé $i \neq j$
 <!--ID: 1778521860021-->
+
 END
 
 ---
@@ -891,7 +895,6 @@ Original Flashcard ID: 1746599649760
 
 START
 NI-SZZ
-
 
 Věta: **Pearsonova statistika**
 
@@ -905,6 +908,7 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1778521860024-->
+
 END
 
 ---
@@ -915,7 +919,6 @@ Original Flashcard ID: 1746599649767
 
 START
 NI-SZZ
-
 
 Jak se provede **test $\chi^2$ multinomického rozdělení** při známých parametrech?
 
@@ -942,6 +945,7 @@ $np_i$ je počet naměřených hodnot v daném binu
 
 <!-- ExampleEnd -->
 <!--ID: 1778521860026-->
+
 END
 
 ---
@@ -953,15 +957,14 @@ Original Flashcard ID: 1747736448027
 START
 NI-SZZ
 
-
 Jaké kritérium musí být dodrženo pro provedení **testu $\chi^2$ multinomického rozdělení** při známých parametrech? (2 možnosti)
 
 Back:
 
 1. $np_i \geq 5$ pro každý "bin"
 2. Nebo pokud $k \geq 3$ **Yarnoldovo kritérium**: $np_i \geq q$, kde $q$ je podíl tříd, pro které platí $np_i \lt 5$
-<!--ID: 1778521860029-->
-END
+   <!--ID: 1778521860029-->
+   END
 
 ---
 
@@ -971,7 +974,6 @@ Original Flashcard ID: 1746518364800
 
 START
 NI-SZZ
-
 
 Jak se provede **test $\chi^2$ multinomického rozdělení při neznámých parametrech**?
 
@@ -995,6 +997,7 @@ Back:
 
 <!-- ExampleEnd -->
 <!--ID: 1778521860031-->
+
 END
 
 ---
@@ -1006,7 +1009,6 @@ Original Flashcard ID: 1746518364802
 START
 NI-SZZ
 
-
 Kolik prvků musí být "v každém chlívečku" u Chí kvadrát rozdělení?
 
 Back:
@@ -1015,6 +1017,7 @@ V každém chlívečku by mělo být 5 prvků, aby se to blížilo nekonečnu.
 
 ![](../../Assets/Pasted%20image%2020250329113530.png)
 <!--ID: 1778521860034-->
+
 END
 
 ---
@@ -1025,7 +1028,6 @@ Original Flashcard ID: 1746518364805
 
 START
 NI-SZZ
-
 
 Definice: **kontingenční tabulka** a **matice pravděpodobností**
 
@@ -1067,6 +1069,7 @@ Vysvětlení vzorečku:
 
 <!-- ExplanationEnd -->
 <!--ID: 1778521860037-->
+
 END
 
 ---
@@ -1077,7 +1080,6 @@ Original Flashcard ID: 1746518364808
 
 START
 NI-SZZ
-
 
 Jak se provádí **test nezávislosti v kontingenčních tabulkách**?
 
@@ -1099,6 +1101,7 @@ Testujeme že se rovnají naměřené pravděpodobnosti očekávaným pravděpod
 
 <!-- ExerciseEnd -->
 <!--ID: 1778521860039-->
+
 END
 
 ---

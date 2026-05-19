@@ -105,7 +105,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020251210110107.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682874706-->
 END
 
@@ -150,7 +149,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020251006133857.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1778682874709-->
 END
 
@@ -175,7 +173,6 @@ Prakticky to znamená, že bychom se měli na často využívané fičury zamě�
 Obecně se principu říká napříč obory Paretovo Pravidlo
 ![](../../Assets/Pasted%20image%2020251208155458.png)
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682874712-->
 END
 
@@ -281,7 +278,6 @@ Back:
 Fiktivní uživatelé pro které vytváříme uživatelský návrh.
 
 Formalizace určitých lidských vlastností. Je to důležité, protože si tím člověk vytváří v hlavě **model** toho, jak ti lidé vypadají.
-
 <!--ID: 1778682874726-->
 END
 
@@ -459,7 +455,6 @@ Back:
 - **Persona A** - typický uživatel
 - **Persona B** - uživatel, co to nepoužívá často
 - **Persona C** - antipersona, někdo kdo by aplikaci nepoužíval
-
 <!--ID: 1778682874753-->
 END
 
@@ -482,7 +477,6 @@ Díky tomu získáme více informací, ale je těžší to vyhodnotit.
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020251208165928.png)
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682874755-->
 END
 
@@ -812,7 +806,6 @@ Back:
 2. **Working memory** - krátkodobá pracovní paměť
 	- Např. když řídíme auto, tak se to všechno řeší v pracovní paměti
 3. **Long term memory** - tam si uchováváme data
-
 <!--ID: 1778682874799-->
 END
 
@@ -993,7 +986,6 @@ Back:
 Tak aby byla **nejsnáze dosažitelná**.
 
 Typicky to znamená **vlevo nahoře** nebo na **začátku menu**, protože v naší zemi čteme **zeshora dolů, zleva doprava**.
-
 <!--ID: 1778682874829-->
 END
 
@@ -1012,7 +1004,6 @@ Back:
 **Max 4-5 položek**, protože:
 - omezená kapacita krátkodobé paměti (4±1 chunky)
 - Hick's law, který říká, že čas potřebný k rozhodnutí roste s počtem možností. Méně možností -> rychlejší rozhodnutí
-
 <!--ID: 1778682874832-->
 END
 
@@ -1037,7 +1028,6 @@ Proto se:
 - **Další "globálnější" akce** se dávají taky kolem hran
 
 Např. představ si Word nebo Photoshop (komplikovaný UI) - tam to je nejlépe vidět tyto principy
-
 <!--ID: 1778682874835-->
 END
 
@@ -1099,7 +1089,6 @@ Back:
 - Chunk může být buď jednoduchý znak/číslo nebo i komplexní abstrakce/obrázky
 
 Pro UI to znamená, že by například menu a skupiny měly být rozděleny po 5 itemech
-
 <!--ID: 1778682874844-->
 END
 
@@ -1118,7 +1107,6 @@ Back:
 **Neomezená** - resp. nikdo nenašel, že by měla nějaký limit, lidi se furt mohou učit nové věci, paměť pojme extrémní množství informací
 
 Je tam ale pomalejší access (třeba 0.1 sekundy), používanější informace jsou získávány rychleji
-
 <!--ID: 1778682874847-->
 END
 
@@ -1141,7 +1129,6 @@ Back:
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020251208173037.png)
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682874850-->
 END
 
@@ -1197,7 +1184,6 @@ Back:
 Zelené - protože to má nejvyšší intenzitu, tak jsme schopni ji nejlépe rozlišovat
 
 ![](../../Assets/Pasted%20image%2020251026141109.png)
-
 <!--ID: 1778682874859-->
 END
 
@@ -1280,7 +1266,6 @@ Graf který zobrazuje funkci frekvence signálu a amplitudu v čase.
 - **vedle toho** (jakoby Z osa) je amplituda (jak moc je světlo intenzivní)
 
 ![](../../Assets/Pasted%20image%2020251208173913.png)
-
 <!--ID: 1778682874871-->
 END
 
