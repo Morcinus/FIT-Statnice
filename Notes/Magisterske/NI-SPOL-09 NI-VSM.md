@@ -915,6 +915,16 @@ Tohle je **hodně důležitý** - na to je vyloženě ta státnicová otázka
 Back:
 
 ![](../../Assets/Pasted%20image%2020250419140805.png)
+
+<!-- ExplanationStart -->
+Máme homogenní markovský řetězec s diskrétním časem. Ten nám určuje ty stavy, mezi kterými budeme skákat. Dále máme Poissonův proces, který nám bude jakoby určovat časy těch událostí (přeskoků). Takže třeba když z poissona dostname v čase $t$ počet událostí $n$, tak $n$-krát uděláme skok v tom markovském řetězci.
+
+Jinými slovy:
+- markovský řetězec s diskrétním časem na každý tik udělá jeden skok
+- my tímto vytvoříme markovský řetězec se spojitým časem, kde doba dalšího skoku je vždy určena Poissonovým rozdělením 
+
+<!-- ExplanationEnd -->
+
 <!--ID: 1778521859569-->
 
 END
@@ -951,6 +961,8 @@ Pozorování: Jaký tvar má **matice skokových intenzit homogenního markovsk�
 Back:
 
 ![](../../Assets/Pasted%20image%2020250419140921.png)
+
+$\textbf{D}$ je matice přechodu toho původního markovského řetězce $Y_n$ s diskrétním časem.
 <!--ID: 1778521859574-->
 
 END

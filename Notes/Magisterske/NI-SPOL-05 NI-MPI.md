@@ -18,18 +18,11 @@ Original Flashcard ID: 1735205749467
 START
 NI-SZZ
 
-
-Co je třída **přímých metod**?
+SMAZAT
 
 Back:
 
-Metoda, co v **konečném počtu kroků** vrátí řešení.
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020241113120616.png)
-
-<!-- DetailInfoEnd -->
+SMAZAT
 <!--ID: 1778786397294-->
 END
 
@@ -42,20 +35,11 @@ Original Flashcard ID: 1735205749469
 START
 NI-SZZ
 
-
-Co je třída **iteračních metod**?
+SMAZAT
 
 Back:
 
-Konstruují posloupnost nějakých přibližných řešení. Chceme aby ta posloupnost **měla limitu**, která je **skutečným řešením** dané úlohy.
-
-Ta metoda jakoby postupně "vylepšuje/zpřesňuje" to řešení.
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020241113120820.png)
-
-<!-- DetailInfoEnd -->
+SMAZAT
 <!--ID: 1778786397297-->
 END
 
@@ -68,12 +52,11 @@ Original Flashcard ID: 1735205749472
 START
 NI-SZZ
 
-
-Připomenutí: Co je **vlastní číslo matice** a **vlastní vektor matice**?
+SMAZAT
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241113120949.png)
+SMAZAT
 <!--ID: 1778786397300-->
 END
 
@@ -86,12 +69,11 @@ Original Flashcard ID: 1735205749474
 START
 NI-SZZ
 
-
-Připomenutí: Co tvoří vlastní vektory matice $M$?
+SMAZAT
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241113121014.png)
+SMAZAT
 <!--ID: 1778786397302-->
 END
 
@@ -104,12 +86,11 @@ Original Flashcard ID: 1735205749477
 START
 NI-SZZ
 
-
-Připomenutí: Jak se počítají **vlastní čísla matice**?
+SMAZAT
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241113122213.png)
+SMAZAT
 <!--ID: 1778786397305-->
 END
 
@@ -122,12 +103,11 @@ Original Flashcard ID: 1735205749479
 START
 NI-SZZ
 
-
-Připomenutí: Kdy je matice diagonalizovatelná?
+SMAZAT
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241113122403.png)
+SMAZAT
 <!--ID: 1778786397308-->
 END
 
@@ -140,14 +120,11 @@ Original Flashcard ID: 1735205749485
 START
 NI-SZZ
 
-
-Připomenutí: Co je na diagonále matice $D$ a co je ve sloupcích matice $P$?
-
-![](../../Assets/Pasted%20image%2020241113122403.png)
+SMAZAT
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241113122552.png)
+SMAZAT
 <!--ID: 1778786397310-->
 END
 
@@ -160,12 +137,11 @@ Original Flashcard ID: 1735205749494
 START
 NI-SZZ
 
-
-K čemu slouží mocninná metoda?
+SMAZAT
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241113123136.png)
+SMAZAT
 <!--ID: 1778786397313-->
 END
 
@@ -178,17 +154,11 @@ Original Flashcard ID: 1735205749497
 START
 NI-SZZ
 
-
-Jaké jsou předpoklady mocninné metody?
+SMAZAT
 
 Back:
 
-- Matice je diagonalizovatelná
-- Můžeme označit vlastní čísla sestupně (viz níže)
-- $\alpha_1 \neq 0$
-
-![](../../Assets/Pasted%20image%2020241113123241.png)
-![](../../Assets/Pasted%20image%2020241113123834.png)
+SMAZAT
 <!--ID: 1778786397315-->
 END
 
@@ -201,20 +171,11 @@ Original Flashcard ID: 1735205749499
 START
 NI-SZZ
 
-
-Jak funguje **mocninná metoda**? (obecně)
+SMAZAT
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241113123657.png)
-
-<!-- InformallySaidStart -->
-
-Vezmu nějaký původní vektor a iterativně ho násobím maticí $M$.
-
-Proto jsem schopný to napsat ve tvaru $M^k$ - odtud název mocninná metoda.
-
-<!-- InformallySaidEnd -->
+SMAZAT
 <!--ID: 1778786397318-->
 END
 
@@ -227,15 +188,11 @@ Original Flashcard ID: 1735205749502
 START
 NI-SZZ
 
-
-Jak funguje **mocninná metoda**?
+SMAZAT
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241113125152.png)
-![](../../Assets/Pasted%20image%2020241113125159.png)
-![](../../Assets/Pasted%20image%2020241113125205.png)
-![](../../Assets/Pasted%20image%2020241113125211.png)
+SMAZAT
 <!--ID: 1778786397321-->
 END
 
@@ -248,12 +205,11 @@ Original Flashcard ID: 1735205749504
 START
 NI-SZZ
 
-
-Co je **kritérium zastavení** v mocninné metodě?
+SMAZAT
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241113125232.png)
+SMAZAT
 <!--ID: 1778786397324-->
 END
 
@@ -266,12 +222,11 @@ Original Flashcard ID: 1735205749201
 START
 NI-SZZ
 
-
-Definice: soustava lineárních rovnic
+SMAZAT
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241221134234.png)
+SMAZAT
 <!--ID: 1778786397326-->
 END
 
@@ -308,25 +263,11 @@ Original Flashcard ID: 1735205749211
 START
 NI-SZZ
 
-
-Definice: Iterační metoda
+SMAZAT
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241221135639.png)
-
-<!-- ExplanationStart -->
-
-![](../../Assets/Pasted%20image%2020241221135708.png)
-![](../../Assets/Pasted%20image%2020241221135649.png)
-
-<!-- ExplanationEnd -->
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020241221135717.png)
-
-<!-- DetailInfoEnd -->
+SMAZAT
 <!--ID: 1778786397332-->
 END
 
@@ -339,12 +280,11 @@ Original Flashcard ID: 1735205749213
 START
 NI-SZZ
 
-
-Definice: **vektor chyby**
+SMAZAT
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241221135931.png)
+SMAZAT
 <!--ID: 1778786397334-->
 END
 
@@ -357,12 +297,11 @@ Original Flashcard ID: 1735205749216
 START
 NI-SZZ
 
-
-Definice: spektrální poloměr
+SMAZAT
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241221140136.png)
+SMAZAT
 <!--ID: 1778786397337-->
 END
 
@@ -375,12 +314,11 @@ Original Flashcard ID: 1735205749218
 START
 NI-SZZ
 
-
-Věta: co platí pro spektrální poloměr
+SMAZAT
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241221140115.png)
+SMAZAT
 <!--ID: 1778786397339-->
 END
 
@@ -393,12 +331,11 @@ Original Flashcard ID: 1735205749221
 START
 NI-SZZ
 
-
-Důsledek: iterační metoda konverguje $\Leftrightarrow \dots$
+SMAZAT
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241221140153.png)
+SMAZAT
 <!--ID: 1778786397342-->
 END
 
@@ -411,18 +348,11 @@ Original Flashcard ID: 1735205749223
 START
 NI-SZZ
 
-
-Jak se dá odhadnout rychlost konvergence iterační metody?
+SMAZAT
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241221140450.png)
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020241221140502.png)
-
-<!-- DetailInfoEnd -->
+SMAZAT
 <!--ID: 1778786397345-->
 END
 
@@ -435,20 +365,11 @@ Original Flashcard ID: 1735205749226
 START
 NI-SZZ
 
-
-Kdy se iterační metoda zastaví?
+SMAZAT
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241221140545.png)
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020241221140600.png)
-![](../../Assets/Pasted%20image%2020241221140607.png)
-![](../../Assets/Pasted%20image%2020241221140626.png)
-
-<!-- DetailInfoEnd -->
+SMAZAT
 <!--ID: 1778786397347-->
 END
 
@@ -461,12 +382,11 @@ Original Flashcard ID: 1735205749228
 START
 NI-SZZ
 
-
-Jak lze volit matici $Q$ v iterační metodě? (3)
+SMAZAT
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241221141155.png)
+SMAZAT
 <!--ID: 1778786397350-->
 END
 
@@ -479,18 +399,11 @@ Original Flashcard ID: 1735205749231
 START
 NI-SZZ
 
-
-Jak funguje Richardsonova metoda?
+SMAZAT
 
 Back:
 
-Za $Q$ se dá jednotková matice.
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020241221141222.png)
-
-<!-- DetailInfoEnd -->
+SMAZAT
 <!--ID: 1778786397353-->
 END
 
@@ -503,18 +416,11 @@ Original Flashcard ID: 1735205749233
 START
 NI-SZZ
 
-
-Jak funguje Jacobiho metoda?
+SMAZAT
 
 Back:
 
-Za $Q$ se dosadí diagonála
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020241221141247.png)
-
-<!-- DetailInfoEnd -->
+SMAZAT
 <!--ID: 1778786397356-->
 END
 
@@ -527,18 +433,11 @@ Original Flashcard ID: 1735205749235
 START
 NI-SZZ
 
-
-Tvrzení: konvergence Jacobiho metody
+SMAZAT
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241221141327.png)
-
-<!-- ExplanationStart -->
-
-![](../../Assets/Pasted%20image%2020241221141336.png)
-
-<!-- ExplanationEnd -->
+SMAZAT
 <!--ID: 1778786397358-->
 END
 
@@ -551,18 +450,11 @@ Original Flashcard ID: 1735205749238
 START
 NI-SZZ
 
-
-Jak funguje SOR metoda?
+SMAZAT
 
 Back:
 
-$Q = \frac{1}{\omega}D+L$ kde $\omega \in \mathbb{R} \setminus \set 0$
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020241221141349.png)
-
-<!-- DetailInfoEnd -->
+SMAZAT
 <!--ID: 1778786397361-->
 END
 
@@ -575,16 +467,13 @@ Original Flashcard ID: 1735205749243
 START
 NI-SZZ
 
-
-Algoritmus: **Iterativní metoda**
+SMAZAT
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241221141630.png)
+SMAZAT
 <!--ID: 1778786397364-->
 END
-
----
 
 ## Reprezentace čísel v počítači
 
