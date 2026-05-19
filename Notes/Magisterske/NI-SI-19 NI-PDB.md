@@ -185,7 +185,7 @@ Jaké jsou metriky TPC-C bechmarku, které se sledují? (2)
 Back:
 
 - $tpmC$ - new-order transaction rate = při maximálním zatížení databáze, kolik jsem schopný zpracovat nových objednávek
-- $\$/tpmC$ - kolik mě jedna nová objednávka stojí peněz
+- $\text{\$}/tpmC$ - kolik mě jedna nová objednávka stojí peněz
 <!--ID: 1779128799866-->
 END
 
@@ -322,9 +322,12 @@ Original Flashcard ID: 1735205748931
 START
 NI-SZZ
 
-Jaká je nevýhoda TPC-C
+SMAZAT
 
 Back:
+
+SMAZAT
+
 <!--ID: 1779128799885-->
 END
 
@@ -376,7 +379,7 @@ Jaké metriky se měří u TPC-H bechmarku?
 Back:
 
 - $QphH@Size$ - Composite Query-perHour performance metric
-- $\$/QphH@Size$ - Price/Performance metric
+- $\text{\$}/QphH@Size$ - Price/Performance metric
 
 $Size$ je velikost databáze.
 

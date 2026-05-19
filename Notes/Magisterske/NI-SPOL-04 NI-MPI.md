@@ -253,11 +253,11 @@ START
 NI-SZZ
 
 
-Poznámka: **Množiny míry nula a hodnota integrálu**
+Poznámka: Jaký vliv má množina míry nula na hodnotu integrálu?
 
 Back:
 
-Množiny míry nula mají tu vlastnost, že jsou pro hodnotu integrálu "zanedbatelné".
+Množiny míry nula mají tu vlastnost, že jsou pro hodnotu integrálu "**zanedbatelné**".
 
 <!-- ExplanationStart -->
 
@@ -326,7 +326,7 @@ START
 NI-SZZ
 
 
-Věta: Omezená funkce je integrabilní $\Leftrightarrow$
+Věta: Kdy je **spojitá funkce** $f$ na množině $D$ integrabilní, pokud má nějaká místa, kde není integrabilní
 
 Back:
 
@@ -371,7 +371,7 @@ START
 NI-SZZ
 
 
-Důsledek: omezená množina a integrabilita
+Důsledek: Kdy je **spojitá funkce** $f$ na množině $D$ integrabilní
 
 Back:
 
