@@ -1036,7 +1036,7 @@ START
 NI-SZZ
 
 
-Kde lze dělat uživatelské testování? (3)
+Kde lze dělat **uživatelské testování**? (3)
 
 Back:
 

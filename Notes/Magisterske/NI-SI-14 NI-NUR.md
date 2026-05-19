@@ -437,7 +437,7 @@ START
 NI-SZZ
 
 
-O čem je teď responsibilita?
+O čem je teď **responzivita**?
 
 Back:
 
@@ -472,7 +472,7 @@ START
 NI-SZZ
 
 
-Podle jakých pravidel se pod sebe řadí bloky v responsivním designu?
+Podle jakých pravidel se pod sebe řadí bloky v **responsivním designu**?
 
 Back:
 
@@ -491,7 +491,7 @@ START
 NI-SZZ
 
 
-Jaké jsou typy práce s layouty u responsivního designu? (5)
+Jaké jsou typy práce s layouty u **responsivního designu**? (5)
 
 Back:
 

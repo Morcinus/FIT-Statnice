@@ -1195,7 +1195,7 @@ Original Flashcard ID: 1765204625760
 START
 NI-SZZ
 
-Co je to tzv. žlutá skvrna a jak ovlivňuje vizuální vnímání?
+Co je to tzv. **žlutá skvrna** a jak ovlivňuje vizuální vnímání?
 
 Back:
 
@@ -1255,7 +1255,7 @@ Original Flashcard ID: 1765204625706
 START
 NI-SZZ
 
-Co je to a co zobrazuje spektrogram?
+Co je to a co zobrazuje **spektrogram**?
 
 Back:
 
@@ -1298,7 +1298,7 @@ START
 NI-SZZ
 
 
-Jak u RGB vznikne bílá barva?
+Jak u RGB vznikne **bílá barva**?
 
 Back:
 
@@ -1315,7 +1315,7 @@ START
 NI-SZZ
 
 
-Co je nasycenost barev (saturation)?
+Co je **nasycenost barev** (**saturation**)?
 
 Back:
 
@@ -1344,7 +1344,7 @@ START
 NI-SZZ
 
 
-Co je HSV schéma?
+Co je **HSV schéma**?
 
 Back:
 
@@ -1451,7 +1451,7 @@ Original Flashcard ID: 1765204625688
 START
 NI-SZZ
 
-Co je to doplňková barva?
+Co je to **doplňková barva**?
 
 Back:
 
@@ -1476,7 +1476,7 @@ Original Flashcard ID: 1765204625690
 START
 NI-SZZ
 
-Jaká je doplňková barva k červené? (#FF0000) (hexadecimálně)
+Jaká je doplňková barva k **červené**? (#FF0000) (hexadecimálně)
 
 Back:
 
@@ -1492,7 +1492,7 @@ Original Flashcard ID: 1765204625693
 START
 NI-SZZ
 
-Jaká je doplňková barva k zelené? (#00FF00) (hexadecimálně)
+Jaká je doplňková barva k **zelené**? (#00FF00) (hexadecimálně)
 
 Back:
 
@@ -1508,7 +1508,7 @@ Original Flashcard ID: 1765204625696
 START
 NI-SZZ
 
-Jaká je doplňková barva k modré? (#0000FF) (hexadecimálně)
+Jaká je doplňková barva k **modré**? (#0000FF) (hexadecimálně)
 
 Back:
 
@@ -1524,7 +1524,7 @@ Original Flashcard ID: 1765204625698
 START
 NI-SZZ
 
-Jaká je doplňková barva k purpurové (#FF00FF)? (uveďte hexadecimálně)
+Jaká je doplňková barva k **purpurové** (#FF00FF)? (uveďte hexadecimálně)
 
 Back:
 
@@ -1540,7 +1540,7 @@ Original Flashcard ID: 1765204625701
 START
 NI-SZZ
 
-Jaká je doplňková barva k žluté (#FFFF00)? (uveďte hexadecimálně)
+Jaká je doplňková barva k **žluté** (#FFFF00)? (uveďte hexadecimálně)
 
 Back:
 
@@ -1556,7 +1556,7 @@ Original Flashcard ID: 1765204625704
 START
 NI-SZZ
 
-Jaká je doplňková barva k azurové (#00FFFF)? (uveďte hexadecimálně)
+Jaká je doplňková barva k **azurové** (#00FFFF)? (uveďte hexadecimálně)
 
 Back:
 
