@@ -736,9 +736,11 @@ Co umožňuje **asynchronní komunikace přes prostředníka**?
 Back:
 
 - Prostředník (Intermediary) = Komponenta, která odstraňuje závislost (decoupling) v klient-server komunikaci
-- Zvyšuje spolehlivost a výkon - Server nemusí být dostupný, když klient odesílá požadavek - Může zde být více serverů, které požadavky zpracováváají
-  <!--ID: 1778786460907-->
-  END
+- Zvyšuje spolehlivost a výkon
+    - Server nemusí být dostupný, když klient odesílá požadavek
+    - Může zde být více serverů, které požadavky zpracovávají
+<!--ID: 1778786460907-->
+END
 
 ---
 

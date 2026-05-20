@@ -165,7 +165,7 @@ END
 START
 NI-SZZ
 
-K čemu slouží **MVVM** architektura?
+Z jakých částí se skládá **MVVM** architektura?
 
 Back:
 
@@ -191,7 +191,7 @@ END
 START
 NI-SZZ
 
-Jaká je struktura **MVVM** architektury?
+Jaké způsoby aktualizace dat **MVVM** architektura využívá?
 
 Back:
 
@@ -222,7 +222,7 @@ END
 START
 NI-SZZ
 
-K čemu slouží **Client-server** architektura?
+Jak funguje **Client-server** architektura?
 
 Back:
 
@@ -267,7 +267,7 @@ END
 START
 NI-SZZ
 
-Kdy se používá **Client-Server architektura**? (4)
+Jaké typy aplikací využívají **Client-Server architekturu**? (3)
 
 Back:
 
@@ -587,7 +587,7 @@ Ve formátu **IF (podmínka) THEN (akce)**.
 START
 NI-SZZ
 
-Z jakých 3 fází se skládá cyklus interpretu (Match-Resolve-Act cycle) v Rule-based systému?
+Z jakých fází se skládá proces interpretace v **Rule-based** systému? (3)
 
 Back:
 

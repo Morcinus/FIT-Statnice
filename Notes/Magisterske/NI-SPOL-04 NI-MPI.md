@@ -399,6 +399,20 @@ END
 
 ---
 
+START
+NI-SZZ
+
+Co platí pro **Linearitu integrálu**?
+
+Back:
+
+![](../../Assets/Pasted%20image%2020260515205832.png)
+
+END
+
+---
+
+
 <!--
 Original Flashcard ID: 1735205889362
 -->
