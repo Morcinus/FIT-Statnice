@@ -12,272 +12,6 @@ FILE TAGS: NI-SPOL-05 NI-MPI
 ## Numerická matematika
 
 <!--
-Original Flashcard ID: 1735205749467
--->
-
-START
-NI-SZZ
-
-
-Co je třída **přímých metod**?
-
-Back:
-
-Metoda, co v **konečném počtu kroků** vrátí řešení.
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020241113120616.png)
-
-<!-- DetailInfoEnd -->
-<!--ID: 1778786397294-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749469
--->
-
-START
-NI-SZZ
-
-
-Co je třída **iteračních metod**?
-
-Back:
-
-Konstruují posloupnost nějakých přibližných řešení. Chceme aby ta posloupnost **měla limitu**, která je **skutečným řešením** dané úlohy.
-
-Ta metoda jakoby postupně "vylepšuje/zpřesňuje" to řešení.
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020241113120820.png)
-
-<!-- DetailInfoEnd -->
-<!--ID: 1778786397297-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749472
--->
-
-START
-NI-SZZ
-
-
-Připomenutí: Co je **vlastní číslo matice** a **vlastní vektor matice**?
-
-Back:
-
-![](../../Assets/Pasted%20image%2020241113120949.png)
-<!--ID: 1778786397300-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749474
--->
-
-START
-NI-SZZ
-
-
-Připomenutí: Co tvoří vlastní vektory matice $M$?
-
-Back:
-
-![](../../Assets/Pasted%20image%2020241113121014.png)
-<!--ID: 1778786397302-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749477
--->
-
-START
-NI-SZZ
-
-
-Připomenutí: Jak se počítají **vlastní čísla matice**?
-
-Back:
-
-![](../../Assets/Pasted%20image%2020241113122213.png)
-<!--ID: 1778786397305-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749479
--->
-
-START
-NI-SZZ
-
-
-Připomenutí: Kdy je matice diagonalizovatelná?
-
-Back:
-
-![](../../Assets/Pasted%20image%2020241113122403.png)
-<!--ID: 1778786397308-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749485
--->
-
-START
-NI-SZZ
-
-
-Připomenutí: Co je na diagonále matice $D$ a co je ve sloupcích matice $P$?
-
-![](../../Assets/Pasted%20image%2020241113122403.png)
-
-Back:
-
-![](../../Assets/Pasted%20image%2020241113122552.png)
-<!--ID: 1778786397310-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749494
--->
-
-START
-NI-SZZ
-
-
-K čemu slouží mocninná metoda?
-
-Back:
-
-![](../../Assets/Pasted%20image%2020241113123136.png)
-<!--ID: 1778786397313-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749497
--->
-
-START
-NI-SZZ
-
-
-Jaké jsou předpoklady mocninné metody?
-
-Back:
-
-- Matice je diagonalizovatelná
-- Můžeme označit vlastní čísla sestupně (viz níže)
-- $\alpha_1 \neq 0$
-
-![](../../Assets/Pasted%20image%2020241113123241.png)
-![](../../Assets/Pasted%20image%2020241113123834.png)
-<!--ID: 1778786397315-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749499
--->
-
-START
-NI-SZZ
-
-
-Jak funguje **mocninná metoda**? (obecně)
-
-Back:
-
-![](../../Assets/Pasted%20image%2020241113123657.png)
-
-<!-- InformallySaidStart -->
-
-Vezmu nějaký původní vektor a iterativně ho násobím maticí $M$.
-
-Proto jsem schopný to napsat ve tvaru $M^k$ - odtud název mocninná metoda.
-
-<!-- InformallySaidEnd -->
-<!--ID: 1778786397318-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749502
--->
-
-START
-NI-SZZ
-
-
-Jak funguje **mocninná metoda**?
-
-Back:
-
-![](../../Assets/Pasted%20image%2020241113125152.png)
-![](../../Assets/Pasted%20image%2020241113125159.png)
-![](../../Assets/Pasted%20image%2020241113125205.png)
-![](../../Assets/Pasted%20image%2020241113125211.png)
-<!--ID: 1778786397321-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749504
--->
-
-START
-NI-SZZ
-
-
-Co je **kritérium zastavení** v mocninné metodě?
-
-Back:
-
-![](../../Assets/Pasted%20image%2020241113125232.png)
-<!--ID: 1778786397324-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749201
--->
-
-START
-NI-SZZ
-
-
-Definice: soustava lineárních rovnic
-
-Back:
-
-![](../../Assets/Pasted%20image%2020241221134234.png)
-<!--ID: 1778786397326-->
-END
-
----
-
-<!--
 Original Flashcard ID: 1735205749204
 -->
 
@@ -297,291 +31,6 @@ Je "samoopravující se", v každém kroku se řešení zlepší víc, než se z
 
 <!-- DetailInfoEnd -->
 <!--ID: 1778786397329-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749211
--->
-
-START
-NI-SZZ
-
-
-Definice: Iterační metoda
-
-Back:
-
-![](../../Assets/Pasted%20image%2020241221135639.png)
-
-<!-- ExplanationStart -->
-
-![](../../Assets/Pasted%20image%2020241221135708.png)
-![](../../Assets/Pasted%20image%2020241221135649.png)
-
-<!-- ExplanationEnd -->
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020241221135717.png)
-
-<!-- DetailInfoEnd -->
-<!--ID: 1778786397332-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749213
--->
-
-START
-NI-SZZ
-
-
-Definice: **vektor chyby**
-
-Back:
-
-![](../../Assets/Pasted%20image%2020241221135931.png)
-<!--ID: 1778786397334-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749216
--->
-
-START
-NI-SZZ
-
-
-Definice: spektrální poloměr
-
-Back:
-
-![](../../Assets/Pasted%20image%2020241221140136.png)
-<!--ID: 1778786397337-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749218
--->
-
-START
-NI-SZZ
-
-
-Věta: co platí pro spektrální poloměr
-
-Back:
-
-![](../../Assets/Pasted%20image%2020241221140115.png)
-<!--ID: 1778786397339-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749221
--->
-
-START
-NI-SZZ
-
-
-Důsledek: iterační metoda konverguje $\Leftrightarrow \dots$
-
-Back:
-
-![](../../Assets/Pasted%20image%2020241221140153.png)
-<!--ID: 1778786397342-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749223
--->
-
-START
-NI-SZZ
-
-
-Jak se dá odhadnout rychlost konvergence iterační metody?
-
-Back:
-
-![](../../Assets/Pasted%20image%2020241221140450.png)
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020241221140502.png)
-
-<!-- DetailInfoEnd -->
-<!--ID: 1778786397345-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749226
--->
-
-START
-NI-SZZ
-
-
-Kdy se iterační metoda zastaví?
-
-Back:
-
-![](../../Assets/Pasted%20image%2020241221140545.png)
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020241221140600.png)
-![](../../Assets/Pasted%20image%2020241221140607.png)
-![](../../Assets/Pasted%20image%2020241221140626.png)
-
-<!-- DetailInfoEnd -->
-<!--ID: 1778786397347-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749228
--->
-
-START
-NI-SZZ
-
-
-Jak lze volit matici $Q$ v iterační metodě? (3)
-
-Back:
-
-![](../../Assets/Pasted%20image%2020241221141155.png)
-<!--ID: 1778786397350-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749231
--->
-
-START
-NI-SZZ
-
-
-Jak funguje Richardsonova metoda?
-
-Back:
-
-Za $Q$ se dá jednotková matice.
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020241221141222.png)
-
-<!-- DetailInfoEnd -->
-<!--ID: 1778786397353-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749233
--->
-
-START
-NI-SZZ
-
-
-Jak funguje Jacobiho metoda?
-
-Back:
-
-Za $Q$ se dosadí diagonála
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020241221141247.png)
-
-<!-- DetailInfoEnd -->
-<!--ID: 1778786397356-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749235
--->
-
-START
-NI-SZZ
-
-
-Tvrzení: konvergence Jacobiho metody
-
-Back:
-
-![](../../Assets/Pasted%20image%2020241221141327.png)
-
-<!-- ExplanationStart -->
-
-![](../../Assets/Pasted%20image%2020241221141336.png)
-
-<!-- ExplanationEnd -->
-<!--ID: 1778786397358-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749238
--->
-
-START
-NI-SZZ
-
-
-Jak funguje SOR metoda?
-
-Back:
-
-$Q = \frac{1}{\omega}D+L$ kde $\omega \in \mathbb{R} \setminus \set 0$
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020241221141349.png)
-
-<!-- DetailInfoEnd -->
-<!--ID: 1778786397361-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749243
--->
-
-START
-NI-SZZ
-
-
-Algoritmus: **Iterativní metoda**
-
-Back:
-
-![](../../Assets/Pasted%20image%2020241221141630.png)
-<!--ID: 1778786397364-->
 END
 
 ---
@@ -679,6 +128,10 @@ Back:
 - $m = 10$
 - $e = 5$
 
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260520121248.png)
+<!-- DetailInfoEnd -->
+
 Tags: core
 <!--ID: 1778786397375-->
 END
@@ -699,6 +152,10 @@ Back:
 
 - $m = 23$
 - $e = 8$
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260520121248.png)
+<!-- DetailInfoEnd -->
 
 Tags: core
 <!--ID: 1778786397378-->
@@ -721,6 +178,10 @@ Back:
 - $m = 52$
 - $e = 11$
 
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260520121248.png)
+<!-- DetailInfoEnd -->
+
 Tags: core
 <!--ID: 1778786397380-->
 END
@@ -737,9 +198,15 @@ NI-SZZ
 
 Pokud $e = 2^d-1$ a $m \neq 0$, tak $x = \ ?$
 
+($d$ je délka exponentu)
+
 Back:
 
 $$x = \text{NaN}$$
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260520121248.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1778786397383-->
 END
 
@@ -755,9 +222,15 @@ NI-SZZ
 
 Pokud $e = 2^d-1$ a $m = 0$, tak $x = \ ?$
 
+($d$ je délka exponentu)
+
 Back:
 
 $$x = (-1)^s \cdot \text{Inf}$$
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260520121248.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1778786397386-->
 END
 
@@ -773,11 +246,24 @@ NI-SZZ
 
 Pokud $0 <e < 2^d-1$, tak $x = \ ?$
 
+($d$ je délka exponentu)
+
 Back:
 
 $$x = (-1)^s \cdot (1.m_2)_2 \cdot 2^{e-b}$$
 
 (tzv. **normalizovaná čísla**)
+
+$(m_2)_2$ je délka $m$
+$b$ je posun toho exponentu
+
+<!-- ExplanationStart -->
+To $1.$ před mantisou znamená, že tam vždy budeme mít **skrytou jedničku**, která není součástí té mantisy.
+<!-- ExplanationEnd -->
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260520121248.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1778786397388-->
 END
 
@@ -797,7 +283,15 @@ Back:
 
 $$x = (-1)^s \cdot (0.m_2)_2 \cdot 2^{1-b}$$
 
-(tzv. **subnormální čísla**)
+(tzv. **subnormální čísla** - čísla co jsou extrémně malá a blízko nule)
+
+<!-- ExplanationStart -->
+To $0.$ před mantisou znamená, že tam máme velice malé číslo. To se používá pro extrémně malá čísla, která jsou blízko nule.
+<!-- ExplanationEnd -->
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260520121248.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1778786397391-->
 END
 
@@ -816,6 +310,9 @@ Pokud $e = 0$ a $m = 0$, tak $x = \ ?$
 Back:
 
 $$x = (-1)^s \cdot 0$$
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260520121248.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1778786397393-->
 END
 
@@ -857,9 +354,9 @@ Co jsou **strojová čísla**?
 
 Back:
 
-Reálná čísla, která lze reprezentovat podle standardu IEEE-754 (znaménko, mantisa, exponent) se nazývají **strojová čísla**.
+Reprezentace **reálných čísel** ve podle standardu standardu IEEE-754 (znaménko, mantisa, exponent) se nazývají **strojová čísla**.
 
-Tzn. jsou to reálná čísla, co mají **konečný** binární rozvoj.
+Pozor, fakticky strojová čísla jsou **racionální čísla**, tedy čísla, která lze zapsat formou zlomku. Nepatří do nich tedy například $\sqrt{2}, \pi, \dots$
 
 <!-- ExampleStart -->
 
@@ -916,14 +413,16 @@ Back:
 
 Zobrazení $\mathbb{R} \rightarrow F$, které přiřadí každému $x \in \mathbb{R}$ "nejbližší" strojové číslo.
 
+$F$ je množina strojových čísel
+
 <!-- DetailInfoStart -->
 
-Nejbližší je určeno podle vybrané strategie:
-
+Nejbližší strojové číslo je určeno podle vybrané strategie:
 - k nejbližšímu
 - k $\pm$ nekonečnu
 - náhodně
 - usekávání (zaokrouhlování směrem k nule)
+
   <!-- DetailInfoEnd -->
 <!--ID: 1778786397404-->
 END
@@ -962,6 +461,12 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020241113113306.png)
 
+<!-- ExplanationStart -->
+**Absolutní chyba** = o kolik se mýlíme oproti těm reálným číslům
+**Relativní chyba** = o kolik se mýlíme oproti reálným číslům vzhledem k velikosti toho čísla (tzn. je to jakoby v procentech)
+<!-- ExplanationEnd -->
+
+
 <!-- ExerciseStart -->
 
 ![](../../Assets/Pasted%20image%2020241113113335.png)
@@ -980,17 +485,54 @@ START
 NI-SZZ
 
 
-Co je **zaokrouhlovací jednotka**?
+Co je **zaokrouhlovací jednotka**? Jak ji vyjádříme (když zaokrouhlujeme směrem k nule)?
 
 Back:
 
+Značí se $\textbf{u}$ a říká nám, jak velká chyba vznikne, když zaokrouhlíme na nejbližší strojové číslo (v tomto případě směrem k nule).
+
+$$\textbf{u}=2^{-23}$$
+
+**Jak ji vyjádříme:**
+
+Když zapíšeme reálné číslo takto:
+![](../../Assets/Pasted%20image%2020260520123646.png)
+
+Tedy $x=(1.m_1m_2m_3,\dots)_2\cdot2^l$
+
+Zaokrouhlení provedeme směrem k nule "useknutím" bitů co přesahují délku signifikandu $\text{fl}(x)=(1.m_1m_2m_3\dots m_{23})_2\cdot 2^l$
+
+Zaokrouhlovací jednotka je pak **mez** definovaná takto:
 ![](../../Assets/Pasted%20image%2020241113113706.png)
-![](../../Assets/Pasted%20image%2020241113113721.png)
-![](../../Assets/Pasted%20image%2020241113113731.png)
+
+Pozn. délka $m$ je v tomto případě $23$, tedy používáme jednoduchou přesnost 
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260520124455.png)
+<!-- DetailInfoEnd -->
+
 <!--ID: 1778786397413-->
 END
 
 ---
+
+
+START
+FIT-Card
+
+Jak by byla velká zaokrouhlovací jednotka pokud bychom zaokrouhlovali směrem k nejbližšímu číslu (a ne k nule)?
+
+Back:
+
+$$\textbf{u}=2^{-24}$$
+
+Za předpokladu, že délka $m$ je $23$, tedy používáme jednoduchou přesnost 
+
+<!--ID: 1779274147517-->
+END
+
+---
+
 
 <!--
 Original Flashcard ID: 1735205749544
@@ -1049,11 +591,17 @@ START
 NI-SZZ
 
 
-Co je **krácení** v kontextu chyb?
+Co je **krácení** v kontextu chyb? Kdy nastává? Jak se mu vyhnout?
 
 Back:
 
-Tím že při výpočtu nemám dostatek cifer pro výpočet, tak je mantisa výsledku méně přesná.
+V průběhu výpočtu nám vyjde například $0.0049 \cdot 10^{-2}$, normalizujeme to tak, aby tam byla ta skrytá jednička (zde jsme v desítkové soustavě, takže ta $4$) a vyjde nám $4.9\textcolor{Red}{000} \cdot 10^{-2}$, což je ale špatně protože jsme tím ztratili ta poslední čísla. Takže pak když pokračujem ve výpočtu, tak už to je méně přesné.
+
+Kdy nastává: **při odečítání** (např $x-\sin{x}$)
+
+Jak se mu vyhnout:
+- **přeformulovat problém** tak aby se neodečítalo
+- místo funkcí **použít jim odpovídající řady** (např. Taylorovy řady)
 
 <!-- ExampleStart -->
 
@@ -1078,20 +626,14 @@ Original Flashcard ID: 1735205749552
 START
 NI-SZZ
 
-
 Tvrzení: počet ztracených bitů při odečítání
-
-(pozn. tohle asi není tak důležitý umět)
 
 Back:
 
 ![](../../Assets/Pasted%20image%2020241113114919.png)
 
-<!-- ExplanationStart -->
-
 Říká nám to, kolik bitů ztratíme, když se stane **krácení**.
 
-<!-- ExplanationEnd -->
 <!--ID: 1778786397424-->
 END
 
@@ -1187,6 +729,29 @@ END
 
 ---
 
+
+START
+FIT-Card
+
+Co znamená, že je algoritmus **zpětně stabilní**?
+
+Back:
+
+Že je pro všechny vstupy $d$ zpětná chyba relativně malá.
+
+("relativně malá" závisí na konkrétním případě)
+
+<!-- ImageStart -->
+
+![](../../Assets/Pasted%20image%2020241221133521.png)
+
+<!-- ImageEnd -->
+
+END
+
+---
+
+
 <!--
 Original Flashcard ID: 1735205749194
 -->
@@ -1200,6 +765,11 @@ Definice: **podmíněnost** úlohy
 Back:
 
 ![](../../Assets/Pasted%20image%2020241221133641.png)
+
+Neboli jak moc se změní výstup, když změníme vstup.
+
+Pomocí relativního čísla podmíněnosti $C_r$ to můžeme vyjádřít
+
 <!--ID: 1778786397434-->
 END
 
@@ -1219,13 +789,20 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020241221133656.png)
 
-Pozn. Toto číslo se spíš odhaduje, nepočítá se.
-
 <!-- ExplanationStart -->
+Vzoreček mi říká "jak moc se podělá výstup, když se poděláme vstup", neboli:
+$$\frac{\text{relativní chyba vstupu}}{\text{relativní chyba výstup}}$$
+při limitním zmenšováním těch chyb ve vstupu $\delta d$.
 
-Nahoře je relativní změna výstupu, dole je relativní změna vstupu. To pak porovnávám.
+**Vysvětlení jednotlivých částí**:
+- limita = zmenšujeme limitně ty vstupní chyby
+- supremum $||\delta d|| \leq \epsilon$ = vždy bereme tu _nejhorší velikost chyby_
+- $D$ je přípustná množina vstupů úlohy
 
-Např. do vstupu mi může jít výstup jiného algoritmu (už s chybou). Můžu pak srovnávat, jak se mi třeba změní výstup, když mám nějakou chybu ve vstupu.
+**Vysvětlení významu $C_r$**
+Když $C_r=1$, tak to znamená, že ten algoritmus je stabilní, protože malá chyba na vstupu bude mít za následek malou chybu výstupu
+
+Když $C_r \gg 1$, tak to znamená, že malinká chyba na vstupu může způsobit obří chybu na výstupu
 
 <!-- ExplanationEnd -->
 
@@ -1253,6 +830,13 @@ Definice: **dobře a špatně podmíněná** úloha
 Back:
 
 ![](../../Assets/Pasted%20image%2020241221133722.png)
+
+<!-- ExplanationStart -->
+**dobře podmíněná** = výstup algoritmu se změní málo, pokud málo změníme vstup
+**špatně podmíněná** = výstup algoritmu se změní hodně, pokud málo změníme vstup
+<!-- ExplanationEnd -->
+
+
 <!--ID: 1778786397439-->
 END
 
@@ -1266,11 +850,17 @@ START
 NI-SZZ
 
 
-Definice: přidružená maticová norma
+Definice: **přidružená maticová norma**
+
+(tohle asi nemusíme umět přesně, jen vědět co to znamená)
 
 Back:
 
+Podobně jako norma vektoru nám říká "jak moc je velký vektor", tak maticová norma nám říká to samé, ale v dalším rozměru, tedy "jak moc je velká matice".
+
 ![](../../Assets/Pasted%20image%2020241221134739.png)
+
+
 
 <!-- ExplanationStart -->
 

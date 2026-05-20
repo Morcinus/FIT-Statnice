@@ -29,8 +29,6 @@ Back:
 - Zvyšuje to náročnost údržby
 - Zvyšuje to výskyt bugů
 - Znemožňuje to efektivně dělat změny v kódu
-
-Tags: should-know N001F001
 <!--ID: 1760705194617-->
 
 END
@@ -59,8 +57,6 @@ Back:
 Například se dá kód rozpadnout do menších částí.
 
 <!-- ExampleEnd -->
-
-Tags: should-know N001F002
 <!--ID: 1760705194619-->
 
 END
@@ -91,8 +87,6 @@ Back:
 - **Repairs** = v době, kdy to bude potřeba, pravděpodobně daná funkcionalita stejně bude mít hodně technical debt
 
 ![](../../Assets/Pasted%20image%2020260513100740.png)
-
-Tags: should-know N001F003
 <!--ID: 1760705194622-->
 
 END
@@ -115,8 +109,6 @@ Back:
 - **Liskov Substitution** = pokud $S$ je podtypem $T$, potom všude kde se používá objekt $T$, můžu použít bez změny programu i objekt $S$
 - **Interface Segregation** = Klienti by neměli být nuceni záviset na metodách, které nepoužívají.
 - **Dependency Inversion** = High-level moduly by neměly záviset na low-level modulech. Obojí by mělo záviset na abstrakci.
-
-Tags: should-know N001F004
 <!--ID: 1760705194625-->
 
 END
@@ -151,8 +143,6 @@ If a Class has many responsibilities, it increases the possibility of bugs becau
 This principle aims to separate behaviours so that if bugs arise as a result of your change, it won’t affect other unrelated behaviours.
 
 <!-- DetailInfoEnd -->
-
-Tags: should-know N001F005
 <!--ID: 1760705194627-->
 
 END
@@ -188,8 +178,6 @@ If you want the Class to perform more functions, the ideal approach is to add to
 This principle aims to extend a Class’s behaviour without changing the existing behaviour of that Class. This is to avoid causing bugs wherever the Class is being used.
 
 <!-- DetailInfoEnd -->
-
-Tags: should-know N001F006
 <!--ID: 1760705194630-->
 
 END
@@ -229,8 +217,6 @@ If the **child** Class doesn’t meet these requirements, it means the **chil
 This principle aims to enforce consistency so that the parent Class or its child Class can be used in the same way without any errors.
 
 <!-- DetailInfoEnd -->
-
-Tags: should-know N001F007
 <!--ID: 1760705194633-->
 
 END
@@ -266,8 +252,6 @@ A Class should perform only actions that are needed to fulfil its role. Any othe
 This principle aims at splitting a set of actions into smaller sets so that a Class executes ONLY the set of actions it requires.
 
 <!-- DetailInfoEnd -->
-
-Tags: should-know N001F008
 <!--ID: 1760705194636-->
 
 END
@@ -314,8 +298,6 @@ It also says that both the Class and the interface should not know how the tool 
 This principle aims at reducing the dependency of a high-level Class on the low-level Class by introducing an interface.
 
 <!-- DetailInfoEnd -->
-
-Tags: should-know N001F009
 <!--ID: 1760705194639-->
 
 END
@@ -339,8 +321,6 @@ Back:
 - S kódem se lépe pracuje, když je předvídatelný
 
 ![](../../Assets/Pasted%20image%2020260513100922.png)
-
-Tags: should-know N001F010
 <!--ID: 1760705194642-->
 
 END
@@ -362,8 +342,6 @@ Back:
 **Proč:**
 
 - Díky tomu se postupně zbavujeme tech debtu, aniž bychom museli stopnout veškerou práci a dělat obří refaktoring
-
-Tags: should-know N001F011
 <!--ID: 1760705194644-->
 
 END
@@ -396,8 +374,6 @@ Back:
 <!-- ExampleEnd -->
 
 ![](../../Assets/Pasted%20image%2020260513101055.png)
-
-Tags: should-know N001F012
 <!--ID: 1760705194647-->
 
 END
@@ -425,8 +401,6 @@ Např.
 **Proč:**
 
 - Systém je tak přehlednější, lépe se udržuje, debuguje atd.
-
-Tags: should-know N001F013
 <!--ID: 1760705194650-->
 
 END
@@ -464,8 +438,6 @@ An object can call methods that are apart of:
 - a global variable
 
 <!-- ExplanationEnd -->
-
-Tags: should-know N001F014
 <!--ID: 1760705194652-->
 
 END
@@ -496,8 +468,6 @@ Místo toho bychom měli nejdříve vyvinout funkční kód, pak až zjistit, kt
 - Vývojáři mají tendenci být perfekcionisti a snažit se udělat "perfektní/bezchybný kód"
 
 <!-- ExampleEnd -->
-
-Tags: should-know N001F015
 <!--ID: 1760705194655-->
 
 END

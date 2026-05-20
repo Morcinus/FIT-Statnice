@@ -23,7 +23,7 @@ Definice: **Model hromadné obsluhy**
 
 Back:
 
-Nezapomenout na nezávislost $c$ a nezávislost veličin $A$ a $S$ (podle Hrabáka to je důležitý)
+Nezapomenout na **nezávislost** $c$ a **nezávislost** veličin $A$ a $S$ (podle Hrabáka to je důležitý!)
 
 ![](../../Assets/Pasted%20image%2020250423090622.png)
 

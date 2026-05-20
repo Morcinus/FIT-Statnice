@@ -357,6 +357,15 @@ Back:
 
 Pozn. $\text{log} \ p(x)$ je dvojkový logaritmus.
 
+<!-- ExplanationStart -->
+Entropie nám říká "kolik informace průměrně dostanu z jednoho symbolu" a tedy "jak moc lze teoreticky data zkomprimovat". Resp. vpodstatě entropie znamená "jak moc jsou data nepředvídatelná".
+
+Pokud by byla všechna písmena stejně pravděpodobná, tak to komprimace moc nepomůže. Pokud se ale některá písmena opakují často, můžem pro ně zvolit kratší kód, což je efektivnější.
+
+To je pak princip Huffmanova kódování.
+<!-- ExplanationEnd -->
+
+
 <!-- DetailInfoStart -->
 
 ![](../../Assets/Pasted%20image%2020250307125501.png)
@@ -410,6 +419,15 @@ $$I(x) = -\log p(x)$$
 
 Entropie je tedy očekávanou mírou neurčitosti:
 $$H(X)=EI(X)$$
+
+<!-- ExplanationStart -->
+Míra neurčitosti nám říká "kolik informace nese daná událost".
+
+Např. 
+- "zítra vyjde slunce" nastává s pravděpodobností skoro $1$, takže když to řekneme, tak to nenese téměř žádnou novou informaci (tedy $I$ bude nízká)
+- ale třeba informace "zítra spadne meteorit na Brno", tak nese hodně informace (tedy $I$ bude vysoká)
+<!-- ExplanationEnd -->
+
 
 <!-- DetailInfoStart -->
 
