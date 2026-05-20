@@ -290,8 +290,9 @@ Back:
 - Pokud očekáváme, že náš program bude řešit různé typy požadavků různými cestami, ale přesně typy požadavků a jejich pořadí je nám předem neznámé.
 - Pokud potřebujeme spouštět handlery v přesně daném pořadí.
 - Pokud potřebujeme pořadí handlerů měnit za běhu
-  <!--ID: 1778786460752-->
-  END
+
+<!--ID: 1778786460752-->
+END
 
 ---
 
