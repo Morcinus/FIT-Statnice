@@ -24,8 +24,8 @@ Návrhové vzory jsou typická řešení k běžně objevujícím se problémům
 
 - Vzor není specifický kód, který řeší nějaký konkrétní problém. Jedná se o něco, co je dobré následovat při návrhu řešení konkrétního typu problému.
   <!-- DetailInfoEnd -->
-  <!--ID: 1778786460712-->
-  END
+<!--ID: 1778786460712-->
+END
 
 ---
 
@@ -39,8 +39,8 @@ Back:
 - **Záměr**: stručný popis problému a jeho řešení
 - **Motivace**: detailnější popis problému a proč ho navrhovaný způsob řešení řeší
 - Struktura: Třídy, které je potřebné přidat a jak jsou na sobě závislé.
-  <!--ID: 1778786460725-->
-  END
+<!--ID: 1778786460725-->
+END
 
 ---
 
@@ -53,8 +53,8 @@ Back:
 
 - Návrhové vzory, které se zabývají mechanismy tvorby objektů
 - Hlavní myšlenkou je oddělit vytváření objektů od kódu, který tyto objekty využívá
-  <!--ID: 1778786460729-->
-  END
+<!--ID: 1778786460729-->
+END
 
 ---
 
@@ -184,8 +184,8 @@ Back:
 	- Např. různé typy nepřátel
 	- Nechceme, aby kód závisel na konkrétních třídach, ale na rozhraních
 - Pokud máme třídu s několika Factory metodama, které znejasňují primární účel třídy. (SRP princip)
-  <!--ID: 1778786460732-->
-  END
+<!--ID: 1778786460732-->
+END
 
 ---
 
@@ -291,7 +291,7 @@ Back:
 - Pokud máme konstruktor s velkým množstvím parametrů 7+
 - Pokud máme ve třídě více konstruktorů, kde každý má jinou sadu parametrů a plní tvoří jinou část objektu
 - <!--ID: 1778786460735-->
-  END
+END
 
 ---
 
@@ -418,8 +418,8 @@ Back:
 
 - Pokud na začátku nevíme přesnou specifikaci typů a jejich závislostí
 - Pokud tvoříme framework a chceme umožnit uživatelům upravit si chování jeho interních částí
-  <!--ID: 1778786460737-->
-  END
+<!--ID: 1778786460737-->
+END
 
 ---
 
@@ -541,8 +541,8 @@ Kdy použít **Prototype**?
 Back:
 
 - Pokud nechceme, aby náš kód závisel na konkrétních třídách objektů, které potřebuje zkopírovat
-  <!--ID: 1778786460740-->
-  END
+<!--ID: 1778786460740-->
+END
 
 ---
 
@@ -648,8 +648,8 @@ Kdy použít **Singleton**?
 Back:
 
 - Pokud chceme zajistit, že existuje pouze jedna instance třídy pro celou aplikaci
-  <!--ID: 1778786460743-->
-  END
+<!--ID: 1778786460743-->
+END
 
 ---
 

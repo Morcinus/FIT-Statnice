@@ -210,8 +210,8 @@ Back:
 PCF je **standard** = seznam obecných požadavků, které je dobré implementovat v systémech.
 
 - Když budu dělat systém, podívám se do standardu a on mi řekne, co všechno bych měl v systému vytvořit za funkcionality.
-  <!--ID: 1773945940320-->
-  END
+<!--ID: 1773945940320-->
+END
 
 ---
 
@@ -243,8 +243,8 @@ Back:
 Fun fact:
 
 - Skype fungoval tak, že když člověk nepotřebuje komunikovat se serverem. Když člověk byl na veřejné síti, tak vpodstatě fungoval jako relay pro ostatní uživatele -> komunikace šla přes ostatní uživatele. - Teď už to není, dřív to tak bylo. R.I.P Skype 🥀
-  <!--ID: 1773945940323-->
-  END
+<!--ID: 1773945940323-->
+END
 
 ---
 
@@ -294,8 +294,8 @@ Back:
 - **Microservices client/server**
 - **Nemikroservisní**
 - **Cloud-native**
-  <!--ID: 1773945940330-->
-  END
+<!--ID: 1773945940330-->
+END
 
 ---
 
@@ -379,8 +379,8 @@ Back:
 - Tlustý klient se těžko spravuje – každý update znamená reinstalaci
 - Nesdílí se aplikační logika – pouze skrze kopie. Každý klient může mít jinou verzi aplikační logiky
 - Datově orientovaná integrace – integrita v aplikační logice
-  <!--ID: 1773945940340-->
-  END
+<!--ID: 1773945940340-->
+END
 
 ---
 
@@ -566,8 +566,8 @@ Back:
 - navržená pro cloud
 - děláme architekturu microslužeb
 - vlastně Kubernetes
-  <!--ID: 1778786460863-->
-  END
+<!--ID: 1778786460863-->
+END
 
 ---
 
@@ -586,8 +586,8 @@ Back:
 	- Je to legacy (vznikl v roce 2005), už se toho lidi spíš zbavují
 - **Mikroslužby** - relativně nový, populární
 - **Kubernetes** - v tom běží (mimo jiné) mikroslužby
-  <!--ID: 1773945940364-->
-  END
+<!--ID: 1773945940364-->
+END
 
 ---
 
@@ -605,8 +605,8 @@ Back:
 - **Data, procesy, funkce**
 - **Software**
 - **Hardware**
-  <!--ID: 1773945940367-->
-  END
+<!--ID: 1773945940367-->
+END
 
 ---
 
@@ -668,8 +668,8 @@ Back:
 - **logical** view
 - **software architecture** view
 - **technology architecture** view
-  <!--ID: 1773945940374-->
-  END
+<!--ID: 1773945940374-->
+END
 
 ---
 
@@ -734,8 +734,8 @@ Interface služby, její popis a implementace
 	- pracuje se zdrojema, např. REST
 	- metody, co používám pro manipulaci dat jsou standardizovaný (POST, PUT, DELETE, atd.)
 - **message-oriented** - zavádím operace, co jsou doménově závislé - např. SOAP - např. mám na rozhraní konkrétní metodu "createCustomer" - nevýhoda: je potřeba zavést nějaký standard pro vytváření metod, aby v tom nebyl chaos
-  <!--ID: 1773945940384-->
-  END
+<!--ID: 1773945940384-->
+END
 
 ---
 
@@ -1158,8 +1158,8 @@ Když by mi dvě mikroslužby pak potřebovaly využívat stejnou funkcionalitu,
 - Nevýhoda: mám duplicitní kód v systému (několik mikroslužeb má nainstalováno stejnou knihovnu -> snižuje to výkon)
 - Výhoda: je to všechno přehledný a funguje to dobře.
     <!-- DetailInfoEnd -->
-  <!--ID: 1773945940446-->
-  END
+<!--ID: 1773945940446-->
+END
 
 ---
 
@@ -1259,8 +1259,8 @@ RPC
 - endpointy jsou **operace** (např. createCustomer)
 - operace jsou doménově závislé
 - používá se hlavně pro server-server komunikaci
-  <!--ID: 1773945940458-->
-  END
+<!--ID: 1773945940458-->
+END
 
 ---
 
@@ -1278,8 +1278,8 @@ Back:
 - **Identifikace**: univerzální identifikace zdrojů pomocí URI
 - **Interakce**: protokoly pro získávání zdrojů - HTTP
 - **Formáty**: reprezentace zdrojů (data a metadata)
-  <!--ID: 1773945940462-->
-  END
+<!--ID: 1773945940462-->
+END
 
 ---
 
@@ -1327,8 +1327,8 @@ Back:
 - **Identifikátor**
 - **Data**
 - **Metadata**
-  <!--ID: 1773945940468-->
-  END
+<!--ID: 1773945940468-->
+END
 
 ---
 
@@ -1508,8 +1508,8 @@ Back:
 - **URI Opacity** - když jako součást URI mám i formát
 - **Resource versions** - když mi URI definuje i verzi toho zdroje
 - **Persistent URL** - adresa by měla být validní i když zdroj už neexistuje (neměl bych smazat URI, ale třeba přesměrovat člověka na novou URI)
-  <!--ID: 1773945940494-->
-  END
+<!--ID: 1773945940494-->
+END
 
 ---
 
@@ -1585,8 +1585,8 @@ Back:
 
 - Mám omezené množství operací (POST, GET,...)
 - Operace jsou **doménově nezávislé**
-  <!--ID: 1773945940503-->
-  END
+<!--ID: 1773945940503-->
+END
 
 ---
 
@@ -2009,8 +2009,8 @@ Back:
 
 - **HTTP 1.1** - textově
 - **HTTP 2.0** - binárně
-  <!--ID: 1773945940553-->
-  END
+<!--ID: 1773945940553-->
+END
 
 ---
 
@@ -2028,8 +2028,8 @@ Back:
 - Jak dlouho na síti trvá přenos elementárních dat (malých dat).
 - Doba od odeslání požadavku po jeho přijetí na serveru.
 - Jednosměrné
-  <!--ID: 1773945940557-->
-  END
+<!--ID: 1773945940557-->
+END
 
 ---
 
@@ -2068,8 +2068,8 @@ Back:
 
 - Request Processing Time
 - Jak dlouho trvá zpracování požadvku na serveru.
-  <!--ID: 1773945940563-->
-  END
+<!--ID: 1773945940563-->
+END
 
 ---
 

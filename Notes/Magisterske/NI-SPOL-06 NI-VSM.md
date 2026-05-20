@@ -68,8 +68,8 @@ Vysvětlení:
 Tzn. dobrý postup je:
 
 - Předpokládáme, že je nemocný a pouze pokud bude mít dost protilátek, tak ho prohlásíme za zdravého
-  <!--ID: 1778521859932-->
-  END
+<!--ID: 1778521859932-->
+END
 
 ---
 
@@ -264,8 +264,8 @@ Back:
 	- $p'=p$ při známých parametrech
 	- $p'=p$ při neznámých parametrech
 - **Kontingenční tabulka** - testujeme nezávislost dvou rozdělení
-  <!--ID: 1778521860042-->
-  END
+<!--ID: 1778521860042-->
+END
 
 ---
 
@@ -963,8 +963,8 @@ Back:
 
 1. $np_i \geq 5$ pro každý "bin"
 2. Nebo pokud $k \geq 3$ **Yarnoldovo kritérium**: $np_i \geq q$, kde $q$ je podíl tříd, pro které platí $np_i \lt 5$
-   <!--ID: 1778521860029-->
-   END
+ <!--ID: 1778521860029-->
+ END
 
 ---
 

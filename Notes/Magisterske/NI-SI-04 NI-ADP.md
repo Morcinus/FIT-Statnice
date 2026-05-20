@@ -158,8 +158,8 @@ Back:
 
 - Pokud chceme parametrizovat objekt operacema
 - Pokud potřebujeme tvořit frontu commandů, plánovat dobu jejich spuštění nebo je spouštět vzdáleně.
-  <!--ID: 1778786460749-->
-  END
+<!--ID: 1778786460749-->
+END
 
 ---
 
@@ -479,8 +479,8 @@ Back:
 
 - Pokud má kolekce komplexní datovou strukturu, od které chceme klienty odstínit
 - Pokud chceme omezit udplikaci kódu pro průchod kolekcí v aplikaci
-  <!--ID: 1778786460755-->
-  END
+<!--ID: 1778786460755-->
+END
 
 ---
 
@@ -595,8 +595,8 @@ Back:
 
 - Pokud je komplikované měnit některé třídy, protože jsou silně spojeny (coupled) k jiným třídám.
 - Pokud chceme komponentu využít i v jiném programu, ale nemůžeme kvůli silným závislostem na jiné části systému
-  <!--ID: 1778786460758-->
-  END
+<!--ID: 1778786460758-->
+END
 
 ---
 
@@ -692,8 +692,8 @@ Back:
 - **Pomocí vnitřní třídy** - Memento je jako vnitřní třída uvnitř Originatora
 - **Pomocí interfacu** - Memento je interface, který využívá Caretaker. Originator pak pracuje s memento třídou co implementuje ten interface.
 - **Pomocí striktní enkapsulace** - Originator i memento mají interfacy a třídy co je implementují. Originator má v sobě `save()` a `setState()`, Memento má v sobě `restore()` a `originator`. Memento pak provádí ten restore v originatoru.
-  <!--ID: 1776243585027-->
-  END
+<!--ID: 1776243585027-->
+END
 
 ---
 
@@ -781,8 +781,8 @@ Back:
 
 - Pokud chceme tvořit snapshoty objektu, ke kterým se můžeme v budoucnu chtít vrátit
 - Pokud přímý přístup k vlastnostem objektu porušuje jeho zapouzdření
-  <!--ID: 1778786460760-->
-  END
+<!--ID: 1778786460760-->
+END
 
 ---
 
@@ -1038,8 +1038,8 @@ Back:
 - Pokud se má objekt chovat odlišně v závilosti na jeho aktuálním stavu
 - Pokud máme třídu zaplavenou rozhodováním na základě vnitřního stavu
 - Pokud je mnoho duplicitního kódu napříč podobnými stavy
-  <!--ID: 1778786460766-->
-  END
+<!--ID: 1778786460766-->
+END
 
 ---
 
@@ -1153,8 +1153,8 @@ Back:
 - Pokud chceme podporovat více variant algoritmu v rámci jednoho objektu a chceme mezi nimi přepínat
 - Pokud máme mnoho tříd, které se liší pouze konkrétní implementací konkrétní části
 - Pro izolaci implementačních detailů byznys logiky třídy, které nemusí být v kontextu třídy tak důležité
-  <!--ID: 1778786460769-->
-  END
+<!--ID: 1778786460769-->
+END
 
 ---
 
@@ -1275,8 +1275,8 @@ Back:
 
 - Pokud chceme umožnit klientům rozšířit only konkrétní krok v rámci algoritmu
 - Pokud máme několik tříd se skoro totožným algoritmem, pouze s malými změnami
-  <!--ID: 1778786460772-->
-  END
+<!--ID: 1778786460772-->
+END
 
 ---
 
@@ -1432,8 +1432,8 @@ Back:
 - Pokud chceme provádět operace na všech elementech komplexní struktury objektů
 - Pokud chceme vyčistit pomocnou business logiku z objektů
 - Pokud konkrétní chování dává smysl pouze pro nějaké třídy
-  <!--ID: 1778786460776-->
-  END
+<!--ID: 1778786460776-->
+END
 
 ---
 

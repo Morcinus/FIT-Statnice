@@ -484,8 +484,8 @@ Lemma pak říká, že pro $u \geq 0$ jsou nezávislé následující dvě věci
 
 - Jak dlouhý čas měl vítěz (že byl delší než $u$)
 - Kdo vyhrál závod (že $T < S$ - tedy že závodník $T$ byl rychlejší)
-  <!--ID: 1778521859527-->
-  END
+<!--ID: 1778521859527-->
+END
 
 ---
 

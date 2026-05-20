@@ -322,8 +322,8 @@ Back:
 - **Technologický lock-in** – Změna programovacího jazyka znamená kompletní přepis aplikace
 - **Složitost při růstu** – Při rozšiřování se stává projekt obrovským, nepřehledným a obtížným na orientaci (Big Ball of Mud)
 - **Náchylnost na chyby** – Jedna chyba ovlivní fungování celého systému
-  <!--ID: 1778786460818-->
-  END
+<!--ID: 1778786460818-->
+END
 
 ---
 
@@ -366,8 +366,8 @@ Back:
 - Síťová latence a spolehlivost – komunikace přes síť je násobně pomalejší než v paměti
 - Komplikované ladění – distribuované sledování chyby
 - Problémy s udržením datové konzistence – transakce napříč mikroslužbami je mnohem komplikovanější.
-  <!--ID: 1778786460825-->
-  END
+<!--ID: 1778786460825-->
+END
 
 ---
 
@@ -492,8 +492,8 @@ Back:
 - **Blackboard (Tabule):** - **centrální úložiště dat** (sdílená paměť), které obsahuje data spojená s problémem. - Nachází se zde počáteční zadání, mezivýsledky (částečná řešení), hypotézy a nakonec i konečné řešení. - Stav na tabuli se neustále vyvíjí.
 - **Knowledge Sources (Zdroje znalostí / Experti):** - Nezávislé a specializované moduly (kusy kódu, algoritmy, neuronové sítě). - Každý modul umí řešit jen svou specifickou část problému. - **Klíčové pravidlo:** Tito experti **nikdy nekomunikují přímo mezi sebou**. Sledují pouze tabuli. Jakmile se na tabuli objeví data, kterým rozumí, "zvednou ruku", že chtějí přispět.
 - **Control Shell (Řídicí komponenta / Moderátor):** - Aby se experti u tabule neprali, musí tam být moderátor. - Tato komponenta neustále monitoruje změny na tabuli a "zvednuté ruce" expertů. - Rozhoduje, komu dá slovo (zavolá jeho metodu) a jakým způsobem se bude řešení vyvíjet. Řídí tedy celý průběh programu.
-  <!--ID: 1778786460829-->
-  END
+<!--ID: 1778786460829-->
+END
 
 ---
 
@@ -579,8 +579,8 @@ Ve formátu **IF (podmínka) THEN (akce)**.
 
 - **Podmínka (Condition):** Testuje obsah _Working memory_ (např. přítomnost symbolů) nebo data ze senzorů.
 - **Akce (Action):** Změní stav _Working memory_ nebo spustí externí operaci.
-  <!--ID: 1778786460840-->
-  END
+<!--ID: 1778786460840-->
+END
 
 ---
 
@@ -624,8 +624,8 @@ Back:
 Když je **sada pravidel výrazně jednodušší než samotný model**, který z nich vznikne (model je tvořen opakováním omezeného množství vzorů).
 
 - _Pozn.:_ Používá se v AI pro ručně psaná/spravovaná pravidla (typicky _nezahrnuje_ pravidla automaticky vygenerovaná strojovým učením).
-  <!--ID: 1778786460851-->
-  END
+<!--ID: 1778786460851-->
+END
 
 ---
 
@@ -691,8 +691,8 @@ Back:
  	- Zprávy jsou odběrateli doručeny pouze v případě, že atributy nebo samotný obsah zprávy splňují podmínky (filtry), které si nadefinoval sám odběratel.
  	- Za klasifikaci a třídění zpráv je v tomto modelu zodpovědný odběratel.
 3. **Hybridní přístup (Hybrid)** - Některé systémy podporují kombinaci obou výše zmíněných přístupů. - Odesílatelé běžně publikují zprávy do určitého tématu, zatímco odběratelé si nad jedním nebo více tématy registrují odběr s dodatečným filtrováním na základě obsahu zprávy.
-   <!--ID: 1778786460855-->
-   END
+ <!--ID: 1778786460855-->
+ END
 
 ---
 

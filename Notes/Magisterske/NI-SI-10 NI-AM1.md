@@ -23,8 +23,8 @@ Co je **integrační middleware**?
 Back:
 
 - Slouží k propojování aplikací umožňující výměnu a sdílení schopností (capabilities) – konkrétně informace a funkce
-  <!--ID: 1773945940629-->
-  END
+<!--ID: 1773945940629-->
+END
 
 ---
 
@@ -42,8 +42,8 @@ Schopnost, aby si dva systémy rozuměly.
 - Data – syntaxe/struktura a sémantika
 - Funkce/procesy – syntaxe a sémantika
 - Technické aspekty – protokoly, síťové adresy atd.
-  <!--ID: 1778786460867-->
-  END
+<!--ID: 1778786460867-->
+END
 
 ---
 
@@ -60,8 +60,8 @@ Back:
 
 - **Java** a **XML** je nejpoužívanější ve **velkých organizacích**, je to už trošičku přežitek
 - U nových systémů se používá **JSON** a **modernější programovací jazyky**
-  <!--ID: 1773945940632-->
-  END
+<!--ID: 1773945940632-->
+END
 
 ---
 
@@ -240,8 +240,8 @@ Back:
 - **škálovatelnost** - messaging servers, load balancers, proxy serves
 - **functional** - integrace (propojování) severů a částí aplikace, repozitáře,...
 - **security** - firewally, gateways,...
-  <!--ID: 1773945940654-->
-  END
+<!--ID: 1773945940654-->
+END
 
 ---
 
@@ -492,8 +492,8 @@ Back:
 - Pomocí integračních vzorů v ní můžu vytvářet integrační procesy.
 - Plní roli prostředníka (intermediary) v SOA
 - ESB aplikace - Typy služeb: sdílené a infrastruktura - Typy procesů: technické a businessové
-  <!--ID: 1773945940684-->
-  END
+<!--ID: 1773945940684-->
+END
 
 ---
 
@@ -643,8 +643,8 @@ Back:
 
 - Mapování dat z jedné struktury do druhé
 - Řeší konverze mezi rozdílnými formáty
-  <!--ID: 1778786460889-->
-  END
+<!--ID: 1778786460889-->
+END
 
 ---
 
@@ -737,8 +737,8 @@ Back:
 
 - Prostředník (Intermediary) = Komponenta, která odstraňuje závislost (decoupling) v klient-server komunikaci
 - Zvyšuje spolehlivost a výkon - Server nemusí být dostupný, když klient odesílá požadavek - Může zde být více serverů, které požadavky zpracováváají
-  <!--ID: 1778786460907-->
-  END
+<!--ID: 1778786460907-->
+END
 
 ---
 
@@ -785,8 +785,8 @@ Back:
 
 - **Message Queue** - jeden klient, jeden server
 - **Publish/Subscribe** - jeden klient, z queue čte více serverů _(každý např. zaměřený na určitý task)_
-  <!--ID: 1773945940697-->
-  END
+<!--ID: 1773945940697-->
+END
 
 ---
 
@@ -970,8 +970,8 @@ Back:
 2. Zařadí se do fronty (např. s kapacitou 100)
 3. Request čeká na to, až mu bude přiřazeno vlákno pro přístup do databáze.
 4. Pokud je kapacita fronty plná, rovnou se requesty odmítají (díky čemuž to je rychlejší, protože se nezatěžuje ten systém, když vím, že bych to stejně nestíhal zpracovávat)
-   <!--ID: 1773945940719-->
-   END
+ <!--ID: 1773945940719-->
+ END
 
 ---
 
