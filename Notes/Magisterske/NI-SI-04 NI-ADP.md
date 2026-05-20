@@ -20,8 +20,9 @@ Back:
 
 - Zaměřují se na algoritmy, rozdělení odpovědnosti mezi objekty a na to, jak spolu objekty komunikují.
 - Řeší, jak si objekty předávají zprávy, jak spolupracují na složitějších úlohách a jak je řízen tok programu (control flow).
-  <!--ID: 1778786460746-->
-  END
+
+<!--ID: 1778786460746-->
+END
 
 ---
 
@@ -289,8 +290,9 @@ Back:
 - Pokud očekáváme, že náš program bude řešit různé typy požadavků různými cestami, ale přesně typy požadavků a jejich pořadí je nám předem neznámé.
 - Pokud potřebujeme spouštět handlery v přesně daném pořadí.
 - Pokud potřebujeme pořadí handlerů měnit za běhu
-  <!--ID: 1778786460752-->
-  END
+
+<!--ID: 1778786460752-->
+END
 
 ---
 
