@@ -194,7 +194,7 @@ Kdy jsou tělesa $T$ a $K$ izomorfní?
 Back:
 
 ![](../../Assets/Pasted%20image%2020260515202324.png)
-
+<!--ID: 1779300126814-->
 END
 
 ---

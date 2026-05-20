@@ -164,31 +164,6 @@ END
 ---
 
 <!--
-Original Flashcard ID: 1728921214885
--->
-
-START
-NI-SZZ
-
-Co je **grafické znázornění gradientu**?
-
-Back:
-
-Formálně: Když udělám funkci ve směru v bodě, tak ta směrnice bude **největší**.
-
-Tzn. u tohohle je ta levá strana nejvyšší?
-![](../../Assets/Pasted%20image%2020240930131518.png)
-
-Neformálně: "Směr **nejvyššího růstu** funkce".
-
-![](../../Assets/Pasted%20image%2020240930131042.png)
-
-<!--ID: 1778786397464-->
-END
-
----
-
-<!--
 Original Flashcard ID: 1728921214887
 -->
 
