@@ -33,6 +33,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020251019105946.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682874695-->
 END
 
@@ -51,6 +52,7 @@ Back:
 
 - **Best practices** - co se používá, na co jsou lidé zvyklí, pochopit důvody
 - **Design process itself** - helps you think and avoid common issues and mistakes
+
 <!--ID: 1778682874700-->
 END
 
@@ -72,6 +74,7 @@ Back:
 - **Evaluation** - zhodnotíme výsledky
 
 ![](../../Assets/Pasted%20image%2020251019110829.png)
+
 <!--ID: 1778682874703-->
 END
 
@@ -105,6 +108,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020251210110107.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682874706-->
 END
 
@@ -149,6 +153,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020251006133857.png)
 
 <!-- ExampleEnd -->
+
 <!--ID: 1778682874709-->
 END
 
@@ -173,6 +178,7 @@ Prakticky to znamená, že bychom se měli na často využívané fičury zamě�
 Obecně se principu říká napříč obory Paretovo Pravidlo
 ![](../../Assets/Pasted%20image%2020251208155458.png)
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682874712-->
 END
 
@@ -190,6 +196,7 @@ Co je **User Centered Design**?
 Back:
 
 Vytvářet **interfaces** a **interactions**, které naplní uživatelské **potřeby** a **očekávání**
+
 <!--ID: 1778682874715-->
 END
 
@@ -214,6 +221,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020251019111226.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682874717-->
 END
 
@@ -235,6 +243,7 @@ Vytvářet funkce které:
 - **jsou moc komplikované**
 - **uživatel nechce používat**
 - **uživatel nepotřebuje**
+
 <!--ID: 1778682874720-->
 END
 
@@ -260,6 +269,7 @@ Je to důležité, protože si tím člověk vytváří **model** toho, jak ti l
 Tohle lidi dělají odjakživa (bohové, příběhy atd.).
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682874723-->
 END
 
@@ -278,6 +288,7 @@ Back:
 Fiktivní uživatelé pro které vytváříme uživatelský návrh.
 
 Formalizace určitých lidských vlastností. Je to důležité, protože si tím člověk vytváří v hlavě **model** toho, jak ti lidé vypadají.
+
 <!--ID: 1778682874726-->
 END
 
@@ -297,6 +308,7 @@ Back:
 Většinou by člověk měl dělat persony na zákadě typického uživatele, který už existuje.
 
 ALE teoreticky lze i vyloženě na trhu vytvořit novou pesonu (jako Elon Musk vytvořil novou personu - člověka co chce elektro auto)
+
 <!--ID: 1778682874729-->
 END
 
@@ -317,6 +329,7 @@ Měl by je na trhu skutečně najít ty lidi.
 
 - **Dotazníky** - ptáme se lidí, jaké jsou jejich hlavní problémy, potřeby, přání
 - **Observace** - pokud jsou existující solutions, můžu je zkoumat - jak to funguje, jaké jsou issues, gaps, co by mohlo být lepší, jaké to má barvy
+
 <!--ID: 1778682874732-->
 END
 
@@ -345,6 +358,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020250929140903.png)
 ![](../../Assets/Pasted%20image%2020250929140914.png)
 ![](../../Assets/Pasted%20image%2020250929140932.png)<!-- DetailInfoEnd -->
+
 <!--ID: 1778682874735-->
 END
 
@@ -363,6 +377,7 @@ Back:
 
 - **Goals**: co jsou jeho cíle
 - **Pain points**: jaké jsou jeho problémy
+
 <!--ID: 1778682874738-->
 END
 
@@ -380,6 +395,7 @@ Proč je věk důležitý u person?
 Back:
 
 Čím je člověk starší, tím méně je adaptivní.
+
 <!--ID: 1778682874741-->
 END
 
@@ -397,6 +413,7 @@ Proč jsou důležité **koníčky** a **typický den** u person?
 Back:
 
 Definují **chování** toho člověka, jak žije, **jak funguje** (např. ráno venčí psa -> v té době může používat appku apod.)
+
 <!--ID: 1778682874744-->
 END
 
@@ -420,6 +437,7 @@ Takové, které nám jsou k **něčemu užitečné**.
 Např. je mi jedno, kolik ten člověk má dětí, když dělám nějakej eshop nebo tak
 
 <!-- ExampleEnd -->
+
 <!--ID: 1778682874747-->
 END
 
@@ -437,6 +455,7 @@ Co nám poskytuje persona?
 Back:
 
 **Mentální model uživatele**
+
 <!--ID: 1778682874750-->
 END
 
@@ -455,6 +474,7 @@ Back:
 - **Persona A** - typický uživatel
 - **Persona B** - uživatel, co to nepoužívá často
 - **Persona C** - antipersona, někdo kdo by aplikaci nepoužíval
+
 <!--ID: 1778682874753-->
 END
 
@@ -477,6 +497,7 @@ Díky tomu získáme více informací, ale je těžší to vyhodnotit.
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020251208165928.png)
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682874755-->
 END
 
@@ -504,6 +525,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020250929141614.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682874758-->
 END
 
@@ -525,6 +547,7 @@ Píšeme věty s **požadavky** a **očekáváními** uživatele.
 Např. Uživatel požaduje aby se mohl přihlásit. Očekává, že se bude moci přihlásit zadáním jména a hesla.
 
 Typicky **požadavky** jsou cca 20% use casu a **očekávání** cca 80% use casu.
+
 <!--ID: 1778682874761-->
 END
 
@@ -544,6 +567,7 @@ Back:
 **Neměli** bychom tam psát **konkrétní komponenty nebo vzhled systému** atd.
 
 Ty konkrétní komponenty se pak píšou do scénářů.
+
 <!--ID: 1778682874764-->
 END
 
@@ -562,6 +586,7 @@ Co je **scénář** v NUR?
 Back:
 
 Scénář je psán z pohledu systému. Tam už řeším konkrétní atributy, co uživatel zadává, píšeme výsledek té akce.
+
 <!--ID: 1778682874769-->
 END
 
@@ -585,6 +610,7 @@ Správný workflow by měl být:
 1. Sepsat všechny use casy
 2. Sepsat scénáře
 3. Udělat wireframy / návrh
+
 <!--ID: 1778682874772-->
 END
 
@@ -609,6 +635,7 @@ Skládá se z:
 3. **Koncový bod** (uspokojení uživatelské potřeby)
 
 Task může mít různé větve.
+
 <!--ID: 1778682874775-->
 END
 
@@ -636,6 +663,7 @@ Tady se task nechápe jako ten task, co se skládá z use casů
 ![](../../Assets/Pasted%20image%2020251019113136.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682874778-->
 END
 
@@ -661,6 +689,7 @@ Reálně se nedělá graf, ale dává se to do tabulky.
 ![](../../Assets/Pasted%20image%2020251019113150.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682874781-->
 END
 
@@ -678,6 +707,7 @@ Co je 5 dimenzí interakčního designu?
 Back:
 
 Jsou to jakoby složky ze kterých se skládá interakční design
+
 <!--ID: 1778682874784-->
 END
 
@@ -690,7 +720,7 @@ START
 NI-SZZ
 
 
-Jaké jsou jednotlivé dimenze interakčního designu?
+Jaké jsou jednotlivé dimenze interakčního designu? (5)
 
 Back:
 
@@ -699,6 +729,7 @@ Back:
 3. **Physical objects or space** - definuje jednotlivé objekty a prostor (např. čudlík a kde se nachází)
 4. **Time** - naviguje to člověka pomocí animací a videí (např. že se okno nezavře tak že zmizí, ale "zmenší se animací" a díky tomu člověk ví, kam zmizelo a kde ho najít)
 5. **Behavior** - je to nadstavba těch předchozích - obecně prostě jak lidi reagují na UI jako celek
+
 <!--ID: 1778682874787-->
 END
 
@@ -716,6 +747,7 @@ Co je affective interaction design?
 Back:
 
 Jde o to udělat UI co nejpříjemnější na používání. Je cílem **snížit emoční zátěž** při používání systému.
+
 <!--ID: 1778682874790-->
 END
 
@@ -735,6 +767,7 @@ Back:
 Nejhorší jsou v UI "hard mental operations" - nejde tolik o to, že člověk hodněkrát klikne, ale jde o to, že před kliknutím musí člověk dlouho přemýšlet, co má vybrat nebo kam má kliknout.
 
 Proto je lepší mít u formulářů například hromadu stránek s jednoduchýma formulářema, než mít jeden giga formulář se 100 tlačítkama na jedné stránce.
+
 <!--ID: 1778682874793-->
 END
 
@@ -759,6 +792,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020251214144411.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682874796-->
 END
 
@@ -782,6 +816,7 @@ Back:
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020251214144418.png)
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778688339378-->
 END
 
@@ -806,6 +841,7 @@ Back:
 2. **Working memory** - krátkodobá pracovní paměť
 	- Např. když řídíme auto, tak se to všechno řeší v pracovní paměti
 3. **Long term memory** - tam si uchováváme data
+
 <!--ID: 1778682874799-->
 END
 
@@ -825,6 +861,7 @@ Back:
 je to jakýsi program, který máme v mozku, podle kterého se chováme
 
 Každý má v mozku jiné "algoritmy", jinak se dívají na svět apod.
+
 <!--ID: 1778682874802-->
 END
 
@@ -842,6 +879,7 @@ Co je pružnost mentálního modelu?
 Back:
 
 Mentální model se dá v určitých cyklech měnit (cca do 22 let - pak už je fixní, stabilní, ale už se nebude měnit)
+
 <!--ID: 1778682874805-->
 END
 
@@ -862,6 +900,7 @@ Back:
 - země, ve kterém vyrůstá
 - prostředí, ve kterém vyrůstá
 - vzdělání, znalosti, které dostává atd.
+
 <!--ID: 1778682874808-->
 END
 
@@ -881,6 +920,7 @@ Back:
 Když v UI cílíme na mladé lidi (do 22 let cca), můžeme být víc "inovativní" v UI, ale starší lidi už se **nechtějí přeučovat**!
 
 Např. **barevný schémata**, **layout komponentů** atd.
+
 <!--ID: 1778682874812-->
 END
 
@@ -901,7 +941,8 @@ Back:
 - **Emoce a přemýšlení** - **ztrácí energii** - Např. ztracení provedené práce, když crashne program
 - **Higher thoughts** - konzumuje obří množství energie (např. ztracení partnera, umře pes atd.) - jsou to myšlenky o něčem jiném než o tom tasku co provádíme
 
-Pozn. tohle platí pro negativní emoce. Naopak poitivní emoce je super vytvářet, protože nám potom uživatelé hodně odpustí
+Pozn. tohle platí pro negativní emoce. Naopak pozitivní emoce je super vytvářet, protože nám potom uživatelé hodně odpustí
+
 <!--ID: 1778682874814-->
 END
 
@@ -919,6 +960,7 @@ Co **vyplývá pro design UI** z toho, jak jsou činnosti energeticky náročné
 Back:
 
 **Neměli** bychom se např. zaměřovat na "omezení kliků na obrazovce", ale mnohem důležitější je systém udělat **přehledně, pochopitelně**, aby se co nejvíce **redukovalo kognitivní zatížení**.
+
 <!--ID: 1778682874817-->
 END
 
@@ -949,6 +991,7 @@ Vysvětlení:
 ![](../../Assets/Pasted%20image%2020251026131003.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682874820-->
 END
 
@@ -967,6 +1010,7 @@ Back:
 
 - Měli bychom komponenty dávat na místa, aby člověk nemusel moc "přejíždět myší"
 - Měli bychom dělat komponenty dostatečně výrazné
+
 <!--ID: 1778682874823-->
 END
 
@@ -986,6 +1030,7 @@ Back:
 Tak aby byla **nejsnáze dosažitelná**.
 
 Typicky to znamená **vlevo nahoře** nebo na **začátku menu**, protože v naší zemi čteme **zeshora dolů, zleva doprava**.
+
 <!--ID: 1778682874829-->
 END
 
@@ -1004,6 +1049,7 @@ Back:
 **Max 4-5 položek**, protože:
 - omezená kapacita krátkodobé paměti (4±1 chunky)
 - Hick's law, který říká, že čas potřebný k rozhodnutí roste s počtem možností. Méně možností -> rychlejší rozhodnutí
+
 <!--ID: 1778682874832-->
 END
 
@@ -1028,6 +1074,7 @@ Proto se:
 - **Další "globálnější" akce** se dávají taky kolem hran
 
 Např. představ si Word nebo Photoshop (komplikovaný UI) - tam to je nejlépe vidět tyto principy
+
 <!--ID: 1778682874835-->
 END
 
@@ -1049,6 +1096,7 @@ Back:
 $$\text{doba reakce} = \text{doba pohybu}+\frac{\log_2(n)}{\text{processing speed}}$$
 
 $n$ je nejspíše ten počet variant
+
 <!--ID: 1778682874838-->
 END
 
@@ -1070,6 +1118,7 @@ Na jedné stránce nebo na jednom místě bychom měli mít co nejméně variant
 **Proto je lepší, aby uživatel klidně více klikal, ale méně myslel** (např. vícestránkové formuláře), protože rozhodování zabírá více času.
 
 Např. když dělám dlouhý formulář, je lepší to splitnout do mnoha stránek, než to mít vše na jedné stránce
+
 <!--ID: 1778682874841-->
 END
 
@@ -1089,6 +1138,7 @@ Back:
 - Chunk může být buď jednoduchý znak/číslo nebo i komplexní abstrakce/obrázky
 
 Pro UI to znamená, že by například menu a skupiny měly být rozděleny po 5 itemech
+
 <!--ID: 1778682874844-->
 END
 
@@ -1107,6 +1157,7 @@ Back:
 **Neomezená** - resp. nikdo nenašel, že by měla nějaký limit, lidi se furt mohou učit nové věci, paměť pojme extrémní množství informací
 
 Je tam ale pomalejší access (třeba 0.1 sekundy), používanější informace jsou získávány rychleji
+
 <!--ID: 1778682874847-->
 END
 
@@ -1129,6 +1180,7 @@ Back:
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020251208173037.png)
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682874850-->
 END
 
@@ -1150,6 +1202,7 @@ Tři druhy pro různé vlnové délky světla:
 - **modrou** (B)
 
 Tyto čípy umožňují vnímat barvy
+
 <!--ID: 1778682874853-->
 END
 
@@ -1166,6 +1219,7 @@ Na jaké barvy jsou citlivé čípky v lidském oku?
 Back:
 
 **RGB - červená, zelená, modrá**
+
 <!--ID: 1778682874856-->
 END
 
@@ -1184,6 +1238,7 @@ Back:
 Zelené - protože to má nejvyšší intenzitu, tak jsme schopni ji nejlépe rozlišovat
 
 ![](../../Assets/Pasted%20image%2020251026141109.png)
+
 <!--ID: 1778682874859-->
 END
 
@@ -1204,6 +1259,7 @@ Místo na sítnici, kde je největší hustota světlocitlivých buňek (hlavně
 Toto místo má nejvíce sharp/focused vision, poznáváme tím obličeje, čteme pomocí toho apod. používá se, když se díváme přímo na nějaký objekt.
 
 Je to "yellow spot", protože to má žluté zbarvení (kvůli pigmentů, co ochraňují oko)
+
 <!--ID: 1778682874862-->
 END
 
@@ -1224,6 +1280,7 @@ Back:
 - **Ženy:** mají víc "obecné" vidění, lepší rozlišování barev (ženy spíše sbíraly plody, takže bylo dobré vidět víc "do šířky" a rozlišovat dobře barvy)
 
 Muži a ženy ale vidí barvy stejně, jen to ten mozek víc u mužů ignoruje.
+
 <!--ID: 1778682874865-->
 END
 
@@ -1244,6 +1301,7 @@ Back:
 Čím červenější, tím větší vlnová délka
 
 ![](../../Assets/Pasted%20image%2020251026141109.png)
+
 <!--ID: 1778682874868-->
 END
 
@@ -1266,6 +1324,7 @@ Graf který zobrazuje funkci frekvence signálu a amplitudu v čase.
 - **vedle toho** (jakoby Z osa) je amplituda (jak moc je světlo intenzivní)
 
 ![](../../Assets/Pasted%20image%2020251208173913.png)
+
 <!--ID: 1778682874871-->
 END
 
@@ -1286,6 +1345,7 @@ Back:
 - **míchání (subtraktivní) - CMYK**
 
 ![](../../Assets/Pasted%20image%2020251026145337.png)
+
 <!--ID: 1778682874874-->
 END
 
@@ -1303,6 +1363,7 @@ Jak u RGB vznikne **bílá barva**?
 Back:
 
 Splácáme všechny dohromady
+
 <!--ID: 1778682874877-->
 END
 
@@ -1332,6 +1393,7 @@ Jakoby to ředíme bílou
 ![](../../Assets/Pasted%20image%2020251026150324.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682874880-->
 END
 
@@ -1355,6 +1417,7 @@ Kombinuje **Hue, Saturation a Value**:
 - **Value** - jak moc to svítí
 
 ![](../../Assets/Pasted%20image%2020251026150418.png)
+
 <!--ID: 1778682874883-->
 END
 
@@ -1386,6 +1449,7 @@ Pozor, "teplá" barva (červená) má nejméně energie, takže fyzikálně to j
 Fun fact: je to u hvězd - červené mají málo energie, modré mají hodně energie.
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682874886-->
 END
 
@@ -1403,6 +1467,7 @@ Proč jsou některé barvy více uklidňující a některé více agresivní?
 Back:
 
 Protože při vnímání té barvy je to oko méně "napnuté", takže to vyloženě fyziologicky namáhá to oko jinak.
+
 <!--ID: 1778682874889-->
 END
 
@@ -1420,6 +1485,7 @@ Proč barvy různě působí na psychiku?
 Back:
 
 Jsou prostě ve společnosti nějak používány a lidé si s tím přirozeně asociují určité vlastnosti, takže to je dost důležitý.
+
 <!--ID: 1778682874892-->
 END
 
@@ -1440,6 +1506,7 @@ Když se spojí modrá a červená (např. červená na modrým pozadí), tak st
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020251208173117.png)
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682874895-->
 END
 
@@ -1465,6 +1532,7 @@ Např. k modrý je komplementární žlutá
 ![](../../Assets/Pasted%20image%2020251208173410.png)
 ![](../../Assets/Pasted%20image%2020251208173437.png)
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682874898-->
 END
 
@@ -1481,6 +1549,7 @@ Jaká je doplňková barva k **červené**? (#FF0000) (hexadecimálně)
 Back:
 
 #00FFFF (azurová/cyan)
+
 <!--ID: 1778682874901-->
 END
 
@@ -1497,6 +1566,7 @@ Jaká je doplňková barva k **zelené**? (#00FF00) (hexadecimálně)
 Back:
 
 #FF00FF (purpurová/magenta)
+
 <!--ID: 1778682874904-->
 END
 
@@ -1513,6 +1583,7 @@ Jaká je doplňková barva k **modré**? (#0000FF) (hexadecimálně)
 Back:
 
 #FFFF00 (žlutá/yellow)
+
 <!--ID: 1778682874907-->
 END
 
@@ -1529,6 +1600,7 @@ Jaká je doplňková barva k **purpurové** (#FF00FF)? (uveďte hexadecimálně)
 Back:
 
 #00FF00 (zelená/green)
+
 <!--ID: 1778682874910-->
 END
 
@@ -1545,6 +1617,7 @@ Jaká je doplňková barva k **žluté** (#FFFF00)? (uveďte hexadecimálně)
 Back:
 
 #0000FF (modrá/blue)
+
 <!--ID: 1778682874913-->
 END
 
@@ -1561,6 +1634,7 @@ Jaká je doplňková barva k **azurové** (#00FFFF)? (uveďte hexadecimálně)
 Back:
 
 #FF0000 (červená/red)
+
 <!--ID: 1778682874916-->
 END
 
@@ -1579,6 +1653,7 @@ Back:
 
 - autorita, síla, elegance, formalita, smrt, strach
 - může mít často negativní význam
+
 <!--ID: 1778682874919-->
 END
 
@@ -1598,6 +1673,7 @@ Back:
 - kindness, nevinost, čistota, přátelství, božství, vznešenost
 
 Pozor, v Indii to je ale třeba barva smutku
+
 <!--ID: 1778682874922-->
 END
 
@@ -1623,6 +1699,7 @@ Back:
 Tip: s červenou je dobré hodně šetřit, stačí jí málo v designu
 
 Fun fact: ženy oblečené do červeného jsou podle Pavlíčka atraktivnější :D čistě z toho psychologického hlediska
+
 <!--ID: 1778682874925-->
 END
 
@@ -1643,6 +1720,7 @@ Back:
 - harmonie, peace, safety
 
 Je dobrá jako **doplňková barva** v designech.
+
 <!--ID: 1778682874928-->
 END
 
@@ -1661,6 +1739,7 @@ Back:
 
 - **důvěra, diskrétnost, inteligence, přesnost**
 - **uklidňující, vypadá cool** (proto to používají hodně technologické společnosti)
+
 <!--ID: 1778682874931-->
 END
 

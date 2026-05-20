@@ -28,6 +28,7 @@ Nezapomenout na **nezávislost** $c$ a **nezávislost** veličin $A$ a $S$ (podl
 ![](../../Assets/Pasted%20image%2020250423090622.png)
 
 Pozn. takhle to chtějí popsat u zkoušky a u státnic.
+
 <!--ID: 1778521859382-->
 END
 
@@ -46,6 +47,7 @@ Definice: **Proces hromadné obsluhy**
 Back:
 
 ![](../../Assets/Pasted%20image%2020250423090638.png)
+
 <!--ID: 1778521859390-->
 END
 
@@ -80,6 +82,7 @@ Je to jakoby hustota obsluhy.
 Když je hustota 1, tak to je přesně na hranici toho, že to ten systém stíhá. Když to bude víc, tak to přehltí systém. (Když jsem na 1, tak ten systém bude hodně citlivý na nějaký mini přetížení).
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778521859393-->
 END
 
@@ -117,6 +120,7 @@ Rozdělení $A$ a $S$ jsou značena:
 ![](../../Assets/Pasted%20image%2020250423090724.png)
 
 <!-- ExampleEnd -->
+
 <!--ID: 1778521859395-->
 END
 
@@ -146,6 +150,7 @@ $$P(X=n) = \frac{\lambda^n}{n!}e^{-\lambda}$$
 ![](../../Assets/Pasted%20image%2020250220120403.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778521859398-->
 END
 
@@ -164,6 +169,7 @@ Jaká je střední hodnota **Poissonova rozdělení**?
 Back:
 
 $$EX = \lambda$$
+
 <!--ID: 1778521859401-->
 END
 
@@ -182,6 +188,7 @@ Jaký je rozptyl **Poissonova rozdělení**?
 Back:
 
 $$varX=\lambda$$
+
 <!--ID: 1778521859404-->
 END
 
@@ -206,6 +213,7 @@ Střední doba zpracování:
 $ES = \frac{1}{\mu}$
 
 Tags: exam
+
 <!--ID: 1778521859407-->
 END
 
@@ -231,6 +239,7 @@ Back:
 Jak si zapamatovat stacionární rozdělení:
 ![](../../Assets/Pasted%20image%2020260514160947.png)
 ![](../../Assets/Pasted%20image%2020260514160956.png)
+
 <!--ID: 1778521859410-->
 END
 
@@ -265,6 +274,7 @@ Druhá možnost říká, že se systém přeplní, takže tam budou neustále na
 ![](../../Assets/Pasted%20image%2020250423090836.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778521859412-->
 END
 
@@ -301,6 +311,7 @@ Dále platí, že $EN = EN_s + EN_f$
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020250423090859.png)
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778521859415-->
 END
 
@@ -325,6 +336,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020250423090929.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778521859418-->
 END
 
@@ -343,6 +355,7 @@ Pozorování: Jaké rozdělení má u $M|M|1$ doba čekání ve frontě?
 Back:
 
 ![](../../Assets/Pasted%20image%2020250423090951.png)
+
 <!--ID: 1778521859420-->
 END
 
@@ -364,6 +377,7 @@ Jak vypadá systém $M|M|\infty$?
 Back:
 
 ![](../../Assets/Pasted%20image%2020250423091014.png)
+
 <!--ID: 1778521859423-->
 END
 
@@ -392,6 +406,7 @@ Stacionární rozdělení je Poissonovo s parametrem $\lambda/\mu$
 ![](../../Assets/Pasted%20image%2020250423091111.png)
 
 <!-- ExampleEnd -->
+
 <!--ID: 1778521859426-->
 END
 
@@ -412,6 +427,7 @@ Jak vypadá systém $M|M|c$?
 Back:
 
 ![](../../Assets/Pasted%20image%2020250423091133.png)
+
 <!--ID: 1778521859429-->
 END
 
@@ -430,6 +446,7 @@ Pozorování: Jak vypadá stacionární rozdělení systému $M|M|c$?
 Back:
 
 ![](../../Assets/Pasted%20image%2020250423091207.png)
+
 <!--ID: 1778521859432-->
 END
 
@@ -463,6 +480,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020250423091325.png)
 
 <!-- ProofEnd -->
+
 <!--ID: 1778521859434-->
 END
 
@@ -500,6 +518,7 @@ Protože $EN =  EN_f + EN_s = EN_f + (1-\pi_0)$, dostaneme:
 $$\pi_0 = 1- (EN-EN_f) = \text{dosadíme a upravíme} = 1 - \frac{\lambda}{\mu}$$
 
 ![](../../Assets/Pasted%20image%2020250423091348.png)
+
 <!--ID: 1778521859437-->
 END
 
@@ -523,6 +542,7 @@ Pro $M|M|1$ ve stacionárním stavu:
 $$EN = \sum_{n=0}^\infty n \pi_n = \frac{\rho}{1-\rho}$$
 
 Pro $M|M|\infty$ je to jen $\rho$
+
 <!--ID: 1778521859440-->
 END
 
@@ -561,6 +581,7 @@ Pro $t \rightarrow \infty$ to pak vychází $\frac{\lambda}{\mu}$
 ![](../../Assets/Pasted%20image%2020250501143134.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778521859443-->
 END
 
@@ -587,6 +608,7 @@ Proč ne $M|D(1)|1$:
 ![](../../Assets/Pasted%20image%2020260514172647.png)
 
 (Pozn. tuhle kartičku jsem přidal pomocí AI, protože byla prázdná sekce "Souvislost s Markovskými řetězci se spojitým časem")
+
 <!--ID: 1778764368759-->
 END
 
@@ -608,6 +630,7 @@ Markovský řetězec vypadá takhle:
 Celý systém se chová jako markovský proces.
 
 (Pozn. tuhle kartičku jsem přidal pomocí AI, protože byla prázdná sekce "Souvislost s Markovskými řetězci se spojitým časem")
+
 <!--ID: 1778764368771-->
 END
 
@@ -623,6 +646,7 @@ Back:
 Složka stacionárního rozdělení $\pi_n$ nám říká, jaká je dlouhodobá pravděpodobnost, že v systému bude právě $n$ zákazníků. 
 
 (za předpokladu, že stacionární rozdělení existuje)
+
 <!--ID: 1778764368774-->
 END
 

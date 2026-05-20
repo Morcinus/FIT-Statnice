@@ -37,6 +37,7 @@ Back:
 <!-- ExplanationEnd -->
 
 Tags: core
+
 <!--ID: 1778786397088-->
 END
 
@@ -63,6 +64,7 @@ Tzn. operace je uzavřená
 <!-- ExplanationEnd -->
 
 Tags: core
+
 <!--ID: 1778786397091-->
 END
 
@@ -83,6 +85,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241120180839.png)
 
 Tags: core
+
 <!--ID: 1778786397093-->
 END
 
@@ -103,6 +106,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241120180834.png)
 
 Tags: core
+
 <!--ID: 1778786397096-->
 END
 
@@ -123,6 +127,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241120180830.png)
 
 Tags: core
+
 <!--ID: 1778786397099-->
 END
 
@@ -143,6 +148,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241120180824.png)
 
 Tags: core
+
 <!--ID: 1778786397102-->
 END
 
@@ -167,6 +173,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241120180350.png)
 
 <!-- ProofEnd -->
+
 <!--ID: 1778786397104-->
 END
 
@@ -185,6 +192,7 @@ Značení: Čemu je rovné $a^0$ kde $a \in M, \ G = (M,\circ)$?
 Back:
 
 $$a^0 = e$$
+
 <!--ID: 1778786397107-->
 END
 
@@ -203,6 +211,7 @@ Značení: Čemu je rovné $a^n$ kde $a \in M, \ G = (M,\circ)$?
 Back:
 
 $$a^n = a \circ a \circ \dots \circ a$$
+
 <!--ID: 1778786397110-->
 END
 
@@ -221,6 +230,7 @@ Značení: Čemu je rovné $a^n \circ a^{-n}$ kde $a \in M, \ G = (M,\circ)$?
 Back:
 
 $$a^n \circ a^{-n}=e$$
+
 <!--ID: 1778786397113-->
 END
 
@@ -247,6 +257,7 @@ Je to směrem "dovnitř" v hierarchii.
 ![](../../Assets/Pasted%20image%2020241120180429.png)
 
 <!-- ImageEnd -->
+
 <!--ID: 1778786397116-->
 END
 
@@ -271,6 +282,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241120185129.png)
 
 <!-- ProofEnd -->
+
 <!--ID: 1778786397118-->
 END
 
@@ -295,6 +307,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241125153849.png)
 
 <!-- ExplanationEnd -->
+
 <!--ID: 1778786397121-->
 END
 
@@ -313,6 +326,7 @@ Značení: multiplikativní a aditivní značení inverzních prvků
 Back:
 
 ![](../../Assets/Pasted%20image%2020241125153949.png)
+
 <!--ID: 1778786397124-->
 END
 
@@ -343,6 +357,7 @@ Mám **grupu** a zachytím výsledky té binární operace $\circ$ do tabulky.
 ![](../../Assets/Pasted%20image%2020241125154232.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778786397127-->
 END
 
@@ -367,6 +382,7 @@ Všechny pole tabulky obsahují prvky z množiny $M$.
 ![](../../Assets/Pasted%20image%2020241125154407.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778786397130-->
 END
 
@@ -393,6 +409,7 @@ Z tabulky nepoznáme, musíme si vypsat všechny trojice prvků a ověřit to ma
 ![](../../Assets/Pasted%20image%2020241125154415.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778786397133-->
 END
 
@@ -419,6 +436,7 @@ V "jeho" řádcích a sloupcích se přesně opakují označení řádku a sloup
 ![](../../Assets/Pasted%20image%2020241125154428.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778786397136-->
 END
 
@@ -444,6 +462,7 @@ Např. zde máme neutrální prvek $0$ a pro $3$ bude zde inverzní prvek $1$
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020241125154446.png)
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778786397139-->
 END
 
@@ -462,6 +481,7 @@ Jak se z Cayleyovy tabulky pozná **komutativita**?
 Back:
 
 ![](../../Assets/Pasted%20image%2020241125154603.png)
+
 <!--ID: 1778786397141-->
 END
 
@@ -486,6 +506,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241125154755.png)
 
 <!-- ProofEnd -->
+
 <!--ID: 1778786397144-->
 END
 
@@ -508,6 +529,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241230141551.png)
 
 Tags: algebra4 core
+
 <!--ID: 1778786397147-->
 END
 
@@ -528,6 +550,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241125160404.png)
 
 Tags: core
+
 <!--ID: 1778786397150-->
 END
 
@@ -546,6 +569,7 @@ Definice: **triviální a vlastní podgrupy**
 Back:
 
 ![](../../Assets/Pasted%20image%2020241125160629.png)
+
 <!--ID: 1778786397152-->
 END
 
@@ -570,6 +594,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241125161203.png)
 
 <!-- ProofEnd -->
+
 <!--ID: 1778786397155-->
 END
 
@@ -594,6 +619,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241125161245.png)
 
 <!-- ProofEnd -->
+
 <!--ID: 1778786397158-->
 END
 
@@ -612,6 +638,7 @@ Definice: **Řád grupy**
 Back:
 
 ![](../../Assets/Pasted%20image%2020241125161306.png)
+
 <!--ID: 1778786397161-->
 END
 
@@ -638,6 +665,7 @@ Back:
 <!-- ExampleEnd -->
 
 Tags: core
+
 <!--ID: 1778786397163-->
 END
 
@@ -667,6 +695,7 @@ Pro grupu $n=12 = 2^2\cdot 3$ tam budou podgrupy řádu $2$, $3$, $4$.
 <!-- ExplanationEnd -->
 
 Tags: core
+
 <!--ID: 1778786397166-->
 END
 
@@ -703,6 +732,7 @@ Věta nám pak říká, že $⟨N⟩$ **je také podgrupou**.
 ![](../../Assets/Pasted%20image%2020241125161952.png)
 
 <!-- ProofEnd -->
+
 <!--ID: 1778786397169-->
 END
 
@@ -725,6 +755,7 @@ Definice:
 Back:
 
 ![](../../Assets/Pasted%20image%2020241125162047.png)
+
 <!--ID: 1778786397172-->
 END
 
@@ -749,6 +780,7 @@ Back:
 Vezmu všechny prvky z množiny N a nakombinuju je tak, abych si byl jistý, že tam všechno co potřebuju včetně těch inverzních prvků (proto tam je $\mathbb{Z}$).
 
 <!-- InformallySaidEnd -->
+
 <!--ID: 1778786397174-->
 END
 
@@ -769,6 +801,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241125162851.png)
 
 Tedy $\gcd (k,n) = 1$
+
 <!--ID: 1778786397177-->
 END
 
@@ -787,6 +820,7 @@ Co platí pro inverzní prvek generátoru grupy?
 Back:
 
 je také generátor
+
 <!--ID: 1778786397179-->
 END
 
@@ -813,6 +847,7 @@ Jinými slovy řád prvku mi říká, kolikrát musím prvek "umocnit", abych do
 <!-- InformallySaidEnd -->
 
 Tags: core
+
 <!--ID: 1778786397182-->
 END
 
@@ -837,6 +872,7 @@ Back:
 Jinými slovy, pokud má grupa generátor, je cyklická.
 
 <!-- InformallySaidEnd -->
+
 <!--ID: 1778786397185-->
 END
 
@@ -863,6 +899,7 @@ Back:
 <!-- ExampleEnd -->
 
 Tags: core
+
 <!--ID: 1778786397187-->
 END
 
@@ -890,6 +927,7 @@ Back:
 <!-- ProofEnd -->
 
 Tags: core
+
 <!--ID: 1778786397190-->
 END
 
@@ -916,6 +954,7 @@ Back:
 <!-- ExplanationEnd -->
 
 Tags: core
+
 <!--ID: 1778786397193-->
 END
 
@@ -938,6 +977,7 @@ Back:
 Protože multiplikativní grupa má $p-1$ prvků, protože tam není $0$ a z předchozí věty počet generátorů zjistíme pomocí $\varphi{(n)} = \varphi{(p-1)}$
 
 Tags: core
+
 <!--ID: 1778786397196-->
 END
 
@@ -964,6 +1004,7 @@ Back:
 <!-- ProofEnd -->
 
 Tags: core
+
 <!--ID: 1778786397199-->
 END
 
@@ -989,6 +1030,7 @@ Back:
 <!-- ProofEnd -->
 
 Tags: core
+
 <!--ID: 1778786397202-->
 END
 
@@ -1016,6 +1058,7 @@ Je to důsledek (jakoby konkrétnější případ) této věty:
 <!-- DetailInfoEnd -->
 
 Tags: core
+
 <!--ID: 1778786397205-->
 END
 
@@ -1033,6 +1076,7 @@ Back:
 1. Ověřím, jestli $gcd(x,m) = 1$, pokud ano, mohu použít Fermatovu/Eulerovu větu
 2. Použiju Fermatovu/Eulerovu větu -> získám $x^s \equiv 1 \pmod{m}$
 3. Spočtu původní číslo tak, že využiju $x^s \equiv 1$ a zároveň to modulo. Tím se dostanu k výsledku
+
 <!--ID: 1778786397208-->
 END
 
@@ -1060,6 +1104,7 @@ Izomorfismus = je navíc bijekcí
 <!-- InformallySaidEnd -->
 
 Tags: core
+
 <!--ID: 1778786397210-->
 END
 
@@ -1089,6 +1134,7 @@ Bijektivní znamená, že každému prvku z $A$ odpovídá právě jeden prvek z
 <!-- ExplanationEnd -->
 
 Tags: core
+
 <!--ID: 1778786397214-->
 END
 
@@ -1117,6 +1163,7 @@ Back:
 <!-- ExampleEnd -->
 
 Tags: algebra3 core
+
 <!--ID: 1778786397216-->
 END
 
@@ -1143,6 +1190,7 @@ Back:
 <!-- ProofEnd -->
 
 Tags: algebra3 core
+
 <!--ID: 1778786397219-->
 END
 
@@ -1169,6 +1217,7 @@ Back:
 <!-- ProofEnd -->
 
 Tags: algebra3
+
 <!--ID: 1778786397222-->
 END
 
@@ -1204,6 +1253,7 @@ $a^{\varphi(n)} \equiv 1 \mod n$
 ![](../../Assets/Pasted%20image%2020241231165532.png)
 
 Tags: maly
+
 <!--ID: 1778786397225-->
 END
 

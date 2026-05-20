@@ -49,6 +49,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020250307130507.png)
 
 <!-- ExampleEnd -->
+
 <!--ID: 1778521859806-->
 END
 
@@ -73,6 +74,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020250307130536.png)
 
 <!-- ExampleEnd -->
+
 <!--ID: 1778521859812-->
 END
 
@@ -94,6 +96,7 @@ Back:
 
 Prosté zobrazení - každý prvek se zobrazí na něco jiného:
 ![](../../Assets/Pasted%20image%2020250521094622.png)
+
 <!--ID: 1778521859815-->
 END
 
@@ -114,6 +117,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020250307130602.png)
 
 Tzn. Zobrazení z množiny zpráv do množiny zakódovaných zpráv.
+
 <!--ID: 1778521859818-->
 END
 
@@ -132,6 +136,7 @@ Definice: **jednoznačně dekódovatelný kód**
 Back:
 
 ![](../../Assets/Pasted%20image%2020250307130625.png)
+
 <!--ID: 1778521859820-->
 END
 
@@ -150,6 +155,7 @@ Definice: **instantní kód**
 Back:
 
 ![](../../Assets/Pasted%20image%2020250307130636.png)
+
 <!--ID: 1778521859823-->
 END
 
@@ -179,6 +185,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020250307130725.png)
 
 <!-- ExampleEnd -->
+
 <!--ID: 1778521859825-->
 END
 
@@ -197,6 +204,7 @@ Věta: **Kraftova nerovnost**
 Back:
 
 ![](../../Assets/Pasted%20image%2020250307130740.png)
+
 <!--ID: 1778521859828-->
 END
 
@@ -219,6 +227,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020250307130753.png)
 
 Je to jakoby to samé jako Kraftova nerovnost ale pro jednoznačně dekódovatelné kódy
+
 <!--ID: 1778521859831-->
 END
 
@@ -239,6 +248,7 @@ Věta: **Dolní mez střední délky instantního kódu**
 Back:
 
 ![](../../Assets/Pasted%20image%2020250307130827.png)
+
 <!--ID: 1778521859833-->
 END
 
@@ -257,6 +267,7 @@ Věta: **Střední délka optimálního kódu** (omezení té střední délky)
 Back:
 
 ![](../../Assets/Pasted%20image%2020250307155922.png)
+
 <!--ID: 1778521859836-->
 END
 
@@ -282,6 +293,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020250307160010.png)
 
 <!-- ExampleEnd -->
+
 <!--ID: 1778521859838-->
 END
 
@@ -300,6 +312,7 @@ Věta: **Optimalita Huffmanova kódu**
 Back:
 
 ![](../../Assets/Pasted%20image%2020250307160038.png)
+
 <!--ID: 1778521859841-->
 END
 
@@ -320,6 +333,7 @@ Jak lze Entropii zapsat pomocí střední hodnoty?
 Back:
 
 ![](../../Assets/Pasted%20image%2020250318105903.png)
+
 <!--ID: 1778521859844-->
 END
 
@@ -337,6 +351,7 @@ Jaké rozdělení má maximální entropii?
 Back:
 
 Rovnoměrné rozdělení
+
 <!--ID: 1778521859846-->
 END
 
@@ -377,6 +392,7 @@ To je pak princip Huffmanova kódování.
 ![](../../Assets/Pasted%20image%2020250307125655.png)
 
 <!-- ExampleEnd -->
+
 <!--ID: 1778521859849-->
 END
 
@@ -397,6 +413,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020250307125549.png)
 
 b je báze toho logaritmu
+
 <!--ID: 1778521859851-->
 END
 
@@ -434,6 +451,7 @@ Např.
 ![](../../Assets/Pasted%20image%2020250307125612.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778521859854-->
 END
 
@@ -452,6 +470,7 @@ Lemma: **může být entropie záporná**?
 Back:
 
 ![](../../Assets/Pasted%20image%2020250307125633.png)
+
 <!--ID: 1778521859860-->
 END
 
@@ -476,6 +495,7 @@ Back:
 Je to vyloženě to samý jako u normální entropie, jen prostě se pohybuju na vícerozměrném prostoru (mám více náhodných veličin).
 
 <!-- ExplanationEnd -->
+
 <!--ID: 1778521859865-->
 END
 
@@ -500,6 +520,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020250307125749.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778521859867-->
 END
 
@@ -526,6 +547,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020250307125812.png)
 
 <!-- ExampleEnd -->
+
 <!--ID: 1778521859870-->
 END
 
@@ -553,6 +575,7 @@ Tzn. $D(p||q) \neq D(q||p)$
 Mám 2 rozdělení na jedné možině p a q. Díky tomuto můžu zkoumat rozdíly mezi těmi rozděleními
 
 <!-- ExplanationEnd -->
+
 <!--ID: 1778521859873-->
 END
 
@@ -579,6 +602,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020250307125845.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778521859876-->
 END
 
@@ -598,6 +622,7 @@ Věta:
 Back:
 
 ![](../../Assets/Pasted%20image%2020250307125918.png)
+
 <!--ID: 1778521859879-->
 END
 
@@ -617,6 +642,7 @@ Věta:
 Back:
 
 ![](../../Assets/Pasted%20image%2020250307125954.png)
+
 <!--ID: 1778521859881-->
 END
 
@@ -636,6 +662,7 @@ Věta:
 Back:
 
 ![](../../Assets/Pasted%20image%2020250307130034.png)
+
 <!--ID: 1778521859884-->
 END
 
@@ -655,6 +682,7 @@ Věta:
 Back:
 
 ![](../../Assets/Pasted%20image%2020250307130048.png)
+
 <!--ID: 1778521859887-->
 END
 
@@ -677,6 +705,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020250307130116.png)
 
 Připomenutí: $f$ je ryze konvexní, pokud spojnice libovolných dvou bodů leží nad grafem
+
 <!--ID: 1778521859889-->
 END
 
@@ -697,6 +726,7 @@ Věta: **Informační nerovnost**
 Back:
 
 ![](../../Assets/Pasted%20image%2020250307130216.png)
+
 <!--ID: 1778521859892-->
 END
 
@@ -717,6 +747,7 @@ Věta: **Nezápornost vzájemné informace**
 Back:
 
 ![](../../Assets/Pasted%20image%2020250307130230.png)
+
 <!--ID: 1778521859895-->
 END
 
@@ -737,6 +768,7 @@ Věta: **maximalizace entropie**
 Back:
 
 ![](../../Assets/Pasted%20image%2020250307130246.png)
+
 <!--ID: 1778521859897-->
 END
 
@@ -763,6 +795,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020250307130316.png)
 
 <!-- ExerciseEnd -->
+
 <!--ID: 1778521859900-->
 END
 
@@ -793,6 +826,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020250320103258.png)
 
 <!-- ExerciseEnd -->
+
 <!--ID: 1778521859903-->
 END
 
@@ -817,6 +851,7 @@ Back:
 Neboli, pokud to dobře chápu, tak $H(X^\Delta)$ mi říká, že máme entropii **diskrétní** náhodné veličiny rozsekané do intervalů šířky $\Delta$ a tato entropie se spočte tím vzorcem nahoře (resp. tak to je definovaný).
 
 Tzn. máme diskrétní entropii, tu rozsekáme na kousíčky a ty plochy zintegrujeme
+
 <!--ID: 1778521859905-->
 END
 
@@ -835,6 +870,7 @@ Věta: **vztah diferenciální a diskrétní entropie**
 Back:
 
 ![](../../Assets/Pasted%20image%2020250320103404.png)
+
 <!--ID: 1778521859908-->
 END
 
@@ -853,6 +889,7 @@ Definice: **Sdružená diferenciální entropie**
 Back:
 
 ![](../../Assets/Pasted%20image%2020250320103419.png)
+
 <!--ID: 1778521859911-->
 END
 
@@ -871,6 +908,7 @@ Definice: **Podmíněná diferenciální entropie**
 Back:
 
 ![](../../Assets/Pasted%20image%2020250320103433.png)
+
 <!--ID: 1778521859913-->
 END
 
@@ -889,6 +927,7 @@ Definice: **Relativní entropie** (Kullback-Leiblerova vzdálenost) pro **spojit
 Back:
 
 ![](../../Assets/Pasted%20image%2020250320103509.png)
+
 <!--ID: 1778521859916-->
 END
 
@@ -907,6 +946,7 @@ Definice: **Vzájemná informace** $I(X;Y)$ **spojitých náhodných veličin**
 Back:
 
 ![](../../Assets/Pasted%20image%2020250320103520.png)
+
 <!--ID: 1778521859919-->
 END
 
@@ -927,6 +967,7 @@ Věta: **Maximalizace diferenciální entropie**
 Back:
 
 ![](../../Assets/Pasted%20image%2020250320103605.png)
+
 <!--ID: 1778521859921-->
 END
 
@@ -947,6 +988,7 @@ Věta: $h(X) \leq \dots$ pro spojitou náhodnou veličinu s $\mu$ a oborem hodno
 Back:
 
 ![](../../Assets/Pasted%20image%2020250320103652.png)
+
 <!--ID: 1778521859924-->
 END
 
@@ -967,6 +1009,7 @@ Věta: $h(X) \leq 0$
 Back:
 
 ![](../../Assets/Pasted%20image%2020250320103718.png)
+
 <!--ID: 1778521859926-->
 END
 

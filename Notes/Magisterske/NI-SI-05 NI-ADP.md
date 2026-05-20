@@ -49,8 +49,8 @@ This part of application is responsible for handling user’s input and updating
 This layer contains displaying logic. Typically it’s GUI but it doesn’t have to be. It could be just some interface user can communicate with.
 
 <!-- ExplanationEnd -->
-<!--ID: 1760705194395-->
 
+<!--ID: 1760705194395-->
 END
 
 ---
@@ -69,8 +69,8 @@ Back:
 **Možnost 2:**
 **Model** zavolá update na **View**, když se změní. Toto používá typicky Observer pattern, kdy View observuje změny v Modelu.
 ![](../../../Assets/Pasted%20image%2020250130115146.png)
-<!--ID: 1760705194398-->
 
+<!--ID: 1760705194398-->
 END
 
 ---
@@ -89,8 +89,8 @@ Back:
 ✅ We can have multiple **Views** for one **Model** and **Controller**.
 
 ❌ Tight coupling of **View** and **Controller**. That makes testing harder.
-<!--ID: 1760705194400-->
 
+<!--ID: 1760705194400-->
 END
 
 ---
@@ -125,8 +125,8 @@ The Presenter is responsible to act as the middleman between View and Model. It 
 The only thing that the view will do is to call a method from the Presenter every time there is an interface action. It is only responsible for presenting data in a way decided by the presenter. The functionality of view is typically reduced to a minimum such as simple validation, and it’s made as a passive component, by moving the business logic to the presenter. The view is also shielded from the model by delegating all the interaction to happen through the middleman presenter.
 
 <!-- ExplanationEnd -->
-<!--ID: 1760705194404-->
 
+<!--ID: 1760705194404-->
 END
 
 ---
@@ -144,8 +144,8 @@ Back:
 
 ![](../../../Assets/Pasted%20image%2020250130115309.png)
 ![](../../../Assets/Pasted%20image%2020250130115313.png)
-<!--ID: 1760705194406-->
 
+<!--ID: 1760705194406-->
 END
 
 ---
@@ -170,8 +170,8 @@ Back:
 Oproti MVP je View "chytřejší" protože se samo updatuje a observuje změny v ViewModelu.
 
 ![](../../../Assets/Pasted%20image%2020250130115455.png)
-<!--ID: 1760705194409-->
 
+<!--ID: 1760705194409-->
 END
 
 ---
@@ -197,8 +197,8 @@ This is example of **MVVM** how it is used in android programming.
 ![](../../../Assets/Pasted%20image%2020250130115556.png)
 
 <!-- ExampleEnd -->
-<!--ID: 1760705194412-->
 
+<!--ID: 1760705194412-->
 END
 
 ---
@@ -216,8 +216,8 @@ Back:
 - Klient odesílá požadavek, který server zpracovává a odesílá odpověď
 
 ![](../../../Assets/Pasted%20image%2020250130115951.png)
-<!--ID: 1760705194415-->
 
+<!--ID: 1760705194415-->
 END
 
 ---
@@ -240,8 +240,8 @@ Back:
 
 - Vyžaduje připojení k síti, což může přináše problémy s latencí
 - Server je Single point of Failure
-<!--ID: 1760705194418-->
 
+<!--ID: 1760705194418-->
 END
 
 ---
@@ -256,8 +256,8 @@ Back:
 - Webové aplikace
 - Desktopové aplikace
 - Mobilní aplikace
-<!--ID: 1760705194421-->
 
+<!--ID: 1760705194421-->
 END
 
 ---
@@ -276,8 +276,8 @@ Back:
 - Schopnost škálování je velmi omezená, protože Server musí být připraven vždy na ten nejvyšší výkon, i přesto, že je přes den pouze chvilkový.
 
 ![](../../Assets/Pasted%20image%2020260513151521.png)
-<!--ID: 1778786460815-->
 
+<!--ID: 1778786460815-->
 END
 
 ---
@@ -302,8 +302,9 @@ Back:
 - **Technologický lock-in** – Změna programovacího jazyka znamená kompletní přepis aplikace
 - **Složitost při růstu** – Při rozšiřování se stává projekt obrovským, nepřehledným a obtížným na orientaci (Big Ball of Mud)
 - **Náchylnost na chyby** – Jedna chyba ovlivní fungování celého systému
-  <!--ID: 1778786460818-->
-  END
+
+<!--ID: 1778786460818-->
+END
 
 ---
 
@@ -320,8 +321,8 @@ Back:
 - Služby spolu komunikují skrze definovaná rozhraní v síti (např. REST, messages)
 
 ![](../../Assets/Pasted%20image%2020260513151444.png)
-<!--ID: 1778786460822-->
 
+<!--ID: 1778786460822-->
 END
 
 ---
@@ -346,8 +347,9 @@ Back:
 - Síťová latence a spolehlivost – komunikace přes síť je násobně pomalejší než v paměti
 - Komplikované ladění – distribuované sledování chyby
 - Problémy s udržením datové konzistence – transakce napříč mikroslužbami je mnohem komplikovanější.
-  <!--ID: 1778786460825-->
-  END
+
+<!--ID: 1778786460825-->
+END
 
 ---
 
@@ -385,8 +387,8 @@ Vysoká provázanost s Publish-subscribe architekturou
 ![](../../../Assets/Pasted%20image%2020250130124107.png)
 
 <!-- ExampleEnd -->
-<!--ID: 1760705194424-->
 
+<!--ID: 1760705194424-->
 END
 
 ---
@@ -408,8 +410,8 @@ Back:
 
 - Nutnost správy další infrastruktury
 - V případě, že se jedná o synchronní komunikaci, tak je nutné spojovat požadavek a odpověď do jedné pseudosynchronní transakce
-<!--ID: 1760705194428-->
 
+<!--ID: 1760705194428-->
 END
 
 ---
@@ -450,8 +452,8 @@ _StackOverflow is pretty much a Blackboard system, with developers as agents, sh
   ![](../../../Assets/Pasted%20image%2020250130124453.png)
 
 <!-- ExampleEnd -->
-<!--ID: 1760705194431-->
 
+<!--ID: 1760705194431-->
 END
 
 ---
@@ -466,8 +468,9 @@ Back:
 - **Blackboard (Tabule):** - **centrální úložiště dat** (sdílená paměť), které obsahuje data spojená s problémem. - Nachází se zde počáteční zadání, mezivýsledky (částečná řešení), hypotézy a nakonec i konečné řešení. - Stav na tabuli se neustále vyvíjí.
 - **Knowledge Sources (Zdroje znalostí / Experti):** - Nezávislé a specializované moduly (kusy kódu, algoritmy, neuronové sítě). - Každý modul umí řešit jen svou specifickou část problému. - **Klíčové pravidlo:** Tito experti **nikdy nekomunikují přímo mezi sebou**. Sledují pouze tabuli. Jakmile se na tabuli objeví data, kterým rozumí, "zvednou ruku", že chtějí přispět.
 - **Control Shell (Řídicí komponenta / Moderátor):** - Aby se experti u tabule neprali, musí tam být moderátor. - Tato komponenta neustále monitoruje změny na tabuli a "zvednuté ruce" expertů. - Rozhoduje, komu dá slovo (zavolá jeho metodu) a jakým způsobem se bude řešení vyvíjet. Řídí tedy celý průběh programu.
-  <!--ID: 1778786460829-->
-  END
+
+<!--ID: 1778786460829-->
+END
 
 ---
 
@@ -487,8 +490,8 @@ Back:
 - Kybernetická bezpečnost (SIEM a detekce hrozeb)
 - Kompilátory a moderní IDE – pracují nad jedním syntaktickým stromem
 - Uměla inteligence a experní systémy
-<!--ID: 1760705194435-->
 
+<!--ID: 1760705194435-->
 END
 
 ---
@@ -503,8 +506,8 @@ Co je hlavním cílem Rule-based (pravidlové) architektury?
 Back:
 
 Poskytnout způsob, jak zakódovat (formalizovat) know-how a proces řešení problémů **lidských expertů**.
-<!--ID: 1778786460833-->
 
+<!--ID: 1778786460833-->
 END
 
 ---
@@ -534,8 +537,8 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130124758.png)
 
 <!-- ExampleEnd -->
-<!--ID: 1778786460837-->
 
+<!--ID: 1778786460837-->
 END
 
 ---
@@ -551,8 +554,9 @@ Ve formátu **IF (podmínka) THEN (akce)**.
 
 - **Podmínka (Condition):** Testuje obsah _Working memory_ (např. přítomnost symbolů) nebo data ze senzorů.
 - **Akce (Action):** Změní stav _Working memory_ nebo spustí externí operaci.
-  <!--ID: 1778786460840-->
-  END
+
+<!--ID: 1778786460840-->
+END
 
 ---
 
@@ -566,8 +570,8 @@ Back:
 1. **Match (Shoda):** Porovnání podmínek všech pravidel s obsahem _Working memory_.
 2. **Conflict-Resolution (Řešení konfliktů):** Výběr _jednoho_ konkrétního pravidla z těch, která splnila podmínku.
 3. **Act (Akce):** Provedení akce vybraného pravidla (často změní paměť) a návrat zpět na fázi 1.
-<!--ID: 1778786460844-->
 
+<!--ID: 1778786460844-->
 END
 
 ---
@@ -580,8 +584,8 @@ Co je to _Conflict set_ (vznikající ve fázi "Match") v Rule-based architektu�
 Back:
 
 Je to seznam všech pravidel (instancí), jejichž levá strana (podmínka) se **aktuálně shoduje se stavem pracovní paměti**. Z tohoto seznamu se následně vybírá jedno pravidlo k provedení. _(Pozn.: Pokud je conflict set prázdný, interpret se zastaví)._
-<!--ID: 1778786460848-->
 
+<!--ID: 1778786460848-->
 END
 
 ---
@@ -596,8 +600,9 @@ Back:
 Když je **sada pravidel výrazně jednodušší než samotný model**, který z nich vznikne (model je tvořen opakováním omezeného množství vzorů).
 
 - _Pozn.:_ Používá se v AI pro ručně psaná/spravovaná pravidla (typicky _nezahrnuje_ pravidla automaticky vygenerovaná strojovým učením).
-  <!--ID: 1778786460851-->
-  END
+
+<!--ID: 1778786460851-->
+END
 
 ---
 
@@ -615,8 +620,8 @@ Back:
 - **Subscriber** - může se u middlewaru zaregistrovat tak, aby přijímal určité typy zpráv
 
 ![](../../../Assets/Pasted%20image%2020250130124958.png)
-<!--ID: 1760705194443-->
 
+<!--ID: 1760705194443-->
 END
 
 ---
@@ -638,8 +643,8 @@ Back:
 
 - Každý publisher a subscriber o sobě sdílí meta-data přes IP multicast (tzn. všichni o sobě vědí), tyto informace si každý publisher/subscriber cachuje
 - Podle meta-dat publisher rovnou posílá informace subscriberovi
-<!--ID: 1760705194447-->
 
+<!--ID: 1760705194447-->
 END
 
 ---
@@ -659,8 +664,9 @@ Back:
  	- Zprávy jsou odběrateli doručeny pouze v případě, že atributy nebo samotný obsah zprávy splňují podmínky (filtry), které si nadefinoval sám odběratel.
  	- Za klasifikaci a třídění zpráv je v tomto modelu zodpovědný odběratel.
 3. **Hybridní přístup (Hybrid)** - Některé systémy podporují kombinaci obou výše zmíněných přístupů. - Odesílatelé běžně publikují zprávy do určitého tématu, zatímco odběratelé si nad jedním nebo více tématy registrují odběr s dodatečným filtrováním na základě obsahu zprávy.
-   <!--ID: 1778786460855-->
-   END
+
+<!--ID: 1778786460855-->
+END
 
 ---
 
@@ -674,8 +680,8 @@ Back:
 - **Build time** - Příklad: V systémech s grafickým uživatelským rozhraním (GUI) mohou být klienti pevně naprogramováni přímo v kódu tak, aby obsluhovali uživatelské příkazy (např. událost kliknutí na tlačítko).
 - **Initialization time** - Příklad: Existují frameworky a softwarové produkty, které k registraci odběratelů využívají konfigurační XML soubory. Tato registrace proběhne jednorázově během úvodního načítání (inicializace) systému.
 - **Runtime** - Příklad: Databázové triggery (spouštěče), e-mailové konference (mailing listy) a RSS kanály. (Uživatel nebo systém může odběr dynamicky vytvářet či rušit kdykoliv během toho, co aplikace běží).
-<!--ID: 1778786460859-->
 
+<!--ID: 1778786460859-->
 END
 
 ---
@@ -691,8 +697,8 @@ Back:
 
 - **Potvrzování přijetí zpráv odběrateli:** (Řeší se, jakým způsobem odběratelé odesílají zpět potvrzení o úspěšném zpracování zprávy, aby ji broker mohl smazat).
 - **Omezená maximální škálovatelnost pub/sub sítě:** - **Nárazová zátěž (Load surges):** Období, kdy požadavky odběratelů (nebo nápor zpráv) zcela zahltí propustnost sítě, po kterých následují období s nízkým objemem zpráv (kdy je přenosová kapacita sítě naopak nevyužita). - **Zpomalování (Slowdowns):** S tím, jak systém využívá stále více aplikací (a to i v případě, že komunikují na zcela oddělených pub/sub kanálech), celkový objem a tok zpráv způsobí, že doručování dat k jednotlivému odběrateli se začne zpomalovat (z důvodu celkového zatížení centrální infrastruktury/brokera).
-<!--ID: 1760705194453-->
 
+<!--ID: 1760705194453-->
 END
 
 ---
