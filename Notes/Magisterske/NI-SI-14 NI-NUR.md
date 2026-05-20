@@ -28,7 +28,6 @@ Návrh, který reprezentuje **kostru** dané stránky/aplikace.
 Typicky jsou **bez stylů, barev, grafik atd.** - hlavní focus je funkcionalita
 
 Typicky se dělají jen tužkou na papír, nebo digitálně.
-
 <!--ID: 1778682874934-->
 END
 
@@ -46,7 +45,6 @@ K čemu jsou **dobré wireframes**?
 Back:
 
 Abychom navrhli **rozložení** elementů na obrazovce
-
 <!--ID: 1778682874937-->
 END
 
@@ -74,7 +72,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020251019113624.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682874940-->
 END
 
@@ -95,7 +92,6 @@ Back:
 Wireframe/mockup je obecně návrh který reprezentuje **kostru** dané stránky/aplikace. Typicky jsou **bez stylů, barev, grafik atd.** - hlavní focus je funkcionalita.
 
 (zdroj: 05 Co je mockup?; Co jsou **wireframes**?)
-
 <!--ID: 1778682874943-->
 END
 
@@ -115,7 +111,6 @@ Back:
 - **Programy** - Figma, Adobe XD, Balsamiq,... - cokoliv, kde člověk může dělat jednoduché návrhy bez nutnosti řešení barev, stylů, fontů atd.
 
 (zdroj: AI + mozek Honzy)
-
 <!--ID: 1778682874946-->
 END
 
@@ -139,7 +134,6 @@ Back:
 Tenhle prototyp má Pavlíček rád kvůli těmto výhodám, obzvláště metodou tužka papír :D
 
 (zdroj: 05 Co jsou **prototypy** a proč jsou důležité?; Jaké jsou výhody lo-fi a hi-fi prototypu?)
-
 <!--ID: 1778682874950-->
 END
 
@@ -157,7 +151,6 @@ Jak je nejlepší postupovat u lo-fi a hi-fi prototypů podle Pavlíčka?
 Back:
 
 - Nejlepší je si lo-fi prototyp udělat při definování use casů (wireframe), navzájem to dolaďovat.
-
 <!--ID: 1778682874953-->
 END
 
@@ -181,7 +174,6 @@ prototyp, který odpovídá vzhledu a základnímu fungování reálné aplikace
 - **je typicky naplněn daty, které by typicky byly v aplikaci** - ne lorem ipsum ale typicky už ty texty tak jak by byly v aplikaci
 
 (zdroj: 09 Jak vypadá Hi-Fi prototyp? + Honzův mozek)
-
 <!--ID: 1778682874956-->
 END
 
@@ -203,7 +195,6 @@ Back:
 **Typicky use casy**, definice tasků a někdy lo-fi prototyp
 
 ![](../../Assets/Pasted%20image%2020251029150840.png)
-
 <!--ID: 1778682874960-->
 END
 
@@ -223,7 +214,6 @@ Back:
 Už tam bývají interakce, animace.. už to bývá typicky naprogramované
 
 ![](../../Assets/Pasted%20image%2020251029150811.png)
-
 <!--ID: 1778682874963-->
 END
 
@@ -241,7 +231,6 @@ Jaká je nevýhoda hi-fi prototypu?
 Back:
 
 Je dost drahý (časově náročný) na vytvoření.
-
 <!--ID: 1778682874966-->
 END
 
@@ -267,7 +256,6 @@ Vzhledově:
 - **Hi-fi** - drahý, ale dají se tam dělat podrobné uživatelské testy
 
 (zdroj: 05 Jak se liší lo-fi a hi-fi prototypy?; Jaké jsou výhody lo-fi a hi-fi prototypu?)
-
 <!--ID: 1778682874969-->
 END
 
@@ -287,7 +275,6 @@ Back:
 1. **Uděat prototyp** (nedokonalý produkt)
 2. **Otestovat ho** - tohle je v inženýrství naprosto kritické
 3. **Pak zanalyzovat**, co vylepšit
-
 <!--ID: 1778682874972-->
 END
 
@@ -305,7 +292,6 @@ Na jakém prototypu se dělá usability testing?
 Back:
 
 Na hi-fi prototypu
-
 <!--ID: 1778682874975-->
 END
 
@@ -325,7 +311,6 @@ Back:
 **Míra použitelnosti**. Např. dobře použitelná, špatně použitelná atd.
 
 ![](../../Assets/Pasted%20image%2020251029164241.png)
-
 <!--ID: 1778682874982-->
 END
 
@@ -349,7 +334,6 @@ Zabývá se navrhováním věcí tak, aby byly pro uživatele dobře použiteln�
 ![](../../Assets/Pasted%20image%2020251019105937.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682874987-->
 END
 
@@ -378,7 +362,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020251019110127.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682874990-->
 END
 
@@ -396,7 +379,6 @@ Co je **usability**?
 Back:
 
 Jednoduchost naučení se daného systému.
-
 <!--ID: 1778682874993-->
 END
 
@@ -423,7 +405,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020251019110527.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682874996-->
 END
 
@@ -442,7 +423,6 @@ Back:
 Rozhraní, které automaticky přizpůsobuje rozložení nebo vzhled prvků dle velikosti zařízení - díky tomu lze stejnou stránku zobrazovat na mobilu, tabletu, desktopu, televizi apod.
 
 (zdroj: 07 O čem je teď responsibilita?; Jak se základně dělá responsivní design?)
-
 <!--ID: 1778682874999-->
 END
 
@@ -462,7 +442,6 @@ O čem je teď **responzivita**?
 Back:
 
 Designování pro **různě velká zařízení** - od **hodinek** až po **obrovské televize**.
-
 <!--ID: 1778682875002-->
 END
 
@@ -481,7 +460,6 @@ Back:
 
 1. Rozdělíme design na desktopu do "bloků"
 2. Ty pak házíme pod sebe na mobilu v dlouhou scrollovací nudli
-
 <!--ID: 1778682875005-->
 END
 
@@ -501,7 +479,6 @@ Back:
 Nahoře je důležitější než dole, vlevo je důležitější než vpravo.
 
 Podle tohohle se to z desktopu nahází na mobil.
-
 <!--ID: 1778682875008-->
 END
 
@@ -533,7 +510,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020251026160827.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875011-->
 END
 
@@ -566,7 +542,6 @@ Různé způsoby přeorganizování menu na jiných zařízeních:
 ![](../../Assets/Pasted%20image%2020251026163007.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875014-->
 END
 
@@ -584,7 +559,6 @@ Kdy bych měl v **menu používat ikony**?
 Back:
 
 Když těch možností je třeba 4-5 max. Když jich je víc, tak to je na nic, protože ten uživatel si už nebude pamatovat, co je co.
-
 <!--ID: 1778682875017-->
 END
 
@@ -611,7 +585,6 @@ Teoreticky jde taky:
 ale nejlepší je typicky scrollování
 
 (zdroj: AI + Honzy mozek)
-
 <!--ID: 1778682875020-->
 END
 
@@ -643,7 +616,6 @@ Z přednášky:
 ![](../../Assets/Pasted%20image%2020251214150415.png)
 
 (zdroj: AI + Honzův mozek)
-
 <!--ID: 1778682875023-->
 END
 
@@ -663,7 +635,6 @@ Back:
 Protože to uživateli "vygumuje mozek", když přechází mezi sekcemi.
 
 ![](../../Assets/Pasted%20image%2020251026164002.png)
-
 <!--ID: 1778682875026-->
 END
 
@@ -681,7 +652,6 @@ Měl by člověk v UI používat dynamické měnění se stránky (např. carous
 Back:
 
 Typicky ne, protože to zbytečně mate mozek uživatele a není to příjemný, co se týče UX.
-
 <!--ID: 1778682875029-->
 END
 
@@ -707,7 +677,6 @@ Např. vlevo ikonka, vpravo ten content (nebo plný název)
 ![](../../Assets/Pasted%20image%2020251028115932.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875032-->
 END
 
@@ -734,7 +703,6 @@ Např. Google umožňí vyhledat a detailnější settings až potom
 ![](../../Assets/Pasted%20image%2020251028120201.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875035-->
 END
 
@@ -760,7 +728,6 @@ Prokliká hodně stránek, ale mnohem míň musí myslet, je to tak lepší.
 ![](../../Assets/Pasted%20image%2020251028120248.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875038-->
 END
 
@@ -784,7 +751,6 @@ Máme nějaké menu, co nám umožňuje se pohybovat na stránce/v aplikaci
 ![](../../Assets/Pasted%20image%2020251028120333.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875041-->
 END
 
@@ -809,7 +775,6 @@ Každou sekci v UI uděláme jinou barvou (např. background color), aby se vizu
 ![](../../Assets/Pasted%20image%2020251028120423.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875044-->
 END
 
@@ -834,7 +799,6 @@ Máme taby (zeshora nebo na straně) a klikáním se přepínají panely.
 ![](../../Assets/Pasted%20image%2020251028120513.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875047-->
 END
 
@@ -859,7 +823,6 @@ Rozklikávací panely
 ![](../../Assets/Pasted%20image%2020251028120551.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875050-->
 END
 
@@ -886,7 +849,6 @@ Tzn. počátek práce by měl být vlevo nahoře, konec práce vpravo dole
 ![](../../Assets/Pasted%20image%2020251028120637.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875053-->
 END
 
@@ -912,7 +874,6 @@ To se používá u textu/obrázků např.
 ![](../../Assets/Pasted%20image%2020251028120713.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875056-->
 END
 
@@ -935,7 +896,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020251028122934.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875059-->
 END
 
@@ -958,7 +918,6 @@ Back:
 - **Input Prompt**
 - **Dropdown Chooser**
 - **Illustrated Choices**
-
 <!--ID: 1778682875062-->
 END
 
@@ -983,7 +942,6 @@ Textfieldy by měly přijímat všechny možné formáty od uživatele (a pak si
 ![](../../Assets/Pasted%20image%2020251028120856.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875065-->
 END
 
@@ -1008,7 +966,6 @@ Input fields jsou např. součástí věty a uživatel to vyplňuje
 ![](../../Assets/Pasted%20image%2020251028120925.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875068-->
 END
 
@@ -1032,7 +989,6 @@ Přidáváme nápovědy k textfieldům
 ![](../../Assets/Pasted%20image%2020251028121001.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875071-->
 END
 
@@ -1054,7 +1010,6 @@ Back:
 1. **Nejlepší je dávat dolu pod textfield**.
 2. Potom, kdyby bylo fakt málo místa (např. na mobilu), tak se to dá dát jako placeholder, ale vždy je lepší to dát pod.
 3. Nahoru je to antipattern
-
 <!--ID: 1778682875074-->
 END
 
@@ -1078,7 +1033,6 @@ Je to jako placeholder v textfieldech. Není to default value, ale podrobnějš�
 ![](../../Assets/Pasted%20image%2020251028121036.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875077-->
 END
 
@@ -1100,7 +1054,6 @@ Nejlepší je třetí možnost - lépe to navádí oči, je nejjasněji vidět, 
 Nejhorší je podle mě prostřední, protože jsme zvyklí, že je text zarovnán vlevo (čteme zleva).
 
 (zdroj: AI; 08 Kam by se měla dávat nápověda k textfieldům?)
-
 <!--ID: 1778682875080-->
 END
 
@@ -1119,7 +1072,6 @@ Back:
 Pokud je většina polí povinná, je lepší označit nepovinná pole. Pokud je většina polí nepovinná, je lepší označit povinná pole. Obecně by mělo být označeno to, co je menšinou, aby uživatelé věděli, která pole mohou přeskočit nebo která musí vyplnit.
 
 (zdroj: AI + fitwiki)
-
 <!--ID: 1778682875083-->
 END
 
@@ -1145,7 +1097,6 @@ Back:
 - `Label* (Required)` je nejhorší, protože je redundantní - hvězdička a text říkají totéž
 
 (zdroj: AI + Honzův mozek)
-
 <!--ID: 1778682875086-->
 END
 
@@ -1167,7 +1118,6 @@ Back:
 **Dropdown** - lepší pro více možností, šetří místo na obrazovce, ale uživatel to musí rozkliknout
 
 (zdroj: AI)
-
 <!--ID: 1778682875089-->
 END
 
@@ -1192,7 +1142,6 @@ Tabulky, kde uživatel může sortovat podle sloupce.
 ![](../../Assets/Pasted%20image%2020251028121227.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875091-->
 END
 
@@ -1220,7 +1169,6 @@ Ten strom musí být vždy v nejlevějším sloupci (jinak to je naprosto nepoch
 ![](../../Assets/Pasted%20image%2020251028121251.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875094-->
 END
 
@@ -1244,7 +1192,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020251028121325.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875097-->
 END
 
@@ -1271,7 +1218,6 @@ Stromová strukutra (např. souborů) je rozdělena do seznamů vedle sebe
 ![](../../Assets/Pasted%20image%2020251028121412.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875100-->
 END
 
@@ -1296,7 +1242,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020251028121453.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875103-->
 END
 
@@ -1323,7 +1268,6 @@ Je to dost dobrý, ale ten text nesmí být velký!
 ![](../../Assets/Pasted%20image%2020251028121526.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875106-->
 END
 
@@ -1348,7 +1292,6 @@ Nekonečný list, co se po scrollu načte nebo se načte při "show more"
 ![](../../Assets/Pasted%20image%2020251028122038.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875109-->
 END
 
@@ -1371,7 +1314,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020251028122113.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875112-->
 END
 
@@ -1395,7 +1337,6 @@ Když aplikujeme fitry, tak se rovnou vypíše nový výsledek - nemusím klikat
 ![](../../Assets/Pasted%20image%2020251028122231.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875115-->
 END
 
@@ -1417,7 +1358,6 @@ Back:
 - Progress Indicator
 - Constrained Resize
 - Background images
-
 <!--ID: 1778682875118-->
 END
 
@@ -1442,7 +1382,6 @@ Máme historii kroků (buď přímo zobrazenou, nebo se dá dělat hodněkrát u
 ![](../../Assets/Pasted%20image%2020251028122629.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875121-->
 END
 
@@ -1469,7 +1408,6 @@ Např. `Filter > Colors`, tak vím, že ty colors se už týkají filtru.
 ![](../../Assets/Pasted%20image%2020251028122658.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875124-->
 END
 
@@ -1494,7 +1432,6 @@ Ukazuje progress, kolik práce bylo provedeno
 ![](../../Assets/Pasted%20image%2020251028122740.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875127-->
 END
 
@@ -1514,7 +1451,6 @@ Back:
 1. Když trvá méně než půl vteřiny, nemusím dávat nic
 2. Když trvá méně než 5 vteřin, dát třeba loading
 3. Když trvá více než 5 vteřin dát třeba progress bar
-
 <!--ID: 1778682875130-->
 END
 
@@ -1533,7 +1469,6 @@ Back:
 
 - Dát tam "nekonečný progress bar", který jen jezdí ze strany na stranu.
 - Pokud to trvá delší dobu, vyhodit třeba upozornění, které se uživatele zeptá, jestli chce ještě čekat
-
 <!--ID: 1778682875133-->
 END
 
@@ -1558,7 +1493,6 @@ Proto je důležité zobrazit loading indikátor nebo progress bar, pokud načí
 <!-- DetailInfoEnd -->
 
 (zdroj: slidy)
-
 <!--ID: 1778682875136-->
 END
 
@@ -1582,7 +1516,6 @@ Když třeba resizujeme obrázek, tak můžeme držet Shift a ono to zachová te
 ![](../../Assets/Pasted%20image%2020251028122903.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778682875139-->
 END
 
@@ -1601,7 +1534,6 @@ Back:
 
 - **Jaká chyba** (identifikátor nebo název)
 - **Říct, co má uživatel dělat** - jestli má akci opakovat nebo co má zkusit jiného
-
 <!--ID: 1778682875142-->
 END
 

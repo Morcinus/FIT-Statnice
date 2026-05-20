@@ -20,7 +20,6 @@ Back:
 
 - Zaměřují se na algoritmy, rozdělení odpovědnosti mezi objekty a na to, jak spolu objekty komunikují.
 - Řeší, jak si objekty předávají zprávy, jak spolupracují na složitějších úlohách a jak je řízen tok programu (control flow).
-
 <!--ID: 1778786460746-->
 END
 
@@ -44,7 +43,6 @@ Back:
 - **Strategy**
 - **Template Method**
 - **Visitor**
-
 <!--ID: 1760705194277-->
 END
 
@@ -110,7 +108,6 @@ Other GUI elements, such as menus, shortcuts or entire dialogs, can be implement
 As a result, commands become a convenient middle layer that reduces coupling between the GUI and business logic layers. And that’s only a fraction of the benefits that the Command pattern can offer!
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1760705194289-->
 END
 
@@ -137,7 +134,6 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130111234.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1760705194292-->
 END
 
@@ -152,7 +148,6 @@ Back:
 
 - Pokud chceme parametrizovat objekt operacema
 - Pokud potřebujeme tvořit frontu commandů, plánovat dobu jejich spuštění nebo je spouštět vzdáleně.
-
 <!--ID: 1778786460749-->
 END
 
@@ -176,7 +171,6 @@ Back:
 ✅ You can assemble a set of simple commands into a complex one.
 
 ❌ The code may become more complicated since you’re introducing a whole new layer between senders and receivers.
-
 <!--ID: 1760705194295-->
 END
 
@@ -236,7 +230,6 @@ For instance, when a user clicks a button, the event propagates through the chai
 It’s crucial that all handler classes implement the same interface. Each concrete handler should only care about the following one having the `execute` method. This way you can compose chains at runtime, using various handlers without coupling your code to their concrete classes.
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1760705194299-->
 END
 
@@ -263,7 +256,6 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130111435.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1760705194302-->
 END
 
@@ -279,7 +271,6 @@ Back:
 - Pokud očekáváme, že náš program bude řešit různé typy požadavků různými cestami, ale přesně typy požadavků a jejich pořadí je nám předem neznámé.
 - Pokud potřebujeme spouštět handlery v přesně daném pořadí.
 - Pokud potřebujeme pořadí handlerů měnit za běhu
-
 <!--ID: 1778786460752-->
 END
 
@@ -299,7 +290,6 @@ Back:
 ✅ *Open/Closed Principle*. You can introduce new handlers into the app without breaking the existing client code.
 
 ❌ Some requests may end up unhandled.
-
 <!--ID: 1760705194305-->
 END
 
@@ -332,7 +322,6 @@ The Interpreter pattern discusses: defining a domain language (i.e. problem char
 An abstract base class specifies the method `interpret()`. Each concrete subclass implements `interpret()` by accepting (as an argument) the current state of the language stream, and adding its contribution to the problem solving process.
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1760705194308-->
 END
 
@@ -348,7 +337,6 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130111600.png)
 
 Interpreter suggests modeling the domain with a recursive grammar. Each rule in the grammar is either a ‘composite’ (a rule that references other rules) or a terminal (a leaf node in a tree structure). Interpreter relies on the recursive traversal of the Composite pattern to interpret the ‘sentences’ it is asked to process.
-
 <!--ID: 1760705194311-->
 END
 
@@ -364,7 +352,6 @@ Back:
 ✅ The interpreter design pattern is great for relatively simple grammar interpretation, which doesn’t need to evolve and extend much.
 
 ❌ When the grammar is getting more complex, it becomes harder to maintain.
-
 <!--ID: 1760705194314-->
 END
 
@@ -414,7 +401,6 @@ Usually, iterators provide one primary method for fetching elements of the colle
 All iterators must implement the same interface. This makes the client code compatible with any collection type or any traversal algorithm as long as there’s a proper iterator. If you need a special way to traverse a collection, you just create a new iterator class, without having to change the collection or the client.
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1760705194317-->
 END
 
@@ -441,7 +427,6 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130111745.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1760705194320-->
 END
 
@@ -456,7 +441,6 @@ Back:
 
 - Pokud má kolekce komplexní datovou strukturu, od které chceme klienty odstínit
 - Pokud chceme omezit duplikaci kódu pro průchod kolekcí v aplikaci
-
 <!--ID: 1778786460755-->
 END
 
@@ -480,7 +464,6 @@ Back:
 ❌ Applying the pattern can be an overkill if your app only works with simple collections.
 
 ❌ Using an iterator may be less efficient than going through elements of some specialized collections directly.
-
 <!--ID: 1760705194323-->
 END
 
@@ -526,7 +509,6 @@ You can go further and make the dependency even looser by extracting the common 
 This way, the Mediator pattern lets you encapsulate a complex web of relations between various objects inside a single mediator object. The fewer dependencies a class has, the easier it becomes to modify, extend or reuse that class.
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1760705194326-->
 END
 
@@ -552,7 +534,6 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130111934.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1760705194329-->
 END
 
@@ -567,7 +548,6 @@ Back:
 
 - Pokud je komplikované měnit některé třídy, protože jsou silně spojeny (coupled) k jiným třídám.
 - Pokud chceme komponentu využít i v jiném programu, ale nemůžeme kvůli silným závislostem na jiné části systému
-
 <!--ID: 1778786460758-->
 END
 
@@ -589,7 +569,6 @@ Back:
 ✅ You can reuse individual components more easily.
 
 ❌ Over time a mediator can evolve into a [God Object](https://courses.fit.cvut.cz/antipatterns/god-object).
-
 <!--ID: 1760705194333-->
 END
 
@@ -645,7 +624,6 @@ In our text editor example, we can create a separate history class to act as the
 When a user triggers the undo, the history grabs the most recent memento from the stack and passes it back to the editor, requesting a roll-back. Since the editor has full access to the memento, it changes its own state with the values taken from the memento.
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1760705194336-->
 END
 
@@ -661,7 +639,6 @@ Back:
 - **Pomocí vnitřní třídy** - Memento je jako vnitřní třída uvnitř Originatora
 - **Pomocí interfacu** - Memento je interface, který využívá Caretaker. Originator pak pracuje s memento třídou co implementuje ten interface.
 - **Pomocí striktní enkapsulace** - Originator i memento mají interfacy a třídy co je implementují. Originator má v sobě `save()` a `setState()`, Memento má v sobě `restore()` a `originator`. Memento pak provádí ten restore v originatoru.
-
 <!--ID: 1776243585027-->
 END
 
@@ -688,7 +665,6 @@ The classic implementation of the pattern relies on support for nested classes, 
 ![](../../../Assets/Pasted%20image%2020250130112208.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1760705194339-->
 END
 
@@ -710,7 +686,6 @@ Jediná změna je že Memento nebude vnitřní třída ale rozdělí se na inter
 
 1. In the absence of nested classes, you can restrict access to the memento’s fields by establishing a convention that caretakers can work with a memento only through an explicitly declared intermediary interface, which would only declare methods related to the memento’s metadata.
 2. On the other hand, originators can work with a memento object directly, accessing fields and methods declared in the memento class. The downside of this approach is that you need to declare all members of the memento public.
-
 <!--ID: 1760705194342-->
 END
 
@@ -730,7 +705,6 @@ There’s another implementation which is useful when you don’t want to leave 
 1. This implementation allows having multiple types of originators and mementos. Each originator works with a corresponding memento class. Neither originators nor mementos expose their state to anyone.
 2. Caretakers are now explicitly restricted from changing the state stored in mementos. Moreover, the caretaker class becomes independent from the originator because the restoration method is now defined in the memento class.
 3. Each memento becomes linked to the originator that produced it. The originator passes itself to the memento’s constructor, along with the values of its state. Thanks to the close relationship between these classes, a memento can restore the state of its originator, given that the latter has defined the appropriate setters.
-
 <!--ID: 1760705194344-->
 END
 
@@ -745,7 +719,6 @@ Back:
 
 - Pokud chceme tvořit snapshoty objektu, ke kterým se můžeme v budoucnu chtít vrátit
 - Pokud přímý přístup k vlastnostem objektu porušuje jeho zapouzdření
-
 <!--ID: 1778786460760-->
 END
 
@@ -767,7 +740,6 @@ Back:
 ❌ Caretakers should track the originator’s lifecycle to be able to destroy obsolete mementos.
 
 ❌ Most dynamic programming languages, such as PHP, Python and JavaScript, can’t guarantee that the state within the memento stays untouched.
-
 <!--ID: 1760705194347-->
 END
 
@@ -817,7 +789,6 @@ That’s why it’s crucial that all subscribers implement the same interface an
 If your app has several different types of publishers and you want to make your subscribers compatible with all of them, you can go even further and make all publishers follow the same interface. This interface would only need to describe a few subscription methods. The interface would allow subscribers to observe publishers’ states without coupling to their concrete classes.
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1760705194350-->
 END
 
@@ -844,7 +815,6 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130112440.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1760705194353-->
 END
 
@@ -858,7 +828,6 @@ Kdy využít **Observer** pattern?
 Back:
 
 Pokud změny jednoho objektu mají ovlivňovat i jiné objekty, a to i pouze na omezený část nebo ve specifických případech.
-
 <!--ID: 1778786460763-->
 END
 
@@ -876,7 +845,6 @@ Back:
 ✅ You can establish relations between objects at runtime.
 
 ❌ Subscribers are notified in random order.
-
 <!--ID: 1760705194357-->
 END
 
@@ -949,7 +917,6 @@ To transition the context into another state, replace the active state object wi
 This structure may look similar to the [Strategy](https://courses.fit.cvut.cz/NI-ADP/materials/design-patterns/behavioral-patterns/strategy.html) pattern, but there’s one key difference. In the State pattern, the particular states may be aware of each other and initiate transitions from one state to another, whereas strategies almost never know about each other.
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1760705194359-->
 END
 
@@ -975,7 +942,6 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130112651.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1760705194362-->
 END
 
@@ -991,7 +957,6 @@ Back:
 - Pokud se má objekt chovat odlišně v závilosti na jeho aktuálním stavu
 - Pokud máme třídu zaplavenou rozhodováním na základě vnitřního stavu
 - Pokud je mnoho duplicitního kódu napříč podobnými stavy
-
 <!--ID: 1778786460766-->
 END
 
@@ -1011,7 +976,6 @@ Back:
 ✅ Simplify the code of the context by eliminating bulky state machine conditionals.
 
 ❌ Applying the pattern can be overkill if a state machine has only a few states or rarely changes.
-
 <!--ID: 1760705194365-->
 END
 
@@ -1065,7 +1029,6 @@ In our navigation app, each routing algorithm can be extracted to its own class 
 Even though given the same arguments, each routing class might build a different route, the main navigator class doesn’t really care which algorithm is selected since its primary job is to render a set of checkpoints on the map. The class has a method for switching the active routing strategy, so its clients, such as the buttons in the user interface, can replace the currently selected routing behavior with another one.
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1760705194368-->
 END
 
@@ -1085,7 +1048,6 @@ Back:
 3. **Concrete Strategies** implement different variations of an algorithm the context uses.
 4. The context calls the execution method on the linked strategy object each time it needs to run the algorithm. The context doesn’t know what type of strategy it works with or how the algorithm is executed.
 5. The **Client** creates a specific strategy object and passes it to the context. The context exposes a setter which lets clients replace the strategy associated with the context at runtime.
-
 <!--ID: 1760705194371-->
 END
 
@@ -1101,7 +1063,6 @@ Back:
 - Pokud chceme podporovat více variant algoritmu v rámci jednoho objektu a chceme mezi nimi přepínat
 - Pokud máme mnoho tříd, které se liší pouze konkrétní implementací konkrétní části
 - Pro izolaci implementačních detailů byznys logiky třídy, které nemusí být v kontextu třídy tak důležité
-
 <!--ID: 1778786460769-->
 END
 
@@ -1127,7 +1088,6 @@ Back:
 ❌ Clients must be aware of the differences between strategies to be able to select a proper one.
 
 ❌ A lot of modern programming languages have functional type support that lets you implement different versions of an algorithm inside a set of anonymous functions. Then you could use these functions exactly as you’d have used the strategy objects, but without bloating your code with extra classes and interfaces.
-
 <!--ID: 1760705194374-->
 END
 
@@ -1180,7 +1140,6 @@ As you can see, we’ve got two types of steps:
 There’s another type of step, called *hooks*. A hook is an optional step with an empty body. A template method would work even if a hook isn’t overridden. Usually, hooks are placed before and after crucial steps of algorithms, providing subclasses with additional extension points for an algorithm.
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1760705194377-->
 END
 
@@ -1203,7 +1162,6 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130113014.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1760705194380-->
 END
 
@@ -1218,7 +1176,6 @@ Back:
 
 - Pokud chceme umožnit klientům rozšířit only konkrétní krok v rámci algoritmu
 - Pokud máme několik tříd se skoro totožným algoritmem, pouze s malými změnami
-
 <!--ID: 1778786460772-->
 END
 
@@ -1240,7 +1197,6 @@ Back:
 ❌ You might violate the *Liskov Substitution Principle* by suppressing a default step implementation via a subclass.
 
 ❌ Template methods tend to be harder to maintain the more steps they have.
-
 <!--ID: 1760705194383-->
 END
 
@@ -1328,7 +1284,6 @@ I confess. We had to change the node classes after all. But at least the change 
 Now, if we extract a common interface for all visitors, all existing nodes can work with any visitor you introduce into the app. If you find yourself introducing a new behavior related to nodes, all you have to do is implement a new visitor class.
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1760705194386-->
 END
 
@@ -1354,7 +1309,6 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130113259.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1760705194388-->
 END
 
@@ -1370,7 +1324,6 @@ Back:
 - Pokud chceme provádět operace na všech elementech komplexní struktury objektů
 - Pokud chceme vyčistit pomocnou business logiku z objektů
 - Pokud konkrétní chování dává smysl pouze pro nějaké třídy
-
 <!--ID: 1778786460776-->
 END
 
@@ -1392,7 +1345,6 @@ Back:
 ❌ You need to update all visitors each time a class gets added to or removed from the element hierarchy.
 
 ❌ Visitors might lack the necessary access to the private fields and methods of the elements that they’re supposed to work with.
-
 <!--ID: 1760705194391-->
 END
 

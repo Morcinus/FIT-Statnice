@@ -29,7 +29,6 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020250419140332.png)
 ![](../../Assets/Pasted%20image%2020250419140338.png)
-
 <!--ID: 1778521859473-->
 END
 
@@ -47,7 +46,6 @@ Věta: **náhodný (_spojitý_) proces je markovský právě tehdy když**
 Back:
 
 ![](../../Assets/Pasted%20image%2020250419140359.png)
-
 <!--ID: 1778521859476-->
 END
 
@@ -65,7 +63,6 @@ Věta: **Chapman-Kolmogorov** (pro spojité markovské řetězce)
 Back:
 
 ![](../../Assets/Pasted%20image%2020250419140410.png)
-
 <!--ID: 1778521859478-->
 END
 
@@ -91,7 +88,6 @@ Tzn. je jakoby jedno kde v tom řetězci začnu
 ![](../../Assets/Pasted%20image%2020250419140438.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1778521859481-->
 END
 
@@ -132,7 +128,6 @@ Matice intenzit mi říká několik věcí:
 ![](../../Assets/Pasted%20image%2020250419140637.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1778521859484-->
 END
 
@@ -152,7 +147,6 @@ Back:
 $$\textbf{Q}=\textbf{P}'(0)$$
 
 Tzn. prostě zderivuju každý prvek té matice $\textbf{P}$
-
 <!--ID: 1778521859486-->
 END
 
@@ -178,7 +172,6 @@ Back:
 2. $\frac{\textbf{Q}_{ij}}{-\textbf{Q}_{ii}}$
 
 ![](../../Assets/Pasted%20image%2020250419140652.png)
-
 <!--ID: 1778521859489-->
 END
 
@@ -196,7 +189,6 @@ Věta: **Kolmogorova rovnice**
 Back:
 
 ![](../../Assets/Pasted%20image%2020250419141051.png)
-
 <!--ID: 1778521859492-->
 END
 
@@ -220,7 +212,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250422092334.png)
 
 <!-- ExerciseEnd -->
-
 <!--ID: 1778521859495-->
 END
 
@@ -246,7 +237,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250422092420.png)
 
 <!-- ExerciseEnd -->
-
 <!--ID: 1778521859497-->
 END
 
@@ -264,7 +254,6 @@ Definice: **stacionární rozdělení** (spojitý čas)
 Back:
 
 ![](../../Assets/Pasted%20image%2020250422092437.png)
-
 <!--ID: 1778521859500-->
 END
 
@@ -282,7 +271,6 @@ Věta: Vektor $\pi$ **je stacionárním rozdělením právě tehdy když** (spoj
 Back:
 
 ![](../../Assets/Pasted%20image%2020250422092511.png)
-
 <!--ID: 1778521859503-->
 END
 
@@ -300,7 +288,6 @@ Definice: **Markovský řetězec je nerozložitelný** (spojitý čas)
 Back:
 
 ![](../../Assets/Pasted%20image%2020250422092530.png)
-
 <!--ID: 1778521859506-->
 END
 
@@ -318,7 +305,6 @@ Důsledek: Co stačí aby platilo, aby existovalo stacionární rozdělení pro 
 Back:
 
 ![](../../Assets/Pasted%20image%2020250422092555.png)
-
 <!--ID: 1778521859508-->
 END
 
@@ -349,7 +335,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250422092719.png)
 
 <!-- ExerciseEnd -->
-
 <!--ID: 1778521859511-->
 END
 
@@ -378,7 +363,6 @@ Back:
 
 **Posrtupný dosazování:**
 ![](../../Assets/Pasted%20image%2020250522185120.png)
-
 <!--ID: 1778521859514-->
 END
 
@@ -401,7 +385,6 @@ Back:
 
 To samé platí obecněji:
 ![](../../Assets/Pasted%20image%2020250422092831.png)
-
 <!--ID: 1778521859516-->
 END
 
@@ -419,7 +402,6 @@ Pozorování: co platí pro $F_\text{max{X,Y}}(t)$
 Back:
 
 ![](../../Assets/Pasted%20image%2020250422092921.png)
-
 <!--ID: 1778521859519-->
 END
 
@@ -439,7 +421,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250422093005.png)
 
 $P(T<S)$ znamená, že $T$ vyhraje "závod"
-
 <!--ID: 1778521859522-->
 END
 
@@ -459,7 +440,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250422093042.png)
 
 Neboli že $T_i$ vyhraje závod ze všech závodníků
-
 <!--ID: 1778521859524-->
 END
 
@@ -484,7 +464,6 @@ Lemma pak říká, že pro $u \geq 0$ jsou nezávislé následující dvě věci
 
 - Jak dlouhý čas měl vítěz (že byl delší než $u$)
 - Kdo vyhrál závod (že $T < S$ - tedy že závodník $T$ byl rychlejší)
-
 <!--ID: 1778521859527-->
 END
 
@@ -512,7 +491,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250422093239.png)
 
 <!-- ExerciseEnd -->
-
 <!--ID: 1778521859529-->
 END
 
@@ -563,7 +541,6 @@ Pozn. Co po nás podle Hrabáka budou chtít:
 ![](../../Assets/Pasted%20image%2020250422093905.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1778521859532-->
 END
 
@@ -593,7 +570,6 @@ V každém čase hodíme mincí, pokud padne hlava, přičteme 1 (tzn. přesunem
 ![](../../Assets/Pasted%20image%2020250419135900.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778521859535-->
 END
 
@@ -619,7 +595,6 @@ Počítá mi kolik událostí nastalo do daného času
 ![](../../Assets/Pasted%20image%2020250419135922.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778521859537-->
 END
 
@@ -661,7 +636,6 @@ Poissonův proces je podobný čítacímu procesu, jen v tom stavu vždy zůstá
 Např. počítáme příchody zákazníků do obchodu, takže vždy přijde jeden, pak nějakou dobu nic, pak přijde druhý atd. a my sčítáme třeba příchody za den
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1778521859540-->
 END
 
@@ -681,7 +655,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250419140015.png)
 
 Definujeme to vlastně podle "přírůstků" těch počtů, které jsou mezi dvěma časy podle Poissonova rozdělení
-
 <!--ID: 1778521859543-->
 END
 
@@ -710,7 +683,6 @@ Tzn. poisson je jakoby spojitá varianta binomického.
 ![](../../Assets/Pasted%20image%2020250419140032.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778521859545-->
 END
 
@@ -748,7 +720,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250419140054.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778521859548-->
 END
 
@@ -768,7 +739,6 @@ Jaká je distribuční funkce exponenciálního rozdělení?
 Back:
 
 ![](../../Assets/Pasted%20image%2020250525180005.png)
-
 <!--ID: 1778521859551-->
 END
 
@@ -788,7 +758,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250419140119.png)
 
 Tzn. čas čekání $T$ nezávisí na tom, jak dlouho jsme už čekali (tedy na $t$)
-
 <!--ID: 1778521859553-->
 END
 
@@ -808,7 +777,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250419140137.png)
 
 Tzn. čas čekání $T$ nezávisí na jakékoliv nezáporné nezávislé veličině $A$
-
 <!--ID: 1778521859556-->
 END
 
@@ -836,7 +804,6 @@ Neboli součet exponenciálních rozdělení má gamma rozdělení.
 ![](../../Assets/Pasted%20image%2020250419140156.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778521859559-->
 END
 
@@ -860,7 +827,6 @@ Pokud jsou splněny podmínky jedné definice, tak pro ní platí vlastnosti dru
 ![](../../Assets/Pasted%20image%2020250419140214.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778521859561-->
 END
 
@@ -878,7 +844,6 @@ Lemma: **Jaké rozdělení má náhodná veličina** $N_s$ (z poissonova procesu
 Back:
 
 ![](../../Assets/Pasted%20image%2020250419140250.png)
-
 <!--ID: 1778521859564-->
 END
 
@@ -896,7 +861,6 @@ Lemma: **Bezpaměťovost Poissonova procesu**
 Back:
 
 ![](../../Assets/Pasted%20image%2020250419140308.png)
-
 <!--ID: 1778521859567-->
 END
 
@@ -925,7 +889,6 @@ Jinými slovy:
 - my tímto vytvoříme markovský řetězec se spojitým časem, kde doba dalšího skoku je vždy určena Poissonovým rozdělením 
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1778521859569-->
 END
 
@@ -943,7 +906,6 @@ Pozorování: Jaký tvar má **matice přechodu homogenního markovského řetě
 Back:
 
 ![](../../Assets/Pasted%20image%2020250419140846.png)
-
 <!--ID: 1778521859572-->
 END
 
@@ -963,7 +925,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250419140921.png)
 
 $\textbf{D}$ je matice přechodu toho původního markovského řetězce $Y_n$ s diskrétním časem.
-
 <!--ID: 1778521859574-->
 END
 
@@ -979,7 +940,6 @@ Back:
 Že jsou **nezávislé** a **mají stejné rozdělení**.
 
 Např. $X_1, X_2, \dots X_n$ mohou být i.i.d. a mít rozdělení $\text{Exp}(\lambda)$
-
 <!--ID: 1778762614288-->
 END
 

@@ -30,7 +30,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241020171220.png)
 
 <!-- ImageEnd -->
-
 <!--ID: 1778786397228-->
 END
 
@@ -57,7 +56,6 @@ Back:
 Ty dvě závorky s $x$ a $y$ mi vždy říkají **obsah toho obdélníku** a násobím to tím $M_{i,j}$, což je pod tím grafem to supremum, čímž získávám **objem** toho kvádru. Pak ty všechny kvádry v grafu sečtu.
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1778786397230-->
 END
 
@@ -77,7 +75,6 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020241020171530.png)
 ![](../../Assets/Pasted%20image%2020241020171456.png)
-
 <!--ID: 1778786397233-->
 END
 
@@ -96,7 +93,6 @@ Definice: **Horní Darbouxův integrál (funkce $f$ na $D$)**
 Back:
 
 ![](../../Assets/Pasted%20image%2020241020171620.png)
-
 <!--ID: 1778786397236-->
 END
 
@@ -115,7 +111,6 @@ Definice: **Dolní Darbouxův integrál (funkce $f$ na $D$)**
 Back:
 
 ![](../../Assets/Pasted%20image%2020241020171626.png)
-
 <!--ID: 1778786397239-->
 END
 
@@ -140,7 +135,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241020172015.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778786397242-->
 END
 
@@ -159,7 +153,6 @@ Definice: **normální rozdělení $\sigma_n$** + kdy se $\lim_{n \rightarrow \i
 Back:
 
 ![](../../Assets/Pasted%20image%2020241020172031.png)
-
 <!--ID: 1778786397245-->
 END
 
@@ -193,7 +186,6 @@ Související Marast:
 ![](../../Assets/Pasted%20image%2020241028155944.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1778786397248-->
 END
 
@@ -220,7 +212,6 @@ Máme nějakou oblast (smajlík). Když jsme schopný ji uzavřít do obdélník
 ![](../../Assets/Pasted%20image%2020241020173002.png)
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1778786397254-->
 END
 
@@ -249,7 +240,6 @@ Neformálně: Jakoby snižuju furt velikosti obdélníčků. Když to najdu pro 
 ![](../../Assets/Pasted%20image%2020241020173254.png)
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1778786397258-->
 END
 
@@ -274,7 +264,6 @@ Množiny míry nula mají tu vlastnost, že jsou pro hodnotu integrálu "**zaned
 Protože ty $\varepsilon$ jsem schopný zvolit tak malý, že to je vlastně zanedbatelný.
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1778786397261-->
 END
 
@@ -299,7 +288,6 @@ Graf spojité funkce $\varphi : [a,b] \rightarrow \mathbb{R}$ má míru nula.
 ![](../../Assets/Pasted%20image%2020241020173754.png)
 
 <!-- ImageEnd -->
-
 <!--ID: 1778786397263-->
 END
 
@@ -325,7 +313,6 @@ Můžeme říct:
 Funkce $f$ a $g$ jsou rovny skoro všude, pokud množina $\set {x \in \mathbb{R}^2 : f(x) \neq g(x)}$ má míru nula.
 
 <!-- ExampleEnd -->
-
 <!--ID: 1778786397266-->
 END
 
@@ -353,7 +340,6 @@ Umění pana Spěváka:
 xDD
 
 <!-- ImageEnd -->
-
 <!--ID: 1778786397269-->
 END
 
@@ -372,7 +358,6 @@ Co je **hranice množiny**?
 Back:
 
 ![](../../Assets/Pasted%20image%2020241020174536.png)
-
 <!--ID: 1778786397272-->
 END
 
@@ -391,7 +376,6 @@ Důsledek: Kdy je **spojitá funkce** $f$ na množině $D$ integrabilní
 Back:
 
 ![](../../Assets/Pasted%20image%2020241020174659.png)
-
 <!--ID: 1778786397274-->
 END
 
@@ -410,7 +394,6 @@ Definice: **Vlastnosti dvojného integrálu** (3)
 Back:
 
 ![](../../Assets/Pasted%20image%2020241020174900.png)
-
 <!--ID: 1778786397277-->
 END
 
@@ -424,8 +407,6 @@ Co platí pro **Linearitu integrálu**?
 Back:
 
 ![](../../Assets/Pasted%20image%2020260515205832.png)
-
-
 <!--ID: 1779300150069-->
 END
 
@@ -448,9 +429,9 @@ Back:
 
 <!-- DetailInfoStart -->
 
-- **Typ 1** - $D = \set {(x,y) \in \mathbb{R}^2: x \in <a,b> \land \varphi_1(\lambda) \leq y \leq \varphi_2(\lambda)}$
-  <!-- DetailInfoEnd -->
+**Typ 1** - $D = \set {(x,y) \in \mathbb{R}^2: x \in <a,b> \land \varphi_1(\lambda) \leq y \leq \varphi_2(\lambda)}$
 
+<!-- DetailInfoEnd -->
 <!--ID: 1778786397280-->
 END
 
@@ -477,7 +458,6 @@ Máme nějaký tvar na 2D ploše a chceme spočíst objem toho tělesa od té ro
 ![](../../Assets/Pasted%20image%2020241023151316.png)
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1778786397283-->
 END
 
@@ -518,7 +498,6 @@ Back:
 <!-- ExampleEnd -->
 
 Tags: core
-
 <!--ID: 1778786397286-->
 END
 
@@ -548,7 +527,6 @@ Každému vektoru se přiřadá nějaká matice.
 <!-- DetailInfoEnd -->
 
 Tags: core
-
 <!--ID: 1778786397289-->
 END
 
@@ -575,7 +553,6 @@ Může se stát, že ta část napravo se počítá jednoduššeji, než ta čá
 <!-- ExplanationEnd -->
 
 Tags: core
-
 <!--ID: 1778786397291-->
 END
 

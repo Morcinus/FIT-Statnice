@@ -32,7 +32,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250411135624.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1778521859628-->
 END
 
@@ -57,7 +56,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250411135657.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1778521859631-->
 END
 
@@ -87,7 +85,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250411135753.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1778521859633-->
 END
 
@@ -110,7 +107,6 @@ Back:
 <!-- ExplanationStart -->
 Jinými slovy, že markovský proces "zapomíná historii", tedy nezávisí na tom, co se dělo ve stavech předtím (kromě toho předchozího stavu).
 <!-- ExplanationEnd -->
-
 <!--ID: 1778521859636-->
 END
 
@@ -129,7 +125,6 @@ NI-SZZ
 Back:
 
 ![](../../Assets/Pasted%20image%2020250411135913.png)
-
 <!--ID: 1778521859639-->
 END
 
@@ -158,7 +153,6 @@ Pravděpodobnost, že se v průběhu času přejdeme konkrétní sérií stavů 
 
 Tzn. jakoby $p_{s_0}(n_0)$ mi říká, že začnem v daném stavu a $P_{s_0s_1}(n_0,n_1)$ nás přesouvá do dalšího stavu.
 <!-- ExplanationEnd -->
-
 <!--ID: 1778521859641-->
 END
 
@@ -177,7 +171,6 @@ Věta: **Chapman-Kolmogorova rovnice**
 Back:
 
 ![](../../Assets/Pasted%20image%2020250411135956.png)
-
 <!--ID: 1778521859644-->
 END
 
@@ -200,7 +193,6 @@ Back:
 <!-- ExplanationStart -->
 Neboli je homogenní, pokud ty pravděpodobnosti přechodu jsou ve všech stavech stejný. Pak můžeme udělat tu jednokrokovou matici přechodu, kterou použijeme k přesunu do dalšího stavu v jakémkoliv stavu.
 <!-- ExplanationEnd -->
-
 <!--ID: 1778521859646-->
 END
 
@@ -221,7 +213,6 @@ $P(m,m+n)= \ ???= \ ???$
 Back:
 
 ![](../../Assets/Pasted%20image%2020250411140037.png)
-
 <!--ID: 1778521859649-->
 END
 
@@ -250,7 +241,6 @@ $$P(n+m)= \ P(n)\cdot P(m)= \ P^{n+m}=P^n \cdot P^m$$
 ![](../../Assets/Pasted%20image%2020250411140130.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778521859651-->
 END
 
@@ -283,7 +273,6 @@ $p(n)$ je rozdělení v čase $n$
 ![](../../Assets/Pasted%20image%2020250411140157.png)
 
 <!-- ExerciseEnd -->
-
 <!--ID: 1778521859654-->
 END
 
@@ -302,7 +291,6 @@ Lemma: Matice přechodu $P$ je **stochastická matice**, to znamená $\dots$ (2)
 Back:
 
 ![](../../Assets/Pasted%20image%2020250411140220.png)
-
 <!--ID: 1778521859657-->
 END
 
@@ -321,7 +309,6 @@ Lemma: **součin stochastických matic**
 Back:
 
 ![](../../Assets/Pasted%20image%2020250411140232.png)
-
 <!--ID: 1778521859660-->
 END
 
@@ -346,7 +333,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250411140301.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1778521859662-->
 END
 
@@ -379,7 +365,6 @@ Např. pro $(0.2, 0.8)$ mi to říká, že v prvním stavu budu $20\%$ z dlouhod
 ![](../../Assets/Pasted%20image%2020250411140356.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1778521859665-->
 END
 
@@ -398,7 +383,6 @@ Jak funguje metoda maximální věrohodnosti (MLE)?
 Back:
 
 ![](../../Assets/Pasted%20image%2020250410115647.png)
-
 <!--ID: 1778521859668-->
 END
 
@@ -418,7 +402,6 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020250410115702.png)
 ![](../../Assets/Pasted%20image%2020250410115709.png)
-
 <!--ID: 1778521859670-->
 END
 
@@ -437,7 +420,6 @@ Pozorování: jak vypadá maximálně věrohodný odhad matice přechodu $\textb
 Back:
 
 ![](../../Assets/Pasted%20image%2020250410115742.png)
-
 <!--ID: 1778521859673-->
 END
 
@@ -470,7 +452,6 @@ Rekurentní stav = stav, do kterého se řetězec dřív nebo později určitě 
 ![](../../Assets/Pasted%20image%2020250411140613.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778521859684-->
 END
 
@@ -501,7 +482,6 @@ Přechodný stav = stav, ze kterého když někdy vyjdu, tak není 100% jistý, 
 ![](../../Assets/Pasted%20image%2020250411140613.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778521859686-->
 END
 
@@ -526,7 +506,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250411140637.png)
 
 <!-- ImageEnd -->
-
 <!--ID: 1778521859689-->
 END
 
@@ -547,7 +526,6 @@ NI-SZZ
 Back:
 
 ![](../../Assets/Pasted%20image%2020250411140700.png)
-
 <!--ID: 1778521859692-->
 END
 
@@ -566,7 +544,6 @@ Důsledek: Vztah $f_{ii}$ a přechodných a trvalých stavů
 Back:
 
 ![](../../Assets/Pasted%20image%2020250411140723.png)
-
 <!--ID: 1778521859694-->
 END
 
@@ -585,7 +562,6 @@ Definice: **Střední doba návratu** do stavu + čemu je rovna pro **trvalý** 
 Back:
 
 ![](../../Assets/Pasted%20image%2020250411140738.png)
-
 <!--ID: 1778521859697-->
 END
 
@@ -614,7 +590,6 @@ Back:
 Když to odstartuju v $0$, tak se tam někdy vrátím, ale bude to za hrozně dlouho - střední hodnota bude nekonečno
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1778521859699-->
 END
 
@@ -633,7 +608,6 @@ Definice: **Periodicita stavu** (+ periodický a aperiodický stav)
 Back:
 
 ![](../../Assets/Pasted%20image%2020250411140822.png)
-
 <!--ID: 1778521859702-->
 END
 
@@ -652,7 +626,6 @@ Věta: čemu je rovna limita $\textbf{P}_{ii}(n)$ a $\textbf{P}_{ji}(n)$ u **ape
 Back:
 
 ![](../../Assets/Pasted%20image%2020250411140841.png)
-
 <!--ID: 1778521859705-->
 END
 
@@ -677,7 +650,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250411140907.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1778521859707-->
 END
 
@@ -706,7 +678,6 @@ Back:
 - **trvalý nenulový** - vždy se vrátím v rozumném čase (konečném)
 - **trvalý nenulový aperiodický** - vždy se vrátím a ne v nějakém pravidelném cyklu
 - **trvalý nenulový periodický** - vždy se vrátím v pevném cyklu (např. vždy po 5 krocích)
-
 <!--ID: 1778521859710-->
 END
 
@@ -725,7 +696,6 @@ Definice: **přechodný stav** (pomocí matice přechodu $P$) + **jak vypadá $P
 Back:
 
 ![](../../Assets/Pasted%20image%2020250410114718.png)
-
 <!--ID: 1778521859712-->
 END
 
@@ -744,7 +714,6 @@ Definice: **trvalý nulový stav** (pomocí matice přechodu $P$) + **jak vypad�
 Back:
 
 ![](../../Assets/Pasted%20image%2020250410114734.png)
-
 <!--ID: 1778521859715-->
 END
 
@@ -763,7 +732,6 @@ Definice: **trvalý nenulový aperiodický stav** (pomocí matice přechodu $P$)
 Back:
 
 ![](../../Assets/Pasted%20image%2020250410114750.png)
-
 <!--ID: 1778521859718-->
 END
 
@@ -782,7 +750,6 @@ Definice: **trvalý nenulový periodický stav** (pomocí matice přechodu $P$)
 Back:
 
 ![](../../Assets/Pasted%20image%2020250410114804.png)
-
 <!--ID: 1778521859721-->
 END
 
@@ -801,7 +768,6 @@ Definice: **dosažitelný stav**, vzájemně dosažitelné stavy
 Back:
 
 ![](../../Assets/Pasted%20image%2020250410114826.png)
-
 <!--ID: 1778521859723-->
 END
 
@@ -820,7 +786,6 @@ Věta: **dosažitelnost stavů a jejich typ**
 Back:
 
 ![](../../Assets/Pasted%20image%2020250410114839.png)
-
 <!--ID: 1778521859726-->
 END
 
@@ -845,7 +810,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250410114915.png)
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1778521859728-->
 END
 
@@ -864,7 +828,6 @@ Definice: **pohlcující** stav
 Back:
 
 ![](../../Assets/Pasted%20image%2020250410114909.png)
-
 <!--ID: 1778521859731-->
 END
 
@@ -883,7 +846,6 @@ Definice: **nerozložitelná** množina stavů a **nerozložitelný markovský �
 Back:
 
 ![](../../Assets/Pasted%20image%2020250410114932.png)
-
 <!--ID: 1778521859734-->
 END
 
@@ -911,7 +873,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250410121951.png)
 
 <!-- ExerciseEnd -->
-
 <!--ID: 1778521859736-->
 END
 
@@ -930,7 +891,6 @@ Lemma: pokud je stav $i$ trvalý a $i \rightarrow j$, pak $\dots$
 Back:
 
 ![](../../Assets/Pasted%20image%2020250410115024.png)
-
 <!--ID: 1778521859739-->
 END
 
@@ -949,7 +909,6 @@ Věta: **v řetězci s konečně mnoha stavy**, $\dots$ (2)
 Back:
 
 ![](../../Assets/Pasted%20image%2020250410115040.png)
-
 <!--ID: 1778521859742-->
 END
 
@@ -977,7 +936,6 @@ Díky téhle větě můžeme snadno na obrázku zjistit, které jsou přechodné
 ![](../../Assets/Pasted%20image%2020250410115136.png)
 
 <!-- ExerciseEnd -->
-
 <!--ID: 1778521859744-->
 END
 
@@ -1002,7 +960,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250410115204.png)
 
 <!-- ExerciseEnd -->
-
 <!--ID: 1778521859747-->
 END
 
@@ -1023,7 +980,6 @@ Důsledek: Je li množina stavů $S$ konečná $\implies \ ???$
 Back:
 
 ![](../../Assets/Pasted%20image%2020250410115227.png)
-
 <!--ID: 1778521859750-->
 END
 
@@ -1050,7 +1006,6 @@ Tolik _lineárně nezávislých_ stacionárních rozdělení, kolik je množin $
 ![](../../Assets/Pasted%20image%2020250410115259.png)
 
 <!-- ExerciseEnd -->
-
 <!--ID: 1778521859753-->
 END
 
@@ -1069,7 +1024,6 @@ Věta: konzistence odhadu matice přechodu
 Back:
 
 ![](../../Assets/Pasted%20image%2020250410115803.png)
-
 <!--ID: 1778521859755-->
 END
 
@@ -1088,7 +1042,6 @@ Jak funguje MCMC?
 Back:
 
 ![](../../Assets/Pasted%20image%2020250410115830.png)
-
 <!--ID: 1778521859758-->
 END
 
@@ -1115,7 +1068,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250410115913.png)
 
 <!-- ExerciseEnd -->
-
 <!--ID: 1778521859760-->
 END
 
@@ -1134,7 +1086,6 @@ Lemma: pro markovský řetězec $\dots$ platí, že je vektor $q$ stacionárním
 Back:
 
 ![](../../Assets/Pasted%20image%2020250410115955.png)
-
 <!--ID: 1778521859763-->
 END
 
@@ -1173,7 +1124,6 @@ Pohlcení = přesunu se do trvalého stavu
 ![](../../Assets/Pasted%20image%2020250411112724.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1778521859766-->
 END
 
@@ -1194,7 +1144,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250411112735.png)
 
 Označuje to čas, kdy přejdu z množiny přechodných stavů do trvalých.
-
 <!--ID: 1778521859768-->
 END
 
@@ -1213,7 +1162,6 @@ Lemma: Je-li množina stavů $S$ konečná, pak... (čas absorbce)
 Back:
 
 ![](../../Assets/Pasted%20image%2020250411112756.png)
-
 <!--ID: 1778521859771-->
 END
 
@@ -1242,7 +1190,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250411130234.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778521859773-->
 END
 
@@ -1263,7 +1210,6 @@ Jak získáme pravděpodobnost pohlcení na množině $C_r$?
 Back:
 
 ![](../../Assets/Pasted%20image%2020250411112859.png)
-
 <!--ID: 1778521859776-->
 END
 
@@ -1288,7 +1234,6 @@ $T$ - matice přechodu z přechodových do přechodových stavů
 
 Matice přechodu:
 ![](../../Assets/Pasted%20image%2020250516161641.png)
-
 <!--ID: 1778521859779-->
 END
 
@@ -1307,7 +1252,6 @@ Lemma: $A$ je čtvercová matice $\implies$ $(I-A)$ je regulární
 Back:
 
 ![](../../Assets/Pasted%20image%2020250411112950.png)
-
 <!--ID: 1778521859782-->
 END
 
@@ -1336,7 +1280,6 @@ $I$ je jednotková matice
 ![](../../Assets/Pasted%20image%2020250411113037.png)
 
 <!-- ExerciseEnd -->
-
 <!--ID: 1778521859784-->
 END
 
@@ -1360,7 +1303,6 @@ Napíšeme si to vedle matice $E$ a zgemujem.
 
 Např.
 ![](../../Assets/Pasted%20image%2020250522181145.png)
-
 <!--ID: 1778521859787-->
 END
 
@@ -1381,7 +1323,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250411113106.png)
 
 $W_k$ je počet návštěv stavu $k$
-
 <!--ID: 1778521859789-->
 END
 
@@ -1408,7 +1349,6 @@ Pozn. $I$ je identita, tedy to, co jsme v jiných předmětech značili jako $E$
 ![](../../Assets/Pasted%20image%2020250411113135.png)
 
 <!-- ExerciseEnd -->
-
 <!--ID: 1778521859792-->
 END
 
@@ -1429,7 +1369,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250411113151.png)
 
 Pozn. $I$ je identita, tedy to, co jsme v jiných předmětech značili jako $E$
-
 <!--ID: 1778521859795-->
 END
 
@@ -1449,7 +1388,6 @@ Jak se spočte $N$? (v kontextu matic markovských řetězců)
 Back:
 
 ![](../../Assets/Pasted%20image%2020250411160037.png)
-
 <!--ID: 1778521859676-->
 END
 
@@ -1468,7 +1406,6 @@ Jak se spočte $U$? (v kontextu matic markovských řetězců)
 Back:
 
 ![](../../Assets/Pasted%20image%2020250411160048.png)
-
 <!--ID: 1778521859678-->
 END
 
@@ -1491,7 +1428,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020250411160145.png)
 
 Tzn. pronásobíme $N=(I-T)^{-1}$ jedničkovým vektorem.
-
 <!--ID: 1778521859681-->
 END
 
@@ -1523,7 +1459,6 @@ Pozn. $I$ je identita, tedy to, co jsme v jiných předmětech značili jako $E$
 ![](../../Assets/Pasted%20image%2020250411113224.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1778521859798-->
 END
 
@@ -1544,7 +1479,6 @@ Back:
 Pokud jsou všechny stavy $C$ aperiodické, pak má $C_r$ v řádcích stacionární rozdělení podřetězce $C_r$.
 
 ![](../../Assets/Pasted%20image%2020250411113245.png)
-
 <!--ID: 1778521859800-->
 END
 
@@ -1577,7 +1511,6 @@ Ta $\widetilde{C}$ má v řádcích stacionární rozdělení podřetězce $C_r$
 ![](../../Assets/Pasted%20image%2020250411113245.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778521859803-->
 END
 

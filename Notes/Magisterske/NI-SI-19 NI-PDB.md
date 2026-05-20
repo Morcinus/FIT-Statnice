@@ -23,7 +23,6 @@ NI-SZZ
 Back:
 
 **Online Transaction Processing**
-
 <!--ID: 1779128799848-->
 END
 
@@ -41,7 +40,6 @@ NI-SZZ
 Back:
 
 **Online Analytical Processing**
-
 <!--ID: 1779128799851-->
 END
 
@@ -59,7 +57,6 @@ Na co slouží benchmarky TPC-E a TPC-C? Na OLTP nebo OLAP?
 Back:
 
 Na **OLTP**
-
 <!--ID: 1779128799853-->
 END
 
@@ -92,7 +89,6 @@ Obě jsou technologie uložení dat v databázi.
 - Systémy optimalizované pro analytické zpracovávání, zaměřené na efektivní **čtení a analýzu** velkého množství dat.
 - Data nebývají "hezky" uspořádána (podle 3NF).. Typicky tam bývá hodně redundance, díky čemuž je čtení vysoce efektivní (ale zápis je pain in the ass)
 - Např. business intelligence, reportování, analytické systémy
-
 <!--ID: 1779128799856-->
 END
 
@@ -113,7 +109,6 @@ Back:
 
 - **microbenchmark** - zaměřuje se na konkrétní aspekt databázového systému (např. práce s cache, jenom insert příkazy, jenom update příkazy)
 - **komplexní benchmarky**
-
 <!--ID: 1779128799859-->
 END
 
@@ -139,7 +134,6 @@ Transaction Processing Council (něco jako W3C ale pro databáze)
 Členové jsou např. Microsoft, Lenovo, Cisco, Nvidia, AMD atd.
 
 <!-- ExampleEnd -->
-
 <!--ID: 1779128799861-->
 END
 
@@ -174,7 +168,6 @@ Následně:
 ![](../../Assets/Pasted%20image%2020241208133101.png)
 
 <!-- ImageEnd -->
-
 <!--ID: 1779128799864-->
 END
 
@@ -193,7 +186,6 @@ Back:
 
 - $tpmC$ - new-order transaction rate = při maximálním zatížení databáze, kolik jsem schopný zpracovat nových objednávek
 - $\text{\$}/tpmC$ - kolik mě jedna nová objednávka stojí peněz
-
 <!--ID: 1779128799866-->
 END
 
@@ -215,7 +207,6 @@ Back:
 - delivery
 - order-status
 - stock-level
-
 <!--ID: 1779128799869-->
 END
 
@@ -243,7 +234,6 @@ Mám různé transakce (new-order) atd. Mám simulaci zákazníka (terminál), t
 ![](../../Assets/Pasted%20image%2020241208133525.png)
 
 <!-- ImageEnd -->
-
 <!--ID: 1779128799872-->
 END
 
@@ -261,7 +251,6 @@ Jaká je kritika TPC-C benchmarku?
 Back:
 
 Že je moc jednoduchý a nepřesný.
-
 <!--ID: 1779128799875-->
 END
 
@@ -279,7 +268,6 @@ Na jaké téma je zaměřený TPC-E?
 Back:
 
 Jako příklad je obchodování společnosti, která se zabývá obchodováním s akciema a managování uživatelských účtů.
-
 <!--ID: 1779128799877-->
 END
 
@@ -298,7 +286,6 @@ Back:
 
 - $TPsE$ - transactions per second u **jakékoliv** transakce
 - $Price/TPsE$
-
 <!--ID: 1779128799880-->
 END
 
@@ -323,7 +310,6 @@ TPC-E je složitější, je tam větší rozmanitost transakcí atd.
 ![](../../Assets/Pasted%20image%2020241220111612.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1779128799883-->
 END
 
@@ -341,7 +327,6 @@ SMAZAT
 Back:
 
 SMAZAT
-
 <!--ID: 1779128799885-->
 END
 
@@ -359,7 +344,6 @@ Jaký je příklad OLAP benchmarku?
 Back:
 
 $TPC-H$
-
 <!--ID: 1779128799888-->
 END
 
@@ -377,7 +361,6 @@ Jaký je velký rozdíl TPC-H benchmarku oproti těm ostatním?
 Back:
 
 Máme databázi fixní velikosti
-
 <!--ID: 1779128799890-->
 END
 
@@ -404,7 +387,6 @@ $Size$ je velikost databáze.
 Size typicky jsou desítky GB až 1 TB cca
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1779128799893-->
 END
 
@@ -446,7 +428,6 @@ Back:
 	- Poskytuje ucelený pohled na výkon databázového systému v reálných podmínkách.
 	- Zohledňuje vliv více operací a interakcí mezi součástmi systému.
 - **Nevýhody:** - Může být složitější na nastavení a vyžaduje složitější testovací scénáře. - Výsledky mohou být ovlivněny externími faktory, jako jsou konfigurace hardwaru, síťové podmínky a další.
-
 <!--ID: 1779128799896-->
 END
 
@@ -466,7 +447,6 @@ Co je **TPC** a jak souvisí s databázovými benchmarky?
 Back:
 
 Je nezisková organizace Transaction Processing Performance Council (TPC), která definuje různé benchmark testy databází (například TPC-C, TPC-H nebo TPC-E).
-
 <!--ID: 1779128799898-->
 END
 
@@ -501,7 +481,6 @@ Metriky:
 
 - $tpmC$ - new-order transaction rate = při maximálním zatížení databáze, kolik jsem schopný zpracovat nových objednávek
 - $Price/tpmC$ - kolik mě jedna nová objednávka stojí peněz (za Price byl v názvu dosazený dolar)
-
 <!--ID: 1779128799901-->
 END
 
@@ -530,7 +509,6 @@ Metriky:
 
 - $TPsE$ - transactions per second u **jakékoliv** transakce
 - $Price/TPsE$
-
 <!--ID: 1779128799904-->
 END
 
@@ -557,7 +535,6 @@ Máme tyto metriky:
 - $QphH@Size$ - Composite Query-perHour performance metric
 - $Price/QphH@Size$ - Price/Performance metric (za Price byl v názvu dosazený dolar)
   $Size$ je velikost databáze.
-
 <!--ID: 1779128799906-->
 END
 

@@ -32,7 +32,6 @@ Back:
 2. Derivujeme podle $x$
 
 Výsledek by byl $\frac{\partial f}{\partial x}=2x$
-
 <!--ID: 1778786397448-->
 END
 
@@ -50,7 +49,6 @@ Jaký je význam 1. parciální derivace?
 Back:
 
 Když udělám řez v tom 3D grafu, tak žjistím, jestli je v tom řezu rostoucí/klesající
-
 <!--ID: 1778786397451-->
 END
 
@@ -81,7 +79,6 @@ Např. $\mathbb{R}^2$ model terénu mám 2D plochu a každému bodu přiřadím 
 
 Např. $\mathbb{R}^3$ model místnosti, kde každému bodu je přiřazena teplota v tom bodě
 <!-- ExampleEnd -->
-
 <!--ID: 1778786397453-->
 END
 
@@ -103,7 +100,6 @@ Back:
 Směr největšího spádu.
 
 Např. když jdu na kopec, tak gradientem je jakoby směru nejprudší cesty k tomu vrcholu.
-
 <!--ID: 1778786397456-->
 END
 
@@ -132,7 +128,6 @@ $$\frac{\partial f}{\partial x}$$
 ![](../../Assets/Pasted%20image%2020240923130229.png)
 
 Tags: core
-
 <!--ID: 1778786397459-->
 END
 
@@ -157,7 +152,6 @@ V daném bodě to je směr nejvyššího růstu.
 ![](../../Assets/Pasted%20image%2020240923130304.png)
 
 Tags: core
-
 <!--ID: 1778786397462-->
 END
 
@@ -181,7 +175,6 @@ V nějakém bodě $\textbf{b}$ se vychýlím o h a spočtu tu derivaci.
 $||\textbf{v}|| = 1$ znamená, že ten vektor je jednotkový
 
 Tags: core
-
 <!--ID: 1778786397467-->
 END
 
@@ -206,7 +199,6 @@ Postup výpočtu:
 1. Spočtu si gradient (pomocí parciálních derivací)
 2. Vynásobím gradient se směrovým vektorem
 3. Tím dostanu parciální derivaci
-
 <!--ID: 1778786397470-->
 END
 
@@ -230,7 +222,6 @@ Když vypočítáme **parciální derivaci $f$ ve směru $\textbf{v}$ v bodě** 
 Tzn. když spočítáme tohle, tak nám to vyjde nejvyšší v tom daném směru $\textbf{v}$
 ![](../../Assets/Pasted%20image%2020240930131518.png)
 ![](../../Assets/Pasted%20image%2020240930131042.png)
-
 <!--ID: 1778786397464-->
 END
 
@@ -257,7 +248,6 @@ Jsou to body, ve kterých je **gradient nulový** nebo tam **neexistuje**.
 ![](../../Assets/Pasted%20image%2020240923130959.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778786397473-->
 END
 
@@ -290,7 +280,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020240923130329.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778786397476-->
 END
 
@@ -310,7 +299,6 @@ Jaký je význam 2. parciální derivace?
 Back:
 
 Když udělám řez v tom 3D grafu, tak zjistím, jeslti je v tom řezu konkávní/kovexní
-
 <!--ID: 1778786397478-->
 END
 
@@ -339,7 +327,6 @@ Stejně jako bychom dvakrát derivovali při normálním zkoumání průběhu fu
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020240930133125.png)
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778786397481-->
 END
 
@@ -362,7 +349,6 @@ Back:
 Ukazuje, jak se mění sklon funkce ve všech směrech v daném bodě.
 
 Tags: core
-
 <!--ID: 1778786397484-->
 END
 
@@ -384,7 +370,6 @@ Back:
 Neboli nezávisí na pořadí derivování
 
 Důsledek: Hessova matice je často symetrická - tzn. podle diagonály v matici.
-
 <!--ID: 1778786397486-->
 END
 
@@ -402,7 +387,6 @@ Definice: **Druhá parciální derivace funkce $f$ ve směru $\textbf{v}$ v bod�
 Back:
 
 ![](../../Assets/Pasted%20image%2020240930133700.png)
-
 <!--ID: 1778786397489-->
 END
 
@@ -430,7 +414,6 @@ Můžu potom provádět "ruské násobení":
 3. ten vektor potom pronásobím s dalším vektorem
 
 Tags: core
-
 <!--ID: 1778786397492-->
 END
 
@@ -470,7 +453,6 @@ H =
 $$
 
 <!-- ExampleEnd -->
-
 <!--ID: 1778786397494-->
 END
 
@@ -499,7 +481,6 @@ _Příklad indefinitního_:
 ![](../../Assets/Pasted%20image%2020240930134809.png)
 
 Tags: core
-
 <!--ID: 1778786397497-->
 END
 
@@ -523,7 +504,6 @@ Back:
 Symetrická matice = symetrická podle hlavní diagonály
 
 Tags: core
-
 <!--ID: 1778786397499-->
 END
 
@@ -545,7 +525,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020240930135029.png)
 
 Tags: core
-
 <!--ID: 1778786397506-->
 END
 
@@ -567,7 +546,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020240930135046.png)
 
 Tags: core
-
 <!--ID: 1778786397510-->
 END
 
@@ -589,7 +567,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020240930135050.png)
 
 Tags: core
-
 <!--ID: 1778786397513-->
 END
 
@@ -611,7 +588,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020240930135107.png)
 
 Tags: core
-
 <!--ID: 1778786397516-->
 END
 
@@ -631,7 +607,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020240930135304.png)
 
 Tags: core
-
 <!--ID: 1778786397519-->
 END
 
@@ -651,7 +626,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020240930135505.png)
 
 Tags: core
-
 <!--ID: 1778786397522-->
 END
 
@@ -672,7 +646,6 @@ Back:
 Pak není **pozitivně definitní** ani **negativně definitní**
 
 (Může být semidefinitní nebo indefinitní)
-
 <!--ID: 1778786397525-->
 END
 
@@ -691,7 +664,6 @@ SMAZAT
 Back:
 
 SMAZAT
-
 <!--ID: 1778786397528-->
 END
 
@@ -715,7 +687,6 @@ Back:
 Analogicky jako u normálních funkcí
 
 Tags: core
-
 <!--ID: 1778786397539-->
 END
 
@@ -745,7 +716,6 @@ Ta nadrovina je popsaná pomocí $(x_1,x_2,\dots,x_n, z)$.
 ![](../../Assets/Pasted%20image%2020240923130551.png)
 
 Tags: core
-
 <!--ID: 1778786397542-->
 END
 
@@ -771,7 +741,6 @@ Je to analogicky jako u 2D grafů. Aby tam byl extrém, tak tam musí být nulov
 <!-- ExplanationEnd -->
 
 Tags: core
-
 <!--ID: 1778786397544-->
 END
 
@@ -797,7 +766,6 @@ Body, kde je gradient **nulový**.
 <!-- DetailInfoEnd -->
 
 ![](../../Assets/Pasted%20image%2020240923130829.png)
-
 <!--ID: 1778786397547-->
 END
 
@@ -818,7 +786,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020240930140831.png)
 
 Tags: core
-
 <!--ID: 1778786397550-->
 END
 
@@ -838,7 +805,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020240930140823.png)
 
 Tags: core
-
 <!--ID: 1778786397553-->
 END
 
@@ -868,7 +834,6 @@ Pozn. Hledat kritické body je samo o sobě **velice obtížné** a není jednot
 ![](../../Assets/Pasted%20image%2020240930140745.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778786397555-->
 END
 
@@ -898,7 +863,6 @@ Další příklady:
 ![](../../Assets/Pasted%20image%2020241011121005.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1778786397558-->
 END
 
@@ -933,7 +897,6 @@ Máme $p$ **nerovnostních vazeb (=vnitřky vrstevnic)** (určených funkcemi $h
 ![](../../Assets/Pasted%20image%2020241011123820.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778786397561-->
 END
 
@@ -962,7 +925,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241011123605.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778786397564-->
 END
 
@@ -1016,7 +978,6 @@ Související Marasty pro procvičení:
 ![](../../Assets/Pasted%20image%2020241028154812.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778786397566-->
 END
 
@@ -1046,7 +1007,6 @@ To že se dotýkám vrstevnice zjistím z toho, že cesta a vrstevnice mají ste
 **Multiplikátory Lagrangeovy funkce nám pak umožní zjistit, kdy jsou gradienty těchto funkcí rovnoběžné.**
 
 ![](../../Assets/Pasted%20image%2020241011135242.png)
-
 <!--ID: 1778786397569-->
 END
 
@@ -1071,7 +1031,6 @@ Back:
 Lagrangeova funkce má $n+m$ proměnnch ($\textbf{x}$ je vektor o $n$, $\lambda$ je vektor o $m$ proměnných). Je definovaná jako funkce $f(\textbf{x})$ plus ty lambdy vynásobené těmi funkcemi $g_j$.
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1778786397572-->
 END
 
@@ -1092,7 +1051,6 @@ Definice: **Lagrangeovy multiplikátory**
 Back:
 
 ![](../../Assets/Pasted%20image%2020241011133509.png)
-
 <!--ID: 1778786397575-->
 END
 
@@ -1127,7 +1085,6 @@ Ta podmínka (2) mi zeslabuje tu finální nerovnici
 <!-- ExplanationEnd -->
 
 Tags: core
-
 <!--ID: 1778786397577-->
 END
 
@@ -1150,7 +1107,6 @@ Back:
 3. Rovnice vyřešíme
 4. Koukneme se na všechny směry, co jsou kolmé na gradienty všech těch vazeb a spočteme $v^T\cdot \nabla^2_xL(x^*;\lambda^*)\cdot v$
 5. Když to bude kladné, máme lokální minimum
-
 <!--ID: 1778786397580-->
 END
 
@@ -1171,7 +1127,6 @@ Back:
 Mám nějakou cestu (vazbu), když jsem uvnitř ní (např. v tom kruhu), hledám minimum v daném okolí, které je také uvnitř té vazby.
 
 ![](../../Assets/Pasted%20image%2020241011144008.png)
-
 <!--ID: 1778786397583-->
 END
 
@@ -1192,7 +1147,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241011144059.png)
 
 Tags: core
-
 <!--ID: 1778786397585-->
 END
 
@@ -1237,7 +1191,6 @@ Ta podmínka (2) mi zeslabuje tu finální nerovnici
 <!-- ExplanationEnd -->
 
 Tags: core
-
 <!--ID: 1778786397588-->
 END
 
@@ -1263,7 +1216,6 @@ Jediné, v čem se liší od **hledání minima je**:
 ![](../../Assets/Pasted%20image%2020241011133716.png)
 
 Tags: core
-
 <!--ID: 1778786397591-->
 END
 
@@ -1287,7 +1239,6 @@ Back:
 3. Vyjde $(E)$
 
 Tags: maly
-
 <!--ID: 1778786397593-->
 END
 
@@ -1312,7 +1263,6 @@ Back:
 3. Vlastní čísla se liší, tedy je **indefinitní** (A)
 
 Tags: maly
-
 <!--ID: 1778786397596-->
 END
 
@@ -1357,7 +1307,6 @@ Back:
 Hint: V kroku (2. derivace) můžu zkusit na Hessovu matici uplatnit Sylvestrovo kritérium. Pak to je rovnou lok. minimum, resp. maximum.
 
 Tags: analyza3 core
-
 <!--ID: 1778786397533-->
 END
 
@@ -1378,7 +1327,6 @@ Back:
 1. Vyjádříme Lagrangeovu funkci $L(x^*, \lambda) = \dots$
 2. Spočteme gradient $\nabla L(x^*,\lambda^*) = 0$, čímž dostaneme soustavu rovnic a najdeme jednotlivé složky $x$ a $\lambda$
 3. Spočteme Hessovu matici
-
 <!--ID: 1778786397536-->
 END
 
@@ -1408,7 +1356,6 @@ Je to protože budou existovat body, které jsou **výše** nebo **níže**.
 **Zelený** jsou ty ostatní stacionární body.
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1778786397531-->
 END
 

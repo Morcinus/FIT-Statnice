@@ -27,7 +27,6 @@ Jako **strom**
 - Kořen je select
 
 ![](../../Assets/Pasted%20image%2020240923165757.png)
-
 <!--ID: 1779128799404-->
 END
 
@@ -61,7 +60,6 @@ Back:
 - **pokud se data příliš nemění**, plán bude pravděpodobně stále efektivní
 
 Tags: reviewed
-
 <!--ID: 1779128799411-->
 END
 
@@ -99,7 +97,6 @@ Back:
 	- Když dotaz vrací **většinu řádků tabulky** (např. 20-30%)
 
 Tags: reviewed
-
 <!--ID: 1779128799414-->
 END
 
@@ -141,7 +138,6 @@ Statistiky sortění, které jsou důležité pro systém:
 <!-- DetailInfoEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799417-->
 END
 
@@ -175,7 +171,6 @@ Zdroj: https://courses.fit.cvut.cz/NI-PDB/lectures/10-benchmarks-acid-tuning/ind
 <!-- DetailInfoEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799420-->
 END
 
@@ -195,7 +190,6 @@ Co je **optimalizace**?
 Back:
 
 Nacházení nejlepšího vyhodnocovacího plánu
-
 <!--ID: 1779128799423-->
 END
 
@@ -220,7 +214,6 @@ Cena obsahuje (např.):
 
 - **CPU** - jak moc musí procesor počítat, porovnávat atd.
 - **Přístup k datům** - buď co cache nebo do storage (disk)
-
 <!--ID: 1779128799426-->
 END
 
@@ -263,7 +256,6 @@ Například pokud statistika nad indexem napovídá, že v převážná většin
 <!-- DetailInfoEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799429-->
 END
 
@@ -302,7 +294,6 @@ Back:
 	- **materializované pohledy**
 
 Tags: reviewed
-
 <!--ID: 1779128799431-->
 END
 
@@ -325,7 +316,6 @@ Oracle si u tabulek/stromů drží různé statistiky - např. počet hodnot atd
 
 ![](../../Assets/Pasted%20image%2020240923173735.png)
 ![](../../Assets/Pasted%20image%2020240923174138.png)
-
 <!--ID: 1779128799434-->
 END
 
@@ -345,7 +335,6 @@ Back:
 Jak moc u sebe jsou data v heap tabulce (resp. jak moc je rozházená)
 
 ![](../../Assets/Pasted%20image%2020240923174211.png)
-
 <!--ID: 1779128799437-->
 END
 
@@ -388,7 +377,6 @@ Back:
 <!-- ImageEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799439-->
 END
 
@@ -438,7 +426,6 @@ Back:
 <!-- ImageEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799442-->
 END
 
@@ -488,7 +475,6 @@ Když pak například spustím `SELECT` dle roku výroby, stačí jen vybrat ř�
 <!-- ImageEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799445-->
 END
 
@@ -537,7 +523,6 @@ Připomenutí: DML = Data Manipulation Language
 <!-- DetailInfoEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799448-->
 END
 
@@ -574,7 +559,6 @@ Máme relaci $R$ s klíčem $A$:
 - Automaticky se přepočítávají enginem když databáze není busy (idle time)
 
 Tags: reviewed
-
 <!--ID: 1779128799451-->
 END
 
@@ -599,7 +583,6 @@ Back:
 - **cluster** - shluk/bucker dat
 
 ![](../../Assets/Pasted%20image%2020240923171047.png)
-
 <!--ID: 1779128799453-->
 END
 
@@ -658,7 +641,6 @@ Tady je imo špatně ten dotaz. Mělo by tam být víc podmínek:
 <!-- DetailInfoEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799456-->
 END
 
@@ -711,7 +693,6 @@ Předpokládejme relaci $R$ a $S$ s atributem $a$ a dotaz:
 - atd. těhlech speciálních případů je hodně
 
 Tags: reviewed
-
 <!--ID: 1779128799459-->
 END
 

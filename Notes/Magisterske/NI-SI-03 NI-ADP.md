@@ -20,7 +20,6 @@ Back:
 
 - Návrhové vzory, které se zabývají tím, jak skládat třídy do komplexnějších struktur
 - Řeší jak jsou tyto objekty navzájem propojeny a jak spolupracují
-
 <!--ID: 1778786460782-->
 END
 
@@ -40,7 +39,6 @@ Back:
 - **Facade**
 - **Flyweight**
 - **Proxy**
-
 <!--ID: 1760705194456-->
 END
 
@@ -95,7 +93,6 @@ Sometimes it’s even possible to create a two-way adapter that can convert the 
 Let’s get back to our stock market app. To solve the dilemma of incompatible formats, you can create XML-to-JSON adapters for every class of the analytics library that your code works with directly. Then you adjust your code to communicate with the library only via these adapters. When an adapter receives a call, it translates the incoming XML data into a JSON structure and passes the call to the appropriate methods of a wrapped analytics object.
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1760705194459-->
 END
 
@@ -122,7 +119,6 @@ Adapter implementuje nějaké rozhraní.
 ![](../../../Assets/Pasted%20image%2020250130105657.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1760705194461-->
 END
 
@@ -140,7 +136,6 @@ Adapter dědí z dané classy a servicy. Toto lze využít pouze u jazyků, co u
 ![](../../../Assets/Pasted%20image%2020250130105641.png)
 
 1. The **Class Adapter** doesn’t need to wrap any objects because it inherits behaviors from both the client and the service. The adaptation happens within the overridden methods. The resulting adapter can be used in place of an existing client class.
-
 <!--ID: 1760705194464-->
 END
 
@@ -158,7 +153,6 @@ Back:
 ✅ *Open/Closed Principle*. You can introduce new types of adapters into the program without breaking the existing client code, as long as they work with the adapters through the client interface.
 
 ❌ The overall complexity of the code increases because you need to introduce a set of new interfaces and classes. Sometimes it’s simpler just to change the service class so that it matches the rest of your code.
-
 <!--ID: 1760705194467-->
 END
 
@@ -213,7 +207,6 @@ The Bridge pattern attempts to solve this problem by switching from inheritance 
 Following this approach, we can extract the color-related code into its own class with two subclasses: `Red` and `Blue`. The `Shape` class then gets a reference field pointing to one of the color objects. Now the shape can delegate any color-related work to the linked color object. That reference will act as a bridge between the `Shape` and `Color` classes. From now on, adding new colors won’t require changing the shape hierarchy, and vice versa.
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1760705194470-->
 END
 
@@ -240,7 +233,6 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130105910.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1760705194473-->
 END
 
@@ -256,7 +248,6 @@ Back:
 - Pokud chceme rozdělit funkcionalitu jedné monolitické třídy s více variantami použití (např. práce s více DB servery)
 - Pokud chceme třídu rozšiřovat ve více nezávislých (ortogonálních) dimenzích
 - Pokud chceme být schopni měnit implementaci v době běhu
-
 <!--ID: 1778786460785-->
 END
 
@@ -278,7 +269,6 @@ Back:
 ✅ *Single Responsibility Principle*. You can focus on high-level logic in the abstraction and on platform details in the implementation.
 
 ❌ You might make the code more complicated by applying the pattern to a highly cohesive class.
-
 <!--ID: 1760705194476-->
 END
 
@@ -330,7 +320,6 @@ How would this method work? For a product, it’d simply return the product’s 
 The greatest benefit of this approach is that you don’t need to care about the concrete classes of objects that compose the tree. You don’t need to know whether an object is a simple product or a sophisticated box. You can treat them all the same via the common interface. When you call a method, the objects themselves pass the request down the tree.
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1760705194480-->
 END
 
@@ -357,7 +346,6 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130110100.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1760705194484-->
 END
 
@@ -372,7 +360,6 @@ Back:
 
 - Při implementaci stuktury, která připomíná strom
 - Pokud chceme, aby se klient choval stejně k jednoduchým a komplexním objektům stejně
-
 <!--ID: 1778786460788-->
 END
 
@@ -390,7 +377,6 @@ Back:
 ✅ *Open/Closed Principle*. You can introduce new element types into the app without breaking the existing code, which now works with the object tree.
 
 ❌ It might be difficult to provide a common interface for classes whose functionality differs too much. In certain scenarios, you’d need to overgeneralize the component interface, making it harder to comprehend.
-
 <!--ID: 1760705194487-->
 END
 
@@ -462,7 +448,6 @@ The last decorator in the stack would be the object that the client actually wor
 We could apply the same approach to other behaviors such as formatting messages or composing the recipient list. The client can decorate the object with any custom decorators, as long as they follow the same interface as the others.
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1760705194490-->
 END
 
@@ -488,7 +473,6 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130110336.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1760705194494-->
 END
 
@@ -503,7 +487,6 @@ Back:
 
 - Pokud chceme přidávat dodatečné chování objektům v době runtime bez rozbíjení kódu, který s nimi pracuje
 - Pokud je rozšiřování třídy pomocí dědičnosti obtížné nebo nemožné
-
 <!--ID: 1778786460792-->
 END
 
@@ -529,7 +512,6 @@ Back:
 ❌ It’s hard to implement a decorator in such a way that its behavior doesn’t depend on the order in the decorators stack.
 
 ❌ The initial configuration code of layers might look pretty ugly.
-
 <!--ID: 1760705194497-->
 END
 
@@ -565,7 +547,6 @@ Having a facade is handy when you need to integrate your app with a sophisticate
 For instance, an app that uploads short funny videos with cats to social media could potentially use a professional video conversion library. However, all that it really needs is a class with the single method `encode(filename, format)` . After creating such a class and connecting it with the video conversion library, you’ll have your first facade.
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1760705194501-->
 END
 
@@ -591,7 +572,6 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130110500.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1760705194504-->
 END
 
@@ -606,7 +586,6 @@ Back:
 
 - Pokud chceme mít rozhraní s omezenou sadou funkcí ke komplexnímu systému
 - Pokud chceme strukturovat subsystém do vrstev
-
 <!--ID: 1778786460796-->
 END
 
@@ -622,7 +601,6 @@ Back:
 ✅ You can isolate your code from the complexity of a subsystem.
 
 ❌ A facade can become a god object coupled to all classes of an app.
-
 <!--ID: 1760705194507-->
 END
 
@@ -674,7 +652,6 @@ The Flyweight pattern suggests that you stop storing the extrinsic state inside 
 Let’s return to our game. Assuming that we had extracted the extrinsic state from our particle class, only three different objects would suffice to represent all particles in the game: a bullet, a missile, and a piece of shrapnel. As you’ve probably guessed by now, an object that only stores the intrinsic state is called a flyweight.
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1760705194510-->
 END
 
@@ -701,7 +678,6 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130110709.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1760705194513-->
 END
 
@@ -715,7 +691,6 @@ Kdy použít **Flyweight** pattern?
 Back:
 
 - Pokud musí program podporovat velké množství objektů, které se obtížně vejdou do RAM
-
 <!--ID: 1778786460800-->
 END
 
@@ -733,7 +708,6 @@ Back:
 ❌ You might be trading RAM over CPU cycles when some of the context data needs to be recalculated each time somebody calls a flyweight method.
 
 ❌ The code becomes much more complicated. New team members will always be wondering why the state of an entity was separated in such a way.
-
 <!--ID: 1760705194521-->
 END
 
@@ -773,7 +747,6 @@ The Proxy pattern suggests that you create a new proxy class with the same inter
 But what’s the benefit? If you need to execute something either before or after the primary logic of the class, the proxy lets you do this without changing that class. Since the proxy implements the same interface as the original class, it can be passed to any client that expects a real service object.
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1760705194525-->
 END
 
@@ -798,7 +771,6 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130110831.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1760705194528-->
 END
 
@@ -816,7 +788,6 @@ Back:
 - Pro vzdálené spuštění kódu (Remote proxy) – Pokud je logika umístěna na vzdáleném serveru
 - Pro logování (Logging proxy)
 - Pro cachování (Caching proxy)
-
 <!--ID: 1778786460803-->
 END
 
@@ -840,7 +811,6 @@ Back:
 ❌ The code may become more complicated since you need to introduce a lot of new classes.
 
 ❌ The response from the service might get delayed.
-
 <!--ID: 1760705194531-->
 END
 
@@ -869,7 +839,6 @@ Na webových stránkách se načtou obrázky, až když k nim uživatel doscroll
 
 - **Snižuje to initial load time**
 - **Šetří to komunikaci a zdroje** - nepřistupuje se tak moc do databáze, neposílá se tolik requestů
-
 <!--ID: 1760705194534-->
 END
 
@@ -886,7 +855,6 @@ Back:
 - **Virtual proxy** - při přístupu k objektu se zavolá virtuální objekt se stejným rozhraním. Ten pak načte daný objekt a přepošle mu požadavek.
 - **Ghost** - loadne se objekt s částečným stavem (např. placeholder), když je to potřeba, objekt vyplní svoje data
 - **Value holder** - generický objekt se stará o lazy loading, tento objekt se používá místo nějaké proměnné data objektu
-
 <!--ID: 1760705194537-->
 END
 
@@ -904,7 +872,6 @@ Technika umožňující, aby třída nezávisla na svých závislostech.
 - Dosahuje toho declouplingem využití objektu od jeho tvorby.
 - Pomáhá dodržovat S a D principy z SOLID
 - Umožňuje nahrazování implementací bez změny závislostí ve třídách.
-
 <!--ID: 1778786460807-->
 END
 
@@ -1019,7 +986,6 @@ class MyApp {
 ```
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1760705194540-->
 END
 
@@ -1047,7 +1013,6 @@ There are libraries that solve this problem by automating the process of creatin
 - Static solutions that generate the code to connect dependencies at compile time.
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1760705194542-->
 END
 
@@ -1062,7 +1027,6 @@ Back:
 
 - Řešení založená na reflexi (reflection-based), která propojují závislosti za běhu programu (runtime).
 - Statická řešení, která generují kód pro propojení závislostí v době překladu (compile time).
-
 <!--ID: 1778786460810-->
 END
 
