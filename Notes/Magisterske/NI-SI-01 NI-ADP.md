@@ -87,7 +87,6 @@ Back:
 - **Repairs** = v době, kdy to bude potřeba, pravděpodobně daná funkcionalita stejně bude mít hodně technical debt
 
 ![](../../Assets/Pasted%20image%2020260513100740.png)
-
 <!--ID: 1760705194622-->
 
 END
@@ -110,7 +109,6 @@ Back:
 - **Liskov Substitution** = pokud $S$ je podtypem $T$, potom všude kde se používá objekt $T$, můžu použít bez změny programu i objekt $S$
 - **Interface Segregation** = Klienti by neměli být nuceni záviset na metodách, které nepoužívají.
 - **Dependency Inversion** = High-level moduly by neměly záviset na low-level modulech. Obojí by mělo záviset na abstrakci.
-
 <!--ID: 1760705194625-->
 
 END
@@ -145,7 +143,6 @@ If a Class has many responsibilities, it increases the possibility of bugs becau
 This principle aims to separate behaviours so that if bugs arise as a result of your change, it won’t affect other unrelated behaviours.
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1760705194627-->
 
 END
@@ -220,7 +217,6 @@ If the **child** Class doesn’t meet these requirements, it means the **chil
 This principle aims to enforce consistency so that the parent Class or its child Class can be used in the same way without any errors.
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1760705194633-->
 
 END
@@ -256,7 +252,6 @@ A Class should perform only actions that are needed to fulfil its role. Any othe
 This principle aims at splitting a set of actions into smaller sets so that a Class executes ONLY the set of actions it requires.
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1760705194636-->
 
 END
@@ -379,7 +374,6 @@ Back:
 <!-- ExampleEnd -->
 
 ![](../../Assets/Pasted%20image%2020260513101055.png)
-
 <!--ID: 1760705194647-->
 
 END
@@ -407,7 +401,6 @@ Např.
 **Proč:**
 
 - Systém je tak přehlednější, lépe se udržuje, debuguje atd.
-
 <!--ID: 1760705194650-->
 
 END
@@ -445,7 +438,6 @@ An object can call methods that are apart of:
 - a global variable
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1760705194652-->
 
 END

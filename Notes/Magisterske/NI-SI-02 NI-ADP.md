@@ -70,7 +70,6 @@ Back:
 - **Factory method**
 - **Prototype**
 - **Singleton**
-
 <!--ID: 1760705194546-->
 
 END
@@ -115,7 +114,6 @@ Say the client wants a factory to produce a chair. The client doesn’t have to 
 There’s one more thing left to clarify: if the client is only exposed to the abstract interfaces, what creates the actual factory objects? Usually, the application creates a concrete factory object at the initialization stage. Just before that, the app must select the factory type depending on the configuration or the environment settings.
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1760705194549-->
 
 END
@@ -142,7 +140,6 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130101325.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1760705194552-->
 
 END
@@ -162,7 +159,6 @@ Back:
 ✅ *Open/Closed Principle*. You can introduce new variants of products without breaking existing client code.
 
 ❌ The code may become more complicated than it should be, since a lot of new interfaces and classes are introduced along with the pattern.
-
 <!--ID: 1760705194555-->
 
 END
@@ -241,7 +237,6 @@ Having a director class in your program isn’t strictly necessary. You can alwa
 In addition, the director class completely hides the details of product construction from the client code. The client only needs to associate a builder with a director, launch the construction with the director, and get the result from the builder.
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1760705194558-->
 
 END

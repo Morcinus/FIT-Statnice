@@ -128,6 +128,10 @@ Back:
 - $m = 10$
 - $e = 5$
 
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260520121248.png)
+<!-- DetailInfoEnd -->
+
 Tags: core
 <!--ID: 1778786397375-->
 END
@@ -148,6 +152,10 @@ Back:
 
 - $m = 23$
 - $e = 8$
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260520121248.png)
+<!-- DetailInfoEnd -->
 
 Tags: core
 <!--ID: 1778786397378-->
@@ -170,6 +178,10 @@ Back:
 - $m = 52$
 - $e = 11$
 
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260520121248.png)
+<!-- DetailInfoEnd -->
+
 Tags: core
 <!--ID: 1778786397380-->
 END
@@ -186,9 +198,15 @@ NI-SZZ
 
 Pokud $e = 2^d-1$ a $m \neq 0$, tak $x = \ ?$
 
+($d$ je délka exponentu)
+
 Back:
 
 $$x = \text{NaN}$$
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260520121248.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1778786397383-->
 END
 
@@ -204,9 +222,15 @@ NI-SZZ
 
 Pokud $e = 2^d-1$ a $m = 0$, tak $x = \ ?$
 
+($d$ je délka exponentu)
+
 Back:
 
 $$x = (-1)^s \cdot \text{Inf}$$
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260520121248.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1778786397386-->
 END
 
@@ -222,11 +246,24 @@ NI-SZZ
 
 Pokud $0 <e < 2^d-1$, tak $x = \ ?$
 
+($d$ je délka exponentu)
+
 Back:
 
 $$x = (-1)^s \cdot (1.m_2)_2 \cdot 2^{e-b}$$
 
 (tzv. **normalizovaná čísla**)
+
+$(m_2)_2$ je délka $m$
+$b$ je posun toho exponentu
+
+<!-- ExplanationStart -->
+To $1.$ před mantisou znamená, že tam vždy budeme mít **skrytou jedničku**, která není součástí té mantisy.
+<!-- ExplanationEnd -->
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260520121248.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1778786397388-->
 END
 
@@ -246,7 +283,15 @@ Back:
 
 $$x = (-1)^s \cdot (0.m_2)_2 \cdot 2^{1-b}$$
 
-(tzv. **subnormální čísla**)
+(tzv. **subnormální čísla** - čísla co jsou extrémně malá a blízko nule)
+
+<!-- ExplanationStart -->
+To $0.$ před mantisou znamená, že tam máme velice malé číslo. To se používá pro extrémně malá čísla, která jsou blízko nule.
+<!-- ExplanationEnd -->
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260520121248.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1778786397391-->
 END
 
@@ -265,6 +310,9 @@ Pokud $e = 0$ a $m = 0$, tak $x = \ ?$
 Back:
 
 $$x = (-1)^s \cdot 0$$
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260520121248.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1778786397393-->
 END
 
@@ -306,9 +354,9 @@ Co jsou **strojová čísla**?
 
 Back:
 
-Reálná čísla, která lze reprezentovat podle standardu IEEE-754 (znaménko, mantisa, exponent) se nazývají **strojová čísla**.
+Reprezentace **reálných čísel** ve podle standardu standardu IEEE-754 (znaménko, mantisa, exponent) se nazývají **strojová čísla**.
 
-Tzn. jsou to reálná čísla, co mají **konečný** binární rozvoj.
+Pozor, fakticky strojová čísla jsou **racionální čísla**, tedy čísla, která lze zapsat formou zlomku. Nepatří do nich tedy například $\sqrt{2}, \pi, \dots$
 
 <!-- ExampleStart -->
 
@@ -365,14 +413,16 @@ Back:
 
 Zobrazení $\mathbb{R} \rightarrow F$, které přiřadí každému $x \in \mathbb{R}$ "nejbližší" strojové číslo.
 
+$F$ je množina strojových čísel
+
 <!-- DetailInfoStart -->
 
-Nejbližší je určeno podle vybrané strategie:
-
+Nejbližší strojové číslo je určeno podle vybrané strategie:
 - k nejbližšímu
 - k $\pm$ nekonečnu
 - náhodně
 - usekávání (zaokrouhlování směrem k nule)
+
   <!-- DetailInfoEnd -->
 <!--ID: 1778786397404-->
 END
@@ -411,6 +461,12 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020241113113306.png)
 
+<!-- ExplanationStart -->
+**Absolutní chyba** = o kolik se mýlíme oproti těm reálným číslům
+**Relativní chyba** = o kolik se mýlíme oproti reálným číslům vzhledem k velikosti toho čísla (tzn. je to jakoby v procentech)
+<!-- ExplanationEnd -->
+
+
 <!-- ExerciseStart -->
 
 ![](../../Assets/Pasted%20image%2020241113113335.png)
@@ -429,17 +485,54 @@ START
 NI-SZZ
 
 
-Co je **zaokrouhlovací jednotka**?
+Co je **zaokrouhlovací jednotka**? Jak ji vyjádříme (když zaokrouhlujeme směrem k nule)?
 
 Back:
 
+Značí se $\textbf{u}$ a říká nám, jak velká chyba vznikne, když zaokrouhlíme na nejbližší strojové číslo (v tomto případě směrem k nule).
+
+$$\textbf{u}=2^{-23}$$
+
+**Jak ji vyjádříme:**
+
+Když zapíšeme reálné číslo takto:
+![](../../Assets/Pasted%20image%2020260520123646.png)
+
+Tedy $x=(1.m_1m_2m_3,\dots)_2\cdot2^l$
+
+Zaokrouhlení provedeme směrem k nule "useknutím" bitů co přesahují délku signifikandu $\text{fl}(x)=(1.m_1m_2m_3\dots m_{23})_2\cdot 2^l$
+
+Zaokrouhlovací jednotka je pak **mez** definovaná takto:
 ![](../../Assets/Pasted%20image%2020241113113706.png)
-![](../../Assets/Pasted%20image%2020241113113721.png)
-![](../../Assets/Pasted%20image%2020241113113731.png)
+
+Pozn. délka $m$ je v tomto případě $23$, tedy používáme jednoduchou přesnost 
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260520124455.png)
+<!-- DetailInfoEnd -->
+
 <!--ID: 1778786397413-->
 END
 
 ---
+
+
+START
+FIT-Card
+
+Jak by byla velká zaokrouhlovací jednotka pokud bychom zaokrouhlovali směrem k nejbližšímu číslu (a ne k nule)?
+
+Back:
+
+$$\textbf{u}=2^{-24}$$
+
+Za předpokladu, že délka $m$ je $23$, tedy používáme jednoduchou přesnost 
+
+<!--ID: 1779274147517-->
+END
+
+---
+
 
 <!--
 Original Flashcard ID: 1735205749544

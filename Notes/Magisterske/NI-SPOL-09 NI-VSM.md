@@ -924,7 +924,6 @@ Jinými slovy:
 - my tímto vytvoříme markovský řetězec se spojitým časem, kde doba dalšího skoku je vždy určena Poissonovým rozdělením 
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1778521859569-->
 
 END
