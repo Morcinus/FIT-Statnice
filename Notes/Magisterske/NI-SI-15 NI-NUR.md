@@ -26,6 +26,7 @@ Back:
 - **Cognitive walktrough** - projde se to UI
 - **Collaborative critiquing** - kritizuje se brainstormingem
 - **Heuristic evaluation** - herustiky
+
 <!--ID: 1778682875145-->
 END
 
@@ -49,6 +50,7 @@ Back:
 	- **Nevýhoda**: neodhalíme podrobnější chyby, spíše obecnou cestu při řešení problému
 
 (zdroj: 09 Jaké jsou metody **kvalitativního** usability testování?)
+
 <!--ID: 1778682875148-->
 END
 
@@ -69,6 +71,7 @@ Provádí to **experti** - designeři, UX specialisté, kteří znají heuristik
 Nepoužívají se na testování skuteční uživatelé.
 
 (zdroj: AI + Honzův mozek)
+
 <!--ID: 1778682875150-->
 END
 
@@ -97,6 +100,7 @@ Pozn. ty jednotlivé otázky jsme si neříkali.
 Provádí se na prototypu nebo reálné aplikaci.
 
 (zdroj: 09 Jak funguje **kognitivní průchod**?; Na čem se provádí Kognitivní průchod? + https://www.nngroup.com/articles/cognitive-walkthroughs/)
+
 <!--ID: 1778682875153-->
 END
 
@@ -121,6 +125,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020251029154052.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682875156-->
 END
 
@@ -138,6 +143,7 @@ Na čem se provádí Kognitivní průchod?
 Back:
 
 Na mockupu (prototypu) nebo reálné aplikaci
+
 <!--ID: 1778682875159-->
 END
 
@@ -170,6 +176,7 @@ Nielsen Norman Group zadefinovali 10 heuristik (principů, co by mělo UI splňo
 - Help and Documentation
 
 (zdroj: 04 Co je **heuristická analýza**?)
+
 <!--ID: 1778682875162-->
 END
 
@@ -188,6 +195,7 @@ Back:
 
 - Na prototypu
 - Dobré dělat v průběhu design procesu neformálně (jen si řeknu "splňuju tuhle heuristiku"?)
+
 <!--ID: 1778682875165-->
 END
 
@@ -216,6 +224,7 @@ Back:
 - Řekneme nějaký cíl, co má uživatel udělat
 - Zkoumáme, jakým způsobem se dostane k cíli
 - **Výhoda:** odhalíme větší chyby v použitelnosti systému
+
 <!--ID: 1778682875168-->
 END
 
@@ -233,6 +242,7 @@ Jaké jsou nevýhody testování bez uživatelů?
 Back:
 
 - Nepozoruju reálné uživatele, **testeři často mají už nějakou znalost** systému, není tak přesné
+
 <!--ID: 1778682875171-->
 END
 
@@ -270,6 +280,7 @@ Příklad otázek v průběhu vyhodnocování na Alze:
 
 
 (zdroj: 09 Jak funguje **heuristická evaluace**?)
+
 <!--ID: 1778682875174-->
 END
 
@@ -290,6 +301,7 @@ Podle Nielsen Group je ideální počet expertů pro heuristickou evaluaci 3-5. 
 Jde o to, že čím více testerů mám, tím více se překrývají jejich poznatky a tím více plýtvám zdroji.
 
 (zdroj: AI + Honzův mozek)
+
 <!--ID: 1778682875177-->
 END
 
@@ -316,6 +328,7 @@ Back:
 - **Estetický a minimalistický design**
 - **Help users recognize, diagnose and recover from errors**
 - **Help and Documentation**
+
 <!--ID: 1778682875180-->
 END
 
@@ -340,6 +353,7 @@ progress bary, loading, ...
 ![](../../Assets/Pasted%20image%2020251006135035.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682875183-->
 END
 
@@ -366,6 +380,7 @@ Např. když dávám ikonu nebo obrázek k nějakému komponentu, tak by měl od
 ![](../../Assets/Pasted%20image%2020251029161128.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682875186-->
 END
 
@@ -390,6 +405,7 @@ Např. že uživatel může prozkoumávat software, aniž by si něco totálně 
 ![](../../Assets/Pasted%20image%2020251006135352.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682875189-->
 END
 
@@ -414,6 +430,7 @@ Např. standardy ohledně accessibility
 ![](../../Assets/Pasted%20image%2020251006135257.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682875191-->
 END
 
@@ -438,6 +455,7 @@ Např. neumožňím uživateli zadávat nevalidní věci do formuláře, aby nen
 ![](../../Assets/Pasted%20image%2020251006135435.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682875194-->
 END
 
@@ -464,6 +482,7 @@ Uživatel by na první pohled měl vidět, co to dělá a neměl by přemýšlet
 ![](../../Assets/Pasted%20image%2020251006135610.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682875197-->
 END
 
@@ -488,6 +507,7 @@ Jestli je možný to provozovat na daném zařízení uživatele a že mu to nev
 ![](../../Assets/Pasted%20image%2020251006135700.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682875200-->
 END
 
@@ -512,6 +532,7 @@ UI by mělo být jednoduchý
 ![](../../Assets/Pasted%20image%2020251006135933.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682875203-->
 END
 
@@ -536,6 +557,7 @@ Uživatel by měl chápat, proč něco nefunguje - říct mu, proč to nefunguje
 ![](../../Assets/Pasted%20image%2020251006140008.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682875206-->
 END
 
@@ -562,6 +584,7 @@ Např. tooltipy, kontextová nápověda apod.
 ![](../../Assets/Pasted%20image%2020251006140115.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682875209-->
 END
 
@@ -587,6 +610,7 @@ Ve sloupcích:
 
 ![](../../Assets/Pasted%20image%2020251006141034.png)
 ![](../../Assets/Pasted%20image%2020251006141108.png)
+
 <!--ID: 1778682875212-->
 END
 
@@ -605,6 +629,7 @@ Back:
 Usability testing je proces testování uživatelského rozhraní (s uživateli nebo bez nich) za účelem zjištění, jak snadno a efektivně se systém používá.
 
 (zdroj: AI + Honzův mozek)
+
 <!--ID: 1778682875215-->
 END
 
@@ -635,6 +660,7 @@ Back:
 	- Jak dlouho trvá provedení určité akce
 - Výsledkem jsou čísla, sbírá se hodně dat
 - Používají se statistické metody
+
 <!--ID: 1778682875217-->
 END
 
@@ -657,6 +683,7 @@ Back:
 - **Používá se málo uživatelů** (stačí 7, víc už to bývá zbytečný dle Nielsen Norman Group)
 
 (zdroj: 09 Jak se liší **kvalitativní** a **kvantitativní** usability studie?)
+
 <!--ID: 1778682875220-->
 END
 
@@ -681,6 +708,7 @@ Back:
 - **Používají se statistické metody na vyhodnocení**
 
 (zdroj: 09 Jak se liší **kvalitativní** a **kvantitativní** usability studie?)
+
 <!--ID: 1778682875223-->
 END
 
@@ -707,6 +735,7 @@ Back:
 - User survey
 - Ethnographic observations
 - Usability engineering
+
 <!--ID: 1778682875226-->
 END
 
@@ -727,6 +756,7 @@ Back:
 - **Usability engineering** - strukturované testování v aplikaci nebo na mockupu (to co jsme dělali)
 
 (zdroj: 09 Jaké jsou metody **kvalitativního** usability testování?)
+
 <!--ID: 1778682875229-->
 END
 
@@ -745,6 +775,7 @@ Back:
 Ethnographic observation je metoda testování, při které pozorujeme uživatele v jejich přirozeném prostředí, jak používají systém v reálných podmínkách. Pozorovatel sleduje chování uživatelů bez zásahu do jejich práce.
 
 (zdroj: AI)
+
 <!--ID: 1778682875232-->
 END
 
@@ -767,6 +798,7 @@ Tohle jsme prováděli v rámci cvičení.
 Používá se hi-fi prototyp nebo hotová appka.
 
 (zdroj: AI + Honzův mozek)
+
 <!--ID: 1778682875235-->
 END
 
@@ -789,6 +821,7 @@ Back:
 Pavlíček má myslím oblíbený vzdálený.
 
 (zdroj: 10 Kde lze dělat uživatelské testování?)
+
 <!--ID: 1778682875237-->
 END
 
@@ -811,6 +844,7 @@ Back:
 - **Hire typical group representants as personas** – oslovení lidí, kteří odpovídají definovaným personám vytvořeným ze sociologického výzkumu.
 
 (zdroj: AI)
+
 <!--ID: 1778682875240-->
 END
 
@@ -845,6 +879,7 @@ Pak když děláme testování, marketing, nové fičury, se můžeme řídit po
 
 
 (zdroj: Přednáška user interface testing)
+
 <!--ID: 1778682875243-->
 END
 
@@ -870,6 +905,7 @@ Screener je dotazník nebo sada otázek používaná k filtrování a výběru v
 
 
 (zdroj: AI)
+
 <!--ID: 1778682875249-->
 END
 
@@ -911,6 +947,7 @@ Možné otázky:
 <!-- DetailInfoEnd -->
 
 (zdroj: Přednáška User interface Testing)
+
 <!--ID: 1778682875254-->
 END
 
@@ -933,6 +970,7 @@ Ne více než 20-30 minut
 <!-- DetailInfoEnd -->
 
 (zdroj: Prezentace User Interface Testing)
+
 <!--ID: 1778682875257-->
 END
 
@@ -954,6 +992,7 @@ Je třeba se zeptat:
 1. **Co se mi líbí?** - to si lidi pamatují méně, proto je třeba se na to zeptat první
 2. **Co se mi nelíbí?** - tohle si lidi pamatují dobře, takže na to se zeptat později
 3. **Doporučení** - co by se mělo zlepšit
+
 <!--ID: 1778682875260-->
 END
 
@@ -971,6 +1010,7 @@ Jaké prostředí bych měl vytvořit při usability study?
 Back:
 
 Přátelské prostředí, aby se ten uživatel "cítil jako doma", neměl by se cítit, že mu koukám přes rameno.
+
 <!--ID: 1778682875263-->
 END
 
@@ -988,6 +1028,7 @@ Jak dlouhá by měla maximálně být usability studie s uživatelem?
 Back:
 
 Maximálně tak 40 minut procházení scénářů. Celkem tak stojí max 1,5h.
+
 <!--ID: 1778682875266-->
 END
 
@@ -1007,6 +1048,7 @@ Back:
 **Optimální číslo je podle Pavlíčka 8**, víc rozhodně ne. Podle Nielsna 5.
 
 ![](../../Assets/Pasted%20image%2020251029155353.png)
+
 <!--ID: 1778682875269-->
 END
 
@@ -1024,6 +1066,7 @@ Měl bych se ptát lidí na otázky typu co se jim líbilo nebo nelíbilo po ka�
 Back:
 
 Až na konci. Je to hlavně z časových důvodů.
+
 <!--ID: 1778682875272-->
 END
 
@@ -1049,6 +1092,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020251029175445.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778682875275-->
 END
 
@@ -1074,6 +1118,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020251029172919.png)
 
 <!-- ImageEnd -->
+
 <!--ID: 1778682875278-->
 END
 
@@ -1101,6 +1146,7 @@ Tzn. ty lidi třeba začnou diskutovat, že se jim něco nelíbí a že by to po
 ![](../../Assets/Pasted%20image%2020251029172907.png)
 
 <!-- ImageEnd -->
+
 <!--ID: 1778682875281-->
 END
 
@@ -1127,6 +1173,7 @@ To všechno bývá typicky nahráváno
 <!-- DetailInfoEnd -->
 
 (zdroj: Prezentace User Interface Testing)
+
 <!--ID: 1778682875284-->
 END
 
@@ -1161,6 +1208,7 @@ Back:
 <!-- DetailInfoEnd -->
 
 (zdroj: Prezentace User Interface Testing)
+
 <!--ID: 1778682875287-->
 END
 
@@ -1178,6 +1226,7 @@ Jak se dají používat **eye trackingový metody**?
 Back:
 
 Vytváří se heatmapy na obrazovce, díky tomu pak člověk pozná např. kam se lidi na obrazovce nejvíce dívají a kde by cca mohl být problém (nepoužívá se to tolik často)
+
 <!--ID: 1778682875290-->
 END
 
@@ -1196,6 +1245,7 @@ Back:
 Pomocí eye trackingový metody nebo pomocí sledování kurzoru myši se vytváří heatmapy na obrazovce, díky tomu pak člověk pozná např. kam se lidi na obrazovce nejvíce dívají a kde by cca mohl být problém (nepoužívá se to tolik často)
 
 (zdroj: 09 Jak se dají používat **eye trackingový metody**?)
+
 <!--ID: 1778682875293-->
 END
 
@@ -1219,6 +1269,7 @@ AI GENERATED ODPOVĚĎ:
 - **pomocí eye tracking také pohyby očí a místa**, kam se uživatelé dívají na obrazovce
 
 (zdroj: AI)
+
 <!--ID: 1778682875296-->
 END
 
@@ -1239,6 +1290,7 @@ Back:
 Navíc Heat maps vychází téměř vždy všude (většina lidí čte zleva doprava a skenují stránky ve tvaru písmene Z nebo F), takže to moc nemá cenu dělat
 
 (zdroj: AI + Honzův mozek)
+
 <!--ID: 1778682875299-->
 END
 

@@ -30,6 +30,7 @@ Je "samoopravující se", v každém kroku se řešení zlepší víc, než se z
 ![](../../Assets/Pasted%20image%2020241221134409.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778786397329-->
 END
 
@@ -53,6 +54,7 @@ Back:
 - chyba **dat** - vstupní data nejsou přesná
 - chyba **algoritmu** - nemusíme mít algoritmus, který v konečném počtu kroků najde přesné řešení
 - **zaokrouhlovací** chyba - při výpočtu dochází k chybám (např. při aritmetických operacích)
+
 <!--ID: 1778786397366-->
 END
 
@@ -81,6 +83,7 @@ $$x = \pm \textcolor{Cerulean}q \cdot2^\textcolor{Orange}e$$
 ![](../../Assets/Pasted%20image%2020241113111445.png)
 
 <!-- ExplanationEnd -->
+
 <!--ID: 1778786397369-->
 END
 
@@ -108,6 +111,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241113111846.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778786397372-->
 END
 
@@ -133,6 +137,7 @@ Back:
 <!-- DetailInfoEnd -->
 
 Tags: core
+
 <!--ID: 1778786397375-->
 END
 
@@ -158,6 +163,7 @@ Back:
 <!-- DetailInfoEnd -->
 
 Tags: core
+
 <!--ID: 1778786397378-->
 END
 
@@ -183,6 +189,7 @@ Back:
 <!-- DetailInfoEnd -->
 
 Tags: core
+
 <!--ID: 1778786397380-->
 END
 
@@ -207,6 +214,7 @@ $$x = \text{NaN}$$
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020260520121248.png)
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778786397383-->
 END
 
@@ -231,6 +239,7 @@ $$x = (-1)^s \cdot \text{Inf}$$
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020260520121248.png)
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778786397386-->
 END
 
@@ -264,6 +273,7 @@ To $1.$ před mantisou znamená, že tam vždy budeme mít **skrytou jedničku**
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020260520121248.png)
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778786397388-->
 END
 
@@ -292,6 +302,7 @@ To $0.$ před mantisou znamená, že tam máme velice malé číslo. To se použ
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020260520121248.png)
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778786397391-->
 END
 
@@ -313,6 +324,7 @@ $$x = (-1)^s \cdot 0$$
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020260520121248.png)
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778786397393-->
 END
 
@@ -337,6 +349,7 @@ Neukládáme první jedničku v mantise, protože je jasné, že tam musí být.
 ![](../../Assets/Pasted%20image%2020241113112321.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778786397396-->
 END
 
@@ -364,6 +377,7 @@ Pozor, fakticky strojová čísla jsou **racionální čísla**, tedy čísla, k
 ![](../../Assets/Pasted%20image%2020241113112534.png)
 
 <!-- ExampleEnd -->
+
 <!--ID: 1778786397399-->
 END
 
@@ -394,6 +408,7 @@ Neformálně "jak velké jsou mezery mezi čísly" na té reálné ose, kterou u
 ![](../../Assets/Pasted%20image%2020241113112923.png)
 
 <!-- ExplanationEnd -->
+
 <!--ID: 1778786397402-->
 END
 
@@ -424,6 +439,7 @@ Nejbližší strojové číslo je určeno podle vybrané strategie:
 - usekávání (zaokrouhlování směrem k nule)
 
   <!-- DetailInfoEnd -->
+
 <!--ID: 1778786397404-->
 END
 
@@ -442,6 +458,7 @@ Co je **přetečení a podtečení**?
 Back:
 
 Pokud chci reprezentovat číslo mimo rozsah, dochází k **přetečení** nebo **podtečení**.
+
 <!--ID: 1778786397407-->
 END
 
@@ -472,6 +489,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241113113335.png)
 
 <!-- ExerciseEnd -->
+
 <!--ID: 1778786397410-->
 END
 
@@ -547,6 +565,7 @@ Tvrzení: $\text{fl}(x) = \ ?$
 Back:
 
 ![](../../Assets/Pasted%20image%2020241113113814.png)
+
 <!--ID: 1778786397416-->
 END
 
@@ -578,6 +597,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241113114339.png)
 
 <!-- ExampleEnd -->
+
 <!--ID: 1778786397419-->
 END
 
@@ -614,6 +634,7 @@ Jak se mu vyhnout:
 ![](../../Assets/Pasted%20image%2020241113115123.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778786397421-->
 END
 
@@ -660,6 +681,7 @@ Značení:
 ![](../../Assets/Pasted%20image%2020241221143245.png)
 
 <!-- DetailInfoEnd -->
+
 <!--ID: 1778786397426-->
 END
 
@@ -694,6 +716,7 @@ Máme teoretický ($V$) a naimplementovaný algoritmus ($V^*)$ a chci je porovna
 $d$ je nějaký vstup
 
 <!-- ExplanationEnd -->
+
 <!--ID: 1778786397429-->
 END
 
@@ -724,6 +747,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241221133521.png)
 
 <!-- ImageEnd -->
+
 <!--ID: 1778786397432-->
 END
 
@@ -812,6 +836,7 @@ Když $C_r \gg 1$, tak to znamená, že malinká chyba na vstupu může způsobi
 ![](../../Assets/Pasted%20image%2020241221134456.png)
 
 <!-- ExampleEnd -->
+
 <!--ID: 1778786397437-->
 END
 
@@ -873,6 +898,7 @@ Podobně jako norma vektoru nám říká "jak moc je velký vektor", tak maticov
 ![](../../Assets/Pasted%20image%2020241221134956.png)
 
 <!-- ExampleEnd -->
+
 <!--ID: 1778786397442-->
 END
 
@@ -899,6 +925,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241221135305.png)
 
 <!-- ExampleEnd -->
+
 <!--ID: 1778786397445-->
 END
 

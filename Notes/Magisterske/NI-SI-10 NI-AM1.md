@@ -23,6 +23,7 @@ Co je **integrační middleware**?
 Back:
 
 - Slouží k propojování aplikací umožňující výměnu a sdílení schopností (capabilities) – konkrétně informace a funkce
+
 <!--ID: 1773945940629-->
 END
 
@@ -42,6 +43,7 @@ Schopnost, aby si dva systémy rozuměly.
 - Data – syntaxe/struktura a sémantika
 - Funkce/procesy – syntaxe a sémantika
 - Technické aspekty – protokoly, síťové adresy atd.
+
 <!--ID: 1778786460867-->
 END
 
@@ -60,6 +62,7 @@ Back:
 
 - **Java** a **XML** je nejpoužívanější ve **velkých organizacích**, je to už trošičku přežitek
 - U nových systémů se používá **JSON** a **modernější programovací jazyky**
+
 <!--ID: 1773945940632-->
 END
 
@@ -80,8 +83,8 @@ Back:
 - **Sémantika** - jak konkrétně vypadá struktura XML/JSONu pro daný problém
 
 **Syntax** mi jasně definuje ten standard, **sémantiku** si musím zadefinovat sám např. pomocí **RDFS** nebo **JSONSchema**.
-<!--ID: 1773945940635-->
 
+<!--ID: 1773945940635-->
 END
 
 ---
@@ -100,8 +103,8 @@ Back:
 **RDFS** (Resource Description Framework Schema):
 
 Standard (jazyk), který je nadstavbou **RDF** a umožňuje mi jasně definovat **sémantiku** XML a JSONu.
-<!--ID: 1773945940638-->
 
+<!--ID: 1773945940638-->
 END
 
 ---
@@ -125,8 +128,8 @@ Každý interface má:
 - **technický detaily** (např. endpoint, ip adresa, atd.)
 
 ![](../../Assets/Pasted%20image%2020240930104053.png)
-<!--ID: 1773945940641-->
 
+<!--ID: 1773945940641-->
 END
 
 ---
@@ -165,8 +168,8 @@ Problém je, že **není moc vynucovacích prostředků** na ten **proces**. Nap
 Je to podobný jako u **sémantiky u JSONu a XML**. Tam mě taky nic nenutí modelovat ten soubor určitým způsobem, ale někde bych to měl mít zapsaný, abych to modeloval podle toho.
 
 <!-- ExplanationEnd -->
-<!--ID: 1773945940645-->
 
+<!--ID: 1773945940645-->
 END
 
 ---
@@ -198,8 +201,8 @@ Např.
 ![](../../Assets/Pasted%20image%2020240930104117.png)
 
 <!-- DetailInfoEnd -->
-<!--ID: 1773945940648-->
 
+<!--ID: 1773945940648-->
 END
 
 ---
@@ -220,8 +223,8 @@ Back:
 - **Dominantní techologie** - např. když oracle dominuje market, tak se to typicky bude dělat podle nich
 
 Co nejvíce bych se měl opírat o globální **standardy**. Neměl bych si vymýšlet něco svýho.
-<!--ID: 1773945940651-->
 
+<!--ID: 1773945940651-->
 END
 
 ---
@@ -240,6 +243,7 @@ Back:
 - **škálovatelnost** - messaging servers, load balancers, proxy serves
 - **functional** - integrace (propojování) severů a částí aplikace, repozitáře,...
 - **security** - firewally, gateways,...
+
 <!--ID: 1773945940654-->
 END
 
@@ -265,8 +269,8 @@ Back:
 ![](../../Assets/Pasted%20image%2020241014172119.png)
 
 <!-- ImageEnd -->
-<!--ID: 1773945940658-->
 
+<!--ID: 1773945940658-->
 END
 
 ---
@@ -317,8 +321,8 @@ Kdy takový stav může například nastat:
 ![](../../Assets/Pasted%20image%2020241014173734.png)
 
 <!-- ExplanationEnd -->
-<!--ID: 1773945940661-->
 
+<!--ID: 1773945940661-->
 END
 
 ---
@@ -353,8 +357,8 @@ Aplikace $A$ zavolá middleware, ten pak zavolá aplikaci $B$ a naopak.
 ![](../../Assets/Pasted%20image%2020241014174154.png)
 
 <!-- DetailInfoEnd -->
-<!--ID: 1773945940664-->
 
+<!--ID: 1773945940664-->
 END
 
 ---
@@ -377,8 +381,8 @@ Back:
 Tzn. synchronizuje např. dvě aplikace pomocí jejich APIs.
 
 <!-- InformallySaidEnd -->
-<!--ID: 1773945940668-->
 
+<!--ID: 1773945940668-->
 END
 
 ---
@@ -407,8 +411,8 @@ Tzn. synchronizuje dvě aplikace na úrovni datové vrstvy (tzn. jejich databáz
 Tato synchronizace přenáší **bulk data**, tzn velké množství dat, které nedává smysl přenášet přes klasická API (ta jsou dělaná pro malé množství dat).
 
 <!-- ExplanationEnd -->
-<!--ID: 1773945940671-->
 
+<!--ID: 1773945940671-->
 END
 
 ---
@@ -425,8 +429,8 @@ Poskytuje SOA **web services** nebo **ETL** integraci?
 Back:
 
 **Obojí**
-<!--ID: 1773945940674-->
 
+<!--ID: 1773945940674-->
 END
 
 ---
@@ -451,8 +455,8 @@ Proces, kdy se nějaká informace propíše pomocí integračního middlewaru do
 ![](../../Assets/Pasted%20image%2020241014180037.png)
 
 <!-- ImageEnd -->
-<!--ID: 1773945940677-->
 
+<!--ID: 1773945940677-->
 END
 
 ---
@@ -471,8 +475,8 @@ Back:
 Proces, co zkontroluje, jeslti jsou všechny systémy správně synchronizované.
 
 Tento proces se spouští například jednou za den.
-<!--ID: 1773945940681-->
 
+<!--ID: 1773945940681-->
 END
 
 ---
@@ -492,6 +496,7 @@ Back:
 - Pomocí integračních vzorů v ní můžu vytvářet integrační procesy.
 - Plní roli prostředníka (intermediary) v SOA
 - ESB aplikace - Typy služeb: sdílené a infrastruktura - Typy procesů: technické a businessové
+
 <!--ID: 1773945940684-->
 END
 
@@ -522,8 +527,8 @@ Další vzory:
 ![](../../Assets/Pasted%20image%2020241014180425.png)
 
 <!-- DetailInfoEnd -->
-<!--ID: 1773945940687-->
 
+<!--ID: 1773945940687-->
 END
 
 ---
@@ -543,8 +548,8 @@ Back:
 ![](../../Assets/Pasted%20image%2020260513195958.png)
 
 <!-- ImageEnd -->
-<!--ID: 1778786460870-->
 
+<!--ID: 1778786460870-->
 END
 
 ---
@@ -565,8 +570,8 @@ Back:
 ![](../../Assets/Pasted%20image%2020260513200044.png)
 
 <!-- ImageEnd -->
-<!--ID: 1778786460874-->
 
+<!--ID: 1778786460874-->
 END
 
 ---
@@ -586,8 +591,8 @@ Back:
 ![](../../Assets/Pasted%20image%2020260513200119.png)
 
 <!-- ImageEnd -->
-<!--ID: 1778786460877-->
 
+<!--ID: 1778786460877-->
 END
 
 ---
@@ -608,8 +613,8 @@ Back:
 ![](../../Assets/Pasted%20image%2020260513200153.png)
 
 <!-- ImageEnd -->
-<!--ID: 1778786460881-->
 
+<!--ID: 1778786460881-->
 END
 
 ---
@@ -628,8 +633,8 @@ Back:
 ![](../../Assets/Pasted%20image%2020260513200225.png)
 
 <!-- ImageEnd -->
-<!--ID: 1778786460884-->
 
+<!--ID: 1778786460884-->
 END
 
 ---
@@ -643,6 +648,7 @@ Back:
 
 - Mapování dat z jedné struktury do druhé
 - Řeší konverze mezi rozdílnými formáty
+
 <!--ID: 1778786460889-->
 END
 
@@ -663,8 +669,8 @@ Back:
 ![](../../Assets/Pasted%20image%2020260513200324.png)
 
 <!-- ImageEnd -->
-<!--ID: 1778786460897-->
 
+<!--ID: 1778786460897-->
 END
 
 ---
@@ -688,8 +694,8 @@ Back:
 ![](../../Assets/Pasted%20image%2020260513200513.png)
 
 <!-- ImageEnd -->
-<!--ID: 1778786460900-->
 
+<!--ID: 1778786460900-->
 END
 
 ---
@@ -722,8 +728,8 @@ Back:
 ![](../../Assets/Pasted%20image%2020241014182721.png)
 
 <!-- DetailInfoEnd -->
-<!--ID: 1778786460904-->
 
+<!--ID: 1778786460904-->
 END
 
 ---
@@ -737,8 +743,9 @@ Back:
 
 - Prostředník (Intermediary) = Komponenta, která odstraňuje závislost (decoupling) v klient-server komunikaci
 - Zvyšuje spolehlivost a výkon
-    - Server nemusí být dostupný, když klient odesílá požadavek
-    - Může zde být více serverů, které požadavky zpracovávají
+	- Server nemusí být dostupný, když klient odesílá požadavek
+	- Může zde být více serverů, které požadavky zpracovávají
+
 <!--ID: 1778786460907-->
 END
 
@@ -768,8 +775,8 @@ Máme prostředníka, co má u sebe dvě fronty (request queue a response queue)
 ![](../../Assets/Pasted%20image%2020241014183234.png)
 
 <!-- ImageEnd -->
-<!--ID: 1773945940693-->
 
+<!--ID: 1773945940693-->
 END
 
 ---
@@ -787,6 +794,7 @@ Back:
 
 - **Message Queue** - jeden klient, jeden server
 - **Publish/Subscribe** - jeden klient, z queue čte více serverů _(každý např. zaměřený na určitý task)_
+
 <!--ID: 1773945940697-->
 END
 
@@ -823,8 +831,8 @@ Back:
 ![](../../Assets/Pasted%20image%2020241014184223.png)
 
 <!-- DetailInfoEnd -->
-<!--ID: 1773945940700-->
 
+<!--ID: 1773945940700-->
 END
 
 ---
@@ -843,8 +851,8 @@ Back:
 Server si u sebe chvíli podrží ten request klienta, díky čemuž zamezí tomu, aby se furt klient dotazoval na status monitor.
 
 Tzn. server si tím reguluje zátěž, protože schválně na každý request odpoví po nějakém čase. Nicméně udržuje si pro každého klienta vlákno, které se v pravidelných časových intervalech probouzí.
-<!--ID: 1773945940703-->
 
+<!--ID: 1773945940703-->
 END
 
 ---
@@ -881,8 +889,8 @@ Problém:
 ![](../../Assets/Pasted%20image%2020241209101338.png)
 
 <!-- DetailInfoEnd -->
-<!--ID: 1773945940706-->
 
+<!--ID: 1773945940706-->
 END
 
 ---
@@ -909,8 +917,8 @@ Potom vytvořím tolik **vláken**. Můžu potom třeba udělat to, že budou m�
 Mám 20 requestů za sekundu, rozběhnu si 20 vláken, 1 thread pool do databáze s 20 vlákny.
 
 <!-- ExampleEnd -->
-<!--ID: 1773945940709-->
 
+<!--ID: 1773945940709-->
 END
 
 ---
@@ -933,8 +941,8 @@ Když se mi najednou zpomalí databáze (kterou já nemám pod kontrolou, ale sp
 Mohl bych teoreticky navýšit počet spojení do databáze, ale to nemůžu dělat neomezeně.
 
 <!-- DetailInfoEnd -->
-<!--ID: 1773945940712-->
 
+<!--ID: 1773945940712-->
 END
 
 ---
@@ -951,8 +959,8 @@ Jak se dá vyřešit to, když mám synchronní přístup do databáze ale ta da
 Back:
 
 Nastavím tam **timeout**. Díky tomu mi request vypadne s nějakou chybou a přestane to **blokovat** ostatní requesty.
-<!--ID: 1773945940716-->
 
+<!--ID: 1773945940716-->
 END
 
 ---
@@ -972,8 +980,9 @@ Back:
 2. Zařadí se do fronty (např. s kapacitou 100)
 3. Request čeká na to, až mu bude přiřazeno vlákno pro přístup do databáze.
 4. Pokud je kapacita fronty plná, rovnou se requesty odmítají (díky čemuž to je rychlejší, protože se nezatěžuje ten systém, když vím, že bych to stejně nestíhal zpracovávat)
- <!--ID: 1773945940719-->
- END
+
+<!--ID: 1773945940719-->
+END
 
 ---
 
@@ -1002,8 +1011,8 @@ Např.
 ![](../../Assets/Pasted%20image%2020241209101321.png)
 
 <!-- DetailInfoEnd -->
-<!--ID: 1773945940721-->
 
+<!--ID: 1773945940721-->
 END
 
 ---
@@ -1022,8 +1031,8 @@ Back:
 Na **outbound connections** umožňuje dělat asynchronní IO.
 
 Používají se k tomu callback funkce. Když vlákno dokončí operaci, zavolá mezitím jinou funkci.
-<!--ID: 1773945940725-->
 
+<!--ID: 1773945940725-->
 END
 
 ---
