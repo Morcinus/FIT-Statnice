@@ -71,7 +71,6 @@ Back:
 - **Prototype**
 - **Singleton**
 
-Tags: should-know N002F001
 <!--ID: 1760705194546-->
 
 END
@@ -117,7 +116,6 @@ There’s one more thing left to clarify: if the client is only exposed to the a
 
 <!-- ExplanationEnd -->
 
-Tags: should-know N002F002
 <!--ID: 1760705194549-->
 
 END
@@ -145,7 +143,6 @@ Back:
 
 <!-- ExampleEnd -->
 
-Tags: should-know N002F003
 <!--ID: 1760705194552-->
 
 END
@@ -166,7 +163,6 @@ Back:
 
 ❌ The code may become more complicated than it should be, since a lot of new interfaces and classes are introduced along with the pattern.
 
-Tags: should-know N002F004
 <!--ID: 1760705194555-->
 
 END
@@ -246,7 +242,6 @@ In addition, the director class completely hides the details of product construc
 
 <!-- ExplanationEnd -->
 
-Tags: should-know N002F005
 <!--ID: 1760705194558-->
 
 END
@@ -273,8 +268,6 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130103736.png)
 
 <!-- ExampleEnd -->
-
-Tags: should-know N002F006
 <!--ID: 1760705194561-->
 
 END
@@ -290,7 +283,6 @@ Back:
 
 - Pokud máme konstruktor s velkým množstvím parametrů 7+
 - Pokud máme ve třídě více konstruktorů, kde každý má jinou sadu parametrů a plní tvoří jinou část objektu
-
 <!--ID: 1778786460735-->
 END
 
@@ -310,8 +302,6 @@ Back:
 ✅ *Single Responsibility Principle*. You can isolate complex construction code from the business logic of the product.
 
 ❌ The overall complexity of the code increases since the pattern requires creating multiple new classes.
-
-Tags: should-know N002F007
 <!--ID: 1760705194564-->
 
 END
@@ -372,8 +362,6 @@ For example, both `Truck` and `Ship` classes should implement the `Transpor
 The code that uses the factory method (often called the *client* code) doesn’t see a difference between the actual products returned by various subclasses. The client treats all the products as abstract `Transport`. The client knows that all transport objects are supposed to have the `deliver` method, but exactly how it works isn’t important to the client.
 
 <!-- ExplanationEnd -->
-
-Tags: should-know N002F008
 <!--ID: 1760705194567-->
 
 END
@@ -402,8 +390,6 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130104130.png)
 
 <!-- ExampleEnd -->
-
-Tags: should-know N002F009
 <!--ID: 1760705194570-->
 
 END
@@ -438,8 +424,6 @@ Back:
 ✅ *Open/Closed Principle*. You can introduce new types of products into the program without breaking existing client code.
 
 ❌ The code may become more complicated since you need to introduce a lot of new subclasses to implement the pattern. The best case scenario is when you’re introducing the pattern into an existing hierarchy of creator classes.
-
-Tags: should-know N002F010
 <!--ID: 1760705194573-->
 
 END
@@ -482,8 +466,6 @@ An object that supports cloning is called a *prototype*. When your objects have
 Here’s how it works: you create a set of objects, configured in various ways. When you need an object like the one you’ve configured, you just clone a prototype instead of constructing a new object from scratch.
 
 <!-- ExplanationEnd -->
-
-Tags: should-know N002F011
 <!--ID: 1760705194576-->
 
 END
@@ -508,8 +490,6 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130104437.png)
 
 <!-- ExampleEnd -->
-
-Tags: should-know N002F012
 <!--ID: 1760705194578-->
 
 END
@@ -526,8 +506,6 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130104444.png)
 
 1. The **Prototype Registry** provides an easy way to access frequently-used prototypes. It stores a set of pre-built objects that are ready to be copied. The simplest prototype registry is a `name → prototype` hash map. However, if you need better search criteria than a simple name, you can build a much more robust version of the registry.
-
-Tags: should-know N002F013
 <!--ID: 1760705194581-->
 
 END
@@ -563,8 +541,6 @@ Back:
 ✅ You get an alternative to inheritance when dealing with configuration presets for complex objects.
 
 ❌ Cloning complex objects that have circular references might be very tricky.
-
-Tags: should-know N002F014
 <!--ID: 1760705194584-->
 
 END
@@ -613,8 +589,6 @@ All implementations of the Singleton have these two steps in common:
 If your code has access to the Singleton class, then it’s able to call the Singleton’s static method. So whenever that method is called, the same object is always returned.
 
 <!-- ExplanationEnd -->
-
-Tags: should-know N002F015
 <!--ID: 1760705194586-->
 
 END
@@ -633,8 +607,6 @@ Back:
 1. The **Singleton** class declares the static method `getInstance` that returns the same instance of its own class.
 
 The Singleton’s constructor should be hidden from the client code. Calling the `getInstance` method should be the only way of getting the Singleton object.
-
-Tags: should-know N002F016
 <!--ID: 1760705194589-->
 
 END
@@ -674,8 +646,6 @@ Back:
 ❌ The pattern requires special treatment in a multithreaded environment so that multiple threads won’t create a singleton object several times.
 
 ❌ It may be difficult to unit test the client code of the Singleton because many test frameworks rely on inheritance when producing mock objects. Since the constructor of the singleton class is private and overriding static methods is impossible in most languages, you will need to think of a creative way to mock the singleton. Or just don’t write the tests. Or don’t use the Singleton pattern.
-
-Tags: should-know N002F017
 <!--ID: 1760705194592-->
 
 END
@@ -699,8 +669,6 @@ Back:
 - **Multiton**
 - **Null object**
 - **Thread pool**
-
-Tags: should-know N002F018
 <!--ID: 1760705194594-->
 
 END
@@ -730,8 +698,6 @@ if(ins == null) {
 	mutex_unlock()
 }
 ```
-
-Tags: should-know N002F019
 <!--ID: 1760705194597-->
 
 END
@@ -750,8 +716,6 @@ Back:
 	- Jeden ani dva checky bez locku problém nevyřeší
 
 Proto je fajn to nejdřív checknout, potom locknout a potom checknout znovu.
-
-Tags: should-know N002F020
 <!--ID: 1760705194599-->
 
 END
@@ -781,8 +745,6 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130113831.png)
 
 <!-- ImageEnd -->
-
-Tags: should-know N002F021
 <!--ID: 1760705194602-->
 
 END
@@ -802,8 +764,6 @@ Back:
 	- Mock je jeden z tzv. Test Doubles
 
 ![](../../../Assets/Pasted%20image%2020250130113938.png)
-
-Tags: should-know N002F022
 <!--ID: 1760705194605-->
 
 END
@@ -821,8 +781,6 @@ Back:
 - **Usnadňuje testování** - některé situace jsou velice těžké na testování (network connection atd.)
 - **Když neexistuje implementace** - můžeme mocknout něco, co ještě neexistuje. Díky tomu můžeme vyvíjet bez dané části systému
 - **Když reálný objekt vrací nedeterministické výsledky** - např. čas, seed atd.
-
-Tags: should-know N002F023
 <!--ID: 1760705194608-->
 
 END
@@ -851,8 +809,6 @@ Díky tomu:
 ![](../../../Assets/Pasted%20image%2020250130114134.png)
 
 <!-- ImageEnd -->
-
-Tags: should-know N002F024
 <!--ID: 1760705194611-->
 
 END

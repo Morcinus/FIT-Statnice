@@ -49,8 +49,6 @@ This part of application is responsible for handling user’s input and updating
 This layer contains displaying logic. Typically it’s GUI but it doesn’t have to be. It could be just some interface user can communicate with.
 
 <!-- ExplanationEnd -->
-
-Tags: should-know N005F001
 <!--ID: 1760705194395-->
 
 END
@@ -71,8 +69,6 @@ Back:
 **Možnost 2:**
 **Model** zavolá update na **View**, když se změní. Toto používá typicky Observer pattern, kdy View observuje změny v Modelu.
 ![](../../../Assets/Pasted%20image%2020250130115146.png)
-
-Tags: should-know N005F002
 <!--ID: 1760705194398-->
 
 END
@@ -93,8 +89,6 @@ Back:
 ✅ We can have multiple **Views** for one **Model** and **Controller**.
 
 ❌ Tight coupling of **View** and **Controller**. That makes testing harder.
-
-Tags: should-know N005F003
 <!--ID: 1760705194400-->
 
 END
@@ -131,8 +125,6 @@ The Presenter is responsible to act as the middleman between View and Model. It 
 The only thing that the view will do is to call a method from the Presenter every time there is an interface action. It is only responsible for presenting data in a way decided by the presenter. The functionality of view is typically reduced to a minimum such as simple validation, and it’s made as a passive component, by moving the business logic to the presenter. The view is also shielded from the model by delegating all the interaction to happen through the middleman presenter.
 
 <!-- ExplanationEnd -->
-
-Tags: should-know N005F004
 <!--ID: 1760705194404-->
 
 END
@@ -152,8 +144,6 @@ Back:
 
 ![](../../../Assets/Pasted%20image%2020250130115309.png)
 ![](../../../Assets/Pasted%20image%2020250130115313.png)
-
-Tags: should-know N005F005
 <!--ID: 1760705194406-->
 
 END
@@ -180,8 +170,6 @@ Back:
 Oproti MVP je View "chytřejší" protože se samo updatuje a observuje změny v ViewModelu.
 
 ![](../../../Assets/Pasted%20image%2020250130115455.png)
-
-Tags: should-know N005F006
 <!--ID: 1760705194409-->
 
 END
@@ -209,8 +197,6 @@ This is example of **MVVM** how it is used in android programming.
 ![](../../../Assets/Pasted%20image%2020250130115556.png)
 
 <!-- ExampleEnd -->
-
-Tags: should-know N005F007
 <!--ID: 1760705194412-->
 
 END
@@ -230,8 +216,6 @@ Back:
 - Klient odesílá požadavek, který server zpracovává a odesílá odpověď
 
 ![](../../../Assets/Pasted%20image%2020250130115951.png)
-
-Tags: should-know N005F008
 <!--ID: 1760705194415-->
 
 END
@@ -256,8 +240,6 @@ Back:
 
 - Vyžaduje připojení k síti, což může přináše problémy s latencí
 - Server je Single point of Failure
-
-Tags: should-know N005F009
 <!--ID: 1760705194418-->
 
 END
@@ -274,8 +256,6 @@ Back:
 - Webové aplikace
 - Desktopové aplikace
 - Mobilní aplikace
-
-Tags: should-know N005F010
 <!--ID: 1760705194421-->
 
 END
@@ -405,8 +385,6 @@ Vysoká provázanost s Publish-subscribe architekturou
 ![](../../../Assets/Pasted%20image%2020250130124107.png)
 
 <!-- ExampleEnd -->
-
-Tags: should-know N005F011
 <!--ID: 1760705194424-->
 
 END
@@ -430,8 +408,6 @@ Back:
 
 - Nutnost správy další infrastruktury
 - V případě, že se jedná o synchronní komunikaci, tak je nutné spojovat požadavek a odpověď do jedné pseudosynchronní transakce
-
-Tags: should-know N005F012
 <!--ID: 1760705194428-->
 
 END
@@ -474,8 +450,6 @@ _StackOverflow is pretty much a Blackboard system, with developers as agents, sh
   ![](../../../Assets/Pasted%20image%2020250130124453.png)
 
 <!-- ExampleEnd -->
-
-Tags: should-know N005F013
 <!--ID: 1760705194431-->
 
 END
@@ -513,8 +487,6 @@ Back:
 - Kybernetická bezpečnost (SIEM a detekce hrozeb)
 - Kompilátory a moderní IDE – pracují nad jedním syntaktickým stromem
 - Uměla inteligence a experní systémy
-
-Tags: should-know N005F014
 <!--ID: 1760705194435-->
 
 END
@@ -643,8 +615,6 @@ Back:
 - **Subscriber** - může se u middlewaru zaregistrovat tak, aby přijímal určité typy zpráv
 
 ![](../../../Assets/Pasted%20image%2020250130124958.png)
-
-Tags: should-know N005F017
 <!--ID: 1760705194443-->
 
 END
@@ -668,8 +638,6 @@ Back:
 
 - Každý publisher a subscriber o sobě sdílí meta-data přes IP multicast (tzn. všichni o sobě vědí), tyto informace si každý publisher/subscriber cachuje
 - Podle meta-dat publisher rovnou posílá informace subscriberovi
-
-Tags: should-know N005F018
 <!--ID: 1760705194447-->
 
 END
@@ -723,8 +691,6 @@ Back:
 
 - **Potvrzování přijetí zpráv odběrateli:** (Řeší se, jakým způsobem odběratelé odesílají zpět potvrzení o úspěšném zpracování zprávy, aby ji broker mohl smazat).
 - **Omezená maximální škálovatelnost pub/sub sítě:** - **Nárazová zátěž (Load surges):** Období, kdy požadavky odběratelů (nebo nápor zpráv) zcela zahltí propustnost sítě, po kterých následují období s nízkým objemem zpráv (kdy je přenosová kapacita sítě naopak nevyužita). - **Zpomalování (Slowdowns):** S tím, jak systém využívá stále více aplikací (a to i v případě, že komunikují na zcela oddělených pub/sub kanálech), celkový objem a tok zpráv způsobí, že doručování dat k jednotlivému odběrateli se začne zpomalovat (z důvodu celkového zatížení centrální infrastruktury/brokera).
-
-Tags: should-know N005F020
 <!--ID: 1760705194453-->
 
 END
