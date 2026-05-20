@@ -591,11 +591,17 @@ START
 NI-SZZ
 
 
-Co je **krácení** v kontextu chyb?
+Co je **krácení** v kontextu chyb? Kdy nastává? Jak se mu vyhnout?
 
 Back:
 
-Tím že při výpočtu nemám dostatek cifer pro výpočet, tak je mantisa výsledku méně přesná.
+V průběhu výpočtu nám vyjde například $0.0049 \cdot 10^{-2}$, normalizujeme to tak, aby tam byla ta skrytá jednička (zde jsme v desítkové soustavě, takže ta $4$) a vyjde nám $4.9\textcolor{Red}{000} \cdot 10^{-2}$, což je ale špatně protože jsme tím ztratili ta poslední čísla. Takže pak když pokračujem ve výpočtu, tak už to je méně přesné.
+
+Kdy nastává: **při odečítání** (např $x-\sin{x}$)
+
+Jak se mu vyhnout:
+- **přeformulovat problém** tak aby se neodečítalo
+- místo funkcí **použít jim odpovídající řady** (např. Taylorovy řady)
 
 <!-- ExampleStart -->
 
@@ -620,20 +626,14 @@ Original Flashcard ID: 1735205749552
 START
 NI-SZZ
 
-
 Tvrzení: počet ztracených bitů při odečítání
-
-(pozn. tohle asi není tak důležitý umět)
 
 Back:
 
 ![](../../Assets/Pasted%20image%2020241113114919.png)
 
-<!-- ExplanationStart -->
-
 Říká nám to, kolik bitů ztratíme, když se stane **krácení**.
 
-<!-- ExplanationEnd -->
 <!--ID: 1778786397424-->
 END
 
@@ -729,6 +729,29 @@ END
 
 ---
 
+
+START
+FIT-Card
+
+Co znamená, že je algoritmus **zpětně stabilní**?
+
+Back:
+
+Že je pro všechny vstupy $d$ zpětná chyba relativně malá.
+
+("relativně malá" závisí na konkrétním případě)
+
+<!-- ImageStart -->
+
+![](../../Assets/Pasted%20image%2020241221133521.png)
+
+<!-- ImageEnd -->
+
+END
+
+---
+
+
 <!--
 Original Flashcard ID: 1735205749194
 -->
@@ -742,6 +765,11 @@ Definice: **podmíněnost** úlohy
 Back:
 
 ![](../../Assets/Pasted%20image%2020241221133641.png)
+
+Neboli jak moc se změní výstup, když změníme vstup.
+
+Pomocí relativního čísla podmíněnosti $C_r$ to můžeme vyjádřít
+
 <!--ID: 1778786397434-->
 END
 
@@ -761,13 +789,20 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020241221133656.png)
 
-Pozn. Toto číslo se spíš odhaduje, nepočítá se.
-
 <!-- ExplanationStart -->
+Vzoreček mi říká "jak moc se podělá výstup, když se poděláme vstup", neboli:
+$$\frac{\text{relativní chyba vstupu}}{\text{relativní chyba výstup}}$$
+při limitním zmenšováním těch chyb ve vstupu $\delta d$.
 
-Nahoře je relativní změna výstupu, dole je relativní změna vstupu. To pak porovnávám.
+**Vysvětlení jednotlivých částí**:
+- limita = zmenšujeme limitně ty vstupní chyby
+- supremum $||\delta d|| \leq \epsilon$ = vždy bereme tu _nejhorší velikost chyby_
+- $D$ je přípustná množina vstupů úlohy
 
-Např. do vstupu mi může jít výstup jiného algoritmu (už s chybou). Můžu pak srovnávat, jak se mi třeba změní výstup, když mám nějakou chybu ve vstupu.
+**Vysvětlení významu $C_r$**
+Když $C_r=1$, tak to znamená, že ten algoritmus je stabilní, protože malá chyba na vstupu bude mít za následek malou chybu výstupu
+
+Když $C_r \gg 1$, tak to znamená, že malinká chyba na vstupu může způsobit obří chybu na výstupu
 
 <!-- ExplanationEnd -->
 
@@ -795,6 +830,13 @@ Definice: **dobře a špatně podmíněná** úloha
 Back:
 
 ![](../../Assets/Pasted%20image%2020241221133722.png)
+
+<!-- ExplanationStart -->
+**dobře podmíněná** = výstup algoritmu se změní málo, pokud málo změníme vstup
+**špatně podmíněná** = výstup algoritmu se změní hodně, pokud málo změníme vstup
+<!-- ExplanationEnd -->
+
+
 <!--ID: 1778786397439-->
 END
 
@@ -808,11 +850,17 @@ START
 NI-SZZ
 
 
-Definice: přidružená maticová norma
+Definice: **přidružená maticová norma**
+
+(tohle asi nemusíme umět přesně, jen vědět co to znamená)
 
 Back:
 
+Podobně jako norma vektoru nám říká "jak moc je velký vektor", tak maticová norma nám říká to samé, ale v dalším rozměru, tedy "jak moc je velká matice".
+
 ![](../../Assets/Pasted%20image%2020241221134739.png)
+
+
 
 <!-- ExplanationStart -->
 
