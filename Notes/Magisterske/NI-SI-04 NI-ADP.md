@@ -20,8 +20,9 @@ Back:
 
 - Zaměřují se na algoritmy, rozdělení odpovědnosti mezi objekty a na to, jak spolu objekty komunikují.
 - Řeší, jak si objekty předávají zprávy, jak spolupracují na složitějších úlohách a jak je řízen tok programu (control flow).
-  <!--ID: 1778786460746-->
-  END
+
+<!--ID: 1778786460746-->
+END
 
 ---
 
