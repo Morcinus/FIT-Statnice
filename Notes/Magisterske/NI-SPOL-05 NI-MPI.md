@@ -510,7 +510,6 @@ Pozn. délka $m$ je v tomto případě $23$, tedy používáme jednoduchou přes
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020260520124455.png)
 <!-- DetailInfoEnd -->
-
 <!--ID: 1778786397413-->
 END
 
@@ -527,7 +526,6 @@ Back:
 $$\textbf{u}=2^{-24}$$
 
 Za předpokladu, že délka $m$ je $23$, tedy používáme jednoduchou přesnost 
-
 <!--ID: 1779274147517-->
 END
 
@@ -633,7 +631,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241113114919.png)
 
 Říká nám to, kolik bitů ztratíme, když se stane **krácení**.
-
 <!--ID: 1778786397424-->
 END
 
@@ -746,7 +743,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020241221133521.png)
 
 <!-- ImageEnd -->
-
+<!--ID: 1779289984127-->
 END
 
 ---
@@ -769,7 +766,6 @@ Back:
 Neboli jak moc se změní výstup, když změníme vstup.
 
 Pomocí relativního čísla podmíněnosti $C_r$ to můžeme vyjádřít
-
 <!--ID: 1778786397434-->
 END
 
@@ -836,7 +832,6 @@ Back:
 **špatně podmíněná** = výstup algoritmu se změní hodně, pokud málo změníme vstup
 <!-- ExplanationEnd -->
 
-
 <!--ID: 1778786397439-->
 END
 
@@ -886,11 +881,20 @@ START
 NI-SZZ
 
 
-Definice: číslo podmíněnosti
+Definice: **číslo podmíněnosti**
 
 Back:
 
 ![](../../Assets/Pasted%20image%2020241221135243.png)
+
+<!-- ExplanationStart -->
+**Číslo podmíněnosti** nám říká, jak moc se chyba ve vstupu zesílí ve výstupu. Je to velice podobné $C_r$. Číslo podmíněnosti je jakoby speciální případ pro úlohy typu $Ax=b$ (tedy soustavu rovnic).
+
+Podobně jako u $C_r$:
+- Když $\kappa(A) \approx 1$, pak se chyba skoro nezvětší
+- Když by to bylo výrazně větší, tak se ta chyba o dost zvětší na výstupu
+
+<!-- ExplanationEnd -->
 
 <!-- ExampleStart -->
 
