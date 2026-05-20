@@ -20,8 +20,8 @@ Back:
 
 - Návrhové vzory, které se zabývají tím, jak skládat třídy do komplexnějších struktur
 - Řeší jak jsou tyto objekty navzájem propojeny a jak spolupracují
-  <!--ID: 1778786460782-->
-  END
+<!--ID: 1778786460782-->
+END
 
 ---
 
