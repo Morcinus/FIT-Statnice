@@ -91,7 +91,7 @@ START
 NI-SZZ
 
 
-Jak se spočítá $T(n,p)$?
+Jak se spočítá $T(n,p)$? (obecně)
 
 Back:
 
@@ -118,6 +118,8 @@ Definice: **Paralelní cena**
 Back:
 
 ![](../../Assets/Pasted%20image%2020250217172611.png)
+
+Neboli doba, jak dlouho jsem vytěžoval všechny procesory.
 
 Pozn. to $\times$ je normální násobení
 
@@ -184,6 +186,8 @@ NI-SZZ
 Definice: **Cenová optimalita** (aneb kdy je **cena** paralelního algoritmu optimální)
 
 Back:
+
+![](../../Assets/Pasted%20image%2020260521115816.png)
 
 $C(n,p) = O(SU(n)) = \Theta(SU(n))$
 
