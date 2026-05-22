@@ -95,7 +95,7 @@ Jak se spočítá $T(n,p)$? (obecně)
 
 Back:
 
-Sečtou se **výpočetní** kroky a **komunikační** kroky.
+Sečtou se **výpočetní** kroky a **komunikační** kroky (jednoho vlákna)
 
 Tags: otazka03
 <!--ID: 1779300070414-->
@@ -155,7 +155,7 @@ START
 NI-SZZ
 
 
-Lemma: čemu je rovno $C(n,p)$
+Lemma: omezení $C(n,p)$
 
 Back:
 
@@ -589,11 +589,11 @@ Jaké jsou způsoby řešení časově závislých chyb u PRAMu? (3)
 Back:
 
 - **EREW-PRAM** - Exclusive Read, Exclusive Write
-  - Žádné 2 procesory nesmí číst nebo psát do dané buňky současně
+	- Žádné 2 procesory nesmí číst nebo psát do dané buňky současně
 - **CREW-PRAM** - Concurrent Read, Exclusive Write
-  - Procesory můžou současně číst buňku, ale zapisovat může jen jeden
+	- Procesory můžou současně číst buňku, ale zapisovat může jen jeden
 - **CRCW-PRAM** - Concurrent Read, Concurrent Write
-  - Procesory můžou číst i zapisovat do buňek současně
+	- Procesory můžou číst i zapisovat do buňek současně
 
 <!-- DetailInfoStart -->
 
@@ -725,14 +725,14 @@ Jaké jsou 2 možnosti implementace bariéry u APRAMu?
 
 Back:
 
-**Centrální čítač**
+**Centrální čítač** ($\Theta (dp)$)
 
 1. Nastaví se na $0$
-2. Každý proces inkementuje o $1$ a deaktivuje se
+2. Každý proces po dokončení výpočtu inkementuje o $1$ a deaktivuje se
 3. Pokud je $\text{čítač} \geq p$, nastaví bariéru do odchozí fáze a aktivuje procesy
 4. Poslední aktivovaý proces nastaví bariéru do příchozí fáze
 
-**Binární redukční strom**
+**Binární redukční strom** ($\Theta(d\log p)$)
 
 1. Proces narazí na bariéru a čeká, dokud skončí redukce jeho podstromu
 2. Po dokončení redukce pošle signál rodiči.
@@ -890,9 +890,9 @@ Z jakých podílů se skládá každý **sekvenční algoritmus**? (2)
 Back:
 
 - **inherentně sekvenční podíl** $f(s) \in (0,1)$ - může provést pouze jedno vlákno
-  - trvá $t_\text{seq}$ času
+	- trvá $t_\text{seq}$ času
 - **paralelizovatelný podíl** $1-f(s)$
-  - trvá $t_\text{par}$ času
+	- trvá $t_\text{par}$ času
 
 Tags: otazka04
 <!--ID: 1779300070491-->
@@ -933,6 +933,23 @@ Tags: otazka04
 END
 
 ---
+
+
+START
+FIT-Card
+
+Co nám obecně říká Amdahlův zákon? (vlastními slovy)
+
+Back:
+
+Pro problém fixní velikosti má omezené množství paralelismu ($\leq \frac{1}{f_s}$)
+
+Tzn. od určitého počtu procesorů to už nezrychlíme přidáváním dalších
+<!--ID: 1779449215690-->
+END
+
+---
+
 
 <!--
 Original Flashcard ID: 1746599653564
