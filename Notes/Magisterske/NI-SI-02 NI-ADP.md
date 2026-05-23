@@ -22,10 +22,11 @@ Návrhové vzory jsou typická řešení k běžně objevujícím se problémům
 
 <!-- DetailInfoStart -->
 
-- Vzor není specifický kód, který řeší nějaký konkrétní problém. Jedná se o něco, co je dobré následovat při návrhu řešení konkrétního typu problému.
-  <!-- DetailInfoEnd -->
-  <!--ID: 1778786460712-->
-  END
+Vzor není specifický kód, který řeší nějaký konkrétní problém. Jedná se o něco, co je dobré následovat při návrhu řešení konkrétního typu problému.
+
+<!-- DetailInfoEnd -->
+<!--ID: 1778786460712-->
+END
 
 ---
 
@@ -53,8 +54,8 @@ Back:
 
 - Návrhové vzory, které se zabývají mechanismy tvorby objektů
 - Hlavní myšlenkou je oddělit vytváření objektů od kódu, který tyto objekty využívá
-  <!--ID: 1778786460729-->
-  END
+<!--ID: 1778786460729-->
+END
 
 ---
 
@@ -71,7 +72,6 @@ Back:
 - **Prototype**
 - **Singleton**
 <!--ID: 1760705194546-->
-
 END
 
 ---
@@ -115,7 +115,6 @@ There’s one more thing left to clarify: if the client is only exposed to the a
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194549-->
-
 END
 
 ---
@@ -141,7 +140,6 @@ Back:
 
 <!-- ExampleEnd -->
 <!--ID: 1760705194552-->
-
 END
 
 ---
@@ -160,7 +158,6 @@ Back:
 
 ❌ The code may become more complicated than it should be, since a lot of new interfaces and classes are introduced along with the pattern.
 <!--ID: 1760705194555-->
-
 END
 
 ---
@@ -176,8 +173,8 @@ Back:
 	- Např. různé typy nepřátel
 	- Nechceme, aby kód závisel na konkrétních třídach, ale na rozhraních
 - Pokud máme třídu s několika Factory metodama, které znejasňují primární účel třídy. (SRP princip)
-  <!--ID: 1778786460732-->
-  END
+<!--ID: 1778786460732-->
+END
 
 ---
 
@@ -238,7 +235,6 @@ In addition, the director class completely hides the details of product construc
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194558-->
-
 END
 
 ---
@@ -264,7 +260,6 @@ Back:
 
 <!-- ExampleEnd -->
 <!--ID: 1760705194561-->
-
 END
 
 ---
@@ -298,7 +293,6 @@ Back:
 
 ❌ The overall complexity of the code increases since the pattern requires creating multiple new classes.
 <!--ID: 1760705194564-->
-
 END
 
 ---
@@ -358,7 +352,6 @@ The code that uses the factory method (often called the *client* code) doesn�
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194567-->
-
 END
 
 ---
@@ -386,7 +379,6 @@ Back:
 
 <!-- ExampleEnd -->
 <!--ID: 1760705194570-->
-
 END
 
 ---
@@ -400,8 +392,8 @@ Back:
 
 - Pokud na začátku nevíme přesnou specifikaci typů a jejich závislostí
 - Pokud tvoříme framework a chceme umožnit uživatelům upravit si chování jeho interních částí
-  <!--ID: 1778786460737-->
-  END
+<!--ID: 1778786460737-->
+END
 
 ---
 
@@ -420,7 +412,6 @@ Back:
 
 ❌ The code may become more complicated since you need to introduce a lot of new subclasses to implement the pattern. The best case scenario is when you’re introducing the pattern into an existing hierarchy of creator classes.
 <!--ID: 1760705194573-->
-
 END
 
 ---
@@ -462,7 +453,6 @@ Here’s how it works: you create a set of objects, configured in various ways. 
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194576-->
-
 END
 
 ---
@@ -486,7 +476,6 @@ Back:
 
 <!-- ExampleEnd -->
 <!--ID: 1760705194578-->
-
 END
 
 ---
@@ -502,7 +491,6 @@ Back:
 
 1. The **Prototype Registry** provides an easy way to access frequently-used prototypes. It stores a set of pre-built objects that are ready to be copied. The simplest prototype registry is a `name → prototype` hash map. However, if you need better search criteria than a simple name, you can build a much more robust version of the registry.
 <!--ID: 1760705194581-->
-
 END
 
 ---
@@ -515,8 +503,8 @@ Kdy použít **Prototype**?
 Back:
 
 - Pokud nechceme, aby náš kód závisel na konkrétních třídách objektů, které potřebuje zkopírovat
-  <!--ID: 1778786460740-->
-  END
+<!--ID: 1778786460740-->
+END
 
 ---
 
@@ -537,7 +525,6 @@ Back:
 
 ❌ Cloning complex objects that have circular references might be very tricky.
 <!--ID: 1760705194584-->
-
 END
 
 ---
@@ -585,7 +572,6 @@ If your code has access to the Singleton class, then it’s able to call the Sin
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194586-->
-
 END
 
 ---
@@ -603,7 +589,6 @@ Back:
 
 The Singleton’s constructor should be hidden from the client code. Calling the `getInstance` method should be the only way of getting the Singleton object.
 <!--ID: 1760705194589-->
-
 END
 
 ---
@@ -616,8 +601,8 @@ Kdy použít **Singleton**?
 Back:
 
 - Pokud chceme zajistit, že existuje pouze jedna instance třídy pro celou aplikaci
-  <!--ID: 1778786460743-->
-  END
+<!--ID: 1778786460743-->
+END
 
 ---
 
@@ -642,7 +627,6 @@ Back:
 
 ❌ It may be difficult to unit test the client code of the Singleton because many test frameworks rely on inheritance when producing mock objects. Since the constructor of the singleton class is private and overriding static methods is impossible in most languages, you will need to think of a creative way to mock the singleton. Or just don’t write the tests. Or don’t use the Singleton pattern.
 <!--ID: 1760705194592-->
-
 END
 
 ---
@@ -665,7 +649,6 @@ Back:
 - **Null object**
 - **Thread pool**
 <!--ID: 1760705194594-->
-
 END
 
 ---
@@ -694,7 +677,6 @@ if(ins == null) {
 }
 ```
 <!--ID: 1760705194597-->
-
 END
 
 ---
@@ -712,7 +694,6 @@ Back:
 
 Proto je fajn to nejdřív checknout, potom locknout a potom checknout znovu.
 <!--ID: 1760705194599-->
-
 END
 
 ---
@@ -741,7 +722,6 @@ Back:
 
 <!-- ImageEnd -->
 <!--ID: 1760705194602-->
-
 END
 
 ---
@@ -760,7 +740,6 @@ Back:
 
 ![](../../../Assets/Pasted%20image%2020250130113938.png)
 <!--ID: 1760705194605-->
-
 END
 
 ---
@@ -777,7 +756,6 @@ Back:
 - **Když neexistuje implementace** - můžeme mocknout něco, co ještě neexistuje. Díky tomu můžeme vyvíjet bez dané části systému
 - **Když reálný objekt vrací nedeterministické výsledky** - např. čas, seed atd.
 <!--ID: 1760705194608-->
-
 END
 
 ---
@@ -805,7 +783,6 @@ Díky tomu:
 
 <!-- ImageEnd -->
 <!--ID: 1760705194611-->
-
 END
 
 ---

@@ -30,7 +30,6 @@ Back:
 - Zvyšuje to výskyt bugů
 - Znemožňuje to efektivně dělat změny v kódu
 <!--ID: 1760705194617-->
-
 END
 
 ---
@@ -58,7 +57,6 @@ Například se dá kód rozpadnout do menších částí.
 
 <!-- ExampleEnd -->
 <!--ID: 1760705194619-->
-
 END
 
 ---
@@ -88,7 +86,6 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020260513100740.png)
 <!--ID: 1760705194622-->
-
 END
 
 ---
@@ -110,7 +107,6 @@ Back:
 - **Interface Segregation** = Klienti by neměli být nuceni záviset na metodách, které nepoužívají.
 - **Dependency Inversion** = High-level moduly by neměly záviset na low-level modulech. Obojí by mělo záviset na abstrakci.
 <!--ID: 1760705194625-->
-
 END
 
 ---
@@ -144,7 +140,6 @@ This principle aims to separate behaviours so that if bugs arise as a result of 
 
 <!-- DetailInfoEnd -->
 <!--ID: 1760705194627-->
-
 END
 
 ---
@@ -179,7 +174,6 @@ This principle aims to extend a Class’s behaviour without changing the existin
 
 <!-- DetailInfoEnd -->
 <!--ID: 1760705194630-->
-
 END
 
 ---
@@ -218,7 +212,6 @@ This principle aims to enforce consistency so that the parent Class or its child
 
 <!-- DetailInfoEnd -->
 <!--ID: 1760705194633-->
-
 END
 
 ---
@@ -253,7 +246,6 @@ This principle aims at splitting a set of actions into smaller sets so that a Cl
 
 <!-- DetailInfoEnd -->
 <!--ID: 1760705194636-->
-
 END
 
 ---
@@ -299,7 +291,6 @@ This principle aims at reducing the dependency of a high-level Class on the low-
 
 <!-- DetailInfoEnd -->
 <!--ID: 1760705194639-->
-
 END
 
 ---
@@ -322,7 +313,6 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020260513100922.png)
 <!--ID: 1760705194642-->
-
 END
 
 ---
@@ -343,7 +333,6 @@ Back:
 
 - Díky tomu se postupně zbavujeme tech debtu, aniž bychom museli stopnout veškerou práci a dělat obří refaktoring
 <!--ID: 1760705194644-->
-
 END
 
 ---
@@ -375,7 +364,6 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020260513101055.png)
 <!--ID: 1760705194647-->
-
 END
 
 ---
@@ -402,7 +390,6 @@ Např.
 
 - Systém je tak přehlednější, lépe se udržuje, debuguje atd.
 <!--ID: 1760705194650-->
-
 END
 
 ---
@@ -439,7 +426,6 @@ An object can call methods that are apart of:
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194652-->
-
 END
 
 ---
@@ -469,7 +455,6 @@ Místo toho bychom měli nejdříve vyvinout funkční kód, pak až zjistit, kt
 
 <!-- ExampleEnd -->
 <!--ID: 1760705194655-->
-
 END
 
 ---

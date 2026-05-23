@@ -27,7 +27,6 @@ Back:
 
 Tags: algebra4 core
 <!--ID: 1778786396972-->
-
 END
 
 ---
@@ -53,7 +52,6 @@ Back:
 
 Tags: algebra4 core
 <!--ID: 1778786396981-->
-
 END
 
 ---
@@ -75,7 +73,6 @@ Back:
 
 Tags: algebra4 core
 <!--ID: 1778786396983-->
-
 END
 
 ---
@@ -97,7 +94,6 @@ Je-li $\cdot$ komutativní, je $R$ **komutativní okruh**.
 
 Tags: algebra4
 <!--ID: 1778786396987-->
-
 END
 
 ---
@@ -119,7 +115,6 @@ $(M, +)$ se nazývá **aditivní grupa** okruhu $R$
 
 Tags: algebra4
 <!--ID: 1778786396990-->
-
 END
 
 ---
@@ -141,7 +136,6 @@ $(M, \cdot)$ se nazývá **multiplikativní monoid** okruhu $R$
 
 Tags: algebra4
 <!--ID: 1778786396992-->
-
 END
 
 ---
@@ -161,7 +155,6 @@ Neutrální prvek grupy $(M, +)$ se nazývá **nulový prvek** $0$
 
 Tags: algebra4
 <!--ID: 1778786396995-->
-
 END
 
 ---
@@ -181,7 +174,6 @@ Neutrální prvek multiplikativního monoidu $(M, \cdot)$ se nazývá **jedničk
 
 Tags: algebra4
 <!--ID: 1778786396998-->
-
 END
 
 ---
@@ -224,7 +216,6 @@ $$A \cdot B = 0, \quad  A \neq 0, \quad B \neq 0 $$
 
 Tags: algebra4 core
 <!--ID: 1778786397000-->
-
 END
 
 ---
@@ -257,7 +248,6 @@ $\mathbb{Z}_p$ kde $p$ je prvočíslo je např. konečné těleso, se kterým ne
 
 <!-- DetailInfoEnd -->
 <!--ID: 1778786397006-->
-
 END
 
 ---
@@ -283,7 +273,6 @@ Ne! Jakmile $n$ není prvočíslo, potom $\mathbb{Z}_n$ nemůže být těleso.
 
 Tags: core
 <!--ID: 1778786397009-->
-
 END
 
 ---
@@ -321,7 +310,6 @@ Máme prvočíslo $p$ a celé číslo $n \geq 2$ a chceme sestavit těleso o $p^
 
 <!-- ExerciseEnd -->
 <!--ID: 1778786397011-->
-
 END
 
 ---
@@ -359,7 +347,6 @@ Hledám $h(x)^{-1}, h(x) \in F$
 
 Tags: core
 <!--ID: 1778786397014-->
-
 END
 
 ---
@@ -379,7 +366,6 @@ $p^n$, kde $p$ je prvočíslo a $n$ je kladné celé číslo.
 
 ![](../../Assets/Pasted%20image%2020241221102012.png)
 <!--ID: 1778786397017-->
-
 END
 
 ---
@@ -399,7 +385,6 @@ Back:
 
 Protože musí mít řád $p^n$ kde $p$ je prvočíslo a $n$ je kladné celé číslo
 <!--ID: 1778786397019-->
-
 END
 
 ---
@@ -419,7 +404,6 @@ Back:
 
 Tags: core
 <!--ID: 1778786397022-->
-
 END
 
 ---
@@ -447,7 +431,6 @@ Back:
 
 Tags: algebra3 core
 <!--ID: 1778786397003-->
-
 END
 
 ---
@@ -470,7 +453,6 @@ Back:
 
 Tags: core
 <!--ID: 1778786397025-->
-
 END
 
 ---
@@ -495,7 +477,6 @@ Back:
 
 Tags: core
 <!--ID: 1778786397027-->
-
 END
 
 ---
@@ -519,7 +500,6 @@ Back:
 
 Tags: core
 <!--ID: 1778786397030-->
-
 END
 
 ---
@@ -542,7 +522,6 @@ Back:
 
 Tags: core
 <!--ID: 1778786397033-->
-
 END
 
 ---
@@ -562,7 +541,6 @@ Nechť $p(x)$ je ireducibilní polynom nad $\mathbb{Z}_p$ stupně $n$.
 
 ![](../../Assets/Pasted%20image%2020241221112332.png)
 <!--ID: 1778786397036-->
-
 END
 
 ---
@@ -584,7 +562,6 @@ Pomocí REA získám Bezoutovu rovnost.
 
 ![](../../Assets/Pasted%20image%2020241221114159.png)
 <!--ID: 1778786397038-->
-
 END
 
 ---
@@ -616,7 +593,6 @@ Back:
 
 <!-- ExerciseEnd -->
 <!--ID: 1778786397041-->
-
 END
 
 ---
@@ -645,7 +621,6 @@ Možnost 2: Budem upravovat rovnici:
 ![](../../Assets/Pasted%20image%2020241221121015.png)
 ![](../../Assets/Pasted%20image%2020241221121306.png)
 <!--ID: 1778786397043-->
-
 END
 
 ---
@@ -668,7 +643,6 @@ a) Pomocí EEA s polynomy
 ![](../../Assets/Pasted%20image%2020241221122110.png)
 ![](../../Assets/Pasted%20image%2020241221122425.png)
 <!--ID: 1778786397046-->
-
 END
 
 ---
@@ -696,7 +670,6 @@ Stejně jako v $\mathbb{R}$ máme polynomy, tak tohle je to samé, ale s prvky n
 
 Tags: algebra4
 <!--ID: 1778786397049-->
-
 END
 
 ---
@@ -716,7 +689,6 @@ Back:
 
 Tags: algebra4
 <!--ID: 1778786397052-->
-
 END
 
 ---
@@ -736,7 +708,6 @@ Back:
 
 Tags: algebra4 core
 <!--ID: 1778786397055-->
-
 END
 
 ---
@@ -756,7 +727,6 @@ Back:
 
 Tags: algebra4
 <!--ID: 1778786397058-->
-
 END
 
 ---
@@ -776,7 +746,6 @@ Back:
 
 Pozor, největší společný dělitel $h(x)$ není jednoznačný, těch polynomů může být více.
 <!--ID: 1778786397061-->
-
 END
 
 ---
@@ -800,7 +769,6 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1778786397063-->
-
 END
 
 ---
@@ -820,7 +788,6 @@ Pustím na to rozšířený Eukleidův algoritmus.
 
 Tags: core
 <!--ID: 1778786397066-->
-
 END
 
 ---
@@ -847,7 +814,6 @@ Kořen = když to dosadím, tak se polynom bude rovnat nule.
 
 Tags: core
 <!--ID: 1778786397069-->
-
 END
 
 ---
@@ -883,7 +849,6 @@ Např. nad $\mathbb{R}$ není ireducibilní.
 
 Tags: core
 <!--ID: 1778786397072-->
-
 END
 
 ---
@@ -904,7 +869,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241221092443.png)
 ![](../../Assets/Pasted%20image%2020241221094415.png)
 <!--ID: 1778786397075-->
-
 END
 
 ---
@@ -932,7 +896,6 @@ Pokud najdu jeho kořen, znamená to, že lze ten polynom rozložit na dva polyn
 
 Tags: core
 <!--ID: 1778786397079-->
-
 END
 
 ---
@@ -954,7 +917,6 @@ Jenom stačí posčítat ty jednotlivé koeficienty $a_i$ a $b_i$.
 
 Tags: core
 <!--ID: 1778786397082-->
-
 END
 
 ---
@@ -995,7 +957,6 @@ Back:
 
 Tags: core
 <!--ID: 1778786397085-->
-
 END
 
 ---

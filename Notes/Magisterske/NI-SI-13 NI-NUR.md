@@ -690,7 +690,7 @@ START
 NI-SZZ
 
 
-Jaké jsou jednotlivé dimenze interakčního designu?
+Jaké jsou jednotlivé dimenze interakčního designu? (5)
 
 Back:
 
@@ -901,7 +901,7 @@ Back:
 - **Emoce a přemýšlení** - **ztrácí energii** - Např. ztracení provedené práce, když crashne program
 - **Higher thoughts** - konzumuje obří množství energie (např. ztracení partnera, umře pes atd.) - jsou to myšlenky o něčem jiném než o tom tasku co provádíme
 
-Pozn. tohle platí pro negativní emoce. Naopak poitivní emoce je super vytvářet, protože nám potom uživatelé hodně odpustí
+Pozn. tohle platí pro negativní emoce. Naopak pozitivní emoce je super vytvářet, protože nám potom uživatelé hodně odpustí
 <!--ID: 1778682874814-->
 END
 

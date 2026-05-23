@@ -50,7 +50,6 @@ This layer contains displaying logic. Typically it’s GUI but it doesn’t have
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194395-->
-
 END
 
 ---
@@ -70,7 +69,6 @@ Back:
 **Model** zavolá update na **View**, když se změní. Toto používá typicky Observer pattern, kdy View observuje změny v Modelu.
 ![](../../../Assets/Pasted%20image%2020250130115146.png)
 <!--ID: 1760705194398-->
-
 END
 
 ---
@@ -90,7 +88,6 @@ Back:
 
 ❌ Tight coupling of **View** and **Controller**. That makes testing harder.
 <!--ID: 1760705194400-->
-
 END
 
 ---
@@ -126,7 +123,6 @@ The only thing that the view will do is to call a method from the Presenter ever
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194404-->
-
 END
 
 ---
@@ -145,7 +141,6 @@ Back:
 ![](../../../Assets/Pasted%20image%2020250130115309.png)
 ![](../../../Assets/Pasted%20image%2020250130115313.png)
 <!--ID: 1760705194406-->
-
 END
 
 ---
@@ -171,7 +166,6 @@ Oproti MVP je View "chytřejší" protože se samo updatuje a observuje změny v
 
 ![](../../../Assets/Pasted%20image%2020250130115455.png)
 <!--ID: 1760705194409-->
-
 END
 
 ---
@@ -198,7 +192,6 @@ This is example of **MVVM** how it is used in android programming.
 
 <!-- ExampleEnd -->
 <!--ID: 1760705194412-->
-
 END
 
 ---
@@ -217,7 +210,6 @@ Back:
 
 ![](../../../Assets/Pasted%20image%2020250130115951.png)
 <!--ID: 1760705194415-->
-
 END
 
 ---
@@ -241,7 +233,6 @@ Back:
 - Vyžaduje připojení k síti, což může přináše problémy s latencí
 - Server je Single point of Failure
 <!--ID: 1760705194418-->
-
 END
 
 ---
@@ -257,7 +248,6 @@ Back:
 - Desktopové aplikace
 - Mobilní aplikace
 <!--ID: 1760705194421-->
-
 END
 
 ---
@@ -277,7 +267,6 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020260513151521.png)
 <!--ID: 1778786460815-->
-
 END
 
 ---
@@ -302,8 +291,8 @@ Back:
 - **Technologický lock-in** – Změna programovacího jazyka znamená kompletní přepis aplikace
 - **Složitost při růstu** – Při rozšiřování se stává projekt obrovským, nepřehledným a obtížným na orientaci (Big Ball of Mud)
 - **Náchylnost na chyby** – Jedna chyba ovlivní fungování celého systému
-  <!--ID: 1778786460818-->
-  END
+<!--ID: 1778786460818-->
+END
 
 ---
 
@@ -321,7 +310,6 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020260513151444.png)
 <!--ID: 1778786460822-->
-
 END
 
 ---
@@ -346,8 +334,8 @@ Back:
 - Síťová latence a spolehlivost – komunikace přes síť je násobně pomalejší než v paměti
 - Komplikované ladění – distribuované sledování chyby
 - Problémy s udržením datové konzistence – transakce napříč mikroslužbami je mnohem komplikovanější.
-  <!--ID: 1778786460825-->
-  END
+<!--ID: 1778786460825-->
+END
 
 ---
 
@@ -386,7 +374,6 @@ Vysoká provázanost s Publish-subscribe architekturou
 
 <!-- ExampleEnd -->
 <!--ID: 1760705194424-->
-
 END
 
 ---
@@ -409,7 +396,6 @@ Back:
 - Nutnost správy další infrastruktury
 - V případě, že se jedná o synchronní komunikaci, tak je nutné spojovat požadavek a odpověď do jedné pseudosynchronní transakce
 <!--ID: 1760705194428-->
-
 END
 
 ---
@@ -451,7 +437,6 @@ _StackOverflow is pretty much a Blackboard system, with developers as agents, sh
 
 <!-- ExampleEnd -->
 <!--ID: 1760705194431-->
-
 END
 
 ---
@@ -466,8 +451,8 @@ Back:
 - **Blackboard (Tabule):** - **centrální úložiště dat** (sdílená paměť), které obsahuje data spojená s problémem. - Nachází se zde počáteční zadání, mezivýsledky (částečná řešení), hypotézy a nakonec i konečné řešení. - Stav na tabuli se neustále vyvíjí.
 - **Knowledge Sources (Zdroje znalostí / Experti):** - Nezávislé a specializované moduly (kusy kódu, algoritmy, neuronové sítě). - Každý modul umí řešit jen svou specifickou část problému. - **Klíčové pravidlo:** Tito experti **nikdy nekomunikují přímo mezi sebou**. Sledují pouze tabuli. Jakmile se na tabuli objeví data, kterým rozumí, "zvednou ruku", že chtějí přispět.
 - **Control Shell (Řídicí komponenta / Moderátor):** - Aby se experti u tabule neprali, musí tam být moderátor. - Tato komponenta neustále monitoruje změny na tabuli a "zvednuté ruce" expertů. - Rozhoduje, komu dá slovo (zavolá jeho metodu) a jakým způsobem se bude řešení vyvíjet. Řídí tedy celý průběh programu.
-  <!--ID: 1778786460829-->
-  END
+<!--ID: 1778786460829-->
+END
 
 ---
 
@@ -488,7 +473,6 @@ Back:
 - Kompilátory a moderní IDE – pracují nad jedním syntaktickým stromem
 - Uměla inteligence a experní systémy
 <!--ID: 1760705194435-->
-
 END
 
 ---
@@ -504,7 +488,6 @@ Back:
 
 Poskytnout způsob, jak zakódovat (formalizovat) know-how a proces řešení problémů **lidských expertů**.
 <!--ID: 1778786460833-->
-
 END
 
 ---
@@ -535,7 +518,6 @@ Back:
 
 <!-- ExampleEnd -->
 <!--ID: 1778786460837-->
-
 END
 
 ---
@@ -551,8 +533,8 @@ Ve formátu **IF (podmínka) THEN (akce)**.
 
 - **Podmínka (Condition):** Testuje obsah _Working memory_ (např. přítomnost symbolů) nebo data ze senzorů.
 - **Akce (Action):** Změní stav _Working memory_ nebo spustí externí operaci.
-  <!--ID: 1778786460840-->
-  END
+<!--ID: 1778786460840-->
+END
 
 ---
 
@@ -567,7 +549,6 @@ Back:
 2. **Conflict-Resolution (Řešení konfliktů):** Výběr _jednoho_ konkrétního pravidla z těch, která splnila podmínku.
 3. **Act (Akce):** Provedení akce vybraného pravidla (často změní paměť) a návrat zpět na fázi 1.
 <!--ID: 1778786460844-->
-
 END
 
 ---
@@ -581,7 +562,6 @@ Back:
 
 Je to seznam všech pravidel (instancí), jejichž levá strana (podmínka) se **aktuálně shoduje se stavem pracovní paměti**. Z tohoto seznamu se následně vybírá jedno pravidlo k provedení. _(Pozn.: Pokud je conflict set prázdný, interpret se zastaví)._
 <!--ID: 1778786460848-->
-
 END
 
 ---
@@ -596,8 +576,8 @@ Back:
 Když je **sada pravidel výrazně jednodušší než samotný model**, který z nich vznikne (model je tvořen opakováním omezeného množství vzorů).
 
 - _Pozn.:_ Používá se v AI pro ručně psaná/spravovaná pravidla (typicky _nezahrnuje_ pravidla automaticky vygenerovaná strojovým učením).
-  <!--ID: 1778786460851-->
-  END
+<!--ID: 1778786460851-->
+END
 
 ---
 
@@ -616,7 +596,6 @@ Back:
 
 ![](../../../Assets/Pasted%20image%2020250130124958.png)
 <!--ID: 1760705194443-->
-
 END
 
 ---
@@ -639,7 +618,6 @@ Back:
 - Každý publisher a subscriber o sobě sdílí meta-data přes IP multicast (tzn. všichni o sobě vědí), tyto informace si každý publisher/subscriber cachuje
 - Podle meta-dat publisher rovnou posílá informace subscriberovi
 <!--ID: 1760705194447-->
-
 END
 
 ---
@@ -659,8 +637,8 @@ Back:
  	- Zprávy jsou odběrateli doručeny pouze v případě, že atributy nebo samotný obsah zprávy splňují podmínky (filtry), které si nadefinoval sám odběratel.
  	- Za klasifikaci a třídění zpráv je v tomto modelu zodpovědný odběratel.
 3. **Hybridní přístup (Hybrid)** - Některé systémy podporují kombinaci obou výše zmíněných přístupů. - Odesílatelé běžně publikují zprávy do určitého tématu, zatímco odběratelé si nad jedním nebo více tématy registrují odběr s dodatečným filtrováním na základě obsahu zprávy.
-   <!--ID: 1778786460855-->
-   END
+<!--ID: 1778786460855-->
+END
 
 ---
 
@@ -675,7 +653,6 @@ Back:
 - **Initialization time** - Příklad: Existují frameworky a softwarové produkty, které k registraci odběratelů využívají konfigurační XML soubory. Tato registrace proběhne jednorázově během úvodního načítání (inicializace) systému.
 - **Runtime** - Příklad: Databázové triggery (spouštěče), e-mailové konference (mailing listy) a RSS kanály. (Uživatel nebo systém může odběr dynamicky vytvářet či rušit kdykoliv během toho, co aplikace běží).
 <!--ID: 1778786460859-->
-
 END
 
 ---

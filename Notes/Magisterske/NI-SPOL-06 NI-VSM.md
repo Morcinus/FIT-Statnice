@@ -41,7 +41,6 @@ Pozn.
 zamítneme = jsme si jistí s určitou pravděpodobností
 nezamítneme = nemáme tolik dat abychom mohli zamítnout
 <!--ID: 1778521859929-->
-
 END
 
 ---
@@ -68,8 +67,8 @@ Vysvětlení:
 Tzn. dobrý postup je:
 
 - Předpokládáme, že je nemocný a pouze pokud bude mít dost protilátek, tak ho prohlásíme za zdravého
-  <!--ID: 1778521859932-->
-  END
+<!--ID: 1778521859932-->
+END
 
 ---
 
@@ -92,7 +91,6 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1778521859935-->
-
 END
 
 ---
@@ -116,7 +114,6 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1778521859937-->
-
 END
 
 ---
@@ -138,7 +135,6 @@ Je to minimální hladina významnosti, na které lze zamítnout $H_0$ **při da
 
 ![](../../Assets/Pasted%20image%2020250322075825.png)
 <!--ID: 1778521859940-->
-
 END
 
 ---
@@ -158,7 +154,6 @@ P-hodnota mi říká, jaká je pravděpodobnost, že bychom daný výsledek dost
 
 ![](../../Assets/Pasted%20image%2020250322075840.png)
 <!--ID: 1778521859943-->
-
 END
 
 ---
@@ -180,7 +175,6 @@ Jinými slovy "když je všechno hezký", tak $p$-hodnota má uniformní rozděl
 
 Když je všechno hezký = pravděpodobnost 1. druhu je vždy $\alpha$, pak vím, že distribuční funkce p hodnoty je v bodě $u$ rovna $u$, tedy je to distribuční funkce Uniformního rozdělení
 <!--ID: 1778521859945-->
-
 END
 
 ---
@@ -203,7 +197,6 @@ Máme nasbíraná data a můžeme udělat testy:
 
 ![](../../Assets/Pasted%20image%2020250322075915.png)
 <!--ID: 1778521859948-->
-
 END
 
 ---
@@ -221,7 +214,6 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020250322075944.png)
 <!--ID: 1778521859950-->
-
 END
 
 ---
@@ -264,8 +256,8 @@ Back:
 	- $p'=p$ při známých parametrech
 	- $p'=p$ při neznámých parametrech
 - **Kontingenční tabulka** - testujeme nezávislost dvou rozdělení
-  <!--ID: 1778521860042-->
-  END
+<!--ID: 1778521860042-->
+END
 
 ---
 
@@ -294,7 +286,6 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1778521859953-->
-
 END
 
 ---
@@ -326,7 +317,6 @@ Analogicky pro $\geq$ (jen to bude všechno otočené)
 
 <!-- DetailInfoEnd -->
 <!--ID: 1778521859956-->
-
 END
 
 ---
@@ -347,7 +337,6 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020250322080213.png)
 <!--ID: 1778521859958-->
-
 END
 
 ---
@@ -365,7 +354,6 @@ Back:
 
 Protože podle centrální limitní věty to rozdělení se stejně bude v limitě chovat jako normální.
 <!--ID: 1778521859961-->
-
 END
 
 ---
@@ -384,7 +372,6 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020250322080228.png)
 <!--ID: 1778521859964-->
-
 END
 
 ---
@@ -405,7 +392,6 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020250322080244.png)
 <!--ID: 1778521859966-->
-
 END
 
 ---
@@ -424,7 +410,6 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020250322080300.png)
 <!--ID: 1778521859969-->
-
 END
 
 ---
@@ -455,7 +440,6 @@ Statistikou může být například průměr.
 
 <!-- DetailInfoEnd -->
 <!--ID: 1778521859971-->
-
 END
 
 ---
@@ -475,7 +459,6 @@ Back:
 
 Těsně na hranici zamítnutí a nezamítnutí
 <!--ID: 1778521859974-->
-
 END
 
 ---
@@ -493,7 +476,6 @@ Back:
 
 Je to v zásadě to samé, testování pomocí statistiky nám umožňuje to jednodušeji porovnávat, je to takové přehlednější
 <!--ID: 1778521859977-->
-
 END
 
 ---
@@ -523,7 +505,6 @@ Je vhodné, aby ty _teoretické_ četnosti v každém binu měly alespoň 5. Kdy
 
 ![](../../Assets/Pasted%20image%2020250329132648.png)
 <!--ID: 1778521859980-->
-
 END
 
 ---
@@ -546,7 +527,6 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020250329134349.png)
 <!--ID: 1778521859982-->
-
 END
 
 ---
@@ -564,7 +544,6 @@ Back:
 
 Můžu je spojit.
 <!--ID: 1778521859985-->
-
 END
 
 ---
@@ -594,7 +573,6 @@ Varianta 2 - uděláme testovou baterii:
 
 Lepší je prý dělat tu první variantu
 <!--ID: 1778521859987-->
-
 END
 
 ---
@@ -622,7 +600,6 @@ Pozn. $\mu_0$ je ta střední hodnota, co bychom teoreticky očekávali.. Idk, t
 
 <!-- ExerciseEnd -->
 <!--ID: 1778521859990-->
-
 END
 
 ---
@@ -644,7 +621,6 @@ Pozn. $\mu_0$ je ta střední hodnota, co bychom teoreticky očekávali.. Idk, t
 
 ![](../../Assets/Pasted%20image%2020250322080731.png)
 <!--ID: 1778521859993-->
-
 END
 
 ---
@@ -662,7 +638,6 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020250322080751.png)
 <!--ID: 1778521859995-->
-
 END
 
 ---
@@ -702,7 +677,6 @@ Pozn. párový t-test dává smysl používat u subjektů, které se nemění. N
 
 <!-- ExerciseEnd -->
 <!--ID: 1778521859998-->
-
 END
 
 ---
@@ -726,7 +700,6 @@ Chceme testovat jestli 2 výběry mají stejné střední hodnoty. Tady na rozd�
 
 <!-- DetailInfoEnd -->
 <!--ID: 1778521860000-->
-
 END
 
 ---
@@ -755,7 +728,6 @@ Pozn. Když zkoumám rovnost, tak vždy $H_0$ je rovnost a $H_A$ je nerovnost.
 
 <!-- ExerciseEnd -->
 <!--ID: 1778521860003-->
-
 END
 
 ---
@@ -777,7 +749,6 @@ Pozn. ten vzoreček dole nemáme umět! (Prý ani u státnic :D)
 
 ![](../../Assets/Pasted%20image%2020250322080940.png)
 <!--ID: 1778521860006-->
-
 END
 
 ---
@@ -797,7 +768,6 @@ Pokud mám dva výběry, které mají **stejnou délku** a ta data jsou párová
 
 Pokud by ta data ovšem nebyla párová, je třeba použít vždy ten dvouvýběrový. Jinak to je chyba.
 <!--ID: 1778521860008-->
-
 END
 
 ---
@@ -829,7 +799,6 @@ Mutlinomické rozdělení je jako binomické (např. házíme několikrát minc�
 
 <!-- ExampleEnd -->
 <!--ID: 1778521860011-->
-
 END
 
 ---
@@ -847,7 +816,6 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020250329103530.png)
 <!--ID: 1778521860014-->
-
 END
 
 ---
@@ -865,7 +833,6 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020250329103559.png)
 <!--ID: 1778521860018-->
-
 END
 
 ---
@@ -884,7 +851,6 @@ Back:
 $$\text{cov}(N_i,N_j)=-np_ip_j$$
 pro každé $i \neq j$
 <!--ID: 1778521860021-->
-
 END
 
 ---
@@ -908,7 +874,6 @@ Back:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1778521860024-->
-
 END
 
 ---
@@ -945,7 +910,6 @@ $np_i$ je počet naměřených hodnot v daném binu
 
 <!-- ExampleEnd -->
 <!--ID: 1778521860026-->
-
 END
 
 ---
@@ -963,8 +927,8 @@ Back:
 
 1. $np_i \geq 5$ pro každý "bin"
 2. Nebo pokud $k \geq 3$ **Yarnoldovo kritérium**: $np_i \geq q$, kde $q$ je podíl tříd, pro které platí $np_i \lt 5$
-   <!--ID: 1778521860029-->
-   END
+<!--ID: 1778521860029-->
+END
 
 ---
 
@@ -997,7 +961,6 @@ Back:
 
 <!-- ExampleEnd -->
 <!--ID: 1778521860031-->
-
 END
 
 ---
@@ -1017,7 +980,6 @@ V každém chlívečku by mělo být 5 prvků, aby se to blížilo nekonečnu.
 
 ![](../../Assets/Pasted%20image%2020250329113530.png)
 <!--ID: 1778521860034-->
-
 END
 
 ---
@@ -1069,7 +1031,6 @@ Vysvětlení vzorečku:
 
 <!-- ExplanationEnd -->
 <!--ID: 1778521860037-->
-
 END
 
 ---
@@ -1101,7 +1062,6 @@ Testujeme že se rovnají naměřené pravděpodobnosti očekávaným pravděpod
 
 <!-- ExerciseEnd -->
 <!--ID: 1778521860039-->
-
 END
 
 ---

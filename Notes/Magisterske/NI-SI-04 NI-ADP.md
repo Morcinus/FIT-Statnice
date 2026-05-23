@@ -44,7 +44,6 @@ Back:
 - **Template Method**
 - **Visitor**
 <!--ID: 1760705194277-->
-
 END
 
 ---
@@ -110,7 +109,6 @@ As a result, commands become a convenient middle layer that reduces coupling bet
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194289-->
-
 END
 
 ---
@@ -137,7 +135,6 @@ Back:
 
 <!-- ExampleEnd -->
 <!--ID: 1760705194292-->
-
 END
 
 ---
@@ -151,8 +148,8 @@ Back:
 
 - Pokud chceme parametrizovat objekt operacema
 - Pokud potřebujeme tvořit frontu commandů, plánovat dobu jejich spuštění nebo je spouštět vzdáleně.
-  <!--ID: 1778786460749-->
-  END
+<!--ID: 1778786460749-->
+END
 
 ---
 
@@ -175,7 +172,6 @@ Back:
 
 ❌ The code may become more complicated since you’re introducing a whole new layer between senders and receivers.
 <!--ID: 1760705194295-->
-
 END
 
 ---
@@ -235,7 +231,6 @@ It’s crucial that all handler classes implement the same interface. Each concr
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194299-->
-
 END
 
 ---
@@ -262,7 +257,6 @@ Back:
 
 <!-- ExampleEnd -->
 <!--ID: 1760705194302-->
-
 END
 
 ---
@@ -297,7 +291,6 @@ Back:
 
 ❌ Some requests may end up unhandled.
 <!--ID: 1760705194305-->
-
 END
 
 ---
@@ -330,7 +323,6 @@ An abstract base class specifies the method `interpret()`. Each concrete subcla
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194308-->
-
 END
 
 ---
@@ -346,7 +338,6 @@ Back:
 
 Interpreter suggests modeling the domain with a recursive grammar. Each rule in the grammar is either a ‘composite’ (a rule that references other rules) or a terminal (a leaf node in a tree structure). Interpreter relies on the recursive traversal of the Composite pattern to interpret the ‘sentences’ it is asked to process.
 <!--ID: 1760705194311-->
-
 END
 
 ---
@@ -362,7 +353,6 @@ Back:
 
 ❌ When the grammar is getting more complex, it becomes harder to maintain.
 <!--ID: 1760705194314-->
-
 END
 
 ---
@@ -412,7 +402,6 @@ All iterators must implement the same interface. This makes the client code comp
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194317-->
-
 END
 
 ---
@@ -439,7 +428,6 @@ Back:
 
 <!-- ExampleEnd -->
 <!--ID: 1760705194320-->
-
 END
 
 ---
@@ -477,7 +465,6 @@ Back:
 
 ❌ Using an iterator may be less efficient than going through elements of some specialized collections directly.
 <!--ID: 1760705194323-->
-
 END
 
 ---
@@ -523,7 +510,6 @@ This way, the Mediator pattern lets you encapsulate a complex web of relations b
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194326-->
-
 END
 
 ---
@@ -549,7 +535,6 @@ Back:
 
 <!-- ExampleEnd -->
 <!--ID: 1760705194329-->
-
 END
 
 ---
@@ -563,8 +548,8 @@ Back:
 
 - Pokud je komplikované měnit některé třídy, protože jsou silně spojeny (coupled) k jiným třídám.
 - Pokud chceme komponentu využít i v jiném programu, ale nemůžeme kvůli silným závislostem na jiné části systému
-  <!--ID: 1778786460758-->
-  END
+<!--ID: 1778786460758-->
+END
 
 ---
 
@@ -585,7 +570,6 @@ Back:
 
 ❌ Over time a mediator can evolve into a [God Object](https://courses.fit.cvut.cz/antipatterns/god-object).
 <!--ID: 1760705194333-->
-
 END
 
 ---
@@ -641,7 +625,6 @@ When a user triggers the undo, the history grabs the most recent memento from th
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194336-->
-
 END
 
 ---
@@ -656,8 +639,8 @@ Back:
 - **Pomocí vnitřní třídy** - Memento je jako vnitřní třída uvnitř Originatora
 - **Pomocí interfacu** - Memento je interface, který využívá Caretaker. Originator pak pracuje s memento třídou co implementuje ten interface.
 - **Pomocí striktní enkapsulace** - Originator i memento mají interfacy a třídy co je implementují. Originator má v sobě `save()` a `setState()`, Memento má v sobě `restore()` a `originator`. Memento pak provádí ten restore v originatoru.
-  <!--ID: 1776243585027-->
-  END
+<!--ID: 1776243585027-->
+END
 
 ---
 
@@ -683,7 +666,6 @@ The classic implementation of the pattern relies on support for nested classes, 
 
 <!-- ExampleEnd -->
 <!--ID: 1760705194339-->
-
 END
 
 ---
@@ -705,7 +687,6 @@ Jediná změna je že Memento nebude vnitřní třída ale rozdělí se na inter
 1. In the absence of nested classes, you can restrict access to the memento’s fields by establishing a convention that caretakers can work with a memento only through an explicitly declared intermediary interface, which would only declare methods related to the memento’s metadata.
 2. On the other hand, originators can work with a memento object directly, accessing fields and methods declared in the memento class. The downside of this approach is that you need to declare all members of the memento public.
 <!--ID: 1760705194342-->
-
 END
 
 ---
@@ -725,7 +706,6 @@ There’s another implementation which is useful when you don’t want to leave 
 2. Caretakers are now explicitly restricted from changing the state stored in mementos. Moreover, the caretaker class becomes independent from the originator because the restoration method is now defined in the memento class.
 3. Each memento becomes linked to the originator that produced it. The originator passes itself to the memento’s constructor, along with the values of its state. Thanks to the close relationship between these classes, a memento can restore the state of its originator, given that the latter has defined the appropriate setters.
 <!--ID: 1760705194344-->
-
 END
 
 ---
@@ -739,8 +719,8 @@ Back:
 
 - Pokud chceme tvořit snapshoty objektu, ke kterým se můžeme v budoucnu chtít vrátit
 - Pokud přímý přístup k vlastnostem objektu porušuje jeho zapouzdření
-  <!--ID: 1778786460760-->
-  END
+<!--ID: 1778786460760-->
+END
 
 ---
 
@@ -761,7 +741,6 @@ Back:
 
 ❌ Most dynamic programming languages, such as PHP, Python and JavaScript, can’t guarantee that the state within the memento stays untouched.
 <!--ID: 1760705194347-->
-
 END
 
 ---
@@ -811,7 +790,6 @@ If your app has several different types of publishers and you want to make your 
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194350-->
-
 END
 
 ---
@@ -838,7 +816,6 @@ Back:
 
 <!-- ExampleEnd -->
 <!--ID: 1760705194353-->
-
 END
 
 ---
@@ -852,7 +829,6 @@ Back:
 
 Pokud změny jednoho objektu mají ovlivňovat i jiné objekty, a to i pouze na omezený část nebo ve specifických případech.
 <!--ID: 1778786460763-->
-
 END
 
 ---
@@ -870,7 +846,6 @@ Back:
 
 ❌ Subscribers are notified in random order.
 <!--ID: 1760705194357-->
-
 END
 
 ---
@@ -943,7 +918,6 @@ This structure may look similar to the [Strategy](https://courses.fit.cvut.cz/N
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194359-->
-
 END
 
 ---
@@ -969,7 +943,6 @@ Back:
 
 <!-- ExampleEnd -->
 <!--ID: 1760705194362-->
-
 END
 
 ---
@@ -984,8 +957,8 @@ Back:
 - Pokud se má objekt chovat odlišně v závilosti na jeho aktuálním stavu
 - Pokud máme třídu zaplavenou rozhodováním na základě vnitřního stavu
 - Pokud je mnoho duplicitního kódu napříč podobnými stavy
-  <!--ID: 1778786460766-->
-  END
+<!--ID: 1778786460766-->
+END
 
 ---
 
@@ -1004,7 +977,6 @@ Back:
 
 ❌ Applying the pattern can be overkill if a state machine has only a few states or rarely changes.
 <!--ID: 1760705194365-->
-
 END
 
 ---
@@ -1058,7 +1030,6 @@ Even though given the same arguments, each routing class might build a different
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194368-->
-
 END
 
 ---
@@ -1078,7 +1049,6 @@ Back:
 4. The context calls the execution method on the linked strategy object each time it needs to run the algorithm. The context doesn’t know what type of strategy it works with or how the algorithm is executed.
 5. The **Client** creates a specific strategy object and passes it to the context. The context exposes a setter which lets clients replace the strategy associated with the context at runtime.
 <!--ID: 1760705194371-->
-
 END
 
 ---
@@ -1093,8 +1063,8 @@ Back:
 - Pokud chceme podporovat více variant algoritmu v rámci jednoho objektu a chceme mezi nimi přepínat
 - Pokud máme mnoho tříd, které se liší pouze konkrétní implementací konkrétní části
 - Pro izolaci implementačních detailů byznys logiky třídy, které nemusí být v kontextu třídy tak důležité
-  <!--ID: 1778786460769-->
-  END
+<!--ID: 1778786460769-->
+END
 
 ---
 
@@ -1119,7 +1089,6 @@ Back:
 
 ❌ A lot of modern programming languages have functional type support that lets you implement different versions of an algorithm inside a set of anonymous functions. Then you could use these functions exactly as you’d have used the strategy objects, but without bloating your code with extra classes and interfaces.
 <!--ID: 1760705194374-->
-
 END
 
 ---
@@ -1172,7 +1141,6 @@ There’s another type of step, called *hooks*. A hook is an optional step with
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194377-->
-
 END
 
 ---
@@ -1195,7 +1163,6 @@ Back:
 
 <!-- ExampleEnd -->
 <!--ID: 1760705194380-->
-
 END
 
 ---
@@ -1209,8 +1176,8 @@ Back:
 
 - Pokud chceme umožnit klientům rozšířit only konkrétní krok v rámci algoritmu
 - Pokud máme několik tříd se skoro totožným algoritmem, pouze s malými změnami
-  <!--ID: 1778786460772-->
-  END
+<!--ID: 1778786460772-->
+END
 
 ---
 
@@ -1231,7 +1198,6 @@ Back:
 
 ❌ Template methods tend to be harder to maintain the more steps they have.
 <!--ID: 1760705194383-->
-
 END
 
 ---
@@ -1319,7 +1285,6 @@ Now, if we extract a common interface for all visitors, all existing nodes can w
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194386-->
-
 END
 
 ---
@@ -1345,7 +1310,6 @@ Back:
 
 <!-- ExampleEnd -->
 <!--ID: 1760705194388-->
-
 END
 
 ---
@@ -1360,8 +1324,8 @@ Back:
 - Pokud chceme provádět operace na všech elementech komplexní struktury objektů
 - Pokud chceme vyčistit pomocnou business logiku z objektů
 - Pokud konkrétní chování dává smysl pouze pro nějaké třídy
-  <!--ID: 1778786460776-->
-  END
+<!--ID: 1778786460776-->
+END
 
 ---
 
@@ -1382,7 +1346,6 @@ Back:
 
 ❌ Visitors might lack the necessary access to the private fields and methods of the elements that they’re supposed to work with.
 <!--ID: 1760705194391-->
-
 END
 
 ---

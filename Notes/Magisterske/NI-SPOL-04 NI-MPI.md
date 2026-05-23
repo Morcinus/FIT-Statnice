@@ -407,8 +407,6 @@ Co platí pro **Linearitu integrálu**?
 Back:
 
 ![](../../Assets/Pasted%20image%2020260515205832.png)
-
-
 <!--ID: 1779300150069-->
 END
 
@@ -431,8 +429,9 @@ Back:
 
 <!-- DetailInfoStart -->
 
-- **Typ 1** - $D = \set {(x,y) \in \mathbb{R}^2: x \in <a,b> \land \varphi_1(\lambda) \leq y \leq \varphi_2(\lambda)}$
-  <!-- DetailInfoEnd -->
+**Typ 1** - $D = \set {(x,y) \in \mathbb{R}^2: x \in <a,b> \land \varphi_1(\lambda) \leq y \leq \varphi_2(\lambda)}$
+
+<!-- DetailInfoEnd -->
 <!--ID: 1778786397280-->
 END
 

@@ -40,7 +40,6 @@ Back:
 - **Flyweight**
 - **Proxy**
 <!--ID: 1760705194456-->
-
 END
 
 ---
@@ -95,7 +94,6 @@ Let’s get back to our stock market app. To solve the dilemma of incompatible f
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194459-->
-
 END
 
 ---
@@ -122,7 +120,6 @@ Adapter implementuje nějaké rozhraní.
 
 <!-- ExampleEnd -->
 <!--ID: 1760705194461-->
-
 END
 
 ---
@@ -140,7 +137,6 @@ Adapter dědí z dané classy a servicy. Toto lze využít pouze u jazyků, co u
 
 1. The **Class Adapter** doesn’t need to wrap any objects because it inherits behaviors from both the client and the service. The adaptation happens within the overridden methods. The resulting adapter can be used in place of an existing client class.
 <!--ID: 1760705194464-->
-
 END
 
 ---
@@ -158,7 +154,6 @@ Back:
 
 ❌ The overall complexity of the code increases because you need to introduce a set of new interfaces and classes. Sometimes it’s simpler just to change the service class so that it matches the rest of your code.
 <!--ID: 1760705194467-->
-
 END
 
 ---
@@ -213,7 +208,6 @@ Following this approach, we can extract the color-related code into its own clas
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194470-->
-
 END
 
 ---
@@ -240,7 +234,6 @@ Back:
 
 <!-- ExampleEnd -->
 <!--ID: 1760705194473-->
-
 END
 
 ---
@@ -255,8 +248,8 @@ Back:
 - Pokud chceme rozdělit funkcionalitu jedné monolitické třídy s více variantami použití (např. práce s více DB servery)
 - Pokud chceme třídu rozšiřovat ve více nezávislých (ortogonálních) dimenzích
 - Pokud chceme být schopni měnit implementaci v době běhu
-  <!--ID: 1778786460785-->
-  END
+<!--ID: 1778786460785-->
+END
 
 ---
 
@@ -277,7 +270,6 @@ Back:
 
 ❌ You might make the code more complicated by applying the pattern to a highly cohesive class.
 <!--ID: 1760705194476-->
-
 END
 
 ---
@@ -329,7 +321,6 @@ The greatest benefit of this approach is that you don’t need to care about the
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194480-->
-
 END
 
 ---
@@ -356,7 +347,6 @@ Back:
 
 <!-- ExampleEnd -->
 <!--ID: 1760705194484-->
-
 END
 
 ---
@@ -370,8 +360,8 @@ Back:
 
 - Při implementaci stuktury, která připomíná strom
 - Pokud chceme, aby se klient choval stejně k jednoduchým a komplexním objektům stejně
-  <!--ID: 1778786460788-->
-  END
+<!--ID: 1778786460788-->
+END
 
 ---
 
@@ -388,7 +378,6 @@ Back:
 
 ❌ It might be difficult to provide a common interface for classes whose functionality differs too much. In certain scenarios, you’d need to overgeneralize the component interface, making it harder to comprehend.
 <!--ID: 1760705194487-->
-
 END
 
 ---
@@ -460,7 +449,6 @@ We could apply the same approach to other behaviors such as formatting messages 
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194490-->
-
 END
 
 ---
@@ -486,7 +474,6 @@ Back:
 
 <!-- ExampleEnd -->
 <!--ID: 1760705194494-->
-
 END
 
 ---
@@ -500,8 +487,8 @@ Back:
 
 - Pokud chceme přidávat dodatečné chování objektům v době runtime bez rozbíjení kódu, který s nimi pracuje
 - Pokud je rozšiřování třídy pomocí dědičnosti obtížné nebo nemožné
-  <!--ID: 1778786460792-->
-  END
+<!--ID: 1778786460792-->
+END
 
 ---
 
@@ -526,7 +513,6 @@ Back:
 
 ❌ The initial configuration code of layers might look pretty ugly.
 <!--ID: 1760705194497-->
-
 END
 
 ---
@@ -562,7 +548,6 @@ For instance, an app that uploads short funny videos with cats to social media c
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194501-->
-
 END
 
 ---
@@ -588,7 +573,6 @@ Back:
 
 <!-- ExampleEnd -->
 <!--ID: 1760705194504-->
-
 END
 
 ---
@@ -602,8 +586,8 @@ Back:
 
 - Pokud chceme mít rozhraní s omezenou sadou funkcí ke komplexnímu systému
 - Pokud chceme strukturovat subsystém do vrstev
-  <!--ID: 1778786460796-->
-  END
+<!--ID: 1778786460796-->
+END
 
 ---
 
@@ -618,7 +602,6 @@ Back:
 
 ❌ A facade can become a god object coupled to all classes of an app.
 <!--ID: 1760705194507-->
-
 END
 
 ---
@@ -670,7 +653,6 @@ Let’s return to our game. Assuming that we had extracted the extrinsic state f
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194510-->
-
 END
 
 ---
@@ -697,7 +679,6 @@ Back:
 
 <!-- ExampleEnd -->
 <!--ID: 1760705194513-->
-
 END
 
 ---
@@ -710,8 +691,8 @@ Kdy použít **Flyweight** pattern?
 Back:
 
 - Pokud musí program podporovat velké množství objektů, které se obtížně vejdou do RAM
-  <!--ID: 1778786460800-->
-  END
+<!--ID: 1778786460800-->
+END
 
 ---
 
@@ -728,7 +709,6 @@ Back:
 
 ❌ The code becomes much more complicated. New team members will always be wondering why the state of an entity was separated in such a way.
 <!--ID: 1760705194521-->
-
 END
 
 ---
@@ -768,7 +748,6 @@ But what’s the benefit? If you need to execute something either before or afte
 
 <!-- ExplanationEnd -->
 <!--ID: 1760705194525-->
-
 END
 
 ---
@@ -793,7 +772,6 @@ Back:
 
 <!-- ExampleEnd -->
 <!--ID: 1760705194528-->
-
 END
 
 ---
@@ -810,8 +788,8 @@ Back:
 - Pro vzdálené spuštění kódu (Remote proxy) – Pokud je logika umístěna na vzdáleném serveru
 - Pro logování (Logging proxy)
 - Pro cachování (Caching proxy)
-  <!--ID: 1778786460803-->
-  END
+<!--ID: 1778786460803-->
+END
 
 ---
 
@@ -834,7 +812,6 @@ Back:
 
 ❌ The response from the service might get delayed.
 <!--ID: 1760705194531-->
-
 END
 
 ---
@@ -863,7 +840,6 @@ Na webových stránkách se načtou obrázky, až když k nim uživatel doscroll
 - **Snižuje to initial load time**
 - **Šetří to komunikaci a zdroje** - nepřistupuje se tak moc do databáze, neposílá se tolik requestů
 <!--ID: 1760705194534-->
-
 END
 
 ---
@@ -880,7 +856,6 @@ Back:
 - **Ghost** - loadne se objekt s částečným stavem (např. placeholder), když je to potřeba, objekt vyplní svoje data
 - **Value holder** - generický objekt se stará o lazy loading, tento objekt se používá místo nějaké proměnné data objektu
 <!--ID: 1760705194537-->
-
 END
 
 ---
@@ -897,8 +872,8 @@ Technika umožňující, aby třída nezávisla na svých závislostech.
 - Dosahuje toho declouplingem využití objektu od jeho tvorby.
 - Pomáhá dodržovat S a D principy z SOLID
 - Umožňuje nahrazování implementací bez změny závislostí ve třídách.
-  <!--ID: 1778786460807-->
-  END
+<!--ID: 1778786460807-->
+END
 
 ---
 
@@ -1012,7 +987,6 @@ class MyApp {
 
 <!-- DetailInfoEnd -->
 <!--ID: 1760705194540-->
-
 END
 
 ---
@@ -1040,7 +1014,6 @@ There are libraries that solve this problem by automating the process of creatin
 
 <!-- DetailInfoEnd -->
 <!--ID: 1760705194542-->
-
 END
 
 ---

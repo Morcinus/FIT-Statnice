@@ -154,7 +154,7 @@ Original Flashcard ID: 1737106145135
 START
 NI-SZZ
 
-**Postup při ladění výkonu DB serveru** (jak zjistíme co vázne, jak zvolíme SQL dotazy pro ladění?
+**Postup při ladění výkonu DB serveru** (jak zjistíme co vázne, jak zvolíme SQL dotazy pro ladění?)
 
 (větší otázka)
 

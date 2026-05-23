@@ -423,7 +423,7 @@ Nejbližší strojové číslo je určeno podle vybrané strategie:
 - náhodně
 - usekávání (zaokrouhlování směrem k nule)
 
-  <!-- DetailInfoEnd -->
+<!-- DetailInfoEnd -->
 <!--ID: 1778786397404-->
 END
 
@@ -831,7 +831,6 @@ Back:
 **dobře podmíněná** = výstup algoritmu se změní málo, pokud málo změníme vstup
 **špatně podmíněná** = výstup algoritmu se změní hodně, pokud málo změníme vstup
 <!-- ExplanationEnd -->
-
 <!--ID: 1778786397439-->
 END
 

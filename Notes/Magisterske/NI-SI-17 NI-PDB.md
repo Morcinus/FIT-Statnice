@@ -269,7 +269,7 @@ Back:
 
 - Podle Michala Valenty je dost profláklý a používaný
 - Bylo to založeno v roce 2009 a podle Michala Valenty to už je mature projekt
-  <!-- DetailInfoEnd -->
+<!-- DetailInfoEnd -->
 <!--ID: 1779128799649-->
 END
 
