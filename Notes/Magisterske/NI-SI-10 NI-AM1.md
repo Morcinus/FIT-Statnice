@@ -240,8 +240,9 @@ Back:
 - **škálovatelnost** - messaging servers, load balancers, proxy serves
 - **functional** - integrace (propojování) severů a částí aplikace, repozitáře,...
 - **security** - firewally, gateways,...
-  <!--ID: 1773945940654-->
-  END
+
+<!--ID: 1773945940654-->
+END
 
 ---
 

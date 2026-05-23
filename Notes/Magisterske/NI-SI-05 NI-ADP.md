@@ -690,9 +690,11 @@ Back:
 **Problémy s doručováním zpráv**
 
 - **Potvrzování přijetí zpráv odběrateli:** (Řeší se, jakým způsobem odběratelé odesílají zpět potvrzení o úspěšném zpracování zprávy, aby ji broker mohl smazat).
-- **Omezená maximální škálovatelnost pub/sub sítě:** - **Nárazová zátěž (Load surges):** Období, kdy požadavky odběratelů (nebo nápor zpráv) zcela zahltí propustnost sítě, po kterých následují období s nízkým objemem zpráv (kdy je přenosová kapacita sítě naopak nevyužita). - **Zpomalování (Slowdowns):** S tím, jak systém využívá stále více aplikací (a to i v případě, že komunikují na zcela oddělených pub/sub kanálech), celkový objem a tok zpráv způsobí, že doručování dat k jednotlivému odběrateli se začne zpomalovat (z důvodu celkového zatížení centrální infrastruktury/brokera).
-<!--ID: 1760705194453-->
+- **Omezená maximální škálovatelnost pub/sub sítě:**
+  - **Nárazová zátěž (Load surges):** Období, kdy požadavky odběratelů (nebo nápor zpráv) zcela zahltí propustnost sítě, po kterých následují období s nízkým objemem zpráv (kdy je přenosová kapacita sítě naopak nevyužita).
+  - **Zpomalování (Slowdowns):** S tím, jak systém využívá stále více aplikací (a to i v případě, že komunikují na zcela oddělených pub/sub kanálech), celkový objem a tok zpráv způsobí, že doručování dat k jednotlivému odběrateli se začne zpomalovat (z důvodu celkového zatížení centrální infrastruktury/brokera).
 
+<!--ID: 1760705194453-->
 END
 
 ---
