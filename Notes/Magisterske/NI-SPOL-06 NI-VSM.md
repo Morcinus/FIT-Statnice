@@ -40,6 +40,7 @@ Pozn.
 
 zamítneme = jsme si jistí s určitou pravděpodobností
 nezamítneme = nemáme tolik dat abychom mohli zamítnout
+
 <!--ID: 1778521859929-->
 END
 
@@ -67,6 +68,7 @@ Vysvětlení:
 Tzn. dobrý postup je:
 
 - Předpokládáme, že je nemocný a pouze pokud bude mít dost protilátek, tak ho prohlásíme za zdravého
+
 <!--ID: 1778521859932-->
 END
 
@@ -153,6 +155,7 @@ Back:
 P-hodnota mi říká, jaká je pravděpodobnost, že bychom daný výsledek dostali čistě náhodou, pokud platí nulová hypotéza.
 
 ![](../../Assets/Pasted%20image%2020250322075840.png)
+
 <!--ID: 1778521859943-->
 END
 
@@ -174,6 +177,7 @@ Back:
 Jinými slovy "když je všechno hezký", tak $p$-hodnota má uniformní rozdělení
 
 Když je všechno hezký = pravděpodobnost 1. druhu je vždy $\alpha$, pak vím, že distribuční funkce p hodnoty je v bodě $u$ rovna $u$, tedy je to distribuční funkce Uniformního rozdělení
+
 <!--ID: 1778521859945-->
 END
 
@@ -196,6 +200,7 @@ Máme nasbíraná data a můžeme udělat testy:
 - **Neparametrické** - zkoumáme vlastnosti rozdělení obecně (tvar, medián, nezávislost,...)
 
 ![](../../Assets/Pasted%20image%2020250322075915.png)
+
 <!--ID: 1778521859948-->
 END
 
@@ -213,6 +218,7 @@ Jaké jsou **2 typy hypotéz** podle **množství rozdělení**?
 Back:
 
 ![](../../Assets/Pasted%20image%2020250322075944.png)
+
 <!--ID: 1778521859950-->
 END
 
@@ -256,6 +262,7 @@ Back:
 	- $p'=p$ při známých parametrech
 	- $p'=p$ při neznámých parametrech
 - **Kontingenční tabulka** - testujeme nezávislost dvou rozdělení
+
 <!--ID: 1778521860042-->
 END
 
@@ -302,7 +309,7 @@ Jak funguje **parametrický test hypotézy proti jednostranné alternativě**?
 Back:
 
 1. Určíme $H_0: \theta \leq \theta_0$ proti $H_A: \theta \gt \theta_0$
-2. Sestavíme oboustranný interval $(L,+\infty)$ pro dané $\alpha$
+2. Sestavíme jednostranný interval $(L,+\infty)$ pro dané $\alpha$
 3. Rozhodneme:
    1. Zamítneme hypotézu $H_0$, jestliže $\theta_0 \not \in (L,+\infty)$
    2. Nezamítneme $H_0$, jestliže $\theta_0 \in (L,+\infty)$
@@ -336,6 +343,7 @@ při **známém** a **neznámém** rozptylu
 Back:
 
 ![](../../Assets/Pasted%20image%2020250322080213.png)
+
 <!--ID: 1778521859958-->
 END
 
@@ -371,6 +379,7 @@ Jak provedu:
 Back:
 
 ![](../../Assets/Pasted%20image%2020250322080228.png)
+
 <!--ID: 1778521859964-->
 END
 
@@ -391,6 +400,7 @@ při **známém** a **neznámém** rozptylu
 Back:
 
 ![](../../Assets/Pasted%20image%2020250322080244.png)
+
 <!--ID: 1778521859966-->
 END
 
@@ -475,6 +485,7 @@ Jaký je rozdíl mezi **normálním testováním** a **testování pomocí stati
 Back:
 
 Je to v zásadě to samé, testování pomocí statistiky nám umožňuje to jednodušeji porovnávat, je to takové přehlednější
+
 <!--ID: 1778521859977-->
 END
 
@@ -526,6 +537,7 @@ Back:
 4. Sestavíme $\chi^2$ podle vzorečku níže (podobně jako u dobré shody, jen to dělám u 2D rozdělení)
 
 ![](../../Assets/Pasted%20image%2020250329134349.png)
+
 <!--ID: 1778521859982-->
 END
 
@@ -543,6 +555,7 @@ Co můžu udělat, když mám biny s málo prvky?
 Back:
 
 Můžu je spojit.
+
 <!--ID: 1778521859985-->
 END
 
@@ -572,6 +585,7 @@ Varianta 2 - uděláme testovou baterii:
    2. Pokud zamítneme, použijeme Welchův test
 
 Lepší je prý dělat tu první variantu
+
 <!--ID: 1778521859987-->
 END
 
@@ -620,6 +634,7 @@ Back:
 Pozn. $\mu_0$ je ta střední hodnota, co bychom teoreticky očekávali.. Idk, to značení mi přijde trošku matoucí - Morčín
 
 ![](../../Assets/Pasted%20image%2020250322080731.png)
+
 <!--ID: 1778521859993-->
 END
 
@@ -637,6 +652,7 @@ Jak funguje: **jednovýběrový t-test pro $\sigma^2$**?
 Back:
 
 ![](../../Assets/Pasted%20image%2020250322080751.png)
+
 <!--ID: 1778521859995-->
 END
 
@@ -748,6 +764,7 @@ Pozn. ten vzoreček dole nemáme umět! (Prý ani u státnic :D)
 ![](../../Assets/Pasted%20image%2020250322114023.png)
 
 ![](../../Assets/Pasted%20image%2020250322080940.png)
+
 <!--ID: 1778521860006-->
 END
 
@@ -832,6 +849,7 @@ Jak se spočte $\text{var} N_i$ multinomického rozdělení?
 Back:
 
 ![](../../Assets/Pasted%20image%2020250329103559.png)
+
 <!--ID: 1778521860018-->
 END
 
@@ -926,7 +944,7 @@ Jaké kritérium musí být dodrženo pro provedení **testu $\chi^2$ multinomic
 Back:
 
 1. $np_i \geq 5$ pro každý "bin"
-2. Nebo pokud $k \geq 3$ **Yarnoldovo kritérium**: $np_i \geq q$, kde $q$ je podíl tříd, pro které platí $np_i \lt 5$
+2. Nebo pokud $k \geq 3$ **Yarnoldovo kritérium**: $np_i \geq 5q$, kde $q$ je podíl tříd, pro které platí $np_i \lt 5$
 <!--ID: 1778521860029-->
 END
 

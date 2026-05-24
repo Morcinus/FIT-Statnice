@@ -22,7 +22,13 @@ NI-SZZ
 
 Back:
 
-**Online Transaction Processing**
+- **Online Transaction Processing**
+- Většina aplikací.
+- Systémy pro **operativní zpracování transakcí**
+- Rychlé, krátké transakce, např. vkládání, aktualizace a mazání dat.
+- Hodně uživatelů **čte** a **mění** data.
+- Např.: KOS, e-shop
+
 <!--ID: 1779128799848-->
 END
 
@@ -39,7 +45,14 @@ NI-SZZ
 
 Back:
 
-**Online Analytical Processing**
+- **Online Analytical Processing**
+- Systémy optimalizované pro **analytické zpracovávání**, zaměřené na efektivní **čtení a analýzu** velkého množství dat
+- Málo klientů
+- **Dlouhé dotazy**, optimalizace pro **čtení a agregace**.
+- Data nebývají "hezky" uspořádána (podle 3NF).. Typicky tam bývá hodně redundance, díky čemuž je čtení vysoce efektivní (ale zápis je pain in the ass)
+- Např. business intelligence, reportování, analytické systémy
+
+
 <!--ID: 1779128799851-->
 END
 
@@ -57,39 +70,9 @@ Na co slouží benchmarky TPC-E a TPC-C? Na OLTP nebo OLAP?
 Back:
 
 Na **OLTP**
+
+
 <!--ID: 1779128799853-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1737106145138
--->
-
-START
-NI-SZZ
-
-Vysvětlete rozdíly mezi **OLTP a OLAP** databází.
-
-(větší otázka)
-
-Back:
-
-Obě jsou technologie uložení dat v databázi.
-
-**OLTP** - online transaction processing
-
-- Většina aplikací.
-- Hodně uživatelů **čte** a **mění** data.
-- Systémy optimalizované pro rychlé, krátké transakce, např. vkládání, aktualizace a mazání dat.
-- Např. e-shop, kos
-
-**OLAP** - online analytical processing
-
-- Systémy optimalizované pro analytické zpracovávání, zaměřené na efektivní **čtení a analýzu** velkého množství dat.
-- Data nebývají "hezky" uspořádána (podle 3NF).. Typicky tam bývá hodně redundance, díky čemuž je čtení vysoce efektivní (ale zápis je pain in the ass)
-- Např. business intelligence, reportování, analytické systémy
-<!--ID: 1779128799856-->
 END
 
 ---
@@ -100,6 +83,8 @@ END
 Original Flashcard ID: 1735205748903
 -->
 
+<!-- quality: expanded -->
+
 START
 NI-SZZ
 
@@ -108,7 +93,9 @@ Jaké jsou typy bechmarků a co znamenají?
 Back:
 
 - **microbenchmark** - zaměřuje se na konkrétní aspekt databázového systému (např. práce s cache, jenom insert příkazy, jenom update příkazy)
-- **komplexní benchmarky**
+- **komplexní benchmarky** – testují celý systém v reálném scénáři (např. TPC-C, TPC-E, TPC-H); musí být **dobře definované**, srozumitelné a mít **příběh/use case**
+
+
 <!--ID: 1779128799859-->
 END
 
@@ -121,11 +108,11 @@ Original Flashcard ID: 1735205748906
 START
 NI-SZZ
 
-Co je TPC?
+Co je **TPC**?
 
 Back:
 
-Transaction Processing Council (něco jako W3C ale pro databáze)
+**Transaction Processing Council** (něco jako W3C ale pro databáze)
 
 - skupina lidí a firem, které se vyjadřují k tomu, jak by se měly sestavovat a provádět benchmarky (a další věci kolem databází)
 
@@ -134,6 +121,8 @@ Transaction Processing Council (něco jako W3C ale pro databáze)
 Členové jsou např. Microsoft, Lenovo, Cisco, Nvidia, AMD atd.
 
 <!-- ExampleEnd -->
+
+
 <!--ID: 1779128799861-->
 END
 
@@ -154,7 +143,7 @@ Back:
 - Nad ním máme jasně zadefinované operace a transakce
 - Je definovaná zátěž té databáze a jednotlivá data
 
-Následně:
+**Následně**:
 
 - Spustí se simulace, která to bude škálovat a zatěžovat
 	- Tím postupně získávám informace o tom, jak moc lze databázi škálovat atd.
@@ -168,6 +157,8 @@ Následně:
 ![](../../Assets/Pasted%20image%2020241208133101.png)
 
 <!-- ImageEnd -->
+
+
 <!--ID: 1779128799864-->
 END
 
@@ -186,6 +177,8 @@ Back:
 
 - $tpmC$ - new-order transaction rate = při maximálním zatížení databáze, kolik jsem schopný zpracovat nových objednávek
 - $\text{\$}/tpmC$ - kolik mě jedna nová objednávka stojí peněz
+
+
 <!--ID: 1779128799866-->
 END
 
@@ -207,6 +200,8 @@ Back:
 - delivery
 - order-status
 - stock-level
+
+
 <!--ID: 1779128799869-->
 END
 
@@ -234,6 +229,8 @@ Mám různé transakce (new-order) atd. Mám simulaci zákazníka (terminál), t
 ![](../../Assets/Pasted%20image%2020241208133525.png)
 
 <!-- ImageEnd -->
+
+
 <!--ID: 1779128799872-->
 END
 
@@ -250,7 +247,9 @@ Jaká je kritika TPC-C benchmarku?
 
 Back:
 
-Že je moc jednoduchý a nepřesný.
+TPC-C je **zastaralý a příliš jednoduchý** – malá DB, málo typů transakcí, neodpovídá moderním OLTP systémům; proto se používá spíše **TPC-E**.
+
+
 <!--ID: 1779128799875-->
 END
 
@@ -263,11 +262,13 @@ Original Flashcard ID: 1735205748923
 START
 NI-SZZ
 
-Na jaké téma je zaměřený TPC-E?
+Na jaké téma je zaměřený **TPC-E**?
 
 Back:
 
 Jako příklad je obchodování společnosti, která se zabývá obchodováním s akciema a managování uživatelských účtů.
+
+
 <!--ID: 1779128799877-->
 END
 
@@ -286,6 +287,8 @@ Back:
 
 - $TPsE$ - transactions per second u **jakékoliv** transakce
 - $Price/TPsE$
+
+
 <!--ID: 1779128799880-->
 END
 
@@ -302,7 +305,7 @@ Jak se liší TPC-E od TPC-C?
 
 Back:
 
-TPC-E je složitější, je tam větší rozmanitost transakcí atd.
+**TPC-E** je **složitější a modernější** OLTP benchmark – větší rozmanitost transakcí, simulace brokerage firmy (obchodování s akciemi, správa účtů); **TPC-C** je starší a jednodušší (obchodní sklad).
 
 <!-- DetailInfoStart -->
 
@@ -310,24 +313,9 @@ TPC-E je složitější, je tam větší rozmanitost transakcí atd.
 ![](../../Assets/Pasted%20image%2020241220111612.png)
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799883-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205748931
--->
-
-START
-NI-SZZ
-
-SMAZAT
-
-Back:
-
-SMAZAT
-<!--ID: 1779128799885-->
 END
 
 ---
@@ -343,7 +331,9 @@ Jaký je příklad OLAP benchmarku?
 
 Back:
 
-$TPC-H$
+**TPC-H** – komplexní **OLAP** benchmark nad datovým skladem fixní velikosti.
+
+
 <!--ID: 1779128799888-->
 END
 
@@ -360,7 +350,9 @@ Jaký je velký rozdíl TPC-H benchmarku oproti těm ostatním?
 
 Back:
 
-Máme databázi fixní velikosti
+U **TPC-H** (OLAP) je databáze **fixní velikosti** (Size v GB/TB) – na rozdíl od OLTP benchmarků (TPC-C/E), které se **škálují** a hledají meze výkonu.
+
+
 <!--ID: 1779128799890-->
 END
 
@@ -387,6 +379,8 @@ $Size$ je velikost databáze.
 Size typicky jsou desítky GB až 1 TB cca
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799893-->
 END
 
@@ -399,13 +393,9 @@ Original Flashcard ID: 1737106145206
 START
 NI-SZZ
 
-Charakterizujte rozdíly mezi tzv. **micro a complex benchmarkem** v databázích.
-
-(větší otázka)
+Charakterizujte **micro benchmark** v databázích.
 
 Back:
-
-**Micro**:
 
 - **Testované aspekty:**
 	- Rychlost jednotlivých operací (např. čas potřebný k vložení jednoho záznamu, čtení z databáze, atd.).
@@ -417,7 +407,19 @@ Back:
 	- Výsledky jsou často vysoce specifické a nemusí odrážet skutečný výkon systému v reálných aplikacích.
 	- Nezohledňuje komplexní interakce mezi více operacemi nebo systémy.
 
-**Complex**:
+
+<!--ID: 1779128799896-->
+END
+
+---
+
+
+START
+NI-SZZ
+
+Charakterizujte **complex benchmark** v databázích. 
+
+Back:
 
 - **Testované aspekty:**
 	- Výkon při běhu celé aplikace nebo systému.
@@ -428,26 +430,8 @@ Back:
 	- Poskytuje ucelený pohled na výkon databázového systému v reálných podmínkách.
 	- Zohledňuje vliv více operací a interakcí mezi součástmi systému.
 - **Nevýhody:** - Může být složitější na nastavení a vyžaduje složitější testovací scénáře. - Výsledky mohou být ovlivněny externími faktory, jako jsou konfigurace hardwaru, síťové podmínky a další.
-<!--ID: 1779128799896-->
-END
 
----
 
-<!--
-Original Flashcard ID: 1737106145209
--->
-
-START
-NI-SZZ
-
-Co je **TPC** a jak souvisí s databázovými benchmarky?
-
-(větší otázka)
-
-Back:
-
-Je nezisková organizace Transaction Processing Performance Council (TPC), která definuje různé benchmark testy databází (například TPC-C, TPC-H nebo TPC-E).
-<!--ID: 1779128799898-->
 END
 
 ---
@@ -471,16 +455,18 @@ Slouží na **OLTP**:
 - Nad ním máme jasně zadefinované operace a transakce
 - Je definovaná zátěž té databáze a jednotlivá data
 
-Následně:
+**Následně**:
 
 - Spustí se simulace, která to bude škálovat a zatěžovat
 	- Tím postupně získávám informace o tom, jak moc lze databázi škálovat atd.
 - Jakmile naškáluju až do limitu mého hardwaru, nechám to chvíli bežet a zaznamenám výsledky benchmarku
 
-Metriky:
+**Metriky**:
 
 - $tpmC$ - new-order transaction rate = při maximálním zatížení databáze, kolik jsem schopný zpracovat nových objednávek
 - $Price/tpmC$ - kolik mě jedna nová objednávka stojí peněz (za Price byl v názvu dosazený dolar)
+
+
 <!--ID: 1779128799901-->
 END
 
@@ -509,6 +495,8 @@ Metriky:
 
 - $TPsE$ - transactions per second u **jakékoliv** transakce
 - $Price/TPsE$
+
+
 <!--ID: 1779128799904-->
 END
 
@@ -535,6 +523,8 @@ Máme tyto metriky:
 - $QphH@Size$ - Composite Query-perHour performance metric
 - $Price/QphH@Size$ - Price/Performance metric (za Price byl v názvu dosazený dolar)
   $Size$ je velikost databáze.
+
+
 <!--ID: 1779128799906-->
 END
 

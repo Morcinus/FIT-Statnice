@@ -157,18 +157,6 @@ Metoda testování použitelnosti bez uživatelů, při které několik odborní
 
 Nielsen Norman Group zadefinovali 10 heuristik (principů, co by mělo UI splňovat).
 
-**Heuristiky**:
-- Viditelnost stavu systému (progress bary, loading, ...)
-- Shoda systému a reálného světa (např. srozumitelné popisky, ne moc techické atd.)
-- Uživatelská kontrola a svoboda
-- Konzistence a standardy
-- Předcházení errorů
-- Recognition Rather than recall
-- Flexibilita a efektivní používání
-- Estetický a minimalistický design
-- Help users recognize, diagnose and recover from errors
-- Help and Documentation
-
 (zdroj: 04 Co je **heuristická analýza**?)
 <!--ID: 1778682875162-->
 END

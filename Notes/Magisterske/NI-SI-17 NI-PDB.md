@@ -11,6 +11,125 @@ FILE TAGS: NI-SI-17 NI-PDB
 
 ## Relační
 
+
+START
+NI-SZZ
+
+Na jakém modelu jsou založeny normální formy v relačních databázích?
+
+Back:
+
+Na funkčních závislostech (Functional dependencies).
+
+END
+
+---
+
+START
+NI-SZZ
+
+Vyjmenuj základní normální formy.
+
+Back:
+
+- 1NF
+- 2NF
+- 3NF
+- BCNF (Boyce-Codd normal form).
+
+END
+
+---
+
+START
+NI-SZZ
+
+Co je cílem normalizace databázového schématu a jaké algoritmy se k tomu používají?
+
+Back:
+
+Cílem je dostat schéma do BCNF nebo 3NF. Používají se algoritmy dekompozice (decomposition) nebo syntézy (synthesis).
+
+END
+
+---
+
+START
+NI-SZZ
+
+Jaká je hlavní motivace pro normalizaci databáze? (2)
+
+Back:
+
+- Snížení redundance dat.
+- Zabránění anomáliím při aktualizaci.
+
+END
+
+---
+
+
+START
+NI-SZZ
+
+Jaká je hlavní nevýhoda normalizace databáze?
+
+Back:
+
+Data jsou roztroušena na malé kousky (vysoká granularita) a při dotazování se musí tyto kousky znovu spojovat (JOIN).
+
+END
+
+---
+
+
+START
+NI-SZZ
+
+Co je to databázová transakce a z jakých základních operací se skládá?
+
+Back:
+
+Sekvence databázových operací.
+
+Operace: `READ`, `WRITE`, `COMMIT`, `ABORT`.
+
+END
+
+---
+
+START
+NI-SZZ
+
+Jaké jsou hlavní účely transakcí? (2)
+
+Back:
+
+- Vynucení ACID vlastností
+- Efektivní paralelní zpracování a souběžný přístup (pomalé disky, ...)
+
+END
+
+---
+
+
+
+START
+NI-SZZ
+
+Co znamená zkratka ACID u databázových transakcí?
+
+Back:
+
+- **A**tomicity - Částečné provedení transakce není povoleno. Platí pravidlo "všechno nebo nic".
+- **C**onsistency - Transakce převádějí databázi z jednoho platného stavu (valid state) do jiného platného stavu.
+- **I**solation - Účinky nepotvrzených (uncommitted) transakcí jsou před ostatními transakcemi skryty.
+- **D**urability - Účinky potvrzených (committed) transakcí jsou trvalé.
+
+END
+
+---
+
 ## Objektově-relační
 
 <!--
@@ -35,6 +154,8 @@ Je to rozšíření klasického relačního modelu o **objektové prvky** (datab
 - **Abstraktní datové typy** - Je možné vytvářet vlastní typy a jejich metody
 - **API pro OOP jazyky** - velice dobře se používá s OOP jazykama
 - **Komplexní (dlouhé) transakce** - lépe je zpracovává než RDBMS
+
+
 <!--ID: 1779128799624-->
 END
 
@@ -62,6 +183,8 @@ Back:
 
 - **Hodnota** jiného primárního klíče (není to ukazatel)
 - **Vyžaduje JOIN** operaci pro získání souvisejících dat.
+
+
 <!--ID: 1779128799627-->
 END
 
@@ -93,6 +216,8 @@ Back:
 - Objekty mohou mít mezi sebou **pointery**
 
 Objektová tabulka je obecně více flexibilní, umožňuje ukládat nejen objekty, ale i určité metody/chování.
+
+
 <!--ID: 1779128799630-->
 END
 
@@ -131,6 +256,8 @@ Back:
 	- Pro komplexní typy dat
 	- Lepší výkon pro složité typy
 - **Nevýhoda:** - Komplexnější práce s databází
+
+
 <!--ID: 1779128799633-->
 END
 
@@ -152,10 +279,13 @@ Back:
 Mám **hierarchickou strukturu dokumentů** (typicky JSON a XML).
 
 - Každý dokument má unique identifier
+
+
 <!--ID: 1779128799635-->
 END
 
 ---
+
 
 <!--
 Original Flashcard ID: 1728921214721
@@ -182,6 +312,8 @@ Event logging, content management systems, web analytics, e-commerce application
 ![](../../Assets/Pasted%20image%2020241011103239.png)
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799638-->
 END
 
@@ -198,7 +330,11 @@ Co je **JSON**?
 
 Back:
 
+JSON = JavaScript Object Notation
+
 **Otevřený standard pro strukturu dat.**
+
+
 <!--ID: 1779128799641-->
 END
 
@@ -222,6 +358,8 @@ Back:
 Prakticky ale většina věcí jde udělat v JSONu, proto je dnes častěji používanější.
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799644-->
 END
 
@@ -247,6 +385,8 @@ Prý se to nepoužívá ve 100% případů, protože vlastností JSONu je, že j
 Samozřejmě v mnoha případech je potřeba to schéma validovat a tam se to používá.
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799647-->
 END
 
@@ -263,13 +403,18 @@ Co je **MongoDB**?
 
 Back:
 
-**Databázový engine** / **Databáze**, který pracuje s **JSON dokumenty**
+**NoSQL dokumentová databáze** pracující s **JSON/BSON dokumenty**.
+
+Struktura: **Instance** → **Database** → **Collection** → **Document**.
 
 <!-- DetailInfoStart -->
 
 - Podle Michala Valenty je dost profláklý a používaný
 - Bylo to založeno v roce 2009 a podle Michala Valenty to už je mature projekt
+
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799649-->
 END
 
@@ -290,7 +435,51 @@ Back:
 - **Database**
 - **Collection**
 - **Document**
+
+
 <!--ID: 1779128799652-->
+END
+
+---
+
+START
+NI-SZZ
+
+Jaká jsou pravidla pole **`_id`** v MongoDB?
+
+Back:
+
+- **Povinné** v každém dokumentu
+- **Unikátní** v rámci kolekce
+- **Nelze změnit** po vytvoření
+- Doporučen **ObjectId** (12 B) jako výchozí hodnota
+
+END
+
+---
+
+START
+NI-SZZ
+
+Co je **`upsert`** v MongoDB?
+
+Back:
+
+Kombinace **update + insert** – pokud dokument neexistuje, vytvoří se nový; jinak se aktualizuje existující.
+
+END
+
+---
+
+START
+NI-SZZ
+
+Jak simulovat **JOIN v MongoDB**?
+
+Back:
+
+Agregační pipeline: **`$lookup`** (join s jinou kolekcí) + **`$unwind`** (rozbalení pole výsledku).
+
 END
 
 ---
@@ -315,42 +504,9 @@ Podobné jako **document storage**, ale pomocí XML
 ![](../../Assets/Pasted%20image%2020241011104826.png)
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799655-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205748949
--->
-
-START
-NI-SZZ
-
-Je vyjadřovací síla XML stejná jako JSONu?
-
-Back:
-
-Ano.
-
-<!-- DetailInfoStart -->
-
-XML je "ukecanější" a proto lidi většinou preferují JSON, protože je jednodušší (obsahuje méně slov).
-
-Např. v JSONu mi stačí:
-
-```json
-movie: "Medvídek"
-```
-
-Zatímco v XML musím udělat:
-
-```xml
-<movie>Medvídek</movie>
-```
-
-<!-- DetailInfoEnd -->
-<!--ID: 1779128799657-->
 END
 
 ---
@@ -366,7 +522,10 @@ Co znamená, že je XML well-formed?
 
 Back:
 
-Splňuje pravidla, že všechny tagy jsou uzavřené.
+XML je **well-formed**, pokud:
+- má volitelný **prolog**,
+- obsahuje **právě jeden kořenový element**,
+- jsou všechny tagy **správně uzavřené** a elementy se **nekříží**.
 
 <!-- ExampleStart -->
 
@@ -380,7 +539,64 @@ Splňuje pravidla, že všechny tagy jsou uzavřené.
 ```
 
 <!-- ExampleEnd -->
+
+
 <!--ID: 1779128799660-->
+END
+
+---
+
+START
+NI-SZZ
+
+Jak se **validuje XML** proti schématu (nad rámec well-formed)?
+
+Back:
+
+Pomocí **DTD**, **XSD** nebo **RELAX NG** – ověření struktury a typů elementů/atributů.
+
+END
+
+---
+
+START
+NI-SZZ
+
+Co je **atomizace** v XPath/XQuery?
+
+Back:
+
+Uzly se převádějí na **atomické hodnoty** (text, čísla…); prázdná sekvence při atomizaci způsobí chybu. Atomizace je nutná před **porovnáváním** a **aritmetickými operacemi**.
+
+END
+
+---
+
+START
+NI-SZZ
+
+Jakou strukturu mají XML dokumenty?
+
+Back:
+
+Stromovou s vnořenými elementy, atributy a textovými hodnotami.
+
+END
+
+---
+
+
+START
+NI-SZZ
+
+Jaké jsou dotazovací jazyky nad XML?
+
+Back:
+
+- XPath – XML Path Language (navigace po dokumentu)
+- XQuery – XML Query Language (dotazování se nad prvky)
+- XSLT – XSL Transformations (transformace)
+
 END
 
 ---
@@ -410,6 +626,8 @@ Máme **column family** (table).
 ![](../../Assets/Pasted%20image%2020241011103658.png)
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799663-->
 END
 
@@ -422,7 +640,7 @@ Original Flashcard ID: 1728921214727
 START
 NI-SZZ
 
-Kdy je dobré použít **white column** storage?
+Kdy je dobré použít **wide column** storage?
 
 Back:
 
@@ -433,6 +651,8 @@ Pro data, která mají podobná schémata, ale nevyžadují ACID a komplexní qu
 ![](../../Assets/Pasted%20image%2020241011103929.png)
 
 <!-- ExampleEnd -->
+
+
 <!--ID: 1779128799666-->
 END
 
@@ -449,7 +669,9 @@ Jaký je například databázový engine pro wide column databáze?
 
 Back:
 
-Cassandra
+**Apache Cassandra** – distribuovaná wide-column databáze pro velké objemy dat a horizontální škálování.
+
+
 <!--ID: 1779128799669-->
 END
 
@@ -467,6 +689,8 @@ Co je obecně pointa wide column databáze?
 Back:
 
 Je to databáze určená pro velké množství dat a pro velký množství uživatelských přístupů.
+
+
 <!--ID: 1779128799676-->
 END
 
@@ -492,6 +716,8 @@ Každý má **row key**
 ![](../../Assets/Pasted%20image%2020241127182325.png)
 
 <!-- ExampleEnd -->
+
+
 <!--ID: 1779128799680-->
 END
 
@@ -518,6 +744,8 @@ Pozn. hodnoty zde mohou být i např. sets, lists, maps. Nemusí to být atomick
 ![](../../Assets/Pasted%20image%2020241127182325.png)
 
 <!-- ExampleEnd -->
+
+
 <!--ID: 1779128799683-->
 END
 
@@ -534,7 +762,7 @@ Jak vypadá data model v Cassandře?
 
 Back:
 
-**Instance** -> **keyspaces** -> **tables** -> **rows** -> **columns**
+**Instance** -> **Keyspaces** -> **Tables** -> **Rows** -> **Columns**
 
 - keyspaces
 - table
@@ -546,6 +774,8 @@ Back:
 ![](../../Assets/Pasted%20image%2020241127181500.png)
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799686-->
 END
 
@@ -573,6 +803,8 @@ Je to hrozně jednoduchý a díky tomu dobře škálovatelný.
 ![](../../Assets/Pasted%20image%2020241011102321.png)
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799689-->
 END
 
@@ -596,6 +828,7 @@ Obecně na data, ke kterým potřebuju jen přistupovat pomocí **klíče** a ne
 - Session data
 - Uživatelský informace
 - Obecně kdykoliv kdy potřebuju přistupovat pouze pomocí klíče (a neřeším vztahy atd.)
+
 <!-- ExampleEnd -->
 
 <!-- DetailInfoStart -->
@@ -603,6 +836,8 @@ Obecně na data, ke kterým potřebuju jen přistupovat pomocí **klíče** a ne
 ![](../../Assets/Pasted%20image%2020241011102425.png)
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799691-->
 END
 
@@ -615,11 +850,13 @@ Original Flashcard ID: 1735205749033
 START
 NI-SZZ
 
-Jak obecně funguje key-value data model?
+Jak obecně funguje **key-value data model**?
 
 Back:
 
 Mám klíč (id) a pomocí něho přistupuju k value.
+
+
 <!--ID: 1779128799694-->
 END
 
@@ -638,6 +875,8 @@ Back:
 
 - real-world identifikátory - email, login name atd.
 - automaticky generované - např. auto increment
+
+
 <!--ID: 1779128799697-->
 END
 
@@ -655,6 +894,8 @@ Co je expirace key v key-value databázi?
 Back:
 
 Můžu danému key nastavit expiraci. Po vypršení expirace se objekt automaticky smaže.
+
+
 <!--ID: 1779128799699-->
 END
 
@@ -671,7 +912,9 @@ Jaký je například key-value store?
 
 Back:
 
-RiakKV (tím se zde zabýváme)
+**RiakKV** – distribuovaný key-value store (Erlang), AP systém s peer-to-peer replikací a buckety.
+
+
 <!--ID: 1779128799702-->
 END
 
@@ -695,6 +938,8 @@ Back:
 ![](../../Assets/Pasted%20image%2020241127173101.png)
 
 <!-- ExplanationEnd -->
+
+
 <!--ID: 1779128799705-->
 END
 
@@ -711,14 +956,16 @@ Jaké jsou 2 možnosti designu key-value databází?
 
 Back:
 
-**Multiple buckets** - každý typ entity v jiném bucketu
-**Single bucket** - vše v jednom. Zde se potom typicky před klíč dává typ toho objektu. Např. `actor_trojan`, `movie_medvidek`
+- **Multiple buckets** - každý typ entity v jiném bucketu
+- **Single bucket** - vše v jednom. Zde se potom typicky před klíč dává typ toho objektu. Např. `actor_trojan`, `movie_medvidek`
 
 <!-- DetailInfoStart -->
 
 ![](../../Assets/Pasted%20image%2020241127173418.png)
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799708-->
 END
 
@@ -743,6 +990,8 @@ Modelované jako **graf**:
 - **Relationships** (hrany).
 
 Uzly i hrany mohou mít **properties**.
+
+
 <!--ID: 1779128799710-->
 END
 
@@ -775,6 +1024,8 @@ Prostě vhodné pro grafové struktury.
 ![](../../Assets/Pasted%20image%2020241011104257.png)
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799713-->
 END
 
@@ -801,6 +1052,8 @@ Orientovaný nebo neorientovaný graf:
 Uzly i hrany mohou mít properties (proto se to jmenuje property graph).
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799716-->
 END
 
@@ -821,6 +1074,8 @@ Mají data jako **graf**
 
 - Jsou tam **efektivní grafové algoritmy** a průchody grafem
 - Umí vytvářet **subgraph queries**
+
+
 <!--ID: 1779128799719-->
 END
 
@@ -837,7 +1092,8 @@ Co je **Neo4j**?
 
 Back:
 
-**Grafová databáze**.
+- **Grafová databáze** (property graph) s dotazovacím jazykem **Cypher**
+- Instance spravuje **jediný graf**.
 
 <!-- DetailInfoStart -->
 
@@ -846,6 +1102,8 @@ Byla první, která dlouhodobě vydržela. Ostatní grafové databáze se přest
 Vznikla v roce 2007.
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799722-->
 END
 
@@ -862,7 +1120,11 @@ Jaká je struktura Neo4j databáze?
 
 Back:
 
-Instance -> databáze -> graf
+**Instance** Neo4j spravuje **jediný graf** (nemusí být souvislý).
+
+Hierarchie: **Instance** → **Database** → **Graph** (uzly + hrany).
+
+
 <!--ID: 1779128799725-->
 END
 
@@ -886,6 +1148,8 @@ Property graph = **directed labeled multigraph**
 	- Díky tomu se literally dá modelovat OntoUML
 	- Můžeme tak třeba říct, že uzel je typu "Movie" nebo "Actor"
 - **multigraph** - mezi dvěma uzlama může být víc hran
+
+
 <!--ID: 1779128799727-->
 END
 
@@ -909,11 +1173,13 @@ Back:
 - **document** storage
 - **Graph** databáze
 
-Vedlejší typy
+**Vedlejší typy**
 
 - XML databáze
 - Objektové databáze
 - RDF
+
+
 <!--ID: 1779128799730-->
 END
 
@@ -926,13 +1192,11 @@ Original Flashcard ID: 1737106145172
 START
 NI-SZZ
 
-Uveďte podstatné rozdíly (výhody a nevýhody) **relační a dokumentové databáze**.
+Uveďte výhody a nevýhody **relační databáze**.
 
 (větší otázka)
 
 Back:
-
-**Relační**:
 
 - Data jsou uložena v **tabulkách** (relacích) s **pevně definovanými schématy**
 - Dodržuje se **ACID**
@@ -944,7 +1208,19 @@ Back:
 	- Špatně horizontálně škálovatelné
 	- Nízká flexibilita (mám striktní schéma) - nevhodné pro méně strukturovaná data (např. v datových skladech)
 
-**Dokumentová**:
+
+<!--ID: 1779128799733-->
+END
+
+---
+
+
+START
+NI-SZZ
+
+Uveďte výhody a nevýhody **dokumentové databáze**.
+
+Back:
 
 - Data uložena v **dokumentech**, které mají hierarchickou strukturu
 - Typicky dodržuje **BASE**
@@ -954,8 +1230,11 @@ Back:
 	- Rychlost
 	- Vhodné pro velké množství jednoduchých dotazů
 	- Vhodné pro hierarchická data
-- **Nevýhoda:** - Nekonzistence dat - kvůli BASE - Složité dotazy jsou méně efektivní než u relačních DB
-<!--ID: 1779128799733-->
+- **Nevýhoda:**
+	- Nekonzistence dat - kvůli BASE
+	- Složité dotazy jsou méně efektivní než u relačních DB
+
+
 END
 
 ---
@@ -967,25 +1246,9 @@ Original Flashcard ID: 1737106145175
 START
 NI-SZZ
 
-Uveďte podstatné rozdíly (výhody a nevýhody) **relační a XML-nativní databáze**.
-
-(větší otázka)
+Uveďte výhody a nevýhody **XML-nativní databáze**.
 
 Back:
-
-**Relační**:
-
-- Data jsou uložena v **tabulkách** (relacích) s **pevně definovanými schématy**
-- Dodržuje se **ACID**
-- Data se **normalizují** (snižuje se redundance, rozděluje se na menší tabulky)
-- **Výhoda:**
-	- Konzistence dat, přesné "deterministické" chování
-	- Jednoduše se s nimi pracuje
-- **Nevýhoda:**
-	- Špatně horizontálně škálovatelné
-	- Nízká flexibilita (mám striktní schéma) - nevhodné pro méně strukturovaná data (např. v datových skladech)
-
-**XML**
 
 - Data jsou uložena v XML formátu -> vhodné pro aplikace, co pracují s XML
 - **Výhoda**:
@@ -993,7 +1256,11 @@ Back:
 	- Lepší škálování
 	- Vhodné pro aplikace, které používají XML formát
 	- Vhodné pro hierarchická data
-- **Nevýhoda:** - Nekonzistence dat - kvůli BASE - Složité dotazy jsou méně efektivní než u relačních DB
+- **Nevýhoda:**
+	- Nekonzistence dat - kvůli BASE
+	- Složité dotazy jsou méně efektivní než u relačních DB
+
+
 <!--ID: 1779128799735-->
 END
 
@@ -1006,25 +1273,9 @@ Original Flashcard ID: 1737106145178
 START
 NI-SZZ
 
-Uveďte podstatné rozdíly (výhody a nevýhody) **relační a key-value databáze**.
-
-(větší otázka)
+Uveďte výhody a nevýhody **key-value databáze**.
 
 Back:
-
-**Relační**:
-
-- Data jsou uložena v **tabulkách** (relacích) s **pevně definovanými schématy**
-- Dodržuje se **ACID**
-- Data se **normalizují** (snižuje se redundance, rozděluje se na menší tabulky)
-- **Výhoda:**
-	- Konzistence dat, přesné "deterministické" chování
-	- Jednoduše se s nimi pracuje
-- **Nevýhoda:**
-	- Špatně horizontálně škálovatelné
-	- Nízká flexibilita (mám striktní schéma) - nevhodné pro méně strukturovaná data (např. v datových skladech)
-
-**Key-value:**
 
 - Velmi jednoduchá struktura, data jsou uložena jako páry klíč-hodnota
 - **Výhoda:**
@@ -1036,6 +1287,8 @@ Back:
 	- Určeno pro jednoduchá data, s komplexními daty/dotazy se hodně špatně pracuje
 
 Obecně je **key-value** databáze taková hodně specifická. Extrémní **rychlost** a **škálovatelnost** ale pouze pro **jednoduchá data**.
+
+
 <!--ID: 1779128799738-->
 END
 
@@ -1048,25 +1301,9 @@ Original Flashcard ID: 1737106145180
 START
 NI-SZZ
 
-Uveďte podstatné rozdíly (výhody a nevýhody) **relační a grafové databáze**.
-
-(větší otázka)
+Uveďte výhody a nevýhody **grafové databáze**.
 
 Back:
-
-**Relační**:
-
-- Data jsou uložena v **tabulkách** (relacích) s **pevně definovanými schématy**
-- Dodržuje se **ACID**
-- Data se **normalizují** (snižuje se redundance, rozděluje se na menší tabulky)
-- **Výhoda:**
-	- Konzistence dat, přesné "deterministické" chování
-	- Jednoduše se s nimi pracuje
-- **Nevýhoda:**
-	- Špatně horizontálně škálovatelné
-	- Nízká flexibilita (mám striktní schéma) - nevhodné pro méně strukturovaná data (např. v datových skladech)
-
-**Grafové**:
 
 - Data jsou uložena ve formě grafu (uzly, hrany)
 - **Výhoda:**
@@ -1074,7 +1311,11 @@ Back:
 	- Flexibilní modelování vztahů a struktur
 	- Optimalizované dotazy pro grafové struktury (např. vybírání podgrafů, hledání cest atd.)
 	- Dobrá škálovatelnost
-- **Nevýhoda:** - Méně efektivní pro "tabulková data" - Nižší podpora pro ACID - Prostě takový specifický use case
+- **Nevýhoda:**
+	- Méně efektivní pro "tabulková data"
+	- Nižší podpora pro ACID - Prostě takový specifický use case
+
+
 <!--ID: 1779128799741-->
 END
 
@@ -1087,25 +1328,9 @@ Original Flashcard ID: 1737106145183
 START
 NI-SZZ
 
-Uveďte podstatné rozdíly (výhody a nevýhody) **relační a sloupcové (wide-column) databáze**.
-
-(větší otázka)
+Uveďte výhody a nevýhody **sloupcové (wide-column) databáze**.
 
 Back:
-
-**Relační**:
-
-- Data jsou uložena v **tabulkách** (relacích) s **pevně definovanými schématy**
-- Dodržuje se **ACID**
-- Data se **normalizují** (snižuje se redundance, rozděluje se na menší tabulky)
-- **Výhoda:**
-	- Konzistence dat, přesné "deterministické" chování
-	- Jednoduše se s nimi pracuje
-- **Nevýhoda:**
-	- Špatně horizontálně škálovatelné
-	- Nízká flexibilita (mám striktní schéma) - nevhodné pro méně strukturovaná data (např. v datových skladech)
-
-**Wide column**
 
 - Řádky mají hromadu různých sloupců, každý řádek může obsahovat pouze některé sloupce
 - **Výhody:**
@@ -1114,7 +1339,12 @@ Back:
 	- Vysoká škálovatelnost
 	- Výborný výkon (pro zápis i čtení)
 	- Vhodné pro big data, datové sklady
-- **Nevýhody:** - Horší výkon pro kompexní dotazy - Omezená podpora pro ACID - Nevhodné pro OLTP (ale super pro OLAP)
+- **Nevýhody:**
+	- Horší výkon pro kompexní dotazy
+	- Omezená podpora pro ACID
+	- Nevhodné pro OLTP (ale super pro OLAP)
+
+
 <!--ID: 1779128799743-->
 END
 
@@ -1127,13 +1357,30 @@ Original Flashcard ID: 1737106145185
 START
 NI-SZZ
 
-Uveďte výhody a nevýhody přístupů **schema-free a schema aware databází**.
-
-(větší otázka)
+Uveďte výhody a nevýhody **schema-free databází**.
 
 Back:
 
-**schema-aware** (např PostgreSQL):
+- **Výhody**
+	- Flexibilní schéma, dá se jednoduššeji měnit
+	- V určitých ohledech jednodušší údržba (jednodušší migrace a změny ve struktuře dat)
+- **Nevýhody:**
+	- Vyžaduje to více pečlivosti při práci s databází (konvence, dodržovat určitý pravidla)
+	- jinak v tom může jednoduše vzniknout zmatená databáze
+	- Horší optimalizace komplexních dotazů
+
+
+<!--ID: 1779128799746-->
+END
+
+---
+
+START
+NI-SZZ
+
+Uveďte výhody a nevýhody **schema aware databází**.
+
+Back:
 
 - **Výhody**:
 	- Přesně definovaná datová struktura, vysoká konzistence a validita
@@ -1142,16 +1389,11 @@ Back:
 - **Nevýhody**:
 	- Změny ve schématu jsou složité a časově náročné → menší flexibilita
 
-**schema-free**
 
-- **Výhody**
-	- Flexibilní schéma, dá se jednoduššeji měnit
-	- V určitých ohledech jednodušší údržba (jednodušší migrace a změny ve struktuře dat)
-- **Nevýhody:** - Vyžaduje to více pečlivosti při práci s databází (konvence, dodržovat určitý pravidla) - jinak v tom může jednoduše vzniknout zmatená databáze - Horší optimalizace komplexních dotazů
-<!--ID: 1779128799746-->
 END
 
 ---
+
 
 ## SQL
 
@@ -1169,6 +1411,8 @@ Co je **XDM**?
 Back:
 
 Sjednocení data modelu **XQuery** a **XPath**
+
+
 <!--ID: 1779128799749-->
 END
 
@@ -1193,6 +1437,8 @@ Back:
 ![](../../Assets/Pasted%20image%2020241114102046.png)
 
 <!-- ImageEnd -->
+
+
 <!--ID: 1779128799751-->
 END
 
@@ -1224,6 +1470,8 @@ Může být
 ![](../../Assets/Pasted%20image%2020241114102521.png)
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799754-->
 END
 
@@ -1241,6 +1489,8 @@ Co je výsledkem XPath výrazu aplikovaného na XML dokument?
 Back:
 
 **Sekvence**
+
+
 <!--ID: 1779128799757-->
 END
 
@@ -1266,6 +1516,8 @@ Back:
 ![](../../Assets/Pasted%20image%2020241114103129.png)
 
 <!-- ExplanationEnd -->
+
+
 <!--ID: 1779128799761-->
 END
 
@@ -1302,6 +1554,8 @@ Tento obrázek to hezky ukazuje:
 ![](../../Assets/Pasted%20image%2020241114103230.png)
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799764-->
 END
 
@@ -1331,6 +1585,8 @@ Back:
 ![](../../Assets/Pasted%20image%2020241114103610.png)
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799767-->
 END
 
@@ -1358,6 +1614,8 @@ Back:
 ![](../../Assets/Pasted%20image%2020241114103916.png)
 
 <!-- ExampleEnd -->
+
+
 <!--ID: 1779128799770-->
 END
 
@@ -1388,6 +1646,8 @@ Do hranatých závorek napíšu nějakou podmínku.
 ![](../../Assets/Pasted%20image%2020241114104059.png)
 
 <!-- ExampleEnd -->
+
+
 <!--ID: 1779128799773-->
 END
 
@@ -1416,6 +1676,8 @@ Back:
 ![](../../Assets/Pasted%20image%2020241114104112.png)
 
 <!-- ExampleEnd -->
+
+
 <!--ID: 1779128799776-->
 END
 
@@ -1451,6 +1713,8 @@ Back:
 ![](../../Assets/Pasted%20image%2020241114104756.png)
 
 <!-- ExampleEnd -->
+
+
 <!--ID: 1779128799778-->
 END
 
@@ -1469,7 +1733,24 @@ Back:
 
 - **XPath** - jazyk který aplikujeme na XML dokument a on nám vrátí sekvenci elementů
 - **XQuery** - XPath + další rozšíření navíc
+
+
 <!--ID: 1779128799781-->
+END
+
+---
+
+START
+NI-SZZ
+
+Co jsou **XQuery konstruktory**?
+
+Back:
+
+Výrazy pro **tvorbu výstupního XML**:
+- **Direct constructor** – `<tag>{expr}</tag>`
+- **Computed constructor** – `element name {…}` s dynamicky vypočítaným jménem elementu
+
 END
 
 ---
@@ -1495,6 +1776,8 @@ Back:
 - **Boolean** expressions
 	- `and, or, not`
 - **Primary** expressions - **constructors**, literals, variable references, function calls,...
+
+
 <!--ID: 1779128799784-->
 END
 
@@ -1532,6 +1815,8 @@ Umožňují mi dělat `for, let, where, orderby, return`
 ![](../../Assets/Pasted%20image%2020241114111505.png)
 
 <!-- ExampleEnd -->
+
+
 <!--ID: 1779128799786-->
 END
 
@@ -1545,8 +1830,6 @@ START
 NI-SZZ
 
 Krátce popište, případně vysvětlete na vhodných příkladech dotazovací jazyk **XQuery**.
-
-(větší otázka)
 
 Back:
 
@@ -1563,6 +1846,8 @@ XQuery slouží k dotazování nad stromovou strukturou XML dokumentu.
 for $book in doc("books.xml")//book
 return $book
 ```
+
+
 <!--ID: 1779128799789-->
 END
 
@@ -1582,7 +1867,68 @@ Co je **Cypher**?
 Back:
 
 Deklarativní **jazyk** pro dotazování nad **grafovými databázemi** (např. nad Neo4j)
+
+
 <!--ID: 1779128799792-->
+END
+
+---
+
+START
+NI-SZZ
+
+Jaké **strukturální a složené typy** má Neo4j?
+
+Back:
+
+**Strukturální:** **Node**, **Relationship**, **Path**
+
+**Složené:** **List**, **Map**, **PropertyMap** (na top levelu jen atomické hodnoty)
+
+END
+
+---
+
+START
+NI-SZZ
+
+Jaké jsou vlastnosti **hrany (relationship)** v Neo4j?
+
+Back:
+
+- **Immutable** (nelze měnit po vytvoření)
+- **Orientovaná**
+- **Max. 1 label/type**
+- Má **unikátní identifikátor**
+
+END
+
+---
+
+START
+NI-SZZ
+
+Co vrací **Cypher dotaz**?
+
+Back:
+
+**Solution sequence** – setříděná kolekce **podgrafů** splňujících zadaný pattern.
+
+END
+
+---
+
+START
+NI-SZZ
+
+K čemu slouží **ORDER BY, SKIP, LIMIT, DISTINCT** v Cypheru?
+
+Back:
+
+- **ORDER BY** – řazení výsledků
+- **SKIP / LIMIT** – stránkování (offset / limit)
+- **DISTINCT** – odstranění duplicit ve výsledcích
+
 END
 
 ---
@@ -1600,6 +1946,8 @@ Back:
 
 - **Nodes** - `()`
 - **Relationships** - `<--, --, -->`
+
+
 <!--ID: 1779128799795-->
 END
 
@@ -1625,6 +1973,8 @@ Back:
 ![](../../Assets/Pasted%20image%2020241104164750.png)
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799797-->
 END
 
@@ -1641,7 +1991,7 @@ Co obsahuje **node pattern**?
 
 Back:
 
-- **Labels** -
+- **Labels** - seskupování nodů, např. *Person*
 - **Property map** - vlastnosti
 
 <!-- DetailInfoStart -->
@@ -1649,6 +1999,8 @@ Back:
 ![](../../Assets/Pasted%20image%2020241104164848.png)
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799800-->
 END
 
@@ -1679,6 +2031,8 @@ Back:
 ![](../../Assets/Pasted%20image%2020241104165011.png)
 
 <!-- ExampleEnd -->
+
+
 <!--ID: 1779128799803-->
 END
 
@@ -1706,6 +2060,8 @@ Díky tomu jsem schopný snadně dělat hodně komplikovaný dotazy.
 ![](../../Assets/Pasted%20image%2020241104165156.png)
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799806-->
 END
 
@@ -1732,6 +2088,8 @@ Je to kvůli tomu, aby se to při dotazování nezacyklilo.
 ![](../../Assets/Pasted%20image%2020241104165438.png)
 
 <!-- ExplanationEnd -->
+
+
 <!--ID: 1779128799808-->
 END
 
@@ -1777,6 +2135,8 @@ Pak tam můžou být i exists, kvantifikátory atd.
 ![](../../Assets/Pasted%20image%2020241104170446.png)
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799811-->
 END
 
@@ -1789,7 +2149,7 @@ Original Flashcard ID: 1730978212919
 START
 NI-SZZ
 
-Jak funguje `OPTIONAL` v MATHCH v Cypher?
+Jak funguje `OPTIONAL` v MATCH v Cypher?
 
 Back:
 
@@ -1806,6 +2166,8 @@ Dělá to jakoby left outer join. Optionally mi to do výsledku dá ještě něc
 ![](../../Assets/Pasted%20image%2020241104170503.png)
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799814-->
 END
 
@@ -1839,6 +2201,8 @@ Pozn. v tom returnu můžeme mít i kostruktor. Ten `SIZE` mi najde pro vybrané
 ![](../../Assets/Pasted%20image%2020241104170831.png)
 
 <!-- ExampleEnd -->
+
+
 <!--ID: 1779128799816-->
 END
 
@@ -1864,6 +2228,8 @@ V returnu použiju agregační funkci podobně jako se to používá v SQLku (vi
 ![](../../Assets/Pasted%20image%2020241104171236.png)
 
 <!-- ExampleEnd -->
+
+
 <!--ID: 1779128799819-->
 END
 
@@ -1891,6 +2257,8 @@ Back:
 ![](../../Assets/Pasted%20image%2020241104171856.png)
 
 <!-- ExampleEnd -->
+
+
 <!--ID: 1779128799821-->
 END
 
@@ -1913,6 +2281,8 @@ Back:
 ![](../../Assets/Pasted%20image%2020241104171935.png)
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799824-->
 END
 
@@ -1936,6 +2306,8 @@ Umožňuje mi kombinovat multi-part queries.
 ![](../../Assets/Pasted%20image%2020241104172011.png)
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799827-->
 END
 
@@ -1961,6 +2333,8 @@ Back:
 ![](../../Assets/Pasted%20image%2020241104172106.png)
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799829-->
 END
 
@@ -1996,6 +2370,8 @@ Např. najde movie, kde hrál nějaký herec
 MATCH (m:MOVIE)-[:PLAY]->(:ACTOR)
 RETURN DISTINCT m;
 ```
+
+
 <!--ID: 1779128799832-->
 END
 
@@ -2021,6 +2397,8 @@ Dotazuje se nad **jednou kolekcí**, **jedním příkazem** (případně celým 
 ![](../../Assets/Pasted%20image%2020241015093917.png)
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799835-->
 END
 
@@ -2042,6 +2420,8 @@ Back:
 - **update** (`updateOne`, `updateMany`) - aktualizuje dokument
 - **remove** (`deletOne`, `deleteMany`) - odstraní dokument
 - **find** (`find`) - najde dokumenty v kolekci
+
+
 <!--ID: 1779128799837-->
 END
 
@@ -2059,6 +2439,8 @@ Mohu v Cassandře dělat JOINy?
 Back:
 
 Ne. V Cassandře se můžu dotazovat jen nad jednou tabulkou.
+
+
 <!--ID: 1779128799840-->
 END
 
@@ -2083,7 +2465,48 @@ Back:
 ![](../../Assets/Pasted%20image%2020241208130222.png)
 
 <!-- DetailInfoEnd -->
+
+
 <!--ID: 1779128799842-->
+END
+
+---
+
+START
+NI-SZZ
+
+Co je **CQL** v Cassandře?
+
+Back:
+
+**Cassandra Query Language** – SQL-like jazyk pro dotazování (cqlsh). Dotazy jen nad **jednou tabulkou**, **bez JOINů**.
+
+END
+
+---
+
+START
+NI-SZZ
+
+Co je **keyspace** v Cassandře?
+
+Back:
+
+Logický **namespace** (skupina tabulek) s nastavením **replikačního faktoru** a **topologie**.
+
+END
+
+---
+
+START
+NI-SZZ
+
+Podporuje Cassandra **expiraci dat (TTL)**?
+
+Back:
+
+Ano – u sloupců/řádků lze nastavit **TTL**; po vypršení se data automaticky smažou.
+
 END
 
 ---
@@ -2121,6 +2544,8 @@ db.movies.find(
 	{ rating: -1, year: 1 }
 )
 ```
+
+
 <!--ID: 1779128799845-->
 END
 

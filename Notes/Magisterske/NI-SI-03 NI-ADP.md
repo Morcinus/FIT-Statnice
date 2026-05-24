@@ -20,6 +20,7 @@ Back:
 
 - Návrhové vzory, které se zabývají tím, jak skládat třídy do komplexnějších struktur
 - Řeší jak jsou tyto objekty navzájem propojeny a jak spolupracují
+
 <!--ID: 1778786460782-->
 END
 
@@ -39,6 +40,7 @@ Back:
 - **Facade**
 - **Flyweight**
 - **Proxy**
+
 <!--ID: 1760705194456-->
 END
 
@@ -153,6 +155,7 @@ Back:
 ✅ *Open/Closed Principle*. You can introduce new types of adapters into the program without breaking the existing client code, as long as they work with the adapters through the client interface.
 
 ❌ The overall complexity of the code increases because you need to introduce a set of new interfaces and classes. Sometimes it’s simpler just to change the service class so that it matches the rest of your code.
+
 <!--ID: 1760705194467-->
 END
 
@@ -248,6 +251,7 @@ Back:
 - Pokud chceme rozdělit funkcionalitu jedné monolitické třídy s více variantami použití (např. práce s více DB servery)
 - Pokud chceme třídu rozšiřovat ve více nezávislých (ortogonálních) dimenzích
 - Pokud chceme být schopni měnit implementaci v době běhu
+
 <!--ID: 1778786460785-->
 END
 
@@ -269,6 +273,7 @@ Back:
 ✅ *Single Responsibility Principle*. You can focus on high-level logic in the abstraction and on platform details in the implementation.
 
 ❌ You might make the code more complicated by applying the pattern to a highly cohesive class.
+
 <!--ID: 1760705194476-->
 END
 
@@ -360,6 +365,7 @@ Back:
 
 - Při implementaci stuktury, která připomíná strom
 - Pokud chceme, aby se klient choval stejně k jednoduchým a komplexním objektům stejně
+
 <!--ID: 1778786460788-->
 END
 
@@ -377,6 +383,7 @@ Back:
 ✅ *Open/Closed Principle*. You can introduce new element types into the app without breaking the existing code, which now works with the object tree.
 
 ❌ It might be difficult to provide a common interface for classes whose functionality differs too much. In certain scenarios, you’d need to overgeneralize the component interface, making it harder to comprehend.
+
 <!--ID: 1760705194487-->
 END
 
@@ -487,6 +494,7 @@ Back:
 
 - Pokud chceme přidávat dodatečné chování objektům v době runtime bez rozbíjení kódu, který s nimi pracuje
 - Pokud je rozšiřování třídy pomocí dědičnosti obtížné nebo nemožné
+
 <!--ID: 1778786460792-->
 END
 
@@ -512,6 +520,7 @@ Back:
 ❌ It’s hard to implement a decorator in such a way that its behavior doesn’t depend on the order in the decorators stack.
 
 ❌ The initial configuration code of layers might look pretty ugly.
+
 <!--ID: 1760705194497-->
 END
 
@@ -586,6 +595,7 @@ Back:
 
 - Pokud chceme mít rozhraní s omezenou sadou funkcí ke komplexnímu systému
 - Pokud chceme strukturovat subsystém do vrstev
+
 <!--ID: 1778786460796-->
 END
 
@@ -601,6 +611,7 @@ Back:
 ✅ You can isolate your code from the complexity of a subsystem.
 
 ❌ A facade can become a god object coupled to all classes of an app.
+
 <!--ID: 1760705194507-->
 END
 
@@ -691,6 +702,7 @@ Kdy použít **Flyweight** pattern?
 Back:
 
 - Pokud musí program podporovat velké množství objektů, které se obtížně vejdou do RAM
+
 <!--ID: 1778786460800-->
 END
 
@@ -708,6 +720,7 @@ Back:
 ❌ You might be trading RAM over CPU cycles when some of the context data needs to be recalculated each time somebody calls a flyweight method.
 
 ❌ The code becomes much more complicated. New team members will always be wondering why the state of an entity was separated in such a way.
+
 <!--ID: 1760705194521-->
 END
 
@@ -788,6 +801,7 @@ Back:
 - Pro vzdálené spuštění kódu (Remote proxy) – Pokud je logika umístěna na vzdáleném serveru
 - Pro logování (Logging proxy)
 - Pro cachování (Caching proxy)
+
 <!--ID: 1778786460803-->
 END
 
@@ -811,6 +825,7 @@ Back:
 ❌ The code may become more complicated since you need to introduce a lot of new classes.
 
 ❌ The response from the service might get delayed.
+
 <!--ID: 1760705194531-->
 END
 
@@ -839,6 +854,7 @@ Na webových stránkách se načtou obrázky, až když k nim uživatel doscroll
 
 - **Snižuje to initial load time**
 - **Šetří to komunikaci a zdroje** - nepřistupuje se tak moc do databáze, neposílá se tolik requestů
+
 <!--ID: 1760705194534-->
 END
 
@@ -855,6 +871,7 @@ Back:
 - **Virtual proxy** - při přístupu k objektu se zavolá virtuální objekt se stejným rozhraním. Ten pak načte daný objekt a přepošle mu požadavek.
 - **Ghost** - loadne se objekt s částečným stavem (např. placeholder), když je to potřeba, objekt vyplní svoje data
 - **Value holder** - generický objekt se stará o lazy loading, tento objekt se používá místo nějaké proměnné data objektu
+
 <!--ID: 1760705194537-->
 END
 
@@ -872,6 +889,7 @@ Technika umožňující, aby třída nezávisla na svých závislostech.
 - Dosahuje toho declouplingem využití objektu od jeho tvorby.
 - Pomáhá dodržovat S a D principy z SOLID
 - Umožňuje nahrazování implementací bez změny závislostí ve třídách.
+
 <!--ID: 1778786460807-->
 END
 
@@ -1027,6 +1045,7 @@ Back:
 
 - Řešení založená na reflexi (reflection-based), která propojují závislosti za běhu programu (runtime).
 - Statická řešení, která generují kód pro propojení závislostí v době překladu (compile time).
+
 <!--ID: 1778786460810-->
 END
 

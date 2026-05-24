@@ -334,7 +334,7 @@ Hledám $h(x)^{-1}, h(x) \in F$
 3. $\gcd(h(x), P(x)) \mod P(x) = (u(x)\cdot h(x) + v(x) \cdot P(x)) \mod P(x)$, obě strany jsou $\in F$, tedy náleží zbytkům po dělení tím číslem, kterým jsem modulil
 4. v $F$:
  	- $\gcd(h(x), P(x)) = u(x) \cdot h(x)$
- 	- Vím, že $\gcd$ bude polynom stupně $1$ (ty polynomy $h$ a $P$ jsou nesoudělné).
+ 	- Vím, že $\gcd$ bude polynom stupně $0$ (ty polynomy $h$ a $P$ jsou nesoudělné).
  	- Tedy vlevo v rovnici bude nenulové číslo
  	- Pak mi vyjde:
  	- $h(x)^{-1}=(\gcd(h(x), P(x)))^{-1}\cdot u(x)$
@@ -511,7 +511,7 @@ Original Flashcard ID: 1735205749352
 START
 NI-SZZ
 
-Je aditivní a multiplikativní grupa tělesa $GF(p_n)$ cyklická?
+Je aditivní a multiplikativní grupa tělesa $GF(p^n)$ cyklická?
 
 (tohle bylo třeba u zkoušky!)
 

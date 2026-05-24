@@ -1308,12 +1308,9 @@ Co je UI design pattern "Tables - Grid of equals"?
 
 Back:
 
-<!-- DetailInfoStart -->
-
 ![](../../Assets/Pasted%20image%2020251028122128.png)
 ![](../../Assets/Pasted%20image%2020251028122113.png)
 
-<!-- DetailInfoEnd -->
 <!--ID: 1778682875112-->
 END
 
