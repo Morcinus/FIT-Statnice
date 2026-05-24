@@ -1442,6 +1442,14 @@ NI-SZZ
 
 Jaké je **srovnání výkonnosti variant paralelního násobení** matic? (5)
 
+Následující možnosti:
+- **MMM-vnitřní**
+- **MMM-vnitřní s parallel venku**
+- **MMM-prostřední**
+- **MMM-prostřední s parallel venku**
+- **MMM-vnější**
+
+
 Back:
 
 1. **MMM-vnější** je nejlepší
@@ -1639,6 +1647,8 @@ Jak funguje paralelní **SpMVM** v COO?
 
 Jaký schedule musí být? K čemu bude docházet? Je to efektivní?
 
+![](../../Assets/Pasted%20image%2020260524151431.png)
+
 Back:
 
 1. Před inicializaci narveme `#pragma omp parallel for`
@@ -1688,6 +1698,8 @@ NI-SZZ
 
 
 Jak funguje paralelní **SpMVM** v CSR? Na čem hodně závisí?
+
+![](../../Assets/Pasted%20image%2020260524151445.png)
 
 Back:
 
@@ -1760,7 +1772,7 @@ Back:
 5. `int my_index = binary_search(A.RowStart, my_number)`
 6. `band[my_id] = my_index;`
 7. `#pragma omp barrier`
-8. `for(od band[my_id] do band[my_id+1]){ ...}
+8. `for(od band[my_id] do band[my_id+1]){ ...}`
 
 rozdělení matice na pásy s podobnými počty nenulových prvků (např. tak, že si každé vlákno vypočte svůj ideální dělící bod a “zaokrouhlí” na celé řádky)
 
