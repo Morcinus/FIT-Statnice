@@ -81,7 +81,7 @@ START
 NI-SZZ
 
 
-U čeho typicky vzniká falešné sdílení?
+U jakého **typu paralelismu** typicky **vzniká falešné sdílení**?
 
 Back:
 
@@ -107,7 +107,9 @@ Jak se dá snížit dopad falešného sdílení u for cyklů?
 
 Back:
 
-Použít `schedule(static)`.
+Použít `schedule(static, X)`.
+
+Za $X$ dosadíme `cache_line_size/sizeof(int)`, pokud máme pole s `int` hodnotama
 
 Tím se práce rozhodí mezi vlákna a nepřistupují tolik k těm blízkým datům.
 
@@ -991,6 +993,8 @@ NI-SZZ
 
 Jak se dá paralelizovat **vnější cyklus** $A$ násobení polynomů?
 
+![](../../Assets/Pasted%20image%2020260524141255.png)
+
 Back:
 
 1. Před vnější cyklus dáme `#pragma omp parallel for schedule(static)`
@@ -1014,6 +1018,8 @@ NI-SZZ
 
 
 Jak se dá paralelizovat **vnitřní cyklus** $B$ násobení polynomů?
+
+![](../../Assets/Pasted%20image%2020260524141259.png)
 
 Back:
 
@@ -1201,6 +1207,8 @@ NI-SZZ
 
 Jak se dá paralelizovat **vnější cyklus** u násobení matic?
 
+![](../../Assets/Pasted%20image%2020260524141202.png)
+
 Back:
 
 1. Před vnější cyklus dáme `#pragma omp parallel for schedule(static)`
@@ -1249,9 +1257,11 @@ NI-SZZ
 
 Jak se dá paralelizovat **prostřední cyklus** u násobení matic?
 
+![](../../Assets/Pasted%20image%2020260524141205.png)
+
 Back:
 
-1. Před vnější cyklus dáme `#pragma omp parallel for schedule(static)`
+1. Před prostřední cyklus dáme `#pragma omp parallel for schedule(static)`
 
 Díky tomu každé vlákno zpracovává **jiný sloupec** $C$.
 
@@ -1357,6 +1367,8 @@ NI-SZZ
 
 Jak se dá paralelizovat **vnitřní cyklus** při násobení matic?
 
+![](../../Assets/Pasted%20image%2020260524141216.png)
+
 Back:
 
 1. Před vnitřní cyklus dáme `#pragma omp parallel for schedule(static) reduction(+:s)`
@@ -1379,6 +1391,8 @@ START
 NI-SZZ
 
 Jak se dá zrychlit (trochu) **paralelizace prostředního cyklu** u **násobení matic**?
+
+![](../../Assets/Pasted%20image%2020260524141229.png)
 
 Back:
 
