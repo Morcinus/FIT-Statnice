@@ -1797,8 +1797,6 @@ NI-SZZ
 
 Jak vypadá sekvenční verze QuickSortu?
 
-(Pozn. tady podle mě nemá cenu se to učit přesně, ale jen cca tušit, co tam je za funkce)
-
 Back:
 
 **seq_quicksort**:
@@ -1836,7 +1834,9 @@ START
 NI-SZZ
 
 
-Jak se dá **paralelizovat quicksort**? Jaké to má problémy?
+Jak se dá naivně **paralelizovat quicksort**? Jaké to má problémy?
+
+![](../../Assets/Pasted%20image%2020250321134512.png)
 
 Back:
 
