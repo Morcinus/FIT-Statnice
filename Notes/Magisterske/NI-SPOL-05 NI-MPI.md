@@ -592,7 +592,7 @@ NI-SZZ
 Co je **krácení** v kontextu chyb? Kdy nastává? Jak se mu vyhnout?
 
 Back:
-1
+
 V průběhu výpočtu nám vyjde například $0.0049 \cdot 10^{-2}$, normalizujeme to tak, aby tam byla ta skrytá jednička (zde jsme v desítkové soustavě, takže ta $4$) a vyjde nám $4.9\textcolor{Red}{000} \cdot 10^{-5}$, což je ale špatně protože jsme tím ztratili ta poslední čísla. Takže pak když pokračujem ve výpočtu, tak už to je méně přesné.
 
 Kdy nastává: **při odečítání** (např $x-\sin{x}$)
