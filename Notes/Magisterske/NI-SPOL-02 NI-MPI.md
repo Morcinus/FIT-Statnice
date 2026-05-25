@@ -2,8 +2,6 @@
 created: 2025-10-16T10:05:00
 parent: "[[FIT]]"
 ---
-
-me
 TARGET DECK: NI-SZZ
 FILE TAGS: NI-SPOL-02 NI-MPI
 

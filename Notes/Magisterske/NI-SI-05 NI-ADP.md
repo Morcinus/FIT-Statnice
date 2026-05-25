@@ -291,7 +291,6 @@ Back:
 - **Technologický lock-in** – Změna programovacího jazyka znamená kompletní přepis aplikace
 - **Složitost při růstu** – Při rozšiřování se stává projekt obrovským, nepřehledným a obtížným na orientaci (Big Ball of Mud)
 - **Náchylnost na chyby** – Jedna chyba ovlivní fungování celého systému
-
 <!--ID: 1778786460818-->
 END
 
@@ -452,7 +451,6 @@ Back:
 - **Blackboard (Tabule):** - **centrální úložiště dat** (sdílená paměť), které obsahuje data spojená s problémem. - Nachází se zde počáteční zadání, mezivýsledky (částečná řešení), hypotézy a nakonec i konečné řešení. - Stav na tabuli se neustále vyvíjí.
 - **Knowledge Sources (Zdroje znalostí / Experti):** - Nezávislé a specializované moduly (kusy kódu, algoritmy, neuronové sítě). - Každý modul umí řešit jen svou specifickou část problému. - **Klíčové pravidlo:** Tito experti **nikdy nekomunikují přímo mezi sebou**. Sledují pouze tabuli. Jakmile se na tabuli objeví data, kterým rozumí, "zvednou ruku", že chtějí přispět.
 - **Control Shell (Řídicí komponenta / Moderátor):** - Aby se experti u tabule neprali, musí tam být moderátor. - Tato komponenta neustále monitoruje změny na tabuli a "zvednuté ruce" expertů. - Rozhoduje, komu dá slovo (zavolá jeho metodu) a jakým způsobem se bude řešení vyvíjet. Řídí tedy celý průběh programu.
-
 <!--ID: 1778786460829-->
 END
 
@@ -474,7 +472,6 @@ Back:
 - Kybernetická bezpečnost (SIEM a detekce hrozeb)
 - Kompilátory a moderní IDE – pracují nad jedním syntaktickým stromem
 - Uměla inteligence a experní systémy
-
 <!--ID: 1760705194435-->
 END
 
@@ -536,7 +533,6 @@ Ve formátu **IF (podmínka) THEN (akce)**.
 
 - **Podmínka (Condition):** Testuje obsah _Working memory_ (např. přítomnost symbolů) nebo data ze senzorů.
 - **Akce (Action):** Změní stav _Working memory_ nebo spustí externí operaci.
-
 <!--ID: 1778786460840-->
 END
 
@@ -552,7 +548,6 @@ Back:
 1. **Match (Shoda):** Porovnání podmínek všech pravidel s obsahem _Working memory_.
 2. **Conflict-Resolution (Řešení konfliktů):** Výběr _jednoho_ konkrétního pravidla z těch, která splnila podmínku.
 3. **Act (Akce):** Provedení akce vybraného pravidla (často změní paměť) a návrat zpět na fázi 1.
-
 <!--ID: 1778786460844-->
 END
 
@@ -581,7 +576,6 @@ Back:
 Když je **sada pravidel výrazně jednodušší než samotný model**, který z nich vznikne (model je tvořen opakováním omezeného množství vzorů).
 
 - _Pozn.:_ Používá se v AI pro ručně psaná/spravovaná pravidla (typicky _nezahrnuje_ pravidla automaticky vygenerovaná strojovým učením).
-
 <!--ID: 1778786460851-->
 END
 
@@ -623,7 +617,6 @@ Back:
 
 - Každý publisher a subscriber o sobě sdílí meta-data přes IP multicast (tzn. všichni o sobě vědí), tyto informace si každý publisher/subscriber cachuje
 - Podle meta-dat publisher rovnou posílá informace subscriberovi
-
 <!--ID: 1760705194447-->
 END
 
@@ -644,7 +637,6 @@ Back:
  	- Zprávy jsou odběrateli doručeny pouze v případě, že atributy nebo samotný obsah zprávy splňují podmínky (filtry), které si nadefinoval sám odběratel.
  	- Za klasifikaci a třídění zpráv je v tomto modelu zodpovědný odběratel.
 1. **Hybridní přístup (Hybrid)** - Některé systémy podporují kombinaci obou výše zmíněných přístupů. - Odesílatelé běžně publikují zprávy do určitého tématu, zatímco odběratelé si nad jedním nebo více tématy registrují odběr s dodatečným filtrováním na základě obsahu zprávy.
-
 <!--ID: 1778786460855-->
 END
 
@@ -660,7 +652,6 @@ Back:
 - **Build time** - Příklad: V systémech s grafickým uživatelským rozhraním (GUI) mohou být klienti pevně naprogramováni přímo v kódu tak, aby obsluhovali uživatelské příkazy (např. událost kliknutí na tlačítko).
 - **Initialization time** - Příklad: Existují frameworky a softwarové produkty, které k registraci odběratelů využívají konfigurační XML soubory. Tato registrace proběhne jednorázově během úvodního načítání (inicializace) systému.
 - **Runtime** - Příklad: Databázové triggery (spouštěče), e-mailové konference (mailing listy) a RSS kanály. (Uživatel nebo systém může odběr dynamicky vytvářet či rušit kdykoliv během toho, co aplikace běží).
-
 <!--ID: 1778786460859-->
 END
 

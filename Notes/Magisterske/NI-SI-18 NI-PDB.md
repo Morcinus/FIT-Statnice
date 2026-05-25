@@ -575,7 +575,6 @@ Back:
 <!-- ImageStart -->
 ![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXch_NVqX68_B8u5AQy3l8by3XsopfRNwxO1hp6BhLioQvxUt9p_47lPdT8Twxicf8Kp_J2ZA7KPhTTggIPE-Up6X6T4wgJ2fkAqmOx7oSL2Kzebw24m1MI13JGR6wCbRzwiwY9KVp5f1hRg6CEutcU4V3Y?key=MR9RTuBxYyWmpndNFWTOiQ)
 <!-- ImageEnd -->
-
 <!--ID: 1779704516460-->
 END
 
@@ -598,7 +597,6 @@ Back:
 <!-- ImageStart -->
 ![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXch_NVqX68_B8u5AQy3l8by3XsopfRNwxO1hp6BhLioQvxUt9p_47lPdT8Twxicf8Kp_J2ZA7KPhTTggIPE-Up6X6T4wgJ2fkAqmOx7oSL2Kzebw24m1MI13JGR6wCbRzwiwY9KVp5f1hRg6CEutcU4V3Y?key=MR9RTuBxYyWmpndNFWTOiQ)
 <!-- ImageEnd -->
-
 <!--ID: 1779704516462-->
 END
 
@@ -1252,7 +1250,6 @@ Back:
 
 - stejná data na různých uzlech
 - Cíl: **zvýšit performace**, **zvýšit toleranci vůči failu** (zamezit single point of failure)
-
 <!--ID: 1779704516465-->
 END
 
