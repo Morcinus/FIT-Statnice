@@ -24,7 +24,6 @@ Back:
 
 - Slouží k propojování aplikací umožňující výměnu a sdílení schopností (capabilities) – konkrétně informace a funkce
 
-
 <!--ID: 1773945940629-->
 END
 
@@ -45,7 +44,6 @@ Schopnost, aby si dva systémy rozuměly.
 - Funkce/procesy – syntaxe a sémantika
 - Technické aspekty – protokoly, síťové adresy atd.
 
-
 <!--ID: 1778786460867-->
 END
 
@@ -64,7 +62,6 @@ Back:
 
 - **Java** a **XML** je nejpoužívanější ve **velkých organizacích**, je to už trošičku přežitek
 - U nových systémů se používá **JSON** a **modernější programovací jazyky**
-
 
 <!--ID: 1773945940632-->
 END
@@ -87,7 +84,6 @@ Back:
 
 **Syntax** mi jasně definuje ten standard, **sémantiku** si musím zadefinovat sám např. pomocí **RDFS** nebo **JSONSchema**.
 
-
 <!--ID: 1773945940635-->
 END
 
@@ -107,7 +103,6 @@ Back:
 **RDFS** (Resource Description Framework Schema):
 
 Standard (jazyk), který je nadstavbou **RDF** a umožňuje mi jasně definovat **sémantiku** XML a JSONu.
-
 
 <!--ID: 1773945940638-->
 END
@@ -133,7 +128,6 @@ Každý interface má:
 - **technický detaily** (např. endpoint, ip adresa, atd.)
 
 ![](../../Assets/Pasted%20image%2020240930104053.png)
-
 <!--ID: 1773945940641-->
 END
 
@@ -227,7 +221,6 @@ Back:
 
 Co nejvíce bych se měl opírat o globální **standardy**. Neměl bych si vymýšlet něco svýho.
 
-
 <!--ID: 1773945940651-->
 END
 
@@ -247,7 +240,6 @@ Back:
 - **škálovatelnost** - messaging servers, load balancers, proxy serves
 - **functional** - integrace (propojování) severů a částí aplikace, repozitáře,...
 - **security** - firewally, gateways,...
-
 <!--ID: 1773945940654-->
 END
 
@@ -472,7 +464,6 @@ Back:
 Proces, co zkontroluje, jeslti jsou všechny systémy správně synchronizované.
 
 Tento proces se spouští například jednou za den.
-
 <!--ID: 1773945940681-->
 END
 
@@ -493,7 +484,6 @@ Back:
 - Pomocí integračních vzorů v ní můžu vytvářet integrační procesy.
 - Plní roli prostředníka (intermediary) v SOA
 - ESB aplikace - Typy služeb: sdílené a infrastruktura - Typy procesů: technické a businessové
-
 
 <!--ID: 1773945940684-->
 END
@@ -641,7 +631,6 @@ Back:
 - Mapování dat z jedné struktury do druhé
 - Řeší konverze mezi rozdílnými formáty
 
-
 <!--ID: 1778786460889-->
 END
 
@@ -736,7 +725,6 @@ Back:
 	- Server nemusí být dostupný, když klient odesílá požadavek
 	- Může zde být více serverů, které požadavky zpracovávají
 
-
 <!--ID: 1778786460907-->
 END
 
@@ -784,7 +772,6 @@ Back:
 
 - **Message Queue** - jeden klient, jeden server
 - **Publish/Subscribe** - jeden klient, z queue čte více serverů _(každý např. zaměřený na určitý task)_
-
 
 <!--ID: 1773945940697-->
 END
@@ -841,7 +828,6 @@ Back:
 Server si u sebe chvíli podrží ten request klienta, díky čemuž zamezí tomu, aby se furt klient dotazoval na status monitor.
 
 Tzn. server si tím reguluje zátěž, protože schválně na každý request odpoví po nějakém čase. Nicméně udržuje si pro každého klienta vlákno, které se v pravidelných časových intervalech probouzí.
-
 <!--ID: 1773945940703-->
 END
 
@@ -967,7 +953,6 @@ Back:
 3. Request čeká na to, až mu bude přiřazeno vlákno pro přístup do databáze.
 4. Pokud je kapacita fronty plná, rovnou se requesty odmítají (díky čemuž to je rychlejší, protože se nezatěžuje ten systém, když vím, že bych to stejně nestíhal zpracovávat)
 
-
 <!--ID: 1773945940719-->
 END
 
@@ -1017,7 +1002,6 @@ Back:
 Na **outbound connections** umožňuje dělat asynchronní IO.
 
 Používají se k tomu callback funkce. Když vlákno dokončí operaci, zavolá mezitím jinou funkci.
-
 <!--ID: 1773945940725-->
 END
 

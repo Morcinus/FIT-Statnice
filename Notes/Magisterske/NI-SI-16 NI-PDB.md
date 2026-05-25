@@ -27,7 +27,6 @@ Jako **strom**
 - Kořen je select
 
 ![](../../Assets/Pasted%20image%2020240923165757.png)
-
 <!--ID: 1779128799404-->
 END
 
@@ -56,7 +55,6 @@ Back:
 - existuje více potenciálních prováděcích plánů pro jeden dotaz
 
 Tags: reviewed
-
 <!--ID: 1779128799411-->
 END
 
@@ -104,7 +102,6 @@ Back:
 	- **Použití hintů** - můžeme vynutit v konfiguraci určitou strategii
 
 Tags: reviewed
-
 <!--ID: 1779128799414-->
 END
 
@@ -153,7 +150,6 @@ Back:
 <!-- DetailInfoEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799417-->
 END
 
@@ -216,7 +212,6 @@ Zdroj: https://courses.fit.cvut.cz/NI-PDB/lectures/10-benchmarks-acid-tuning/ind
 <!-- DetailInfoEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799420-->
 END
 
@@ -236,7 +231,6 @@ Co je **optimalizace**?
 Back:
 
 Nacházení nejlepšího prováděcího plánu.
-
 <!--ID: 1779128799423-->
 END
 
@@ -261,7 +255,6 @@ Cena obsahuje (např.):
 
 - **CPU** - jak moc musí procesor počítat, porovnávat atd.
 - **Přístup k datům** - buď co cache nebo do storage (disk)
-
 <!--ID: 1779128799426-->
 END
 
@@ -291,7 +284,6 @@ Back:
 <!-- DetailInfoEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799429-->
 END
 
@@ -382,7 +374,6 @@ Back:
 - **Fetch** - získá se výsledek a předá se aplikaci
 
 Tags: reviewed
-
 <!--ID: 1779128799431-->
 END
 
@@ -427,7 +418,6 @@ Oracle si u tabulek/stromů drží různé statistiky - např. počet hodnot atd
 
 ![](../../Assets/Pasted%20image%2020240923173735.png)
 ![](../../Assets/Pasted%20image%2020240923174138.png)
-
 <!--ID: 1779128799434-->
 END
 
@@ -449,7 +439,6 @@ Back:
 
 
 ![](../../Assets/Pasted%20image%2020240923174211.png)
-
 <!--ID: 1779128799437-->
 END
 
@@ -483,7 +472,6 @@ Back:
 <!-- ImageEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799439-->
 END
 
@@ -547,7 +535,6 @@ Back:
 <!-- ImageEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799442-->
 END
 
@@ -580,7 +567,6 @@ Back:
 <!-- ImageEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799445-->
 END
 
@@ -647,7 +633,6 @@ Back:
 <!-- DetailInfoEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799448-->
 END
 
@@ -701,7 +686,6 @@ Máme relaci $R$ s klíčem $A$:
 <!-- DetailInfoEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799451-->
 END
 
@@ -761,7 +745,6 @@ Back:
 - **cluster** - shluk/bucker dat
 
 ![](../../Assets/Pasted%20image%2020240923171047.png)
-
 <!--ID: 1779128799453-->
 END
 
@@ -818,7 +801,6 @@ Tady je imo špatně ten dotaz. Mělo by tam být víc podmínek:
 <!-- DetailInfoEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799456-->
 END
 
@@ -937,7 +919,6 @@ Back:
 - Join s využitím speciálních struktur
 
 Tags: reviewed
-
 <!--ID: 1779128799459-->
 END
 
