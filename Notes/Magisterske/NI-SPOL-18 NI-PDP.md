@@ -1470,17 +1470,24 @@ Jak funguje paralelní násobení hustých matic pomocí Cannonova algoritmu?
 
 Back:
 
-1. obě matice rozdělíme **šachovnicově**
-2. $i$-tý řádek $A$ se posune o $i$ pozic doleva a $i$-tý sloupec B o $i$ pozic nahoru
-3. každý proces dostane ten samý dílek šachovnice z obou matic
-4. v $\sqrt p$ iteracích každý proces vynásobí své dva dílky, počká na ostatní a pak pošle svůj dílek $A$ doleva a svůj dílek $B$ nahoru
-5. nakonec nezapomenu posunout obě matice do původního stavu
-
-![](../../Assets/Pasted%20image%2020260520194300.png)
+1. **Rozdělení matic $A$ a $B$ do $p$ stejných bloků** (říká se tomu šachovnice, ale je to spíš jako mřížka, protože nezáleží na barvách políček). Každý procesor dostane na starost v každé matici stejný blok $A_{j,k}, B_{j,k}, C_{j,k}$ a bude mít za úkol po zbytek algoritmu vypočíst $C_{j,k}$
+2. **Zarovnání $A$**: $i$-tý řádek $A$ se posune o $i$ pozic doleva (cyklický posuv)
+3. **Zarovnání $B$**: $i$-tý sloupec $B$ se posune o $i$ pozic nahoru (cyklický posuv)
+4. Poznámka: díky zarovnáním tak bude mít každý procesor u sebe blok jako kdyby začínal násobit ty matice $A$ a $B$
+5. **Cyklus $\sqrt{p}$ krát:**
+	1. Každý procesor vypočte $C_{j,k} \texttt{+=} A_{j,k}\times B_{j,k}$
+	2. Všechny procesory udělají posuv bloku $A$ doleva
+	3. Všechny procesory udělají posuv bloku $B$ nahoru
+	4. Tzn. každý procesor dostane správné bloky k dalšímu výpočtu
 
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020260525121407.png)
 <!-- DetailInfoEnd -->
+
+<!-- ImageStart -->
+Pozn. tenhle obrázek z přednášky mi přišel teda dost neintuitivní. Takže se na něj radši nedívejte :D - Morčín
+![](../../Assets/Pasted%20image%2020260520194300.png)
+<!-- ImageEnd -->
 <!--ID: 1779300071215-->
 END
 
@@ -1529,14 +1536,14 @@ Original Flashcard ID: 1779299206147
 START
 NI-SZZ
 
-Pomocí jakých MPI operací se implementuje **Cannonův algoritmus**?
+Pomocí jakých MPI operací se implementuje **Cannonův algoritmus**? (4)
 
 Back:
 
 - `MPI_Cart_create` → přeorganizuje komunikátor do 2D toroidu
 - `MPI_Cart_coords` → každý proces zjistí svoje souřadnice v toroidu
 - `MPI_Cart_shift` → vypočítá ranky uzlů “o $i$ doleva” a “o $i$ nahoru”
-- `MPI_Send_recv_replace` → odešle dílek a rovnou přijme jiný
+- `MPI_Sendrecv_replace` → odešle blok, rovnou přijme jiný a uloží ho na stejné místo
 <!--ID: 1779300071224-->
 END
 
@@ -1551,12 +1558,13 @@ Original Flashcard ID: 1779299206150
 START
 NI-SZZ
 
-Jak funguje **paralelní mocninná metoda**?
+Co je algoritmus **paralelní mocninná metoda**?
 
 Back:
 
-- mocninná metoda je iterační algoritmus, který k (řídké) čtvercové matici $A$ najde dominantní (v absolutní hodnotě největší) vlastní číslo a odpovídající vlastní vektor
-    - začíná s libovolným nenulovým vektorem $x$ a mnohokrát násobí $y = Ax$
+**Iterační algoritmus**, který ke čtvercové matici $A$ najde **dominantní vlastní číslo** a **odpovídající vlastní vektor**.
+
+dominantní vlastní číslo = největší v absolutní hodnotě
 <!--ID: 1779300071227-->
 END
 
