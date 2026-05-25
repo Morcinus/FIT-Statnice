@@ -62,38 +62,6 @@ END
 
 ---
 
-<!--
-Original Flashcard ID: 1737106145138
--->
-
-START
-NI-SZZ
-
-Vysvětlete rozdíly mezi **OLTP a OLAP** databází.
-
-(větší otázka)
-
-Back:
-
-Obě jsou technologie uložení dat v databázi.
-
-**OLTP** - online transaction processing
-
-- Většina aplikací.
-- Hodně uživatelů **čte** a **mění** data.
-- Systémy optimalizované pro rychlé, krátké transakce, např. vkládání, aktualizace a mazání dat.
-- Např. e-shop, kos
-
-**OLAP** - online analytical processing
-
-- Systémy optimalizované pro analytické zpracovávání, zaměřené na efektivní **čtení a analýzu** velkého množství dat.
-- Data nebývají "hezky" uspořádána (podle 3NF).. Typicky tam bývá hodně redundance, díky čemuž je čtení vysoce efektivní (ale zápis je pain in the ass)
-- Např. business intelligence, reportování, analytické systémy
-<!--ID: 1779128799856-->
-END
-
----
-
 ## Komplexní benchmarky (TPC-C, TPC-E, TPC-H) - princip a metriky
 
 <!--
@@ -311,23 +279,6 @@ TPC-E je složitější, je tam větší rozmanitost transakcí atd.
 
 <!-- DetailInfoEnd -->
 <!--ID: 1779128799883-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205748931
--->
-
-START
-NI-SZZ
-
-SMAZAT
-
-Back:
-
-SMAZAT
-<!--ID: 1779128799885-->
 END
 
 ---
