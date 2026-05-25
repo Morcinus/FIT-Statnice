@@ -570,11 +570,17 @@ START
 NI-SZZ
 
 
-Jak volají MPI funkce **zdrojový** a **cílový proces** u 2-bodové komunikace?
+Jak volají MPI funkce `MPI_Send` a `MPI_Recv` **zdrojový** a **cílový proces** u 2-bodové komunikace?
 
 Back:
 
+- **Zdrojový proces** zavolá `MPI_Send` s `dest` nastaveným na číslo cílového procesu
+- **Cílový proces** zavolá `MPI_Recv` se `source` nastevným na číslo zrojového procesu nebo s `MPI_SOURCE_ANY` pro přijetí zprávy od libovolného procesu
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020250330103722.png)
+<!-- DetailInfoEnd -->
+
 <!--ID: 1779300071095-->
 END
 
@@ -616,11 +622,13 @@ START
 NI-SZZ
 
 
-Jak funguje **Stavový objekt** v 2-bodové komunikaci? Co z něj můžem získat? Co když nás nezajímá?
+Jak funguje **Stavový objekt** v 2-bodové komunikaci? 
+Co z něj můžem získat za **informace**? (3)
+Jak můžeme **status ignorovat**?
 
 Back:
 
-Uděláme **stavový objekt** `MPI_Status status` a do `MPI_Recv` se passne `&status`.
+Alokujeme **stavový objekt** `MPI_Status status` a do `MPI_Recv` se passne `&status`.
 
 Lze z něj získat:
 
@@ -682,9 +690,19 @@ Jak se dá implementovat Master-Slave program v MPI?
 
 Back:
 
-![](../../Assets/Pasted%20image%2020250330104057.png)
-![](../../Assets/Pasted%20image%2020250330104108.png)
+- Pokud `proc_num == 0` (jsme master)
+	- Uděláme cyklus, kde každému workerovi pošleme zprávu s naším `TAG_WORK`
+	- Pak pokud máme working slaves, tak čekáme na příjem zprávy `MPI_Recv` s `TAG_DONE`. Pokud zbývá práce, tak to pošleme tomu workerovi. Pokud už není práce, tak mu pošleme zprávu s `TAG_TERMINATE`
+- Pokud `proc_num != 0` (jsme slave)
+	- Ve smyčce vždy čekáme na `MPI_Recv` zprávu
+		- Pokud je zpráva `TAG_WORK`, tak začnem pracovat s těmi daty a po dokončení pošleme `TAG_DONE`
+		- Pokud je zpráva `TAG_TERMINATE`, tak vyskočíme z cyklu a ukončíme se
+
+Pozn. ty tags jsou námi vytvořené konstanty (třeba intový)
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020250330104118.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1779300071106-->
 END
 
@@ -1559,7 +1577,6 @@ Back:
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020260525121407.png)
 <!-- DetailInfoEnd -->
-
 <!--ID: 1779300071215-->
 END
 
