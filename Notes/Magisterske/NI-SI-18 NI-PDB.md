@@ -39,7 +39,6 @@ Tohle je pro srovnání relační databáze
 ![](../../Assets/Pasted%20image%2020241009142507.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1779128799462-->
 END
 
@@ -60,7 +59,6 @@ Back:
 - **schema free** - nemají striktní schéma
 - **eventually consistent** - není tam strong konzistence
 - **pro obrovská množství dat**
-
 <!--ID: 1779128799465-->
 END
 
@@ -84,7 +82,6 @@ Není nutné, aby byla data furt konzistentní (ACID), ale jsou eventually konzi
 ![](../../Assets/Pasted%20image%2020241011110101.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1779128799468-->
 END
 
@@ -106,7 +103,6 @@ Back:
 - **Administrátoři** - nejsou tolik potřeba, protože se vše automatizuje
 - **Economics** - o neco levnější než klasické SQL
 - **Flexibility** - nejsou striktní data schemata
-
 <!--ID: 1779128799470-->
 END
 
@@ -128,7 +124,6 @@ Back:
 - **Administrace** - občas obtížné na instalaci a údržbu
 - **Analytiky** - není taková podpora jako u SQL
 - **Expertise** - malé množství expertů
-
 <!--ID: 1779128799473-->
 END
 
@@ -147,7 +142,6 @@ Back:
 
 - Musí se jednat o distribuovaný systém se shardingem a replikací
 - Read a write operace jsou dělány na jednom agregátu
-
 <!--ID: 1779128799476-->
 END
 
@@ -167,7 +161,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241022102913.png)
 
 CAP = Consistency, Availability, Partition tolerance
-
 <!--ID: 1779128799479-->
 END
 
@@ -191,7 +184,6 @@ Back:
 s![](../../Assets/Pasted%20image%2020241022103146.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1779128799483-->
 END
 
@@ -215,7 +207,6 @@ Pokud noda běží, musí odpovídat na requesty
 ![](../../Assets/Pasted%20image%2020241022103235.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1779128799486-->
 END
 
@@ -233,7 +224,6 @@ Co je **partition tolerance** v CAP theoremu?
 Back:
 
 Je možný, že nějaká node na chvíli vypadne. Distribuovaný systém by měl být vůči tomuhle odolný,
-
 <!--ID: 1779128799490-->
 END
 
@@ -262,7 +252,6 @@ Vždy se zaměřím na dvě vlastnosti:
 ![](../../Assets/Pasted%20image%2020241022103559.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1779128799493-->
 END
 
@@ -282,7 +271,6 @@ Back:
 Convergent Replicated Data Types
 
 - Zavedeme datové typy a konkrétní povolené operace a v případě konfliktů jak se to má resolvenout
-
 <!--ID: 1779128799496-->
 END
 
@@ -302,7 +290,6 @@ Jaké CRDT typy implementuje Riak?
 Back:
 
 Counter, set, map, register, flag,...
-
 <!--ID: 1779128799499-->
 END
 
@@ -332,7 +319,6 @@ Konvergenční pravidlo:
 ![](../../Assets/Pasted%20image%2020241127174746.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1779128799501-->
 END
 
@@ -362,7 +348,6 @@ Konvergenční pravidlo:
 ![](../../Assets/Pasted%20image%2020241127174937.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1779128799504-->
 END
 
@@ -392,7 +377,6 @@ Konvergenční pravidlo:
 ![](../../Assets/Pasted%20image%2020241127174928.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1779128799507-->
 END
 
@@ -435,7 +419,6 @@ Není možné, aby distribuovaný systém poskytoval záruku všech tří vlastn
 <!-- DetailInfoEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799510-->
 END
 
@@ -464,7 +447,6 @@ Back:
 - U CA, CP - silná konzistence
 
 Tags: reviewed
-
 <!--ID: 1779128799512-->
 END
 
@@ -507,7 +489,6 @@ Proč to tak funguje:
 - Kvůli podmínce u write quora bude vždy při čtení mít alespoň jeden node aktuální verzi záznamu.
 
 Tags: reviewed
-
 <!--ID: 1779128799515-->
 END
 
@@ -543,7 +524,6 @@ Další:
 - Complexity
 
 Tags: reviewed
-
 <!--ID: 1779128799518-->
 END
 
@@ -574,7 +554,6 @@ Back:
 <!-- ImageEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799521-->
 END
 
@@ -597,7 +576,7 @@ Back:
 ![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXch_NVqX68_B8u5AQy3l8by3XsopfRNwxO1hp6BhLioQvxUt9p_47lPdT8Twxicf8Kp_J2ZA7KPhTTggIPE-Up6X6T4wgJ2fkAqmOx7oSL2Kzebw24m1MI13JGR6wCbRzwiwY9KVp5f1hRg6CEutcU4V3Y?key=MR9RTuBxYyWmpndNFWTOiQ)
 <!-- ImageEnd -->
 
-
+<!--ID: 1779704516460-->
 END
 
 ---
@@ -620,7 +599,7 @@ Back:
 ![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXch_NVqX68_B8u5AQy3l8by3XsopfRNwxO1hp6BhLioQvxUt9p_47lPdT8Twxicf8Kp_J2ZA7KPhTTggIPE-Up6X6T4wgJ2fkAqmOx7oSL2Kzebw24m1MI13JGR6wCbRzwiwY9KVp5f1hRg6CEutcU4V3Y?key=MR9RTuBxYyWmpndNFWTOiQ)
 <!-- ImageEnd -->
 
-
+<!--ID: 1779704516462-->
 END
 
 ---
@@ -640,7 +619,6 @@ S jakými dokumenty pracuje **MongoDB**?
 Back:
 
 S kolekcemi **JSON dokumentů**
-
 <!--ID: 1779128799523-->
 END
 
@@ -658,7 +636,6 @@ Proč se v MongoDB **nedoporučuje** přidělovat IDčka **autoinkrementem**, al
 Back:
 
 Protože ta databáze může být naškálovaná (na více místech), potom přidělování IDček bude složité.
-
 <!--ID: 1779128799526-->
 END
 
@@ -682,7 +659,6 @@ Označuje query operátor.
 `$gt` - greater than
 
 <!-- ExampleEnd -->
-
 <!--ID: 1779128799529-->
 END
 
@@ -714,7 +690,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241015093549.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1779128799532-->
 END
 
@@ -755,7 +730,6 @@ je to AP systém (tedy availability + partition tolerance)
 ![](../../Assets/Pasted%20image%2020241127180532.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1779128799537-->
 END
 
@@ -790,7 +764,6 @@ Podle toho se umisťují repliky záznamů tak, aby byl rovnoměrně rozdělené
 ![](../../Assets/Pasted%20image%2020241127180601.png)
 
 <!-- ImageEnd -->
-
 <!--ID: 1779128799540-->
 END
 
@@ -826,7 +799,6 @@ Back:
 	- Aplikace se složitými vztahy a dotazy (lepší je SQL)
 	- Aplikace s méně daty (lepší je SQL)
 	- Aplikace, které vyžadují hodně stabilitu a přesnost (lepší je SQL s ACID)
-
 <!--ID: 1779128799543-->
 END
 
@@ -859,7 +831,6 @@ Back:
 	- Komplexní dotazy a vztahy (Lepší SQL)
 	- Když máme nízký objem dat (lepší SQL nebo Mongo)
 	- Když potřebujeme přesnost ve schématu (lepší SQL)
-
 <!--ID: 1779128799546-->
 END
 
@@ -890,7 +861,6 @@ Back:
 	- Pro aplikace **bez komplexních vztahů**
 	- Pro **velké transakční systémy**
 	- Pro **velké množství dat** s jednoduchými vztahy
-
 <!--ID: 1779128799549-->
 END
 
@@ -923,7 +893,6 @@ Back:
 	- Pro aplikace vyžadující silnou konzistenci
 	- Aplikace se složitými dotazy nad strukturovanými daty
 	- Pro složité datové typy
-
 <!--ID: 1779128799552-->
 END
 
@@ -944,7 +913,6 @@ Back:
 
 - **horizontální** - koupim další node, který zařadím do sítě
 - **vertikální** (nahoru) - koupím silnější hardware (nebo větší množství místa atd.)
-
 <!--ID: 1779128799555-->
 END
 
@@ -962,7 +930,6 @@ Co je **škálovatelnnost**?
 Back:
 
 Schopnost systému se vyrovnat s narůstajícím množstvím dat nebo požadavků.
-
 <!--ID: 1779128799557-->
 END
 
@@ -988,7 +955,6 @@ Back:
 Přidáme procesory, ramky.
 
 <!-- ExampleEnd -->
-
 <!--ID: 1779128799560-->
 END
 
@@ -1008,7 +974,6 @@ Back:
 - Je to **dražší** - výdaje se zvyšují exponenciálně
 - **Vendor lock** - je jen pár společností, co se tím zabývá (např Oracle)
 - **Performance limits** - i silnější mašiny mají své limity
-
 <!--ID: 1779128799563-->
 END
 
@@ -1065,7 +1030,6 @@ Množina **nodes**, založená na **shared-nothing** architektuře
 **shared-nothing** = každý node má vlastní operační systém, vlastní hardware a komunikuje s ostatními nody pomocí zpráv
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1779128799571-->
 END
 
@@ -1126,7 +1090,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241022101216.png)
 
 <!-- ExplanationEnd -->
-
 <!--ID: 1779128799583-->
 END
 
@@ -1145,7 +1108,6 @@ Back:
 
 - Pro read i write requesty musíme rozhodnout, ke které shardě se přistoupí
 - Občas vypadne nějaký node
-
 <!--ID: 1779128799585-->
 END
 
@@ -1164,7 +1126,6 @@ Back:
 
 - **Master-slave**
 - **Peer-to-peer**
-
 <!--ID: 1779128799588-->
 END
 
@@ -1183,7 +1144,6 @@ Back:
 
 - Počet kopií u replikace.
 - Typicky je nízký (třeba 3 nody)
-
 <!--ID: 1779128799591-->
 END
 
@@ -1210,7 +1170,6 @@ Z mastera se to automaticky popíše do slaves
 ![](../../Assets/Pasted%20image%2020241022101613.png)
 
 <!-- ImageEnd -->
-
 <!--ID: 1779128799594-->
 END
 
@@ -1228,7 +1187,6 @@ Co je **peer-to-peer architektura**?
 Back:
 
 Máme několik uzlů, u všech lze zapisovat i číst.
-
 <!--ID: 1779128799596-->
 END
 
@@ -1258,7 +1216,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241022102647.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1779128799599-->
 END
 
@@ -1296,7 +1253,7 @@ Back:
 - stejná data na různých uzlech
 - Cíl: **zvýšit performace**, **zvýšit toleranci vůči failu** (zamezit single point of failure)
 
-
+<!--ID: 1779704516465-->
 END
 
 ---
@@ -1315,7 +1272,6 @@ Co znamená, že je databáze v konzistentním stavu?
 Back:
 
 Že jsou dodržena všechna integritní omezení
-
 <!--ID: 1779128799605-->
 END
 
@@ -1339,7 +1295,6 @@ Back:
 
 
 ![](../../Assets/Pasted%20image%2020241022103618.png)
-
 <!--ID: 1779128799607-->
 END
 
@@ -1368,7 +1323,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241022103752.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1779128799610-->
 END
 
@@ -1388,7 +1342,6 @@ Co je write consistency?
 Back:
 
 ![](../../Assets/Pasted%20image%2020241022103926.png)
-
 <!--ID: 1779128799613-->
 END
 
@@ -1408,7 +1361,6 @@ Co je read consistency?
 Back:
 
 ![](../../Assets/Pasted%20image%2020241022103948.png)
-
 <!--ID: 1779128799616-->
 END
 
@@ -1432,7 +1384,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241022104335.png)
 
 <!-- ExampleEnd -->
-
 <!--ID: 1779128799618-->
 END
 
@@ -1460,7 +1411,6 @@ Back:
 	- Umožňuje **lepší škálovatelnost**, která není s ACIDem možná
 
 Tags: reviewed
-
 <!--ID: 1779128799621-->
 END
 

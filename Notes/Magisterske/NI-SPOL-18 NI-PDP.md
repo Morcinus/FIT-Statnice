@@ -1555,6 +1555,11 @@ Back:
 5. nakonec nezapomenu posunout obě matice do původního stavu
 
 ![](../../Assets/Pasted%20image%2020260520194300.png)
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260525121407.png)
+<!-- DetailInfoEnd -->
+
 <!--ID: 1779300071215-->
 END
 
@@ -1652,6 +1657,11 @@ Back:
 2. každý vynásobí své prvky příslušným prvkem $x$ a ukládá do svého lokálního $y$
 3. `Allreduce` sesbírá z lokálních $y$ výsledný vektor $y$
 4. každý proces si normalizuje $y$
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260525121855.png)
+![](../../Assets/Pasted%20image%2020260525121900.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1779300071229-->
 END
 
@@ -1673,6 +1683,10 @@ Back:
 3. `Allgather` sesbírá části $y$ rovnou do nového $x$
 4. normalizuje se $x$
 5. zkontroluje se kritérium konvergence a příp. se to celé opakuje znovu…
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260525121918.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1779300071232-->
 END
 
@@ -1717,6 +1731,15 @@ Back:
 - tzn. je potřeba komunikovat ve třech směrech (řádkově, sloupcově, po diagonále)
 
 ![](../../Assets/Pasted%20image%2020260520194609.png)
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260525122018.png)
+![](../../Assets/Pasted%20image%2020260525122027.png)
+![](../../Assets/Pasted%20image%2020260525122031.png)
+![](../../Assets/Pasted%20image%2020260525122036.png)
+![](../../Assets/Pasted%20image%2020260525122041.png)
+![](../../Assets/Pasted%20image%2020260525122045.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1779300071237-->
 END
 
