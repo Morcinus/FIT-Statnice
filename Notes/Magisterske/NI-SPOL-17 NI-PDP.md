@@ -81,7 +81,7 @@ START
 NI-SZZ
 
 
-U čeho typicky vzniká falešné sdílení?
+U jakého **typu paralelismu** typicky **vzniká falešné sdílení**?
 
 Back:
 
@@ -107,7 +107,9 @@ Jak se dá snížit dopad falešného sdílení u for cyklů?
 
 Back:
 
-Použít `schedule(static)`.
+Použít `schedule(static, X)`.
+
+Za $X$ dosadíme `cache_line_size/sizeof(int)`, pokud máme pole s `int` hodnotama
 
 Tím se práce rozhodí mezi vlákna a nepřistupují tolik k těm blízkým datům.
 
@@ -991,6 +993,8 @@ NI-SZZ
 
 Jak se dá paralelizovat **vnější cyklus** $A$ násobení polynomů?
 
+![](../../Assets/Pasted%20image%2020260524141255.png)
+
 Back:
 
 1. Před vnější cyklus dáme `#pragma omp parallel for schedule(static)`
@@ -1014,6 +1018,8 @@ NI-SZZ
 
 
 Jak se dá paralelizovat **vnitřní cyklus** $B$ násobení polynomů?
+
+![](../../Assets/Pasted%20image%2020260524141259.png)
 
 Back:
 
@@ -1201,6 +1207,8 @@ NI-SZZ
 
 Jak se dá paralelizovat **vnější cyklus** u násobení matic?
 
+![](../../Assets/Pasted%20image%2020260524141202.png)
+
 Back:
 
 1. Před vnější cyklus dáme `#pragma omp parallel for schedule(static)`
@@ -1249,9 +1257,11 @@ NI-SZZ
 
 Jak se dá paralelizovat **prostřední cyklus** u násobení matic?
 
+![](../../Assets/Pasted%20image%2020260524141205.png)
+
 Back:
 
-1. Před vnější cyklus dáme `#pragma omp parallel for schedule(static)`
+1. Před prostřední cyklus dáme `#pragma omp parallel for schedule(static)`
 
 Díky tomu každé vlákno zpracovává **jiný sloupec** $C$.
 
@@ -1357,6 +1367,8 @@ NI-SZZ
 
 Jak se dá paralelizovat **vnitřní cyklus** při násobení matic?
 
+![](../../Assets/Pasted%20image%2020260524141216.png)
+
 Back:
 
 1. Před vnitřní cyklus dáme `#pragma omp parallel for schedule(static) reduction(+:s)`
@@ -1379,6 +1391,8 @@ START
 NI-SZZ
 
 Jak se dá zrychlit (trochu) **paralelizace prostředního cyklu** u **násobení matic**?
+
+![](../../Assets/Pasted%20image%2020260524141229.png)
 
 Back:
 
@@ -1427,6 +1441,14 @@ NI-SZZ
 
 
 Jaké je **srovnání výkonnosti variant paralelního násobení** matic? (5)
+
+Následující možnosti:
+- **MMM-vnitřní**
+- **MMM-vnitřní s parallel venku**
+- **MMM-prostřední**
+- **MMM-prostřední s parallel venku**
+- **MMM-vnější**
+
 
 Back:
 
@@ -1625,6 +1647,8 @@ Jak funguje paralelní **SpMVM** v COO?
 
 Jaký schedule musí být? K čemu bude docházet? Je to efektivní?
 
+![](../../Assets/Pasted%20image%2020260524151431.png)
+
 Back:
 
 1. Před inicializaci narveme `#pragma omp parallel for`
@@ -1674,6 +1698,8 @@ NI-SZZ
 
 
 Jak funguje paralelní **SpMVM** v CSR? Na čem hodně závisí?
+
+![](../../Assets/Pasted%20image%2020260524151445.png)
 
 Back:
 
@@ -1746,7 +1772,7 @@ Back:
 5. `int my_index = binary_search(A.RowStart, my_number)`
 6. `band[my_id] = my_index;`
 7. `#pragma omp barrier`
-8. `for(od band[my_id] do band[my_id+1]){ ...}
+8. `for(od band[my_id] do band[my_id+1]){ ...}`
 
 rozdělení matice na pásy s podobnými počty nenulových prvků (např. tak, že si každé vlákno vypočte svůj ideální dělící bod a “zaokrouhlí” na celé řádky)
 
@@ -1770,8 +1796,6 @@ NI-SZZ
 
 
 Jak vypadá sekvenční verze QuickSortu?
-
-(Pozn. tady podle mě nemá cenu se to učit přesně, ale jen cca tušit, co tam je za funkce)
 
 Back:
 
@@ -1810,7 +1834,9 @@ START
 NI-SZZ
 
 
-Jak se dá **paralelizovat quicksort**? Jaké to má problémy?
+Jak se dá naivně **paralelizovat quicksort**? Jaké to má problémy?
+
+![](../../Assets/Pasted%20image%2020250321134512.png)
 
 Back:
 
