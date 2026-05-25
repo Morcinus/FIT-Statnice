@@ -939,35 +939,6 @@ END
 ---
 
 <!--
-Original Flashcard ID: 1736497489100
--->
-
-START
-NI-SZZ
-
-Jaké jsou **nevýhody horizontálního škálování**?
-
-Back:
-
-**Výrazně to komplikuje celý systém**.
-
-<!-- ExampleStart -->
-
-Musí se řešit datová konzistence, zotavování z chyb, distribuce dat atd. Všechno je to složitější.
-
-<!-- ExampleEnd -->
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020241022095614.png)
-
-<!-- DetailInfoEnd -->
-<!--ID: 1779128799568-->
-END
-
----
-
-<!--
 Original Flashcard ID: 1736497489104
 -->
 
@@ -1028,38 +999,6 @@ END
 ## Replikace a sharding
 
 <!--
-Original Flashcard ID: 1728921214751
--->
-
-START
-NI-SZZ
-
-Jaké jsou dva typy **data distribution** v databázích?
-
-Back:
-
-- **sharding** - rozdělení databáze na výpočetní uzly
-- **replication** - více kopií agregátu
-
-<!-- ExplanationStart -->
-
-Výhodou je pak zvýšený výkon.
-
-<!-- ExplanationEnd -->
-
-<!-- DetailInfoStart -->
-
-Často se dělá obojí
-
-![](../../Assets/Pasted%20image%2020241011105820.png)
-
-<!-- DetailInfoEnd -->
-<!--ID: 1779128799577-->
-END
-
----
-
-<!--
 Original Flashcard ID: 1736497489109
 -->
 
@@ -1078,7 +1017,7 @@ Back:
 Ta replikace se udělá typicky třeba na 3 nodech
 
 <!-- DetailInfoEnd -->
-<!--ID: 1779128799580-->
+<!--ID: 1779702613476-->
 END
 
 ---

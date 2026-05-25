@@ -321,41 +321,6 @@ END
 ---
 
 <!--
-Original Flashcard ID: 1735205748949
--->
-
-START
-NI-SZZ
-
-Je vyjadřovací síla XML stejná jako JSONu?
-
-Back:
-
-Ano.
-
-<!-- DetailInfoStart -->
-
-XML je "ukecanější" a proto lidi většinou preferují JSON, protože je jednodušší (obsahuje méně slov).
-
-Např. v JSONu mi stačí:
-
-```json
-movie: "Medvídek"
-```
-
-Zatímco v XML musím udělat:
-
-```xml
-<movie>Medvídek</movie>
-```
-
-<!-- DetailInfoEnd -->
-<!--ID: 1779128799657-->
-END
-
----
-
-<!--
 Original Flashcard ID: 1735205748952
 -->
 
