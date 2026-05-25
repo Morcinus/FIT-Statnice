@@ -645,7 +645,7 @@ END
 START
 NI-SZZ
 
-Kdy se lze přihlásit k odběru v **Publish-sbuscribe** modelu?
+Kdy se lze přihlásit k odběru v **Publish-subscribe** modelu?
 
 Back:
 
