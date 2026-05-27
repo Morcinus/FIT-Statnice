@@ -11,12 +11,38 @@ FILE TAGS: NI-SPOL-06 NI-VSM
 
 <!--
 TODO:
-- zde asi přihodit aspoň jak spočítat střední hodnotu, var X a další základní blbosti
-- Jak spočíst X_n (čárka nad tím)
-- Jak spočíst s_n
 - Jak spočíst z_alpha/2
 - Jak spočíst t_alpha/2
 -->
+
+
+START
+NI-SZZ
+
+Jak se spočte výběrový průměr?
+
+Back:
+
+![](../../../Assets/Pasted%20image%2020250320104507.png)
+<!--ID: 1779901815408-->
+END
+
+---
+
+
+START
+NI-SZZ
+
+Jak se spočte výběrový rozptyl?
+
+Back:
+
+![](../../../Assets/Pasted%20image%2020250320104517.png)
+<!--ID: 1779901815411-->
+END
+
+---
+
 
 ## Testování statistických hypotéz
 
@@ -497,7 +523,7 @@ Máme data $X_1, \dots, X_n$ a myslíme si, že to má nějaké rozdělení $F_0
 
 1. Rozdělníme data do binů tak, aby v každém bylo teoreticky aspoň 5 hodnot
 2. Napočítáme počty pozorování, co padnou do těch binů $N_i$
-3. Spočteme pravděpodobnost $p_i$, že to padne do $i$ tého binu
+3. Spočteme pravděpodobnost $p_i$, že to padne do $i$ tého binu podle toho rozdělení $F_0$ (tzn. když si myslíme, že to má např. normální rozdělení, tak spočteme pravděpodobnost trefení se do toho intervalu toho binu pro normální rozdělení)
 4. Pak spočteme $\chi^{2}(\textbf{X})$ (které při velkým $n$ odpovídá $\chi^2(k-1-p)$)
 5. Pokud $\chi^{2}(\textbf{X}) \geq \chi^{2}_{\alpha,k-1-p}$ tak zamítáme $H_0$
 
@@ -555,23 +581,12 @@ Original Flashcard ID: 1746599651235
 START
 NI-SZZ
 
-Jaké jsou 2 způsoby testování?
+Jak bychom typicky postupovali, pokud chceme zjistit, jestli mají dva výběry stejnou střední hodnotu, tzn. $\mu_1=\mu_2$?
 
 Back:
 
-Varianta 1:
-
-1. Uděláme "předprůzkum" - zkusíme test shody rozptylů
-   1. Pokud nezamítneme, zkusíme T-Test
-   2. Pokud zamítneme, zkusíme Welchův test
-
-Varianta 2 - uděláme testovou baterii:
-
-1. Uděláme Leven. test
-   1. Pokud nezamítneme, uděláme T-Test
-   2. Pokud zamítneme, použijeme Welchův test
-
-Lepší je prý dělat tu první variantu
+1. Zjistíme, jestli mají **stejné rozptyly**
+2. Podle toho zvolíme příslušnou variantu **dvouvýběrového t-testu** (ten s neznámýma rozptylama se jmenuje Welchův test)
 <!--ID: 1778521859987-->
 END
 
@@ -926,7 +941,7 @@ Jaké kritérium musí být dodrženo pro provedení **testu $\chi^2$ multinomic
 Back:
 
 1. $np_i \geq 5$ pro každý "bin"
-2. Nebo pokud $k \geq 3$ **Yarnoldovo kritérium**: $np_i \geq 5q$, kde $q$ je podíl tříd, pro které platí $np_i \lt 5$
+2. Nebo pokud $k \geq 3$ **Yarnoldovo kritérium**: $np_i \geq 5q$, kde $q$ je podíl tříd, pro které platí $np_i \lt 5$ neboli $q=\frac{|\{i:np_i<5\}|}{k}$
 <!--ID: 1778521860029-->
 END
 

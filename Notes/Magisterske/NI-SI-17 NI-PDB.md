@@ -1069,7 +1069,7 @@ Original Flashcard ID: 1730978212864
 START
 NI-SZZ
 
-Jaké vlastnosti property grafu?
+Jaké jsou **vlastnosti property grafu**? (3)
 
 Back:
 

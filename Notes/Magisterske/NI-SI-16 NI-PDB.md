@@ -18,15 +18,22 @@ Original Flashcard ID: 1728921214670
 START
 NI-SZZ
 
-Jak se dá znázornit SELECT při vyhodnocování?
+Jak se dá znázornit **SELECT** při vyhodnocování? Z jakých částí se skládá prováděcí plán selectu?
 
 Back:
 
-Jako **strom**
+Jako **strom**:
+- v listech jsou **datové zdroje** (tabulky databáze)
+- $\pi_{name}$ nám značí **projekci** (výběr sloupečku)
+- $\sigma_{condition}$ nám značí **selekci** (výběr záznamů podle podmínky)
+- $\bowtie_{id_1=id_2}$ značí **join** přes daná idčka
 
-- Kořen je select
+**Prováděcí plán**:
+![](../../Assets/Pasted%20image%2020260527103322.png)
 
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020240923165757.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1779128799404-->
 END
 
@@ -54,6 +61,26 @@ Back:
 - Vzniká u SELECT dotazů v **optimalizační fázi** před tím, než se dotaz spustí
 - existuje více potenciálních prováděcích plánů pro jeden dotaz
 
+<!-- ExampleStart -->
+```sql
+SELECT S.sname
+FROM Reserves R, Sailors S
+WHERE R.sid = S.sid
+       AND R.bid = 100 AND S.rating > 5
+```
+
+**Formální notace**:
+![](../../Assets/Pasted%20image%2020260527103244.png)
+
+**Zjednodušená notace**:
+`(sailor * reservers) (bid = 100 and rating > 5) [sname]`
+
+**Prováděcí plán**:
+![](../../Assets/Pasted%20image%2020260527103322.png)
+
+<!-- ExampleEnd -->
+
+
 Tags: reviewed
 <!--ID: 1779128799411-->
 END
@@ -63,7 +90,7 @@ END
 START
 NI-SZZ
 
-Za jakých okolnmostí  se vyplatí cachovat exekuční plán?
+Za jakých okolností  se vyplatí cachovat exekuční plán?
 
 Back:
 
@@ -410,14 +437,17 @@ Original Flashcard ID: 1728921214681
 START
 NI-SZZ
 
-Co jsou statistiky o tabulkách v Oraclu?
+Co jsou **statistiky o tabulkách v Oraclu**?
 
 Back:
 
-Oracle si u tabulek/stromů drží různé statistiky - např. počet hodnot atd.
+Oracle si u **tabulek**/**indexů** drží různé statistiky - např. počet hodnot atd.
 
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020240923173735.png)
 ![](../../Assets/Pasted%20image%2020240923174138.png)
+
+<!-- DetailInfoEnd -->
 <!--ID: 1779128799434-->
 END
 
@@ -451,7 +481,7 @@ Original Flashcard ID: 1737106145109
 START
 NI-SZZ
 
-Vysvětlete rozdíl mezi **heap table** a **index-organized table**.
+Vysvětlete rozdíl mezi **heap table** a **heap table s indexem**.
 
 (větší otázka)
 
@@ -462,14 +492,12 @@ Back:
 - sama o sobě nemá **žádný index**
 - pořadí bloků je vpodstatě náhodné
 - nové záznamy vyplňují prázdná místa
-- pokud máme "heap table with index", tak má v listech ROWID, podle kterého se najde datový blok a řádek
+- pokud máme "heap table with index", tak má index a ten má v listech ROWID, podle kterého se najde datový blok a řádek
 
-<!-- ImageStart -->
 
 ![](../../Assets/Pasted%20image%2020250118104335.png)
 ![](../../Assets/Pasted%20image%2020250118104321.png)
 
-<!-- ImageEnd -->
 
 Tags: reviewed
 <!--ID: 1779128799439-->
@@ -490,9 +518,7 @@ Back:
 
 - Index-organized table může být rychlejší než heap table (menší počet I/O operací, protože jsou data rovnou ve stromu)
 
-<!-- ImageStart -->
 ![](../../Assets/Pasted%20image%2020250118104305.png)
-<!-- ImageEnd -->
 <!--ID: 1779704516412-->
 END
 
@@ -645,9 +671,7 @@ NI-SZZ
 
 Back:
 
-- Neaktuální statistiky způsobují nesprávný výpočet ceny dotazů
-- Statistiky se nikdy živě nemění při DML operacích (to by příliš zatěžovalo stroj)
-- Automaticky se přepočítávají enginem když databáze není busy (idle time)
+Statistiky se **nikdy nemění v realtimu** při DML operacích (to by příliš zatěžovalo stroj). Statistiky se automaticky přepočítávají DB enginem, když zrovna databáze není busy.
 
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020250118110951.png)
@@ -735,14 +759,14 @@ Original Flashcard ID: 1728921214678
 START
 NI-SZZ
 
-Jak se dají ukládat data? (4)
+Jaké jsou nejčastější typy uložení dat? (4)
 
 Back:
 
 - **heap tabulka** - data jsou prostě v tabulce
 - **index-organized table** - index, v listech má data
 - **heap table with index** - index zvlášť a listy odkazují pomocí rowid na data
-- **cluster** - shluk/bucker dat
+- **cluster** - shluk/bucket dat
 
 ![](../../Assets/Pasted%20image%2020240923171047.png)
 <!--ID: 1779128799453-->
@@ -757,7 +781,7 @@ Original Flashcard ID: 1737106145122
 START
 NI-SZZ
 
-Co jsou to přístupové cesty (**access paths**) při vyhodnocování SQL dotazů? Uveďte příklady.
+**Co jsou** a **jaké jsou** **access paths** při vyhodnocování SQL dotazů? (4)
 
 (větší otázka)
 
@@ -814,11 +838,11 @@ Jaké základní metody přístupu k datům (Access Methods) využívají relač
 
 Back:
 
-1. Full Table Scan (Sekvenční průchod tabulkou)
-2. Index Seek (Vyhledání v indexu)
-3. Index Scan (Průchod indexem)
-4. Index-Only Scan (Covering index)
-5. RowID / Bookmark Lookup (Dohledání v tabulce)
+1. **Full Table Scan** (Sekvenční průchod tabulkou)
+2. **Index Seek** (Vyhledání konkrétní hodnoty v indexu - ani nemusíme sahat do tabulky)
+3. **Index Scan** (Průchod indexem - podobně jako full table scan ale v indexu)
+4. **Index-Only Scan** (najdeme data rovnou v indexu, takže nemusíme ani sahat do tabulky - například sloupce použité ve `WHERE` i `SELECTU`)
+5. **RowID / Bookmark Lookup** (Pomocí indexu najdeme záznam a pak přečteme zbytek záznamu v tabulce)
 <!--ID: 1779704516425-->
 END
 
@@ -848,7 +872,7 @@ Co je to **Index Seek**, jakou má složitost a kdy je nejvýhodnější?
 
 Back:
 
-Databáze cíleně prochází B-strom indexu od kořene k listu, aby našla konkrétní hodnotu (nebo bod začátku hledání).
+Databáze cíleně prochází B-strom indexu od kořene k listu, aby našla konkrétní hodnotu (nebo bod začátku hledání). Nemusíme ani číst tabulku, když tu hodnotu najdeme rovnou v indexu.
 
 - **Složitost:** $O(\log n)$.
 - **Kdy je nejvýhodnější:** U vysoce selektivních dotazů (když hledáme jeden nebo jen pár záznamů – např. hledání podle primárního klíče).
@@ -864,8 +888,8 @@ Jaký je rozdíl mezi **Index Seek** a **Index Scan**?
 
 Back:
 
-- **Seek** skáče stromem shora dolů přímo na konkrétní hodnotu.
-- **Scan** čte sekvenčně přímo na úrovni listů indexu, aniž by primárně navigoval shora. Používá se například při hledání v rozsahu (`WHERE vek BETWEEN 20 AND 30`) nebo když databáze prohledává celý index místo celé tabulky (protože index je menší).
+**Seek** skáče stromem shora dolů přímo na konkrétní hodnotu.
+**Scan** čte sekvenčně přímo na úrovni listů indexu, aniž by primárně navigoval shora. Používá se například při hledání v rozsahu (`WHERE vek BETWEEN 20 AND 30`) nebo když databáze prohledává celý index místo celé tabulky (protože index je menší).
 <!--ID: 1779704516432-->
 END
 
@@ -878,8 +902,9 @@ Co je to **Index-Only Scan** (Covering Index) a proč je z hlediska výkonu klí
 
 Back:
 
-- Nastává tehdy, když _všechny_ sloupce, které dotaz potřebuje (v klauzuli `SELECT` i `WHERE`), jsou uloženy přímo v daném indexu.
-- Databáze vůbec **nemusí sahat do původní datové tabulky**, čímž ušetří obrovské množství I/O operací.
+Nastává tehdy, když _všechny_ sloupce, které dotaz potřebuje (v klauzuli `SELECT` i `WHERE`), jsou uloženy přímo v daném indexu.
+
+Databáze vůbec **nemusí sahat do původní datové tabulky**, čímž ušetří obrovské množství I/O operací.
 <!--ID: 1779704516435-->
 END
 
