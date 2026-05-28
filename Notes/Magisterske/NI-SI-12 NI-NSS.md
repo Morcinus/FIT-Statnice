@@ -20,15 +20,15 @@ START
 NI-SZZ
 
 
-Jaké jsou hlavní NS insights ohledně toho, jak zamezit combinatorial effectu?
+Jaké jsou hlavní NS insights ohledně toho, jak zamezit combinatorial effectu? (3)
 
 Back:
 
 - **Fine grained modularity** - aby se zamezilo combinatorial effectu, je potřeba mít fine-grained modularitu
-- **Generation** - pro zamezení combinatorial effectu, je potřeba generovat (minimálně čátečně) kód, protože programátoři to nejsou schopni udržet
+- **Generation** - pro zamezení combinatorial effectu, je potřeba generovat (minimálně čátečně) kód, protože programátoři to nejsou schopni udržet konzistenci
 - **Regeneration** - v maintenance fázi se zvyšuje komplexita systému. Cílem NS je tuto strukturu neustále regenerovat, aby se nestál legacy, ale furt se zlepšoval. Např. každý 3 měsíce by se měla zvážit výměna databáze, změna na jiné technologie atd.
-  - Měly by se evolvovat: skeletons, ale i samotné code generators
-  - Díky tomu i starý systém může být "starý 3 měsíce", protože třeba každý 3 měsíce aktualizuju databáze, technologie atd.
+	- Měly by se evolvovat: skeletons, ale i samotné code generators
+	- Díky tomu i starý systém může být "starý 3 měsíce", protože třeba každý 3 měsíce aktualizuju databáze, technologie atd.
 
 <!-- DetailInfoStart -->
 
@@ -98,6 +98,8 @@ Back:
 
 - Je možné přidávat nebo modifikovat state transitions
 - Je možné implementovat nové sequencing flow
+
+**Mirror** = ten koncept, ten vstup, co má mít systém
 <!--ID: 1779905421493-->
 END
 
@@ -729,6 +731,13 @@ NI-SZZ
 Vysvětli co je Expander MetaCircle a Developer MetaCircle
 
 Back:
+
+- **Expander MetaCircle** - zdokonalujeme Prime Radiant tak aby měl obecné expanders, ze kterých se dá generovat kód do aplikace i Prime Radientu
+- **Developer MetaCircle** - developer přidává expanders a templates pro _konkrétní aplikaci_ (což je furt jakoby "meta", protože to je abstraktnější než ta implementace) a z toho se pak generuje kód té aplikace
+
+Vlevo nahoře:
+- **Meta Model** nám popisuje, co je možné vůbec definovat (Entity, Field, Relationship,...)
+- **Model** mi popisuje tu samotnou aplikaci. Ten se taky nacpe do Prime Radiantu, který z toho vyflusne ty expanders
 
 ![](../../Assets/Pasted%20image%2020250508145152.png)
 <!--ID: 1779905421571-->

@@ -40,7 +40,7 @@ START
 NI-SZZ
 
 
-Na základě jakých principů jsou postavený NS Theory? (2)
+Na jakých **principech** je postavená NS Theory? (2)
 
 Back:
 
@@ -107,13 +107,13 @@ START
 NI-SZZ
 
 
-Jak docílit **separation of concerns** prakticky?
+Jak docílit **separation of concerns** prakticky? (3)
 
 Back:
 
-- Identifikvat místa, která se budou často měnit
-- Používat správně Encapsulation
-- Mít v modulech/třídách jen věci, které jsou related
+- **Identifikvat místa, která se budou často měnit**
+- **Používat správně Encapsulation**
+- **Mít v modulech/třídách jen věci, které jsou related**
 <!--ID: 1779905421449-->
 END
 
@@ -127,7 +127,7 @@ START
 NI-SZZ
 
 
-Co je **Action Version Transparency**? Jak to aplikovat v praxi?
+Co je **Action Version Transparency**? Jak to **aplikovat v praxi**? (2)
 
 Back:
 
@@ -159,7 +159,7 @@ START
 NI-SZZ
 
 
-Co je **Data Version Transparency**? Jak to aplikovat v praxi?
+Co je **Data Version Transparency**? Jak to **aplikovat v praxi**? (2)
 
 Back:
 
@@ -169,7 +169,7 @@ Když se například změní konstruktor a struktura dat, tak musím změnit vš
 
 Jak to aplikovat v praxi:
 
-- Proper **encapsulation**
+- **Proper encapsulation**
 - **Stamp coupling should be preferred** (tzn. neměl bych metodám předávat atomické data typy, ale celé objekty)
 
 <!-- DetailInfoStart -->
@@ -192,7 +192,7 @@ START
 NI-SZZ
 
 
-Co je **Separation of States**? Jak to aplikovat v praxi?
+Co je **Separation of States**? Jak to **aplikovat v praxi**? (4)
 
 Back:
 Máme různé funkce. Když změním nějakou funkci (i když má dobrý interface), je furt možný, že v nějaké situaci budu muset měnit ostatní - například když přidám novou exception, kterou funkce může vyhazovat.
@@ -201,9 +201,8 @@ Např. mám funkci `getExchangeRate`, která je používaná na 100 místech v k
 
 Jak to aplikovat v praxi:
 
-- Musíme "vytáhnout" ten state management do jiné třídy, která se o něj bude starat. Např. exception handling vytáhnu do jiné třídy. Když pak přidám novou exception, tak to nebudu muset měnit na 100 místech, ale jen v jedné třídě.
-- Udělat **workflow systems stateful**
-  - Izolovat akce a state management
+- **Musíme "vytáhnout" ten state management do jiné třídy**, která se o něj bude starat. Např. exception handling vytáhnu do jiné třídy. Když pak přidám novou exception, tak to nebudu muset měnit na 100 místech, ale jen v jedné třídě.
+- Udělat **workflow systems stateful** -  Izolovat akce a state management
 - **Odstranit callback nesting** - např. JS callback hell
 - **Be careful with using automation dependencies** - jako např. Maven POM
 
@@ -230,17 +229,33 @@ START
 NI-SZZ
 
 
-Kdy je systém považovaný za **stabilní**?
+Kdy je systém považovaný za **stabilní**? Jaký to má **vzoreček**?
 
 Back:
 
-If a bounded input results in a bounded output.
+Pokud máme **konstantní vstup**, tak bude mít systém i **konstantní výstup**. Neboli malá změna na vstupu nevede k velkým změnám na výstupu.
 
-Tzn. když mám např. konstantní vstup, tak i výstup je konstantní
+**Vzoreček:**
 
-Např. když je konzistentní vítr, tak se most víc a víc destabilizoval
+$$\Delta y[k]=x[k]+ay[k]$$
 
-Nebo když chci udělat malou změnu v softwarovém systém, tak ho to může totálně destabilizovat (pokud není vhodně navržen)
+- $x[k]$ velikost změny, kterou chceme udělat v systému $k$ (například změna v kódu)
+- $y[k]$ velikost současného systému (komplexita, počet modulů,...)
+- $\Delta y[k]$ je velikost změny v systému
+- $a$ koeficient zpětné vazby (jak moc je silný ten kombinatorický efekt) = jak moc změna v současném systému povede k dalším změnám. 
+	- $0 =$ ideální stav při změně nemusíme měnit nic dalšího
+	- $0.01 =$ malý ripple efekt, musíme trošku pozměnit systém
+	- $0.2 =$ s každou změnou musíme udělat hromadu změn v systému
+
+Jinými slovy, vzoreček říká, jak moc velkou budeme muset udělat změnu v systému $\Delta y[k]$, pokud chceme implementovat požadavek $x[k]$, máme současnou velikost systému $y[k]$ a máme ripple efekt $a$.
+
+<!-- ExplanationStart -->
+Tzn. nebudou se tam např. akumulovat změny a nebude výstup neúměrně vyšší než vstup.
+
+Např. když fouká konstantní vítr, tak by most měl konstantně držet, ne že se bude víc destabilizovat. Nebo když udělám malou změnu v softwaru, tak by to nemělo vést k hromadě změn.
+<!-- ExplanationEnd -->
+
+
 
 <!-- DetailInfoStart -->
 
@@ -335,17 +350,23 @@ START
 NI-SZZ
 
 
-Jaký **dopad** mají Elements na combinatorial effects?
+Co jsou **Elements** a jaký mají **dopad** na combinatorial effects?
 
 Back:
 
-Díky tomu, že mám codebase rozdělenou do skupin tříd, když udělám nějakou změnu v požadavku, stačí mi změnit jen věci v dané skupině tříd
+**Element** = seskupení tříd, které se týkají dané fičury k sobě
 
-Takhle to bylo původně:
+Když zdělám **změnu v konceptu** (nový požadavek, změna požadavku), tak by mi mělo stačit **změnit jen ten Element** 
+
+<!-- DetailInfoStart -->
+Takhle to vypadá bez Elementů:
 ![](../../Assets/Pasted%20image%2020250415144736.png)
 
-Takhle to vypadá, pokud zorganizuju systém do elementů:
+Takhle to vypadá s Elementama:
 ![](../../Assets/Pasted%20image%2020250415144841.png)
+
+<!-- DetailInfoEnd -->
+
 <!--ID: 1779905421471-->
 END
 
@@ -389,7 +410,7 @@ START
 NI-SZZ
 
 
-Co je **data coupling** (vs stamp coupling)?
+Co je **data coupling** vs **stamp coupling**?
 
 Back:
 
@@ -413,17 +434,17 @@ START
 NI-SZZ
 
 
-Co přesně znamená low coupling a high cohesion v NST?
+Co přesně zajišťuje **low coupling** a **high cohesion** v Normalized Systems?
 
 Back:
 
 - **Low coupling** = low inter-modular coupling
-	- Data Version Transparency
-	- Action Version Transparency
-	- Separation of States
+	- **Data Version Transparency**
+	- **Action Version Transparency**
+	- **Separation of States**
 - **High cohesion** = low intra-modular coupling
-	- Separation of Concerns
-	- Separation of States
+	- **Separation of Concerns**
+	- **Separation of States**
 
 <!-- DetailInfoStart -->
 
