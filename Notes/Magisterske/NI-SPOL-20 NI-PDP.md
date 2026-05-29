@@ -84,13 +84,18 @@ Jak funguje MP_Reduce?
 
 Back:
 
-![](../../Assets/Pasted%20image%2020250419133437.png)
+`MPI_Reduce(*sendbuf, *recvbuf, count, datatype, op, root, comm)`
 
-<!-- ExampleStart -->
+Ve všech procesorech se použije daná operace `MPI_OP op` na sendbuf prvek po prvku. Výsledek se zapisuje do `recvbuf` procesu `root`.
 
 ![](../../Assets/Pasted%20image%2020250419133508.png)
 
-<!-- ExampleEnd -->
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020250419133437.png)
+<!-- DetailInfoEnd -->
+
+
 <!--ID: 1779300071248-->
 END
 
@@ -108,15 +113,15 @@ Co je operace `MPI_Allreduce`?
 
 Back:
 
-výsledek dostanou v `recvbuf` všichni
-
-![](../../Assets/Pasted%20image%2020250419133756.png)
-
-<!-- ExampleStart -->
+Stejný jako `MPI_Reduce`, ale výsledek dostanou do `recvbuf` všechny procesy.
 
 ![](../../Assets/Pasted%20image%2020250419133808.png)
 
-<!-- ExampleEnd -->
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020250419133756.png)
+<!-- DetailInfoEnd -->
+
 <!--ID: 1779300071251-->
 END
 
@@ -134,10 +139,16 @@ Jak funguje `MPI_Reduce_scatter_block`?
 
 Back:
 
-$i$-tý proces redukuje jen $i$-té prvky
+Stejný jako `MPI_Reduce`, ale `sendbuf` má velikost $p \cdot \text{recvcount}$
 
-![](../../Assets/Pasted%20image%2020250419133829.png)
+$i$-tý proces bude mít v `recvbuf` výsledek redukce $i$-tých bloků (viz obrázek)
+
 ![](../../Assets/Pasted%20image%2020250419133840.png)
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020250419133829.png)
+<!-- DetailInfoEnd -->
+
 <!--ID: 1779300071254-->
 END
 
@@ -158,6 +169,13 @@ Back:
 
 - `MPI_Scan(*sendbuf, *recvbuf, count, datatype, op, comm)` počítá inkluzivní prefixový součet
 - `MPI_Exscan` počítá exkluzivní prefixový součet, tedy do výsledku nezahrnuje vlastní hodnotu, jen hodnoty ostře vlevo
+
+<!-- ExplanationStart -->
+inkluzivní součet = do výsledku zahrne i sebe
+exkluzivní součet = do výsledku nezahrnuje sebe, jen ty výsledky před tím
+<!-- ExplanationEnd -->
+
+
 <!--ID: 1779300071256-->
 END
 
@@ -170,8 +188,7 @@ Original Flashcard ID: 1746599652981
 START
 NI-SZZ
 
-
-Jak funguje Prefixový součet (=scan) nad polem (PPS)?
+Definice: **Prefixový součet** (=scan) nad polem? (PPS)
 
 Back:
 
@@ -193,7 +210,12 @@ Algoritmus: Sekvenční výpočet prefixových součtů
 
 Back:
 
+![](../../Assets/Pasted%20image%2020260529113407.png)
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020250419133925.png)
+<!-- DetailInfoEnd -->
+
 <!--ID: 1779300071262-->
 END
 
@@ -207,15 +229,55 @@ START
 NI-SZZ
 
 
-Jak funguje PPS na EREW PRAM?
+Algoritmus: **PPS na EREW PRAM**
 
 Back:
 
+Máme sdílené vstupní pole $M[n]$, které na konci bude obsahovat prefixové součty. Každé vlákno $\tau_i$ má privátní proměnnou $y_i$.
+
+![](../../Assets/Pasted%20image%2020260529113852.png)
+![](../../Assets/Pasted%20image%2020260529113902.png)
+
+<!-- ExplanationStart -->
+Každé vlákno $\tau_i$ se stará o $i$-tý prvek pole $M$
+
+1. **for** - V prvním paralelním cyklu si každé vlákno k sobě nahraje prvek $M[i]$ (asi místo toho $X[i]$ má být $M[i]$ idk)
+2. **for** - V hlavním paralelním cyklu iterujeme sekvenčně a vždy:
+	1. **for** - Každé vlákno sečte $M[i]$ a $M[i-2^j]$
+	2. **for** - Každé vlákno nahraje svoji hodnotu zpět do $M[i]$
+
+Díky tomu:
+- V každém kroku hlavního for cyklu se nám počet sečtených buňek **zdvojnásobí**. Vlastně tím děláme paralelní redukci, která je chytře poskládaná.
+- Tím pádem v každém kroku se nám sníží počet potřebných výpočtů **dvojnásobně**
+- Tím pádem jedeme logaritmickou časovou složitostí
+
+<!-- ExplanationEnd -->
+
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020250419133941.png)
+<!-- DetailInfoEnd -->
+
+
 <!--ID: 1779300071265-->
 END
 
 ---
+
+
+START
+FIT-Card
+
+Jakou složitost obecně má paralelní redukce a prefixový součet?
+
+Back:
+
+Paralelní redukce má **logaritmickou složitost** a prefixový součet na EREW PRAMU taky!
+
+END
+
+---
+
 
 <!--
 Original Flashcard ID: 1746599653002
@@ -243,17 +305,22 @@ START
 NI-SZZ
 
 
-Lemma: **PPS na nepřímém stromu** (listy, kroky, výška)
+Lemma: Když máme **nepřímý strom s $n$ listy**, v kolika **krocích** jsme na něm schopni udělat **PPS**?
 
 Back:
 
 ![](../../Assets/Pasted%20image%2020250419134010.png)
 
-<!-- ExampleStart -->
+![](../../Assets/Pasted%20image%2020260529123858.png)
 
+<!-- ExplanationStart -->
 ![](../../Assets/Pasted%20image%2020250419134058.png)
 
-<!-- ExampleEnd -->
+1. V každém kroku musíme sečíst dva potomky, co nejsou ještě sečtený
+2. Zároveň musíme propsat výsledky do potomků
+- Tzn. musíme jet jakoby nahoru i dolu, proto $2h(T)$
+<!-- ExplanationEnd -->
+
 <!--ID: 1779300071271-->
 END
 
@@ -267,11 +334,14 @@ START
 NI-SZZ
 
 
-Lemma: T = úplný binární strom $\implies \dots$
+Lemma: **Složitost PPS na binárním stromu/motýlku**
 
 Back:
 
 ![](../../Assets/Pasted%20image%2020250419134042.png)
+
+$O(\log n)$ kroků pro PPS
+
 <!--ID: 1779300071274-->
 END
 
@@ -284,11 +354,11 @@ Original Flashcard ID: 1779299206165
 START
 NI-SZZ
 
-Jak funguje PPS na nepřímém binárním stromu/obousměrném motýlku?
+Jak funguje PPS na **nepřímém binárním stromu/obousměrném motýlku**?
 
 Back:
 
-Todo napsat nějaký basic vysvětlení
+1. V každém kroku sečtu dva prvky a pošlu výsledek doprava dolu
 
 ![](../../Assets/Pasted%20image%2020260520192728.png)
 <!--ID: 1779300071277-->
@@ -309,7 +379,17 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020260520192958.png)
 
-Pokud se použije **postorder linearizace**, tak je pak podobný jako ten nepřímý
+Pokud se použije **postorder linearizace**, tak je pak podobný jako ten nepřímý (lze opět spočítat v $2h(T)$ krocích)
+
+<!-- ImageStart -->
+![](../../Assets/Pasted%20image%2020260529123438.png)
+<!-- ImageEnd -->
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260529123451.png)
+<!-- DetailInfoEnd -->
+
+
 <!--ID: 1779300071280-->
 END
 
@@ -322,7 +402,7 @@ Original Flashcard ID: 1779299206170
 START
 NI-SZZ
 
-Jak lze řešit PPS na libovolým řídkém grafu?
+S jakou složitostí lze řešit PPS na souvislých **řídkých grafech**?
 
 Back:
 
@@ -339,13 +419,28 @@ Original Flashcard ID: 1779299206173
 START
 NI-SZZ
 
-Jak lze řešit PPS na hyperkrychli?
+Algoritmus: **Hypercube_PPS** (PPS na hyperkrychli)
 
 Back:
 
-lexikografická indexace, každý proces si do žlutého registru přičítá svůj prefix a do zeleného všechny příchozí hodnoty, fází je stejně jako dimenzí
-
+![](../../Assets/Pasted%20image%2020260529124616.png)
 ![](../../Assets/Pasted%20image%2020260520193145.png)
+
+
+<!-- ExplanationStart -->
+Máme procesory v hyperkrychli, tedy počet uzlů $n=2^r, r \geq 1$
+Každý procesor má lokální proměnné $zluty_i$ a $zeleny_i$
+- Do **zeleného** se přičítá vše co přichází (na konci obsahuje v každém procesoru celkový výsledek PPS)
+- Do **žlutého** se přičítají pouze prvky z prefixu (na konci obsahuje v každém procesoru výsledek prefixového součtu)
+
+**Algoritmus**:
+1. Inicializace: $i$-tý procesor si nastaví oba registry na hodnotu $X[i]$
+2. Pak se iteruje sekvenčně $j := 0 ... r-1$ (tzn. ve směru každé dimenze)
+	1. Každý pošle sousedovi svůj zelený a dostane od souseda nový zelený
+	2. Přičteme do zeleného novy zelený
+	3. Pokud soused leží lexikograficky přede mnou, pak si ten výsledek přičtu do prefixového součtu
+
+<!-- ExplanationEnd -->
 
 <!-- DetailInfoStart -->
 
