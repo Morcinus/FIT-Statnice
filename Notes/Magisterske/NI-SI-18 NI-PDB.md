@@ -140,8 +140,8 @@ Jaké jsou **základní předpoklady pro CAP theorém**?
 
 Back:
 
-- Musí se jednat o distribuovaný systém se shardingem a replikací
-- Read a write operace jsou dělány na jednom agregátu
+- Musí se jednat o distribuovaný systém se **shardingem a replikací**
+- Read a write operace jsou dělány **pouze na jednom agregátu**
 <!--ID: 1779128799476-->
 END
 
@@ -158,9 +158,13 @@ Co říká **CAP theorem**?
 
 Back:
 
+Není možné, aby distribuovaný systém poskytoval záruku všech tří vlastností (consistency, availability, partition tolerance) zároveň. Vždy může garantovat nejvýše 2 z těchto vlastností.
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020241022102913.png)
 
 CAP = Consistency, Availability, Partition tolerance
+<!-- DetailInfoEnd -->
 <!--ID: 1779128799479-->
 END
 
@@ -177,11 +181,11 @@ Co je **consistency** v CAP theorému?
 
 Back:
 
-Čtení a zápis musí být atomický
+**Konzistence** (Consistency): Každý read (nad celým systémem) vrátí nejnovější data nebo error. (pozor, je to jiné než consistency v ACIDu!)
 
 <!-- DetailInfoStart -->
 
-s![](../../Assets/Pasted%20image%2020241022103146.png)
+![](../../Assets/Pasted%20image%2020241022103146.png)
 
 <!-- DetailInfoEnd -->
 <!--ID: 1779128799483-->
@@ -200,7 +204,7 @@ Co je **availability** v CAP theorému?
 
 Back:
 
-Pokud noda běží, musí odpovídat na requesty
+**Dostupnost** (Availability): Pokud node funguje, musí reagovat na požadavky
 
 <!-- DetailInfoStart -->
 
@@ -223,7 +227,7 @@ Co je **partition tolerance** v CAP theoremu?
 
 Back:
 
-Je možný, že nějaká node na chvíli vypadne. Distribuovaný systém by měl být vůči tomuhle odolný,
+**Odolnost k přerušení** (Partition tolerance): systém musí fungovat, i přes výpadky v síti (např. že se nějaké zprávy mezi nodama nedoručují)
 <!--ID: 1779128799490-->
 END
 
@@ -280,8 +284,6 @@ END
 Original Flashcard ID: 1735205749084
 -->
 
-<!-- quality: too-detailed -->
-
 START
 NI-SZZ
 
@@ -298,8 +300,6 @@ END
 <!--
 Original Flashcard ID: 1735205749087
 -->
-
-<!-- quality: too-detailed -->
 
 START
 NI-SZZ
@@ -328,8 +328,6 @@ END
 Original Flashcard ID: 1735205749089
 -->
 
-<!-- quality: too-detailed -->
-
 START
 NI-SZZ
 
@@ -357,8 +355,6 @@ END
 Original Flashcard ID: 1735205749092
 -->
 
-<!-- quality: too-detailed -->
-
 START
 NI-SZZ
 
@@ -378,48 +374,6 @@ Konvergenční pravidlo:
 
 <!-- DetailInfoEnd -->
 <!--ID: 1779128799507-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1737106145151
--->
-
-START
-NI-SZZ
-
-Uveďte a vysvětlete **CAP theorém**.
-
-(větší otázka)
-
-Back:
-
-**Předpoklady**: máme
-
-- Distribuovaný systém se **shardingem a replikací**
-- Operace čtení a zápisu **pouze na jednom agregátu**
-
-**CAP vlastnosti:**
-
-- **konzistence** (Consistency): Každý read (nad celým systémem) vrátí nejnovější data nebo error. (pozor, je to jiné než consistency v ACIDu!)
-- **dostupnost** (Availability): Pokud node funguje, musí reagovat na požadavky
-- **odolnost k přerušení** (Partition tolerance): systém musí fungovat, i přes výpadky v síti (např. že se nějaké zprávy mezi nodama nedoručují)
-
-**CAP theorém říká:**
-Není možné, aby distribuovaný systém poskytoval záruku všech tří vlastností (consistency, availability, partition tolerance) zároveň. Vždy může garantovat nejvýše 2 z těchto vlastností.
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020250118123624.png)
-![](../../Assets/Pasted%20image%2020250118123629.png)
-![](../../Assets/Pasted%20image%2020250118123635.png)
-![](../../Assets/Pasted%20image%2020250118123642.png)
-
-<!-- DetailInfoEnd -->
-
-Tags: reviewed
-<!--ID: 1779128799510-->
 END
 
 ---
@@ -584,7 +538,7 @@ END
 START
 NI-SZZ
 
-Co jso uto **AP** systémy dle CAP teorému. Uveďte příklady
+Co jsou to **AP** systémy dle CAP teorému. Uveďte příklady
 
 Back:
 
@@ -646,7 +600,7 @@ Original Flashcard ID: 1729236692905
 START
 NI-SZZ
 
-Co znamená `$` v MongoDB?
+Co znamená **dolar** v MongoDB?
 
 Back:
 
@@ -737,8 +691,6 @@ END
 Original Flashcard ID: 1735205749119
 -->
 
-<!-- quality: too-detailed -->
-
 START
 NI-SZZ
 
@@ -746,9 +698,11 @@ Co je **Riak Ring**?
 
 Back:
 
-Kruhová struktura, do které si riak mapuje klíče.
+Riak pro každý záznam umisťuje **rovnoměrně jeho repliky** do **kruhové struktury**. Když failuje nějaká node, tak ten následující node převezme na chvíli tu odpovědnost.
 
-Podle toho se umisťují repliky záznamů tak, aby byl rovnoměrně rozdělené na tom kruhu.
+Díky tomu je zajištěna **availability** z CAPu.
+
+![](../../Assets/Pasted%20image%2020241127180601.png)
 
 <!-- DetailInfoStart -->
 
@@ -756,12 +710,6 @@ Podle toho se umisťují repliky záznamů tak, aby byl rovnoměrně rozdělené
 ![](../../Assets/Pasted%20image%2020241127180718.png)
 
 <!-- DetailInfoEnd -->
-
-<!-- ImageStart -->
-
-![](../../Assets/Pasted%20image%2020241127180601.png)
-
-<!-- ImageEnd -->
 <!--ID: 1779128799540-->
 END
 
@@ -1017,17 +965,13 @@ Original Flashcard ID: 1736497489104
 START
 NI-SZZ
 
-Co je **cluster**?
+Co je **cluster**? (v kontextu škálování)
 
 Back:
 
 Množina **nodes**, založená na **shared-nothing** architektuře
 
-<!-- ExplanationStart -->
-
 **shared-nothing** = každý node má vlastní operační systém, vlastní hardware a komunikuje s ostatními nody pomocí zpráv
-
-<!-- ExplanationEnd -->
 <!--ID: 1779128799571-->
 END
 
@@ -1080,8 +1024,8 @@ Jaké jsou **shardovací strategie**?
 
 Back:
 
-- **mapping structures**
-- **general rules**
+- **mapping structures** - data jsou umístěna náhodně, systém si pamatuje, kde který záznam leží 
+- **general rules** - data se ukládají na shardy podle nějakého pravidla (hashovací funkce atd), takže jejich pozice se dá dopočítat
 
 <!-- ExplanationStart -->
 
@@ -1329,16 +1273,22 @@ END
 Original Flashcard ID: 1736497489213
 -->
 
-<!-- quality: too-detailed -->
-
 START
 NI-SZZ
 
-Co je write consistency?
+Co je **write consistency**? Jak se řeší konflikty v systému? (2)
 
 Back:
 
+V rámci P2P architektury, když v systému 2 požadavky najednou inicializují write operaci, tak dojde ke konfliktu.
+
+Jak se to řeší:
+- **Pesimistická strategie** = při zapisování se systém lockne, aby nebyly možné další zápisy
+- **Optimistická strategie** = konflikty můžou nastat, ale detekují se a nějak se vyřeší (na základě verzí, času atd.)
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020241022103926.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1779128799613-->
 END
 
@@ -1348,16 +1298,22 @@ END
 Original Flashcard ID: 1736497489219
 -->
 
-<!-- quality: too-detailed -->
-
 START
 NI-SZZ
 
-Co je read consistency?
+Co je **read consistency**?
 
 Back:
 
+U P2P/master slave architektury, když se najednou začne číst a zapisovat záznam, tak je problém, že ten read může být nekonzistentní
+
+Jak se to řeší:
+- **Propagace změn prostě zabere čas, takže občas někdo přečte neaktuální data**
+- Dá se to kdyžtak řešit: Session consistency, read-your-writes, sticky session,...
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020241022103948.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1779128799616-->
 END
 
@@ -1374,10 +1330,12 @@ Co je **strong consistency**?
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241022104006.png)
+Vždy budeme **číst aktuální data** (díky dodržení read a write quorum)
+
+Pokud systém není schopný dodržet quorum, tak request failne
 
 <!-- ExampleStart -->
-
+![](../../Assets/Pasted%20image%2020241022104006.png)
 ![](../../Assets/Pasted%20image%2020241022104335.png)
 
 <!-- ExampleEnd -->

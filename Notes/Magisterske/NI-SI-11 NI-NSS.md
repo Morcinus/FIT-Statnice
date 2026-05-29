@@ -366,7 +366,6 @@ Takhle to vypadá s Elementama:
 ![](../../Assets/Pasted%20image%2020250415144841.png)
 
 <!-- DetailInfoEnd -->
-
 <!--ID: 1779905421471-->
 END
 
