@@ -86,7 +86,7 @@ START
 NI-SZZ
 
 
-Jaké jsou hlavní manažerské výzvy v informačních systémech?
+Jaké jsou hlavní manažerské výzvy v informačních systémech? (3)
 
 Back:
 
@@ -117,7 +117,6 @@ Co je **infrastruktura**?
 Back:
 
 ![](../../Assets/Pasted%20image%2020250227163719.png)
-
 <!--ID: 1780079216398-->
 END
 
@@ -268,7 +267,6 @@ Back:
 - hardware, software, webhosting,..
 
 ![](../../Assets/Pasted%20image%2020250227164823.png)
-
 <!--ID: 1780079216415-->
 END
 
@@ -289,7 +287,6 @@ Back:
 Jde o to, že celá infrastruktura je dost složitá a je to "moc velké sousto" pro tu firmu. Proto dává smysl mít konzultanty a outsourcovat to.
 
 ![](../../Assets/Pasted%20image%2020250227164933.png)
-
 <!--ID: 1780079216418-->
 END
 
@@ -370,7 +367,6 @@ Back:
 
 Např. takto to bylo u big data
 ![](../../Assets/Pasted%20image%2020250227171923.png)
-
 <!--ID: 1780079216427-->
 END
 
@@ -420,7 +416,6 @@ Infrastruktura je definována kódem.
 - Např. Terraform
 
 ![](../../Assets/Pasted%20image%2020250227174012.png)
-
 <!--ID: 1780079216433-->
 END
 
@@ -551,7 +546,6 @@ Back:
 <!-- DetailInfoEnd -->
 
 Pozn. enterprise architektura obsahuje i organizaci podniku, i třeba uspořádání poboček apod.
-
 <!--ID: 1780079216446-->
 END
 
@@ -578,7 +572,6 @@ Architektura je "**znalost o systému**", kterou si lidé mezi sebou sdílí. Js
 <!-- DetailInfoEnd -->
 
 ![](../../Assets/Pasted%20image%2020250306162927.png)
-
 <!--ID: 1780079216449-->
 END
 
@@ -626,7 +619,6 @@ Back:
 Vytváří to jakýsi blueprint/framework pro organizaci - struktury, procesy a technologie
 
 ![](../../Assets/Pasted%20image%2020250306164735.png)
-
 <!--ID: 1780079216455-->
 END
 
@@ -754,7 +746,6 @@ Když lidé používají IT systémy jinak, než je jak centrálně určeno, že
 Např. místo toho aby se začal používat nějaký nový informační systém, tak to někdo nabuší do Excelu a rozpošle to mailem osatním. Ten excel pak je v tom podniku x let a lidi to furt používají.
 
 ![](../../Assets/Pasted%20image%2020250306170635.png)
-
 <!--ID: 1780079216469-->
 END
 
@@ -797,7 +788,6 @@ Back:
 - **Na podpůrné činnosti** (účetnictví, vytváření dokumentů, uložení a sdílení informací)
 
 Na **konkrétní byznys** dané firmy se pak může hodit **custom řešení**
-
 <!--ID: 1780079216474-->
 END
 
@@ -811,7 +801,7 @@ START
 NI-SZZ
 
 
-Co je potřeba začít řešit ve fázi růstu firmy "**Firma má vyšší nároky**"?
+Co je potřeba začít řešit ve fázi růstu firmy "**Firma má vyšší nároky**"? (3)
 
 Back:
 
@@ -850,7 +840,7 @@ START
 NI-SZZ
 
 
-Co se typicky děje ve fázi "**Výzva udržitelnosti**" ve firmě?
+Co se typicky děje ve fázi "**Výzva udržitelnosti**" ve firmě? (1)
 
 Back:
 
@@ -1047,7 +1037,7 @@ START
 NI-SZZ
 
 
-Jaké jsou části agendy firmy?
+Jaké jsou **části agendy firmy**? (3)
 
 Back:
 
@@ -1106,7 +1096,6 @@ Back:
 **Agenda firmy** = souhrn činností, co je třeba udělat - aka to co prostě firma dělá.
 
 **Agendový systém** = to co pomáhá při vykonávání agendy
-
 <!--ID: 1780079216513-->
 END
 
@@ -1147,7 +1136,6 @@ Co je **KN Proxy** v bance?
 Back:
 
 Proxy v bance, která integruje **logiku katastru nemovitostí** a **bankovní systémy**.
-
 <!--ID: 1780079216518-->
 END
 
@@ -1166,7 +1154,6 @@ Co je **Pricing** v bance?
 Back:
 
 Metoda, díky které banka nastavuje ceny svých produktů a služeb.
-
 <!--ID: 1780079216521-->
 END
 
@@ -1217,7 +1204,6 @@ Back:
 Obsahuje různé produkty a jejich konfigurace, balíčky, slevy, poplatky atd.
 
 Je to součástí **PricingDB**.
-
 <!--ID: 1780079216526-->
 END
 
@@ -1231,7 +1217,7 @@ START
 NI-SZZ
 
 
-Jaké jsou 3 kategorie/typy u klíčových bankovních systémů?
+Jaké jsou **3 kategorie klíčových bankovních systémů**?
 
 Back:
 
@@ -1287,7 +1273,6 @@ Back:
 Přináší to **komplexitu**, protože s každou novou funkcionalitou musím řešit distribuovaný systém těch mikroservis.
 
 Obecně je většinou nejlepší mít nějaký hybrid, dělat microservices tam, kde to dává smysl.
-
 <!--ID: 1780079216534-->
 END
 
@@ -1308,7 +1293,6 @@ Back:
 Na jednom fyzickém hardwaru se spustí víc operačních systémů (virtual machines), v nich pár různé programy.
 
 Díky tomu nemusím mít hromadu serverů, ale využiju přesně to, co potřebuju.
-
 <!--ID: 1780079216537-->
 END
 
@@ -1439,7 +1423,6 @@ To může znamenat:
 - apod.
 
 Toho lze docílit pomocí Kubernetes
-
 <!--ID: 1780079216551-->
 END
 
@@ -1483,7 +1466,6 @@ Co je **Bank ID**?
 Back:
 
 Univerzální bezpečné ID pro identitu občanů (přihlašování), využívají to banky
-
 <!--ID: 1780079216557-->
 END
 

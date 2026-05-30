@@ -56,7 +56,6 @@ Back:
 
 Data se typicky 1x denně přenáší z Data Warehouse do Data Martu.
 Typicky se 1x denně (v noci) přelévají data z DB primárního systému do Stage
-
 <!--ID: 1780079216563-->
 END
 
@@ -75,7 +74,6 @@ Jaký je vztah data lake a data staging area?
 Back:
 
 Data lake je historizovaná stage (jsou tam snímky napříč historií).
-
 <!--ID: 1780079216566-->
 END
 
@@ -108,7 +106,6 @@ Vhodné pro: tradiční datové sklady, kde je třeba mít plně připravená da
 - Transform (transformace) – transformace probíhá až v cílovém systému (např. pomocí SQL nebo nástrojů jako dbt).
 
 Vhodné pro: moderní cloudové datové sklady (např. BigQuery, Snowflake), které zvládají velké objemy dat a výkonné transformace přímo ve skladu.
-
 <!--ID: 1780079216568-->
 END
 
@@ -129,7 +126,6 @@ Back:
 
 Vlevo jsou operační systémy
 Vpravo je "svět analytiky/business intelligence"
-
 <!--ID: 1780079216571-->
 END
 
@@ -149,7 +145,6 @@ Kam se obecně pohybuje trend uchovávání dat?
 Back:
 
 Ten "datový svět" vpravo a "aplikační svět" vlevo se přibližují k sobě. Víc se míří k tomu, že bude jedno centrální místo na všechna data.
-
 <!--ID: 1780079216574-->
 END
 
@@ -227,7 +222,6 @@ Back:
 Key takeaway: Business se čím dál tím víc bude zapojovat do data managementu
 
 ![](../../Assets/Pasted%20image%2020250528163000.png)
-
 <!--ID: 1780079216582-->
 END
 
@@ -241,7 +235,7 @@ START
 NI-SZZ
 
 
-Jaké jsou různé úrovně data solutions?
+Jaké jsou různé úrovně data solutions? (7)
 
 Back:
 
@@ -249,7 +243,7 @@ Back:
 2. **Stage** - data v jedné databázi na jednom místě
 3. **Stage-Mart** - máme vrstvu nad Stagem, která např. předpřipravuje reporty
 4. **Classic DWH** - klasický data warehouse (je tým lidí, co ho spravují)
-   - Typicky jádro datového skladu se vytváří nezávisle na externích systémech, abych neměl různé formáty dat, když si třeba změním CRM nebo jiný systém
+	- Typicky jádro datového skladu se vytváří nezávisle na externích systémech, abych neměl různé formáty dat, když si třeba změním CRM nebo jiný systém
 5. **Hybrid DWH** - část DWH je v cloudu
 6. **Analytical & BI Platform** - nad DWH vzniká platforma pro datovou analýzu a reporting (dashboardy atd.)
 7. **Universal Data Platform** - centrální hub pro všechna data (např. Databricks, Snowflake,...)
@@ -277,7 +271,6 @@ Analogie s dopravou:
 - **Provozní zpracování dat** - klasický provozní účely, typicky propojování aplikací (integrace), dále taky např. statistické modely, co dělají predikce
 
 (vůbec nechápu jak ten borec získal řidičák, jestli mu ta analogie s dopravou dává smysl)
-
 <!--ID: 1780079216587-->
 END
 
@@ -298,7 +291,6 @@ Back:
 Když si nikdo nestěžuje :D
 
 Aka když to lidi jsou schopný využít na to co potřebují.
-
 <!--ID: 1780079216590-->
 END
 
@@ -317,7 +309,6 @@ Co je **historizace dat**?
 Back:
 
 Dělají se "snímky" dat. Díky tomu můžu přistupovat k tomu, jak data vypadala v minulosti.
-
 <!--ID: 1780079216593-->
 END
 
@@ -437,7 +428,7 @@ Back:
 1. **Business model** - Součástí toho **KPIs**
 2. **Konceptuální model** - základní prvky, obecný popis
 3. **Logický datový model** - zachycuje datové prvky dle zvolené technologie
-   - Typicky se člověk snaží identifikovat entity (v bankách typicky kontrakty a osoby - dodavatelé, bankéři,...)
+	- Typicky se člověk snaží identifikovat entity (v bankách typicky kontrakty a osoby - dodavatelé, bankéři,...)
 4. **Fyzický datový model** - návrh konkrétních tabulek v databázi atd.
 <!--ID: 1780079216606-->
 END
@@ -463,7 +454,6 @@ Např. data o zákazníkovi jsou rozházená v různých systémech a může bý
 Proto se dělá to, že se udělá "golden record" - vytváří se jeden ucelený záznam např. v separátní databázi nebo v datových skladech
 
 Tohle je obecně téma toho master data managementu
-
 <!--ID: 1780079216609-->
 END
 
@@ -505,7 +495,6 @@ Back:
 Definuju struktury tabulek a datových uložišť v **metadatech**. Podle nich se pak automaticky vygenerují jednotlivé kroky pro provedení transformací atd.
 
 Podobně jak třeba člověk používá Terraform pro infrastructure as code, tak tady člověk definuje ty data v nějakém meta jazyce a podle toho se pak generují ty konkrétní kroky.
-
 <!--ID: 1780079216614-->
 END
 
@@ -575,12 +564,12 @@ START
 NI-SZZ
 
 
-Jaké jsou typy datové kvality? (2)
+Jaké jsou typy **datové kvality**? (2)
 
 Back:
 
-- technická - že to bude v určitém formátu, že to bude mít určité vlastnosti
-- byznysová - např. když mají data určité hodnoty, které nejsou dobré pro byznys
+- **technická** - že to bude v určitém formátu, že to bude mít určité vlastnosti
+- **byznysová** - např. když mají data určité hodnoty, které nejsou dobré pro byznys
 <!--ID: 1780079216622-->
 END
 
@@ -618,7 +607,6 @@ Je cílem do datového skladu nacpat všechna data firmy?
 Back:
 
 Nope, typicky pouze ta data, co jsou kritická pro byznys a pro reporting. Typicky bude hodně data ještě rozházených kolem.
-
 <!--ID: 1780079216628-->
 END
 
@@ -640,7 +628,6 @@ Back:
 - **Dimenze** - nad fakty jsou pak dimenze. Ty se typicky nedají dobře agregovat, např. adresa
 
 ![](../../Assets/Pasted%20image%2020250424170314.png)
-
 <!--ID: 1780079216631-->
 END
 
@@ -750,7 +737,6 @@ Co je **decommissioning dat**?
 Back:
 
 **Decommissioning = “uklizení starých dat”** – odstraním je, přesunu, anonymizuji nebo archivuju, aby nezatěžovala systém, nebyla rizikem nebo neporušovala předpisy (např. GDPR).
-
 <!--ID: 1780079216650-->
 END
 
@@ -880,7 +866,6 @@ Co je **Migration Stage Area**?
 Back:
 
 Je to místo, kam se nahrají data a kde se provádějí transformace při migraci dat z nějakého systému do jiného.
-
 <!--ID: 1780079216665-->
 END
 
@@ -940,7 +925,6 @@ Co je **Cutover** u datové migrace?
 Back:
 
 **Cutover** = období, kdy se organizace přepne z původního systému na nový.
-
 <!--ID: 1780079216674-->
 END
 
@@ -978,7 +962,6 @@ Co je **point of no return** u datové migrace?
 Back:
 
 Některé systémy nejde rollbacknout, je potřeba zůstat na nové verzi po migraci.
-
 <!--ID: 1780079216679-->
 END
 
@@ -1078,7 +1061,6 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020250528140406.png)
 ![](../../Assets/Pasted%20image%2020250220170857.png)
-
 <!--ID: 1780079216690-->
 END
 
@@ -1097,7 +1079,6 @@ Co jsou BI systémy?
 Back:
 
 **Business intelligence** = umožňují dělat rozhodnutí ve firmě
-
 <!--ID: 1780079216693-->
 END
 
@@ -1166,7 +1147,6 @@ Co je metodika CRISP-DM?
 Back:
 
 Iterativní metodika pro data science.
-
 <!--ID: 1780079216701-->
 END
 
@@ -1350,7 +1330,6 @@ Co jsou **big data**?
 Back:
 
 **Velké množství** (**rychle měnících** se) **potenciálně hodnotných** dat, která se nedají dobře managovat tradičními způsoby.
-
 <!--ID: 1780079216723-->
 END
 
@@ -1415,10 +1394,10 @@ Jaké jsou **2 typy data processingu**?
 Back:
 
 - **Batch processing**
-  - zpracuju **hodně dat najednou** např. jednou za den
-  - sleduje se **throughput** - kolik zpracovaných records za čas
-  - efektivnější zpracovávání
-  - např. Hadoop, Spark
+	- zpracuju **hodně dat najednou** např. jednou za den
+	- sleduje se **throughput** - kolik zpracovaných records za čas
+	- efektivnější zpracovávání
+	- např. Hadoop, Spark
 - **Stream processing** - data se zpracovávají **průběžně** (téměř real-time) - sleduje se **latency** - čas od začátku po konec processingu - méně efektivní zpracovávání (protože to musí být real-time) - např. Kafka, Spark
 <!--ID: 1780079216731-->
 END
@@ -1438,7 +1417,6 @@ Co je **Hadoop**?
 Back:
 
 Open source platforma pro distribuované zpracovávání velkého množství dat.
-
 <!--ID: 1780079216734-->
 END
 
@@ -1479,8 +1457,8 @@ Back:
 
 - **NameNode** - "mozek systému", obsahuje metadata o tom, kde je co uloženo
 - **DataNode** - jsou tam uloženy datové bloky
-  - jsou typicky replikovány
-  - mají dobrou škálovatelnost
+	- jsou typicky replikovány
+	- mají dobrou škálovatelnost
 
 <!-- ImageStart -->
 
@@ -1505,7 +1483,7 @@ Jaké jsou hlavní vlastnosti **Hadoopu**? (3)
 Back:
 
 - **Replication factor** - na kolik různých data nodů se data uloží
-  - Díky tomu je fault tolerant
+	- Díky tomu je fault tolerant
 - **Scalable** - dobře se škáluje
 - **Large files** - obsahuje obří data
 <!--ID: 1780079216742-->
@@ -1625,7 +1603,6 @@ Jaký engine se pro big data používá nejvíce?
 Back:
 
 Apache **Spark**
-
 <!--ID: 1780079216757-->
 END
 
@@ -1650,7 +1627,6 @@ Back:
 Topic je jakoby fronta zpráv. Kafka zprávy nemaže po přečtení, ale třeba po 7 dnech.
 
 ![](../../Assets/Pasted%20image%2020250320170453.png)
-
 <!--ID: 1780079216760-->
 END
 
