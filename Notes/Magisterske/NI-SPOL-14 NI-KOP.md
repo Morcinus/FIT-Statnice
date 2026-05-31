@@ -721,7 +721,9 @@ Co je **univerzální stochastické vzorkování**? (v selekčním tlaku)
 
 Back:
 
-Mírná úprava ruletového výběru, aby to dávalo lepší výsledky
+Mírná úprava ruletového výběru, aby to dávalo lepší výsledky.
+
+Odměříme náhodný úhel a vybereme prvek. Potom vždy $m-1$ krát odměříme úhel $2\pi / m$ a vždy vybereme prvek.
 
 <!-- ImageStart -->
 
@@ -782,6 +784,11 @@ Mám 2 případy, kdy můžu chtít udělat lineární škálování:
 
 Lineární škálování je funkce, která mi přepočítá zdatnosti jedinců tak, abych přeškáloval $Z_{min}$ a $Z_{max}$ na $Z_1$ a $Z_2$, díky čemuž ty míň schopný jedince přiblížím těm schopným (1) a nebo naopak je oddálím (2. případ).
 
+Každou zdatnost pak přepočítáme:
+$$Z = Z_1+(z-Z_{min})\frac{Z_2-Z_1}{Z_{max}-Z_{min}}$$
+
+kde $z$ je původní zdatnost
+
 <!-- ExampleStart -->
 
 ![](../../Assets/Pasted%20image%2020241127160520.png)
@@ -802,11 +809,14 @@ START
 NI-SZZ
 
 
-Jak se spočte výsledný selekční tlak?
+Jak se spočte **výsledný selekční tlak** (u lineárního škálování)?
 
 Back:
 
 $$c = \frac{Z_2}{nZ_{avg}}$$
+
+$Z_2$ je nejvyšší zdatnost (nejlepšího jedince)
+$Z_{avg}$ je průměrná zdatnost
 
 <!-- DetailInfoStart -->
 
@@ -826,11 +836,14 @@ START
 NI-SZZ
 
 
-Jak lze zachovat průměrnou zdatnost při počítání selekčního tlaku?
+Jak lze zachovat **průměrnou zdatnost** při počítání selekčního tlaku?
 
 Back:
 
 Zdatnost spočtu pomocí $Z = a \cdot z + b$
+
+Kde:
+![](../../Assets/Pasted%20image%2020260531140141.png)
 
 <!-- ImageStart -->
 
@@ -889,10 +902,11 @@ Jak funguje **zkrácený výběr**? (truncation selection)
 
 Back:
 
-Určím nějaký práh a vyberu množství jedinců. Pokud je nad prahem, vezmu ho, pokud není, tak ne.
+Určíme nějaký práh zdatnosti. Jedince nad prahem zarovnám na stejnou zdatnost, jedince pod prahem zarovnám na nulu.
+
+Těhlech prahů můžeme udělat několik (a udělat takový schody, kde to rozdělíme do několika skupin podle zdatnosti).
 
 Je to méně přesné než ostatní možnosti.
-
 <!-- ImageStart -->
 
 ![](../../Assets/Pasted%20image%2020241127161622.png)

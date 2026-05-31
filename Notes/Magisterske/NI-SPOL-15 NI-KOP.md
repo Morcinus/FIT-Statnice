@@ -35,7 +35,6 @@ Máme nějaký systém:
 <!-- DetailInfoEnd -->
 
 Tags: core
-
 <!--ID: 1780152138601-->
 END
 
@@ -53,11 +52,20 @@ Jak funguje metoda `try()` pro simulované ochlazovaní?
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241120163258.png)
+Funkce nás z jednoho stavu prostoru přesune do dalšího stavu.
 
-To je součástí lokální heuristiky (viz detail).
+![](../../Assets/Pasted%20image%2020260531142628.png)
+
+<!-- ExplanationStart -->
+1. Vybereme random stav `new`
+2. Pokud je stav lepší než momentální stav, vrátíme ho
+3. Pokud je horší, vrať ho pokud platí `random(0,1) < exp(-δ/T)`, kde δ je jak moc to je horší (`exp` je funkce $e^{-\delta/T}$)
+4. Jinak zůstaň v tomto stavu
+<!-- ExplanationEnd -->
 
 <!-- DetailInfoStart -->
+
+![](../../Assets/Pasted%20image%2020241120163258.png)
 
 Máme lokální heuristiku:
 ![](../../Assets/Pasted%20image%2020241120163149.png)
@@ -69,7 +77,6 @@ Dovysvětlení:
 <!-- DetailInfoEnd -->
 
 Tags: core
-
 <!--ID: 1780152138611-->
 END
 
@@ -98,7 +105,6 @@ Více o jednotlivých funkcích v dalších kartičkách.
 <!-- ExplanationEnd -->
 
 Tags: core
-
 <!--ID: 1780152138622-->
 END
 
@@ -112,14 +118,17 @@ START
 NI-SZZ
 
 
-Co platí podle pana Hajka?
+Věta: **konvergence simulovaného ochlazování** s funkcí `cool()`
 
 Back:
 
+Pro funkci `cool()` ve tvaru $t_k = \frac{c}{\log (1+k)}$ proces po nekonečném počtu kroků $k$ skončí v globálním optimu.
+
+$k$ je číslo kroku a $c$ je největší hloubka lokálního optima
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020241120163930.png)
-
-Problém ale je, jak máme vědět hloubku lokálních optim?
-
+<!-- DetailInfoEnd -->
 <!--ID: 1780152138633-->
 END
 
@@ -157,17 +166,21 @@ Original Flashcard ID: 1735205749619
 START
 NI-SZZ
 
-
-Co je třeba udělat s hodnotou optimalizačního kritéria, aby se dalo pracovat s teplotou?
+Jak spočteme $\delta$ v `try()` funkci **simulovaného ochlazování**?
 
 Back:
 
-Je třeba tu hodnotu **normalizovat** tak, aby hodnoty `cost()` měly **stejný rozsah pro každou instanci**
+Musíme vzít **normalizovanou** hodnotu optimalizačního kritéria (např. přepočítáme to aby to bylo v rozsahu $[0,1]$).
 
+Potom odečteme ty normalizované hodnoty:
+
+`δ = new.cost() - state.cost()`
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020241120164427.png)
+<!-- DetailInfoEnd -->
 
 Tags: core
-
 <!--ID: 1780152138655-->
 END
 
@@ -188,7 +201,6 @@ Back:
 Typicky teplotu přenásobím nějakou konstantou $\alpha$, kde $0.8 < \alpha < 0.999$
 
 Tags: core
-
 <!--ID: 1780152138666-->
 END
 
@@ -206,10 +218,20 @@ Jak funguje funkce `equilibrium()` v simulovaném ochlazování?
 
 Back:
 
+Určuje nám počet iterací ve vztahu k velikosti instance:
+- Buď $N$ přijatých stavů
+- Nebo $2N$ celkových akcí `try()`
+
+Kde $N$ je odvozený od velikosti instance
+
+Když je hodně přijatých -> chladí se rychleji
+Zároveň brání pomalému chlazení při nízkých teplotách.
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020241120164552.png)
+<!-- DetailInfoEnd -->
 
 Tags: core
-
 <!--ID: 1780152138677-->
 END
 
@@ -227,7 +249,7 @@ Jak souvisí `cool()` a `equilibrium()`?
 
 Back:
 
-Různým nastavením můžu dosáhnout stejného výsledku.
+Různým nastavením těchto funkcí můžu dosáhnout stejného výsledku (stejné rychlosti ochlazování).
 
 <!-- DetailInfoStart -->
 
@@ -240,7 +262,6 @@ Ve vzorečku mi vypadlo N -> nezávisí na tom, v jakém kroku se momentálně n
 <!-- DetailInfoEnd -->
 
 Tags: core
-
 <!--ID: 1780152138689-->
 END
 
@@ -258,8 +279,8 @@ Podle jakých metrik se dynamicky nastavuje počáteční teplota? (2)
 
 Back:
 
-- **Podle obtížnosti/velikosti instance**
-- **Podle rozsahu optimalizačního kritéria**
+- pokud známe hloubku lokálních optim $\delta$ a chceme pravděpodobnost úniku $P$ → nastavíme počáteční teplotu $T_0 = -\frac\delta{\ln P}$
+- pokud neznáme → existují algoritmy jak ji zvolit podle množiny zhoršujících akcí
 
 <!-- DetailInfoStart -->
 
@@ -268,28 +289,7 @@ Back:
 <!-- DetailInfoEnd -->
 
 Tags: core
-
 <!--ID: 1780152138701-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749633
--->
-
-START
-NI-SZZ
-
-
-Jak lze vypočítat počáteční teplotu ze sady akcí?
-
-Back:
-
-![](../../Assets/Pasted%20image%2020241120165122.png)
-![](../../Assets/Pasted%20image%2020241120165131.png)
-
-<!--ID: 1780152138713-->
 END
 
 ---
@@ -301,15 +301,12 @@ Original Flashcard ID: 1735205749636
 START
 NI-SZZ
 
-
-Kdy se zastaví simulované ochlazování? (3)
+Kdy se zastaví simulované ochlazování? (2)
 
 Back:
 
 - **pevná mez teploty**
-- nebo stagnace:
-  - **četnost změn klesla pod nastavenou mez**
-  - **četnost změn k lepšímu klesla pod nastavenou mez**
+- **četnost změn k lepšímu klesla pod nastavenou mez** (=stagnace)
 
 <!-- DetailInfoStart -->
 
@@ -318,27 +315,7 @@ Back:
 <!-- DetailInfoEnd -->
 
 Tags: core
-
 <!--ID: 1780152138724-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1735205749639
--->
-
-START
-NI-SZZ
-
-
-Jaké vlastnosti má mít stavový prostor při simulovaném ochlazování?
-
-Back:
-
-![](../../Assets/Pasted%20image%2020241120165630.png)
-
-<!--ID: 1780152138735-->
 END
 
 ---
@@ -350,13 +327,17 @@ Original Flashcard ID: 1735205749642
 START
 NI-SZZ
 
-
-Jak se nastavují omezující podmínky při simulovaném ochlazování?
+Jak se řeší **omezující podmínky** při **simulovaném ochlazování**?
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241120165712.png)
+- **zahození konfigurace** - zbytečně jsme strávili práci
+- **opravení konfigurace** - náročný časově a navíc to vnáší předpojatost
+- **relaxace** - penalizujeme řešení, co jsou dále od korektního řešení
 
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020241120165712.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1780152138746-->
 END
 
@@ -370,13 +351,47 @@ START
 NI-SZZ
 
 
-Jaké jsou 2 možnosti počátečního řešení v simulovaném ochlazování?
+Jaké jsou **možnosti volby počátečního řešení** v simulovaném ochlazování? (2)
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241120165738.png)
+- **náhodné řešení** - algoritmus spustíme vícekrát, dobré simulované ochlazování by nemělo záviset na počátečním řešení
+- **konstruktivní** - chytře vytvoříme řešení v lokálním optimu -> máme alespoň nějaké optimum
 
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020241120165738.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1780152138757-->
+END
+
+---
+
+
+START
+NI-SZZ
+
+Jak funguje funkce `frozen(T,...)`? Kdy se algoritmus zastaví?
+
+Back:
+
+Určuje, kdy se celý algoritmus zastaví:
+- U rozhodovacích/konstruktivních problémů jakmile **najdeme řešení**
+- U ostatních problémů jakmile **teplota překročí určitou mez** nebo dojde ke **stagnaci** ($n$ kroků jsme nenašli nové lepší řešení)
+<!--ID: 1780234893197-->
+END
+
+---
+
+
+START
+NI-SZZ
+
+Co znamená pro funkci `frozen(T,...)`, když se nejlepší řešení rychle zlepšuje až do konce algoritmu? 
+
+Back:
+
+Nejspíš algoritmus zastavujeme moc brzy.
+<!--ID: 1780234893210-->
 END
 
 ---
