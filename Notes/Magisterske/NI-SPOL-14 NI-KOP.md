@@ -27,7 +27,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241127151350.png)
 
 Tags: core
-
 <!--ID: 1780152137744-->
 END
 
@@ -58,7 +57,6 @@ Back:
 <!-- ImageEnd -->
 
 Tags: core
-
 <!--ID: 1780152137756-->
 END
 
@@ -74,13 +72,14 @@ NI-SZZ
 
 Jaké jsou prostředky **diverzifikace** a **intenzifikace** v simulované evoluci?
 
+(aka co nám dělá diverzifikaci a intenzifikaci)
+
 Back:
 
 - Prostředky **diverzifikace**: **mutace**
 - Prostředky **intenzifikace**: **selekce**
 
 Tags: core
-
 <!--ID: 1780152137768-->
 END
 
@@ -130,7 +129,6 @@ Nad **binárním řetěžcem**
 <!-- DetailInfoEnd -->
 
 Tags: core
-
 <!--ID: 1780152137791-->
 END
 
@@ -153,7 +151,6 @@ Back:
 Nad **stromama**, programem, DFG (data flow graph)
 
 Tags: core
-
 <!--ID: 1780152137803-->
 END
 
@@ -176,7 +173,6 @@ Back:
 Nad **vektorem reálných čísel a odchylek**
 
 Tags: core
-
 <!--ID: 1780152137815-->
 END
 
@@ -199,7 +195,6 @@ Back:
 Nad reprezentací **automatu**.
 
 Tags: core
-
 <!--ID: 1780152137826-->
 END
 
@@ -219,10 +214,9 @@ Back:
 
 - **náhrada** = nová generace nahradí starou
 - **náhrada s elitismem** = nová generace nahradí starou, ale pár elitních jedinců zůstává
-  - soutěž $\mu$ rodičů a $\lambda$ potomků, vyberu $\mu$ nových jedinců
+	- soutěž $\mu$ rodičů a $\lambda$ potomků, vyberu $\mu$ nových jedinců
 
 Tags: core
-
 <!--ID: 1780152137838-->
 END
 
@@ -257,7 +251,6 @@ Back:
 <!-- DetailInfoEnd -->
 
 Tags: core
-
 <!--ID: 1780152137853-->
 END
 
@@ -276,7 +269,6 @@ Jak se reprezentují jedinci v genetických algoritmech?
 Back:
 
 Kódujou se pomocí binárního řetězce.
-
 <!--ID: 1780152137866-->
 END
 
@@ -290,11 +282,11 @@ START
 NI-SZZ
 
 
-Jak funguje jednobodové křížení?
+Jak funguje **jednobodové křížení**?
 
 Back:
 
-Vezmu si bod v binární reprezentaci a vezmu jednu část z jednoho jedince a druhou část z druhého jedince.
+V kódu dvou jednotlivců **vybereme náhodně bod**, kde to rozsekneme. Rozseknuté části potom v jednotlivcích prohodíme.
 
 <!-- ExplanationStart -->
 
@@ -303,7 +295,6 @@ Vezmu si bod v binární reprezentaci a vezmu jednu část z jednoho jedince a d
 <!-- ExplanationEnd -->
 
 Tags: core
-
 <!--ID: 1780152137877-->
 END
 
@@ -317,11 +308,11 @@ START
 NI-SZZ
 
 
-Jak funguje dvoubodové křížení?
+Jak funguje **dvoubodové křížení**?
 
 Back:
 
-Náhodně zvolím dva body a mezi nimi tam vložím gen druhého jedince
+Náhodně zvolíme **dva body** a mezi nimi prohodíme geny dvou jednotlivců
 
 <!-- ExplanationStart -->
 
@@ -330,7 +321,6 @@ Náhodně zvolím dva body a mezi nimi tam vložím gen druhého jedince
 <!-- ExplanationEnd -->
 
 Tags: core
-
 <!--ID: 1780152137889-->
 END
 
@@ -344,11 +334,11 @@ START
 NI-SZZ
 
 
-Jak funguje uniformní křížení?
+Jak funguje **uniformní křížení**?
 
 Back:
 
-Udělám si mapu, co budu brát ze kterého jedince.
+Vygenerujeme náhodný vektor $\set { 0,1} ^n$. Na pozicích, kde je ve vektoru např. $0$, tak prohodíme prvky dvou jedinců.
 
 <!-- ExplanationStart -->
 
@@ -357,7 +347,6 @@ Udělám si mapu, co budu brát ze kterého jedince.
 <!-- ExplanationEnd -->
 
 Tags: core
-
 <!--ID: 1780152137900-->
 END
 
@@ -392,7 +381,6 @@ Zde:
 <!-- ExampleEnd -->
 
 Tags: core
-
 <!--ID: 1780152137911-->
 END
 
@@ -406,14 +394,19 @@ START
 NI-SZZ
 
 
-Jak funguje inverze v genetice?
+Jak funguje **inverze** v genetice?
 
 Back:
 
+Problém u jedno a dvoubodového křížení je, to je závislé na pořadí genů (bitů). Určité bity mají pak větší pravděpodobnost, že zůstanou v prvním jedinci (viz obrázek).
+
+Řešení: Bity se před křížením náhodně prohází, aby se vyrovnala ta pravděpodobnost.
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020241127154327.png)
+<!-- DetailInfoEnd -->
 
 Tags: core
-
 <!--ID: 1780152137922-->
 END
 
@@ -443,7 +436,6 @@ Back:
 <!-- DetailInfoEnd -->
 
 Tags: core
-
 <!--ID: 1780152137934-->
 END
 
@@ -457,13 +449,13 @@ START
 NI-SZZ
 
 
-Jak funguje selekce v genetických algoritmech (množení)?
+Jak funguje **selekce** v genetických algoritmech (množení)?
 
 Back:
 
 1. Máme jedince
 2. Podle optimalizačního kritéria spočtu jeho zdatnost
-3. Podle zdatnosti spočtu pravděpodobnost výběru daného jedince
+3. Podle zdatnosti určíme pravděpodobnost výběru daného jedince
 4. Náhodně vyberu jedince
 
 <!-- DetailInfoStart -->
@@ -473,7 +465,6 @@ Back:
 <!-- DetailInfoEnd -->
 
 Tags: core
-
 <!--ID: 1780152137944-->
 END
 
@@ -491,7 +482,11 @@ Jak funguje selekční tlak?
 
 Back:
 
-Selekční tlak mi určuje pravděpodobnost výběru nejlepšího jedince.
+Selekční tlak mi určuje **pravděpodobnost výběru nejlepšího jedince**. Používá se při přepočtu zdatnosti na pravděpodobnost výběru jednotlivce. 
+
+Extrémní případy:
+$p=1$ znamená, že nejlepšího jedince vyberu určitě (-> intenzifikace)
+$p=1/n$ nezáleží na zdatnosti (-> diverzifikace)
 
 <!-- ExplanationStart -->
 
@@ -500,7 +495,6 @@ Selekční tlak mi určuje pravděpodobnost výběru nejlepšího jedince.
 <!-- ExplanationEnd -->
 
 Tags: core
-
 <!--ID: 1780152137955-->
 END
 
@@ -528,7 +522,6 @@ Pomocí selekce ztrácím určité informace. Mutace mi to trochu kompenzuje, ab
 <!-- ImageEnd -->
 
 Tags: core
-
 <!--ID: 1780152137967-->
 END
 
@@ -561,7 +554,6 @@ Je nebezpečná degenerace populace (zasekne se v lokálním optimu).
 <!-- DetailInfoEnd -->
 
 Tags: core
-
 <!--ID: 1780152137978-->
 END
 
@@ -590,7 +582,6 @@ Hrozí i **divergence populace** - tzn. když budu mutovat tak moc, že mi to p�
 <!-- DetailInfoEnd -->
 
 Tags: core
-
 <!--ID: 1780152137990-->
 END
 
@@ -604,12 +595,18 @@ START
 NI-SZZ
 
 
-Co je **Turnajový výběr**?
+Co je **Turnajový výběr**? Jakou roli hraje selekční tlak?
 
 Back:
 
+**Turnajový výběr**
 - Náhodně se vybere $r$ jedinců (turnaj) a z něj nejlepšího.
 - To se opakuje až do naplnění populace
+
+**Selekční tlak**
+- Určuje velikost turnaje.
+- Pokud $p=1$, pak bude turnaj celá populace a tím pádem se vždy vybere nejzdatnější jedinec
+- Pokud $p = 1/n$, tak není žádný selekční tlak a nezáleží na zdatnosti (protože je turnaj jen o jednom jednotlivci)
 
 <!-- DetailInfoStart -->
 
@@ -618,7 +615,6 @@ Back:
 <!-- DetailInfoEnd -->
 
 Tags: core
-
 <!--ID: 1780152138002-->
 END
 
@@ -640,7 +636,6 @@ Back:
 - Příznaky konvergence
 
 Tags: core
-
 <!--ID: 1780152138013-->
 END
 
@@ -653,25 +648,35 @@ Original Flashcard ID: 1735205749733
 START
 NI-SZZ
 
-
-Jaké jsou techniky pro omezující podmínky?
+Co jsou **omezující podmínky v simulované evoluci**?
 
 Back:
 
-Standardní
+Omezující podmínky nám říkají, která řešení (konfigurace) jsou vůbec platná.
 
-- **trest smrti** - zmarněná práce konstrukce
-- **oprava individua** - vnáší předpojatost
-- **relaxace**
-
-Specifické
-
-- **doménové operátory** - udělají mi z permutace zase permutaci, z kružnice zase kružnici atd.
-- **doménové reprezentace** a dekódery
-
-Tags: core
-
+Např. u batohu nesmíme překročit maximální velikost batohu
 <!--ID: 1780152138024-->
+END
+
+---
+
+
+START
+NI-SZZ
+
+Jaké jsou **techniky pro práci s omezujícíma podmínkama**? (5)
+
+Back:
+
+**Standardní**
+- **trest smrti** - když vznikne neplatné individuum, tak ho hned zahodíme (-> zmarněná práce)
+- **oprava individua** - když vznikne neplatné individuum, upravíme ho tak, aby bylo platné (vnáší předpojatost!)
+- **relaxace** - neplatná řešení nezahodíme, ale dovolíme jim existovat, jen jim zhoršíme zdatnost (-> budou vybírány méně často)
+
+**Specifické** - snažíme se, aby nevalidní řešení vůbec nevznikly
+- **doménové operátory** - použijeme speciální mutace a křížení přizpůsobené konkrétnímu typu řešení (z permutace vznikne zase permutace, z kružnice zase kružnice atd.)
+- **doménové reprezentace** a dekódery - individuum nemusí reprezentovat výsledné řešení, ale "návod" podle kterého pak řešení dostaneme (např. snažíme se dostat optimální rozvrh ve škole, tak konfigurace nebude rozvrh, ale třeba jen pořadí předmětů. Z toho pak nějakým algoritmem rozvrh zkonstruujeme.)
+<!--ID: 1780224118772-->
 END
 
 ---
@@ -699,7 +704,6 @@ Každému prvku dám pravděpodobnost výběru a roztočím ruletu a zvolím tí
 <!-- ImageEnd -->
 
 Tags: core
-
 <!--ID: 1780152138035-->
 END
 
@@ -726,7 +730,6 @@ Mírná úprava ruletového výběru, aby to dávalo lepší výsledky
 <!-- ImageEnd -->
 
 Tags: core
-
 <!--ID: 1780152138046-->
 END
 
@@ -755,7 +758,6 @@ Back:
 <!-- DetailInfoEnd -->
 
 Tags: core
-
 <!--ID: 1780152138057-->
 END
 
@@ -787,7 +789,6 @@ Lineární škálování je funkce, která mi přepočítá zdatnosti jedinců t
 <!-- ExampleEnd -->
 
 Tags: core
-
 <!--ID: 1780152138068-->
 END
 
@@ -871,7 +872,6 @@ Funguje to tak, že si nastavím nějakou čáru a zdatnosti přeškáluju tak, 
 <!-- ImageEnd -->
 
 Tags: core
-
 <!--ID: 1780152138103-->
 END
 
@@ -906,7 +906,6 @@ Je to méně přesné než ostatní možnosti.
 <!-- DetailInfoEnd -->
 
 Tags: core
-
 <!--ID: 1780152138114-->
 END
 
