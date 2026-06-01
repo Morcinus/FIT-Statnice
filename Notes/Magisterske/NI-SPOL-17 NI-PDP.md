@@ -1016,7 +1016,6 @@ Original Flashcard ID: 1746599653142
 START
 NI-SZZ
 
-
 Jak se dá paralelizovat **vnitřní cyklus** $B$ násobení polynomů?
 
 ![](../../Assets/Pasted%20image%2020260524141259.png)
@@ -1025,6 +1024,10 @@ Back:
 
 - vnější cyklus přes $A$ je sekvenční
 - Před vnitřní cyklus $B$ dáme `#pragma omp parallel for schedule(static)`
+- Nebo lépe:
+	-  Před vnější cyklus se umístí `#pragma omp parallel` – to zajišťuje sdílený threadpool vláken
+	- Před vnitřní cyklus $B$ dáme `#pragma omp for schedule(static)` – ten vlákna využívá
+- Je zde problém s falešným sdílením
 
 $i$ máme v paralelním cyklu vždy stejný, takže jen přičítáme na pozici $j$ za tím $i$ v $C$. Tím pádem si vlákna nic navzájem nepřepisují a není potřeba atomic. (viz obrázek)
 
@@ -2241,3 +2244,85 @@ Tags: otazka16
 END
 
 ---
+
+START
+NI-SZZ
+
+Co je to QuickSort?
+
+Back:
+
+- Rekurzivní algoritmus typu Rozděl a panuj
+
+![](../../Assets/Pasted%20image%2020260601093645.png)
+
+
+END
+
+---
+
+START
+NI-SZZ
+
+Co je to Merge Sort?
+
+Back:
+
+- Rekurzivní algoritmus typu Rozděl a panuj
+
+![](../../Assets/Pasted%20image%2020260601093704.png)
+
+
+END
+
+---
+
+START
+NI-SZZ
+
+Jak vypadá varianta QuickSort algoritmu: **Lomuto**?
+
+**Fungování**
+
+Cílem funkce `seq_partition_L` je vzít zadanou část pole, vybrat jeden referenční prvek (zvaný **pivot**) a přeskládat pole tak, aby:
+
+1. Všechny prvky **menší** než pivot byly přesunuty nalevo od něj.
+2. Všechny prvky **větší nebo rovny** pivotu zůstaly napravo od něj.
+3. Samotný pivot skončil na své definitivní, správné pozici v setříděném poli.
+
+**Shrnutí**
+
+- **Výhoda:** Je velmi snadné na pochopení a implementaci (kód je velmi kompaktní)
+- **Nevýhoda:** Obecně provádí více prohazování (swapů) než alternativní Hoareovo schéma. Je také náchylnější k degradaci výkonu (na složitost $O(n^2)$), pokud pole obsahuje velké množství identických prvků nebo pokud je pole již předem setříděné.
+
+Back:
+
+![](../../Assets/Pasted%20image%2020260601094140.png)
+
+END
+
+---
+
+START
+NI-SZZ
+
+Jak vypadá varianta QuickSort algoritmu: **Hoare**?
+
+**Fungování**
+
+Algoritmus hledá zleva prvky, které jsou "příliš velké" (patří napravo od pivota), a zprava prvky, které jsou "příliš malé" (patří nalevo). Když najde jeden takový na levé straně a druhý na pravé, jednoduše je mezi sebou prohodí. Tím se pole rychleji uspořádá.
+
+**Srovnání**
+
+- **Výhoda Hoareho (Efektivita):** Hoareovo schéma dělá v průměru **až třikrát méně prohazování (swapů)** než Lomuto. Proto se v knihovnách používá právě Hoare (nebo jeho varianty). Mnohem lépe také zvládá pole, kde je spousta stejných hodnot.
+- **Nevýhoda Hoareho (Složitost):** Hoareovo schéma je náchylnější na tzv. _off-by-one errors_ (chyby o jedničku) – např. závěrečná korekce `j++`. Lomuto se mnohem snáze implementuje a pamatuje.
+
+Back:
+
+![](../../Assets/Pasted%20image%2020260601094239.png)
+
+END
+
+---
+
+

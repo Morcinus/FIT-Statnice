@@ -873,8 +873,8 @@ Jaké bývají klíče v key-value databázích?
 
 Back:
 
-- real-world identifikátory - email, login name atd.
-- automaticky generované - např. auto increment
+- **real-world identifikátory** - email, login name atd.
+- **automaticky generované** - např. GUID
 
 
 <!--ID: 1779128799697-->
@@ -1732,7 +1732,7 @@ Jak se liší XPath a XQuery?
 Back:
 
 - **XPath** - jazyk který aplikujeme na XML dokument a on nám vrátí sekvenci elementů
-- **XQuery** - XPath + další rozšíření navíc
+- **XQuery** - XPath + další rozšíření navíc jako například FLWOR (For, Let, Where, Order By, Return)
 
 
 <!--ID: 1779128799781-->
@@ -2364,11 +2364,17 @@ Dotazovací jazyk:
 - `<--, --, -->` reprezentuje vztah
 - Používá se MATCH, RETURN, WHERE, WITH
 
-Např. najde movie, kde hrál nějaký herec
+Příklad: Najdi všechny anglické filmy (Movie), ve kterých hrál Ivan Trojan.
 
+```Cypher
+MATCH (p:Person {name: 'Ivan Trojan'})-[:ACTED_IN]->(m:Movie {language: 'English'})
+RETURN m.title
 ```
-MATCH (m:MOVIE)-[:PLAY]->(:ACTOR)
-RETURN DISTINCT m;
+
+nebo:
+
+```Cypher
+MATCH (p:Person {name: 'Ivan Trojan'})-[:ACTED_IN]->(m:Movie) WHERE m.language = 'English' RETURN m.title
 ```
 
 
@@ -2418,7 +2424,7 @@ Back:
 - **insert** (`insertOne`, `insertMany`) - vytvoří nový dokument
 - **replace** (`replaceOne`) - nahradí existující dokument
 - **update** (`updateOne`, `updateMany`) - aktualizuje dokument
-- **remove** (`deletOne`, `deleteMany`) - odstraní dokument
+- **remove** (`deleteOne`, `deleteMany`) - odstraní dokument
 - **find** (`find`) - najde dokumenty v kolekci
 
 
@@ -2453,7 +2459,7 @@ Original Flashcard ID: 1735205749154
 START
 NI-SZZ
 
-Jaké jsou 2 části primary keys v cassandře?
+Jaké jsou 2 části **primary keys** v Cassandře?
 
 Back:
 
@@ -2528,8 +2534,8 @@ Back:
 - db - handle na databázové spojení
 - movies - kolekce
 - **find(selekce, projekce)** - metoda (jako SELECT), může být například update atd.
-- selekce - podle čeho filtruju výsledky
-- projekce - jaké atributy mají být ve výsledku
+	- selekce - podle čeho filtruju výsledky
+	- projekce - jaké atributy mají být ve výsledku
 - **sort(key_obj)** - řazení, 1 = ASC, -1 = DESC
 - **pretty()** - jen formátuje výstup, aby byl čitelnější (řádky, odsazení)
 

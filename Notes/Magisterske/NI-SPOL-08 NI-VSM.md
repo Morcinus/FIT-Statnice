@@ -228,7 +228,7 @@ NI-SZZ
 
 Jaký tvar má Chapman-Kolmogorova rovnice pro **homogenní markovský řetězec**?
 
-$P(n+m)= \ ???= \ ???$
+$P(n+m)= \ ???= \ ??? = \ ???$
 
 Back:
 

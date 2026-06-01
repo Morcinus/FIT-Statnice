@@ -1036,7 +1036,7 @@ Jinými slovy:
 Jinými slovy:
 
 1. Pokud problém roste s $n = \Omega(\psi_1(p))$, pak efektivnost neklesne pod $E_0$
-2. Pokud počet procesorů nepřeroste $p = \omega(\psi_2(n))$, pak efektivnost neklesne pod $E_0$
+2. Pokud počet procesorů nepřeroste $p = O(\psi_2(n))$, pak efektivnost neklesne pod $E_0$
 
 <!-- DetailInfoStart -->
 
