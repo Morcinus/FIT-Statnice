@@ -2108,7 +2108,14 @@ Jak funguje směrování v topologii motýlek?
 
 Back:
 
+**Přímý motýlek:** podle cílové adresy, $0$ nahoru, $1$ dolu
+**Nepřímý motýlek:** podle odlišnosti vstupního řetěžce od výstupního, liší změním směr, neliší pokračuju ve stejném směru (např. přijdeme na dolním vstupu, liší se bit, tak vyjdeme z horního výstupu)
+
+V obou případech **čteme řetězce pozpátku** (používáme e-cube směrování)
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020250402093916.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1779300071008-->
 END
 

@@ -9,6 +9,12 @@ FILE TAGS: NI-SPOL-18 NI-PDP
 > NI-SPOL-18 (NI-PDP)
 > Programování nad distribuovanou pamětí, programový model MPI (vícevláknové procesy, komunikátory, 2-bodové blokující a neblokující komunikační operace, kolektivní operace), paralelní násobení hustých matic, paralelní mocninná metoda.
 
+
+<!--
+TODO:
+- tady by bylo fajn ještě přihodit jednu kartičku na vysvětlení co jsou MPI_Message objekty, aby šlo pochopit co je MPI_Improbe
+-->
+
 ## Programování nad distribuovanou pamětí
 
 <!--
@@ -93,7 +99,7 @@ START
 NI-SZZ
 
 
-Jak se liší komunikace vláken v MPI a OpenMP?
+Jak se liší využívání **sdílené/lokální paměti** v **MPI** a **OpenMP**?
 
 Back:
 
@@ -570,11 +576,16 @@ START
 NI-SZZ
 
 
-Jak volají MPI funkce **zdrojový** a **cílový proces** u 2-bodové komunikace?
+Jak volají MPI funkce `MPI_Send` a `MPI_Recv` **zdrojový** a **cílový proces** u 2-bodové komunikace?
 
 Back:
 
+- **Zdrojový proces** zavolá `MPI_Send` s `dest` nastaveným na číslo cílového procesu
+- **Cílový proces** zavolá `MPI_Recv` se `source` nastevným na číslo zrojového procesu nebo s `MPI_ANY_SOURCE` pro přijetí zprávy od libovolného procesu
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020250330103722.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1779300071095-->
 END
 
@@ -616,11 +627,13 @@ START
 NI-SZZ
 
 
-Jak funguje **Stavový objekt** v 2-bodové komunikaci? Co z něj můžem získat? Co když nás nezajímá?
+Jak funguje **Stavový objekt** v 2-bodové komunikaci? 
+Co z něj můžem získat za **informace**? (3)
+Jak můžeme **status ignorovat**?
 
 Back:
 
-Uděláme **stavový objekt** `MPI_Status status` a do `MPI_Recv` se passne `&status`.
+Alokujeme **stavový objekt** `MPI_Status status` a do `MPI_Recv` se passne `&status`.
 
 Lze z něj získat:
 
@@ -682,9 +695,19 @@ Jak se dá implementovat Master-Slave program v MPI?
 
 Back:
 
-![](../../Assets/Pasted%20image%2020250330104057.png)
-![](../../Assets/Pasted%20image%2020250330104108.png)
+- Pokud `proc_num == 0` (jsme master)
+	- Uděláme cyklus, kde každému workerovi pošleme zprávu s naším `TAG_WORK`
+	- Pak pokud máme working slaves, tak čekáme na příjem zprávy `MPI_Recv` s `TAG_DONE`. Pokud zbývá práce, tak to pošleme tomu workerovi. Pokud už není práce, tak mu pošleme zprávu s `TAG_TERMINATE`
+- Pokud `proc_num != 0` (jsme slave)
+	- Ve smyčce vždy čekáme na `MPI_Recv` zprávu
+		- Pokud je zpráva `TAG_WORK`, tak začnem pracovat s těmi daty a po dokončení pošleme `TAG_DONE`
+		- Pokud je zpráva `TAG_TERMINATE`, tak vyskočíme z cyklu a ukončíme se
+
+Pozn. ty tags jsou námi vytvořené konstanty (třeba intový)
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020250330104118.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1779300071106-->
 END
 
@@ -704,10 +727,9 @@ Back:
 
 Komunikační mód určuje, kdy nastane návrat z blokující funkce.
 
-- **standard mode** (`MPI_Send`) → po přijetí dat příjemcem nebo zkopírování do bufferu
-  - MPI samo rozhodne mezi buffered a synchronous → lepší přenositelnost
-- **buffered mode** (`MPI_Bsend`) → po zkopírování do bufferu
-  - jako jediný je lokální operací (= návrat nezávisí na připravenosti příjemce)
+- **standard mode** (`MPI_Send`) → MPI rozhodne jestli se použije režim `MPI_Bsend` nebo `MPI_Ssend`
+- **buffered mode** (`MPI_Bsend`) → po zkopírování do systémového bufferu pro pozdější odesílání
+	- jako jediný je lokální operací (= návrat nezávisí na připravenosti příjemce)
 - **synchronous mode** (`MPI_Ssend`) → po iniciaci přijetí dat příjemcem
 - **ready mode** (`MPI_Rsend`) → jako `Send`, ale vrátí chybu, pokud příjemce nezavolal `MPI_Recv`
 
@@ -731,122 +753,14 @@ START
 NI-SZZ
 
 
-Kdo vybírá komunikační mód?
+Kdo vybírá komunikační mód u `MPI_Send`?
 
 Back:
+
+Volba je na MPI knihovně
 
 ![](../../Assets/Pasted%20image%2020250330104832.png)
 <!--ID: 1779300071111-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746518365353
--->
-
-START
-NI-SZZ
-
-
-Jak funguje **standardní mód**?
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250330104855.png)
-<!--ID: 1779300071114-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746518365356
--->
-
-START
-NI-SZZ
-
-
-Jak funguje **Buffered mode**?
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250330104919.png)
-<!--ID: 1779300071117-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746518365358
--->
-
-START
-NI-SZZ
-
-
-Jak funguje **Synchronous mode**?
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250330104930.png)
-<!--ID: 1779300071119-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746518365361
--->
-
-START
-NI-SZZ
-
-
-Jak funguje **Ready mode**?
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250330104941.png)
-<!--ID: 1779300071122-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746518365364
--->
-
-START
-NI-SZZ
-
-
-Proč je dobré použít standardní mód MPI komunikace?
-
-Back:
-
-MPI to samo rozhodne, jestli je lepší buffered nebo synchronous
-
-![](../../Assets/Pasted%20image%2020250330105001.png)
-<!--ID: 1779300071125-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746518365366
--->
-
-START
-NI-SZZ
-
-
-Jaké jsou blokující komunikační operace?
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250330105045.png)
-<!--ID: 1779300071128-->
 END
 
 ---
@@ -880,7 +794,7 @@ START
 NI-SZZ
 
 
-Jaké jsou neblokující komunikační operace? (5)
+Jaké jsou **neblokující komunikační operace** v MPI? (5)
 
 Back:
 
@@ -1069,42 +983,6 @@ END
 ---
 
 <!--
-Original Flashcard ID: 1746518365380
--->
-
-START
-NI-SZZ
-
-
-Jak funguje hromadné dokončení neblokujících operací?
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250330105326.png)
-<!--ID: 1779300071154-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746518365383
--->
-
-START
-NI-SZZ
-
-
-Jaké jsou komunikační módy neblokujících operací?
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250330105348.png)
-<!--ID: 1779300071156-->
-END
-
----
-
-<!--
 Original Flashcard ID: 1746518365386
 -->
 
@@ -1116,29 +994,21 @@ Jak funguje funkce `MPI_Sendrecv`?
 
 Back:
 
+Můžeme  **najednou odeslat i přijmout zprávu** (zdrojový a cílový proces mohou být různé)
+
+Nejprve jsou argumenty sendu (bez statusu) a pak receivu
+
+![](../../Assets/Pasted%20image%2020260525160554.png)
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020250330105413.png)
+
 ![](../../Assets/Pasted%20image%2020250330105547.png)
+
+<!-- DetailInfoEnd -->
 
 Tags: otazka19
 <!--ID: 1779300071159-->
-END
-
----
-
-<!--
-Original Flashcard ID: 1746518365389
--->
-
-START
-NI-SZZ
-
-
-Jak funguje `MPI_Sendrecv_replace`?
-
-Back:
-
-![](../../Assets/Pasted%20image%2020250330105600.png)
-<!--ID: 1779300071162-->
 END
 
 ---
@@ -1309,7 +1179,7 @@ Back:
 `MPI_Message message`
 `MPI_Improbe(source, tag, comm, *flag, *message, *status)`
 
-Mokud existuje přijatelná zpráva, v `message` se vrátí handle na tuto zprávu, kterou pak může přijmout `MPI_Mrecv()`.
+Pokud existuje přijatelná zpráva, v `message` se vrátí handle na tuto zprávu, kterou pak může přijmout `MPI_Mrecv()`.
 
 <!-- DetailInfoStart -->
 
@@ -1417,11 +1287,19 @@ START
 NI-SZZ
 
 
-Jsou v MPI blokující nebo neblokující verze KKO?
+Jsou v MPI **blokující** nebo **neblokující** verze **kolektivních komunikačních operací**?
 
 Back:
 
+Jsou tam **blokující** i **neblokující**.
+
+Neblokující mají před názvem `I`, např. `MPI_Ibcast`
+
+V PDP jsme brali pak jen ty **blokující**
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020250419130348.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1779300071194-->
 END
 
@@ -1435,11 +1313,19 @@ START
 NI-SZZ
 
 
-Co je `MPI_Bcast` (OAB)?
+Jak funguje `MPI_Bcast` (OAB)? Jaké má parametry? (5)
 
 Back:
 
+Jeden proces rozešle stejnou zprávu všem v daném komunikátoru.
+
+`MPI_Bcast(*data, count, datatype, root, comm)`
+
+kde `root` je id odesílajícího procesu
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020250419130428.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1779300071197-->
 END
 
@@ -1453,11 +1339,21 @@ START
 NI-SZZ
 
 
-Co je `MPI_Gather` (AOG)?
+Jak funguje `MPI_Gather` (AOG)? Jaké má parametry? (8)
 
 Back:
 
+Proces dostane zprávu od všech ostatních procesů (včetně sebe sama!)
+
+`MPI_Gather(*sendbuf, sendcount, sendtype, *recvbuf, recvcount, recvtype, root, comm)`
+
+Každý proces nahraje data do `sendbuf` (a `recv` parametry ignorují).
+
+Ten přijímající proces si vyzvedne data v `recvbuf`.
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020250419130446.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1779300071200-->
 END
 
@@ -1471,11 +1367,15 @@ START
 NI-SZZ
 
 
-Co je `MPI_Gatherv` (AOG)
+Jak funguje `MPI_Gatherv` (AOG)
 
 Back:
 
+Proces `root` sbírá od každého procesu různý počet dat určený v poli `recvcounts[]`.
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020250419130503.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1779300071203-->
 END
 
@@ -1489,11 +1389,20 @@ START
 NI-SZZ
 
 
-Co je `MPI_Allgather` (AAG/AAB)
+Jak funguje `MPI_Allgather` (AAG/AAB)
 
 Back:
 
+Podobně jako `MPI_Gather`, jen sbírání provádějí všichni.
+
+(Varianty: `MPI_Allgather`, `MPI_Alligather`, `MPI_Allgatherv`, `MPI_Alligatherv`)
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020250419130523.png)
+<!-- DetailInfoEnd -->
+
+Znázornění funkce `MPI_Alligather`:
+![](../../Assets/Pasted%20image%2020260525163815.png)
 <!--ID: 1779300071206-->
 END
 
@@ -1507,11 +1416,18 @@ START
 NI-SZZ
 
 
-Co je `MPI_Scatter`? (OAS)
+Jak funguje `MPI_Scatter`? (OAS) Jaké má parametry? (8)
 
 Back:
 
+Proces `root` odešle data všem (včetně sebe).
+
+Parametry jsou stejné jako u `MPI_Gather`:
+`MPI_Scatter(*sendbuf, sendcount, sendtype, *recvbuf, recvcount, recvtype, root, comm)`
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020250419130545.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1779300071209-->
 END
 
@@ -1525,11 +1441,17 @@ START
 NI-SZZ
 
 
-Co je `MPI_Alltoall` (AAS)
+Jak funguje `MPI_Alltoall` (AAS)
 
 Back:
 
+Každý proces pošle každému zprávu.
+
+`MPI_Alltoall(*sendbuf, sendcount, sendtype, *recvbuff, recvcount,recvtype, comm)`
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020250419130606.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1779300071212-->
 END
 
@@ -1548,13 +1470,24 @@ Jak funguje paralelní násobení hustých matic pomocí Cannonova algoritmu?
 
 Back:
 
-1. obě matice rozdělíme **šachovnicově**
-2. $i$-tý řádek $A$ se posune o $i$ pozic doleva a $i$-tý sloupec B o $i$ pozic nahoru
-3. každý proces dostane ten samý dílek šachovnice z obou matic
-4. v $\sqrt p$ iteracích každý proces vynásobí své dva dílky, počká na ostatní a pak pošle svůj dílek $A$ doleva a svůj dílek $B$ nahoru
-5. nakonec nezapomenu posunout obě matice do původního stavu
+1. **Rozdělení matic $A$ a $B$ do $p$ stejných bloků** (říká se tomu šachovnice, ale je to spíš jako mřížka, protože nezáleží na barvách políček). Každý procesor dostane na starost v každé matici stejný blok $A_{j,k}, B_{j,k}, C_{j,k}$ a bude mít za úkol po zbytek algoritmu vypočíst $C_{j,k}$
+2. **Zarovnání $A$**: $i$-tý řádek $A$ se posune o $i$ pozic doleva (cyklický posuv)
+3. **Zarovnání $B$**: $i$-tý sloupec $B$ se posune o $i$ pozic nahoru (cyklický posuv)
+4. Poznámka: díky zarovnáním tak bude mít každý procesor u sebe blok jako kdyby začínal násobit ty matice $A$ a $B$
+5. **Cyklus $\sqrt{p}$ krát:**
+	1. Každý procesor vypočte $C_{j,k} \texttt{+=} A_{j,k}\times B_{j,k}$
+	2. Všechny procesory udělají posuv bloku $A$ doleva
+	3. Všechny procesory udělají posuv bloku $B$ nahoru
+	4. Tzn. každý procesor dostane správné bloky k dalšímu výpočtu
 
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260525121407.png)
+<!-- DetailInfoEnd -->
+
+<!-- ImageStart -->
+Pozn. tenhle obrázek z přednášky mi přišel teda dost neintuitivní. Takže se na něj radši nedívejte :D - Morčín
 ![](../../Assets/Pasted%20image%2020260520194300.png)
+<!-- ImageEnd -->
 <!--ID: 1779300071215-->
 END
 
@@ -1603,14 +1536,14 @@ Original Flashcard ID: 1779299206147
 START
 NI-SZZ
 
-Pomocí jakých MPI operací se implementuje **Cannonův algoritmus**?
+Pomocí jakých MPI operací se implementuje **Cannonův algoritmus**? (4)
 
 Back:
 
 - `MPI_Cart_create` → přeorganizuje komunikátor do 2D toroidu
 - `MPI_Cart_coords` → každý proces zjistí svoje souřadnice v toroidu
 - `MPI_Cart_shift` → vypočítá ranky uzlů “o $i$ doleva” a “o $i$ nahoru”
-- `MPI_Send_recv_replace` → odešle dílek a rovnou přijme jiný
+- `MPI_Sendrecv_replace` → odešle blok, rovnou přijme jiný a uloží ho na stejné místo
 <!--ID: 1779300071224-->
 END
 
@@ -1625,12 +1558,13 @@ Original Flashcard ID: 1779299206150
 START
 NI-SZZ
 
-Jak funguje **paralelní mocninná metoda**?
+Co je algoritmus **paralelní mocninná metoda**?
 
 Back:
 
-- mocninná metoda je iterační algoritmus, který k (řídké) čtvercové matici $A$ najde dominantní (v absolutní hodnotě největší) vlastní číslo a odpovídající vlastní vektor
-    - začíná s libovolným nenulovým vektorem $x$ a mnohokrát násobí $y = Ax$
+**Iterační algoritmus**, který ke čtvercové matici $A$ najde **dominantní vlastní číslo** a **odpovídající vlastní vektor**.
+
+dominantní vlastní číslo = největší v absolutní hodnotě
 <!--ID: 1779300071227-->
 END
 
@@ -1652,6 +1586,11 @@ Back:
 2. každý vynásobí své prvky příslušným prvkem $x$ a ukládá do svého lokálního $y$
 3. `Allreduce` sesbírá z lokálních $y$ výsledný vektor $y$
 4. každý proces si normalizuje $y$
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260525121855.png)
+![](../../Assets/Pasted%20image%2020260525121900.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1779300071229-->
 END
 
@@ -1673,6 +1612,10 @@ Back:
 3. `Allgather` sesbírá části $y$ rovnou do nového $x$
 4. normalizuje se $x$
 5. zkontroluje se kritérium konvergence a příp. se to celé opakuje znovu…
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260525121918.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1779300071232-->
 END
 
@@ -1717,6 +1660,15 @@ Back:
 - tzn. je potřeba komunikovat ve třech směrech (řádkově, sloupcově, po diagonále)
 
 ![](../../Assets/Pasted%20image%2020260520194609.png)
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260525122018.png)
+![](../../Assets/Pasted%20image%2020260525122027.png)
+![](../../Assets/Pasted%20image%2020260525122031.png)
+![](../../Assets/Pasted%20image%2020260525122036.png)
+![](../../Assets/Pasted%20image%2020260525122041.png)
+![](../../Assets/Pasted%20image%2020260525122045.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1779300071237-->
 END
 

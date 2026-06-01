@@ -202,8 +202,6 @@ Back:
 PCF je **standard** = seznam obecných požadavků, které je dobré implementovat v systémech.
 
 - Když budu dělat systém, podívám se do standardu a on mi řekne, co všechno bych měl v systému vytvořit za funkcionality.
-
-
 <!--ID: 1773945940320-->
 END
 
@@ -237,8 +235,6 @@ Back:
 Fun fact:
 
 - Skype fungoval tak, že když člověk nepotřebuje komunikovat se serverem. Když člověk byl na veřejné síti, tak vpodstatě fungoval jako relay pro ostatní uživatele -> komunikace šla přes ostatní uživatele. - Teď už to není, dřív to tak bylo. R.I.P Skype 🥀
-
-
 <!--ID: 1773945940323-->
 END
 
@@ -289,8 +285,6 @@ Back:
 - **Microservices client/server**
 - **Nemikroservisní**
 - **Cloud-native**
-
-
 <!--ID: 1773945940330-->
 END
 
@@ -374,8 +368,6 @@ Back:
 - Tlustý klient se těžko spravuje – každý update znamená reinstalaci
 - Nesdílí se aplikační logika – pouze skrze kopie. Každý klient může mít jinou verzi aplikační logiky
 - Datově orientovaná integrace – integrita v aplikační logice
-
-
 <!--ID: 1773945940340-->
 END
 
@@ -560,8 +552,6 @@ Back:
 - navržená pro cloud
 - děláme architekturu microslužeb
 - vlastně Kubernetes
-
-
 <!--ID: 1778786460863-->
 END
 
@@ -601,8 +591,6 @@ Back:
 - **Data, procesy, funkce**
 - **Software**
 - **Hardware**
-
-
 <!--ID: 1773945940367-->
 END
 
@@ -665,8 +653,6 @@ Back:
 - **logical** view
 - **software architecture** view
 - **technology architecture** view
-
-
 <!--ID: 1773945940374-->
 END
 
@@ -893,7 +879,6 @@ Co je **loose coupling** služeb (services)?
 Back:
 
 V klientovi není "pevně zadrátované", jaké endpointy se volají atd. (např. díky HATEOAS).
-
 <!--ID: 1773945940408-->
 END
 
@@ -1112,7 +1097,6 @@ Back:
 Protože se tam často ten chaos zůstane, akorát se rodělí do menších podčástí.
 
 (Ale aspoň ten hlavní flow dat je uspořádaný)
-
 <!--ID: 1773945940436-->
 END
 
@@ -1242,8 +1226,6 @@ RPC
 - endpointy jsou **operace** (např. createCustomer)
 - operace jsou doménově závislé
 - používá se hlavně pro server-server komunikaci
-
-
 <!--ID: 1773945940458-->
 END
 
@@ -1263,8 +1245,6 @@ Back:
 - **Identifikace**: univerzální identifikace zdrojů pomocí URI
 - **Interakce**: protokoly pro získávání zdrojů - HTTP
 - **Formáty**: reprezentace zdrojů (data a metadata)
-
-
 <!--ID: 1773945940462-->
 END
 
@@ -1313,8 +1293,6 @@ Back:
 - **Identifikátor**
 - **Data**
 - **Metadata**
-
-
 <!--ID: 1773945940468-->
 END
 
@@ -1349,8 +1327,6 @@ Co je URL?
 Back:
 
 Uniform Resource Locator = identifikuje zdroj + obsahuje jeho lokaci
-
-
 <!--ID: 1773945940475-->
 END
 
@@ -1368,8 +1344,6 @@ Co je URN?
 Back:
 
 Uniform Resource Name = název, který je globálně unikátní
-
-
 <!--ID: 1773945940478-->
 END
 
@@ -1392,7 +1366,6 @@ Back:
 - `fragment` - odkazuje na sekundární zdroj (např. odstavec v html)
 
 ![](../../Assets/Pasted%20image%2020241125122945.png)
-
 <!--ID: 1773945940481-->
 END
 
@@ -1494,8 +1467,6 @@ Back:
 - **URI Opacity** - když jako součást URI mám i formát
 - **Resource versions** - když mi URI definuje i verzi toho zdroje
 - **Persistent URL** - adresa by měla být validní i když zdroj už neexistuje (neměl bych smazat URI, ale třeba přesměrovat člověka na novou URI)
-
-
 <!--ID: 1773945940494-->
 END
 
@@ -1571,8 +1542,6 @@ Back:
 
 - Mám omezené množství operací (POST, GET,...)
 - Operace jsou **doménově nezávislé**
-
-
 <!--ID: 1773945940503-->
 END
 
@@ -1942,7 +1911,6 @@ Back:
  	- Používáme HATEOAS
 
 Nemusím nutně používat co nejvyšší level, ale měl bych rozumět tomu, proč danou úroveň používám. Je např. okay použít Level 0, když vím, že mám omezené zdroje a mám k tomu legitimní důvod.
-
 <!--ID: 1773945940547-->
 END
 
@@ -1983,8 +1951,6 @@ Back:
 
 - **HTTP 1.1** - textově
 - **HTTP 2.0** - binárně
-
-
 <!--ID: 1773945940553-->
 END
 
@@ -2004,8 +1970,6 @@ Back:
 - Jak dlouho na síti trvá přenos elementárních dat (malých dat).
 - Doba od odeslání požadavku po jeho přijetí na serveru.
 - Jednosměrné
-
-
 <!--ID: 1773945940557-->
 END
 

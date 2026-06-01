@@ -18,16 +18,22 @@ Original Flashcard ID: 1728921214670
 START
 NI-SZZ
 
-Jak se dá znázornit SELECT při vyhodnocování?
+Jak se dá znázornit **SELECT** při vyhodnocování? Z jakých částí se skládá prováděcí plán selectu?
 
 Back:
 
-Jako **strom**
+Jako **strom**:
+- v listech jsou **datové zdroje** (tabulky databáze)
+- $\pi_{name}$ nám značí **projekci** (výběr sloupečku)
+- $\sigma_{condition}$ nám značí **selekci** (výběr záznamů podle podmínky)
+- $\bowtie_{id_1=id_2}$ značí **join** přes daná idčka
 
-- Kořen je select
+**Prováděcí plán**:
+![](../../Assets/Pasted%20image%2020260527103322.png)
 
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020240923165757.png)
-
+<!-- DetailInfoEnd -->
 <!--ID: 1779128799404-->
 END
 
@@ -51,8 +57,27 @@ Back:
 - Vzniká u SELECT dotazů v **optimalizační fázi** před tím, než se dotaz spustí
 - existuje více potenciálních prováděcích plánů pro jeden dotaz
 
-Tags: reviewed
+<!-- ExampleStart -->
+```sql
+SELECT S.sname
+FROM Reserves R, Sailors S
+WHERE R.sid = S.sid
+       AND R.bid = 100 AND S.rating > 5
+```
 
+**Formální notace**:
+![](../../Assets/Pasted%20image%2020260527103244.png)
+
+**Zjednodušená notace**:
+`(sailor * reservers) (bid = 100 and rating > 5) [sname]`
+
+**Prováděcí plán**:
+![](../../Assets/Pasted%20image%2020260527103322.png)
+
+<!-- ExampleEnd -->
+
+
+Tags: reviewed
 <!--ID: 1779128799411-->
 END
 
@@ -61,14 +86,14 @@ END
 START
 NI-SZZ
 
-Za jakých okolnmostí  se vyplatí cachovat exekuční plán?
+Za jakých okolností  se vyplatí cachovat exekuční plán?
 
 Back:
 
 - **opakovaně spouštíme stejný dotaz**
 - **u složitých dotazů** nad hodně tabulkami, kde vytváření plánu zabírá moc času
 - **pokud se data příliš nemění**, plán bude pravděpodobně stále efektivní
-
+<!--ID: 1779704516381-->
 END
 
 ---
@@ -96,7 +121,6 @@ Back:
 	- **Použití hintů** - můžeme vynutit v konfiguraci určitou strategii
 
 Tags: reviewed
-
 <!--ID: 1779128799414-->
 END
 
@@ -114,7 +138,7 @@ Back:
 - Ano, například: (podle chatgpt a fitwiki)
 	- Když je **tabulka malá**
 	- Když dotaz vrací **většinu řádků tabulky** (např. 20-30%)
-
+<!--ID: 1779704516384-->
 END
 
 ---
@@ -143,7 +167,6 @@ Back:
 <!-- DetailInfoEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799417-->
 END
 
@@ -158,7 +181,7 @@ Back:
 
 - pR - počet stránek v relaci
 - M - počet bloků, které se vejdou do paměti (RAM) při sortění
-
+<!--ID: 1779704516391-->
 END
 
 ---
@@ -170,12 +193,19 @@ Jaké statistiky jsou důležité u **operace řazení** pro systém?
 
 Back:
 
+<<<<<<< HEAD
 - počet **in memory sortů** - data pro řazení se vejdou do RAM
 - počet **2 run sortů** - data se nevejdou do RAM, proto se rozdělí do menších balíčků at ty se seřadí. Následuje operace merge a je finální výsledek.
 - počet **multi run** - data se nevejdou do RAM, proto se rozdělí do menších balíčků at ty se seřadí. Balíčky se i tak nevejdou do RAM, tak se operace opakuje a postupně se balíčky spojují.
 
 *U run sortů se využívá zápis na disk, který je oporti in-memory velmi pomalý.*
 
+=======
+- počet **in memory sortů**
+- počet **2 run sortů**
+- počet **multi run**
+<!--ID: 1779704516395-->
+>>>>>>> origin/main
 END
 
 ---
@@ -206,7 +236,6 @@ Zdroj: https://courses.fit.cvut.cz/NI-PDB/lectures/10-benchmarks-acid-tuning/ind
 <!-- DetailInfoEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799420-->
 END
 
@@ -226,7 +255,6 @@ Co je **optimalizace**?
 Back:
 
 Nacházení nejlepšího prováděcího plánu.
-
 <!--ID: 1779128799423-->
 END
 
@@ -251,7 +279,6 @@ Cena obsahuje (např.):
 
 - **CPU** - jak moc musí procesor počítat, porovnávat atd.
 - **Přístup k datům** - buď co cache nebo do storage (disk)
-
 <!--ID: 1779128799426-->
 END
 
@@ -279,7 +306,6 @@ Back:
 <!-- DetailInfoEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799429-->
 END
 
@@ -295,7 +321,7 @@ Back:
 - **CPU** - málo oproti data access
 - **Data Acces** - memory buffer nebo přímo sekundární uložiště (např. disk)
 	- R/W je prováděno po stránkách (blocích) stejné velikosti
-
+<!--ID: 1779704516398-->
 END
 
 ---
@@ -316,7 +342,7 @@ Slouží k **odhadu/výpočtu** ceny **operací** a pak **celkového plánu**
 Například pokud statistika nad indexem napovídá, že v převážná většina řádků má hledanou hodnotu, může být index ignorován, protože sekvenční průchod může být rychlejší než náhodný průchod (z důvodu doby vystavování hlaviček disků).
 
 <!-- ExampleEnd -->
-
+<!--ID: 1779704516401-->
 END
 
 ---
@@ -330,7 +356,7 @@ Back:
 
 - Manuálně – spuštěním příkazu
 - Automatizovaně – typicky v době, kdy není DB server tak vytížen
-
+<!--ID: 1779704516403-->
 END
 
 ---
@@ -344,7 +370,7 @@ Proč je klíčové udržovat čerstvost DB statistik?
 Back:
 
 Při zastaralých statistikách optimalizátor provádí špatná rozhodnutí.
-
+<!--ID: 1779704516406-->
 END
 
 ---
@@ -371,7 +397,6 @@ Back:
 Poznámka: Pro tvorbu co nejlepšího plánu je klíčové znát i parametry. Využívá se tedy metoda *Parameter peeking*, kdy se druhá fáze podívá do třetí.
 
 Tags: reviewed
-
 <!--ID: 1779128799431-->
 END
 
@@ -393,7 +418,7 @@ Back:
 	- **paralelní zpracování**
 	- **caching**
 	- **materializované pohledy**
-
+<!--ID: 1779704516409-->
 END
 
 ---
@@ -408,15 +433,17 @@ Original Flashcard ID: 1728921214681
 START
 NI-SZZ
 
-Co jsou statistiky o tabulkách v Oraclu?
+Co jsou **statistiky o tabulkách v Oraclu**?
 
 Back:
 
-Oracle si u tabulek/stromů drží různé statistiky - např. počet hodnot atd.
+Oracle si u **tabulek**/**indexů** drží různé statistiky - např. počet hodnot atd.
 
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020240923173735.png)
 ![](../../Assets/Pasted%20image%2020240923174138.png)
 
+<!-- DetailInfoEnd -->
 <!--ID: 1779128799434-->
 END
 
@@ -438,7 +465,6 @@ Back:
 
 
 ![](../../Assets/Pasted%20image%2020240923174211.png)
-
 <!--ID: 1779128799437-->
 END
 
@@ -451,24 +477,27 @@ Original Flashcard ID: 1737106145109
 START
 NI-SZZ
 
+<<<<<<< HEAD
 Co je to heap **heap table**?
+=======
+Vysvětlete rozdíl mezi **heap table** a **heap table s indexem**.
+
+(větší otázka)
+>>>>>>> origin/main
 
 Back:
 
 - sama o sobě nemá **žádný index**
 - pořadí bloků je v podstatě náhodné
 - nové záznamy vyplňují prázdná místa
-- pokud máme "heap table with index", tak má v listech ROWID, podle kterého se najde datový blok a řádek
+- pokud máme "heap table with index", tak má index a ten má v listech ROWID, podle kterého se najde datový blok a řádek
 
-<!-- ImageStart -->
 
 ![](../../Assets/Pasted%20image%2020250118104335.png)
 ![](../../Assets/Pasted%20image%2020250118104321.png)
 
-<!-- ImageEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799439-->
 END
 
@@ -487,10 +516,8 @@ Back:
 
 - Index-organized table může být rychlejší než heap table (menší počet I/O operací, protože jsou data rovnou ve stromu)
 
-<!-- ImageStart -->
 ![](../../Assets/Pasted%20image%2020250118104305.png)
-<!-- ImageEnd -->
-
+<!--ID: 1779704516412-->
 END
 
 ---
@@ -530,7 +557,6 @@ Back:
 <!-- ImageEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799442-->
 END
 
@@ -563,7 +589,6 @@ Back:
 <!-- ImageEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799445-->
 END
 
@@ -591,7 +616,7 @@ Když pak například spustím `SELECT` dle roku výroby, stačí jen vybrat ř�
 ![](../../Assets/Pasted%20image%2020250118110005.png)
 
 <!-- ImageEnd -->
-
+<!--ID: 1779704516414-->
 END
 
 ---
@@ -628,7 +653,6 @@ Back:
 <!-- DetailInfoEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799448-->
 END
 
@@ -641,14 +665,12 @@ NI-SZZ
 
 Back:
 
-- Neaktuální statistiky způsobují nesprávný výpočet ceny dotazů
-- Statistiky se nikdy živě nemění při DML operacích (to by příliš zatěžovalo stroj)
-- Automaticky se přepočítávají enginem když databáze není busy (idle time)
+Statistiky se **nikdy nemění v realtimu** při DML operacích (to by příliš zatěžovalo stroj). Statistiky se automaticky přepočítávají DB enginem, když zrovna databáze není busy.
 
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020250118110951.png)
 <!-- DetailInfoEnd -->
-
+<!--ID: 1779704516417-->
 END
 
 ---
@@ -682,7 +704,6 @@ Máme relaci $R$ s klíčem $A$:
 <!-- DetailInfoEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799451-->
 END
 
@@ -697,7 +718,7 @@ Back:
 
 - Musí se udržovat
 - Zpomalují DML operace
-
+<!--ID: 1779704516419-->
 END
 
 ---
@@ -716,7 +737,7 @@ Back:
 <!-- ImageStart -->
 ![](../../Assets/Pasted%20image%2020260523130008.png)
 <!-- ImageEnd -->
-
+<!--ID: 1779704516422-->
 END
 
 ---
@@ -732,17 +753,16 @@ Original Flashcard ID: 1728921214678
 START
 NI-SZZ
 
-Jak se dají ukládat data? (4)
+Jaké jsou nejčastější typy uložení dat? (4)
 
 Back:
 
 - **heap tabulka** - data jsou prostě v tabulce
 - **index-organized table** - index, v listech má data
 - **heap table with index** - index zvlášť a listy odkazují pomocí rowid na data
-- **cluster** - shluk/bucker dat
+- **cluster** - shluk/bucket dat
 
 ![](../../Assets/Pasted%20image%2020240923171047.png)
-
 <!--ID: 1779128799453-->
 END
 
@@ -755,7 +775,13 @@ Original Flashcard ID: 1737106145122
 START
 NI-SZZ
 
+<<<<<<< HEAD
 Co jsou to přístupové cesty (access paths) při vyhodnocování SQL dotazů? Uveďte příklady.
+=======
+**Co jsou** a **jaké jsou** **access paths** při vyhodnocování SQL dotazů? (4)
+
+(větší otázka)
+>>>>>>> origin/main
 
 Back:
 
@@ -797,7 +823,6 @@ Tady je imo špatně ten dotaz. Mělo by tam být víc podmínek:
 <!-- DetailInfoEnd -->
 
 Tags: reviewed
-
 <!--ID: 1779128799456-->
 END
 
@@ -811,12 +836,12 @@ Jaké základní metody přístupu k datům (Access Methods) využívají relač
 
 Back:
 
-1. Full Table Scan (Sekvenční průchod tabulkou)
-2. Index Seek (Vyhledání v indexu)
-3. Index Scan (Průchod indexem)
-4. Index-Only Scan (Covering index)
-5. RowID / Bookmark Lookup (Dohledání v tabulce)
-
+1. **Full Table Scan** (Sekvenční průchod tabulkou)
+2. **Index Seek** (Vyhledání konkrétní hodnoty v indexu - ani nemusíme sahat do tabulky)
+3. **Index Scan** (Průchod indexem - podobně jako full table scan ale v indexu)
+4. **Index-Only Scan** (najdeme data rovnou v indexu, takže nemusíme ani sahat do tabulky - například sloupce použité ve `WHERE` i `SELECTU`)
+5. **RowID / Bookmark Lookup** (Pomocí indexu najdeme záznam a pak přečteme zbytek záznamu v tabulce)
+<!--ID: 1779704516425-->
 END
 
 ---
@@ -833,7 +858,7 @@ Databáze sekvenčně čte celou tabulku (všechny datové bloky) od začátku d
 **Kdy se preferuje:**
 1. Když dotaz vrací velkou část řádků (obvykle > 10–20 % tabulky). 
 2. Když je tabulka velmi malá (načíst ji rovnou do paměti je rychlejší než procházet strom indexu).
-
+<!--ID: 1779704516427-->
 END
 
 ---
@@ -845,11 +870,11 @@ Co je to **Index Seek**, jakou má složitost a kdy je nejvýhodnější?
 
 Back:
 
-Databáze cíleně prochází B-strom indexu od kořene k listu, aby našla konkrétní hodnotu (nebo bod začátku hledání).
+Databáze cíleně prochází B-strom indexu od kořene k listu, aby našla konkrétní hodnotu (nebo bod začátku hledání). Nemusíme ani číst tabulku, když tu hodnotu najdeme rovnou v indexu.
 
 - **Složitost:** $O(\log n)$.
 - **Kdy je nejvýhodnější:** U vysoce selektivních dotazů (když hledáme jeden nebo jen pár záznamů – např. hledání podle primárního klíče).
-
+<!--ID: 1779704516430-->
 END
 
 ---
@@ -861,9 +886,9 @@ Jaký je rozdíl mezi **Index Seek** a **Index Scan**?
 
 Back:
 
-- **Seek** skáče stromem shora dolů přímo na konkrétní hodnotu.
-- **Scan** čte sekvenčně přímo na úrovni listů indexu, aniž by primárně navigoval shora. Používá se například při hledání v rozsahu (`WHERE vek BETWEEN 20 AND 30`) nebo když databáze prohledává celý index místo celé tabulky (protože index je menší).
-
+**Seek** skáče stromem shora dolů přímo na konkrétní hodnotu.
+**Scan** čte sekvenčně přímo na úrovni listů indexu, aniž by primárně navigoval shora. Používá se například při hledání v rozsahu (`WHERE vek BETWEEN 20 AND 30`) nebo když databáze prohledává celý index místo celé tabulky (protože index je menší).
+<!--ID: 1779704516432-->
 END
 
 ---
@@ -875,9 +900,10 @@ Co je to **Index-Only Scan** (Covering Index) a proč je z hlediska výkonu klí
 
 Back:
 
-- Nastává tehdy, když _všechny_ sloupce, které dotaz potřebuje (v klauzuli `SELECT` i `WHERE`), jsou uloženy přímo v daném indexu.
-- Databáze vůbec **nemusí sahat do původní datové tabulky**, čímž ušetří obrovské množství I/O operací.
+Nastává tehdy, když _všechny_ sloupce, které dotaz potřebuje (v klauzuli `SELECT` i `WHERE`), jsou uloženy přímo v daném indexu.
 
+Databáze vůbec **nemusí sahat do původní datové tabulky**, čímž ušetří obrovské množství I/O operací.
+<!--ID: 1779704516435-->
 END
 
 ---
@@ -892,7 +918,7 @@ Back:
 Nastává, když databáze sice najde záznam v indexu, ale dotaz požaduje i sloupce, které v indexu nejsou obsaženy. Databáze si vezme fyzický ukazatel (RowID) z indexu a musí jít do tabulky pro zbytek dat.
 
 **Nevýhoda:** Způsobuje drahé náhodné čtení z disku (Random I/O), protože data mohou být rozházená v různých blocích.
-
+<!--ID: 1779704516438-->
 END
 
 ---
@@ -916,7 +942,6 @@ Back:
 - Join s využitím speciálních struktur
 
 Tags: reviewed
-
 <!--ID: 1779128799459-->
 END
 
@@ -932,7 +957,7 @@ Back:
 Funguje jako dva vnořené cykly `FOR`: Pro každý řádek z vnější (obvykle menší) tabulky databáze prohledá vnitřní tabulku na shodu.
 
 **Kdy je nejvýhodnější:** Když je vnější tabulka malá a na spojovacím sloupci vnitřní tabulky je **index**. Prohledávání vnitřní tabulky se tím zrychlí z FTS na Index Seek.
-
+<!--ID: 1779704516440-->
 END
 
 ---
@@ -947,7 +972,7 @@ Back:
 $Cost = \text{I/O(vnější)} + (\text{počet řádků vnější} \times \text{I/O přístupu do vnitřní})$
 
 **Riziko:** Pokud chybí index na vnitřní tabulce, databáze musí pro každý řádek první tabulky skenovat celou druhou tabulku (Full Table Scan). Cena pak roste kvadraticky $O(N \times M)$, což je u velkých tabulek katastrofa.
-
+<!--ID: 1779704516443-->
 END
 
 ---
@@ -967,7 +992,7 @@ Back:
 **Omezení:** Lze použít **pouze pro spojení na rovnost** (equi-join, např. `A.id = B.id`), nefunguje pro nerovnosti ( `<`, `>`).
 
 **Kdy se používá:** Při spojování obřích tabulek, kde chybí indexy (často v datových skladech).
-
+<!--ID: 1779704516446-->
 END
 
 ---
@@ -983,7 +1008,7 @@ Back:
 Cena se skládá z jednoho sekvenčního přečtení obou tabulek plus CPU ceny za výpočet hashů. $Cost = \text{I/O(Tabulka1)} + \text{I/O(Tabulka2)} + \text{CPU\_Cost}$
 
 **Nízká efektivita:** Pokud je menší tabulka příliš velká a Hash tabulka se nevejde do vyhrazené RAM, databáze ji musí začít odkládat na pomalý disk (TempDB/Swap), což brutálně zpomalí dotaz.
-
+<!--ID: 1779704516448-->
 END
 
 ---
@@ -1001,7 +1026,7 @@ Back:
 - **Merge:** Obě tabulky se procházejí sekvenčně a hledají se shody.
 
 **Kdy ho preferuje:** Vyplatí se, když **jsou data už předem seřazená** (např. obě tabulky mají na klíči index), protože pak odpadá drahá fáze Sort. Na rozdíl od Hash Joinu umí i nerovnostní spojení.
-
+<!--ID: 1779704516451-->
 END
 
 ---
@@ -1017,7 +1042,7 @@ Back:
 $Cost = \text{Cost(Sort\_A)} + \text{Cost(Sort\_B)} + \text{I/O(čtení A)} + \text{I/O(čtení B)}$
 
 **Co ji prodražuje:** Operace Sort (řazení) je nesmírně náročná na CPU i paměť. Pokud tabulky nejsou předem seřazené indexem, je často celková cena Sort-Merge Joinu horší než u Hash Joinu.
-
+<!--ID: 1779704516454-->
 END
 
 ---
@@ -1031,7 +1056,7 @@ Back:
 
 - Např. když $a$ je v $S$ klíčem, udělá se lookup řádku s $a$ podle **indexu**. Potom se jen proiteruje $R$
 - atd. těhlech speciálních případů je hodně
-
+<!--ID: 1779704516457-->
 END
 
 ---

@@ -20,7 +20,6 @@ Back:
 
 - Zaměřují se na algoritmy, rozdělení odpovědnosti mezi objekty a na to, jak spolu objekty komunikují.
 - Řeší, jak si objekty předávají zprávy, jak spolupracují na složitějších úlohách a jak je řízen tok programu (control flow).
-
 <!--ID: 1778786460746-->
 END
 
@@ -44,7 +43,6 @@ Back:
 - **Strategy**
 - **Template Method**
 - **Visitor**
-
 <!--ID: 1760705194277-->
 END
 
@@ -150,7 +148,6 @@ Back:
 
 - Pokud chceme parametrizovat objekt operacema
 - Pokud potřebujeme tvořit frontu commandů, plánovat dobu jejich spuštění nebo je spouštět vzdáleně.
-
 <!--ID: 1778786460749-->
 END
 
@@ -174,7 +171,6 @@ Back:
 ✅ You can assemble a set of simple commands into a complex one.
 
 ❌ The code may become more complicated since you’re introducing a whole new layer between senders and receivers.
-
 <!--ID: 1760705194295-->
 END
 
@@ -275,7 +271,6 @@ Back:
 - Pokud očekáváme, že náš program bude řešit různé typy požadavků různými cestami, ale přesně typy požadavků a jejich pořadí je nám předem neznámé.
 - Pokud potřebujeme spouštět handlery v přesně daném pořadí.
 - Pokud potřebujeme pořadí handlerů měnit za běhu
-
 <!--ID: 1778786460752-->
 END
 
@@ -357,7 +352,6 @@ Back:
 ✅ The interpreter design pattern is great for relatively simple grammar interpretation, which doesn’t need to evolve and extend much.
 
 ❌ When the grammar is getting more complex, it becomes harder to maintain.
-
 <!--ID: 1760705194314-->
 END
 
@@ -447,7 +441,6 @@ Back:
 
 - Pokud má kolekce komplexní datovou strukturu, od které chceme klienty odstínit
 - Pokud chceme omezit duplikaci kódu pro průchod kolekcí v aplikaci
-
 <!--ID: 1778786460755-->
 END
 
@@ -471,7 +464,6 @@ Back:
 ❌ Applying the pattern can be an overkill if your app only works with simple collections.
 
 ❌ Using an iterator may be less efficient than going through elements of some specialized collections directly.
-
 <!--ID: 1760705194323-->
 END
 
@@ -556,7 +548,6 @@ Back:
 
 - Pokud je komplikované měnit některé třídy, protože jsou silně spojeny (coupled) k jiným třídám.
 - Pokud chceme komponentu využít i v jiném programu, ale nemůžeme kvůli silným závislostem na jiné části systému
-
 <!--ID: 1778786460758-->
 END
 
@@ -578,7 +569,6 @@ Back:
 ✅ You can reuse individual components more easily.
 
 ❌ Over time a mediator can evolve into a [God Object](https://courses.fit.cvut.cz/antipatterns/god-object).
-
 <!--ID: 1760705194333-->
 END
 
@@ -649,7 +639,6 @@ Back:
 - **Pomocí vnitřní třídy** - Memento je jako vnitřní třída uvnitř Originatora
 - **Pomocí interfacu** - Memento je interface, který využívá Caretaker. Originator pak pracuje s memento třídou co implementuje ten interface.
 - **Pomocí striktní enkapsulace** - Originator i memento mají interfacy a třídy co je implementují. Originator má v sobě `save()` a `setState()`, Memento má v sobě `restore()` a `originator`. Memento pak provádí ten restore v originatoru.
-
 <!--ID: 1776243585027-->
 END
 
@@ -697,7 +686,6 @@ Jediná změna je že Memento nebude vnitřní třída ale rozdělí se na inter
 
 1. In the absence of nested classes, you can restrict access to the memento’s fields by establishing a convention that caretakers can work with a memento only through an explicitly declared intermediary interface, which would only declare methods related to the memento’s metadata.
 2. On the other hand, originators can work with a memento object directly, accessing fields and methods declared in the memento class. The downside of this approach is that you need to declare all members of the memento public.
-
 <!--ID: 1760705194342-->
 END
 
@@ -717,7 +705,6 @@ There’s another implementation which is useful when you don’t want to leave 
 1. This implementation allows having multiple types of originators and mementos. Each originator works with a corresponding memento class. Neither originators nor mementos expose their state to anyone.
 2. Caretakers are now explicitly restricted from changing the state stored in mementos. Moreover, the caretaker class becomes independent from the originator because the restoration method is now defined in the memento class.
 3. Each memento becomes linked to the originator that produced it. The originator passes itself to the memento’s constructor, along with the values of its state. Thanks to the close relationship between these classes, a memento can restore the state of its originator, given that the latter has defined the appropriate setters.
-
 <!--ID: 1760705194344-->
 END
 
@@ -732,7 +719,6 @@ Back:
 
 - Pokud chceme tvořit snapshoty objektu, ke kterým se můžeme v budoucnu chtít vrátit
 - Pokud přímý přístup k vlastnostem objektu porušuje jeho zapouzdření
-
 <!--ID: 1778786460760-->
 END
 
@@ -754,7 +740,6 @@ Back:
 ❌ Caretakers should track the originator’s lifecycle to be able to destroy obsolete mementos.
 
 ❌ Most dynamic programming languages, such as PHP, Python and JavaScript, can’t guarantee that the state within the memento stays untouched.
-
 <!--ID: 1760705194347-->
 END
 
@@ -843,7 +828,6 @@ Kdy využít **Observer** pattern?
 Back:
 
 Pokud změny jednoho objektu mají ovlivňovat i jiné objekty, a to i pouze na omezený část nebo ve specifických případech.
-
 <!--ID: 1778786460763-->
 END
 
@@ -861,7 +845,6 @@ Back:
 ✅ You can establish relations between objects at runtime.
 
 ❌ Subscribers are notified in random order.
-
 <!--ID: 1760705194357-->
 END
 
@@ -974,7 +957,6 @@ Back:
 - Pokud se má objekt chovat odlišně v závilosti na jeho aktuálním stavu
 - Pokud máme třídu zaplavenou rozhodováním na základě vnitřního stavu
 - Pokud je mnoho duplicitního kódu napříč podobnými stavy
-
 <!--ID: 1778786460766-->
 END
 
@@ -994,7 +976,6 @@ Back:
 ✅ Simplify the code of the context by eliminating bulky state machine conditionals.
 
 ❌ Applying the pattern can be overkill if a state machine has only a few states or rarely changes.
-
 <!--ID: 1760705194365-->
 END
 
@@ -1067,7 +1048,6 @@ Back:
 3. **Concrete Strategies** implement different variations of an algorithm the context uses.
 4. The context calls the execution method on the linked strategy object each time it needs to run the algorithm. The context doesn’t know what type of strategy it works with or how the algorithm is executed.
 5. The **Client** creates a specific strategy object and passes it to the context. The context exposes a setter which lets clients replace the strategy associated with the context at runtime.
-
 <!--ID: 1760705194371-->
 END
 
@@ -1083,7 +1063,6 @@ Back:
 - Pokud chceme podporovat více variant algoritmu v rámci jednoho objektu a chceme mezi nimi přepínat
 - Pokud máme mnoho tříd, které se liší pouze konkrétní implementací konkrétní části
 - Pro izolaci implementačních detailů byznys logiky třídy, které nemusí být v kontextu třídy tak důležité
-
 <!--ID: 1778786460769-->
 END
 
@@ -1109,7 +1088,6 @@ Back:
 ❌ Clients must be aware of the differences between strategies to be able to select a proper one.
 
 ❌ A lot of modern programming languages have functional type support that lets you implement different versions of an algorithm inside a set of anonymous functions. Then you could use these functions exactly as you’d have used the strategy objects, but without bloating your code with extra classes and interfaces.
-
 <!--ID: 1760705194374-->
 END
 
@@ -1198,7 +1176,6 @@ Back:
 
 - Pokud chceme umožnit klientům rozšířit only konkrétní krok v rámci algoritmu
 - Pokud máme několik tříd se skoro totožným algoritmem, pouze s malými změnami
-
 <!--ID: 1778786460772-->
 END
 
@@ -1220,7 +1197,6 @@ Back:
 ❌ You might violate the *Liskov Substitution Principle* by suppressing a default step implementation via a subclass.
 
 ❌ Template methods tend to be harder to maintain the more steps they have.
-
 <!--ID: 1760705194383-->
 END
 
@@ -1348,7 +1324,6 @@ Back:
 - Pokud chceme provádět operace na všech elementech komplexní struktury objektů
 - Pokud chceme vyčistit pomocnou business logiku z objektů
 - Pokud konkrétní chování dává smysl pouze pro nějaké třídy
-
 <!--ID: 1778786460776-->
 END
 
@@ -1370,7 +1345,6 @@ Back:
 ❌ You need to update all visitors each time a class gets added to or removed from the element hierarchy.
 
 ❌ Visitors might lack the necessary access to the private fields and methods of the elements that they’re supposed to work with.
-
 <!--ID: 1760705194391-->
 END
 

@@ -2,13 +2,11 @@
 created: 2025-10-16T10:00:00
 parent: "[[FIT]]"
 ---
-
 TARGET DECK: NI-SZZ
 FILE TAGS: NI-SI-01 NI-ADP
 
 > NI-SI-01 (NI-ADP)
 > Základní principy objektového návrhu (DRY, KISS, YAGNI, SOLID(SRP, OCP, LSP, ISP, DIP), POLA, TBSR, Tech debt, SoC, LoD, APO)
-
 
 ## Základní principy objektového návrhu (DRY, KISS, YAGNI, SOLID(SRP, OCP, LSP, ISP, DIP), POLA, TBSR, Tech debt, SoC, LoD, APO)
 
@@ -106,7 +104,6 @@ Back:
 - **Liskov Substitution** = pokud $S$ je podtypem $T$, potom všude kde se používá objekt $T$, můžu použít bez změny programu i objekt $S$
 - **Interface Segregation** = Klienti by neměli být nuceni záviset na metodách, které nepoužívají.
 - **Dependency Inversion** = High-level moduly by neměly záviset na low-level modulech. Obojí by mělo záviset na abstrakci.
-
 <!--ID: 1760705194625-->
 END
 
@@ -313,7 +310,6 @@ Back:
 - S kódem se lépe pracuje, když je předvídatelný
 
 ![](../../Assets/Pasted%20image%2020260513100922.png)
-
 <!--ID: 1760705194642-->
 END
 
@@ -365,7 +361,6 @@ Back:
 <!-- ExampleEnd -->
 
 ![](../../Assets/Pasted%20image%2020260513101055.png)
-
 <!--ID: 1760705194647-->
 END
 
@@ -392,7 +387,6 @@ Např.
 **Proč:**
 
 - Systém je tak přehlednější, lépe se udržuje, debuguje atd.
-
 <!--ID: 1760705194650-->
 END
 

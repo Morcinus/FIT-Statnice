@@ -11,12 +11,38 @@ FILE TAGS: NI-SPOL-06 NI-VSM
 
 <!--
 TODO:
-- zde asi přihodit aspoň jak spočítat střední hodnotu, var X a další základní blbosti
-- Jak spočíst X_n (čárka nad tím)
-- Jak spočíst s_n
 - Jak spočíst z_alpha/2
 - Jak spočíst t_alpha/2
 -->
+
+
+START
+NI-SZZ
+
+Jak se spočte výběrový průměr?
+
+Back:
+
+![](../../../Assets/Pasted%20image%2020250320104507.png)
+<!--ID: 1779901815408-->
+END
+
+---
+
+
+START
+NI-SZZ
+
+Jak se spočte výběrový rozptyl?
+
+Back:
+
+![](../../../Assets/Pasted%20image%2020250320104517.png)
+<!--ID: 1779901815411-->
+END
+
+---
+
 
 ## Testování statistických hypotéz
 
@@ -40,7 +66,6 @@ Pozn.
 
 zamítneme = jsme si jistí s určitou pravděpodobností
 nezamítneme = nemáme tolik dat abychom mohli zamítnout
-
 <!--ID: 1778521859929-->
 END
 
@@ -68,7 +93,6 @@ Vysvětlení:
 Tzn. dobrý postup je:
 
 - Předpokládáme, že je nemocný a pouze pokud bude mít dost protilátek, tak ho prohlásíme za zdravého
-
 <!--ID: 1778521859932-->
 END
 
@@ -155,7 +179,6 @@ Back:
 P-hodnota mi říká, jaká je pravděpodobnost, že bychom daný výsledek dostali čistě náhodou, pokud platí nulová hypotéza.
 
 ![](../../Assets/Pasted%20image%2020250322075840.png)
-
 <!--ID: 1778521859943-->
 END
 
@@ -177,7 +200,6 @@ Back:
 Jinými slovy "když je všechno hezký", tak $p$-hodnota má uniformní rozdělení
 
 Když je všechno hezký = pravděpodobnost 1. druhu je vždy $\alpha$, pak vím, že distribuční funkce p hodnoty je v bodě $u$ rovna $u$, tedy je to distribuční funkce Uniformního rozdělení
-
 <!--ID: 1778521859945-->
 END
 
@@ -200,7 +222,6 @@ Máme nasbíraná data a můžeme udělat testy:
 - **Neparametrické** - zkoumáme vlastnosti rozdělení obecně (tvar, medián, nezávislost,...)
 
 ![](../../Assets/Pasted%20image%2020250322075915.png)
-
 <!--ID: 1778521859948-->
 END
 
@@ -218,7 +239,6 @@ Jaké jsou **2 typy hypotéz** podle **množství rozdělení**?
 Back:
 
 ![](../../Assets/Pasted%20image%2020250322075944.png)
-
 <!--ID: 1778521859950-->
 END
 
@@ -262,7 +282,6 @@ Back:
 	- $p'=p$ při známých parametrech
 	- $p'=p$ při neznámých parametrech
 - **Kontingenční tabulka** - testujeme nezávislost dvou rozdělení
-
 <!--ID: 1778521860042-->
 END
 
@@ -343,7 +362,6 @@ při **známém** a **neznámém** rozptylu
 Back:
 
 ![](../../Assets/Pasted%20image%2020250322080213.png)
-
 <!--ID: 1778521859958-->
 END
 
@@ -379,7 +397,6 @@ Jak provedu:
 Back:
 
 ![](../../Assets/Pasted%20image%2020250322080228.png)
-
 <!--ID: 1778521859964-->
 END
 
@@ -400,7 +417,6 @@ při **známém** a **neznámém** rozptylu
 Back:
 
 ![](../../Assets/Pasted%20image%2020250322080244.png)
-
 <!--ID: 1778521859966-->
 END
 
@@ -485,7 +501,6 @@ Jaký je rozdíl mezi **normálním testováním** a **testování pomocí stati
 Back:
 
 Je to v zásadě to samé, testování pomocí statistiky nám umožňuje to jednodušeji porovnávat, je to takové přehlednější
-
 <!--ID: 1778521859977-->
 END
 
@@ -508,7 +523,7 @@ Máme data $X_1, \dots, X_n$ a myslíme si, že to má nějaké rozdělení $F_0
 
 1. Rozdělníme data do binů tak, aby v každém bylo teoreticky aspoň 5 hodnot
 2. Napočítáme počty pozorování, co padnou do těch binů $N_i$
-3. Spočteme pravděpodobnost $p_i$, že to padne do $i$ tého binu
+3. Spočteme pravděpodobnost $p_i$, že to padne do $i$ tého binu podle toho rozdělení $F_0$ (tzn. když si myslíme, že to má např. normální rozdělení, tak spočteme pravděpodobnost trefení se do toho intervalu toho binu pro normální rozdělení)
 4. Pak spočteme $\chi^{2}(\textbf{X})$ (které při velkým $n$ odpovídá $\chi^2(k-1-p)$)
 5. Pokud $\chi^{2}(\textbf{X}) \geq \chi^{2}_{\alpha,k-1-p}$ tak zamítáme $H_0$
 
@@ -537,7 +552,6 @@ Back:
 4. Sestavíme $\chi^2$ podle vzorečku níže (podobně jako u dobré shody, jen to dělám u 2D rozdělení)
 
 ![](../../Assets/Pasted%20image%2020250329134349.png)
-
 <!--ID: 1778521859982-->
 END
 
@@ -555,7 +569,6 @@ Co můžu udělat, když mám biny s málo prvky?
 Back:
 
 Můžu je spojit.
-
 <!--ID: 1778521859985-->
 END
 
@@ -568,24 +581,12 @@ Original Flashcard ID: 1746599651235
 START
 NI-SZZ
 
-Jaké jsou 2 způsoby testování?
+Jak bychom typicky postupovali, pokud chceme zjistit, jestli mají dva výběry stejnou střední hodnotu, tzn. $\mu_1=\mu_2$?
 
 Back:
 
-Varianta 1:
-
-1. Uděláme "předprůzkum" - zkusíme test shody rozptylů
-   1. Pokud nezamítneme, zkusíme T-Test
-   2. Pokud zamítneme, zkusíme Welchův test
-
-Varianta 2 - uděláme testovou baterii:
-
-1. Uděláme Leven. test
-   1. Pokud nezamítneme, uděláme T-Test
-   2. Pokud zamítneme, použijeme Welchův test
-
-Lepší je prý dělat tu první variantu
-
+1. Zjistíme, jestli mají **stejné rozptyly**
+2. Podle toho zvolíme příslušnou variantu **dvouvýběrového t-testu** (ten s neznámýma rozptylama se jmenuje Welchův test)
 <!--ID: 1778521859987-->
 END
 
@@ -634,7 +635,6 @@ Back:
 Pozn. $\mu_0$ je ta střední hodnota, co bychom teoreticky očekávali.. Idk, to značení mi přijde trošku matoucí - Morčín
 
 ![](../../Assets/Pasted%20image%2020250322080731.png)
-
 <!--ID: 1778521859993-->
 END
 
@@ -652,7 +652,6 @@ Jak funguje: **jednovýběrový t-test pro $\sigma^2$**?
 Back:
 
 ![](../../Assets/Pasted%20image%2020250322080751.png)
-
 <!--ID: 1778521859995-->
 END
 
@@ -764,7 +763,6 @@ Pozn. ten vzoreček dole nemáme umět! (Prý ani u státnic :D)
 ![](../../Assets/Pasted%20image%2020250322114023.png)
 
 ![](../../Assets/Pasted%20image%2020250322080940.png)
-
 <!--ID: 1778521860006-->
 END
 
@@ -849,7 +847,6 @@ Jak se spočte $\text{var} N_i$ multinomického rozdělení?
 Back:
 
 ![](../../Assets/Pasted%20image%2020250329103559.png)
-
 <!--ID: 1778521860018-->
 END
 
@@ -944,7 +941,7 @@ Jaké kritérium musí být dodrženo pro provedení **testu $\chi^2$ multinomic
 Back:
 
 1. $np_i \geq 5$ pro každý "bin"
-2. Nebo pokud $k \geq 3$ **Yarnoldovo kritérium**: $np_i \geq 5q$, kde $q$ je podíl tříd, pro které platí $np_i \lt 5$
+2. Nebo pokud $k \geq 3$ **Yarnoldovo kritérium**: $np_i \geq 5q$, kde $q$ je podíl tříd, pro které platí $np_i \lt 5$ neboli $q=\frac{|\{i:np_i<5\}|}{k}$
 <!--ID: 1778521860029-->
 END
 

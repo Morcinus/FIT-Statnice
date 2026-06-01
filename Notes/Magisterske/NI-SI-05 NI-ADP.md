@@ -87,7 +87,6 @@ Back:
 ✅ We can have multiple **Views** for one **Model** and **Controller**.
 
 ❌ Tight coupling of **View** and **Controller**. That makes testing harder.
-
 <!--ID: 1760705194400-->
 END
 
@@ -166,7 +165,6 @@ Back:
 Oproti MVP je View "chytřejší" protože se samo updatuje a observuje změny v ViewModelu.
 
 ![](../../../Assets/Pasted%20image%2020250130115455.png)
-
 <!--ID: 1760705194409-->
 END
 
@@ -234,7 +232,6 @@ Back:
 
 - Vyžaduje připojení k síti, což může přináše problémy s latencí
 - Server je Single point of Failure
-
 <!--ID: 1760705194418-->
 END
 
@@ -250,7 +247,6 @@ Back:
 - Webové aplikace
 - Desktopové aplikace
 - Mobilní aplikace
-
 <!--ID: 1760705194421-->
 END
 
@@ -295,8 +291,6 @@ Back:
 - **Technologický lock-in** – Změna programovacího jazyka znamená kompletní přepis aplikace
 - **Složitost při růstu** – Při rozšiřování se stává projekt obrovským, nepřehledným a obtížným na orientaci (Big Ball of Mud)
 - **Náchylnost na chyby** – Jedna chyba ovlivní fungování celého systému
-
-
 <!--ID: 1778786460818-->
 END
 
@@ -340,7 +334,6 @@ Back:
 - Síťová latence a spolehlivost – komunikace přes síť je násobně pomalejší než v paměti
 - Komplikované ladění – distribuované sledování chyby
 - Problémy s udržením datové konzistence – transakce napříč mikroslužbami je mnohem komplikovanější.
-
 <!--ID: 1778786460825-->
 END
 
@@ -402,7 +395,6 @@ Back:
 
 - Nutnost správy další infrastruktury
 - V případě, že se jedná o synchronní komunikaci, tak je nutné spojovat požadavek a odpověď do jedné pseudosynchronní transakce
-
 <!--ID: 1760705194428-->
 END
 
@@ -491,8 +483,6 @@ Back:
 - Kybernetická bezpečnost (SIEM a detekce hrozeb)
 - Kompilátory a moderní IDE – pracují nad jedním syntaktickým stromem
 - Uměla inteligence a experní systémy
-
-
 <!--ID: 1760705194435-->
 END
 
@@ -508,7 +498,6 @@ Co je hlavním cílem Rule-based (pravidlové) architektury?
 Back:
 
 Poskytnout způsob, jak zakódovat (formalizovat) know-how a proces řešení problémů **lidských expertů**.
-
 <!--ID: 1778786460833-->
 END
 
@@ -555,8 +544,6 @@ Ve formátu **IF (podmínka) THEN (akce)**.
 
 - **Podmínka (Condition):** Testuje obsah _Working memory_ (např. přítomnost symbolů) nebo data ze senzorů.
 - **Akce (Action):** Změní stav _Working memory_ nebo spustí externí operaci.
-
-
 <!--ID: 1778786460840-->
 END
 
@@ -572,8 +559,6 @@ Back:
 1. **Match (Shoda):** Porovnání podmínek všech pravidel s obsahem _Working memory_.
 2. **Conflict-Resolution (Řešení konfliktů):** Výběr _jednoho_ konkrétního pravidla z těch, která splnila podmínku.
 3. **Act (Akce):** Provedení akce vybraného pravidla (často změní paměť) a návrat zpět na fázi 1.
-
-
 <!--ID: 1778786460844-->
 END
 
@@ -587,7 +572,6 @@ Co je to _Conflict set_ (vznikající ve fázi "Match") v Rule-based architektu�
 Back:
 
 Je to seznam všech pravidel (instancí), jejichž levá strana (podmínka) se **aktuálně shoduje se stavem pracovní paměti**. Z tohoto seznamu se následně vybírá jedno pravidlo k provedení. _(Pozn.: Pokud je conflict set prázdný, interpret se zastaví)._
-
 <!--ID: 1778786460848-->
 END
 
@@ -603,8 +587,6 @@ Back:
 Když je **sada pravidel výrazně jednodušší než samotný model**, který z nich vznikne (model je tvořen opakováním omezeného množství vzorů).
 
 - _Pozn.:_ Používá se v AI pro ručně psaná/spravovaná pravidla (typicky _nezahrnuje_ pravidla automaticky vygenerovaná strojovým učením).
-
-
 <!--ID: 1778786460851-->
 END
 
@@ -624,7 +606,6 @@ Back:
 - **Subscriber** - může se u middlewaru zaregistrovat tak, aby přijímal určité typy zpráv
 
 ![](../../../Assets/Pasted%20image%2020250130124958.png)
-
 <!--ID: 1760705194443-->
 END
 
@@ -647,8 +628,6 @@ Back:
 
 - Každý publisher a subscriber o sobě sdílí meta-data přes IP multicast (tzn. všichni o sobě vědí), tyto informace si každý publisher/subscriber cachuje
 - Podle meta-dat publisher rovnou posílá informace subscriberovi
-
-
 <!--ID: 1760705194447-->
 END
 
@@ -669,8 +648,6 @@ Back:
  	- Zprávy jsou odběrateli doručeny pouze v případě, že atributy nebo samotný obsah zprávy splňují podmínky (filtry), které si nadefinoval sám odběratel.
  	- Za klasifikaci a třídění zpráv je v tomto modelu zodpovědný odběratel.
 1. **Hybridní přístup (Hybrid)** - Některé systémy podporují kombinaci obou výše zmíněných přístupů. - Odesílatelé běžně publikují zprávy do určitého tématu, zatímco odběratelé si nad jedním nebo více tématy registrují odběr s dodatečným filtrováním na základě obsahu zprávy.
-
-
 <!--ID: 1778786460855-->
 END
 
@@ -679,15 +656,13 @@ END
 START
 NI-SZZ
 
-Kdy se lze přihlásit k odběru v **Publish-sbuscribe** modelu?
+Kdy se lze přihlásit k odběru v **Publish-subscribe** modelu?
 
 Back:
 
 - **Build time** - Příklad: V systémech s grafickým uživatelským rozhraním (GUI) mohou být klienti pevně naprogramováni přímo v kódu tak, aby obsluhovali uživatelské příkazy (např. událost kliknutí na tlačítko).
 - **Initialization time** - Příklad: Existují frameworky a softwarové produkty, které k registraci odběratelů využívají konfigurační XML soubory. Tato registrace proběhne jednorázově během úvodního načítání (inicializace) systému.
 - **Runtime** - Příklad: Databázové triggery (spouštěče), e-mailové konference (mailing listy) a RSS kanály. (Uživatel nebo systém může odběr dynamicky vytvářet či rušit kdykoliv během toho, co aplikace běží).
-
-
 <!--ID: 1778786460859-->
 END
 

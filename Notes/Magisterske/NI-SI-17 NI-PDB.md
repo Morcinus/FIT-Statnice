@@ -20,7 +20,7 @@ Na jakém modelu jsou založeny normální formy v relačních databázích?
 Back:
 
 Na funkčních závislostech (Functional dependencies).
-
+<!--ID: 1779721643687-->
 END
 
 ---
@@ -36,7 +36,7 @@ Back:
 - 2NF
 - 3NF
 - BCNF (Boyce-Codd normal form).
-
+<!--ID: 1779721643700-->
 END
 
 ---
@@ -49,7 +49,7 @@ Co je cílem normalizace databázového schématu a jaké algoritmy se k tomu po
 Back:
 
 Cílem je dostat schéma do BCNF nebo 3NF. Používají se algoritmy dekompozice (decomposition) nebo syntézy (synthesis).
-
+<!--ID: 1779721643704-->
 END
 
 ---
@@ -63,7 +63,7 @@ Back:
 
 - Snížení redundance dat.
 - Zabránění anomáliím při aktualizaci.
-
+<!--ID: 1779721643707-->
 END
 
 ---
@@ -77,7 +77,7 @@ Jaká je hlavní nevýhoda normalizace databáze?
 Back:
 
 Data jsou roztroušena na malé kousky (vysoká granularita) a při dotazování se musí tyto kousky znovu spojovat (JOIN).
-
+<!--ID: 1779721643711-->
 END
 
 ---
@@ -93,7 +93,7 @@ Back:
 Sekvence databázových operací.
 
 Operace: `READ`, `WRITE`, `COMMIT`, `ABORT`.
-
+<!--ID: 1779721643714-->
 END
 
 ---
@@ -107,7 +107,7 @@ Back:
 
 - Vynucení ACID vlastností
 - Efektivní paralelní zpracování a souběžný přístup (pomalé disky, ...)
-
+<!--ID: 1779721643717-->
 END
 
 ---
@@ -125,7 +125,7 @@ Back:
 - **C**onsistency - Transakce převádějí databázi z jednoho platného stavu (valid state) do jiného platného stavu.
 - **I**solation - Účinky nepotvrzených (uncommitted) transakcí jsou před ostatními transakcemi skryty.
 - **D**urability - Účinky potvrzených (committed) transakcí jsou trvalé.
-
+<!--ID: 1779721643720-->
 END
 
 ---
@@ -154,8 +154,6 @@ Je to rozšíření klasického relačního modelu o **objektové prvky** (datab
 - **Abstraktní datové typy** - Je možné vytvářet vlastní typy a jejich metody
 - **API pro OOP jazyky** - velice dobře se používá s OOP jazykama
 - **Komplexní (dlouhé) transakce** - lépe je zpracovává než RDBMS
-
-
 <!--ID: 1779128799624-->
 END
 
@@ -183,8 +181,6 @@ Back:
 
 - **Hodnota** jiného primárního klíče (není to ukazatel)
 - **Vyžaduje JOIN** operaci pro získání souvisejících dat.
-
-
 <!--ID: 1779128799627-->
 END
 
@@ -216,8 +212,6 @@ Back:
 - Objekty mohou mít mezi sebou **pointery**
 
 Objektová tabulka je obecně více flexibilní, umožňuje ukládat nejen objekty, ale i určité metody/chování.
-
-
 <!--ID: 1779128799630-->
 END
 
@@ -256,8 +250,6 @@ Back:
 	- Pro komplexní typy dat
 	- Lepší výkon pro složité typy
 - **Nevýhoda:** - Komplexnější práce s databází
-
-
 <!--ID: 1779128799633-->
 END
 
@@ -279,8 +271,6 @@ Back:
 Mám **hierarchickou strukturu dokumentů** (typicky JSON a XML).
 
 - Každý dokument má unique identifier
-
-
 <!--ID: 1779128799635-->
 END
 
@@ -312,8 +302,6 @@ Event logging, content management systems, web analytics, e-commerce application
 ![](../../Assets/Pasted%20image%2020241011103239.png)
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799638-->
 END
 
@@ -333,8 +321,6 @@ Back:
 JSON = JavaScript Object Notation
 
 **Otevřený standard pro strukturu dat.**
-
-
 <!--ID: 1779128799641-->
 END
 
@@ -358,8 +344,6 @@ Back:
 Prakticky ale většina věcí jde udělat v JSONu, proto je dnes častěji používanější.
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799644-->
 END
 
@@ -385,8 +369,6 @@ Prý se to nepoužívá ve 100% případů, protože vlastností JSONu je, že j
 Samozřejmě v mnoha případech je potřeba to schéma validovat a tam se to používá.
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799647-->
 END
 
@@ -413,8 +395,6 @@ Struktura: **Instance** → **Database** → **Collection** → **Document**.
 - Bylo to založeno v roce 2009 a podle Michala Valenty to už je mature projekt
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799649-->
 END
 
@@ -435,8 +415,6 @@ Back:
 - **Database**
 - **Collection**
 - **Document**
-
-
 <!--ID: 1779128799652-->
 END
 
@@ -453,7 +431,7 @@ Back:
 - **Unikátní** v rámci kolekce
 - **Nelze změnit** po vytvoření
 - Doporučen **ObjectId** (12 B) jako výchozí hodnota
-
+<!--ID: 1779721643723-->
 END
 
 ---
@@ -466,7 +444,7 @@ Co je **`upsert`** v MongoDB?
 Back:
 
 Kombinace **update + insert** – pokud dokument neexistuje, vytvoří se nový; jinak se aktualizuje existující.
-
+<!--ID: 1779721643727-->
 END
 
 ---
@@ -479,7 +457,7 @@ Jak simulovat **JOIN v MongoDB**?
 Back:
 
 Agregační pipeline: **`$lookup`** (join s jinou kolekcí) + **`$unwind`** (rozbalení pole výsledku).
-
+<!--ID: 1779721643730-->
 END
 
 ---
@@ -504,8 +482,6 @@ Podobné jako **document storage**, ale pomocí XML
 ![](../../Assets/Pasted%20image%2020241011104826.png)
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799655-->
 END
 
@@ -539,8 +515,6 @@ XML je **well-formed**, pokud:
 ```
 
 <!-- ExampleEnd -->
-
-
 <!--ID: 1779128799660-->
 END
 
@@ -554,7 +528,7 @@ Jak se **validuje XML** proti schématu (nad rámec well-formed)?
 Back:
 
 Pomocí **DTD**, **XSD** nebo **RELAX NG** – ověření struktury a typů elementů/atributů.
-
+<!--ID: 1779721643733-->
 END
 
 ---
@@ -567,7 +541,7 @@ Co je **atomizace** v XPath/XQuery?
 Back:
 
 Uzly se převádějí na **atomické hodnoty** (text, čísla…); prázdná sekvence při atomizaci způsobí chybu. Atomizace je nutná před **porovnáváním** a **aritmetickými operacemi**.
-
+<!--ID: 1779721643736-->
 END
 
 ---
@@ -580,7 +554,7 @@ Jakou strukturu mají XML dokumenty?
 Back:
 
 Stromovou s vnořenými elementy, atributy a textovými hodnotami.
-
+<!--ID: 1779721643740-->
 END
 
 ---
@@ -596,7 +570,7 @@ Back:
 - XPath – XML Path Language (navigace po dokumentu)
 - XQuery – XML Query Language (dotazování se nad prvky)
 - XSLT – XSL Transformations (transformace)
-
+<!--ID: 1779721643743-->
 END
 
 ---
@@ -626,8 +600,6 @@ Máme **column family** (table).
 ![](../../Assets/Pasted%20image%2020241011103658.png)
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799663-->
 END
 
@@ -651,8 +623,6 @@ Pro data, která mají podobná schémata, ale nevyžadují ACID a komplexní qu
 ![](../../Assets/Pasted%20image%2020241011103929.png)
 
 <!-- ExampleEnd -->
-
-
 <!--ID: 1779128799666-->
 END
 
@@ -670,8 +640,6 @@ Jaký je například databázový engine pro wide column databáze?
 Back:
 
 **Apache Cassandra** – distribuovaná wide-column databáze pro velké objemy dat a horizontální škálování.
-
-
 <!--ID: 1779128799669-->
 END
 
@@ -689,8 +657,6 @@ Co je obecně pointa wide column databáze?
 Back:
 
 Je to databáze určená pro velké množství dat a pro velký množství uživatelských přístupů.
-
-
 <!--ID: 1779128799676-->
 END
 
@@ -716,8 +682,6 @@ Každý má **row key**
 ![](../../Assets/Pasted%20image%2020241127182325.png)
 
 <!-- ExampleEnd -->
-
-
 <!--ID: 1779128799680-->
 END
 
@@ -744,8 +708,6 @@ Pozn. hodnoty zde mohou být i např. sets, lists, maps. Nemusí to být atomick
 ![](../../Assets/Pasted%20image%2020241127182325.png)
 
 <!-- ExampleEnd -->
-
-
 <!--ID: 1779128799683-->
 END
 
@@ -774,8 +736,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241127181500.png)
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799686-->
 END
 
@@ -803,8 +763,6 @@ Je to hrozně jednoduchý a díky tomu dobře škálovatelný.
 ![](../../Assets/Pasted%20image%2020241011102321.png)
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799689-->
 END
 
@@ -836,8 +794,6 @@ Obecně na data, ke kterým potřebuju jen přistupovat pomocí **klíče** a ne
 ![](../../Assets/Pasted%20image%2020241011102425.png)
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799691-->
 END
 
@@ -855,8 +811,6 @@ Jak obecně funguje **key-value data model**?
 Back:
 
 Mám klíč (id) a pomocí něho přistupuju k value.
-
-
 <!--ID: 1779128799694-->
 END
 
@@ -894,8 +848,6 @@ Co je expirace key v key-value databázi?
 Back:
 
 Můžu danému key nastavit expiraci. Po vypršení expirace se objekt automaticky smaže.
-
-
 <!--ID: 1779128799699-->
 END
 
@@ -913,8 +865,6 @@ Jaký je například key-value store?
 Back:
 
 **RiakKV** – distribuovaný key-value store (Erlang), AP systém s peer-to-peer replikací a buckety.
-
-
 <!--ID: 1779128799702-->
 END
 
@@ -938,8 +888,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241127173101.png)
 
 <!-- ExplanationEnd -->
-
-
 <!--ID: 1779128799705-->
 END
 
@@ -964,8 +912,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241127173418.png)
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799708-->
 END
 
@@ -990,8 +936,6 @@ Modelované jako **graf**:
 - **Relationships** (hrany).
 
 Uzly i hrany mohou mít **properties**.
-
-
 <!--ID: 1779128799710-->
 END
 
@@ -1024,8 +968,6 @@ Prostě vhodné pro grafové struktury.
 ![](../../Assets/Pasted%20image%2020241011104257.png)
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799713-->
 END
 
@@ -1052,8 +994,6 @@ Orientovaný nebo neorientovaný graf:
 Uzly i hrany mohou mít properties (proto se to jmenuje property graph).
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799716-->
 END
 
@@ -1074,8 +1014,6 @@ Mají data jako **graf**
 
 - Jsou tam **efektivní grafové algoritmy** a průchody grafem
 - Umí vytvářet **subgraph queries**
-
-
 <!--ID: 1779128799719-->
 END
 
@@ -1102,8 +1040,6 @@ Byla první, která dlouhodobě vydržela. Ostatní grafové databáze se přest
 Vznikla v roce 2007.
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799722-->
 END
 
@@ -1123,8 +1059,6 @@ Back:
 **Instance** Neo4j spravuje **jediný graf** (nemusí být souvislý).
 
 Hierarchie: **Instance** → **Database** → **Graph** (uzly + hrany).
-
-
 <!--ID: 1779128799725-->
 END
 
@@ -1137,7 +1071,7 @@ Original Flashcard ID: 1730978212864
 START
 NI-SZZ
 
-Jaké vlastnosti property grafu?
+Jaké jsou **vlastnosti property grafu**? (3)
 
 Back:
 
@@ -1148,8 +1082,6 @@ Property graph = **directed labeled multigraph**
 	- Díky tomu se literally dá modelovat OntoUML
 	- Můžeme tak třeba říct, že uzel je typu "Movie" nebo "Actor"
 - **multigraph** - mezi dvěma uzlama může být víc hran
-
-
 <!--ID: 1779128799727-->
 END
 
@@ -1178,8 +1110,6 @@ Back:
 - XML databáze
 - Objektové databáze
 - RDF
-
-
 <!--ID: 1779128799730-->
 END
 
@@ -1207,8 +1137,6 @@ Back:
 - **Nevýhoda:**
 	- Špatně horizontálně škálovatelné
 	- Nízká flexibilita (mám striktní schéma) - nevhodné pro méně strukturovaná data (např. v datových skladech)
-
-
 <!--ID: 1779128799733-->
 END
 
@@ -1233,8 +1161,7 @@ Back:
 - **Nevýhoda:**
 	- Nekonzistence dat - kvůli BASE
 	- Složité dotazy jsou méně efektivní než u relačních DB
-
-
+<!--ID: 1779721643747-->
 END
 
 ---
@@ -1259,8 +1186,6 @@ Back:
 - **Nevýhoda:**
 	- Nekonzistence dat - kvůli BASE
 	- Složité dotazy jsou méně efektivní než u relačních DB
-
-
 <!--ID: 1779128799735-->
 END
 
@@ -1287,8 +1212,6 @@ Back:
 	- Určeno pro jednoduchá data, s komplexními daty/dotazy se hodně špatně pracuje
 
 Obecně je **key-value** databáze taková hodně specifická. Extrémní **rychlost** a **škálovatelnost** ale pouze pro **jednoduchá data**.
-
-
 <!--ID: 1779128799738-->
 END
 
@@ -1314,8 +1237,6 @@ Back:
 - **Nevýhoda:**
 	- Méně efektivní pro "tabulková data"
 	- Nižší podpora pro ACID - Prostě takový specifický use case
-
-
 <!--ID: 1779128799741-->
 END
 
@@ -1343,8 +1264,6 @@ Back:
 	- Horší výkon pro kompexní dotazy
 	- Omezená podpora pro ACID
 	- Nevhodné pro OLTP (ale super pro OLAP)
-
-
 <!--ID: 1779128799743-->
 END
 
@@ -1368,8 +1287,6 @@ Back:
 	- Vyžaduje to více pečlivosti při práci s databází (konvence, dodržovat určitý pravidla)
 	- jinak v tom může jednoduše vzniknout zmatená databáze
 	- Horší optimalizace komplexních dotazů
-
-
 <!--ID: 1779128799746-->
 END
 
@@ -1388,8 +1305,7 @@ Back:
 	- Efektivnější dotazování u složitých dotazů
 - **Nevýhody**:
 	- Změny ve schématu jsou složité a časově náročné → menší flexibilita
-
-
+<!--ID: 1779721643751-->
 END
 
 ---
@@ -1411,8 +1327,6 @@ Co je **XDM**?
 Back:
 
 Sjednocení data modelu **XQuery** a **XPath**
-
-
 <!--ID: 1779128799749-->
 END
 
@@ -1437,8 +1351,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241114102046.png)
 
 <!-- ImageEnd -->
-
-
 <!--ID: 1779128799751-->
 END
 
@@ -1470,8 +1382,6 @@ Může být
 ![](../../Assets/Pasted%20image%2020241114102521.png)
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799754-->
 END
 
@@ -1489,8 +1399,6 @@ Co je výsledkem XPath výrazu aplikovaného na XML dokument?
 Back:
 
 **Sekvence**
-
-
 <!--ID: 1779128799757-->
 END
 
@@ -1516,8 +1424,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241114103129.png)
 
 <!-- ExplanationEnd -->
-
-
 <!--ID: 1779128799761-->
 END
 
@@ -1554,8 +1460,6 @@ Tento obrázek to hezky ukazuje:
 ![](../../Assets/Pasted%20image%2020241114103230.png)
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799764-->
 END
 
@@ -1585,8 +1489,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241114103610.png)
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799767-->
 END
 
@@ -1614,8 +1516,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241114103916.png)
 
 <!-- ExampleEnd -->
-
-
 <!--ID: 1779128799770-->
 END
 
@@ -1646,8 +1546,6 @@ Do hranatých závorek napíšu nějakou podmínku.
 ![](../../Assets/Pasted%20image%2020241114104059.png)
 
 <!-- ExampleEnd -->
-
-
 <!--ID: 1779128799773-->
 END
 
@@ -1676,8 +1574,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241114104112.png)
 
 <!-- ExampleEnd -->
-
-
 <!--ID: 1779128799776-->
 END
 
@@ -1713,8 +1609,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241114104756.png)
 
 <!-- ExampleEnd -->
-
-
 <!--ID: 1779128799778-->
 END
 
@@ -1750,7 +1644,7 @@ Back:
 Výrazy pro **tvorbu výstupního XML**:
 - **Direct constructor** – `<tag>{expr}</tag>`
 - **Computed constructor** – `element name {…}` s dynamicky vypočítaným jménem elementu
-
+<!--ID: 1779721643754-->
 END
 
 ---
@@ -1776,8 +1670,6 @@ Back:
 - **Boolean** expressions
 	- `and, or, not`
 - **Primary** expressions - **constructors**, literals, variable references, function calls,...
-
-
 <!--ID: 1779128799784-->
 END
 
@@ -1815,8 +1707,6 @@ Umožňují mi dělat `for, let, where, orderby, return`
 ![](../../Assets/Pasted%20image%2020241114111505.png)
 
 <!-- ExampleEnd -->
-
-
 <!--ID: 1779128799786-->
 END
 
@@ -1846,8 +1736,6 @@ XQuery slouží k dotazování nad stromovou strukturou XML dokumentu.
 for $book in doc("books.xml")//book
 return $book
 ```
-
-
 <!--ID: 1779128799789-->
 END
 
@@ -1867,8 +1755,6 @@ Co je **Cypher**?
 Back:
 
 Deklarativní **jazyk** pro dotazování nad **grafovými databázemi** (např. nad Neo4j)
-
-
 <!--ID: 1779128799792-->
 END
 
@@ -1884,7 +1770,7 @@ Back:
 **Strukturální:** **Node**, **Relationship**, **Path**
 
 **Složené:** **List**, **Map**, **PropertyMap** (na top levelu jen atomické hodnoty)
-
+<!--ID: 1779721643757-->
 END
 
 ---
@@ -1900,7 +1786,7 @@ Back:
 - **Orientovaná**
 - **Max. 1 label/type**
 - Má **unikátní identifikátor**
-
+<!--ID: 1779721643760-->
 END
 
 ---
@@ -1913,7 +1799,7 @@ Co vrací **Cypher dotaz**?
 Back:
 
 **Solution sequence** – setříděná kolekce **podgrafů** splňujících zadaný pattern.
-
+<!--ID: 1779721643763-->
 END
 
 ---
@@ -1928,7 +1814,7 @@ Back:
 - **ORDER BY** – řazení výsledků
 - **SKIP / LIMIT** – stránkování (offset / limit)
 - **DISTINCT** – odstranění duplicit ve výsledcích
-
+<!--ID: 1779721643766-->
 END
 
 ---
@@ -1946,8 +1832,6 @@ Back:
 
 - **Nodes** - `()`
 - **Relationships** - `<--, --, -->`
-
-
 <!--ID: 1779128799795-->
 END
 
@@ -1973,8 +1857,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241104164750.png)
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799797-->
 END
 
@@ -1999,8 +1881,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241104164848.png)
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799800-->
 END
 
@@ -2031,8 +1911,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241104165011.png)
 
 <!-- ExampleEnd -->
-
-
 <!--ID: 1779128799803-->
 END
 
@@ -2060,8 +1938,6 @@ Díky tomu jsem schopný snadně dělat hodně komplikovaný dotazy.
 ![](../../Assets/Pasted%20image%2020241104165156.png)
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799806-->
 END
 
@@ -2088,8 +1964,6 @@ Je to kvůli tomu, aby se to při dotazování nezacyklilo.
 ![](../../Assets/Pasted%20image%2020241104165438.png)
 
 <!-- ExplanationEnd -->
-
-
 <!--ID: 1779128799808-->
 END
 
@@ -2135,8 +2009,6 @@ Pak tam můžou být i exists, kvantifikátory atd.
 ![](../../Assets/Pasted%20image%2020241104170446.png)
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799811-->
 END
 
@@ -2166,8 +2038,6 @@ Dělá to jakoby left outer join. Optionally mi to do výsledku dá ještě něc
 ![](../../Assets/Pasted%20image%2020241104170503.png)
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799814-->
 END
 
@@ -2201,8 +2071,6 @@ Pozn. v tom returnu můžeme mít i kostruktor. Ten `SIZE` mi najde pro vybrané
 ![](../../Assets/Pasted%20image%2020241104170831.png)
 
 <!-- ExampleEnd -->
-
-
 <!--ID: 1779128799816-->
 END
 
@@ -2228,8 +2096,6 @@ V returnu použiju agregační funkci podobně jako se to používá v SQLku (vi
 ![](../../Assets/Pasted%20image%2020241104171236.png)
 
 <!-- ExampleEnd -->
-
-
 <!--ID: 1779128799819-->
 END
 
@@ -2257,8 +2123,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241104171856.png)
 
 <!-- ExampleEnd -->
-
-
 <!--ID: 1779128799821-->
 END
 
@@ -2281,8 +2145,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241104171935.png)
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799824-->
 END
 
@@ -2306,8 +2168,6 @@ Umožňuje mi kombinovat multi-part queries.
 ![](../../Assets/Pasted%20image%2020241104172011.png)
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799827-->
 END
 
@@ -2333,8 +2193,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241104172106.png)
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799829-->
 END
 
@@ -2376,8 +2234,6 @@ nebo:
 ```Cypher
 MATCH (p:Person {name: 'Ivan Trojan'})-[:ACTED_IN]->(m:Movie) WHERE m.language = 'English' RETURN m.title
 ```
-
-
 <!--ID: 1779128799832-->
 END
 
@@ -2403,8 +2259,6 @@ Dotazuje se nad **jednou kolekcí**, **jedním příkazem** (případně celým 
 ![](../../Assets/Pasted%20image%2020241015093917.png)
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799835-->
 END
 
@@ -2426,8 +2280,6 @@ Back:
 - **update** (`updateOne`, `updateMany`) - aktualizuje dokument
 - **remove** (`deleteOne`, `deleteMany`) - odstraní dokument
 - **find** (`find`) - najde dokumenty v kolekci
-
-
 <!--ID: 1779128799837-->
 END
 
@@ -2445,8 +2297,6 @@ Mohu v Cassandře dělat JOINy?
 Back:
 
 Ne. V Cassandře se můžu dotazovat jen nad jednou tabulkou.
-
-
 <!--ID: 1779128799840-->
 END
 
@@ -2471,8 +2321,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241208130222.png)
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799842-->
 END
 
@@ -2486,7 +2334,7 @@ Co je **CQL** v Cassandře?
 Back:
 
 **Cassandra Query Language** – SQL-like jazyk pro dotazování (cqlsh). Dotazy jen nad **jednou tabulkou**, **bez JOINů**.
-
+<!--ID: 1779721643770-->
 END
 
 ---
@@ -2499,7 +2347,7 @@ Co je **keyspace** v Cassandře?
 Back:
 
 Logický **namespace** (skupina tabulek) s nastavením **replikačního faktoru** a **topologie**.
-
+<!--ID: 1779721643773-->
 END
 
 ---
@@ -2512,7 +2360,7 @@ Podporuje Cassandra **expiraci dat (TTL)**?
 Back:
 
 Ano – u sloupců/řádků lze nastavit **TTL**; po vypršení se data automaticky smažou.
-
+<!--ID: 1779721643776-->
 END
 
 ---
@@ -2550,8 +2398,6 @@ db.movies.find(
 	{ rating: -1, year: 1 }
 )
 ```
-
-
 <!--ID: 1779128799845-->
 END
 

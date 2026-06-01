@@ -30,7 +30,6 @@ OLTP =  *Online Transaction Processing*
 - Rychlé, krátké transakce, např. vkládání, aktualizace a mazání dat.
 - Hodně uživatelů **čte** a **mění** data.
 - Např.: KOS, e-shop
-
 <!--ID: 1779128799848-->
 END
 
@@ -55,8 +54,6 @@ OLAP = *Online Analytical Processing*
 - **Dlouhé dotazy**, optimalizace pro **čtení a agregace**.
 - Data nebývají "hezky" uspořádána (podle 3NF).. Typicky tam bývá hodně redundance, díky čemuž je čtení vysoce efektivní (ale zápis je pain in the ass)
 - Např. business intelligence, reportování, analytické systémy
-
-
 <!--ID: 1779128799851-->
 END
 
@@ -74,8 +71,6 @@ Na jaký typ systémů (OLTP nebo OLAP) se využívají benchmarky TPC-C nebo TP
 Back:
 
 Na **OLTP**
-
-
 <!--ID: 1779128799853-->
 END
 
@@ -98,8 +93,6 @@ Back:
 
 - **microbenchmark** – zaměřuje se na konkrétní aspekt databázového systému (např. práce s cache, jenom insert příkazy, jenom update příkazy)
 - **komplexní benchmarky** – testují celý systém v reálném scénáři (např. TPC-C, TPC-E, TPC-H); musí být **dobře definované**, srozumitelné a mít **příběh/use case**
-
-
 <!--ID: 1779128799859-->
 END
 
@@ -125,8 +118,6 @@ Back:
 Členové jsou např. Microsoft, Lenovo, Cisco, Nvidia, AMD atd.
 
 <!-- ExampleEnd -->
-
-
 <!--ID: 1779128799861-->
 END
 
@@ -161,8 +152,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241208133101.png)
 
 <!-- ImageEnd -->
-
-
 <!--ID: 1779128799864-->
 END
 
@@ -207,8 +196,6 @@ Back:
 - delivery
 - order-status
 - stock-level
-
-
 <!--ID: 1779128799869-->
 END
 
@@ -236,8 +223,6 @@ Mám různé transakce (new-order) atd. Mám simulaci zákazníka (terminál), t
 ![](../../Assets/Pasted%20image%2020241208133525.png)
 
 <!-- ImageEnd -->
-
-
 <!--ID: 1779128799872-->
 END
 
@@ -255,8 +240,6 @@ Jaká je kritika TPC-C benchmarku?
 Back:
 
 TPC-C je **zastaralý a příliš jednoduchý** – malá DB, málo typů transakcí, neodpovídá moderním OLTP systémům; proto se používá spíše **TPC-E**.
-
-
 <!--ID: 1779128799875-->
 END
 
@@ -274,8 +257,6 @@ Na jaké téma je zaměřený **TPC-E**?
 Back:
 
 Jako příklad je obchodování společnosti, která se zabývá obchodováním s akciema a managování uživatelských účtů.
-
-
 <!--ID: 1779128799877-->
 END
 
@@ -320,8 +301,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241220111612.png)
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799883-->
 END
 
@@ -339,8 +318,6 @@ Jaký je příklad OLAP benchmarku?
 Back:
 
 **TPC-H** – komplexní **OLAP** benchmark nad datovým skladem fixní velikosti.
-
-
 <!--ID: 1779128799888-->
 END
 
@@ -358,8 +335,6 @@ Jaký je velký rozdíl TPC-H benchmarku oproti těm ostatním?
 Back:
 
 U **TPC-H** (OLAP) je databáze **fixní velikosti** (Size v GB/TB) – na rozdíl od OLTP benchmarků (TPC-C/E), které se **škálují** a hledají meze výkonu.
-
-
 <!--ID: 1779128799890-->
 END
 
@@ -389,8 +364,6 @@ $Size$ je velikost databáze.
 Size typicky jsou desítky GB až 1 TB cca
 
 <!-- DetailInfoEnd -->
-
-
 <!--ID: 1779128799893-->
 END
 
@@ -416,8 +389,6 @@ Back:
 - **Nevýhody:**
 	- Výsledky jsou často vysoce specifické a nemusí odrážet skutečný výkon systému v reálných aplikacích.
 	- Nezohledňuje komplexní interakce mezi více operacemi nebo systémy.
-
-
 <!--ID: 1779128799896-->
 END
 
@@ -440,8 +411,7 @@ Back:
 	- Poskytuje ucelený pohled na výkon databázového systému v reálných podmínkách.
 	- Zohledňuje vliv více operací a interakcí mezi součástmi systému.
 - **Nevýhody:** - Může být složitější na nastavení a vyžaduje složitější testovací scénáře. - Výsledky mohou být ovlivněny externími faktory, jako jsou konfigurace hardwaru, síťové podmínky a další.
-
-
+<!--ID: 1779721643779-->
 END
 
 ---
