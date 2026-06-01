@@ -368,7 +368,7 @@ Back:
 
 V našem algoritmu povolíme, aby se dostával do neplatných stavů, ale tyto stavy **penalizujeme** tak, že **zhoršíme hodnotu optimalizačního kritéria** na nějakou **vzdálenost** od platného řešení.
 
-![](../../Assets/Pasted%20image%2020241107110828.png)
+Neboli "jak moc blbě to je".
 
 <!-- ExplanationStart -->
 
@@ -383,6 +383,7 @@ Ten vzorec je typicky **součet** (nikoliv násobek)
 <!-- ExplanationEnd -->
 
 <!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020241107110828.png)
 
 ![](../../Assets/Pasted%20image%2020241107110814.png)
 
@@ -412,7 +413,7 @@ Co je **penalizace stavu**?
 
 Back:
 
-Povolíme neplatný řešení a nějak je **penalizujeme** konstantní hodnotou.
+Povolíme neplatný řešení a nějak je **penalizujeme konstantní hodnotou**.
 
 <!-- ExampleStart -->
 
@@ -621,6 +622,10 @@ Jak funguje **best only** lokální heurisitika u **systematické strategie**?
 
 Back:
 
+Vždy pokračuji do nejlepšího ze sousedů a jakmile lepší soused neexistuje, končím
+
+<!-- DetailInfoStart -->
+
 Jak funguje:
 
 - Vybere **nejlepšího souseda daného stavu**.
@@ -630,6 +635,8 @@ Jak funguje:
 ![](../../Assets/Pasted%20image%2020241107113923.png)
 
 Je to "nejmíň odfláknutá lokální heuristika".
+<!-- DetailInfoEnd -->
+
 <!--ID: 1780152138420-->
 END
 
@@ -666,9 +673,11 @@ Jak funguje **first improvement** lokální heurisitika u **systematické strate
 
 Back:
 
-Jakmile se najde soused, který je lepším řešením, řekne, že to je ten kandidát na nejlepší řešení.
+Pokračuje hned do **prvního souseda**, který je lepší než **vybraný stav**.
 
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020241107114138.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1780152138441-->
 END
 
@@ -755,7 +764,7 @@ Co je **backtracking v prohledávacím prostoru**?
 
 Back:
 
-Možnost alogritmu se **vrátit v prohledávacím prostoru** (= odvolat nastavení proměnné), **aniž bych musel mít zadefinované inverzní operátory**, abych mohl skákat potřeboval "skákat zpět".
+Možnost alogritmu se **vrátit v prohledávacím prostoru** (= odvolat nastavení proměnné), **aniž bych musel mít zadefinované inverzní operátory**, abych mohl "skákat zpět".
 <!--ID: 1780152138484-->
 END
 
@@ -769,12 +778,11 @@ START
 NI-SZZ
 
 
-Z čeho se skládá krok prohledávání v prohledávacím prostoru?
+SMAZAT
 
 Back:
 
-1. vyber **proměnnou**
-2. vyber **hodnotu** proměnné
+SMAZAT
 <!--ID: 1780152138494-->
 END
 
@@ -866,8 +874,8 @@ Back:
 _Pozn. tímhle si nejsem úplně jistý, jestli jsem ten algoritmus správně pochopil/popsal (ale dávalo by mi to takhle největší smysl) -Morčín_
 
 1. Pro každého souseda:
-   1. Naplním batoh co nejvíce tím sousedem (tou věcí)
-   2. Spočtu cenu toho batohu
+	1. Naplním batoh co nejvíce tím sousedem (tou věcí)
+	2. Spočtu cenu toho batohu
 2. Ze všech sousedů vyberu toho co naplnil batoh největší cenou
 3. Jako novou velikost batohu označím velikost zbývajícího prostoru v batohu
 
@@ -924,10 +932,11 @@ Co jsou white box a black box evaluations?
 
 Back:
 
-![](../../Assets/Pasted%20image%2020241120165850.png)
+- **white box:** spustíme heuristiku nad omezenou sadou instancí a ladíme ji
+- **black box** spustíme heuristiku nad plnou sadou instancí a měříme výsledky (už bez ladění)
 
 <!-- ExampleStart -->
-
+![](../../Assets/Pasted%20image%2020241120165850.png)
 ![](../../Assets/Pasted%20image%2020241120165902.png)
 ![](../../Assets/Pasted%20image%2020241120165909.png)
 ![](../../Assets/Pasted%20image%2020241120165915.png)
@@ -940,6 +949,22 @@ END
 
 ## Pojem globálního a lokálního minima
 
+
+START
+FIT-Card
+
+Co je **lokální** a **globální minimum** při prohledávání stavového prostoru?
+
+Back:
+
+- **globální minimum** = nejlepší stav ze všech řešení
+- **lokální minimum** = stav, ze kterého se nedá dostat do lepšího, aniž bychom šli přes horší
+<!--ID: 1780317231149-->
+END
+
+---
+
+
 ## Obrana před uváznutím v lokálním minimu
 
 <!--
@@ -949,17 +974,16 @@ Original Flashcard ID: 1735205749600
 START
 NI-SZZ
 
-
-Jaké jsou **řešení úniku lokálních optim** u simulovaného ochlazování? (2)
+Jaké jsou způsoby řešení **uváznutí v lokálním optimu** nebo **úniku z lokálního optima**? (2)
 
 Back:
 
-- **Diverzifikace**
-  - snažíme se rovnoměrně prozkoumávat stavový prostor
-  - moc velká ochota připustit akci => horší řešení
-- **Intenzifikace**
-  - snažíme se více zkonvergovat k finálnímu řešení
-  - moc malá ochota připustit akci => horší řešení
+- **Diverzifikace** - budeme rovnoměrněji prohledávat stavový prostor
+	- např. tím, že připustíme přechod do horšího stavu
+	- díky tomu spíše neuvízneme v lokálním optimu
+- **Intenzifikace** - budeme se snažit konvergovat k optimálnímu řešení
+	- např. tím, že budeme méně připouštět přechody do horšího stavu
+	- díky tomu více konvergujeme k finálnímu řešení
 
 <!-- DetailInfoStart -->
 
@@ -981,9 +1005,14 @@ START
 NI-SZZ
 
 
-Jak funguje řešení diverzifikace?
+Jakými způsoby lze zajistit **diverzifikaci**?
 
 Back:
+
+- **Zvětšením okolí**, ze kterého vybíráme následující stav (např. $k$-okolí nebo Kerninghan-Lin)
+- **Připustit akci, která zhorší řešení** (např. v simulovaném ochlazování)
+- **Vytvoříme více stavů**, se kterými budeme pracovat (např. simulovaná evoluce)
+- **Modelování stavového prostoru** nebo mapování (např. Bayesovská optimalizace)
 
 <!-- DetailInfoStart -->
 
@@ -1003,18 +1032,18 @@ START
 NI-SZZ
 
 
-Jaké jsou pokročilé heuristiky? (4)
+Jaké jsou **pokročilé heuristiky**? (4)
 
 Back:
 
 - **Simulované ochlazování**
-  - Jedna konfigurace, sekvenční řízení diverzifikace
+	- Jedna konfigurace, sekvenční řízení diverzifikace
 - **Simulovaná evoluce**
-  - Více konfigurací, interakce křížením
+	- Více konfigurací, interakce křížením
 - **Bayeovská optimalizace**
-  - Více konfigurací, statistický model stavového prostoru
+	- Více konfigurací, statistický model stavového prostoru
 - **fmGA**
-  - Více fragmentů konfigurace
+	- Více fragmentů konfigurace
 
 <!-- DetailInfoStart -->
 
