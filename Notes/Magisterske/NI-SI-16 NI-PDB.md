@@ -193,19 +193,12 @@ Jaké statistiky jsou důležité u **operace řazení** pro systém?
 
 Back:
 
-<<<<<<< HEAD
 - počet **in memory sortů** - data pro řazení se vejdou do RAM
 - počet **2 run sortů** - data se nevejdou do RAM, proto se rozdělí do menších balíčků at ty se seřadí. Následuje operace merge a je finální výsledek.
 - počet **multi run** - data se nevejdou do RAM, proto se rozdělí do menších balíčků at ty se seřadí. Balíčky se i tak nevejdou do RAM, tak se operace opakuje a postupně se balíčky spojují.
 
 *U run sortů se využívá zápis na disk, který je oporti in-memory velmi pomalý.*
 
-=======
-- počet **in memory sortů**
-- počet **2 run sortů**
-- počet **multi run**
-<!--ID: 1779704516395-->
->>>>>>> origin/main
 END
 
 ---
@@ -477,13 +470,7 @@ Original Flashcard ID: 1737106145109
 START
 NI-SZZ
 
-<<<<<<< HEAD
 Co je to heap **heap table**?
-=======
-Vysvětlete rozdíl mezi **heap table** a **heap table s indexem**.
-
-(větší otázka)
->>>>>>> origin/main
 
 Back:
 
@@ -775,13 +762,7 @@ Original Flashcard ID: 1737106145122
 START
 NI-SZZ
 
-<<<<<<< HEAD
 Co jsou to přístupové cesty (access paths) při vyhodnocování SQL dotazů? Uveďte příklady.
-=======
-**Co jsou** a **jaké jsou** **access paths** při vyhodnocování SQL dotazů? (4)
-
-(větší otázka)
->>>>>>> origin/main
 
 Back:
 
