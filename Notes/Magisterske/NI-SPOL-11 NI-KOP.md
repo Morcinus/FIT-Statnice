@@ -129,7 +129,6 @@ Definice: Kdy deterministický **Turingův stroj** řeší rozhodovací problém
 Back:
 
 ![](../../Assets/Pasted%20image%2020241011154142.png)
-
 <!--ID: 1780152136188-->
 END
 
@@ -148,7 +147,6 @@ Definice: Kdy deterministický **Turingův stroj** řeší rozhodovací problém
 Back:
 
 ![](../../Assets/Pasted%20image%2020241011154225.png)
-
 <!--ID: 1780152136199-->
 END
 
@@ -167,7 +165,6 @@ Definice: Kdy **Turingův stroj** řeší rozhodovací problém $\Pi$ **s pamět
 Back:
 
 ![](../../Assets/Pasted%20image%2020241011154230.png)
-
 <!--ID: 1780152136211-->
 END
 
@@ -312,7 +309,6 @@ NI-SZZ
 Back:
 
 **Nedeterministicky polynomiální**
-
 <!--ID: 1780152136280-->
 END
 
@@ -361,7 +357,6 @@ Definice: **nedeterministický Turingův stroj řeší rozhodovací problém $\P
 Back:
 
 ![](../../Assets/Pasted%20image%2020241011155644.png)
-
 <!--ID: 1780152136303-->
 END
 
@@ -375,12 +370,11 @@ START
 NI-SZZ
 
 
-Věta: Pokud **nedeterministický Turingův stroj** řeší problém $\Pi$ v čase $T(n)$, $\dots$
+Věta: Pokud **nedeterministický Turingův stroj** řeší problém $\Pi$ v čase $T(n)$, pak **deterministický Turingův stroj** ho řeší v čase $\dots$
 
 Back:
 
 ![](../../Assets/Pasted%20image%2020241011155932.png)
-
 <!--ID: 1780152136315-->
 END
 
@@ -424,7 +418,6 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020241011160112.png)
 ![](../../Assets/Pasted%20image%2020241011160131.png)
-
 <!--ID: 1780152136338-->
 END
 
@@ -446,7 +439,6 @@ Back:
 2. Dokážeme, že pro každou instanci $I \in \Pi_{ANO}$ problému existuje konfigurace $Y$ taková, že kontrola, zda je $Y$ řešením patří do $P$
 
 Obě dvě varianty jsou z definice (každá z jiné)
-
 <!--ID: 1780152136349-->
 END
 
@@ -494,7 +486,6 @@ Do jaké třídy problémů spadá problém nalezení Hamiltonovy kružnice?
 Back:
 
 Do **třídy NP**
-
 <!--ID: 1780152136371-->
 END
 
@@ -623,11 +614,13 @@ START
 NI-SZZ
 
 
-Co jsou komplementární problémy?
+Co jsou **komplementární problémy**?
 
 Back:
 
 Vezmu NP problém a "otočíme ho".
+
+Např. "Je Booleova formule splnitelná" -> "je formule nesplnitelná?"
 
 <!-- ExampleStart -->
 
@@ -679,7 +672,7 @@ START
 NI-SZZ
 
 
-Jaké svědky mají **NP problémy**?
+Co znamená **krátký** a **dlouhý svědek** u **NP** problémů?
 
 Back:
 
@@ -707,7 +700,7 @@ START
 NI-SZZ
 
 
-Jaké svědky mají **co-NP problémy**?
+Co znamená **krátký** a **dlouhý svědek** u **co-NP** problémů?
 
 Back:
 
@@ -766,8 +759,11 @@ Back:
 **Faktorizace čísla jako rozhodovací problém:**
 Dáno celé číslo $N$, existuje jeho prvočinitel, jehož poslední číslice je $7$?
 
-![](../../Assets/Pasted%20image%2020241011162546.png)
+Potvrzení i vyvrácení vyžaduje nalezení toho prvočinitele (v polynomiálním čase).
 
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020241011162546.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1780152136483-->
 END
 
@@ -834,7 +830,6 @@ Co platí, pokud $P = NP$ ?
 Back:
 
 $$P = NP \implies NP = \text{co-NP}$$
-
 <!--ID: 1780152136515-->
 END
 
@@ -875,6 +870,10 @@ Co je problém $\text{QSAT}_2$?
 
 Back:
 
+Normální $SAT$ = máme booleovskou formuli a zjišťujeme, jestli existuje ohodnocení, že bude pravdivá
+
+$QSAT_2$ = máme dvě podčásti formule $X_1$ a $X_2$ a zjišťujeme, jestli existuje ohodnocení $X_1$ takové, že pro všechny ohodnocení $X_2$ bude celá formule $F(X_1,X_2)$ pravdivá
+
 ![](../../Assets/Pasted%20image%2020241011163346.png)
 
 <!-- ExampleStart -->
@@ -900,7 +899,6 @@ Co je $\text{QSAT}_k$?
 Back:
 
 ![](../../Assets/Pasted%20image%2020241011163703.png)
-
 <!--ID: 1780152136548-->
 END
 
@@ -1049,12 +1047,11 @@ START
 NI-SZZ
 
 
-Co je **redukce** problému?
+Co je **redukce** problému? (obecně)
 
 Back:
 
 Převod instance problému $\Pi_1$ na instanci jiného problému $\Pi_2$
-
 <!--ID: 1780152136610-->
 END
 
@@ -1102,7 +1099,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241016100617.png)
 
 Neboli dají se na sebe převést Karpovou redukcí.
-
 <!--ID: 1780152136631-->
 END
 
@@ -1145,7 +1141,6 @@ Definice: Problém je NP-těžký
 Back:
 
 ![](../../Assets/Pasted%20image%2020241016101357.png)
-
 <!--ID: 1780152136652-->
 END
 
@@ -1164,7 +1159,6 @@ Definice: Problém je NP-úplný (je ve třídě NPC)
 Back:
 
 ![](../../Assets/Pasted%20image%2020241016101418.png)
-
 <!--ID: 1780152136664-->
 END
 
@@ -1264,7 +1258,6 @@ Jaké jsou vztahy tříd $P, NP, NPC, NPH$?
 Back:
 
 ![](../../Assets/Pasted%20image%2020241016110101.png)
-
 <!--ID: 1780152136707-->
 END
 
@@ -1283,7 +1276,6 @@ Definice: co-NP těžký a co-NP úplný
 Back:
 
 ![](../../Assets/Pasted%20image%2020241016110201.png)
-
 <!--ID: 1780152136718-->
 END
 
@@ -1376,7 +1368,6 @@ Back:
 - **Obecná formule**
 
 ![](../../Assets/Pasted%20image%2020241016111738.png)
-
 <!--ID: 1780152136751-->
 END
 
@@ -1394,7 +1385,13 @@ Co je **problém plánování**?
 
 Back:
 
+Máme množinu operací $T$ a snažíme se je uspořádat tak, aby v jednom čase se provedlo nejvýše $m$ operací
+
+Je to NP-úplný.
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020241016112535.png)
+<!-- DetailInfoEnd -->
 
 <!-- ExplanationStart -->
 
@@ -1419,7 +1416,6 @@ Definice: Program $M$ pro deterministický Turingův stroj **řeší optimaliza�
 Back:
 
 ![](../../Assets/Pasted%20image%2020241016112730.png)
-
 <!--ID: 1780152136773-->
 END
 
@@ -1438,7 +1434,6 @@ Definice: Program $M$ pro deterministický Turingův stroj **počítá optimaliz
 Back:
 
 ![](../../Assets/Pasted%20image%2020241016112758.png)
-
 <!--ID: 1780152136786-->
 END
 
@@ -1533,7 +1528,6 @@ Back:
 ![](../../Assets/Pasted%20image%2020241016113319.png)
 
 ![](../../Assets/Pasted%20image%2020241016113324.png)
-
 <!--ID: 1780152136836-->
 END
 
@@ -1552,7 +1546,6 @@ Jaký je vztah tříd $P, NP, NPC, PO, NPO, NPH$?
 Back:
 
 ![](../../Assets/Pasted%20image%2020241016113425.png)
-
 <!--ID: 1780152136848-->
 END
 
@@ -1613,7 +1606,6 @@ Back:
 Jsou **disjunktní**. Tedy nemůžeme převést $\Pi$ z NPH do co-NPH a obráceně.
 
 ![](../../Assets/Pasted%20image%2020241016114520.png)
-
 <!--ID: 1780152136871-->
 END
 
@@ -1634,7 +1626,6 @@ Back:
 $\text{NPH} = \text{co-NPH}$
 
 ![](../../Assets/Pasted%20image%2020241016114549.png)
-
 <!--ID: 1780152136882-->
 END
 
@@ -1653,7 +1644,6 @@ Jaký je vztah tříd $P, NP, co-NP, NPC, co-NPC, NPH$?
 Back:
 
 ![](../../Assets/Pasted%20image%2020241016114750.png)
-
 <!--ID: 1780152136894-->
 END
 
@@ -1667,21 +1657,10 @@ START
 NI-SZZ
 
 
-Jaké jsou dobré zprávy **optimalizačních problémů** v NP? (3)
-
+SMAZAT
 Back:
 
-Dobré:
-
-- **Vztah rozhodovacího a optimalizačního problému**: Pokud je rozhodovací verze problému v NP, není optimalizační problém horší než NP, je tedy NP-lehký
-- **Možnost kontroly** - Pokud je problém v NPO, existujcí řešení se dá efeketivně zkontrolovat, jeho optimalizační kritérium vypočítat
-- **Pro NP není vyloučen převod rozhodovací -> optimalizační problém**
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020241016115217.png)
-
-<!-- DetailInfoEnd -->
+SMAZAT
 <!--ID: 1780152136906-->
 END
 
@@ -1695,18 +1674,11 @@ START
 NI-SZZ
 
 
-Jaké jsou špatné zprávy optimalizačního problému v NP?
+SMAZAT
 
 Back:
 
-- V NPH - exaktní řešení muže být v nejhorším případě časově neúnosné
-- Optimalizační kritérium nelze vypočíst v polynomiálním čase
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020241016115304.png)
-
-<!-- DetailInfoEnd -->
+SMAZAT
 <!--ID: 1780152136918-->
 END
 
@@ -1720,17 +1692,11 @@ START
 NI-SZZ
 
 
-Co je třída **NP-intermediate** ($NPI$)?
+SMAZAT
 
 Back:
 
-Problémy, které nemohou mít polynomiální algoritmus (nemohou být v $P$) a **nemůže** na ně být převeden **SAT**
-
-<!-- ImageStart -->
-
-![](../../Assets/Pasted%20image%2020241016115504.png)
-
-<!-- ImageEnd -->
+SMAZAT
 <!--ID: 1780152136929-->
 END
 
@@ -1744,17 +1710,11 @@ START
 NI-SZZ
 
 
-Jaký je příklad problému NPI?
+SMAZAT
 
 Back:
 
-**Hledání isomorfismu dvou grafů**
-
-<!-- ExplanationStart -->
-
-![](../../Assets/Pasted%20image%2020241016115745.png)
-
-<!-- ExplanationEnd -->
+SMAZAT
 <!--ID: 1780152136941-->
 END
 
@@ -1767,18 +1727,11 @@ Original Flashcard ID: 1729236692586
 START
 NI-SZZ
 
-
-Co je třída **NP-P-NPC**?
+SMAZAT
 
 Back:
 
-Problémy, pro které neumíme ani nalézt polynomiální algoritmus, ani na ně převést SAT.
-
-<!-- ImageStart -->
-
-![](../../Assets/Pasted%20image%2020241016115504.png)
-
-<!-- ImageEnd -->
+SMAZAT
 <!--ID: 1780152136953-->
 END
 

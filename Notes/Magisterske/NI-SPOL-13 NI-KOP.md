@@ -130,7 +130,6 @@ Back:
 Stav je **ohodnocení konfiguračních proměnných**
 
 ![](../../Assets/Pasted%20image%2020241107104804.png)
-
 <!--ID: 1780152138170-->
 END
 
@@ -149,7 +148,6 @@ Definice: **operátory a stavový prostor**
 Back:
 
 ![](../../Assets/Pasted%20image%2020241107104840.png)
-
 <!--ID: 1780152138181-->
 END
 
@@ -168,7 +166,6 @@ Definice: **Akce** ve stavovém prostoru
 Back:
 
 ![](../../Assets/Pasted%20image%2020241107104918.png)
-
 <!--ID: 1780152138193-->
 END
 
@@ -187,7 +184,6 @@ Definice: **graf stavového prostoru algoritmu**
 Back:
 
 ![](../../Assets/Pasted%20image%2020241107104935.png)
-
 <!--ID: 1780152138205-->
 END
 
@@ -206,7 +202,6 @@ Definice: **okolí stavu**
 Back:
 
 ![](../../Assets/Pasted%20image%2020241107104951.png)
-
 <!--ID: 1780152138216-->
 END
 
@@ -225,7 +220,6 @@ Definice: **$k$-okolí stavu**
 Back:
 
 ![](../../Assets/Pasted%20image%2020241107105010.png)
-
 <!--ID: 1780152138228-->
 END
 
@@ -244,7 +238,6 @@ Definice: **sousední stavy (sousedé)**
 Back:
 
 ![](../../Assets/Pasted%20image%2020241107105038.png)
-
 <!--ID: 1780152138242-->
 END
 
@@ -312,7 +305,6 @@ Definice: **Vzdálenost uzlu $s_2$ od $s_1$**
 Back:
 
 ![](../../Assets/Pasted%20image%2020241107110030.png)
-
 <!--ID: 1780152138277-->
 END
 
@@ -357,7 +349,6 @@ Back:
 Z **každého stavu** se do **každého stavu** dostanu po **stejně dlouhé cestě**.
 
 ![](../../Assets/Pasted%20image%2020241107110149.png)
-
 <!--ID: 1780152138300-->
 END
 
@@ -521,7 +512,6 @@ Definice: **Systematické strategie**
 Back:
 
 ![](../../Assets/Pasted%20image%2020241107112603.png)
-
 <!--ID: 1780152138367-->
 END
 
@@ -614,7 +604,6 @@ Lokální heuristika je funkce `try(state)`, která pomáhá najít nejlepšího
 
 Takto vypadá algoritmus využívající lokální heuristiku:
 ![](../../Assets/Pasted%20image%2020241109155157.png)
-
 <!--ID: 1780152138409-->
 END
 
@@ -641,7 +630,6 @@ Jak funguje:
 ![](../../Assets/Pasted%20image%2020241107113923.png)
 
 Je to "nejmíň odfláknutá lokální heuristika".
-
 <!--ID: 1780152138420-->
 END
 
@@ -681,7 +669,6 @@ Back:
 Jakmile se najde soused, který je lepším řešením, řekne, že to je ten kandidát na nejlepší řešení.
 
 ![](../../Assets/Pasted%20image%2020241107114138.png)
-
 <!--ID: 1780152138441-->
 END
 
@@ -702,7 +689,6 @@ Back:
 Při procházení preferuje ty stavy, které jsou nejblíže počátečnímu (resp. ty operátory).
 
 To v některých algoritmech dělá neplechu, protože by výsledek algoritmu neměl záviset na uspořádání jednotlivých stavů/operátorů.
-
 <!--ID: 1780152138452-->
 END
 
@@ -770,7 +756,6 @@ Co je **backtracking v prohledávacím prostoru**?
 Back:
 
 Možnost alogritmu se **vrátit v prohledávacím prostoru** (= odvolat nastavení proměnné), **aniž bych musel mít zadefinované inverzní operátory**, abych mohl skákat potřeboval "skákat zpět".
-
 <!--ID: 1780152138484-->
 END
 
@@ -808,7 +793,6 @@ Na co se vztahuje **prořezávání** v prohledávacím prostoru?
 Back:
 
 Prořezávání se vztahuje na **oblast stavového prostoru**
-
 <!--ID: 1780152138505-->
 END
 
@@ -984,7 +968,6 @@ Back:
 <!-- DetailInfoEnd -->
 
 Tags: core
-
 <!--ID: 1780152138568-->
 END
 
@@ -1040,7 +1023,6 @@ Back:
 <!-- DetailInfoEnd -->
 
 Tags: core
-
 <!--ID: 1780152138590-->
 END
 

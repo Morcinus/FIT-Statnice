@@ -32,7 +32,6 @@ Matika, co se zajímá o **konečné** a **diskrétní** problémy, které mají
 ![](../../Assets/Pasted%20image%2020240923183912.png)
 
 ![](../../Assets/Pasted%20image%2020240923183924.png)
-
 <!--ID: 1780152136964-->
 END
 
@@ -50,7 +49,6 @@ Co je **kombinatorický problém**? (svými slovy)
 Back:
 
 Problém co můžu vyřešit **zkoušením různých možností**.
-
 <!--ID: 1780152136975-->
 END
 
@@ -72,7 +70,6 @@ Back:
 Člověk si vymyslí "takhle by to mohlo fungovat" a tak to budu dělat.
 
 **Negarantuje to optimum**.
-
 <!--ID: 1780152136986-->
 END
 
@@ -94,7 +91,6 @@ Back:
 
 Např.
 ![](../../Assets/Pasted%20image%2020240923184031.png)
-
 <!--ID: 1780152136997-->
 END
 
@@ -119,7 +115,6 @@ Back:
 
 Např. u desky:
 ![](../../Assets/Pasted%20image%2020240923184136.png)
-
 <!--ID: 1780152137009-->
 END
 
@@ -227,7 +222,6 @@ Co je **omezení/omezující kritérium**?
 Back:
 
 Omezující kritérium říká (omezuje), **který výstup je řešením**.
-
 <!--ID: 1780152137055-->
 END
 
@@ -247,7 +241,6 @@ Back:
 **Ano.**
 
 Jinak bych nevěděl, co je správným řešením.
-
 <!--ID: 1780152137066-->
 END
 
@@ -300,7 +293,6 @@ Back:
 $n \cdot \log n$
 
 Bylo by to $n$, ale protože to musím sesortit při té konstrukci, je to $n \cdot \log n$
-
 <!--ID: 1780152137088-->
 END
 
@@ -354,7 +346,6 @@ Definice: **Řešení**
 Back:
 
 ![](../../Assets/Pasted%20image%2020240923185653.png)
-
 <!--ID: 1780152137111-->
 END
 
@@ -372,7 +363,6 @@ Definice: **Optimální řešení**
 Back:
 
 ![](../../Assets/Pasted%20image%2020240923185721.png)
-
 <!--ID: 1780152137123-->
 END
 
@@ -390,7 +380,6 @@ Definice: **Suboptimální řešení**
 Back:
 
 ![](../../Assets/Pasted%20image%2020240923185747.png)
-
 <!--ID: 1780152137134-->
 END
 
@@ -431,7 +420,6 @@ Co je **optmalizační konstruktivní problém**?
 Back:
 
 ![](../../Assets/Pasted%20image%2020240923190610.png)
-
 <!--ID: 1780152137157-->
 END
 
@@ -475,7 +463,6 @@ Co je **optimalizační rozhodovací problém**?
 Back:
 
 ![](../../Assets/Pasted%20image%2020240923190644.png)
-
 <!--ID: 1780152137181-->
 END
 
@@ -493,7 +480,6 @@ Co je **optimalizační početní problém**?
 Back:
 
 ![](../../Assets/Pasted%20image%2020240923190703.png)
-
 <!--ID: 1780152137192-->
 END
 
@@ -511,7 +497,6 @@ Co je **optimalizační enumerační problém**?
 Back:
 
 ![](../../Assets/Pasted%20image%2020240923190721.png)
-
 <!--ID: 1780152137203-->
 END
 
@@ -531,7 +516,6 @@ Back:
 Rozhodovací problém = jazyk
 
 ![](../../Assets/Pasted%20image%2020240923190757.png)
-
 <!--ID: 1780152137219-->
 END
 
@@ -551,7 +535,6 @@ Back:
 U Booleovy formule řeším, jestli je splnitelná
 
 Pozn. Formule typicky bývá v konjunktivním normálním tvaru
-
 <!--ID: 1780152137232-->
 END
 
@@ -594,7 +577,6 @@ Co je na výstupu, pokud řeším **rozhodovací problém**?
 Back:
 
 **Odpověď ano/ne**
-
 <!--ID: 1780152137255-->
 END
 
@@ -612,7 +594,6 @@ Co je na výstupu, pokud řeším **konstruktivní problém**?
 Back:
 
 **Vykonstruované řešení** (konkrétní **konfigurace**)
-
 <!--ID: 1780152137266-->
 END
 
@@ -689,7 +670,6 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020240923191647.png)
 ![](../../Assets/Pasted%20image%2020240923191704.png)
-
 <!--ID: 1780152137300-->
 END
 
@@ -707,7 +687,6 @@ Co je **off-line** a **on-line** optimalizace?
 Back:
 
 ![](../../Assets/Pasted%20image%2020240923192112.png)
-
 <!--ID: 1780152137312-->
 END
 
@@ -730,7 +709,6 @@ Back:
   - Např. různé trasy pro plánování MHD řidičů, aby nebyli v práci znuděný (i když by bylo efektivnější, kdyby každý řidič jezdil furt tu samou trasu)
 
 ![](../../Assets/Pasted%20image%2020240923192147.png)
-
 <!--ID: 1780152137323-->
 END
 
@@ -803,7 +781,6 @@ Proč se často hodnotí algoritmy experimentálně?
 Back:
 
 Protože jsou algoritmy **často moc složité** na to, aby se jednoduše určovala horní mez a další vlastnosti.
-
 <!--ID: 1780152137358-->
 END
 
@@ -856,7 +833,6 @@ Mám otázku co chci zjistit, provedu
 4. **Interpretace výsledku** _(tzn. zobecním ta data)_
 
 Tím získám odpověď.
-
 <!--ID: 1780152137380-->
 END
 
@@ -935,7 +911,6 @@ Back:
 - Ty o kterých **nevíme** _(Např. poměr věcí v batohu vůči jejich cenám)_
 
 Ty co **nevíme** můžeme **objevovat**.
-
 <!--ID: 1780152137412-->
 END
 
@@ -954,7 +929,6 @@ Co je metrika **Fázový přechod**?
 Back:
 
 **Pravděpodobnost splnitelnosti formule v závislosti na poměru počtu klauzulí k počtu proměnných.**
-
 <!--ID: 1780152137422-->
 END
 
@@ -1027,7 +1001,6 @@ Co musíme dodržet při **generování instancí** problému?
 Back:
 
 **Každá instance** se zadanou metrikou musí být **stejně pravděpodobná**.
-
 <!--ID: 1780152137455-->
 END
 
@@ -1145,7 +1118,6 @@ Back:
 2. Z toho pak **spočíst** **rozptyl** a **směrodatnou odchylku**.
 
 Díky tomu výsledky měření **zkomprimuju** do pár informací (rozložení, rozptyl, odchylka).
-
 <!--ID: 1780152137508-->
 END
 
@@ -1164,7 +1136,6 @@ K čemu mi je získaná **statistika** při **hodnocení algoritmu**?
 Back:
 
 Když mám dva algoritmy $A$ a $B$, tak je pak mohu srovnávat.
-
 <!--ID: 1780152137518-->
 END
 
@@ -1198,7 +1169,6 @@ Na základě **dominance**
 <!-- ExampleEnd -->
 
 Je možné, že **nevíme**. Pak je třeba hlubší analýza.
-
 <!--ID: 1780152137529-->
 END
 
@@ -1301,7 +1271,6 @@ Co je **vizualizace** výstupních metrik?
 Back:
 
 Různé grafy, histogramy atd.
-
 <!--ID: 1780152137571-->
 END
 
@@ -1409,7 +1378,6 @@ Protože mám **dva zdroje variance**
 - Variance z jednotlivých instancí
 
 Musím tedy provést **dvakrát potlačení variance**, tady provést "statistiku ze statistiky".
-
 <!--ID: 1780152137614-->
 END
 
@@ -1430,7 +1398,6 @@ Back:
 Buď zjistím, jestli mají výsledky stejné rozdělení (viz BI-PST).
 
 Nebo pro **každou instanci** spustím algoritmus **několikrát** _(např. 4x)_ a pak spočtu diferenci _(tzn. jak moc se od sebe výsledky liší)_
-
 <!--ID: 1780152137624-->
 END
 
@@ -1623,7 +1590,6 @@ Co je IMRaD?
 Back:
 
 Zaběhlý způsob **strukturování** experimentu
-
 <!--ID: 1780152137720-->
 END
 
