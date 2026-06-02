@@ -475,8 +475,7 @@ Original Flashcard ID: 1746518365325
 START
 NI-SZZ
 
-
-Jaká se syntax funkce `MPI_Recv`? (7)
+Jaká je syntaxe funkce `MPI_Recv`? (7)
 
 Back:
 
@@ -846,22 +845,22 @@ Jak funguje použití `MPI_Request`, `MPI_Test` a `MPI_Wait` u neblokujícího o
 
 Back:
 
-Neblokující funkci předáme navíc parametr `*request` typu `*MPI_Request`
+Neblokující funkci předáme navíc parametr `request` typu `MPI_Request`
 
 Můžeme otestovat, zda je request vykonaný:
 
 ```c++
 MPI_Status status; int flag;
-MPI_Test(*request, *flag, *status);
+MPI_Test(&request, &flag, &status);
 ```
 
-Až otestujeme a flag bude `true`, můžeme buffer použít.
+Až otestujeme a bude `flag == 1` (tedy `true`), pak můžeme teprve buffer použít.
 
 Nebo můžeme počkat na dokončení operace
 
 ```c++
 MPI_Status status;
-MPI_Wait(*request, *status)
+MPI_Wait(&request, &status)
 ```
 
 Wait čeká a až skončí čekání, můžeme rovnou buffer použít
@@ -1673,3 +1672,19 @@ Back:
 END
 
 ---
+
+
+START
+NI-SZZ
+
+Jaký je rozdíl mezi **lokální** a **nelokální** operací v MPI?
+
+Back:
+
+- **Lokální operace (nezávislá)** = Dokončení operace závisí **výhradně na stavu serveru (uzlu)**. Funkce k tomu, aby se úspěšně ukončila, nepotřebuje komunikovat přes síť s žádným jiným procesem.
+- **Nelokální operace (závislá)** = Dokončení operace závisí na tom, **co udělá jiný MPI proces (často na vzdáleném serveru)**. Funkce "zablokuje" program a neskončí do té doby, dokud přes síť neproběhne potřebná akce nebo potvrzení.
+
+END
+
+---
+

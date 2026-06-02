@@ -472,8 +472,8 @@ Jaké speciální vlastnosti má $Q_n$? (3)
 
 Back:
 
-- vzdálenost uzlů odpovídá **Hammingovy vzdálenosti**
-- je to **Hamiltonovský graf**
+- vzdálenost uzlů odpovídá **Hammingově vzdálenosti**
+- je to **Hamiltonovský graf** 
 - je **ortogonální** (lze zkonstruovat kartézským součinem)
 
 <!-- DetailInfoStart -->
@@ -502,11 +502,18 @@ START
 NI-SZZ
 
 
-Je hyperkrychle $Q_n$ **řídká/hustá**?
+Je hyperkrychle $Q_n$ **řídká**?
 
 Back:
 
-Je **hustá**.
+Ne není.
+
+<!-- ImageStart -->
+
+![](../../Assets/Pasted%20image%2020260602101243.png)
+
+<!-- ImageEnd -->
+
 
 Tags: otazka26
 <!--ID: 1779300070787-->
@@ -717,7 +724,7 @@ Jaké směrování používá $Q_n$ hyperkrychle? Které kolektivní operace jso
 
 Back:
 
-- **e-cube směrování** - když posíláme zprávu z vrcholu $a$ do $b$, tak jdeme zprava a vzdy změníme jeden bit, který se liší od řetězce $b$ (tím že zprávu pošleme na příslušného souseda)
+- **e-cube směrování** - Při odesílání zprávy z vrcholu $a$ do $b$ se jde postupně v bitech od konce adresy $a$ a pokud v bitu není shoda, provede se jeho flip (aby shoda byla) a přechod na daného souseda
 - existují optimální algoritmy pro **všechny kolektivní operace**
 
 Tags: otazka26
@@ -796,6 +803,8 @@ Kolik má hran mřížka $M(z_1, \dots, z_n)$?
 Back:
 
 $$\sum_i^n (z_i-1)\prod_{j=1, j \neq i}^n z_j$$
+
+Vzorec mechanicky spočítá hrany v jednom směru, vynásobí to počtem těchto řad (aby pokryl celou plochu/prostor) a pak to samé zopakuje pro všechny zbylé směry.
 
 Tags: otazka27
 <!--ID: 1779300070825-->
@@ -1437,7 +1446,7 @@ START
 NI-SZZ
 
 
-Jací jsou 3 typy motýlků?
+Jaké jsou 3 typy motýlků?
 
 Back:
 
@@ -1957,7 +1966,9 @@ Je hierarchicky rekurzivní obyčejný motýlek $oBF_n$?
 
 Back:
 
-hierarchicky rekurzivní (obsahuje dva podmotýlky dimenze $n-1$)
+**Ano**
+
+(obsahuje dva podmotýlky dimenze $n-1$)
 
 Tags: otazka29
 <!--ID: 1779300070988-->
@@ -2033,11 +2044,11 @@ START
 NI-SZZ
 
 
-Jaká je bisekční šířka obyčejný motýlek $oBF_n$?
+Jaká je bisekční šířka obyčejného motýlka $oBF_n$?
 
 Back:
 
-Bisekční šířka je $2^n$
+$2^n$
 
 Tags: otazka29
 <!--ID: 1779300070999-->
@@ -2084,9 +2095,9 @@ Jak se liší přímý a nepřímý motýlek?
 Back:
 
 - **přímý** motýlek = procesory zároveň slouží jako přepínače
-  - přepínač použije horní nebo dolní výstup podle cílového bitu
+	- přepínač použije horní nebo dolní výstup podle cílového bitu
 - **nepřímý** motýlek ($indBF_n$) = přepínače jsou oddělené (líp se škáluje, ale je to dražší)
-  - přepínač použije inverzi nebo identitu podle toho, zda se startovní bit liší od cílového
+	- přepínač použije inverzi nebo identitu podle toho, zda se startovní bit liší od cílového
 
 ![](../../Assets/Pasted%20image%2020250402093856.png)
 
