@@ -124,7 +124,7 @@ START
 NI-SZZ
 
 
-Definice: **Dvojitý Darbouxův integrál**
+Definice: (dvojitý) **Darbouxův integrál** 
 
 Back:
 

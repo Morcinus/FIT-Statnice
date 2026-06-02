@@ -636,7 +636,6 @@ Jak funguje:
 
 Je to "nejmíň odfláknutá lokální heuristika".
 <!-- DetailInfoEnd -->
-
 <!--ID: 1780152138420-->
 END
 

@@ -535,32 +535,11 @@ Original Flashcard ID: 1746599649425
 START
 NI-SZZ
 
-
-Jak funguje systém $M|G|\infty$?
-
-- na co se ptáme
-- čemu je rovna $p(s)$
-- čemu je pak rovna střední hodnota?
+SMAZAT
 
 Back:
 
-Přijde požadavek a je v systému nějakou dobu. Já se ptám, jaká je pravděpodobnost, že v bodě $t$ tam ten požadavek ještě bude.
-
-Přijde požadavek v čase $s$ a my se ptáme, jaká je pravděpodobnost, že tam ještě bude v čase $t$. Tato pravděpodobnost je $p(s) := 1- G(t-s)$
-
-To když dosadíme do nehomogenního thinningu, tak nám vyjde poisson se střední hodnotou
-![](../../Assets/Pasted%20image%2020250517162031.png)
-
-Pro $t \rightarrow \infty$ to pak vychází $\frac{\lambda}{\mu}$
-![](../../Assets/Pasted%20image%2020250517162120.png)
-
-<!-- DetailInfoStart -->
-
-![](../../Assets/Pasted%20image%2020250501143115.png)
-![](../../Assets/Pasted%20image%2020250501143124.png)
-![](../../Assets/Pasted%20image%2020250501143134.png)
-
-<!-- DetailInfoEnd -->
+SMAZAT
 <!--ID: 1778521859443-->
 END
 
