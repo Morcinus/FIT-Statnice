@@ -421,11 +421,11 @@ Original Flashcard ID: 1728921215232
 START
 NI-SZZ
 
-Co je **optmalizační konstruktivní problém**?
+SMAZAT
 
 Back:
 
-![](../../Assets/Pasted%20image%2020240923190610.png)
+SMAZAT
 <!--ID: 1780152137157-->
 END
 
@@ -438,20 +438,11 @@ Original Flashcard ID: 1728921215235
 START
 NI-SZZ
 
-Co je **optimalizační evaluační problém**?
+SMAZAT
 
 Back:
 
-![](../../Assets/Pasted%20image%2020240923190631.png)
-
-<!-- ExampleStart -->
-
-Např. snažíme se najít **délku** nejkratší cesty v grafu.
-
-$C(Y)$ - délka cesty
-$R(I,Y)$ - omezení na to, co považuju za cestu od toho jednoho uzlu k druhému
-
-<!-- ExampleEnd -->
+SMAZAT
 <!--ID: 1780152137169-->
 END
 
@@ -464,11 +455,11 @@ Original Flashcard ID: 1728921215238
 START
 NI-SZZ
 
-Co je **optimalizační rozhodovací problém**?
+SMAZAT
 
 Back:
 
-![](../../Assets/Pasted%20image%2020240923190644.png)
+SMAZAT
 <!--ID: 1780152137181-->
 END
 
@@ -481,11 +472,11 @@ Original Flashcard ID: 1728921215241
 START
 NI-SZZ
 
-Co je **optimalizační početní problém**?
+SMAZAT
 
 Back:
 
-![](../../Assets/Pasted%20image%2020240923190703.png)
+SMAZAT
 <!--ID: 1780152137192-->
 END
 
@@ -498,11 +489,11 @@ Original Flashcard ID: 1728921215244
 START
 NI-SZZ
 
-Co je **optimalizační enumerační problém**?
+SMAZAT
 
 Back:
 
-![](../../Assets/Pasted%20image%2020240923190721.png)
+SMAZAT
 <!--ID: 1780152137203-->
 END
 
@@ -621,9 +612,14 @@ Vysvětli, co dělají jednotlivé verze SATu:
 
 Back:
 
-![](../../Assets/Pasted%20image%2020240923191404.png)
+
+- **Rozhodovací verze** - zjistí jestli existuje ohodnocení, že je formule pravdivá
+- **Konstruktivní verze** - sestrojí ohodnocení takové, že formule je pravdivá
+- **Enumerační verze** - sestrojí všechna ohodnocení taková, že formule je pravdivá
+- **Početní verze** - spočte ohodnocení taková, že formule je pravdivá
 
 <!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020240923191404.png)
 
 ![](../../Assets/Pasted%20image%2020240923191522.png)
 
@@ -671,11 +667,13 @@ Co je **max-weighted sat a max sat?**
 
 Back:
 
-- **Max weighted SAT** - snaží se maximalizovat počet splněných klauzulí, nezajímá ho splnění celé formule
-- **Max SAT** - maximalizuje počet jedniček v řešení při splnění celé formule
+- **Max SAT** - snaží se maximalizovat počet splněných klauzulí (ne nutně celou formuli)
+- **Max weighted SAT** - to samé, ale každá klauzule má svoji váhu -> snažíme se maximalizovat váhy
 
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020240923191647.png)
 ![](../../Assets/Pasted%20image%2020240923191704.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1780152137300-->
 END
 
@@ -710,9 +708,9 @@ Co je **multikriteriální optimalizace** a **multimodální optimalizace**?
 Back:
 
 - **multikriteriální optimalizace** - mám více kritérií a chci vybírat různé možnosti
-  - Např. spotřeba paliva v autobuse vs spokojení zákazníci
+	- Např. spotřeba paliva v autobuse vs spokojení zákazníci
 - **multimodální optimalizace** - hledám různá suboptimální řešení
-  - Např. různé trasy pro plánování MHD řidičů, aby nebyli v práci znuděný (i když by bylo efektivnější, kdyby každý řidič jezdil furt tu samou trasu)
+	- Např. různé trasy pro plánování MHD řidičů, aby nebyli v práci znuděný (i když by bylo efektivnější, kdyby každý řidič jezdil furt tu samou trasu)
 
 ![](../../Assets/Pasted%20image%2020240923192147.png)
 <!--ID: 1780152137323-->
@@ -728,22 +726,11 @@ START
 NI-SZZ
 
 
-Jaké provádíme typy **hodnocení algoritmů**? Co každý typ znamená? (2 typy)
+SMAZAT
 
 Back:
 
-- **Teorie**
-  - Abychom algoritmus srovnali s dosud známými algoritmy, s optimem
-  - Abychom porozuměli algoritmu
-- **Aplikace**
-  - Abychom určili vhodnost algoritmu pro zamýšlenou funkci
-
-<!-- ExampleStart -->
-
-- **Teorie** - horní asymptotická mez výpočetní složitosti
-- **Aplikace** - průměrná výpočetní složitost na instancích
-
-<!-- ExampleEnd -->
+SMAZAT
 <!--ID: 1780152137335-->
 END
 
@@ -806,8 +793,8 @@ Co z toho vyvodíme?
 Back:
 
 - **Složitost**
-  - Z hlediska teorie
-  - Z hlediska nasazení
+	- Z hlediska teorie
+	- Z hlediska nasazení
 - **Kvalita** řešení
 - **Porozumění** - např. proč na určitých instancích algoritmus pracuje špatně
 
@@ -852,12 +839,12 @@ START
 NI-SZZ
 
 
-Jaké metriky nás zajímají u **experimentu**?
+Jaké metriky nás zajímají u **experimentu**? (2)
 
 Back:
 
-- **Metriky vstupu**
-- **Metriky výstupu**
+- **Metriky vstupu** - určují vlastnosti instance (např. velikost, rozsah hodnot, jestli jsou seřazené atd.)
+- **Metriky výstupu** - výsledky, které měříme (např. čas běhu, počet kroků/iterací, odchylka od optima,...)
 
 <!-- ExplanationStart -->
 
@@ -983,7 +970,7 @@ START
 NI-SZZ
 
 
-Jakými způsoby lze získávat instance problému?
+Jakými způsoby lze **získávat instance problému**?
 
 Back:
 
@@ -1024,13 +1011,9 @@ Co je **variance** v metrikách?
 
 Back:
 
-To jak moc se mi mohou lišit jednotlivé instance od sebe.
+To, jak moc se mi od sebe liší **výstupní metriky** pro jednotlivé instance.
 
-<!-- ExampleStart -->
-
-Např. když chci mít graf s 5 uzlama, tak těch možností, jak ten graf bude vypadat je poměrně dost.
-
-<!-- ExampleEnd -->
+Např. když všechny instance běží cca 90-110 sekund, tak je to nízká variace, ale když běží 50-1000 sekund, tak je to velká variace
 <!--ID: 1780152137465-->
 END
 
@@ -1048,7 +1031,9 @@ Co znamená **potlačení variance**?
 
 Back:
 
-Tím, že nad **výstupními metrikami** z instancí provedu **statistické zpracování**, **potlačí** mi to ty variance, tedy nebude tolik vadit to, že se mi ty instance od sebe liší.
+Nad **výstupními metrikami** provedeme nějakou **statistiku** (např. průměr), tak tím **potlačíme variaci**
+
+Tzn. nebude tolik vadit, že se nějaká instance liší víc
 
 <!-- ExampleStart -->
 
@@ -1068,20 +1053,19 @@ START
 NI-SZZ
 
 
-Jaké jsou kroky **obecného vyhodnocení algoritmu**? (3+2)
+Jaké jsou kroky **obecného vyhodnocení algoritmu**? (2+2)
 
 Back:
 
 **Získání instancí**
-
-1. Mám **charakterizaci instancí**
-2. Měním si nějakou zadanou **vstupní metriku**
-3. Pro každou **hodnotu vstupní metriky** mi generátor dá nějakou **instanci**
+1. Nastavíme **vstupní metriku**
+2. Pro danou metriku nám generátor vygeneruje **instanci** problému
+3. Těch instancí nagenerujeme hromadu (s různými vstupními metrikami)
 
 **Měření výstupní metriky**
 
-1. **Pustím algoritmus** _nad instancemi_
-2. **Měřím výstupní metriku**
+1. **Pustím algoritmus** získanými instancemi
+2. **Měříme výstupní metriku**
 3. Z výstupní metriky **udělám statistiku**, _abych potlačil varianci v instancích_
 4. Udělám **interpretaci** statistiky
 <!--ID: 1780152137486-->
@@ -1115,8 +1099,7 @@ Original Flashcard ID: 1728241521319
 START
 NI-SZZ
 
-
-**Co bych měl** z hlediska **statistiky** udělat na **datech výstupní metriky**?
+**Co bych měl** z hlediska **statistiky** udělat na **datech výstupní metriky**, když chci zhodnotit výsledky?
 
 Back:
 
@@ -1137,7 +1120,7 @@ START
 NI-SZZ
 
 
-K čemu mi je získaná **statistika** při **hodnocení algoritmu**?
+K čemu mi je získaná **statistika** při **hodnocení algoritmu**? (např. když získám rozptyl)
 
 Back:
 
@@ -1155,24 +1138,15 @@ START
 NI-SZZ
 
 
-Jakými způsoby můžu srovnávat statistiky algoritmů?
+Jakými způsoby můžu **srovnávat statistiky algoritmů**? (2)
 
 Back:
 
 Na základě **parametrů rozložení** (rozptyl, odchylka)
-
-<!-- ExampleStart -->
-
-- Když má $A$ lepší všechny parametry, je $A$ lepší
-- Jinak nevíme
-<!-- ExampleEnd -->
+- Např. Když má $A$ lepší všechny parametry, je $A$ lepší
 
 Na základě **dominance**
-
-<!-- ExampleStart -->
-
-- Když $A$ je pro každou instanci lepší nebo stejně dobrý než $B$, je $A$ lepší algoritmus
-<!-- ExampleEnd -->
+- Např. že $A$ je pro určité typy instancí lepší než $B$
 
 Je možné, že **nevíme**. Pak je třeba hlubší analýza.
 <!--ID: 1780152137529-->
@@ -1188,23 +1162,17 @@ START
 NI-SZZ
 
 
-Jak se liší v **hodnocení randomizovaných algoritmů** od normálních algoritmů?
+Jak se liší v **hodnocení randomizovaných algoritmů** od **normálních algoritmů**?
 
 Back:
 
-Měřené výstupní metriky jsou **náhodná čísla** a to **i na jedné instanci**.
+Měření typicky provádíme na **jedné instanci**, protože tu varianci nám tam dělá ta náhoda.
 
-<!-- ExplanationStart -->
-
-To vypadá následovně:
-
-1. **Mám jednu instanci**
-2. **Pustím algoritmus**, ten má v sobě nějaký zdroj náhodnosti
-3. **Dostanu metriku**, která i na jedné instanci je **náhodná**
-
-Dále postupuju stejně jako u normálního algoritmu.
-
-<!-- ExplanationEnd -->
+Tzn.
+1. Spustíme algoritmus na **jedné instanci**
+2. Měříme výstupní metriku
+3. Uděláme statistiku a **potlačíme varianci způsobené randomizací**
+4. Interpretujeme data
 
 <!-- ImageStart -->
 
@@ -1228,13 +1196,7 @@ Co jsou **primární metriky**?
 
 Back:
 
-Přímo měřené hodnoty.
-
-<!-- ExampleStart -->
-
-Čas běhu algoritmu.
-
-<!-- ExampleEnd -->
+Přímo **naměřené hodnoty** (např. čas běhu algoritmu)
 <!--ID: 1780152137550-->
 END
 
@@ -1252,7 +1214,7 @@ Co jsou **sekundární metriky** (=kvantitativní srovnání)?
 
 Back:
 
-To co získám statistickou metodou z primárních.
+To co získám **statistickou metodou z primárních**. (např. průměr času běhu)
 
 <!-- ExampleStart -->
 
@@ -1289,8 +1251,11 @@ Original Flashcard ID: 1728241521369
 START
 NI-SZZ
 
+Mám **randomizovaný algoritmus**, co pustím s **různými parametry** _(p=0.1,p=0.4)_ nad jednou instancí. 
 
-Mám **randomizovaný algoritmus**, co pustím s **různými parametry** _(p=0.1,p=0.4)_ nad jednou instancí. Z toho dostanu následující grafy výstupních metrik.
+Z toho naměřím tyto výstupní metriky:
+- úspěšnost
+- počet kroků u úspěšných řešení (viz grafy)
 
 **Co budu dělat dál?**
 
@@ -1298,8 +1263,9 @@ Mám **randomizovaný algoritmus**, co pustím s **různými parametry** _(p=0.1
 
 Back:
 
-1. Sestavím si z hodnot **distribuční funkci**.
-2. Z toho pak vykoukám závěr.
+1. Sestavím si z hodnot **distribuční funkci** (ta mi řekne pravděpodobnost, že algoritmus úspěšně skončí v x-tém kroku)
+2. Distribuční funkci **přenásobím úspěšností** (aby to bralo v potaz i neúspěšné pokusy)
+3. Z toho pak vykoukám závěr (např. že jeden algoritmus pravděpodobně skončí dřív -> je lepší).
 
 <!-- ExampleStart -->
 
@@ -1322,21 +1288,19 @@ Original Flashcard ID: 1728241521376
 START
 NI-SZZ
 
-
-Co je **korekce na úspěšnost**?
+Co nám říká **distribuční funkce** u randomizovaných algoritmů? Jaký má problém a co se s tím dělá?
 
 Back:
 
-Normálně distribuční funkce nebere v potaz neúspěšné pokusy.
+Pomocí **distribuční funkce** vyjádříme **pravděpodobnost, že algoritmus úspěšně skončil nejvýše v $x$-tém kroku**
 
-**Jak to vyřeším:**
-Spočtu pravděpodobnost, že algoritmus **úspěšně skončil** nejvýše v tom kroku.
+**Problém**: počítá se jen z **úspěšných běhů**, takže nebereme neúspěšné v potaz
 
-<!-- DetailInfoStart -->
+**Řešení**: Výslednou distribuční funkci **přenásobíme úspěšností** (poměrem úspěšných a neúspěšných běhů)
 
-![](../../Assets/Pasted%20image%2020241006195706.png)
-
-<!-- DetailInfoEnd -->
+Díky tomu pak můžeme lépe srovnat algoritmy:
+![](../../Assets/Pasted%20image%2020260602133258.png)
+Zde je například černý lepší, protože má větší pravděpodobnost, že úspěšně skončí dřív. 
 <!--ID: 1780152137592-->
 END
 
@@ -1353,6 +1317,14 @@ NI-SZZ
 Jak se liší v **hodnocení randomizovaných algoritmů na více instancích** od randomizovaných algoritmů **na jedné instanci**?
 
 Back:
+
+Přidáním **různých instancí** přidáváme další **zdroj variance**, který musíme potlačit
+
+Musíme udělat o jednu statistiku navíc (jakoby statistiku na těch statistikách).
+
+Tzn.
+1. Pro každou instanci rozběhneme algoritmus několikrát a získáme statistiku (tzn. potlačujeme varianci randomizace)
+2. Nad všemi statistikami pak uděláme další statistiku (čímž potlačujeme varianci instancí)
 
 <!-- ImageStart -->
 
@@ -1371,8 +1343,7 @@ Original Flashcard ID: 1728241521389
 START
 NI-SZZ
 
-
-Proč se u **randomizovaného algoritmu** na **více instancí** dělá **statistika dvakrát**?
+Co musím udělat 
 
 ![](../../Assets/Pasted%20image%2020241006195935.png)
 
@@ -1421,7 +1392,7 @@ Co je **robustnost heuristiky**?
 
 Back:
 
-**Robustnost** = závislost práce heuristiky na **popisu instance**
+**Robustnost** = jestli mi výstup algoritmu závisí na reprezentaci instance (např. na pořadí proměnných v SATu)
 
 <!-- ExampleStart -->
 
@@ -1525,6 +1496,40 @@ END
 
 ---
 
+
+START
+FIT-Card
+
+Co znamená, že **algoritmus nemá iterativní sílu**? Jak bychom to otestovali?
+
+Back:
+
+Když **nemá iterativní sílu** = výstup závisí na počáteční konfiguraci 
+
+Jak to otestujeme: **zkouším pro každou instanci více počátečních konfigurací**
+<!--ID: 1780401768039-->
+END
+
+---
+
+
+START
+FIT-Card
+
+Jaké měření algoritmů můžeme dělat? (4)
+
+Back:
+
+- Měření **algoritmu na více instancích**
+- Měření **robustnosti algoritmu**
+- Měření **iterativní síly**
+- Měření **randomizovaných algoritmů**
+<!--ID: 1780401768050-->
+END
+
+---
+
+
 <!--
 Original Flashcard ID: 1728241521427
 -->
@@ -1537,9 +1542,7 @@ K čemu jsou dobré **standardní sady instancí**?
 
 Back:
 
-Můžu statistiky pro algoritmus dělat na základě standardizovaných sad instancí.
-
-**Díky tomu pak můžu algoritmy porovnávat.**
+Už někdo instance vytvořil za nás, můžeme **algoritmy pak snadno porovnávat**
 
 <!-- ExampleStart -->
 
