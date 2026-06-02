@@ -392,14 +392,20 @@ Original Flashcard ID: 1728921215227
 START
 NI-SZZ
 
-Co je **rozhodovací problém**, **konstruktivní problém**, **enumerační problém**, **početní problém**?
+Jaké jsou **typy problémů**? (6+1)
 
 Back:
 
-![](../../Assets/Pasted%20image%2020240923190452.png)
+- **kombinatorický** = jde umlátit vyzkoušením všech možností
+- **rozhodovací** = odpověď je ano/ne
+- **konstruktivní** = odpověď je jakákoliv konfigurace splňující omezení
+- **enumerační** = odpověď je seznam všech konfigurací splňujících omezení
+- **početní** = odpověď je počet konfigurací splňujících omezení
+- **optimalizační** = navíc pracujeme s optimalizačním kritériem (buď musí být nejlepší možné anebo lepší než konstanta zadaná jako součást vstupu)
+    - **evaluační** = odpověď je nejlepší hodnota optimalizačního kritéria
 
 <!-- DetailInfoStart -->
-
+![](../../Assets/Pasted%20image%2020240923190452.png)
 ![](../../Assets/Pasted%20image%2020240923190537.png)
 
 <!-- DetailInfoEnd -->
