@@ -15,7 +15,6 @@ TODO:
 - Jak spočíst t_alpha/2
 -->
 
-
 START
 NI-SZZ
 

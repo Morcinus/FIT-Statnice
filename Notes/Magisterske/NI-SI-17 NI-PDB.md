@@ -9,6 +9,7 @@ FILE TAGS: NI-SI-17 NI-PDB
 > NI-SI-17 (NI-PDB)
 > Databázové modely: relační, objektově-relační, dokumentový, XML, sloupcový, klíč-hodnota, grafový; jejich rozdíly a vhodné aplikace (aplikační domény). Dotazovací jazyky: SQL, XQuery, Cypher; jejich typické konstrukce a vyjadřovací možnosti.
 
+
 ## Relační
 
 
@@ -830,7 +831,6 @@ Back:
 - **real-world identifikátory** - email, login name atd.
 - **automaticky generované** - např. GUID
 
-
 <!--ID: 1779128799697-->
 END
 
@@ -1627,7 +1627,6 @@ Back:
 
 - **XPath** - jazyk který aplikujeme na XML dokument a on nám vrátí sekvenci elementů
 - **XQuery** - XPath + další rozšíření navíc jako například FLWOR (For, Let, Where, Order By, Return)
-
 
 <!--ID: 1779128799781-->
 END

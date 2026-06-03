@@ -9,6 +9,7 @@ FILE TAGS: NI-SI-10 NI-AM1
 > NI-SI-10 (NI-AM1)
 > Integrační návrhové vzory, synchronní a asynchronní komunikace, blocking a non-blocking I/O.
 
+
 ## Integrační návrhové vzory
 
 <!--
@@ -480,7 +481,6 @@ Back:
 - ESB aplikace
 	- Typy služeb: sdílené a infrastruktura
 	- Typy procesů: technické a businessové
-
 
 <!--ID: 1773945940684-->
 END

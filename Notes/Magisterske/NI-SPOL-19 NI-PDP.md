@@ -9,6 +9,7 @@ FILE TAGS: NI-SPOL-19 NI-PDP
 > NI-SPOL-19 (NI-PDP)
 > Přímé ortogonální a hyperkubické propojovací sítě paralelních počítačů (definice, vlastnosti, vnořování).
 
+
 ## Přímé ortogonální a hyperkubické propojovací sítě paralelních počítačů (definice, vlastnosti, vnořování)
 
 <!--

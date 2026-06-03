@@ -22,6 +22,7 @@ TODO:
 - Možná ještě jak spočítat hustotu f(x), resp. marginální hustotu f(x) a f(y) sdruženého rozdělení X a Y
 -->
 
+
 ## Základy teorie informace a kódování
 
 <!--

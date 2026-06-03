@@ -9,6 +9,7 @@ FILE TAGS: NI-SI-04 NI-ADP
 > NI-SI-04 (NI-ADP)
 > Vzory pro chování objektů (Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, State, Strategy, Template method, Visitor).
 
+
 ## Vzory pro chování objektů (Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, State, Strategy, Template method, Visitor)
 
 START

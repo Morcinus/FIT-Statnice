@@ -9,6 +9,7 @@ FILE TAGS: NI-SI-21 NI-PIS
 > NI-SI-21 (NI-PIS)
 > Práce se vstupními a výstupními daty v informačních systémech – konsolidace, normalizace, agregace. Manažerské informační systémy. Využití pokročilé analýzy dat v podnikové praxi, zpracování velkých dat.
 
+
 ## Práce se vstupními a výstupními daty v informačních systémech – konsolidace, normalizace, agregace
 
 <!--
@@ -27,7 +28,6 @@ Back:
 - **Referenční data** - číselníky (dvojice číslo - něco, např. kódy států, měn atd.), externí registry (živnostenský rejstřík)
 - **Master data** - klíčový data, co podnik udržuje konzistentní napříč celou organizací (např. klienti, produkty)
 - **Transakční data** (platby, půjčky, atd.)
-
 
 <!--ID: 1780079216560-->
 END
@@ -62,7 +62,6 @@ Typicky se 1x denně (v noci) přelévají data z DB primárního systému do St
 <!-- ImageStart -->
 ![](../../Assets/Pasted%20image%2020260601101758.png)
 <!-- ImageEnd -->
-
 <!--ID: 1780079216563-->
 END
 
@@ -81,7 +80,6 @@ Jaký je vztah data lake a data staging area?
 Back:
 
 Data lake je historizovaná stage (jsou tam snímky napříč historií).
-
 
 <!--ID: 1780079216566-->
 END
@@ -116,7 +114,6 @@ Vhodné pro: tradiční datové sklady, kde je třeba mít plně připravená da
 
 Vhodné pro: moderní cloudové datové sklady (např. BigQuery, Snowflake), které zvládají velké objemy dat a výkonné transformace přímo ve skladu.
 
-
 <!--ID: 1780079216568-->
 END
 
@@ -137,7 +134,6 @@ Back:
 
 Vlevo jsou operační systémy
 Vpravo je "svět analytiky/business intelligence"
-
 
 <!--ID: 1780079216571-->
 END
@@ -180,7 +176,6 @@ Back:
 	- Schéma není vynuceno
 - **nonstructured** - obrázky, audio, social media atd.
 
-
 <!--ID: 1780079216577-->
 END
 
@@ -204,7 +199,6 @@ Back:
 - Transaction Structure Data
 - Transaction Activity Data
 - Transaction Audit Data - logy a audity
-
 
 <!--ID: 1780079216579-->
 END
@@ -265,7 +259,6 @@ Back:
 6. **Analytical & BI Platform** - nad DWH vzniká platforma pro datovou analýzu a reporting (dashboardy atd.)
 7. **Universal Data Platform** - centrální hub pro všechna data (např. Databricks, Snowflake,...)
 
-
 <!--ID: 1780079216585-->
 END
 
@@ -291,7 +284,6 @@ Analogie s dopravou:
 
 (vůbec nechápu jak ten borec získal řidičák, jestli mu ta analogie s dopravou dává smysl)
 
-
 <!--ID: 1780079216587-->
 END
 
@@ -313,7 +305,6 @@ Když si nikdo nestěžuje :D
 
 Aka když to lidi jsou schopný využít na to co potřebují.
 
-
 <!--ID: 1780079216590-->
 END
 
@@ -332,7 +323,6 @@ Co je **historizace dat**?
 Back:
 
 Dělají se "snímky" dat. Díky tomu můžu přistupovat k tomu, jak data vypadala v minulosti.
-
 
 <!--ID: 1780079216593-->
 END
@@ -355,7 +345,6 @@ Back:
 - **Flexibility** - možnost měnit datový model, přidávání nových zdrojů dat, nové reporty atd.
 - **Resources** - míra investice do data managementu - čas, lidé, technologie
 - **Control** - musím omezit, kdo může přistupovat k jakým datům
-
 
 <!--ID: 1780079216595-->
 END
@@ -458,7 +447,6 @@ Back:
 	- Typicky se člověk snaží identifikovat entity (v bankách typicky kontrakty a osoby - dodavatelé, bankéři,...)
 4. **Fyzický datový model** - návrh konkrétních tabulek v databázi atd.
 
-
 <!--ID: 1780079216606-->
 END
 
@@ -484,7 +472,6 @@ Proto se dělá to, že se udělá "golden record" - vytváří se jeden ucelen�
 
 Tohle je obecně téma toho master data managementu
 
-
 <!--ID: 1780079216609-->
 END
 
@@ -507,7 +494,6 @@ Back:
 - **Constellation schema** - více faktových tabulek co sdílí dimenze
 - **Snowstorm schema** - extrémně rozvětvená snowflake struktura
 
-
 <!--ID: 1780079216612-->
 END
 
@@ -528,7 +514,6 @@ Back:
 Definuju struktury tabulek a datových uložišť v **metadatech**. Podle nich se pak automaticky vygenerují jednotlivé kroky pro provedení transformací atd.
 
 Podobně jak třeba člověk používá Terraform pro infrastructure as code, tak tady člověk definuje ty data v nějakém meta jazyce a podle toho se pak generují ty konkrétní kroky.
-
 
 <!--ID: 1780079216614-->
 END
@@ -606,7 +591,6 @@ Back:
 - **technická** - že to bude v určitém formátu, že to bude mít určité vlastnosti
 - **byznysová** - např. když mají data určité hodnoty, které nejsou dobré pro byznys
 
-
 <!--ID: 1780079216622-->
 END
 
@@ -627,7 +611,6 @@ Back:
 - **Landing** - neřeší se tam datové typy
 - **Stage** - tam se už řeší datové typy
 
-
 <!--ID: 1780079216625-->
 END
 
@@ -646,7 +629,6 @@ Je cílem do datového skladu nacpat všechna data firmy?
 Back:
 
 Nope, typicky pouze ta data, co jsou kritická pro byznys a pro reporting. Typicky bude hodně data ještě rozházených kolem.
-
 
 <!--ID: 1780079216628-->
 END
@@ -702,7 +684,6 @@ Back:
 	- Tato fakta se nesmí sčítat napříč **žádnou dimenzí**. Většinou jde o různé poměry, procenta, průměry nebo hodnoty jako je teplota či jednotková cena.
 	- **Příklad:** Procentuální zisk (marže), konverzní poměr, průměrná cena za proklik (CPC).
 
-
 <!--ID: 1780079216633-->
 END
 
@@ -722,7 +703,6 @@ Back:
 
 - **Snapshoting** - udělám celou kopii těch dat např 1x za den (nedává moc smysl u dat, které se často nemění)
 - **Slowly changing dimenze** - uložím jednou, když vznikne změna, tak si uložím data
-
 
 <!--ID: 1780079216636-->
 END
@@ -795,7 +775,6 @@ Back:
 
 **Decommissioning = “uklizení starých dat”** – odstraním je, přesunu, anonymizuji nebo archivuju, aby nezatěžovala systém, nebyla rizikem nebo neporušovala předpisy (např. GDPR).
 
-
 <!--ID: 1780079216650-->
 END
 
@@ -822,7 +801,6 @@ Back:
 - **Time To Market** - neschopnost reagovat rychle na změny trhu
 - **Merge and Acquisition** - spojování společností a produktů
 
-
 <!--ID: 1780079216652-->
 END
 
@@ -842,7 +820,6 @@ Back:
 
 - **ROI** - return on investment
 - **Rizika** - ztráta revenue nebo reputace
-
 
 <!--ID: 1780079216655-->
 END
@@ -866,7 +843,6 @@ Back:
 3. **Rekonciliace**
 4. **Cutover**
 
-
 <!--ID: 1780079216657-->
 END
 
@@ -888,7 +864,6 @@ Back:
 - **Business slovník** - prozkoumává se doména, aby se předešlo nedorozuměním
 - **Hesla** - je třeba vyřešit způsoby hashování atd.
 - **Analýza cílů** - na jakou verzi aplikace/knihoven se chceme dostat
-
 
 <!--ID: 1780079216660-->
 END
@@ -915,7 +890,6 @@ Back:
 - **Change management** - požadavky se mohou v průběhu měnit
 - **Testování** - je třeba testovat, jestli se data zmigrovala správně
 
-
 <!--ID: 1780079216663-->
 END
 
@@ -934,7 +908,6 @@ Co je **Migration Stage Area**?
 Back:
 
 Je to místo, kam se nahrají data a kde se provádějí transformace při migraci dat z nějakého systému do jiného.
-
 
 <!--ID: 1780079216665-->
 END
@@ -956,7 +929,6 @@ Back:
 - **Oslabení referenční integrity** - měl bych zachovat vztahy mezi daty
 - **Vypínání triggerů** - měl bych zachovat v systému triggery
 - **Špatné IDs** - různé systémy na to mají různé metody, musím to nějak sjednotit
-
 
 <!--ID: 1780079216668-->
 END
@@ -980,7 +952,6 @@ Ověření zda byla data přenešena správně.
 - **kvantitativní ověření** - že jsme nic neztratili a že jsme si nic nevymysleli
 - **kvalitativní ověření** - že jsme nezměnili sémantiku dat
 
-
 <!--ID: 1780079216670-->
 END
 
@@ -999,7 +970,6 @@ Co je **Cutover** u datové migrace?
 Back:
 
 **Cutover** = období, kdy se organizace přepne z původního systému na nový.
-
 
 <!--ID: 1780079216674-->
 END
@@ -1020,7 +990,6 @@ Back:
 
 - **BigBang** - vše se přepne najednou - rychlé ale riskantní
 - **Iterativní** - vše se přepne po iteracích - velká komplexita ale jistější
-
 
 <!--ID: 1780079216676-->
 END
@@ -1158,7 +1127,6 @@ Back:
 
 **Business intelligence** = umožňují dělat rozhodnutí ve firmě
 
-
 <!--ID: 1780079216693-->
 END
 
@@ -1179,7 +1147,6 @@ Back:
 - **Operativní** = na denní bázi, nižší management - např. sledování pohledávek
 - **Taktické** = na měsíční/čtvrtletní bázi, střední management - např. sledování plánu kampaní
 - **Strategické** = na roční a delší bázi, top management, board
-
 
 <!--ID: 1780079216696-->
 END
@@ -1230,7 +1197,6 @@ Back:
 
 Iterativní metodika pro data science.
 
-
 <!--ID: 1780079216701-->
 END
 
@@ -1251,7 +1217,6 @@ Back:
 - **Lidé**
 - **Znalosti**
 - **Technika**
-
 
 <!--ID: 1780079216704-->
 END
@@ -1304,7 +1269,6 @@ Back:
 - Komunikuje s **technickými experty** (dává jim zadání)
 - **Prezentuje a vizualizuje data**
 
-
 <!--ID: 1780079216710-->
 END
 
@@ -1328,7 +1292,6 @@ Back:
 - **Kontrola dat** - popisují správně realitu?
 - **Vizualizace dat**
 - **Transformace** - měla by se data upravit?
-
 
 <!--ID: 1780079216712-->
 END
@@ -1356,7 +1319,6 @@ Back:
 - **detekce** - je něco normální případ nebo anomálie
 - **podobnost** - které případy se sobě podobají
 
-
 <!--ID: 1780079216715-->
 END
 
@@ -1383,7 +1345,6 @@ Back:
 - **Linux**
 - **Azure** (cloud)
 
-
 <!--ID: 1780079216718-->
 END
 
@@ -1407,7 +1368,6 @@ Back:
 - **přesnost modelů**
 - **nadbytek dat**
 
-
 <!--ID: 1780079216720-->
 END
 
@@ -1426,7 +1386,6 @@ Co jsou **big data**?
 Back:
 
 **Velké množství** (**rychle měnících** se) **potenciálně hodnotných** dat, která se nedají dobře managovat tradičními způsoby.
-
 
 <!--ID: 1780079216723-->
 END
@@ -1450,7 +1409,6 @@ Back:
 - **variety** - různé formáty
 - (existují další Vs)
 
-
 <!--ID: 1780079216726-->
 END
 
@@ -1471,7 +1429,6 @@ Back:
 - Hadoop
 - Spark
 - Kafka
-
 
 <!--ID: 1780079216728-->
 END
@@ -1506,7 +1463,6 @@ Back:
 	- méně efektivní zpracovávání (protože to musí být real-time)
 	- např. Kafka, Spark
 
-
 <!--ID: 1780079216731-->
 END
 
@@ -1525,7 +1481,6 @@ Co je **Hadoop**?
 Back:
 
 Open source platforma pro distribuované zpracovávání velkého množství dat.
-
 
 <!--ID: 1780079216734-->
 END
@@ -1548,7 +1503,6 @@ Back:
 - **Hadoop Distributed File System** (HDFS) - distribuovaný file system na více zařízeních
 - **Hadoop YARN** - spravuje resources v clusterech a scheduling uživatelských úloh
 - **Hadoop MapReduce** - implementace MapReduce modelu pro zpracování velkých dat
-
 
 <!--ID: 1780079216737-->
 END
@@ -1598,7 +1552,6 @@ Back:
 	- Díky tomu je fault tolerant
 - **Scalable** - dobře se škáluje
 - **Large files** - obsahuje obří data
-
 
 <!--ID: 1780079216742-->
 END
@@ -1675,7 +1628,6 @@ Je to **in-memory** výpočetní rámec pro distribuované zpracovávání dat.
 - Lze použít pro batch processing i streaming
 - Často používaný pro **machine learning** nebo **grafové výpočty**
 - Dá se spustit v Hadoopu
-
 
 <!--ID: 1780079216750-->
 END
@@ -1764,7 +1716,6 @@ Back:
 - **Data Analyst** - dělá reporting a analýzy pro byznys
 - **Data engineer** - spravuje processing a workflow dat
 - **Data Scientist** - dělá statistiky, data mining, predikce, atd.
-
 
 <!--ID: 1780079216762-->
 END

@@ -9,6 +9,7 @@ FILE TAGS: NI-SPOL-08 NI-VSM
 > NI-SPOL-08 (NI-VSM)
 > Markovské řetězce s diskrétním časem. Jejich limitní vlastnosti.
 
+
 ## Markovské řetězce s diskrétním časem
 
 <!--

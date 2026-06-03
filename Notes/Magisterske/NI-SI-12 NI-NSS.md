@@ -9,7 +9,6 @@ FILE TAGS: NI-SI-12 NI-NSS
 > NI-SI-12 (NI-NSS)
 > Způsoby zajištění evolvability software pomocí NSS (Normalizované softwarové systémy): principy, návrhové vzory, architektura, generování kódu. Další oblasti aplikace NSS mimo doménu softwarových systémů.
 
-
 ## Způsoby zajištění evolvability software pomocí NSS (Normalizované softwarové systémy)
 
 <!--

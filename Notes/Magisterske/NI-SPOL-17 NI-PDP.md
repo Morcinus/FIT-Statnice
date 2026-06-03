@@ -9,6 +9,7 @@ FILE TAGS: NI-SPOL-17 NI-PDP
 > NI-SPOL-17 (NI-PDP)
 > Programování nad sdílenou pamětí, programový model OpenMP, datový a funkční paralelismus, synchronizace vláken, vícevláknové algoritmy (násobení polynomů, násobení matic a vektorů, řazení).
 
+
 ## Programování nad sdílenou pamětí
 
 <!--
@@ -2256,7 +2257,7 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020260601093645.png)
 
-
+<!--ID: 1780493530624-->
 END
 
 ---
@@ -2272,7 +2273,7 @@ Back:
 
 ![](../../Assets/Pasted%20image%2020260601093704.png)
 
-
+<!--ID: 1780493530627-->
 END
 
 ---
@@ -2298,7 +2299,7 @@ Cílem funkce `seq_partition_L` je vzít zadanou část pole, vybrat jeden refer
 Back:
 
 ![](../../Assets/Pasted%20image%2020260601094140.png)
-
+<!--ID: 1780493530630-->
 END
 
 ---
@@ -2320,7 +2321,7 @@ Algoritmus hledá zleva prvky, které jsou "příliš velké" (patří napravo o
 Back:
 
 ![](../../Assets/Pasted%20image%2020260601094239.png)
-
+<!--ID: 1780493530633-->
 END
 
 ---

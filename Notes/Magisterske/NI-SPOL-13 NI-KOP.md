@@ -9,6 +9,7 @@ FILE TAGS: NI-SPOL-13 NI-KOP
 > NI-SPOL-13 (NI-KOP)
 > Princip lokálních heuristik, pojem globálního a lokálního minima, obrana před uváznutím v lokálním minimu.
 
+
 ## Princip lokálních heuristik
 
 <!--

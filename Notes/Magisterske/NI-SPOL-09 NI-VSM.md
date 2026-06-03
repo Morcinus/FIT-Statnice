@@ -14,6 +14,7 @@ TODO:
 - přidat co mi říká matice skokových intenzit (už je to v kartičce definice, ale oddělit to do samostatné kartičky)
 -->
 
+
 ## Markovské řetězce se spojitým časem
 
 <!--

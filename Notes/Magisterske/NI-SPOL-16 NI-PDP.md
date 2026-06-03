@@ -9,6 +9,7 @@ FILE TAGS: NI-SPOL-16 NI-PDP
 > NI-SPOL-16 (NI-PDP)
 > Výkonnostní měřítka paralelních algoritmů, PRAM model, APRAM model, škálovatelnost.
 
+
 ## Výkonnostní měřítka paralelních algoritmů
 
 <!--

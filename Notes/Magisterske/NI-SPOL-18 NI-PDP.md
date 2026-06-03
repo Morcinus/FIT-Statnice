@@ -9,7 +9,6 @@ FILE TAGS: NI-SPOL-18 NI-PDP
 > NI-SPOL-18 (NI-PDP)
 > Programování nad distribuovanou pamětí, programový model MPI (vícevláknové procesy, komunikátory, 2-bodové blokující a neblokující komunikační operace, kolektivní operace), paralelní násobení hustých matic, paralelní mocninná metoda.
 
-
 <!--
 TODO:
 - tady by bylo fajn ještě přihodit jednu kartičku na vysvětlení co jsou MPI_Message objekty, aby šlo pochopit co je MPI_Improbe
@@ -1683,7 +1682,7 @@ Back:
 
 - **Lokální operace (nezávislá)** = Dokončení operace závisí **výhradně na stavu serveru (uzlu)**. Funkce k tomu, aby se úspěšně ukončila, nepotřebuje komunikovat přes síť s žádným jiným procesem.
 - **Nelokální operace (závislá)** = Dokončení operace závisí na tom, **co udělá jiný MPI proces (často na vzdáleném serveru)**. Funkce "zablokuje" program a neskončí do té doby, dokud přes síť neproběhne potřebná akce nebo potvrzení.
-
+<!--ID: 1780493530636-->
 END
 
 ---

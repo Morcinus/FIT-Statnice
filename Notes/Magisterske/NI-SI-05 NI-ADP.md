@@ -9,6 +9,7 @@ FILE TAGS: NI-SI-05 NI-ADP
 > NI-SI-05 (NI-ADP)
 > Architektonické vzory (MVC, MVP, MVVM, Client-Server, Microservices vs monolithic server, Asynchronous messaging, Blackboard architecture, Rule-based architecture, Publish-subscribe).
 
+
 ## Architektonické vzory (MVC, MVP, MVVM, Client-Server, Microservices vs monolithic server, Asynchronous messaging, Blackboard architecture, Rule-based architecture, Publish-subscribe)
 
 ### MVC
@@ -461,7 +462,6 @@ Back:
 	- Tato komponenta neustále monitoruje změny na tabuli a "zvednuté ruce" expertů.
 	- Rozhoduje, komu dá slovo (zavolá jeho metodu) a jakým způsobem se bude řešení vyvíjet. Řídí tedy celý průběh programu.
 
-
 <!--ID: 1778786460829-->
 END
 
@@ -681,7 +681,6 @@ Back:
 - **Omezená maximální škálovatelnost pub/sub sítě:**
 	- **Nárazová zátěž (Load surges):** Období, kdy požadavky odběratelů (nebo nápor zpráv) zcela zahltí propustnost sítě, po kterých následují období s nízkým objemem zpráv (kdy je přenosová kapacita sítě naopak nevyužita).
 	- **Zpomalování (Slowdowns):** S tím, jak systém využívá stále více aplikací (a to i v případě, že komunikují na zcela oddělených pub/sub kanálech), celkový objem a tok zpráv způsobí, že doručování dat k jednotlivému odběrateli se začne zpomalovat (z důvodu celkového zatížení centrální infrastruktury/brokera).
-
 <!--ID: 1760705194453-->
 END
 
