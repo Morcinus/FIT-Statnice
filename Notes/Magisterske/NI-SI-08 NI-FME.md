@@ -50,6 +50,8 @@ Co je hlavním cílem **symbolického provádění programů**?
 Back:
 
 Hlavním cílem je systematické **hledání chyb** (dříve se to používalo i na správnost, dnes spíše na hledání chyb).
+
+Chyba = nechová se to podle formální specifikace (např. není splněna ověřovací podmínka)
 <!--ID: 1780493530564-->
 END
 
@@ -198,7 +200,7 @@ Proč je **BMC plně automatické**, zatímco **úplná verifikace smyček čast
 
 Back:
 
-BMC **nemusí hledat induktivní invariant**.
+BMC **nemusí hledat invariant** té smyčky.
 
 Smyčku jen konečněkrát rozbalí a ověří vzniklou konečnou formuli. Úplná verifikace ale potřebuje invariant, který obecně automaticky vygenerovat nejde.
 <!--ID: 1780493530591-->
@@ -288,8 +290,6 @@ Back:
 
 - **Halting problem** - nemůžeme automaticky rozhodnout, že se program zastaví
 - **Gödelova věta o neúplnosti** - jakákoliv dostatečně silná logická formule obsahuje pravdivá tvrzení, která v rámci ní nelze dokázat
-
-Takže jsme v háji, protože až AI sebere všechny práce, tak jediný, na co se lidi budou používat, bude dokazování správnosti programů pomocí NI-FME ( ͡° ͜ʖ ͡°)
 <!--ID: 1780493530608-->
 END
 
@@ -319,9 +319,10 @@ Back:
 
 Pro dokazování správnosti potřebujeme **invarianty** smyček. Ty ovšem automatizace nedokáže (až na triviální případy) generovat.
 
-**Člověk** musí porozumět logice programu a **invarianty SMT solveru dodat**.
+**Člověk** musí porozumět logice programu a **invarianty SMT solveru dodat**. Bez správného invariantu nelze cyklus ověřit.
 
-Bez správného invariantu nelze cyklus ověřit.
+Závěr:
+Takže jsme v háji, protože až AI sebere všechny práce, tak jediný, na co se lidi budou používat, bude dokazování správnosti programů pomocí NI-FME ( ͡° ͜ʖ ͡°)
 <!--ID: 1780493530613-->
 END
 

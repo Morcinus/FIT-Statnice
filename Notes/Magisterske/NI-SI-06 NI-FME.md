@@ -175,6 +175,8 @@ Protože umožňuje přesně vyjádřit vlastnosti stavů programu pomocí:
 - logických spojek ($\land, \lor, \Rightarrow, \neg$),
 - kvantifikátorů ($\forall, \exists$)
 
+(A pro logiku máme solvery, které nám zjistí, jestli je formule splnitelná nebo ne.)
+
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020260603120129.png)
 <!-- DetailInfoEnd -->
@@ -225,9 +227,11 @@ END
 START
 NI-SZZ
 
-Jak lze specifikovat, že proměnná `a[i]` je **maximum** neprázdného pole `a` délky `n`?
+Jak lze specifikovat pomocí predikátové logiky predikát `O(a,y)`, který rozhodne jestli `y` je maximum neprázdného pole `a`?
 
 Back:
+
+Specifikujeme **input**, **output** a pak ten **predikát**
 
 ![](../../Assets/Pasted%20image%2020260603120523.png)
 <!--ID: 1780493530536-->
@@ -259,12 +263,11 @@ Co je **axiomatické modelování datové struktury**?
 
 Back:
 
-Popis datové struktury pomocí:
+Popis datové struktury pomocí (tomu se říká **signatura**):
 
+- **typy** - s čím pracujeme 
 - **funkčních symbolů** (operace nad strukturou),
 - **axiomů určujících**, jak se operace chovají.
-
-Celému se říká **signatura**
 <!--ID: 1780493530541-->
 END
 
@@ -273,7 +276,7 @@ END
 START
 NI-SZZ
 
-Co typicky obsahuje **teorie párů**?
+Jak vypadá **teorie párů**?
 
 Back:
 
@@ -286,7 +289,7 @@ END
 START
 NI-SZZ
 
-Co typicky obsahuje **teorie seznamů**?
+Jak vypadá **teorie seznamů**?
 
 Back:
 
@@ -327,7 +330,7 @@ Jaké jsou **axiomy pro pole** vlastními slovy? (3)
 
 Back:
 
-1. Pokud se rovnají indexy, potom se rovná hodnota, když přistupujeme k danému místu pole s těmi indexy
+1. Pokud se mi rovnají indexy, pak jsou i jejich hodnoty stejné (tím writem říkáme že máme libovolné pole, co má na pozici $i$ hodnotu $v$)
 2. Pokud se indexy nerovnají, potom když zapíšeme prvek na $i$-tou pozici, tak to nezmění prvek na $j$-té pozici
 3. Pokud se rovnají všechny prvky pole, tak se pak pole rovnají
 <!--ID: 1780493530553-->
@@ -339,12 +342,12 @@ END
 START
 NI-SZZ
 
-Co typicky obsahuje **teorie polí**?
+Jak vypadá **teorie polí**?
 
 Back:
 
-![](../../Assets/Pasted%20image%2020260603121023.png)
-![](../../Assets/Pasted%20image%2020260603121030.png)
+![](../../Assets/Pasted%20image%2020260603165349.png)
+![](../../../Assets/Pasted%20image%2020250531144407.png)
 <!--ID: 1780493530556-->
 END
 

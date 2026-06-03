@@ -190,7 +190,6 @@ SSA (Static Single Assignment) forma slouží pro základní cestu (basic path) 
 <!-- ExampleStart -->
 ![](../../Assets/Pasted%20image%2020260603131407.png)
 <!-- ExampleEnd -->
-
 <!--ID: 1780493530449-->
 END
 
@@ -248,7 +247,6 @@ Co je **ověřovací podmínka** (Verification Condition, VC)?
 Back:
 
 Ověřovací podmínka je **čistě logická formule**, jejíž platnost zaručuje, že daná základní cesta programu je správná.
-
 <!--ID: 1780493530457-->
 END
 
@@ -303,7 +301,6 @@ Back:
 Tedy:
 ![](../../Assets/Pasted%20image%2020260603132205.png)
 
-
 <!--ID: 1780493530465-->
 END
 
@@ -312,7 +309,7 @@ END
 START
 NI-SZZ
 
-Jaké dvě techniky se používají pro generování VC z programového kódu?
+Jaké dvě techniky se používají pro **vytvoření ověřovací podmínky** z kódu programu?
 
 Back:
 
@@ -355,7 +352,6 @@ Typicky se umisťuje na **začátek těla smyčky**.
 Zde je **modrý** ten invariant
 ![](../../Assets/Pasted%20image%2020260603135038.png)
 <!-- ExampleEnd -->
-
 <!--ID: 1780493530473-->
 END
 
@@ -389,7 +385,6 @@ Když máme cyklus s invariantem, jaké **cesty musíme dokázat**?
 Např.
 ![](../../Assets/Pasted%20image%2020260603135200.png)
 
-(ano, horší rozlišení už nešlo :D)
 
 Back:
 
@@ -409,7 +404,7 @@ END
 START
 NI-SZZ
 
-Proč aserce, invarianty a VC samy o sobě dokazují pouze **částečnou správnost**?
+Proč aserce, invarianty a ověřovací podmínky samy o sobě dokazují pouze **částečnou správnost**?
 
 Back:
 
@@ -444,6 +439,8 @@ Kdy je **parciálně správný** program `P` **terminující**?
 Back:
 
 Parciálně správný program `P` je terminující právě tehdy, když každý regulární průběh programu `P` dosáhne řádku s příkazem return.
+
+Zde "regulární" je asi prostě myšleno jako "normální" ve smyslu, že předpokládáme, že při běhu programu nespadne na počítač meteorit. 
 <!--ID: 1780493530486-->
 END
 
@@ -533,7 +530,6 @@ Dokážeme ověřovací podmínku pro ten vnitřek cyklu a pak jsme tím dokáza
 <!-- ExampleStart -->
 ![](../../Assets/Pasted%20image%2020260603143628.png)
 <!-- ExampleEnd -->
-
 <!--ID: 1780493530497-->
 END
 
