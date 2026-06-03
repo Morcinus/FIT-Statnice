@@ -519,7 +519,7 @@ Back:
 
 Topologie: $oBF_n$ se složitostí $O(\log^2 N)$, kde máme $N = 2^n$ čísel
 
-RadixSort - sortíme čísla podle jejich binární reprezentace (od nejméně význameného bitu - tzn. zleva doprava).
+RadixSort - sortíme čísla podle jejich binární reprezentace (od nejméně význameného bitu - tzn. zprava doleva).
 
 **Jak to funguje**:
 Iterativně se sekvenčně volá funkce `Split(A,i)`
