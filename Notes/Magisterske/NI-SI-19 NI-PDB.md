@@ -171,7 +171,7 @@ Back:
 - **tpmC** - new-order transaction ratepři
 	- Měří hrubý výkon (propustnost) systému.
 	- Maximálním zatížení databáze, kolik jsem schopný zpracovat nových objednávek
-- **\$/tpmC**
+- **Price/tpmC**
 	- celkové náklady na vlastnictví systému v poměru k jeho výkonu
 
 
@@ -274,7 +274,7 @@ Jaké metriky se sledují u benchmarku TPC-E?
 Back:
 
 - **TPsE** - transactions per second u **jakékoliv** transakce
-- **\$/TPsE**
+- **Price/TPsE**
 
 
 <!--ID: 1779128799880-->
@@ -353,7 +353,7 @@ Back:
 
 - **QphH@Size** - Composite Query-per-Hour performance metric
 	- Jedná se o kombinaci průměru dvou odlišných testů – hrubý výkon pro jednoho uživatele, propustnost pro X uživatelů
-- **\$/QphH@Size** - Price/Performance metric
+- **Price/QphH@Size** - Price/Performance metric
 
 *Velikost (Size) je klíčová. Metriky se chovají jinak na 100 a 1000 GB*
 
@@ -444,7 +444,7 @@ Slouží na **OLTP**:
 **Metriky**:
 
 - **tpmC** - new-order transaction rate = při maximálním zatížení databáze, kolik jsem schopný zpracovat nových objednávek
-- **\$/tpmC** - kolik mě jedna nová objednávka stojí peněz
+- **Price/tpmC** - kolik mě jedna nová objednávka stojí peněz
 
 
 <!--ID: 1779128799901-->
@@ -474,7 +474,7 @@ TPC-E je složitější, je tam větší rozmanitost transakcí atd.
 Metriky:
 
 - **TPsE** - transactions per second u **jakékoliv** transakce
-- **\$/TPsE
+- **Price/TPsE
 
 
 <!--ID: 1779128799904-->
@@ -501,7 +501,7 @@ Máme databázi fixní velikosti
 Máme tyto metriky:
 
 - **QphH@Size** - Composite Query-per-Hour performance metric
-- **$/QphH@Size** - Price/Performance metric; Size je velikost databáze.
+- **Price/QphH@Size** - Price/Performance metric; Size je velikost databáze.
 
 
 <!--ID: 1779128799906-->
