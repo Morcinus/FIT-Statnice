@@ -48,11 +48,7 @@ NI-SZZ
 
 Co to je **prováděcí plán (execution plan)**, jak vypadá a kdy vzniká? V
 
-(větší otázka)
-
 Back:
-
-**Prováděcí plán**:
 
 - Stromová struktura, kde:
 	- **listy** jsou **zdroje dat** (tabulky, indexy) nad kterými se použije nějaká **přístupová metoda**
@@ -114,11 +110,7 @@ Jaká je základní **strategie pro tvorbu prováděcího plánu**?
 
 *Pozn. tuhle kartičku jsem si trochu vycucal z prstu (a fitwiki a chatgpt), protože v přednáškách se o tom nic nepíše.*
 
-(větší otázka)
-
 Back:
-
-**Strategie:**
 
 1. **Analýza dotazu** - rozložení dotazu do stromové struktury
 2. **Strom se sestaví na základě**:
@@ -160,8 +152,6 @@ NI-SZZ
 
 V jakých situacích se využívá **operace řazení**?
 
-(větší otázka)
-
 Back:
 
 **Používá se například u:**
@@ -185,7 +175,7 @@ END
 START
 NI-SZZ
 
-Jaké jsou parametry pro odhad ceny řazení?
+Jaké jsou parametry pro odhad **ceny řazení**?
 
 Back:
 
@@ -199,14 +189,16 @@ END
 START
 NI-SZZ
 
-Jaké statistiky jsou důležité u operace řazení pro systém?
+Jaké statistiky jsou důležité u **operace řazení** pro systém?
 
 Back:
 
-- počet **in memory sortů**
-- počet **2 run sortů**
-- počet **multi run**
-<!--ID: 1779704516395-->
+- počet **in memory sortů** - data pro řazení se vejdou do RAM
+- počet **2 run sortů** - data se nevejdou do RAM, proto se rozdělí do menších balíčků at ty se seřadí. Následuje operace merge a je finální výsledek.
+- počet **multi run** - data se nevejdou do RAM, proto se rozdělí do menších balíčků at ty se seřadí. Balíčky se i tak nevejdou do RAM, tak se operace opakuje a postupně se balíčky spojují.
+
+*U run sortů se využívá zápis na disk, který je oporti in-memory velmi pomalý.*
+
 END
 
 ---
@@ -219,8 +211,6 @@ START
 NI-SZZ
 
 **Postup při ladění výkonu DB serveru** (jak zjistíme co vázne, jak zvolíme SQL dotazy pro ladění?)
-
-(větší otázka)
 
 Back:
 
@@ -295,8 +285,6 @@ START
 NI-SZZ
 
 Co je to **cost-based optimalizace**?
-
-(větší otázka)
 
 Back:
 
@@ -387,18 +375,19 @@ Original Flashcard ID: 1737106145106
 START
 NI-SZZ
 
-Jaké jsou fáze **zpracování SQL dotazu**?
-
-(větší otázka)
+Jaké jsou fáze **zpracování SQL dotazu**? (5)
 
 Back:
 
 **Fáze:** (tohle je částečně z ChatGPT:)
 
-- **Parsing** - syntaktická a sémantická analýza, kontrola práv, výsledek prováděcí plán
-- **Bind** - přiřazení konkrétních hodnot parametrům
-- **Execution** - vykoná se prováděcí plán
-- **Fetch** - získá se výsledek a předá se aplikaci
+1. **Parsing** - syntaktická a sémantická analýza, kontrola práv, tvorba Parse tree (logický strom příkazů)
+2. **Optimization** – Tvorba exekučních plánů a vyběr toho nejlepšího
+3. **Bind** - přiřazení konkrétních hodnot parametrům
+4. **Execution** - vykoná se prováděcí plán
+5. **Fetch** - získá se výsledek a předá se aplikaci
+
+Poznámka: Pro tvorbu co nejlepšího plánu je klíčové znát i parametry. Využívá se tedy metoda *Parameter peeking*, kdy se druhá fáze podívá do třetí.
 
 Tags: reviewed
 <!--ID: 1779128799431-->
@@ -481,16 +470,12 @@ Original Flashcard ID: 1737106145109
 START
 NI-SZZ
 
-Vysvětlete rozdíl mezi **heap table** a **heap table s indexem**.
-
-(větší otázka)
+Co je to heap **heap table**?
 
 Back:
 
-**Heap table**:
-
 - sama o sobě nemá **žádný index**
-- pořadí bloků je vpodstatě náhodné
+- pořadí bloků je v podstatě náhodné
 - nové záznamy vyplňují prázdná místa
 - pokud máme "heap table with index", tak má index a ten má v listech ROWID, podle kterého se najde datový blok a řádek
 
@@ -533,8 +518,6 @@ START
 NI-SZZ
 
 Co je to **cluster**?
-
-(větší otázka)
 
 Back:
 
@@ -633,8 +616,6 @@ START
 NI-SZZ
 
 Jaké jsou **typické statistiky pro tabulky** v relační databázi?
-
-(větší otázka)
 
 Back:
 
@@ -781,9 +762,7 @@ Original Flashcard ID: 1737106145122
 START
 NI-SZZ
 
-**Co jsou** a **jaké jsou** **access paths** při vyhodnocování SQL dotazů? (4)
-
-(větší otázka)
+Co jsou to přístupové cesty (access paths) při vyhodnocování SQL dotazů? Uveďte příklady.
 
 Back:
 

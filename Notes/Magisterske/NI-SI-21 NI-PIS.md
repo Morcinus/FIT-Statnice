@@ -27,6 +27,8 @@ Back:
 - **Referenční data** - číselníky (dvojice číslo - něco, např. kódy států, měn atd.), externí registry (živnostenský rejstřík)
 - **Master data** - klíčový data, co podnik udržuje konzistentní napříč celou organizací (např. klienti, produkty)
 - **Transakční data** (platby, půjčky, atd.)
+
+
 <!--ID: 1780079216560-->
 END
 
@@ -47,15 +49,20 @@ Back:
 - DB primárního systému
 - **Data Staging Area** - tam se uloží data z více systémů, nad těmito daty se pak dělají transformace (upravují se), aby se pak data dostala do DWH
 - **Data Warehouse** (Core) - zde už jsou vyčištěná data, tam jsou uložena dlouhodobě - tohle pak slouží jako monolit s tou pravdou
-  - Zde jsou typicky daata normalizovaná
-  - Zde je uchovaná i historie těch dat
+	- Zde jsou typicky data normalizovaná
+	- Zde je uchovaná i historie těch dat
 - **Data Mart** - to jsou transformace těch dat (agregace), ty už se dělají pro konkrétní okruh uživatelů (např. jednotlivé departmenty organizace), nad tím data martem jsou pak různé vizualizace
-  - Zde se typicky využívá mutlidimenzionální modelování
+	- Zde se typicky využívá mutlidimenzionální modelování
 - **ODS - operační data store** - např. pro call centrum
-  - Tam jsou data čerstvější než v data martu, stahují se tam pravidelněji, aby např. lidi v call centru měli aktuální data
+	- Tam jsou data čerstvější než v data martu, stahují se tam pravidelněji, aby např. lidi v call centru měli aktuální data
 
 Data se typicky 1x denně přenáší z Data Warehouse do Data Martu.
 Typicky se 1x denně (v noci) přelévají data z DB primárního systému do Stage
+
+<!-- ImageStart -->
+![](../../Assets/Pasted%20image%2020260601101758.png)
+<!-- ImageEnd -->
+
 <!--ID: 1780079216563-->
 END
 
@@ -74,6 +81,8 @@ Jaký je vztah data lake a data staging area?
 Back:
 
 Data lake je historizovaná stage (jsou tam snímky napříč historií).
+
+
 <!--ID: 1780079216566-->
 END
 
@@ -106,6 +115,8 @@ Vhodné pro: tradiční datové sklady, kde je třeba mít plně připravená da
 - Transform (transformace) – transformace probíhá až v cílovém systému (např. pomocí SQL nebo nástrojů jako dbt).
 
 Vhodné pro: moderní cloudové datové sklady (např. BigQuery, Snowflake), které zvládají velké objemy dat a výkonné transformace přímo ve skladu.
+
+
 <!--ID: 1780079216568-->
 END
 
@@ -126,6 +137,8 @@ Back:
 
 Vlevo jsou operační systémy
 Vpravo je "svět analytiky/business intelligence"
+
+
 <!--ID: 1780079216571-->
 END
 
@@ -164,8 +177,10 @@ Back:
 
 - **structured** - tabulky, předdefinovaná schémata, relační databáze,...
 - **semistructured** - JSON, XML, grafy, NoSQL, grafové databáze
-  - Schéma není vynuceno
+	- Schéma není vynuceno
 - **nonstructured** - obrázky, audio, social media atd.
+
+
 <!--ID: 1780079216577-->
 END
 
@@ -189,6 +204,8 @@ Back:
 - Transaction Structure Data
 - Transaction Activity Data
 - Transaction Audit Data - logy a audity
+
+
 <!--ID: 1780079216579-->
 END
 
@@ -207,17 +224,17 @@ Jaké jsou **3 vrstvy data managementu** (+3 v každé vrstvě)?
 Back:
 
 - **Business Layer**
-  - Business Terminology (popis dat)
-  - Analytics & Reporting
-  - Machine Learning
+	- Business Terminology (popis dat)
+	- Analytics & Reporting
+	- Machine Learning
 - **Governance Layer**
-  - Architecture & Principles
-  - Data Quality
-  - Metadata & Documentation
+	- Architecture & Principles
+	- Data Quality
+	- Metadata & Documentation
 - **Technical Layer**
-  - Data Applications
-  - Administration & Lifecycle Management
-  - Data Security
+	- Data Applications
+	- Administration & Lifecycle Management
+	- Data Security
 
 Key takeaway: Business se čím dál tím víc bude zapojovat do data managementu
 
@@ -247,6 +264,8 @@ Back:
 5. **Hybrid DWH** - část DWH je v cloudu
 6. **Analytical & BI Platform** - nad DWH vzniká platforma pro datovou analýzu a reporting (dashboardy atd.)
 7. **Universal Data Platform** - centrální hub pro všechna data (např. Databricks, Snowflake,...)
+
+
 <!--ID: 1780079216585-->
 END
 
@@ -271,6 +290,8 @@ Analogie s dopravou:
 - **Provozní zpracování dat** - klasický provozní účely, typicky propojování aplikací (integrace), dále taky např. statistické modely, co dělají predikce
 
 (vůbec nechápu jak ten borec získal řidičák, jestli mu ta analogie s dopravou dává smysl)
+
+
 <!--ID: 1780079216587-->
 END
 
@@ -291,6 +312,8 @@ Back:
 Když si nikdo nestěžuje :D
 
 Aka když to lidi jsou schopný využít na to co potřebují.
+
+
 <!--ID: 1780079216590-->
 END
 
@@ -309,6 +332,8 @@ Co je **historizace dat**?
 Back:
 
 Dělají se "snímky" dat. Díky tomu můžu přistupovat k tomu, jak data vypadala v minulosti.
+
+
 <!--ID: 1780079216593-->
 END
 
@@ -330,6 +355,8 @@ Back:
 - **Flexibility** - možnost měnit datový model, přidávání nových zdrojů dat, nové reporty atd.
 - **Resources** - míra investice do data managementu - čas, lidé, technologie
 - **Control** - musím omezit, kdo může přistupovat k jakým datům
+
+
 <!--ID: 1780079216595-->
 END
 
@@ -430,6 +457,8 @@ Back:
 3. **Logický datový model** - zachycuje datové prvky dle zvolené technologie
 	- Typicky se člověk snaží identifikovat entity (v bankách typicky kontrakty a osoby - dodavatelé, bankéři,...)
 4. **Fyzický datový model** - návrh konkrétních tabulek v databázi atd.
+
+
 <!--ID: 1780079216606-->
 END
 
@@ -454,6 +483,8 @@ Např. data o zákazníkovi jsou rozházená v různých systémech a může bý
 Proto se dělá to, že se udělá "golden record" - vytváří se jeden ucelený záznam např. v separátní databázi nebo v datových skladech
 
 Tohle je obecně téma toho master data managementu
+
+
 <!--ID: 1780079216609-->
 END
 
@@ -475,6 +506,8 @@ Back:
 - **Snowflake schema** - dimenzní tabulky jsou normalizované - méně redundance, ale složitější joiny
 - **Constellation schema** - více faktových tabulek co sdílí dimenze
 - **Snowstorm schema** - extrémně rozvětvená snowflake struktura
+
+
 <!--ID: 1780079216612-->
 END
 
@@ -495,6 +528,8 @@ Back:
 Definuju struktury tabulek a datových uložišť v **metadatech**. Podle nich se pak automaticky vygenerují jednotlivé kroky pro provedení transformací atd.
 
 Podobně jak třeba člověk používá Terraform pro infrastructure as code, tak tady člověk definuje ty data v nějakém meta jazyce a podle toho se pak generují ty konkrétní kroky.
+
+
 <!--ID: 1780079216614-->
 END
 
@@ -570,6 +605,8 @@ Back:
 
 - **technická** - že to bude v určitém formátu, že to bude mít určité vlastnosti
 - **byznysová** - např. když mají data určité hodnoty, které nejsou dobré pro byznys
+
+
 <!--ID: 1780079216622-->
 END
 
@@ -589,6 +626,8 @@ Back:
 
 - **Landing** - neřeší se tam datové typy
 - **Stage** - tam se už řeší datové typy
+
+
 <!--ID: 1780079216625-->
 END
 
@@ -607,6 +646,8 @@ Je cílem do datového skladu nacpat všechna data firmy?
 Back:
 
 Nope, typicky pouze ta data, co jsou kritická pro byznys a pro reporting. Typicky bude hodně data ještě rozházených kolem.
+
+
 <!--ID: 1780079216628-->
 END
 
@@ -624,8 +665,13 @@ Jaký je rozdíl mezi **faktem** a **dimenzí**?
 
 Back:
 
-- **Fakty** - nějaké měřitelné číslo, nějaká _hodnota_ (dá se to počítat, agregovat)
-- **Dimenze** - nad fakty jsou pak dimenze. Ty se typicky nedají dobře agregovat, např. adresa
+- **Fakty** - meřitelné události nebo transakce
+	- Odpovídají na otázku: "Kolik?"
+	- Lze je matematicky zpracovávat (agregovat)
+	- Příklady: Cena nákupu, počet prodaných kusů, výše úroku, délka hovoru
+- **Dimenze** - popisné kontexty faktů
+	- Odpovídají na otázky: "Kdo? Co? Kdy? Kde? Jak?"
+	- Příklad: Kdo nakoupil (**Zákazník: Jan Novák**), co koupil (**Produkt: Běžný účet**), kdy to koupil (**Čas: 1. června 2026**), kde to koupil (**Místo: Pobočka Praha**).
 
 ![](../../Assets/Pasted%20image%2020250424170314.png)
 <!--ID: 1780079216631-->
@@ -645,9 +691,18 @@ Jaké jsou **typy faktů**?
 
 Back:
 
-- **aditivní** - počet, cena ve faktových tabulkách
-- **semiaditivní** - počet, cena ve snapshot tabulkách
-- **nonaditive** - procentuální profit například
+- **Aditivní** - počet, cena ve faktových tabulkách
+	- Lze je sečíst napříč všemi dostupnými dimenzemi a vždy výsledek dává smysl
+	- **Příklad**: Počet prodaných kusů, tržba, částka výběru z bankomatu.
+- **Semiaditivní** - počet, cena ve snapshot tabulkách
+	- Tato fakta se dají sčítat přes _některé_ dimenze, ale přes jiné – **typicky přes dimenzi času** – to nedává logický smysl.
+	- **Typický výskyt:** Snapshot tabulky (snímky stavu, které se fotí pravidelně, např. každý den o půlnoci).
+	- **Příklad**: Zůstatek na bankovním účtu, počet kusů zboží na skladě, počet aktuálně aktivních předplatitelů.
+- **Nonaditive**
+	- Tato fakta se nesmí sčítat napříč **žádnou dimenzí**. Většinou jde o různé poměry, procenta, průměry nebo hodnoty jako je teplota či jednotková cena.
+	- **Příklad:** Procentuální zisk (marže), konverzní poměr, průměrná cena za proklik (CPC).
+
+
 <!--ID: 1780079216633-->
 END
 
@@ -667,6 +722,8 @@ Back:
 
 - **Snapshoting** - udělám celou kopii těch dat např 1x za den (nedává moc smysl u dat, které se často nemění)
 - **Slowly changing dimenze** - uložím jednou, když vznikne změna, tak si uložím data
+
+
 <!--ID: 1780079216636-->
 END
 
@@ -737,6 +794,8 @@ Co je **decommissioning dat**?
 Back:
 
 **Decommissioning = “uklizení starých dat”** – odstraním je, přesunu, anonymizuji nebo archivuju, aby nezatěžovala systém, nebyla rizikem nebo neporušovala předpisy (např. GDPR).
+
+
 <!--ID: 1780079216650-->
 END
 
@@ -762,6 +821,8 @@ Back:
 - **Nevhodná architektura** - monolit vs microservices
 - **Time To Market** - neschopnost reagovat rychle na změny trhu
 - **Merge and Acquisition** - spojování společností a produktů
+
+
 <!--ID: 1780079216652-->
 END
 
@@ -781,6 +842,8 @@ Back:
 
 - **ROI** - return on investment
 - **Rizika** - ztráta revenue nebo reputace
+
+
 <!--ID: 1780079216655-->
 END
 
@@ -802,6 +865,8 @@ Back:
 2. **Vývoj scriptů**
 3. **Rekonciliace**
 4. **Cutover**
+
+
 <!--ID: 1780079216657-->
 END
 
@@ -823,6 +888,8 @@ Back:
 - **Business slovník** - prozkoumává se doména, aby se předešlo nedorozuměním
 - **Hesla** - je třeba vyřešit způsoby hashování atd.
 - **Analýza cílů** - na jakou verzi aplikace/knihoven se chceme dostat
+
+
 <!--ID: 1780079216660-->
 END
 
@@ -845,9 +912,10 @@ Back:
 - **Atomicity** - když migruji data zákazníka, tak zmigruji buď celého nebo vůbec
 - **Repeatability** - musím umět migraci spustit znovu, když se něco změní
 - **Optimalizace** - při milionech záznamů je třeba skripty paralelizovat atd.
-
 - **Change management** - požadavky se mohou v průběhu měnit
 - **Testování** - je třeba testovat, jestli se data zmigrovala správně
+
+
 <!--ID: 1780079216663-->
 END
 
@@ -866,6 +934,8 @@ Co je **Migration Stage Area**?
 Back:
 
 Je to místo, kam se nahrají data a kde se provádějí transformace při migraci dat z nějakého systému do jiného.
+
+
 <!--ID: 1780079216665-->
 END
 
@@ -886,6 +956,8 @@ Back:
 - **Oslabení referenční integrity** - měl bych zachovat vztahy mezi daty
 - **Vypínání triggerů** - měl bych zachovat v systému triggery
 - **Špatné IDs** - různé systémy na to mají různé metody, musím to nějak sjednotit
+
+
 <!--ID: 1780079216668-->
 END
 
@@ -907,6 +979,8 @@ Ověření zda byla data přenešena správně.
 
 - **kvantitativní ověření** - že jsme nic neztratili a že jsme si nic nevymysleli
 - **kvalitativní ověření** - že jsme nezměnili sémantiku dat
+
+
 <!--ID: 1780079216670-->
 END
 
@@ -925,6 +999,8 @@ Co je **Cutover** u datové migrace?
 Back:
 
 **Cutover** = období, kdy se organizace přepne z původního systému na nový.
+
+
 <!--ID: 1780079216674-->
 END
 
@@ -944,6 +1020,8 @@ Back:
 
 - **BigBang** - vše se přepne najednou - rychlé ale riskantní
 - **Iterativní** - vše se přepne po iteracích - velká komplexita ale jistější
+
+
 <!--ID: 1780079216676-->
 END
 
@@ -1079,6 +1157,8 @@ Co jsou BI systémy?
 Back:
 
 **Business intelligence** = umožňují dělat rozhodnutí ve firmě
+
+
 <!--ID: 1780079216693-->
 END
 
@@ -1099,6 +1179,8 @@ Back:
 - **Operativní** = na denní bázi, nižší management - např. sledování pohledávek
 - **Taktické** = na měsíční/čtvrtletní bázi, střední management - např. sledování plánu kampaní
 - **Strategické** = na roční a delší bázi, top management, board
+
+
 <!--ID: 1780079216696-->
 END
 
@@ -1147,6 +1229,8 @@ Co je metodika CRISP-DM?
 Back:
 
 Iterativní metodika pro data science.
+
+
 <!--ID: 1780079216701-->
 END
 
@@ -1167,6 +1251,8 @@ Back:
 - **Lidé**
 - **Znalosti**
 - **Technika**
+
+
 <!--ID: 1780079216704-->
 END
 
@@ -1180,7 +1266,7 @@ START
 NI-SZZ
 
 
-Jaké jsou fáze CRISP-DM?
+Jaké jsou fáze **CRISP-DM**? (6)
 
 Back:
 
@@ -1217,6 +1303,8 @@ Back:
 - Komunikuje s **byznys experty** (dává jim poznatky)
 - Komunikuje s **technickými experty** (dává jim zadání)
 - **Prezentuje a vizualizuje data**
+
+
 <!--ID: 1780079216710-->
 END
 
@@ -1240,6 +1328,8 @@ Back:
 - **Kontrola dat** - popisují správně realitu?
 - **Vizualizace dat**
 - **Transformace** - měla by se data upravit?
+
+
 <!--ID: 1780079216712-->
 END
 
@@ -1265,6 +1355,8 @@ Back:
 - **segmentace** - jaké jsou typické skupiny (např. zákazníků)
 - **detekce** - je něco normální případ nebo anomálie
 - **podobnost** - které případy se sobě podobají
+
+
 <!--ID: 1780079216715-->
 END
 
@@ -1290,6 +1382,8 @@ Back:
 - **Git**
 - **Linux**
 - **Azure** (cloud)
+
+
 <!--ID: 1780079216718-->
 END
 
@@ -1312,6 +1406,8 @@ Back:
 - **využívání osobních dat**
 - **přesnost modelů**
 - **nadbytek dat**
+
+
 <!--ID: 1780079216720-->
 END
 
@@ -1330,6 +1426,8 @@ Co jsou **big data**?
 Back:
 
 **Velké množství** (**rychle měnících** se) **potenciálně hodnotných** dat, která se nedají dobře managovat tradičními způsoby.
+
+
 <!--ID: 1780079216723-->
 END
 
@@ -1351,6 +1449,8 @@ Back:
 - **velocity** - rychle přibývají
 - **variety** - různé formáty
 - (existují další Vs)
+
+
 <!--ID: 1780079216726-->
 END
 
@@ -1371,6 +1471,8 @@ Back:
 - Hadoop
 - Spark
 - Kafka
+
+
 <!--ID: 1780079216728-->
 END
 
@@ -1397,8 +1499,14 @@ Back:
 	- zpracuju **hodně dat najednou** např. jednou za den
 	- sleduje se **throughput** - kolik zpracovaných records za čas
 	- efektivnější zpracovávání
-	- např. Hadoop, Spark
-- **Stream processing** - data se zpracovávají **průběžně** (téměř real-time) - sleduje se **latency** - čas od začátku po konec processingu - méně efektivní zpracovávání (protože to musí být real-time) - např. Kafka, Spark
+	- např.: Hadoop, Spark
+- **Stream processing**
+	- data se zpracovávají **průběžně** (téměř real-time)
+	- sleduje se **latency** - čas od začátku po konec processingu
+	- méně efektivní zpracovávání (protože to musí být real-time)
+	- např. Kafka, Spark
+
+
 <!--ID: 1780079216731-->
 END
 
@@ -1417,6 +1525,8 @@ Co je **Hadoop**?
 Back:
 
 Open source platforma pro distribuované zpracovávání velkého množství dat.
+
+
 <!--ID: 1780079216734-->
 END
 
@@ -1438,6 +1548,8 @@ Back:
 - **Hadoop Distributed File System** (HDFS) - distribuovaný file system na více zařízeních
 - **Hadoop YARN** - spravuje resources v clusterech a scheduling uživatelských úloh
 - **Hadoop MapReduce** - implementace MapReduce modelu pro zpracování velkých dat
+
+
 <!--ID: 1780079216737-->
 END
 
@@ -1486,6 +1598,8 @@ Back:
 	- Díky tomu je fault tolerant
 - **Scalable** - dobře se škáluje
 - **Large files** - obsahuje obří data
+
+
 <!--ID: 1780079216742-->
 END
 
@@ -1561,6 +1675,8 @@ Je to **in-memory** výpočetní rámec pro distribuované zpracovávání dat.
 - Lze použít pro batch processing i streaming
 - Často používaný pro **machine learning** nebo **grafové výpočty**
 - Dá se spustit v Hadoopu
+
+
 <!--ID: 1780079216750-->
 END
 
@@ -1648,6 +1764,8 @@ Back:
 - **Data Analyst** - dělá reporting a analýzy pro byznys
 - **Data engineer** - spravuje processing a workflow dat
 - **Data Scientist** - dělá statistiky, data mining, predikce, atd.
+
+
 <!--ID: 1780079216762-->
 END
 

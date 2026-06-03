@@ -18,11 +18,13 @@ Original Flashcard ID: 1728921214695
 START
 NI-SZZ
 
-Čeho je zkratka **OLTP**?
+Co je to **OLTP**?
 
 Back:
 
-- **Online Transaction Processing**
+OLTP =  *Online Transaction Processing*
+
+**Charakteristika**
 - Většina aplikací.
 - Systémy pro **operativní zpracování transakcí**
 - Rychlé, krátké transakce, např. vkládání, aktualizace a mazání dat.
@@ -40,11 +42,13 @@ Original Flashcard ID: 1728921214697
 START
 NI-SZZ
 
-Čeho je zkratka **OLAP**?
+Co je to **OLAP**?
 
 Back:
 
-- **Online Analytical Processing**
+OLAP = *Online Analytical Processing*
+
+**Charakteristika**
 - Systémy optimalizované pro **analytické zpracovávání**, zaměřené na efektivní **čtení a analýzu** velkého množství dat
 - Málo klientů
 - **Dlouhé dotazy**, optimalizace pro **čtení a agregace**.
@@ -62,7 +66,7 @@ Original Flashcard ID: 1735205748921
 START
 NI-SZZ
 
-Na co slouží benchmarky TPC-E a TPC-C? Na OLTP nebo OLAP?
+Na jaký typ systémů (OLTP nebo OLAP) se využívají benchmarky TPC-C nebo TPC-E?
 
 Back:
 
@@ -87,7 +91,7 @@ Jaké jsou typy bechmarků a co znamenají?
 
 Back:
 
-- **microbenchmark** - zaměřuje se na konkrétní aspekt databázového systému (např. práce s cache, jenom insert příkazy, jenom update příkazy)
+- **microbenchmark** – zaměřuje se na konkrétní aspekt databázového systému (např. práce s cache, jenom insert příkazy, jenom update příkazy)
 - **komplexní benchmarky** – testují celý systém v reálném scénáři (např. TPC-C, TPC-E, TPC-H); musí být **dobře definované**, srozumitelné a mít **příběh/use case**
 <!--ID: 1779128799859-->
 END
@@ -164,8 +168,13 @@ Jaké jsou metriky TPC-C bechmarku, které se sledují? (2)
 
 Back:
 
-- $tpmC$ - new-order transaction rate = při maximálním zatížení databáze, kolik jsem schopný zpracovat nových objednávek
-- $\text{\$}/tpmC$ - kolik mě jedna nová objednávka stojí peněz
+- **tpmC** - new-order transaction ratepři
+	- Měří hrubý výkon (propustnost) systému.
+	- Maximálním zatížení databáze, kolik jsem schopný zpracovat nových objednávek
+- **\$/tpmC**
+	- celkové náklady na vlastnictví systému v poměru k jeho výkonu
+
+
 <!--ID: 1779128799866-->
 END
 
@@ -264,8 +273,10 @@ Jaké metriky se sledují u benchmarku TPC-E?
 
 Back:
 
-- $TPsE$ - transactions per second u **jakékoliv** transakce
-- $Price/TPsE$
+- **TPsE** - transactions per second u **jakékoliv** transakce
+- **\$/TPsE**
+
+
 <!--ID: 1779128799880-->
 END
 
@@ -340,8 +351,11 @@ Jaké metriky se měří u TPC-H bechmarku?
 
 Back:
 
-- $QphH@Size$ - Composite Query-perHour performance metric
-- $\text{\$}/QphH@Size$ - Price/Performance metric
+- **QphH@Size** - Composite Query-per-Hour performance metric
+	- Jedná se o kombinaci průměru dvou odlišných testů – hrubý výkon pro jednoho uživatele, propustnost pro X uživatelů
+- **\$/QphH@Size** - Price/Performance metric
+
+*Velikost (Size) je klíčová. Metriky se chovají jinak na 100 a 1000 GB*
 
 $Size$ je velikost databáze.
 
@@ -429,8 +443,10 @@ Slouží na **OLTP**:
 
 **Metriky**:
 
-- $tpmC$ - new-order transaction rate = při maximálním zatížení databáze, kolik jsem schopný zpracovat nových objednávek
-- $Price/tpmC$ - kolik mě jedna nová objednávka stojí peněz (za Price byl v názvu dosazený dolar)
+- **tpmC** - new-order transaction rate = při maximálním zatížení databáze, kolik jsem schopný zpracovat nových objednávek
+- **\$/tpmC** - kolik mě jedna nová objednávka stojí peněz
+
+
 <!--ID: 1779128799901-->
 END
 
@@ -457,8 +473,10 @@ TPC-E je složitější, je tam větší rozmanitost transakcí atd.
 
 Metriky:
 
-- $TPsE$ - transactions per second u **jakékoliv** transakce
-- $Price/TPsE$
+- **TPsE** - transactions per second u **jakékoliv** transakce
+- **\$/TPsE
+
+
 <!--ID: 1779128799904-->
 END
 
@@ -482,9 +500,10 @@ Máme databázi fixní velikosti
 
 Máme tyto metriky:
 
-- $QphH@Size$ - Composite Query-perHour performance metric
-- $Price/QphH@Size$ - Price/Performance metric (za Price byl v názvu dosazený dolar)
-  $Size$ je velikost databáze.
+- **QphH@Size** - Composite Query-per-Hour performance metric
+- **$/QphH@Size** - Price/Performance metric; Size je velikost databáze.
+
+
 <!--ID: 1779128799906-->
 END
 

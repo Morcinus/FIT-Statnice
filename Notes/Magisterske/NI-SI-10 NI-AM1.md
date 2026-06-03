@@ -477,7 +477,11 @@ Back:
 - Aplikace, která běží na aplikačním serveru.
 - Pomocí integračních vzorů v ní můžu vytvářet integrační procesy.
 - Plní roli prostředníka (intermediary) v SOA
-- ESB aplikace - Typy služeb: sdílené a infrastruktura - Typy procesů: technické a businessové
+- ESB aplikace
+	- Typy služeb: sdílené a infrastruktura
+	- Typy procesů: technické a businessové
+
+
 <!--ID: 1773945940684-->
 END
 

@@ -882,7 +882,7 @@ END
 START
 NI-SZZ
 
-Jak funguje **Dependency Injection**?
+Jak mohou být tvořeny závislosti mezi dvěma třídami?
 
 Back:
 

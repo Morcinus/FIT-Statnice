@@ -317,7 +317,7 @@ Original Flashcard ID: 1746599649487
 START
 NI-SZZ
 
-Pozorování: **detailní rovnováha** (aneb do splňuje $\pi$ v markovských řetězcích se spojitým časem)
+Pozorování: **detailní rovnováha** (aneb co splňuje $\pi$ v markovských řetězcích se spojitým časem)
 
 Back:
 
@@ -705,15 +705,11 @@ Definice: **Exponenciální rozdělení**
 
 Back:
 
-**Předpis**: $X \sim Exp(\lambda)$
-**Parametry**:
-
-- $\lambda > 0$
-  **Definice**:
-- $f_X(x) = \lambda e^{-\lambda x} \quad x \in [0, \infty), \ 0$ jinde
-  **Střední hodnota:**
-- $EX=\frac{1}{\lambda}$
-- $varX=\frac{1}{\lambda^2}$
+- **Předpis**: $X \sim Exp(\lambda)$
+- **Parametry**: $\lambda > 0$
+- **Definice**: $f_X(x) = \lambda e^{-\lambda x} \quad x \in [0, \infty), \ 0$ jinde
+- **Střední hodnota:** $EX=\frac{1}{\lambda}$
+- **Rozptyl:** $varX=\frac{1}{\lambda^2}$
 
 <!-- DetailInfoStart -->
 

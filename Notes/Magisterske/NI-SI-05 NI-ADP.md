@@ -348,7 +348,7 @@ K čemu slouží **Asynchronous messaging** architektura?
 
 Back:
 
-Slouží k přidání komunikační vrstvy, která umožňuje asychronně komunikovat službám nezávisle na jejich rozdílěch.
+Slouží k přidání komunikační vrstvy, která umožňuje asychronně komunikovat službám nezávisle na jejich rozdílech.
 
 - Typicky využívá Message-oriented middleware (MOM)
 - Zpráva (message) jsou data, která jsou odesílány na konkrétní cílovou adresu
@@ -448,9 +448,20 @@ Z jakých komponent se skládá **Blackboard architektura** (3)?
 
 Back:
 
-- **Blackboard (Tabule):** - **centrální úložiště dat** (sdílená paměť), které obsahuje data spojená s problémem. - Nachází se zde počáteční zadání, mezivýsledky (částečná řešení), hypotézy a nakonec i konečné řešení. - Stav na tabuli se neustále vyvíjí.
-- **Knowledge Sources (Zdroje znalostí / Experti):** - Nezávislé a specializované moduly (kusy kódu, algoritmy, neuronové sítě). - Každý modul umí řešit jen svou specifickou část problému. - **Klíčové pravidlo:** Tito experti **nikdy nekomunikují přímo mezi sebou**. Sledují pouze tabuli. Jakmile se na tabuli objeví data, kterým rozumí, "zvednou ruku", že chtějí přispět.
-- **Control Shell (Řídicí komponenta / Moderátor):** - Aby se experti u tabule neprali, musí tam být moderátor. - Tato komponenta neustále monitoruje změny na tabuli a "zvednuté ruce" expertů. - Rozhoduje, komu dá slovo (zavolá jeho metodu) a jakým způsobem se bude řešení vyvíjet. Řídí tedy celý průběh programu.
+- **Blackboard (Tabule):**
+	- **centrální úložiště dat** (sdílená paměť), které obsahuje data spojená s problémem.
+	- Nachází se zde počáteční zadání, mezivýsledky (částečná řešení), hypotézy a nakonec i konečné řešení.
+	- Stav na tabuli se neustále vyvíjí.
+- **Knowledge Sources (Zdroje znalostí / Experti):**
+	- Nezávislé a specializované moduly (kusy kódu, algoritmy, neuronové sítě).
+	- Každý modul umí řešit jen svou specifickou část problému.
+	- **Klíčové pravidlo:** Tito experti **nikdy nekomunikují přímo mezi sebou**. Sledují pouze tabuli. Jakmile se na tabuli objeví data, kterým rozumí, "zvednou ruku", že chtějí přispět.
+- **Control Shell (Řídicí komponenta / Moderátor):**
+	- Aby se experti u tabule neprali, musí tam být moderátor.
+	- Tato komponenta neustále monitoruje změny na tabuli a "zvednuté ruce" expertů.
+	- Rozhoduje, komu dá slovo (zavolá jeho metodu) a jakým způsobem se bude řešení vyvíjet. Řídí tedy celý průběh programu.
+
+
 <!--ID: 1778786460829-->
 END
 
@@ -668,8 +679,9 @@ Back:
 
 - **Potvrzování přijetí zpráv odběrateli:** (Řeší se, jakým způsobem odběratelé odesílají zpět potvrzení o úspěšném zpracování zprávy, aby ji broker mohl smazat).
 - **Omezená maximální škálovatelnost pub/sub sítě:**
-  - **Nárazová zátěž (Load surges):** Období, kdy požadavky odběratelů (nebo nápor zpráv) zcela zahltí propustnost sítě, po kterých následují období s nízkým objemem zpráv (kdy je přenosová kapacita sítě naopak nevyužita).
-  - **Zpomalování (Slowdowns):** S tím, jak systém využívá stále více aplikací (a to i v případě, že komunikují na zcela oddělených pub/sub kanálech), celkový objem a tok zpráv způsobí, že doručování dat k jednotlivému odběrateli se začne zpomalovat (z důvodu celkového zatížení centrální infrastruktury/brokera).
+	- **Nárazová zátěž (Load surges):** Období, kdy požadavky odběratelů (nebo nápor zpráv) zcela zahltí propustnost sítě, po kterých následují období s nízkým objemem zpráv (kdy je přenosová kapacita sítě naopak nevyužita).
+	- **Zpomalování (Slowdowns):** S tím, jak systém využívá stále více aplikací (a to i v případě, že komunikují na zcela oddělených pub/sub kanálech), celkový objem a tok zpráv způsobí, že doručování dat k jednotlivému odběrateli se začne zpomalovat (z důvodu celkového zatížení centrální infrastruktury/brokera).
+
 <!--ID: 1760705194453-->
 END
 
