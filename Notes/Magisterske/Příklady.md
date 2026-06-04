@@ -9,7 +9,7 @@ FILE TAGS: practice
 > Příklady
 > Zde je seznam otázek a příkladů, na které by se mohli u státnic potenciálně zeptat.
 
-## NI-SPOL-01 + NI-SPOL-02 NI-MPI
+## NI-SPOL-01 NI-MPI
 
 START
 NI-SZZ
@@ -21,7 +21,7 @@ Back:
 - Grupa s netriviálními podgrupami: $(\mathbb{Z}_6, +)$, protože má např. podgrupu $\{0, 3\}$.
 - Grupa pouze s triviálními podgrupami: $(\mathbb{Z}_p, +)$ pro prvočíslo $p$, např. $(\mathbb{Z}_5, +)$. Její podgrupy mají podle Lagrangeovy věty řád dělící $p$, tedy jen $1$ nebo $p$.
 
-Tags: NI-SPOL-01 NI-SPOL-02 NI-MPI
+Tags: NI-SPOL-01 NI-MPI
 <!--ID: 1780505845016-->
 END
 
@@ -42,7 +42,7 @@ $$
 
 Každá nekonečná cyklická grupa je izomorfní s $(\mathbb{Z}, +)$.
 
-Tags: NI-SPOL-01 NI-SPOL-02 NI-MPI
+Tags: NI-SPOL-01 NI-MPI
 <!--ID: 1780505845019-->
 END
 
@@ -69,7 +69,7 @@ $$
 \varphi(n)
 $$
 
-Tags: NI-SPOL-01 NI-SPOL-02 NI-MPI
+Tags: NI-SPOL-01 NI-MPI
 <!--ID: 1780505845022-->
 END
 
@@ -81,6 +81,8 @@ NI-SZZ
 
 Jak zjistíme počet generátorů v grupě?
 
+Např. v grupě $\mathbb{Z}_{250}^{\times}$
+
 Back:
 
 $\varphi({n})$, n je řád
@@ -88,6 +90,7 @@ $\varphi({n})$, n je řád
 ![](../../Assets/Pasted%20image%2020260603183505.png)
 ![](../../Assets/Pasted%20image%2020260603183514.png)
 
+Tags: NI-SPOL-01 NI-MPI
 <!--ID: 1780505845025-->
 END
 
@@ -105,7 +108,7 @@ Každá podgrupa cyklické grupy je opět cyklická.
 
 Navíc pokud má cyklická grupa řád $n$, pak pro každý dělitel $d \mid n$ existuje právě jedna podgrupa řádu $d$.
 
-Tags: NI-SPOL-01 NI-SPOL-02 NI-MPI
+Tags: NI-SPOL-01 NI-MPI
 <!--ID: 1780505845027-->
 END
 
@@ -128,7 +131,7 @@ $$
 
 cyklická podgrupa generovaná prvkem $1$.
 
-Tags: NI-SPOL-01 NI-SPOL-02 NI-MPI
+Tags: NI-SPOL-01 NI-MPI
 <!--ID: 1780505845030-->
 END
 
@@ -157,11 +160,13 @@ $$
 
 Pak je $x$ inverze prvku $a$ modulo $n$.
 
-Tags: NI-SPOL-01 NI-SPOL-02 NI-MPI
+Tags: NI-SPOL-01 NI-MPI
 <!--ID: 1780505845033-->
 END
 
 ---
+
+## NI-SPOL-02 NI-MPI
 
 START
 NI-SZZ
@@ -170,21 +175,13 @@ Jak se konstruují konečná tělesa prvočíselného a neprvočíselného řád
 
 Back:
 
-Pro prvočíselný řád $p$:
+Pro prvočíselný řád $p$: $(\mathbb{Z}_p, +, \cdot)$
 
-$$
-(\mathbb{Z}_p, +, \cdot)
-$$
+Pro neprvočíselný řád musí být řád mocninou prvočísla, tzn. $p^n$: 
 
-Pro neprvočíselný řád musí být řád mocninou prvočísla:
+Sestavíme tedy okruh polynomů $T[x]$ a nad nimi ireducibilní polynom a z toho konečné těleso řádu $p^n$
 
-$$
-GF(p^n) \cong \mathbb{F}_p[x] / (f(x))
-$$
-
-kde $f(x)$ je ireducibilní polynom stupně $n$ nad $\mathbb{F}_p$.
-
-Tags: NI-SPOL-01 NI-SPOL-02 NI-MPI
+Tags: NI-SPOL-02 NI-MPI
 <!--ID: 1780505845035-->
 END
 
@@ -212,12 +209,10 @@ $$
 Jeho prvky lze psát:
 
 $$
-\{0,1,\alpha,\alpha+1\}
+\{0,1,x,x+1\}
 $$
 
-kde $\alpha^2+\alpha+1=0$, tedy $\alpha^2=\alpha+1$ v $\mathbb{F}_2$.
-
-Tags: NI-SPOL-01 NI-SPOL-02 NI-MPI
+Tags: NI-SPOL-02 NI-MPI
 <!--ID: 1780505845038-->
 END
 
@@ -252,7 +247,7 @@ $$
 
 Obecný postup: zvolit ireducibilní polynom stupně $4$ nad $\mathbb{F}_3$ a počítat modulo tento polynom.
 
-Tags: NI-SPOL-01 NI-SPOL-02 NI-MPI
+Tags: NI-SPOL-02 NI-MPI
 <!--ID: 1780505845041-->
 END
 
@@ -283,7 +278,7 @@ $$
 2 \mid 6
 $$
 
-Tags: NI-SPOL-01 NI-SPOL-02 NI-MPI
+Tags: NI-SPOL-02 NI-MPI
 <!--ID: 1780505845043-->
 END
 

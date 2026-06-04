@@ -830,7 +830,6 @@ Back:
 
 - **real-world identifikátory** - email, login name atd.
 - **automaticky generované** - např. GUID
-
 <!--ID: 1779128799697-->
 END
 
@@ -1627,7 +1626,6 @@ Back:
 
 - **XPath** - jazyk který aplikujeme na XML dokument a on nám vrátí sekvenci elementů
 - **XQuery** - XPath + další rozšíření navíc jako například FLWOR (For, Let, Where, Order By, Return)
-
 <!--ID: 1779128799781-->
 END
 

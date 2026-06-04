@@ -300,7 +300,6 @@ Back:
 
 Tedy:
 ![](../../Assets/Pasted%20image%2020260603132205.png)
-
 <!--ID: 1780493530465-->
 END
 

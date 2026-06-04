@@ -174,7 +174,6 @@ Back:
 	- Maximálním zatížení databáze, kolik jsem schopný zpracovat nových objednávek
 - **Price/tpmC**
 	- celkové náklady na vlastnictví systému v poměru k jeho výkonu
-
 <!--ID: 1779128799866-->
 END
 
@@ -275,7 +274,6 @@ Back:
 
 - **TPsE** - transactions per second u **jakékoliv** transakce
 - **Price/TPsE**
-
 <!--ID: 1779128799880-->
 END
 
@@ -444,7 +442,6 @@ Slouží na **OLTP**:
 
 - **tpmC** - new-order transaction rate = při maximálním zatížení databáze, kolik jsem schopný zpracovat nových objednávek
 - **Price/tpmC** - kolik mě jedna nová objednávka stojí peněz
-
 <!--ID: 1779128799901-->
 END
 
@@ -473,7 +470,6 @@ Metriky:
 
 - **TPsE** - transactions per second u **jakékoliv** transakce
 - **Price/TPsE
-
 <!--ID: 1779128799904-->
 END
 
@@ -499,7 +495,6 @@ Máme tyto metriky:
 
 - **QphH@Size** - Composite Query-per-Hour performance metric
 - **Price/QphH@Size** - Price/Performance metric; Size je velikost databáze.
-
 <!--ID: 1779128799906-->
 END
 

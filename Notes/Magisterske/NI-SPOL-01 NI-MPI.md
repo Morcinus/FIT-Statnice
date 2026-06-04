@@ -514,6 +514,24 @@ END
 
 ---
 
+
+START
+FIT-Card
+
+Jak se spočte eulerova funkce pro prvočíslo?
+
+Např.
+$\varphi(p^k)$
+
+Back:
+
+$\varphi(p^k)=p^k-p^{k-1}$
+
+END
+
+---
+
+
 <!--
 Original Flashcard ID: 1735205749440
 -->

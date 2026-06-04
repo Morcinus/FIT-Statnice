@@ -171,13 +171,17 @@ Original Flashcard ID: 1746599650047
 START
 NI-SZZ
 
-Jaký **význam** má $p$-hodnota?
+Jaký **význam** má $p$-hodnota? Kdy zamítneme $H_0$ vzhledem k $p$ hodnotě?
 
 Back:
 
-P-hodnota mi říká, jaká je pravděpodobnost, že bychom daný výsledek dostali čistě náhodou, pokud platí nulová hypotéza.
+$p$-hodnota mi říká, že pokud máme nějaká data, tak s jakou pravděpodobností si můžeme být jistí, že jsme výsledek nedostali náhodou, když platí $H_0$
 
+**Zamítneme $H_0$**, pokud $p$ je menší než požadovaná $\alpha$
+
+<!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020250322075840.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1778521859943-->
 END
 

@@ -2256,7 +2256,6 @@ Back:
 - Rekurzivní algoritmus typu Rozděl a panuj
 
 ![](../../Assets/Pasted%20image%2020260601093645.png)
-
 <!--ID: 1780493530624-->
 END
 
@@ -2272,7 +2271,6 @@ Back:
 - Rekurzivní algoritmus typu Rozděl a panuj
 
 ![](../../Assets/Pasted%20image%2020260601093704.png)
-
 <!--ID: 1780493530627-->
 END
 

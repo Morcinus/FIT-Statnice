@@ -461,7 +461,6 @@ Back:
 	- Aby se experti u tabule neprali, musí tam být moderátor.
 	- Tato komponenta neustále monitoruje změny na tabuli a "zvednuté ruce" expertů.
 	- Rozhoduje, komu dá slovo (zavolá jeho metodu) a jakým způsobem se bude řešení vyvíjet. Řídí tedy celý průběh programu.
-
 <!--ID: 1778786460829-->
 END
 
