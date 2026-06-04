@@ -383,6 +383,24 @@ END
 
 ---
 
+
+START
+NI-SZZ
+
+Jak souvisí entropie s **kódováním**? (2)
+
+Back:
+
+- Entropie nám udává **spodní mez průměrné délky bezeztrátového kódu**.
+	- Tzn. když máme nějaký zdroj náhody (třeba náhodně generovaný text symbolů), tak každý symbol nelze v průměru zakódovat méně než $H(X)$ bity.
+	- Takže nám to jakoby říká, "ja**k moc můžeme zkomprimovat text/informace**", které chceme přenášet
+- Efektivní kódy pak přiřazují **častějším symbolům kratší kódová slova**, aby to bylo co nejefektivnější
+<!--ID: 1780592849911-->
+END
+
+---
+
+
 <!--
 Original Flashcard ID: 1746599650137
 -->
