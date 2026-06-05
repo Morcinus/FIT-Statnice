@@ -2196,6 +2196,16 @@ Back:
 - **maximální dilatace zdrojových hran v hostitelské síti**
 - **expanze vnoření**
 
+<!-- ExplanationStart -->
+**Maximální dilatace** je maximální vzdálenost, o kterou se prodlouží cesta z vrcholu $u$ do vrcholu $v$ při vnoření do jiné sítě.
+
+Např. `u - v` se vnoří do jiné sítě a vznikne z toho $u - a - b - c - v$, tak je dilatace 4. Takže jakoby to prodloužení. Formálně _maximální délka hostitelské cesty pro zdrojovou hranu_
+
+**Expanze vnoření** = $|V_H| / |V_G|$ tzn. kolik
+
+<!-- ExplanationEnd -->
+
+
 Tags: otazka31
 <!--ID: 1779300071016-->
 END

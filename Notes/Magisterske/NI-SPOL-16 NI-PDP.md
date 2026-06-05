@@ -865,7 +865,7 @@ Back:
 ![](../../Assets/Pasted%20image%2020250217174325.png)
 
 <!-- DetailInfoStart -->
-
+![](../../Assets/Pasted%20image%2020260605103507.png)
 ![](../../Assets/Pasted%20image%2020250217174340.png)
 
 <!-- DetailInfoEnd -->
@@ -1028,6 +1028,8 @@ Vlastními slovy:
 Izoefektivní funkce ti říká, **jak musí růst problém (nebo jak může růst počet procesorů)**, aby byla zachována efektivita.
 
 ![](../../Assets/Pasted%20image%2020250217174635.png)
+
+![](../../Assets/Pasted%20image%2020260605115116.png)
 
 Jinými slovy:
 

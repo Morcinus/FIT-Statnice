@@ -1799,7 +1799,9 @@ START
 NI-SZZ
 
 
-Jak vypadá sekvenční verze QuickSortu?
+Jak vypadá **sekvenční verze QuickSortu**?
+
+(pozor, tohle **bylo u státnic**)
 
 Back:
 
@@ -1840,6 +1842,8 @@ NI-SZZ
 
 Jak se dá naivně **paralelizovat quicksort**? Jaké to má problémy?
 
+(pozor, tohle **bylo u státnic**)
+
 ![](../../Assets/Pasted%20image%2020250321134512.png)
 
 Back:
@@ -1863,8 +1867,9 @@ Original Flashcard ID: 1749202568493
 START
 NI-SZZ
 
-
 Jak lze zrychlit quicksort?
+
+(pozor, tohle **bylo u státnic**)
 
 Back:
 
@@ -1969,9 +1974,7 @@ START
 NI-SZZ
 
 
-Jak vypadá učebnicová verze Merge Sortu? (SUV)
-
-(Pozn. tady podle mě nemá cenu se to učit přesně, ale jen cca tušit, co tam je za funkce)
+Jak vypadá učebnicová verze **Merge Sortu**? (SUV)
 
 Back:
 
@@ -1990,7 +1993,7 @@ Máme pole $A$ délky $n$
 - zavolání na levou část `mergesort_rec(A, middle, hi, B)`
 - merge `merge(B, lo, middle, hi, A)`
 
-**merge** (2-cestné slučování)
+**merge**
 
 - `i = lo; j = middle`
 - iterujeme $k$ mezi `lo..hi`
@@ -2016,6 +2019,8 @@ NI-SZZ
 
 
 Jak vypadá **přímočará (naivní) paralelizace merge sortu**? (PUV)
+
+(pozor, merge sort **byl u státnic**)
 
 Back:
 
@@ -2078,6 +2083,8 @@ NI-SZZ
 
 Jaké jsou 3 možnosti zlepšení paralelního MergeSortu?
 
+(pozor, tohle **bylo u státnic**)
+
 Back:
 
 - **zavedením prahu** (stejně jako u quicksortu)
@@ -2105,6 +2112,8 @@ NI-SZZ
 
 
 Jak funguje MergeSort s metodou "**Prahování a Rozděl-a-PůlkuSiNech**"?
+
+![](../../Assets/Pasted%20image%2020250321135717.png)
 
 Back:
 
@@ -2137,9 +2146,7 @@ Jak funguje paralelizace algoritmu **2-cestného** slučování u MergeSortu?
 
 Back:
 
-todo přepsat tak, aby mi to dávalo smysl
-
-1. slučovaná seřazená pole $C, D$ délky $n/2$ si představme jako řádkové a sloupcové indexy matice, v níž jsou jedničky tam, kde sloupcový index $>$ řádkový, jinde nuly
+1. slučovaná seřazená pole $C, D$ délky $n/2$ si představme jako řádkové a sloupcové indexy matice, v níž jsou jedničky tam, kde sloupcový prvek $>$ řádkový prvek, jinde nuly (tedy $D[i] > C[j] \Rightarrow 1$)
 2. všechny jedničky jsou v pravém horním rohu, od nul je dělí lomená čára (na obrázku tlustá modrá)
 3. každé vlákno si najde svůj průsečík této lomené čáry s $p-1$ vedlejšími diagonálami matice (binárním dělením v čase $O(\log n)$) rozmístěnými ve vzdálenosti $n/2p$ od sebe
 4. průsečíky promítneme (horizontálně/vertikálně) na strany matice a podle toho rozkouskujeme $C$ i $D$ na $p$ částí (označených např. $C_1$ až $C_p$ resp. $D_1$ až $D_p$)
@@ -2249,7 +2256,7 @@ END
 START
 NI-SZZ
 
-Co je to QuickSort?
+Co je to QuickSort? Jaké má vlastnosti (datová citlivost, in/out-place, stabilita)
 
 Back:
 
@@ -2264,7 +2271,7 @@ END
 START
 NI-SZZ
 
-Co je to Merge Sort?
+Co je to Merge Sort? Jaké má vlastnosti (datová citlivost, in/out-place, stabilita)
 
 Back:
 
@@ -2279,7 +2286,9 @@ END
 START
 NI-SZZ
 
-Jak vypadá varianta QuickSort algoritmu: **Lomuto**?
+Jak vypadá varianta QuickSort algoritmu: **Lomutova**?
+
+Back:
 
 **Fungování**
 
@@ -2294,8 +2303,6 @@ Cílem funkce `seq_partition_L` je vzít zadanou část pole, vybrat jeden refer
 - **Výhoda:** Je velmi snadné na pochopení a implementaci (kód je velmi kompaktní)
 - **Nevýhoda:** Obecně provádí více prohazování (swapů) než alternativní Hoareovo schéma. Je také náchylnější k degradaci výkonu (na složitost $O(n^2)$), pokud pole obsahuje velké množství identických prvků nebo pokud je pole již předem setříděné.
 
-Back:
-
 ![](../../Assets/Pasted%20image%2020260601094140.png)
 <!--ID: 1780493530630-->
 END
@@ -2305,7 +2312,9 @@ END
 START
 NI-SZZ
 
-Jak vypadá varianta QuickSort algoritmu: **Hoare**?
+Jak vypadá varianta QuickSort algoritmu: **Hoareova**?
+
+Back:
 
 **Fungování**
 
@@ -2316,8 +2325,6 @@ Algoritmus hledá zleva prvky, které jsou "příliš velké" (patří napravo o
 - **Výhoda Hoareho (Efektivita):** Hoareovo schéma dělá v průměru **až třikrát méně prohazování (swapů)** než Lomuto. Proto se v knihovnách používá právě Hoare (nebo jeho varianty). Mnohem lépe také zvládá pole, kde je spousta stejných hodnot.
 - **Nevýhoda Hoareho (Složitost):** Hoareovo schéma je náchylnější na tzv. _off-by-one errors_ (chyby o jedničku) – např. závěrečná korekce `j++`. Lomuto se mnohem snáze implementuje a pamatuje.
 
-Back:
-
 ![](../../Assets/Pasted%20image%2020260601094239.png)
 <!--ID: 1780493530633-->
 END
@@ -2325,3 +2332,21 @@ END
 ---
 
 
+START
+NI-SZZ
+
+Jak funguje `#pragma omp critical`?
+
+(na tohle se ptal Langr u státnic)
+
+Back:
+
+Blok uvnitř paralelní oblasti (`#pragma omp parallel`), kde tu oblast může vykonávat **pouze jedno vlákno zároveň**. 
+
+<!-- ExampleStart -->
+![](../../Assets/Pasted%20image%2020260605115703.png)
+<!-- ExampleEnd -->
+<!--ID: 1780661518471-->
+END
+
+---

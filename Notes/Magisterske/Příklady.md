@@ -858,3 +858,91 @@ Tags: NI-SPOL-10 NI-VSM
 END
 
 ---
+
+## NI-SPOL-16 NI-PDP
+
+
+START
+NI-SZZ
+
+Popiš algoritmus `ParAdd` jednoduché paralelní redukce
+
+(Tohle bylo u státnic)
+
+Back:
+
+![](../../Assets/Pasted%20image%2020260605114618.png)
+
+<!-- ExampleStart -->
+![](../../Assets/Pasted%20image%2020260605114626.png)
+<!-- ExampleEnd -->
+
+
+Tags: NI-SPOL-16 NI-PDP
+<!--ID: 1780661518474-->
+END
+
+---
+
+
+START
+NI-SZZ
+
+Popiš jaké jsou u algoritmu `ParAdd`:
+- $SL(n)= ?$
+- $SU(n)= ?$
+- $T(n,n)= ?$
+- $S(n,n)= ?$
+- $C(n,n)= ?$
+- $E(n,n)= ?$
+
+![](../../Assets/Pasted%20image%2020260605114618.png)
+
+Back:
+
+![](../../Assets/Pasted%20image%2020260605114831.png)
+
+Tags: NI-SPOL-16 NI-PDP
+<!--ID: 1780661518477-->
+END
+
+---
+
+
+START
+NI-SZZ
+
+Je algoritmus `ParAdd` cenově optimální?
+
+Back:
+
+Ne! je tam velmi **malé využití procesorů** a počet využitých procesorů klesá **exponenciálně rychle**.
+
+Takže to je špatně škálovatelné
+
+Tags: NI-SPOL-16 NI-PDP
+<!--ID: 1780661518480-->
+END
+
+---
+
+## NI-SPOL-17 NI-PDP
+
+START
+NI-SZZ
+
+Jaký je rozdíl mezi atomic, critical a mutexem?
+
+(na tohle se ptá Langr u státnic)
+
+Back:
+
+- `atomic` - chrání jednu sdílenou proměnnou
+- `critical` - chrání blok kódu (používá se u složitějších operací)
+- `mutex` - podobný jako `critical` , ale vytvoříme vlastní **objekt** (zámek), který můžeme zamknout nebo odemknout v různých sekcích kódu. Tzn. umožňuje nám to ještě větší kontrolu než critical, protože zámek můžeme předávat funkcím a zamykat/odemykat na různých sekcích kódu
+
+Tags: NI-SPOL-17 NI-PDP
+<!--ID: 1780661518483-->
+END
+
+---
