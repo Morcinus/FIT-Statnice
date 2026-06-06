@@ -624,7 +624,7 @@ Back:
 
 - `nR` - počet řádků v relaci $R$
 - `V(A,R)` -  variabilita atributu - počet různých hodnot $A$ v relaci $R$
-- `pR` - počet stránek v relaci $R$
+- `pR` - počet stránek v relaci $R$, $pR=nR/bR$
 - `bR` - block factor - průměrný počet řádků, co se vejdou do jednoho bloku
 
 **Rozšířené**:
@@ -679,7 +679,7 @@ Máme relaci $R$ s klíčem $A$:
 
 - `f(A,R)` - faktor větvení - průměrný počet potomků vnitřního uzlu (typicky 50-150)
 - `I(A,R)` - hloubka stromu (typicky 2-3)
-- `p(A,R)` - počet listových bloků
+- `pl(A,R)` - počet listových bloků/stránek (někde se píše taky jen `p(A,R)`)
 
 **Rozšířené statistiky**:
 
@@ -763,20 +763,22 @@ Original Flashcard ID: 1737106145122
 START
 NI-SZZ
 
-Co jsou to přístupové cesty (access paths) při vyhodnocování SQL dotazů? Uveďte příklady.
+Jaké jsou typy **rovnostních přístupových cest** k datům při vyhodnocování SQL dotazů? (4+ každá má podtypy)
 
 Back:
 
-- Specifikují **cestu**, jak databázový stroj přistoupí k datům v tabulkách/indexech při provádění dotazu.
-
-**Příklady**:
-
+Cesty:
 - **no-index** (full-table scan) - Databáze čte všechny řádky v tabulce, aby našla data odpovídající dotazu.
+	- $A$ je unique
+	- $A$ není unique
 - **unique index** - pokud existuje unikátní index na sloupci
+	- $A$ v heap tabulce
+	- $A$ v indexu
 - **non-unique index** - pokud neexistuje unikátní index na sloupci, najdou se všechny řádky splňující danou podmínku
+	- $A$ bez unique indexu
 - **composed index** - skládá se z více sloupců
-
-Potom jsou ještě index query only a base table query u nerovnostních dotazů, ale to mi přišlo jako už moc velký detail.
+	- $A$ je unique
+	- $A$ není unique
 
 <!-- ExampleStart -->
 
@@ -814,15 +816,11 @@ END
 START
 NI-SZZ
 
-Jaké základní metody přístupu k datům (Access Methods) využívají relační databáze? (5)
+SMAZAT
 
 Back:
 
-1. **Full Table Scan** (Sekvenční průchod tabulkou)
-2. **Index Seek** (Vyhledání konkrétní hodnoty v indexu - ani nemusíme sahat do tabulky)
-3. **Index Scan** (Průchod indexem - podobně jako full table scan ale v indexu)
-4. **Index-Only Scan** (najdeme data rovnou v indexu, takže nemusíme ani sahat do tabulky - například sloupce použité ve `WHERE` i `SELECTU`)
-5. **RowID / Bookmark Lookup** (Pomocí indexu najdeme záznam a pak přečteme zbytek záznamu v tabulce)
+SMAZAT
 <!--ID: 1779704516425-->
 END
 
@@ -831,15 +829,11 @@ END
 START
 NI-SZZ
 
-Co je to **Full Table Scan (FTS)** a ve kterých dvou případech ho optimalizátor preferuje?
+SMAZAT
 
 Back:
 
-Databáze sekvenčně čte celou tabulku (všechny datové bloky) od začátku do konce a aplikuje filtry.
-
-**Kdy se preferuje:**
-1. Když dotaz vrací velkou část řádků (obvykle > 10–20 % tabulky). 
-2. Když je tabulka velmi malá (načíst ji rovnou do paměti je rychlejší než procházet strom indexu).
+SMAZAT
 <!--ID: 1779704516427-->
 END
 
@@ -848,14 +842,11 @@ END
 START
 NI-SZZ
 
-Co je to **Index Seek**, jakou má složitost a kdy je nejvýhodnější?
+SMAZAT
 
 Back:
 
-Databáze cíleně prochází B-strom indexu od kořene k listu, aby našla konkrétní hodnotu (nebo bod začátku hledání). Nemusíme ani číst tabulku, když tu hodnotu najdeme rovnou v indexu.
-
-- **Složitost:** $O(\log n)$.
-- **Kdy je nejvýhodnější:** U vysoce selektivních dotazů (když hledáme jeden nebo jen pár záznamů – např. hledání podle primárního klíče).
+SMAZAT
 <!--ID: 1779704516430-->
 END
 
@@ -864,12 +855,11 @@ END
 START
 NI-SZZ
 
-Jaký je rozdíl mezi **Index Seek** a **Index Scan**?
+SMAZAT
 
 Back:
 
-**Seek** skáče stromem shora dolů přímo na konkrétní hodnotu.
-**Scan** čte sekvenčně přímo na úrovni listů indexu, aniž by primárně navigoval shora. Používá se například při hledání v rozsahu (`WHERE vek BETWEEN 20 AND 30`) nebo když databáze prohledává celý index místo celé tabulky (protože index je menší).
+SMAZAT
 <!--ID: 1779704516432-->
 END
 
@@ -878,13 +868,11 @@ END
 START
 NI-SZZ
 
-Co je to **Index-Only Scan** (Covering Index) a proč je z hlediska výkonu klíčový?
+SMAZAT
 
 Back:
 
-Nastává tehdy, když _všechny_ sloupce, které dotaz potřebuje (v klauzuli `SELECT` i `WHERE`), jsou uloženy přímo v daném indexu.
-
-Databáze vůbec **nemusí sahat do původní datové tabulky**, čímž ušetří obrovské množství I/O operací.
+SMAZAT
 <!--ID: 1779704516435-->
 END
 
@@ -893,17 +881,240 @@ END
 START
 NI-SZZ
 
-Kdy dochází k operaci **RowID / Bookmark Lookup** a jaká je její hlavní výkonnostní nevýhoda?
+SMAZAT
 
 Back:
 
-Nastává, když databáze sice najde záznam v indexu, ale dotaz požaduje i sloupce, které v indexu nejsou obsaženy. Databáze si vezme fyzický ukazatel (RowID) z indexu a musí jít do tabulky pro zbytek dat.
-
-**Nevýhoda:** Způsobuje drahé náhodné čtení z disku (Random I/O), protože data mohou být rozházená v různých blocích.
+SMAZAT
 <!--ID: 1779704516438-->
 END
 
 ---
+
+START
+NI-SZZ
+
+Jaká je cena dotazu pro **no index** (full-table scan) heap tabulky? **Pokud $A$ není unique**
+
+`select * from R where A = ’x’;`
+
+Back:
+
+$$cost = pR$$
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260606160321.png)
+<!-- DetailInfoEnd -->
+
+<!--ID: 1780758868634-->
+END
+
+---
+
+
+START
+NI-SZZ
+
+Jaká je cena dotazu pro **no index** (full-table scan) heap tabulky? **Pokud $A$ je unique**
+
+`select * from R where A = ’x’;`
+
+Back:
+
+$$cost = pR/2$$
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260606160321.png)
+<!-- DetailInfoEnd -->
+
+<!--ID: 1780758868647-->
+END
+
+---
+
+START
+NI-SZZ
+
+Jaká je cena dotazu pro **unique index** v **index organized table**?
+
+`select * from R where A = ’x’;`
+
+Back:
+
+$$cost = I(A,R)$$
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260606160627.png)
+<!-- DetailInfoEnd -->
+
+<!--ID: 1780758868649-->
+END
+
+---
+
+START
+NI-SZZ
+
+Jaká je cena dotazu pro **unique index** v **heap tabulce**?
+
+`select * from R where A = ’x’;`
+
+Back:
+
+$$cost = I(A,R) + 1$$
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260606160627.png)
+<!-- DetailInfoEnd -->
+
+<!--ID: 1780758868652-->
+END
+
+---
+
+START
+NI-SZZ
+
+Jaká je cena dotazu pro **non-unique index** u heap tabulky?
+
+`select * from R where A = ’x’;`
+
+Back:
+
+$$cost = I(A,R)+nR(A=x)$$
+
+V praxi to dost závisí na clustering factoru indexu
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260606160619.png)
+<!-- DetailInfoEnd -->
+
+<!--ID: 1780758868655-->
+END
+
+---
+
+
+START
+NI-SZZ
+
+Jaká je cena dotazu pro **composed index** $R(A,B)$ u heap tabulky?
+
+`select B from R where A = ’x’;`
+
+Back:
+
+
+$$cost = I((A,B),R)+\frac{nR(A=x)}{bR}-1$$
+
+$bR$ je block factor
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260606161056.png)
+<!-- DetailInfoEnd -->
+<!--ID: 1780758868658-->
+END
+
+---
+
+
+START
+NI-SZZ
+
+Jaká je cena dotazu pro **composed index** $R(A,B)$ u heap tabulky, kde $A$ je **unique**?
+
+`select B from R where A = ’x’;`
+
+Back:
+
+$$cost = I((A,B),R)$$
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260606161119.png)
+<!-- DetailInfoEnd -->
+<!--ID: 1780758868661-->
+END
+
+---
+
+
+START
+NI-SZZ
+
+Jaké jsou typy **nerovnostních přístupových cest** k datům při vyhodnocování SQL dotazů? (3)
+
+Back:
+
+- **index query only** - jsme v index organized table
+- **base table query** (heap table)
+	- **bez indexu**
+	- **s indexem**
+<!--ID: 1780758868664-->
+END
+
+---
+
+
+START
+NI-SZZ
+
+Jakou cenu má **index query only** přístup k datům (tzn. v index organized table)?
+
+`select A from R where A < ’x’;`
+
+Back:
+
+$$cost = I(A,R) + p(A,R)/2$$
+
+Dělíme počet leaf stránek indexu dvěma, protože assumujeme, že to průměrně bude cca uprostřed ta hodnota.
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260606161854.png)
+<!-- DetailInfoEnd -->
+<!--ID: 1780758868667-->
+END
+
+---
+
+
+START
+NI-SZZ
+
+Jakou cenu má **base table query** přístup k datům? **Pokud nepoužijeme index** (tzn. jen heap table)
+
+`select * from R where A < ’x’;`
+
+Back:
+
+$$cost = pR$$
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260606161901.png)
+<!-- DetailInfoEnd -->
+<!--ID: 1780758868670-->
+END
+
+---
+
+START
+NI-SZZ
+
+Jakou cenu má **base table query** přístup k datům? **Pokud použijeme index** (tzn. index + heap table)
+
+`select * from R where A < ’x’;`
+
+Back:
+
+$$cost = I(A,R)+p(A,R)/2+nR/2$$
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260606161901.png)
+<!-- DetailInfoEnd -->
+<!--ID: 1780758868673-->
+END
+
+---
+
 
 ## Metody vyhodnocení spojení a jejich cena
 
@@ -918,10 +1129,10 @@ Jaké jsou základní fyzické metody vyhodnocení spojení (Joins) v relačníc
 
 Back:
 
-- Nested Loops Join
-- Hash Join
-- Sort-Merge Join
-- Join s využitím speciálních struktur
+- **Nested Loops Join**
+- **Hash Join**
+- **Sort-Merge Join**
+- **Join s využitím speciálních struktur**
 
 Tags: reviewed
 <!--ID: 1779128799459-->
@@ -932,13 +1143,13 @@ END
 START
 NI-SZZ
 
-Jak funguje **Nested Loops Join** a pro jakou situaci je nejvýhodnější?
+Jak funguje **Nested Loops Join** a jak se **obecně počítá cena**?
 
 Back:
 
-Funguje jako dva vnořené cykly `FOR`: Pro každý řádek z vnější (obvykle menší) tabulky databáze prohledá vnitřní tabulku na shodu.
+iteruju stránky v $R$ → pro každou iteruju stránky v $S$ → pro každou vypisuju shody
 
-**Kdy je nejvýhodnější:** Když je vnější tabulka malá a na spojovacím sloupci vnitřní tabulky je **index**. Prohledávání vnitřní tabulky se tím zrychlí z FTS na Index Seek.
+cena joinu = cena čtení + cena zápisů
 <!--ID: 1779704516440-->
 END
 
@@ -947,13 +1158,26 @@ END
 START
 NI-SZZ
 
-Jak CBO (Cost-Based Optimizer) přibližně počítá cenu pro **Nested Loops Join** a co je hlavním rizikem?
+Jak se spočte **cena** pro **Nested loop join**?
+
+- $M=3$
+- $3 \lt M \lt pR+2$
+- $pR+2 \leq M$
+- zápisy
 
 Back:
 
-$Cost = \text{I/O(vnější)} + (\text{počet řádků vnější} \times \text{I/O přístupu do vnitřní})$
+**Pro čtení s $M=3$** (tzn. do paměti se vejdou jen $3$ bloky)
+$$pR + pS \cdot pR$$
 
-**Riziko:** Pokud chybí index na vnitřní tabulce, databáze musí pro každý řádek první tabulky skenovat celou druhou tabulku (Full Table Scan). Cena pak roste kvadraticky $O(N \times M)$, což je u velkých tabulek katastrofa.
+**Pro čtení s $3 \lt M \lt pR+2$** (tzn. menší tabulka se nevejde do paměti)
+$$pR + pS \cdot \left\lceil \frac{pR}{M-2} \right\rceil $$
+
+**Pro čtení s $pR+2 \leq M$** (tzn. do paměti se vejde celá tabulka)
+$$pR + pS$$
+
+**Zápisy**
+$$\frac{nR \cdot nS}{V(A,S) \cdot bRS}$$
 <!--ID: 1779704516443-->
 END
 
@@ -966,6 +1190,15 @@ Jak funguje **Hash Join** a pro jaké operace je striktně omezen?
 
 Back:
 
+1. Vybere se hash funkce (např.$\mod(k)$)
+2. Na obě relace se aplikuje hash funkce
+3. porovnají se pouze skupiny z $R$ a $S$, které mají stejný hash
+
+Funguje pouze na **rovnost**
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260606165540.png)
+
 **Fáze**
 
 - **Build:** Z menší tabulky se v paměti (RAM) vytvoří Hash tabulka na základě spojovacího klíče.
@@ -974,6 +1207,7 @@ Back:
 **Omezení:** Lze použít **pouze pro spojení na rovnost** (equi-join, např. `A.id = B.id`), nefunguje pro nerovnosti ( `<`, `>`).
 
 **Kdy se používá:** Při spojování obřích tabulek, kde chybí indexy (často v datových skladech).
+<!-- DetailInfoEnd -->
 <!--ID: 1779704516446-->
 END
 
@@ -983,13 +1217,11 @@ END
 START
 NI-SZZ
 
-Co tvoří hlavní složku ceny u **Hash Joinu** a k jakému fatálnímu propadu výkonu u něj může dojít?
+Kdy je **Hash join pomalý?**
 
 Back:
 
-Cena se skládá z jednoho sekvenčního přečtení obou tabulek plus CPU ceny za výpočet hashů. $Cost = \text{I/O(Tabulka1)} + \text{I/O(Tabulka2)} + \text{CPU\_Cost}$
-
-**Nízká efektivita:** Pokud je menší tabulka příliš velká a Hash tabulka se nevejde do vyhrazené RAM, databáze ji musí začít odkládat na pomalý disk (TempDB/Swap), což brutálně zpomalí dotaz.
+Když se **hash tabulka** nevejde do paměti -> musí se furt prohazovat
 <!--ID: 1779704516448-->
 END
 
@@ -1002,12 +1234,18 @@ Jak funguje **Sort-Merge Join** a kdy ho optimalizátor preferuje?
 
 Back:
 
+**seřadím R i S podle joinovaného atributu → merguju seřazené do výstupu**
+
+Preferuje se když už jsou data seřazená
+
+<!-- DetailInfoStart -->
 **Fáze**
 
 - **Sort:** Obě tabulky se seřadí podle spojovacího klíče (pokud už nejsou).
 - **Merge:** Obě tabulky se procházejí sekvenčně a hledají se shody.
 
 **Kdy ho preferuje:** Vyplatí se, když **jsou data už předem seřazená** (např. obě tabulky mají na klíči index), protože pak odpadá drahá fáze Sort. Na rozdíl od Hash Joinu umí i nerovnostní spojení.
+<!-- DetailInfoEnd -->
 <!--ID: 1779704516451-->
 END
 
@@ -1017,13 +1255,23 @@ END
 START
 NI-SZZ
 
-Jaká je cenová rovnice pro **Sort-Merge Join** a co ji prodražuje?
+Jak se spočte **cena** pro **Merge Join**?
+
+- pokud $M=3$
+- pokud $M \ge \sqrt{pS}$
+- pokud $M < \sqrt{pS}$
 
 Back:
 
-$Cost = \text{Cost(Sort\_A)} + \text{Cost(Sort\_B)} + \text{I/O(čtení A)} + \text{I/O(čtení B)}$
+**Pokud** $M=3$
+$$\sim 2 \cdot pR \cdot \log(pR) + 2 \cdot pS \cdot \log(pS) + pR + pS$$
 
-**Co ji prodražuje:** Operace Sort (řazení) je nesmírně náročná na CPU i paměť. Pokud tabulky nejsou předem seřazené indexem, je často celková cena Sort-Merge Joinu horší než u Hash Joinu.
+**Pokud** $M \ge \sqrt{pS}$
+$$\sim 3 \cdot (pR+pS)$$
+
+
+**Pokud** $M < \sqrt{pS}$ záleží na počtu běhů
+
 <!--ID: 1779704516454-->
 END
 
@@ -1032,17 +1280,42 @@ END
 START
 NI-SZZ
 
-Jak funguje **Join s použitím speciálních struktur**?
+Jaké jsou 2 typy joinů s **indexama** a **spešl strukturama** co jsme si říkali?
 
 Back:
 
-- Např. když $a$ je v $S$ klíčem, udělá se lookup řádku s $a$ podle **indexu**. Potom se jen proiteruje $R$
-- atd. těhlech speciálních případů je hodně
+- **index lookup:** $R$ je seřazený podle $A$ a $S$ má index nad $A$
+	- postupně čtu z $R$ a v případě rovnosti dohledám záznam z $S$ díky indexu
+- **hash cluster:** $R$ je seřazený podle $A$ a $S$ je hashovaný podle $A$
 <!--ID: 1779704516457-->
 END
 
 ---
 
 
+START
+NI-SZZ
+
+Jaká je **cena joinu** $R$ je seřazený podle $A$ a $S$ má index nad $A$ (index lookup)?
+
+Back:
+
+$$pR + V(A,R) + I(A,S) + p(A,S)$$
+<!--ID: 1780758868676-->
+END
+
+---
 
 
+START
+NI-SZZ
+
+Jaká je **cena joinu** $R$ je seřazený podle $A$ a $S$ je hashovaný podle $A$ (hash cluster)?
+
+Back:
+
+$pR + V(A,R)$
+<!--ID: 1780758868679-->
+END
+
+---

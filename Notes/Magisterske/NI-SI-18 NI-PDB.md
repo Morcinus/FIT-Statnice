@@ -205,7 +205,7 @@ Co je **availability** v CAP theorému?
 
 Back:
 
-**Dostupnost** (Availability): Pokud node funguje, musí reagovat na požadavky
+**Dostupnost** (Availability): Pokud node funguje, musí na požadavek vrátit výsledek (nemůže požadavek odmítnout)
 
 <!-- DetailInfoStart -->
 
@@ -273,9 +273,11 @@ Co jsou CRDT typy?
 
 Back:
 
-Convergent Replicated Data Types
+**Convergent Replicated Data Types**
 
-- Zavedeme datové typy a konkrétní povolené operace a v případě konfliktů jak se to má resolvenout
+Jsou to datové typy určené pro distribuované systémy, které jou dělané tak, aby **mohly přijímat updates nezávisle na sobě** a změny se **mergovaly bez konfliktů**.
+
+Např. inkrementace čítače, dávání prvků do mapy/množiny atd.
 <!--ID: 1779128799496-->
 END
 

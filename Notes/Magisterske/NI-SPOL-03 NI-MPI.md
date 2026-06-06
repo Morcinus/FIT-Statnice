@@ -1003,7 +1003,7 @@ Když protnu vrstevnici, tak nejsem na vrcholu (pokud nejsem na hřebenu)
 
 Tedy lokální extém na cestě může nastat pouze v místech, kde se dotýkám vrstevnice.
 
-To že se dotýkám vrstevnice zjistím z toho, že cesta a vrstevnice mají stejnou tečnu. Tečny jsou kolmý na gradient. Neboli musím najít body takové, kde gradienty funkce $f$ a funkce $g$ jsou rovnoběžné. To jsou pak body podezřelé z extrému.
+To že se dotýkám vrstevnice zjistím z toho, že cesta a vrstevnice mají stejnou tečnu. Tečny jsou kolmý na gradient. Neboli musím najít body takové, kde **gradienty** funkce $f$ a funkce $g$ jsou **rovnoběžné**. To jsou pak body podezřelé z extrému.
 
 **Multiplikátory Lagrangeovy funkce nám pak umožní zjistit, kdy jsou gradienty těchto funkcí rovnoběžné.**
 
@@ -1099,15 +1099,26 @@ START
 NI-SZZ
 
 
-Jak se obecně **používá Lagrangeova funkce**? (při hledání lokálního extrému)
+Jak se prakticky počítají **lokální extrémy s rovnostními vazbami**? (jednotlivé kroky)
 
 Back:
 
-1. Napíšeme si Lagrangeovu funkci $L$
-2. Zderivujeme ji podle všech proměnných, čímž získáme $n+m$ rovnic
-3. Rovnice vyřešíme
-4. Koukneme se na všechny směry, co jsou kolmé na gradienty všech těch vazeb a spočteme $v^T\cdot \nabla^2_xL(x^*;\lambda^*)\cdot v$
-5. Když to bude kladné, máme lokální minimum
+Máme např. $f(x,y)$ a rovnostní vazbu $g(x,y)=0$
+
+1. Sestavíme si **Lagrangeovu** funkci $L(x,y,\lambda)$
+2. Vyjádříme si kdy se **gradient** $L$ rovná $0$ (budem mít soustavu rovnic). Z toho zjistíme **kandidáty** na extrém (ty už berou v potaz že jsme vůči té vazbě).
+3. Potom jsou dvě možnosti:
+	1. Buď z vazby umíme **jednoduše vyjádřit jednu proměnnou** např $y=x+1$, tak pak tuto proměnnou dosadíme do původní funkce a řešíme extrémy této jednoduché funkce např. $f(x,x+1)$. Nalezením extrému zde celý postup **končí**.
+	2. Nebo, pokud to nejde jednoduše vyjádřit (např. $1=y^2+x^2$), tak použijeme tu šílenou větu s $v^T\cdot \nabla^2_xL(x^*;\lambda^*)\cdot v > 0$
+4. Potom vyjádříme **Hessián** $\nabla^2_xL(x^*;\lambda^*)$
+5. Potom postupujeme podle té šílené věty:
+	1. **Najdeme vektor v**: Spočteme gradient $\nabla g_j(x^*)$ a vynásobíme ho neznámým vektorem $v$, takže dostanem z gradientu $(2,0)$ rovnici $2v_1 +0v_2=0$. Z toho vyjde například $v_1=0$, tedy výsledný vektor bude $(0,t)$ pro $t\in R$
+	2. **Spočteme výslednou rovnici** $v^T\cdot \nabla^2_xL(x^*;\lambda^*)\cdot v > 0$
+	3. **Pokud je splněna, je to lokální minimum** - z výsledné rovnice dostaneme číslo například $5t^2$, takže jelikož $t^2$ bude vždy kladné, tak to je lokální minimum
+
+<!-- DetailInfoStart -->
+![](../../Assets/Pasted%20image%2020260606125924.png)
+<!-- DetailInfoEnd -->
 <!--ID: 1778786397580-->
 END
 
@@ -1286,18 +1297,25 @@ Original Flashcard ID: 1735922645587
 START
 NI-SZZ
 
-
-Jak se prakticky počítají lokální extrémy? (jednotlivé kroky)
+Jak se prakticky počítají **lokální extrémy bez rovnostních vazeb**? (jednotlivé kroky)
 
 Back:
 
-1. Vyjádříme Lagrangeovu funkci $L(x^*, \lambda) = \dots$
-2. Spočteme gradient $\nabla L(x^*,\lambda^*) = 0$, čímž dostaneme soustavu rovnic a najdeme jednotlivé složky $x$ a $\lambda$
-3. Spočteme Hessovu matici
+1. Spočteme **gradient** (obecně). Položíme ho rovný nule a najdeme z rovnic body, kde je nulový. Tím zjistíme stacionární body.
+2. Spočteme **Hessián** a dosadíme do něj stacionární body
+3. Zjistíme definitnost Hessiánu (Hessián je symetrický, takže můžem použít následující věty)
+	1. Buď **Sylvestrem** podle _determinantu_ rohových matic -> pozitivně nebo negativně definitní
+	2. Nebo je **infefinitní**, pokud má Hessián na diagonálne kladný a záporný prvek
+	3. Případně **vlastníma číslama** -> zjistíme všechny definitnosti (ale semidefinitní nám jsou k prdu a ty ostatní zjistíme těma bodama výše, takže tohle teoreticky dělat nemusíme)
+4. Podle definitnosti pak určíme jestli má lokální minimum nebo sedlový bod:
+	1. **pozitivně/negativně definitní** -> lokální minimum/maximum
+	2. **indefinitní** -> sedlový bod
+	3. **pozitivně/negativně semidefinitní** -> potom nevíme
 <!--ID: 1778786397536-->
 END
 
 ---
+
 
 <!--
 Original Flashcard ID: 1729236692608
@@ -1324,6 +1342,68 @@ Je to protože budou existovat body, které jsou **výše** nebo **níže**.
 
 <!-- ExplanationEnd -->
 <!--ID: 1778786397531-->
+END
+
+---
+
+
+START
+NI-SZZ
+
+Jak se spočte determinant 3x3 matice?
+
+![](../../Assets/Pasted%20image%2020260606103827.png)
+
+Back:
+
+Použijeme Sarussovo pravidlo. Tzn. opíšeme první dva řádky pod matici nebo první dva sloupce za matici a napíšeme s plusem 3 přímky šikmo a 3 přímky opačným směrem.
+<!--ID: 1780735665434-->
+END
+
+---
+
+
+START
+NI-SZZ
+
+Definice: **Hromadný bod**
+
+Back:
+
+![](../../Assets/Pasted%20image%2020260606104454.png)
+<!--ID: 1780735665437-->
+END
+
+---
+
+
+START
+NI-SZZ
+
+Definice: **Limita funkce více proměnných**
+
+(tohle bylo u státnic)
+
+Back:
+
+![](../../Assets/Pasted%20image%2020260606104528.png)
+<!--ID: 1780735665440-->
+END
+
+---
+
+
+START
+NI-SZZ
+
+Definice: **Spojitost funkce více proměnných**
+
+(tohle bylo u státnic)
+
+Back:
+
+![](../../Assets/Pasted%20image%2020260606104621.png)
+<!--ID: 1780735665443-->
 END
 
 ---

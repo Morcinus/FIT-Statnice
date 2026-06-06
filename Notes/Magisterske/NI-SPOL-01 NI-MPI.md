@@ -526,7 +526,7 @@ $\varphi(p^k)$
 Back:
 
 $\varphi(p^k)=p^k-p^{k-1}$
-
+<!--ID: 1780735665429-->
 END
 
 ---

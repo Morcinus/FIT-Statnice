@@ -289,28 +289,13 @@ END
 START
 NI-SZZ
 
-Definuj funkci více proměnných, limitu a spojitost funkce více proměnných.
+SMAZAT
 
 Back:
 
-Funkce více proměnných je zobrazení:
+SMAZAT
 
-$$
-f: D \to \mathbb{R}, \quad D \subseteq \mathbb{R}^n
-$$
-
-Limita funkce $f$ v bodě $a$ je číslo $L$, jestliže se hodnoty $f(x)$ blíží k $L$ pro $x \to a$ nezávisle na směru přiblížení.
-
-Funkce je spojitá v bodě $a$, jestliže:
-
-$$
-\lim_{x \to a} f(x) = f(a)
-$$
-
-![](../../Assets/Pasted%20image%2020260603183551.png)
-![](../../Assets/Pasted%20image%2020260603183556.png)
-
-Tags: NI-SPOL-03 NI-MPI
+SMAZAT
 <!--ID: 1780505845046-->
 END
 
@@ -414,6 +399,8 @@ START
 NI-SZZ
 
 Popiš vyšetřování extrému s rovnostním omezením pomocí Lagrangeovy funkce.
+
+Např. pro funkci $f(x,y)$ a rovnostní omezení $g(x,y)=0$
 
 Back:
 
