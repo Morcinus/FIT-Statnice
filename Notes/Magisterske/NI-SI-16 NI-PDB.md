@@ -905,7 +905,6 @@ $$cost = pR$$
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020260606160321.png)
 <!-- DetailInfoEnd -->
-
 <!--ID: 1780758868634-->
 END
 
@@ -926,7 +925,6 @@ $$cost = pR/2$$
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020260606160321.png)
 <!-- DetailInfoEnd -->
-
 <!--ID: 1780758868647-->
 END
 
@@ -946,7 +944,6 @@ $$cost = I(A,R)$$
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020260606160627.png)
 <!-- DetailInfoEnd -->
-
 <!--ID: 1780758868649-->
 END
 
@@ -966,7 +963,6 @@ $$cost = I(A,R) + 1$$
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020260606160627.png)
 <!-- DetailInfoEnd -->
-
 <!--ID: 1780758868652-->
 END
 
@@ -988,7 +984,6 @@ V praxi to dost závisí na clustering factoru indexu
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020260606160619.png)
 <!-- DetailInfoEnd -->
-
 <!--ID: 1780758868655-->
 END
 
@@ -1271,7 +1266,6 @@ $$\sim 3 \cdot (pR+pS)$$
 
 
 **Pokud** $M < \sqrt{pS}$ záleží na počtu běhů
-
 <!--ID: 1779704516454-->
 END
 

@@ -9,7 +9,6 @@ FILE TAGS: NI-SPOL-11 NI-KOP
 > NI-SPOL-11 (NI-KOP)
 > Význam tříd NP a NPH pro praktické výpočty.
 
-
 ## Význam tříd NP a NPH pro praktické výpočty
 
 <!--

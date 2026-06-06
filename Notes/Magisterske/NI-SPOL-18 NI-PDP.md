@@ -13,7 +13,6 @@ FILE TAGS: NI-SPOL-18 NI-PDP
 TODO:
 - tady by bylo fajn ještě přihodit jednu kartičku na vysvětlení co jsou MPI_Message objekty, aby šlo pochopit co je MPI_Improbe
 -->
-
 ## Programování nad distribuovanou pamětí
 
 <!--

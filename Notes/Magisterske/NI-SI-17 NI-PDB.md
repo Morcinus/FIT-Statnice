@@ -9,7 +9,6 @@ FILE TAGS: NI-SI-17 NI-PDB
 > NI-SI-17 (NI-PDB)
 > Databázové modely: relační, objektově-relační, dokumentový, XML, sloupcový, klíč-hodnota, grafový; jejich rozdíly a vhodné aplikace (aplikační domény). Dotazovací jazyky: SQL, XQuery, Cypher; jejich typické konstrukce a vyjadřovací možnosti.
 
-
 ## Relační
 
 
@@ -1261,7 +1260,6 @@ Back:
 	- **Zcela nevhodné pro OLAP** a datové sklady (neefektivní agregace).
 	- Úplná absence operací `JOIN` (komplexní dotazy jsou problém).
 	- Slabší podpora ACID transakcí (upřednostňuje se rychlost).
-
 <!--ID: 1779128799743-->
 END
 

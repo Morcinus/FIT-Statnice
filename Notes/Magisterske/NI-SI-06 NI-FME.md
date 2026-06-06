@@ -63,7 +63,7 @@ Back:
 
 - **Částečná správnost:** pokud program začne ve stavu splňujícím precondition a **pokud skončí**, výsledný stav splňuje postcondition.
 - **Úplná správnost:** program je částečně správný a navíc je zaručeno, že **terminuje** pro všechny vstupy splňující precondition.
-
+<!--ID: 1780770049419-->
 END
 
 ---

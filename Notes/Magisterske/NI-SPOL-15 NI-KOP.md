@@ -9,7 +9,6 @@ FILE TAGS: NI-SPOL-15 NI-KOP
 > NI-SPOL-15 (NI-KOP)
 > Princip simulovaného ochlazování, význam parametrů a způsoby jejich řízení.
 
-
 ## Princip simulovaného ochlazování
 
 <!--

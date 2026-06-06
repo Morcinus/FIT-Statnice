@@ -9,7 +9,6 @@ FILE TAGS: NI-SPOL-12 NI-KOP
 > NI-SPOL-12 (NI-KOP)
 > Experimentální vyhodnocení algoritmů, zejména randomizovaných.
 
-
 ## Experimentální vyhodnocení algoritmů, zejména randomizovaných
 
 <!--
