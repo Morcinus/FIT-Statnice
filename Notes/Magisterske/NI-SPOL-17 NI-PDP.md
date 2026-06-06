@@ -2282,6 +2282,8 @@ NI-SZZ
 
 Jak vypadá varianta QuickSort algoritmu: **Lomuto**?
 
+Back:
+
 **Fungování**
 
 Cílem funkce `seq_partition_L` je vzít zadanou část pole, vybrat jeden referenční prvek (zvaný **pivot**) a přeskládat pole tak, aby:
@@ -2295,8 +2297,6 @@ Cílem funkce `seq_partition_L` je vzít zadanou část pole, vybrat jeden refer
 - **Výhoda:** Je velmi snadné na pochopení a implementaci (kód je velmi kompaktní)
 - **Nevýhoda:** Obecně provádí více prohazování (swapů) než alternativní Hoareovo schéma. Je také náchylnější k degradaci výkonu (na složitost $O(n^2)$), pokud pole obsahuje velké množství identických prvků nebo pokud je pole již předem setříděné.
 
-Back:
-
 ![](../../Assets/Pasted%20image%2020260601094140.png)
 
 END
@@ -2308,6 +2308,8 @@ NI-SZZ
 
 Jak vypadá varianta QuickSort algoritmu: **Hoare**?
 
+Back:
+
 **Fungování**
 
 Algoritmus hledá zleva prvky, které jsou "příliš velké" (patří napravo od pivota), a zprava prvky, které jsou "příliš malé" (patří nalevo). Když najde jeden takový na levé straně a druhý na pravé, jednoduše je mezi sebou prohodí. Tím se pole rychleji uspořádá.
@@ -2316,8 +2318,6 @@ Algoritmus hledá zleva prvky, které jsou "příliš velké" (patří napravo o
 
 - **Výhoda Hoareho (Efektivita):** Hoareovo schéma dělá v průměru **až třikrát méně prohazování (swapů)** než Lomuto. Proto se v knihovnách používá právě Hoare (nebo jeho varianty). Mnohem lépe také zvládá pole, kde je spousta stejných hodnot.
 - **Nevýhoda Hoareho (Složitost):** Hoareovo schéma je náchylnější na tzv. _off-by-one errors_ (chyby o jedničku) – např. závěrečná korekce `j++`. Lomuto se mnohem snáze implementuje a pamatuje.
-
-Back:
 
 ![](../../Assets/Pasted%20image%2020260601094239.png)
 

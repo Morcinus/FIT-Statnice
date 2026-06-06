@@ -1253,17 +1253,16 @@ Uveďte výhody a nevýhody **sloupcové (wide-column) databáze**.
 
 Back:
 
-- Řádky mají hromadu různých sloupců, každý řádek může obsahovat pouze některé sloupce
+- Každý řádek má vlastní sadu sloupců (flexibilní, řídké schéma)
 - **Výhody:**
-	- Ideální pro čtení a analýzy
-	- Flexibilní schéma
-	- Vysoká škálovatelnost
-	- Výborný výkon (pro zápis i čtení)
-	- Vhodné pro big data, datové sklady
+	- Extrémní rychlost masivního **zápisu** (ideální pro IoT, logy, real-time data).
+	- Skvělé pro **OLTP** v obrovském měřítku (Big Data).
+	- Lineární horizontální škálovatelnost a vysoká dostupnost.
 - **Nevýhody:**
-	- Horší výkon pro kompexní dotazy
-	- Omezená podpora pro ACID
-	- Nevhodné pro OLTP (ale super pro OLAP)
+	- **Zcela nevhodné pro OLAP** a datové sklady (neefektivní agregace).
+	- Úplná absence operací `JOIN` (komplexní dotazy jsou problém).
+	- Slabší podpora ACID transakcí (upřednostňuje se rychlost).
+
 <!--ID: 1779128799743-->
 END
 

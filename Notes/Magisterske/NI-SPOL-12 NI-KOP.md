@@ -168,7 +168,7 @@ Back:
 
 <!-- ExampleStart -->
 
-**Konfiguraní proměnná** - např. maximální počet iterací v algoritmu - potom se algoritmus zastaví
+**Konfigurační proměnná** - např. maximální počet iterací v algoritmu - potom se algoritmus zastaví
 
 <!-- ExampleEnd -->
 
@@ -1574,7 +1574,7 @@ START
 NI-SZZ
 
 
-Jaké klíčové vlastnosti by měl mít experiment?
+Jaké klíčové vlastnosti by měl mít experiment? (3)
 
 Back:
 

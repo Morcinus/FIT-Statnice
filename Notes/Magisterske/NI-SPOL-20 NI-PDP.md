@@ -203,6 +203,8 @@ NI-SZZ
 
 Algoritmus: Sekvenční výpočet prefixových součtů
 
+Pole čísel a na každou pozici ve výsledku se zapíše součet všech čísel od začátku až po aktuální pozici.
+
 Back:
 
 ![](../../Assets/Pasted%20image%2020260529113407.png)
