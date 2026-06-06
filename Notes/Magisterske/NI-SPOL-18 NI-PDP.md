@@ -483,7 +483,7 @@ Back:
 - `buf` - ukazatel na data kam se budou ukládat (proměnnou/pole)
 - `count` - počet přijímaných dat (1 pro proměnnou nebo počet prvků pole)
 - `datatype` - datový typ `MPI_Datatype` (např. `MPI_INT`)
-- `source` - `rank` (číslo) cílového procesu v rámci komunikátoru (např. `MPI_ANY_SOURCE`)
+- `source` - `rank` (číslo) zdrojového procesu v rámci komunikátoru (např. `MPI_ANY_SOURCE`)
 - `tag` - značka zprávy (např. `MPI_ANY_TAG`)
 - `comm` - komunikátor (např. `MPI_COMM_WORLD`)
 - `status` - ukazatel na **stavový objekt**

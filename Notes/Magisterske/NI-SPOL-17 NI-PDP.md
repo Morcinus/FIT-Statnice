@@ -2290,6 +2290,8 @@ Jak vypadá varianta QuickSort algoritmu: **Lomutova**?
 
 Back:
 
+Back:
+
 **Fungování**
 
 Cílem funkce `seq_partition_L` je vzít zadanou část pole, vybrat jeden referenční prvek (zvaný **pivot**) a přeskládat pole tak, aby:
@@ -2313,6 +2315,8 @@ START
 NI-SZZ
 
 Jak vypadá varianta QuickSort algoritmu: **Hoareova**?
+
+Back:
 
 Back:
 

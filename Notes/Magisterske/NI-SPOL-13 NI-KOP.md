@@ -871,13 +871,15 @@ Jak funguje **prohledávání** v prohledávacím prostoru **problému zlomkové
 
 Back:
 
-_Pozn. tímhle si nejsem úplně jistý, jestli jsem ten algoritmus správně pochopil/popsal (ale dávalo by mi to takhle největší smysl) -Morčín_
-
-1. Pro každého souseda:
-	1. Naplním batoh co nejvíce tím sousedem (tou věcí)
-	2. Spočtu cenu toho batohu
-2. Ze všech sousedů vyberu toho co naplnil batoh největší cenou
-3. Jako novou velikost batohu označím velikost zbývajícího prostoru v batohu
+- **Vytváření stromu (Větvení):**
+    - Postupně procházím předměty a pro každý se větvím na dvě možnosti: **vezmu** (1) / **nevezmu** (0). Tím vznikají částečná řešení (uzly ve stromu).
+- **Výpočet horní meze (Odhad):**
+    - V každém uzlu spočítám tzv. **horní mez**. Zjistím ji tak, že vezmu aktuální stav batohu a zbytek volného místa pomyslně dorovnám pomocí **zlomkového batohu** (zbylé předměty seřadím podle výhodnosti a naplním jimi batoh, přičemž poslední předmět klidně "rozříznu").
+    - Získám tím _teoretickou maximální cenu_, které lze v této větvi dosáhnout.
+- **Prořezávání stromu (Bound):**
+    - Tuto teoretickou cenu porovnám s **nejlepším dosud nalezeným reálným řešením** (mým dosavadním maximem).
+    - **Je-li horní mez HORŠÍ (nebo stejná):** Celou větev okamžitě zahodím. I s podváděním (řezáním předmětů) je výsledek horší než to, co už mám, takže nemá smysl zkoušet další kombinace.
+    - **Je-li horní mez LEPŠÍ:** Větev má stále potenciál, takže v ní pokračuji a zkouším přidat/nepřidat další předmět.
 
 <!-- ImageStart -->
 

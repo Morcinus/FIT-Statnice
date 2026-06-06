@@ -595,7 +595,7 @@ Jaké další problémy jsou mimo NP? (v rámci PSPACE)
 Back:
 
 - **Komplementární problémy NP** (co-NP) - podobné jako NP, ale trochu jiné
-- **Polynomiální hyerarchie** - hierarchie mezi problémy P a PSPACE
+- **Polynomiální hierarchie** - hierarchie mezi problémy P a PSPACE
 
 <!-- ImageStart -->
 
