@@ -168,7 +168,7 @@ Jaké jsou metriky TPC-C bechmarku, které se sledují? (2)
 
 Back:
 
-- **tpmC** - new-order transaction ratepři
+- **tpmC** - new-order transaction rate
 	- Měří hrubý výkon (propustnost) systému.
 	- Maximálním zatížení databáze, kolik jsem schopný zpracovat nových objednávek
 - **\$/tpmC**
