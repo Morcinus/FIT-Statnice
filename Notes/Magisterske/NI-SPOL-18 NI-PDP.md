@@ -1178,6 +1178,8 @@ Back:
 
 Pokud existuje přijatelná zpráva, v `message` se vrátí handle na tuto zprávu, kterou pak může přijmout `MPI_Mrecv()`.
 
+**Message** je něco jako `MPI_Request`, ale request reprezentuje request, kdyžto message už tu zprávu (která stále není nutně přijatá)
+
 <!-- DetailInfoStart -->
 
 ![](../../Assets/Pasted%20image%2020250330105956.png)
@@ -1555,17 +1557,50 @@ Original Flashcard ID: 1779299206150
 START
 NI-SZZ
 
-Co je algoritmus **paralelní mocninná metoda**?
+Co je obecně algoritmus **paralelní mocninná metoda**?
 
 Back:
 
 **Iterační algoritmus**, který ke čtvercové matici $A$ najde **dominantní vlastní číslo** a **odpovídající vlastní vektor**.
+
+Připomenutí, pro $A$ pokud platí:
+$Ax=\lambda x$
+
+$\lambda$ je vlastní číslo
+$x$ je vlastní vektor
 
 dominantní vlastní číslo = největší v absolutní hodnotě
 <!--ID: 1779300071227-->
 END
 
 ---
+
+
+START
+NI-SZZ
+
+Jak funguje **obecně algoritmus mocninná metoda**? (6 kroků) Jaký bude výsledek?
+
+Aneb máme pro $Ax=\lambda x$ chceme nalézt vektor $x$ a nejvyšší $\lambda$ pro které toto platí
+
+Back:
+
+1. Inicializujeme $x$
+2. Inicializujeme $y$ na nuly a vynásobíme matici $A$ vektorem $x$, čímž vznikne $y$
+3. Spočteme pro $y$ jeho **normu** $\alpha \leftarrow ||y||_2=\sqrt{y_0^2+y_1^2+\dots y_{n-1}^2}$
+4. Nahradíme vektor $x$ normalizovaným vektorem $y:x \leftarrow y/\alpha$
+5. Vyhodnotíme kritérium konvergence
+6. Pokud je splněno, končíme, jinak jdeme na bod (2)
+
+Poznámky:
+- Iterativní výpočet způsobí **umocňování matice** $A$, proto název metody
+- Norma $\alpha$ konverguje k **největšímu vlastnímu číslu** $\lambda$
+- Vetor $y$ konverguje k **příslušnému vlastnímu vektoru**
+
+END
+
+---
+
 
 <!--
 Original Flashcard ID: 1779299206153
@@ -1578,11 +1613,16 @@ Jak funguje Mocninná metoda s **náhodným mapováním matice**?
 
 Back:
 
-**náhodné mapování matice**
-1. každý proces si vezme libovolné prvky z $A$
-2. každý vynásobí své prvky příslušným prvkem $x$ a ukládá do svého lokálního $y$
-3. `Allreduce` sesbírá z lokálních $y$ výsledný vektor $y$
-4. každý proces si normalizuje $y$
+1. Inicializujeme $x$
+2. Inicializujeme $y$ na nuly (paralelně pomocí `#pragma omp parallel for`)
+3. **Paralelně každý proces** spočte **lokálně** $y_i\mathrel{+}= A_{ij} \cdot x_j$ (prvky $A_{ij}$ jsou napříč procesy vybrané náhodně, ale je to ošetřený, aby si každý bral jiné prvky)
+4. `MPI_Allreduce` sesčítá z lokálních $y$ výsledný vektor $y$ a výsledek bude opět v každém procesu
+5. Pak už to pokračuje normálně
+	1. Každý proces si lokálně (paralelní redukcí) spočte normu
+	2. Každý proces si lokálně (paralelně) spočte nový $x=y/\alpha$
+	3. Pak se podle kovergenčního kritéria buď končí nebo se jede další iterací
+
+Pozn. **náhodné mapování** = prostě se použije `#pragma omp parallel for` a přiřadí se k výpočtu $y_i$ procesům podle toho
 
 <!-- DetailInfoStart -->
 ![](../../Assets/Pasted%20image%2020260525121855.png)
@@ -1606,8 +1646,8 @@ Back:
 
 1. každý proces si vezme $n/p$ řádků z $A$
 2. každý vynásobi své řádky a ukládá do svojí části $y$
-3. `Allgather` sesbírá části $y$ rovnou do nového $x$
-4. normalizuje se $x$
+3. `MPI_Allgather` sesbírá části $y$ rovnou do nového $x$
+4. normalizuje se $x$ (spočteme normu a vyděláme to normou, opět pomocí paralelní redukce a paralelního foru)
 5. zkontroluje se kritérium konvergence a příp. se to celé opakuje znovu…
 
 <!-- DetailInfoStart -->
@@ -1686,3 +1726,22 @@ END
 
 ---
 
+
+START
+NI-SZZ
+
+Jak obecně funguje **sendbuffer** a **receivebuffer** u kolektivních komunikačních operací? (Např. u `MPI_Gather`, `MPI_Scatter`, `MPI_Alltoall`)
+
+Back:
+
+**U one to all operací:**
+- do send bufferu typicky nacpeme jednu hodnotu a dáme count na 1
+- v receive bufferu pak bude pole, kde na $i$ té pozici bude hodnota od $i$-tého procesu
+
+**U all to all operací:**
+- do send bufferu typicky nacpeme více hodnot (pozice hodnoty určuje, kterému procesu se bude posílat)
+- v receive bufferu budeme mít pole, kde na $i$ té pozici bude hodnota od $i$-tého procesu
+
+END
+
+---
