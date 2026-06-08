@@ -484,22 +484,20 @@ NI-SZZ
 
 Jak se počítá dvojný integrál na obecné množině?
 
-Back:
-
-Oblast se popíše pomocí mezí pro jednu proměnnou a vnitřních mezí pro druhou proměnnou. Například pro oblast:
-
-$$
-D=\{(x,y): 0 \le x \le 0.5,\ 0 \le y \le x^2\}
-$$
-
+Např. v tomto cvičení
 ![](../../Assets/Pasted%20image%2020260603183711.png)
 
-platí:
+Back:
+
+Vyjádříme si integrál pro danou oblast $D=\{(x,y): 0 \le x \le 0.5,\ 0 \le y \le x^2\}$
+
+Zde máme $x$ omezenou intervalem a $y$ omezenou funkcí, takže sestavíme integrál
 
 $$
-\iint_D (x+y)\,dA =
 \int_0^{0.5}\int_0^{x^2} (x+y)\,dy\,dx
 $$
+
+Tento integrál pak jednoduše dopočítáme pomocí Newtonovy formule (SAMI :D).
 
 ![](../../Assets/Pasted%20image%2020260603183715.png)
 
@@ -516,18 +514,16 @@ Popiš Darbouxovu konstrukci integrálu funkce dvou proměnných.
 
 Back:
 
-Pro funkci $f(x,y)$ na obdélníku rozdělíme oblast na menší podobdélníky.
+Popsat:
+- Dolní a horní darbouxovu sumu
+- Dolní a horní darbouxův integrál
+- Dvojitý darbouxův integrál (pokud $D_f=d_f$)
 
-Na každém podobdélníku vezmeme:
+Případně se pak dá pokračovat i:
+- Výpočtem darbouxova integrálu
+- Definicí darbouxova integrálu na množině $D$
 
-- infimum funkce pro dolní součet,
-- supremum funkce pro horní součet.
-
-Dolní Darbouxův integrál je supremum všech dolních součtů, horní Darbouxův integrál je infimum všech horních součtů.
-
-Funkce je Darbouxovsky integrovatelná, pokud se dolní a horní integrál rovnají.
-
-[PLACEHOLDER: vložit obrázek Darbouxovy konstrukce]![](../../Assets/Pasted%20image%2020260603183724.png)
+![](../../Assets/Pasted%20image%2020260603183724.png)
 Tags: NI-SPOL-04 NI-MPI
 <!--ID: 1780505845065-->
 END

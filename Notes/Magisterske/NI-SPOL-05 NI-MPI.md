@@ -559,7 +559,7 @@ START
 NI-SZZ
 
 
-Tvrzení: operace sčítání, odčítání, násobení a dělení
+Tvrzení: **chyba operací** sčítání, odčítání, násobení a dělení
 
 Back:
 
@@ -625,7 +625,7 @@ Original Flashcard ID: 1735205749552
 START
 NI-SZZ
 
-Tvrzení: počet ztracených bitů při odečítání
+Tvrzení: počet ztracených bitů při odečítání $x-y$
 
 Back:
 

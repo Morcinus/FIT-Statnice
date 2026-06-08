@@ -200,7 +200,7 @@ START
 NI-SZZ
 
 
-Definice: **dvojitý Darbouxův integrál funkce $f$ na $D$**
+Definice: **dvojitý Darbouxův integrál funkce $f$ na množině $D$**
 
 Back:
 
@@ -327,7 +327,7 @@ START
 NI-SZZ
 
 
-Věta: Kdy je **spojitá funkce** $f$ na množině $D$ integrabilní, pokud má nějaká místa, kde není integrabilní
+Věta: **integrabilita spojité funkce $f$ na množině** $D$ (s nespojitými body)
 
 Back:
 
@@ -372,7 +372,7 @@ START
 NI-SZZ
 
 
-Důsledek: Kdy je **spojitá funkce** $f$ na množině $D$ integrabilní
+Důsledek: **integrabilita spojité funkce $f$ na množině** $D$ (vzhledem k hranici množiny)
 
 Back:
 

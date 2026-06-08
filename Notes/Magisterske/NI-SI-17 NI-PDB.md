@@ -32,10 +32,10 @@ Vyjmenuj základní normální formy.
 
 Back:
 
-- 1NF
-- 2NF
-- 3NF
-- BCNF (Boyce-Codd normal form).
+- **1NF** - atomické sloupce (žádné seznamy)
+- **2NF** - každý neklíčový atribut závisí na klíči + 1NF
+- **3NF** - neklíčové atributy nesmí záviset na neklíčových atributech + 2NF
+- **BCNF** (Boyce-Codd normal form) - pro každou funkční závislost musí být levá strana superklíč
 <!--ID: 1779721643700-->
 END
 
@@ -454,9 +454,31 @@ NI-SZZ
 
 Jak simulovat **JOIN v MongoDB**?
 
+Vysvětli, jak to funguje:
+```javascript
+db.orders.aggregate([  
+	{  
+	$lookup: {  
+		from: "users",  
+		localField: "userId",  
+		foreignField: "_id",  
+		as: "user"  
+	}  
+},  
+	{  
+		$unwind: "$user"  
+	}  
+])
+```
+
 Back:
 
-Agregační pipeline: **`$lookup`** (join s jinou kolekcí) + **`$unwind`** (rozbalení pole výsledku).
+`$lookup`:
+- Najde v kolekci `orders` ty orders, co mají `userId` stejný jako v `users` jsou `_id`
+- Výsledek je v returnovaném order dokumentu jako array atribut `user`
+
+`$unwind` z array atributu udělá dokument (tzn. `[{...}]` se změní na `{...}`)
+
 <!--ID: 1779721643730-->
 END
 
